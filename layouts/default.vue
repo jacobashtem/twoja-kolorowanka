@@ -12,3 +12,4 @@ useHead({
     </main>
     <AppFooter />
 </template>
+

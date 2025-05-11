@@ -3,17 +3,24 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate:routes": "node scripts/routes-from-content.js > prerender-routes.json",
+    "build": "npm run generate:routes && nuxt generate",
+    "dev":   "nuxt dev",
+    "preview": "nuxt preview"
+
   },
   "dependencies": {
     "@nuxt/content": "2.13.4",
     "@nuxt/ui": "2.20.0",
+    "@nuxtjs/tailwindcss": "6.14.0",
     "nuxt": "^3.14.1592",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "npm:@nuxtjs/tailwindcss@nightly",
+    "ts-node": "^10.9.2"
   }
 }
