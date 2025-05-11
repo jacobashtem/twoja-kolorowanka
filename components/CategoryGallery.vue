@@ -15,6 +15,7 @@ const props = defineProps({
       :src="item.src"
       :alt="item.alt"
       :title="item.title"
+      :url="item.url"
     />
   </div>
 </template>
