@@ -19,7 +19,7 @@ watch(doc, () => {
   console.log("[DOC]", doc.value)
 })
 
-// 📁 Pobranie dzieci (subkategorii i wariantów bezpośrednich)
+// 📁 Pobranie dzieci
 const { data: children } = await useAsyncData(`children:${currentPath}`, async () => {
   const results = await queryContent()
     .where({ _path: { $regex: `^${currentPath}/[^/]+$` } })
@@ -29,7 +29,7 @@ const { data: children } = await useAsyncData(`children:${currentPath}`, async (
   return filtered
 })
 
-// 🎨 Pobranie losowych wpisów z tagiem, które nie są w `children`
+// 🎨 Pobranie kolorowanek po tagu
 const { data: tagged } = await useAsyncData(`tagged:${currentPath}`, async () => {
   const all = await queryContent().find()
 
@@ -52,7 +52,7 @@ const { data: tagged } = await useAsyncData(`tagged:${currentPath}`, async () =>
   return selected
 })
 
-// 🧾 isLeaf: tylko konkretna kolorowanka (np. /koty/1)
+// 🧾 Ostatnia gałąź (np. /koty/1)
 const isLeaf = computed(() =>
   currentTag?.match(/^[0-9]+$/) ||
   ((children?.value?.length ?? 0) === 0 && (tagged?.value?.length ?? 0) === 0)
@@ -74,8 +74,7 @@ const isLeaf = computed(() =>
         </template>
 
         <template
-          v-else-if="children && children.length > 0 &&
-                     !(children.length === 1 && children[0]._path === currentPath + '/' + slug.at(-1))">
+          v-else-if="Array.isArray(children) && children.length > 0">
           <p class="mb-4">Dostępne podkategorie lub warianty:</p>
           <ul class="list-disc pl-5 space-y-1">
             <li v-for="item in children" :key="item._path">
@@ -86,7 +85,7 @@ const isLeaf = computed(() =>
           </ul>
         </template>
 
-        <template v-if="tagged && tagged.length > 0">
+        <template v-if="Array.isArray(tagged) && tagged.length > 0">
           <p class="mt-6 mb-4">Kolorowanki oznaczone tagiem „{{ currentTag }}”:</p>
           <ul class="list-disc pl-5 space-y-1">
             <li v-for="item in tagged" :key="item._path">
@@ -102,5 +101,3 @@ const isLeaf = computed(() =>
     </UContainer>
   </NuxtLayout>
 </template>
-
-
