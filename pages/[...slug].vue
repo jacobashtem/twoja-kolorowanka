@@ -54,9 +54,11 @@ const { data: tagged } = await useAsyncData(`tagged:${currentPath}`, async () =>
 
 // 🧾 isLeaf: tylko konkretna kolorowanka (np. /koty/1)
 const isLeaf = computed(() =>
-  currentTag?.match(/^[0-9]+$/) || (children.value?.length === 0 && tagged.value?.length === 0)
+  currentTag?.match(/^[0-9]+$/) ||
+  ((children?.value?.length ?? 0) === 0 && (tagged?.value?.length ?? 0) === 0)
 )
 </script>
+
 <template>
   <NuxtLayout>
     <UContainer>
@@ -71,9 +73,9 @@ const isLeaf = computed(() =>
           </p>
         </template>
 
-        <!-- jeśli są sensowne dzieci (czyli nie tylko "sam siebie") -->
         <template
-          v-else-if="children.length > 0 && !(children.length === 1 && children[0]._path === currentPath + '/' + slug.at(-1))">
+          v-else-if="children && children.length > 0 &&
+                     !(children.length === 1 && children[0]._path === currentPath + '/' + slug.at(-1))">
           <p class="mb-4">Dostępne podkategorie lub warianty:</p>
           <ul class="list-disc pl-5 space-y-1">
             <li v-for="item in children" :key="item._path">
@@ -84,9 +86,8 @@ const isLeaf = computed(() =>
           </ul>
         </template>
 
-        <!-- jeśli są wpisy pasujące po tagach -->
-        <template v-if="tagged.length > 0">
-          <p class="mt-6 mb-4">Kolorowanki oznaczone tagiem „{{ slug.at(-1) }}”:</p>
+        <template v-if="tagged && tagged.length > 0">
+          <p class="mt-6 mb-4">Kolorowanki oznaczone tagiem „{{ currentTag }}”:</p>
           <ul class="list-disc pl-5 space-y-1">
             <li v-for="item in tagged" :key="item._path">
               <NuxtLink :to="item._path" class="text-blue-600 hover:underline">
@@ -101,4 +102,5 @@ const isLeaf = computed(() =>
     </UContainer>
   </NuxtLayout>
 </template>
+
 
