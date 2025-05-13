@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
     darkmode: "class",
     theme: {
@@ -63,6 +65,9 @@ module.exports = {
             900: "#111827",
           },        
         },
+        fontFamily: {
+        modak: ['Modak', ...defaultTheme.fontFamily.sans],
+      },
         listStyleType: {
           none: 'none',
           disc: 'disc',

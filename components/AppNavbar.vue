@@ -1,7 +1,7 @@
 <template>
     <nav class="flex relative justify-end lg:justify-end">
         <NuxtLink to="/">
-            <img class="absolute left-0 w-32 sm:w-40 md:w-32 rounded-br-2xl " src="public/logo-1.webp" alt="">
+            <img class="absolute left-0  w-20 sm:w-40 md:w-32 rounded-br-2xl " src="public/logo-1.webp" alt="">
         </NuxtLink>
         <div class="px-4 sm:px-6 lg:px-8 pt-8">
             <div class="hidden md:flex space-x-6">
