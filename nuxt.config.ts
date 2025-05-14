@@ -16,6 +16,16 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/ui',
-    '@nuxtjs/tailwindcss'
-  ]
+    '@nuxtjs/tailwindcss',
+    '@vueuse/nuxt',
+    '@nuxtjs/google-fonts'
+  ],
+    googleFonts: {
+    families: {
+      Modak: true,
+    },
+    display: 'swap',
+    preconnect: true,
+    preload: true,
+  },
 })

@@ -11,9 +11,15 @@ dependencies:
   '@nuxt/ui':
     specifier: 2.20.0
     version: 2.20.0(ts-node@10.9.2)(typescript@5.8.3)(vite@6.3.5)(vue@3.5.13)
+  '@nuxtjs/google-fonts':
+    specifier: 3.2.0
+    version: 3.2.0
   '@nuxtjs/tailwindcss':
     specifier: 6.14.0
     version: 6.14.0(ts-node@10.9.2)
+  '@vueuse/nuxt':
+    specifier: 13.1.0
+    version: 13.1.0(nuxt@3.17.2)(vue@3.5.13)
   nuxt:
     specifier: ^3.14.1592
     version: 3.17.2(@types/node@22.15.17)(typescript@5.8.3)(vite@6.3.5)
@@ -1320,6 +1326,16 @@ packages:
       - magicast
     dev: false
 
+  /@nuxtjs/google-fonts@3.2.0:
+    resolution: {integrity: sha512-cGAjDJoeQ2jm6VJCo4AtSmKO6KjsbO9RSLj8q261fD0lMVNMZCxkCxBkg8L0/2Vfgp+5QBHWVXL71p1tiybJFw==}
+    dependencies:
+      '@nuxt/kit': 3.17.2(magicast@0.3.5)
+      google-fonts-helper: 3.7.3
+      pathe: 1.1.2
+    transitivePeerDependencies:
+      - magicast
+    dev: false
+
   /@nuxtjs/mdc@0.9.5:
     resolution: {integrity: sha512-bTnlY+oiW8QsmrLoiYN+rkSYxl7asELlwYeU9QPSkun5BVx7Yd8RajH8I+0QJZiMZzIHaO3LEgf3lzp5Lg6E0A==}
     dependencies:
@@ -2535,6 +2551,17 @@ packages:
       - typescript
     dev: false
 
+  /@vueuse/core@13.1.0(vue@3.5.13):
+    resolution: {integrity: sha512-PAauvdRXZvTWXtGLg8cPUFjiZEddTqmogdwYpnn60t08AA5a8Q4hZokBnpTOnVNqySlFlTcRYIC8OqreV4hv3Q==}
+    peerDependencies:
+      vue: ^3.5.0
+    dependencies:
+      '@types/web-bluetooth': 0.0.21
+      '@vueuse/metadata': 13.1.0
+      '@vueuse/shared': 13.1.0(vue@3.5.13)
+      vue: 3.5.13(typescript@5.8.3)
+    dev: false
+
   /@vueuse/head@2.0.0(vue@3.5.13):
     resolution: {integrity: sha512-ykdOxTGs95xjD4WXE4na/umxZea2Itl0GWBILas+O4oqS7eXIods38INvk3XkJKjqMdWPcpCyLX/DioLQxU1KA==}
     peerDependencies:
@@ -2613,6 +2640,10 @@ packages:
     resolution: {integrity: sha512-rAyLGEuoBJ/Il5AmFHiziCPdQzRt88VxR+Y/A/QhJ1EWtWqPBBAxTAFaSkviwEuOEZNtW8pvkPgoCZQ+HxqW1A==}
     dev: false
 
+  /@vueuse/metadata@13.1.0:
+    resolution: {integrity: sha512-+TDd7/a78jale5YbHX9KHW3cEDav1lz1JptwDvep2zSG8XjCsVE+9mHIzjTOaPbHUAk5XiE4jXLz51/tS+aKQw==}
+    dev: false
+
   /@vueuse/nuxt@11.3.0(nuxt@3.17.2)(vue@3.5.13):
     resolution: {integrity: sha512-FxtRTgFmsoASamR3lOftv/r11o1BojF9zir8obbTnKamVZdlQ5rgJ0hHgVbrgA6dlMuEx/PzwqAmiKNFdU4oCQ==}
     peerDependencies:
@@ -2630,6 +2661,22 @@ packages:
       - vue
     dev: false
 
+  /@vueuse/nuxt@13.1.0(nuxt@3.17.2)(vue@3.5.13):
+    resolution: {integrity: sha512-4xdxwKanLY4+z+/ZgSZcJvwuHlgZMU3km7z4lhlbLl6WZTKS3BiztnRzcrdt4zjU512oTlH5nsPNhUhV0KXiOA==}
+    peerDependencies:
+      nuxt: ^3.0.0 || ^4.0.0-0
+      vue: ^3.5.0
+    dependencies:
+      '@nuxt/kit': 3.17.2(magicast@0.3.5)
+      '@vueuse/core': 13.1.0(vue@3.5.13)
+      '@vueuse/metadata': 13.1.0
+      local-pkg: 1.1.1
+      nuxt: 3.17.2(@types/node@22.15.17)(typescript@5.8.3)(vite@6.3.5)
+      vue: 3.5.13(typescript@5.8.3)
+    transitivePeerDependencies:
+      - magicast
+    dev: false
+
   /@vueuse/shared@11.3.0(vue@3.5.13):
     resolution: {integrity: sha512-P8gSSWQeucH5821ek2mn/ciCk+MS/zoRKqdQIM3bHq6p7GXDAJLmnRRKmF5F65sAVJIfzQlwR3aDzwCn10s8hA==}
     dependencies:
@@ -2645,6 +2692,14 @@ packages:
       vue: 3.5.13(typescript@5.8.3)
     transitivePeerDependencies:
       - typescript
+    dev: false
+
+  /@vueuse/shared@13.1.0(vue@3.5.13):
+    resolution: {integrity: sha512-IVS/qRRjhPTZ6C2/AM3jieqXACGwFZwWTdw5sNTSKk2m/ZpkuuN+ri+WCVUP8TqaKwJYt/KuMwmXspMAw8E6ew==}
+    peerDependencies:
+      vue: ^3.5.0
+    dependencies:
+      vue: 3.5.13(typescript@5.8.3)
     dev: false
 
   /@whatwg-node/disposablestack@0.0.6:
@@ -4563,6 +4618,15 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.8
+    dev: false
+
+  /google-fonts-helper@3.7.3:
+    resolution: {integrity: sha512-dENZeK6RMvkCOFoKbLbS+pyoDgpmk4U6BYmfXnztMar2d8SjEG6valxql/Lkyi7bu5F+3FTdE+gAEYSYZ5zzMA==}
+    dependencies:
+      deepmerge: 4.3.1
+      hookable: 5.5.3
+      ofetch: 1.4.1
+      ufo: 1.6.1
     dev: false
 
   /gopd@1.2.0:

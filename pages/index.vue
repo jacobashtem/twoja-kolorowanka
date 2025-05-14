@@ -1,4 +1,7 @@
 <script setup>
+definePageMeta({
+  layout: 'default',
+})
 useHead({
     title: 'Twoja kolorowanka title',
     description: 'Twoja kolorowanka description',
@@ -145,7 +148,7 @@ const galleryItems = ref([
 ])
 </script>
 <template>
-  <NuxtLayout>
+  <!-- <NuxtLayout> -->
     <Hero />
     <UContainer>
         <Heading text="Kolorowanka do druku" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
@@ -177,5 +180,5 @@ const galleryItems = ref([
       </div>
       </div> -->
     </UContainer>
-  </NuxtLayout>
+  <!-- </NuxtLayout> -->
 </template>
