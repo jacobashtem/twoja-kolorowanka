@@ -149,7 +149,7 @@ function openPreviewModal() {
         <h1
           v-if="doc"
           v-rainbow-text="fullTitle"
-          class="font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
+          class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         />
         <ClientOnly><Breadcrumbs /></ClientOnly>
