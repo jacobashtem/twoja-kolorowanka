@@ -1,12 +1,12 @@
 <template>
     <nav class="text-sm text-gray-500 my-4" v-if="breadcrumbs.length">
-      <NuxtLink to="/" class="text-blue-600 hover:underline">Strona główna</NuxtLink>
+      <NuxtLink to="/" class="text-gray-900 hover:underline">Strona główna</NuxtLink>
       <span v-for="(crumb, index) in breadcrumbs" :key="index">
         <span class="mx-2">/</span>
         <NuxtLink
           v-if="index !== breadcrumbs.length - 1"
           :to="crumb.path"
-          class="text-blue-600 hover:underline"
+          class="text-black hover:underline"
         >
           {{ crumb.name }}
         </NuxtLink>

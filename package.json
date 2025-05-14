@@ -7,7 +7,7 @@
     "postinstall": "nuxt prepare",
     "generate:routes": "node scripts/routes-from-content.js > prerender-routes.json",
     "build": "npm run generate:routes && nuxt generate",
-    "dev": "nuxt dev",
+    "dev": "nuxi dev",
     "preview": "nuxt preview"
   },
   "dependencies": {

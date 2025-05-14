@@ -10,10 +10,30 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       el.setAttribute('aria-label', text)
 
-      el.innerHTML = [...(text || '')].map((char, i) => {
-        const color = colors[i % colors.length]
-        return `<span style="color: ${color}">${char === ' ' ? '&nbsp;' : char}</span>`
-      }).join('')
+      let html = ''
+      let globalIndex = 0
+      let currentWord = ''
+
+      for (const char of text) {
+        const color = colors[globalIndex % colors.length]
+        const coloredChar = `<span style="color: ${color}">${char === ' ' ? '&nbsp;' : char}</span>`
+        globalIndex++
+
+        if (char === ' ') {
+          // wrap the current word + space
+          html += `<span class="inline-block mr-1">${currentWord}</span>${coloredChar}`
+          currentWord = ''
+        } else {
+          currentWord += coloredChar
+        }
+      }
+
+      // add last word
+      if (currentWord) {
+        html += `<span class="inline-block mr-1">${currentWord}</span>`
+      }
+
+      el.innerHTML = html
     }
   })
 })

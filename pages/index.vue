@@ -1,4 +1,7 @@
 <script setup>
+definePageMeta({
+  layout: 'default',
+})
 useHead({
     title: 'Twoja kolorowanka title',
     description: 'Twoja kolorowanka description',

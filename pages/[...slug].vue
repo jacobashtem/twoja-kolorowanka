@@ -1,37 +1,47 @@
 <script setup>
+definePageMeta({ layout: 'default' })
+
+import { ref, computed, defineAsyncComponent } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
+
+// — twoje istniejące reactive’y (route, slug, doc, breadcrumbs, variants itd.)
 const route = useRoute()
 const slug = Array.isArray(route.params.slug)
   ? route.params.slug
-  : route.params.slug
-    ? [route.params.slug]
-    : []
+  : route.params.slug ? [route.params.slug] : []
+
 const currentPath = '/' + slug.join('/')
-const currentTag = slug.at(-1) || ''
+const currentTag  = slug.at(-1) || ''
+
+// responsywność
 const { width } = useWindowSize()
 const isMobile = computed(() => width.value < 768)
 
+// główny dokument
 const { data: docData } = await useAsyncData(
   `doc:${currentPath}`,
   () => queryContent(currentPath).findOne()
 )
 const doc = computed(() => docData.value)
 
+// kategoria (index.md w folderze)
 const basePath = computed(() =>
   /^[0-9]+$/.test(currentTag)
     ? '/' + slug.slice(0, -1).join('/')
     : currentPath
 )
-
 const { data: catData } = await useAsyncData(
   `catDoc:${basePath.value}`,
   () => queryContent(basePath.value).findOne()
 )
 const categoryDoc = computed(() => catData.value)
 
+// liść?
 const isLeaf = computed(() => /^[0-9]+$/.test(currentTag))
+
+// rodzeństwo (bez index.md)
 const { data: rawSibsData } = await useAsyncData(
   `siblings:${basePath.value}`,
   () =>
@@ -48,24 +58,19 @@ function lastSegment(path) {
   return path.split('/').pop()
 }
 
-//
-// — 4. Podkategorie vs warianty
-//
+// tylko kategorie (nie cyfrowe)
 const childrenCategories = computed(() =>
-  // pokazuj tylko gdy NIE jesteśmy na liściu
-  isLeaf.value
-    ? []
-    : siblings.value.filter(i => !/^[0-9]+$/.test(lastSegment(i._path)))
+  !isLeaf.value
+    ? siblings.value.filter(i => !/^[0-9]+$/.test(lastSegment(i._path)))
+    : []
 )
 
+// warianty bezpośrednie
 const variantsDirect = computed(() =>
-  // numericzne ścieżki z tego folderu
   siblings.value.filter(i => /^[0-9]+$/.test(lastSegment(i._path)))
 )
 
-//
-// — 5. Lista wariantów w głębi /zwierzeta  (tylko na root /zwierzeta)
-//
+// warianty z wnuków (tylko na root /zwierzeta)
 const { data: rawGrandkids } = await useAsyncData(
   `grandkids:${currentPath}`,
   () =>
@@ -73,29 +78,14 @@ const { data: rawGrandkids } = await useAsyncData(
       .where({ _path: { $regex: `^${currentPath}/[^/]+/[0-9]+$` } })
       .find()
 )
-const variantsFromGrandkids = computed(() =>
-  rawGrandkids.value || []
-)
-
+const variantsFromGrandkids = computed(() => rawGrandkids.value || [])
 const childrenVariants = computed(() =>
-  // jeżeli slug ma dokładnie 1 segment (tj. /zwierzeta) → bierz wnuki
-  slug.length === 1 ? variantsFromGrandkids.value : variantsDirect.value
+  slug.length === 1
+    ? variantsFromGrandkids.value
+    : variantsDirect.value
 )
 
-//
-// — 6. Kolorowanki oznaczone tagiem
-//
-// const { data: rawTaggedData } = await useAsyncData(
-//   `tagged:${currentTag}`,
-//   () => queryContent().where({ tags: { $contains: currentTag } }).find()
-// )
-// const tagged = computed(() =>
-//   (rawTaggedData.value || []).filter(i => i._path !== currentPath)
-// )
-
-//
-// — 7. Numeracja wariantów + tytuł
-//
+// numeracja + tytuł
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
   const idx = variantsDirect.value.findIndex(i => i._path === currentPath)
@@ -109,107 +99,186 @@ const positionIndicator = computed(() =>
     ? ` (${currentIndex.value}/${totalCount.value})`
     : ''
 )
-
-// wyciągamy czysty tytuł kategorii (np. "Koty") i usuwamy frontmatterowy prefix "Kolorowanki"
 function cleanTitle(t) {
   return t?.replace(/^Kolorowanki?\s*/i, '') || ''
 }
-
 const fullTitle = computed(() => {
-  // na liściu bierzemy nazwę folderu lub categoryDoc.title,
-  // na kategorii doc.title albo slug
   const base = isLeaf.value
     ? cleanTitle(categoryDoc.value?.title || slug[slug.length - 2])
     : cleanTitle(doc.value?.title || slug.at(-1))
   return `Kolorowanka ${base}${positionIndicator.value}`
 })
-const imageUrl = computed(() => doc.value?.image)
 
+// przyciski PDF / druk
+const imageUrl = computed(() => doc.value?.image)
+function printPdf() {
+  const pdfUrl = doc.value?.pdf
+  if (!pdfUrl) return
+  window.open(pdfUrl, '_blank')
+}
+function downloadPdf() {
+  const pdfUrl = doc.value?.pdf
+  if (!pdfUrl) return
+  const a = document.createElement('a')
+  a.href = pdfUrl
+  a.download = pdfUrl.split('/').pop()
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+}
+
+// **NOWOŚĆ** — lazy-ładowanie edytora
+const showEditor = ref(false)
+// const ColoringBook = defineAsyncComponent(() => import('@/components/ColoringEditor.vue'))
+function openEditor() { showEditor.value = true }
+function closeEditor() { showEditor.value = false }
+
+// **podgląd PDF** (z Twojego kodu)
+const showPreviewModal = ref(false)
+function openPreviewModal() {
+  if (!doc.value?.image) return
+  showPreviewModal.value = true
+}
 </script>
 
 <template>
   <div>
-    <div class="flex justify-center mt-8 md:mt-0 w-full">
-<UContainer class="w-full">
-  <h1
-    v-if="doc"
-    v-rainbow-text="fullTitle"
-    class="font-modak text-2xl md:text-7xl flex gap-1 flex-wrap "
-    :aria-label="fullTitle"
-  >
-  </h1>
-  <Breadcrumbs />
-</UContainer>
-
-
+    <!-- HEADER + BREADCRUMBS -->
+    <div class="flex justify-center mt-8 w-full">
+      <UContainer class="w-full">
+        <h1
+          v-if="doc"
+          v-rainbow-text="fullTitle"
+          class="font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
+          :aria-label="fullTitle"
+        />
+        <ClientOnly><Breadcrumbs /></ClientOnly>
+      </UContainer>
     </div>
-  <div class="relative w-full max-w-7xl mx-auto mb-6">
-    <img
-      :src="isMobile ? heroMobileImg : heroDesktop"
-      alt="Twoja kolorowanka"
-      class="w-full h-auto block"
-    />
-    <div
-      v-if="imageUrl"
-      class="absolute inset-0 flex items-center justify-center pointer-events-none"
-    >
-      <img style="max-height: 61%;
-    margin-top: -11%;" :src="imageUrl" class="max-w-[60%] h-auto" />
-    </div>
-  </div>
 
-    <UContainer>
-      <p v-if="doc" class="text-gray-600 mb-6">{{ doc.description }}</p>
-      <p v-else class="text-red-600">Nie znaleziono strony.</p>
+    <!-- PRZYCISKI na liściu -->
+    <UContainer v-if="isLeaf" class="mb-6 mt-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- <button
+          @click="openEditor"
+          class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+        >
+          <img src="/vectors/crayons.svg" class="w-16 h-16" alt="Koloruj online" />
+          Koloruj online!
+        </button> -->
 
-      <!-- komunikat dla liścia -->
-      <div v-if="isLeaf" class="text-green-600 font-semibold mb-6">
-        To jest ostatnia gałąź – konkretna kolorowanka.
+        <button
+          @click="openPreviewModal"
+          class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+        >
+          <img src="/vectors/preview.svg" class="w-16 h-16" alt="Podgląd" />
+          Podejrzyj kolorowankę
+        </button>
+
+        <button
+          @click="printPdf"
+          class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+        >
+          <img src="/vectors/printer.svg" class="w-16 h-16" alt="Drukuj" />
+          Drukuj
+        </button>
+
+        <button
+          @click="downloadPdf"
+          class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+        >
+          <img src="/vectors/download.svg" class="w-16 h-16" alt="Pobierz" />
+          Pobierz
+        </button>
       </div>
+    </UContainer>
 
-      <!-- lista podkategorii + wariantów (tylko poza liściem) -->
-      <div v-else>
-        <div v-if="childrenCategories.length">
-          <p class="mb-4">Podkategorie:</p>
+    <!-- TŁO + SVG LIŚCIA -->
+    <UContainer v-if="isLeaf" class="mb-6">
+      <div class="relative w-full mx-auto">
+        <img
+          :src="isMobile ? heroMobileImg : heroDesktop"
+          alt="Twoja kolorowanka"
+          class="w-full h-auto"
+        />
+        <div
+          v-if="imageUrl"
+          class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        >
+          <img
+            :src="imageUrl"
+            class="max-w-[60%] h-auto"
+            style="max-height:61%; margin-top:-11%;"
+          />
+        </div>
+      </div>
+    </UContainer>
+
+    <!-- TREŚĆ KATEGORII / ROOT -->
+    <UContainer v-else>
+      <template v-if="!doc">
+        <p class="text-red-600">Nie znaleziono strony.</p>
+      </template>
+
+      <template v-else>
+        <div v-if="childrenCategories.length" class="mb-6">
+          <p class="mb-2 font-semibold">Podkategorie:</p>
           <ul class="list-disc pl-5 space-y-1">
             <li v-for="c in childrenCategories" :key="c._path">
-              <NuxtLink
-                :to="c._path"
-                class="text-blue-600 hover:underline"
-              >{{ c.title || lastSegment(c._path) }}</NuxtLink>
+              <NuxtLink :to="c._path" class="text-blue-600 hover:underline">
+                {{ c.title || lastSegment(c._path) }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
 
-        <div v-if="childrenVariants.length" class="mt-4">
-          <p class="mb-4">
+        <div v-if="childrenVariants.length">
+          <p class="mb-2 font-semibold">
             {{ childrenCategories.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
           </p>
           <ul class="list-disc pl-5 space-y-1">
             <li v-for="v in childrenVariants" :key="v._path">
-              <NuxtLink
-                :to="v._path"
-                class="text-blue-600 hover:underline"
-              >{{ v.title || v._path }}</NuxtLink>
+              <NuxtLink :to="v._path" class="text-blue-600 hover:underline">
+                {{ v.title || lastSegment(v._path) }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
-      </div>
-
-      <!-- tagowane -->
-      <!-- <div v-if="tagged.length" class="mt-6">
-        <p class="mb-4">
-          Kolorowanki oznaczone tagiem „{{ currentTag }}”:
-        </p>
-        <ul class="list-disc pl-5 space-y-1">
-          <li v-for="t in tagged" :key="t._path">
-            <NuxtLink
-              :to="t._path"
-              class="text-blue-600 hover:underline"
-            >{{ t.title || t._path }}</NuxtLink>
-          </li>
-        </ul>
-      </div> -->
+      </template>
     </UContainer>
+
+    <!-- PREVIEW MODAL -->
+    <UModal v-model="showPreviewModal" class="max-w-[90vw]">
+      <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
+        <div
+          class="bg-white shadow-md relative overflow-hidden"
+          style="aspect-ratio: 1 / 1.414; width: min(100%, 600px);"
+        >
+          <img
+            v-if="doc?.image"
+            :src="doc.image"
+            alt="Podgląd PDF"
+            class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
+          />
+        </div>
+      </div>
+    </UModal>
+
+    <!-- **EDYTOR** – ładowany dopiero po kliknięciu -->
+    <!-- <Suspense>
+      <template #fallback>
+        <div v-if="showEditor" class="fixed inset-0 bg-black/50 flex items-center justify-center">
+          <div class="text-white">Ładowanie edytora…</div>
+        </div>
+      </template>
+
+      <template #default>
+        <ColoringEditor
+          v-if="showEditor"
+          :svg="doc.image"
+          @close="closeEditor"
+        />
+      </template>
+    </Suspense> -->
   </div>
 </template>
