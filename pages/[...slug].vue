@@ -85,7 +85,6 @@ const childrenVariants = computed(() =>
     : variantsDirect.value
 )
 
-// numeracja + tytuł
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
   const idx = variantsDirect.value.findIndex(i => i._path === currentPath)
@@ -127,9 +126,7 @@ function downloadPdf() {
   document.body.removeChild(a)
 }
 
-// **NOWOŚĆ** — lazy-ładowanie edytora
 const showEditor = ref(false)
-// const ColoringBook = defineAsyncComponent(() => import('@/components/ColoringEditor.vue'))
 function openEditor() { showEditor.value = true }
 function closeEditor() { showEditor.value = false }
 
@@ -143,7 +140,6 @@ function openPreviewModal() {
 
 <template>
   <div>
-    <!-- HEADER + BREADCRUMBS -->
     <div class="flex justify-center mt-8 w-full">
       <UContainer class="w-full">
         <h1
@@ -159,13 +155,13 @@ function openPreviewModal() {
     <!-- PRZYCISKI na liściu -->
     <UContainer v-if="isLeaf" class="mb-6 mt-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- <button
-          @click="openEditor"
-          class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
-        >
-          <img src="/vectors/crayons.svg" class="w-16 h-16" alt="Koloruj online" />
-          Koloruj online!
-        </button> -->
+<NuxtLink
+   :to="`/koloruj/${slug.join('/')}`"
+   class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+ >
+   <img src="/vectors/crayons.svg" class="w-16 h-16" alt="Koloruj online" />
+   Koloruj online!
+ </NuxtLink>
 
         <button
           @click="openPreviewModal"
