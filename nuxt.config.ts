@@ -3,6 +3,9 @@ import routes  from './prerender-routes.json'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
+    routeRules: {
+    '/koloruj/**': { appMiddleware: 'check-id' }
+  },
   devtools: { enabled: true },
   nitro: {
     preset: 'static',
