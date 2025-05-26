@@ -9,8 +9,10 @@ import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
 // — twoje istniejące reactive’y (route, slug, doc, breadcrumbs, variants itd.)
 const route = useRoute()
 const slug = Array.isArray(route.params.slug)
-  ? route.params.slug
-  : route.params.slug ? [route.params.slug] : []
+  ? route.params.slug.filter(Boolean)
+  : route.params.slug
+    ? [ route.params.slug ]
+    : []
 
 const currentPath = '/' + slug.join('/')
 const currentTag  = slug.at(-1) || ''
