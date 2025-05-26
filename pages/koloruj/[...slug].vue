@@ -9,60 +9,55 @@
           class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         />
-        <!-- <ClientOnly><Breadcrumbs /></ClientOnly> -->
       </UContainer>
     </div>
-
-    <!-- PRZYCISKI na liściu -->
-    <UContainer v-if="isLeaf" class="mb-6 mt-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-<NuxtLink
-   :to="returnPath"
-   class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
- >
-   <img src="/vectors/return.svg" class="w-16 h-16" alt="Koloruj online" />
-   Powrót
- </NuxtLink>
-      </div>
-    </UContainer>
-
-    <!-- EDITOR -->
-    <div v-if="isLeaf">
-      <ColoringCanvas :svg-url="imageUrl"/>
-    </div>
-
-    <!-- KATEGORIE / ROOT -->
-    <div v-else class="container mx-auto mt-12">
-      <div v-if="!doc" class="text-red-600">Nie znaleziono strony.</div>
-
-      <div v-else class="space-y-6">
-        <div v-if="Array.isArray(childrenCategories) && childrenCategories.length">
-          <p class="font-semibold text-lg mb-2">Podkategorie:</p>
-          <ul class="space-y-1 list-disc list-inside">
-            <li v-for="c in childrenCategories" :key="c._path">
-              <NuxtLink :to="c._path" class="text-blue-600 hover:underline">
-                {{ c.title || lastSegment(c._path) }}
-              </NuxtLink>
-            </li>
-          </ul>
+      <ClientOnly>
+      <UContainer v-if="isLeaf" class="mb-6 mt-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <NuxtLink
+            :to="returnPath"
+            class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+          >
+            <img src="/vectors/return.svg" class="w-16 h-16" alt="Koloruj online" />
+            Powrót
+          </NuxtLink>
         </div>
+      </UContainer>
 
-        <div v-if="Array.isArray(childrenVariants) && childrenVariants.length">
-          <p class="font-semibold text-lg mb-2">
-            {{ childrenCategories?.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
-          </p>
-          <ul class="space-y-1 list-disc list-inside">
-            <li v-for="v in childrenVariants" :key="v._path">
-              <NuxtLink :to="v._path" class="text-blue-600 hover:underline">
-                {{ v.title || lastSegment(v._path) }}
-              </NuxtLink>
-            </li>
-          </ul>
+      <div v-if="isLeaf">
+        <ColoringCanvas :svg-url="imageUrl"/>
+      </div>
+      <div v-else class="container mx-auto mt-12">
+        <div v-if="!doc" class="text-red-600">Nie znaleziono strony.</div>
+
+        <div v-else class="space-y-6">
+          <div v-if="Array.isArray(childrenCategories) && childrenCategories.length">
+            <p class="font-semibold text-lg mb-2">Podkategorie:</p>
+            <ul class="space-y-1 list-disc list-inside">
+              <li v-for="c in childrenCategories" :key="c._path">
+                <NuxtLink :to="c._path" class="text-blue-600 hover:underline">
+                  {{ c.title || lastSegment(c._path) }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+
+          <div v-if="Array.isArray(childrenVariants) && childrenVariants.length">
+            <p class="font-semibold text-lg mb-2">
+              {{ childrenCategories?.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
+            </p>
+            <ul class="space-y-1 list-disc list-inside">
+              <li v-for="v in childrenVariants" :key="v._path">
+                <NuxtLink :to="v._path" class="text-blue-600 hover:underline">
+                  {{ v.title || lastSegment(v._path) }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+      </ClientOnly>
 
-    <!-- MODAL PREVIEW -->
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">
       <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
         <div
@@ -91,10 +86,11 @@ import { useAsyncData, queryContent } from '#imports'
 
 const route = useRoute()
 const slug = Array.isArray(route.params.slug)
-  ? route.params.slug
-  : route.params.slug ? [route.params.slug] : []
-
-const currentPath = '/' + slug.join('/')
+  ? route.params.slug.filter(Boolean)
+  : route.params.slug
+    ? [route.params.slug]
+    : [];
+const currentPath = '/' + slug.join('/');
 const currentTag = slug.at(-1) || ''
 const { width } = useWindowSize()
 const isMobile = computed(() => width.value < 768)
