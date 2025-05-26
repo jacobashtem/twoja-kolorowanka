@@ -190,27 +190,27 @@ function openPreviewModal() {
     </UContainer>
 
     <!-- TŁO + SVG LIŚCIA -->
-    <UContainer v-if="isLeaf" class="mb-6">
-      <div class="relative w-full mx-auto">
-        <img
-          :src="isMobile ? heroMobileImg : heroDesktop"
-          alt="Twoja kolorowanka"
-          class="w-full h-auto"
-        />
-        <div
-          v-if="imageUrl"
-          class="absolute inset-0 flex items-center justify-center pointer-events-none"
-        >
+    <ClientOnly>
+      <UContainer v-if="isLeaf" class="mb-6">
+        <div class="relative w-full mx-auto">
           <img
-            :src="imageUrl"
-            class="max-w-[60%] h-auto"
-            style="max-height:61%; margin-top:-11%;"
+            :src="isMobile ? heroMobileImg : heroDesktop"
+            alt="Twoja kolorowanka"
+            class="w-full h-auto"
           />
+          <div
+            v-if="imageUrl"
+            class="absolute inset-0 flex items-center justify-center pointer-events-none"
+          >
+            <img
+              :src="imageUrl"
+              class="max-w-[60%] h-auto"
+              style="max-height:61%; margin-top:-11%;"
+            />
+          </div>
         </div>
-      </div>
-    </UContainer>
-
-    <!-- TREŚĆ KATEGORII / ROOT -->
+      </UContainer>
+          <!-- TREŚĆ KATEGORII / ROOT -->
     <UContainer v-else>
       <template v-if="!doc">
         <p class="text-red-600">Nie znaleziono strony.</p>
@@ -242,7 +242,7 @@ function openPreviewModal() {
         </div>
       </template>
     </UContainer>
-
+    </ClientOnly>
     <!-- PREVIEW MODAL -->
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">
       <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
