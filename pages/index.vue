@@ -1,7 +1,4 @@
 <script setup>
-definePageMeta({
-  layout: 'default',
-})
 useHead({
     title: 'Twoja kolorowanka title',
     description: 'Twoja kolorowanka description',
@@ -148,7 +145,6 @@ const galleryItems = ref([
 ])
 </script>
 <template>
-  <!-- <NuxtLayout> -->
     <Hero />
     <UContainer>
         <Heading text="Kolorowanka do druku" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
@@ -159,26 +155,6 @@ const galleryItems = ref([
         <h1 class="text-3xl font-bold mb-4">Najważniejsze kategorie</h1>
       </div>
         <CategoryGallery :items="galleryItems.slice(0,23)" />
-        <!-- <div class="columns-1 md:columns-2 xl:columns-3 gap-7 ">
-      <div class=" break-inside-avoid mb-8">
-      <img class="h-auto max-w-full rounded-lg" src="https://pagedone.io/asset/uploads/1688031162.jpg" alt="Gallery image" />
-      </div>
-      <div class=" break-inside-avoid  mb-8">
-      <img class="h-auto max-w-full rounded-lg" src="https://pagedone.io/asset/uploads/1688031232.jpg" alt="Gallery image" />
-      </div>
-      <div class=" break-inside-avoid  mb-8">
-      <img class="h-auto max-w-full rounded-lg" src="https://pagedone.io/asset/uploads/1688031357.jpg" alt="Gallery image" />
-      </div>
-      <div class=" break-inside-avoid  mb-8">
-      <img class="h-auto max-w-full rounded-lg" src="https://pagedone.io/asset/uploads/1688031375.jpg" alt="Gallery image" />
-      </div>
-      <div class=" break-inside-avoid  mb-8">
-      <img class="h-auto max-w-full rounded-lg" src="https://pagedone.io/asset/uploads/1688031396.jpg" alt="Gallery image" />
-      </div>
-      <div class=" break-inside-avoid  mb-8">
-      <img class="h-auto max-w-full rounded-lg" src="https://pagedone.io/asset/uploads/1688031414.png" alt="Gallery image" />
-      </div>
-      </div> -->
+
     </UContainer>
-  <!-- </NuxtLayout> -->
 </template>
