@@ -183,6 +183,7 @@ useHead(() => {
           <div class="flex items-center justify-between">
             <Breadcrumbs />
               <NuxtLink
+                v-if="isLeaf"
                 :to="slug.length > 1 ? `/${slug.slice(0, -1).join('/')}` : '/'"
                 class="flex items-center gap-2 mb-6  bg-white border rounded px-4 py-2 hover:bg-gray-100"
               >
@@ -272,25 +273,19 @@ useHead(() => {
       </template>
 
       <template v-else>
-          <CategoryGallery :items="childrenCategories" slugHandler/>
+          <CategoryGallery class="mb-8" :items="childrenCategories" slugHandler/>
 
-        <div class="mt-20" v-if="childrenVariants.length">
-            <VariantsGallery :items="galleryVariants" />
-          <p class="mb-2 font-semibold">
-            {{ childrenCategories.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
+        <div v-if="childrenVariants.length">
+            <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[1]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+            {{ doc?.seoBlocks[1]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
           </p>
-          <ul class="list-disc pl-5 space-y-1">
-            <li v-for="v in childrenVariants" :key="v._path">
-              <NuxtLink :to="v._path" class="text-blue-600 hover:underline">
-                {{ v.title || lastSegment(v._path) }}
-              </NuxtLink>
-            </li>
-          </ul>
+            <VariantsGallery :items="galleryVariants" />
         </div>
       </template>
     </UContainer>
     </ClientOnly>
-    <!-- PREVIEW MODAL -->
+
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">
       <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
         <div
