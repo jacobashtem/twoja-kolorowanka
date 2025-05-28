@@ -1,7 +1,5 @@
 <script setup>
-definePageMeta({ layout: 'default' })
 
-import { ref, computed, defineAsyncComponent } from 'vue'
 import { useWindowSize } from '@vueuse/core'
 import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
@@ -38,7 +36,7 @@ const { data: catData } = await useAsyncData(
   `catDoc:${basePath.value}`,
   () => queryContent(basePath.value).findOne()
 )
-const categoryDoc = computed(() => catData.value)
+const categoryDoc = computed(() => catData?.value)
 
 // liść?
 const isLeaf = computed(() => /^[0-9]+$/.test(currentTag))
@@ -105,13 +103,13 @@ function cleanTitle(t) {
 }
 const fullTitle = computed(() => {
   const base = isLeaf.value
-    ? cleanTitle(categoryDoc.value?.title || slug[slug.length - 2])
-    : cleanTitle(doc.value?.title || slug.at(-1))
+    ? cleanTitle(categoryDoc?.value?.title || slug[slug.length - 2])
+    : cleanTitle(doc?.value?.title || slug.at(-1))
   return `Kolorowanka ${base}${positionIndicator.value}`
 })
 
 // przyciski PDF / druk
-const imageUrl = computed(() => doc.value?.image)
+const imageUrl = computed(() => doc?.value?.image)
 function printPdf() {
   const pdfUrl = doc.value?.pdf
   if (!pdfUrl) return
@@ -138,6 +136,31 @@ function openPreviewModal() {
   if (!doc.value?.image) return
   showPreviewModal.value = true
 }
+useHead(() => {
+  const seoObj = doc.value
+  return {
+    title: seoObj?.title,
+    link: [ { rel: 'canonical', href: `https://instantroom.pl${seoObj?.canonical}` } ],
+    meta: [
+      { name: 'description', content: seoObj?.description },
+      { name: 'keywords',    content: seoObj?.keywords },
+      { name: 'robots',      content: seoObj?.robots },
+      { property: 'og:type',        content: 'website' },
+      { property: 'og:title',       content: seoObj?.title },
+      { property: 'og:description', content: seoObj?.description },
+      { property: 'og:url',         content: `https://twoja-kolorowanka.pl${seoObj?.canonical}` },
+      { property: 'og:image',       content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
+      // { name: 'twitter:card',        content: f.twitterCard },
+      // { name: 'twitter:site',        content: f.twitterSite },
+      // { name: 'twitter:title',       content: f.title },
+      // { name: 'twitter:description', content: f.description },
+      // { name: 'twitter:image',       content: `https://instantroom.pl${f.image}` }
+    ],
+    script: [
+
+    ]
+  }
+})
 </script>
 
 <template>
@@ -145,7 +168,7 @@ function openPreviewModal() {
     <div class="flex justify-center mt-8 w-full">
       <UContainer class="w-full">
         <h1
-          v-if="doc"
+          v-if="doc && isLeaf"
           v-rainbow-text="fullTitle"
           class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
@@ -153,17 +176,27 @@ function openPreviewModal() {
         <ClientOnly><Breadcrumbs /></ClientOnly>
       </UContainer>
     </div>
-
+    <template v-if="!isLeaf">
+      <Hero :hero-img1="doc?.heroImg1" :hero-img2="doc?.heroImg2" :description="doc?.description" :h1="{firstPartTitle: doc?.h1First, seccondPartTitle: doc?.h1Sec}" isCategory />
+      <UContainer>
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[0]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+          <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+            {{ doc?.seoBlocks[0]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+          </p>
+          <div>
+        </div>
+      </UContainer>
+    </template>
     <!-- PRZYCISKI na liściu -->
     <UContainer v-if="isLeaf" class="mb-6 mt-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-<NuxtLink
-   :to="`/koloruj/${slug.join('/')}`"
-   class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
- >
-   <img src="/vectors/crayons.svg" class="w-16 h-16" alt="Koloruj online" />
-   Koloruj online!
- </NuxtLink>
+        <NuxtLink
+          :to="`/koloruj/${slug.join('/')}`"
+          class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+        >
+          <img src="/vectors/crayons.svg" class="w-16 h-16" alt="Koloruj online" />
+          Koloruj online!
+        </NuxtLink>
 
         <button
           @click="openPreviewModal"
@@ -219,16 +252,7 @@ function openPreviewModal() {
       </template>
 
       <template v-else>
-        <div v-if="childrenCategories.length" class="mb-6">
-          <p class="mb-2 font-semibold">Podkategorie:</p>
-          <ul class="list-disc pl-5 space-y-1">
-            <li v-for="c in childrenCategories" :key="c._path">
-              <NuxtLink :to="c._path" class="text-blue-600 hover:underline">
-                {{ c.title || lastSegment(c._path) }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+          <CategoryGallery :items="childrenCategories" slugHandler/>
 
         <div v-if="childrenVariants.length">
           <p class="mb-2 font-semibold">
@@ -254,7 +278,7 @@ function openPreviewModal() {
         >
           <img
             v-if="doc?.image"
-            :src="doc.image"
+            :src="doc?.image"
             alt="Podgląd PDF"
             class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
           />
