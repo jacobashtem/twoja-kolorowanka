@@ -84,7 +84,13 @@ const childrenVariants = computed(() =>
     ? variantsFromGrandkids.value
     : variantsDirect.value
 )
-
+const galleryVariants = computed(() =>
+  childrenVariants.value.map(v => ({
+    img: v.image,
+    url: v._path,
+    title: v.title
+  }))
+)
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
   const idx = variantsDirect.value.findIndex(i => i._path === currentPath)
@@ -173,7 +179,18 @@ useHead(() => {
           class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         />
-        <ClientOnly><Breadcrumbs /></ClientOnly>
+        <ClientOnly>
+          <div class="flex items-center justify-between">
+            <Breadcrumbs />
+              <NuxtLink
+                :to="slug.length > 1 ? `/${slug.slice(0, -1).join('/')}` : '/'"
+                class="flex items-center gap-2 mb-6  bg-white border rounded px-4 py-2 hover:bg-gray-100"
+              >
+              <img src="/vectors/return.svg" class="w-16 h-16" alt="Koloruj online" />
+                Powrót
+              </NuxtLink>
+          </div>
+        </ClientOnly>
       </UContainer>
     </div>
     <template v-if="!isLeaf">
@@ -187,6 +204,7 @@ useHead(() => {
         </div>
       </UContainer>
     </template>
+
     <!-- PRZYCISKI na liściu -->
     <UContainer v-if="isLeaf" class="mb-6 mt-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -224,6 +242,8 @@ useHead(() => {
       </div>
     </UContainer>
 
+    
+
     <!-- TŁO + SVG LIŚCIA -->
     <ClientOnly>
       <UContainer v-if="isLeaf" class="mb-6">
@@ -254,7 +274,8 @@ useHead(() => {
       <template v-else>
           <CategoryGallery :items="childrenCategories" slugHandler/>
 
-        <div v-if="childrenVariants.length">
+        <div class="mt-20" v-if="childrenVariants.length">
+            <VariantsGallery :items="galleryVariants" />
           <p class="mb-2 font-semibold">
             {{ childrenCategories.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
           </p>

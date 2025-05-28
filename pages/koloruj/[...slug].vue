@@ -18,7 +18,7 @@
             :to="returnPath"
             class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
           >
-            <img src="/vectors/return.svg" class="w-16 h-16" alt="Koloruj online" />
+            <img src="/vectors/return.svg" class="w-16 h-16" alt="Powrót" />
             Powrót
           </NuxtLink>
         </div>
