@@ -1,5 +1,5 @@
 <template>
-    <UContainer class="mt-20 mb-20">
+    <UContainer class="mt-4 mb-20">
         <div class="w-full">
             <div class="mt-8 sm:mt-0 grid grid-cols-1 gap-8 md:grid-cols-2">
                 <!-- Left Section: Text Content -->
@@ -11,7 +11,7 @@
                         <span class="text-tertiary-500">Koloruj.</span>
                     </h2>
                     <h2 class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight" v-else>
-                        <span class="inline-block text-5xl md:text-5xl lg:text-7xl">{{h1.firstPartTitle}}</span><br />
+                        <span class="inline-block text-3xl md:text-5xl lg:text-7xl">{{h1.firstPartTitle}}</span><br />
                         <span class="text-tertiary-500">{{ h1.seccondPartTitle }}</span>
                     </h2>
                     <p

@@ -79,9 +79,8 @@
 <script setup>
 
 import { ref, computed } from 'vue'
-import { useRoute } from 'vue-router'
 import { useWindowSize } from '@vueuse/core'
-import { useAsyncData, queryContent } from '#imports'
+import { useAsyncData, queryContent, useRoute } from '#imports'
 
 const route = useRoute()
 const slug = Array.isArray(route.params.slug)

@@ -32,7 +32,7 @@ const props = defineProps({
     <span :class="['flex-grow block border-t', borderColor]"></span>
     <span
       :class="[
-        'flex-none block mx-4 px-4 py-2.5 rounded leading-none font-',
+        'block px-4 py-2.5 rounded leading-none font-',
         fontSize,
         backgroundColor,
         textColor
