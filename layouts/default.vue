@@ -1,12 +1,11 @@
 <script setup>
 </script>
 
-<template>
-    <AppHeader />
+<template>    
+<AppHeader />
     <main>
         <slot />
     </main>
     <AppFooter />
-    <UNotifications />
+    <!-- <UNotifications /> -->
 </template>
-

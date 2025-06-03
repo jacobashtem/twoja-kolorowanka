@@ -1,19 +1,19 @@
 <template>
-    <UContainer class="mt-20 mb-20">
+    <UContainer class="mt-4 mb-20">
         <div class="w-full">
             <div class="mt-8 sm:mt-0 grid grid-cols-1 gap-8 md:grid-cols-2">
                 <!-- Left Section: Text Content -->
                 <div class="order-2 md:order-1 flex flex-col justify-center text-left lg:text-left md:text-left z-10">
-                    <h2
+                    <h1
                         v-if="!isCategory"
                         class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight">
                         <span class="inline-block text-5xl md:text-5xl lg:text-7xl">Wydrukuj.</span><br />
                         <span class="text-tertiary-500">Koloruj.</span>
-                    </h2>
-                    <h2 class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight" v-else>
-                        <span class="inline-block text-5xl md:text-5xl lg:text-7xl">{{h1.firstPartTitle}}</span><br />
+                    </h1>
+                    <h1 class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight" v-else>
+                        <span class="inline-block text-3xl md:text-5xl lg:text-7xl">{{h1.firstPartTitle}}</span><br />
                         <span class="text-tertiary-500">{{ h1.seccondPartTitle }}</span>
-                    </h2>
+                    </h1>
                     <p
                         class="max-w-80 2xl:max-w-full mt-4 text-base sm:text-lg md:text-2xl font-light text-black text-balance">
                         {{ description ? description : 'Darmowe kolorowanki do wydruku dla dzieci i dorosłych. Prosto i bez kruczków.' }}
@@ -76,7 +76,3 @@ const props = defineProps({
 });
 
 </script>
-
-<style scoped>
-/* Możesz dodać style specyficzne tylko dla tego komponentu */
-</style>

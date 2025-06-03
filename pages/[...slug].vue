@@ -4,7 +4,6 @@ import { useWindowSize } from '@vueuse/core'
 import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
 
-// — twoje istniejące reactive’y (route, slug, doc, breadcrumbs, variants itd.)
 const route = useRoute()
 const slug = Array.isArray(route.params.slug)
   ? route.params.slug.filter(Boolean)
@@ -15,18 +14,15 @@ const slug = Array.isArray(route.params.slug)
 const currentPath = '/' + slug.join('/')
 const currentTag  = slug.at(-1) || ''
 
-// responsywność
 const { width } = useWindowSize()
 const isMobile = computed(() => width.value < 768)
 
-// główny dokument
 const { data: docData } = await useAsyncData(
   `doc:${currentPath}`,
   () => queryContent(currentPath).findOne()
 )
 const doc = computed(() => docData.value)
 
-// kategoria (index.md w folderze)
 const basePath = computed(() =>
   /^[0-9]+$/.test(currentTag)
     ? '/' + slug.slice(0, -1).join('/')
@@ -47,6 +43,7 @@ const { data: rawSibsData } = await useAsyncData(
   () =>
     queryContent()
       .where({ _path: { $regex: `^${basePath.value}/[^/]+$` } })
+      .limit(48)
       .find()
 )
 const rawSiblings = computed(() => rawSibsData.value || [])
@@ -76,7 +73,29 @@ const { data: rawGrandkids } = await useAsyncData(
   () =>
     queryContent()
       .where({ _path: { $regex: `^${currentPath}/[^/]+/[0-9]+$` } })
+      .limit(48)
       .find()
+)
+const dynamicLoaded = ref([])
+const skipped = ref(48)
+const loading = ref(false)
+const loadMore = async () => {
+   loading.value = true
+  dynamicLoaded.value = await
+    queryContent()
+      .where({ _path: { $regex: `^${currentPath}/[^/]+/[0-9]+$` } })
+      .skip(skipped.value)
+      .limit(8)
+      .find();
+      skipped.value += 8
+      loading.value = false
+}
+const dynamicGalleryVariants = computed(() =>
+  dynamicLoaded.value.map(v => ({
+    img: v.image,
+    url: v._path,
+    title: v.title
+  }))
 )
 const variantsFromGrandkids = computed(() => rawGrandkids.value || [])
 const childrenVariants = computed(() =>
@@ -156,11 +175,6 @@ useHead(() => {
       { property: 'og:description', content: seoObj?.description },
       { property: 'og:url',         content: `https://twoja-kolorowanka.pl${seoObj?.canonical}` },
       { property: 'og:image',       content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
-      // { name: 'twitter:card',        content: f.twitterCard },
-      // { name: 'twitter:site',        content: f.twitterSite },
-      // { name: 'twitter:title',       content: f.title },
-      // { name: 'twitter:description', content: f.description },
-      // { name: 'twitter:image',       content: `https://instantroom.pl${f.image}` }
     ],
     script: [
 
@@ -173,13 +187,14 @@ useHead(() => {
   <div>
     <div class="flex justify-center mt-8 w-full">
       <UContainer class="w-full">
+                  <!-- v-rainbow-text="fullTitle" -->
         <h1
           v-if="doc && isLeaf"
-          v-rainbow-text="fullTitle"
+
           class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         />
-        <ClientOnly>
+        <!-- <ClientOnly> -->
           <div class="flex items-center justify-between">
             <Breadcrumbs />
               <NuxtLink
@@ -191,7 +206,7 @@ useHead(() => {
                 Powrót
               </NuxtLink>
           </div>
-        </ClientOnly>
+        <!-- </ClientOnly> -->
       </UContainer>
     </div>
     <template v-if="!isLeaf">
@@ -206,7 +221,6 @@ useHead(() => {
       </UContainer>
     </template>
 
-    <!-- PRZYCISKI na liściu -->
     <UContainer v-if="isLeaf" class="mb-6 mt-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <NuxtLink
@@ -242,11 +256,7 @@ useHead(() => {
         </button>
       </div>
     </UContainer>
-
-    
-
-    <!-- TŁO + SVG LIŚCIA -->
-    <ClientOnly>
+    <!-- <ClientOnly> -->
       <UContainer v-if="isLeaf" class="mb-6">
         <div class="relative w-full mx-auto">
           <img
@@ -280,11 +290,55 @@ useHead(() => {
                <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
             {{ doc?.seoBlocks[1]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
           </p>
-            <VariantsGallery :items="galleryVariants" />
+          <!-- <code>{{ galleryVariants }}</code> -->
+            <VariantsGallery :items="galleryVariants.slice(0,8)" />
         </div>
+        <div>
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[2]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+            {{ doc?.seoBlocks[2]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+          </p>
+          <VariantsGallery :items="galleryVariants.slice(8,16)" />
+        </div>
+          <div>
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[3]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+            {{ doc?.seoBlocks[3]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+          </p>
+          <VariantsGallery :items="galleryVariants.slice(16,24)" />
+        </div>
+                <div>
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[4]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+            {{ doc?.seoBlocks[4]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+          </p>
+          <VariantsGallery :items="galleryVariants.slice(24,32)" />
+        </div>
+        <div>
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[5]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+            {{ doc?.seoBlocks[5]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+          </p>
+          <VariantsGallery :items="galleryVariants.slice(32,40)" />
+        </div>
+          <div>
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[6]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+            {{ doc?.seoBlocks[6]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+          </p>
+          <VariantsGallery :items="galleryVariants.slice(40,48)" />
+          <ClientOnly>
+              <VariantsGallery v-if="dynamicLoaded && dynamicLoaded.length" :items="dynamicGalleryVariants" />
+              
+            {{ loading }}
+              <LoadingSpinner v-if="loading" size="md" color="primary" text="Ładowanie..." />
+              <button v-else @click="loadMore">LoadmOre</button>
+          </ClientOnly>
+        </div>
+
       </template>
     </UContainer>
-    </ClientOnly>
+    <!-- </ClientOnly> -->
 
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">
       <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
@@ -301,22 +355,5 @@ useHead(() => {
         </div>
       </div>
     </UModal>
-
-    <!-- **EDYTOR** – ładowany dopiero po kliknięciu -->
-    <!-- <Suspense>
-      <template #fallback>
-        <div v-if="showEditor" class="fixed inset-0 bg-black/50 flex items-center justify-center">
-          <div class="text-white">Ładowanie edytora…</div>
-        </div>
-      </template>
-
-      <template #default>
-        <ColoringEditor
-          v-if="showEditor"
-          :svg="doc.image"
-          @close="closeEditor"
-        />
-      </template>
-    </Suspense> -->
   </div>
 </template>
