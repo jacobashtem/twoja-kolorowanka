@@ -1,11 +1,15 @@
 <script setup>
+// definePageMeta({
+//   layout: 'default'
+// })
+
 useHead({
     title: 'Twoja kolorowanka title',
     description: 'Twoja kolorowanka description',
 })
 const galleryItems = ref([
   {
-    src: '/category/foka.jpg',
+    src: '/koty/1/koty-1.svg',
     alt: "Koty",
     title: "Koty",
     url: "/zwierzeta/koty"
@@ -57,13 +61,19 @@ const galleryItems = ref([
   //   alt: "Dla Dziewczynek",
   //   title: "Dla Dziewczynek",
   //   url: "/dla-dziewczynek"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Pies",
-  //   title: "Pies",
-  //   url: "/zwierzeta/pies"
-  // },
+  // },,
+    {
+    src: '/kroliczki/1/kroliczki-1.svg',
+    alt: "kroliczki",
+    title: "Kroliczki",
+    url: "/zwierzeta/kroliczki"
+  },
+  {
+    src: '/pieski/1/pieski-5.svg',
+    alt: "Pies",
+    title: "Pies",
+    url: "/zwierzeta/pieski"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",
@@ -145,16 +155,19 @@ const galleryItems = ref([
 ])
 </script>
 <template>
+  <div class="index-page">
     <Hero />
     <UContainer>
-        <Heading text="Kolorowanka do druku" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-2xl md:text-3xl" />
-        <p class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            Znajdziesz tu szeroki wybór <span class="font-semibold">darmowych kolorowanek do druku</span>, które z łatwością pobierzesz i wydrukujesz na domowej drukarce. Nasza kolekcja obejmuje zarówno proste malowanki dla najmłodszych, jak i bardziej zaawansowane wzory dla starszych dzieci i dorosłych. Usiądź wygodnie i rozpocznij z nami swoją <span class="font-semibold">kolorową przygodę!</span>
-        </p>
-        <div>
+      <Heading text="Kolorowanka do druku" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-2xl md:text-3xl" />
+      <p class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+        Znajdziesz tu szeroki wybór <span class="font-semibold">darmowych kolorowanek do druku</span>, które z łatwością pobierzesz i wydrukujesz na domowej drukarce. Nasza kolekcja obejmuje zarówno proste malowanki dla najmłodszych, jak i bardziej zaawansowane wzory dla starszych dzieci i dorosłych. Usiądź wygodnie i rozpocznij z nami swoją <span class="font-semibold">kolorową przygodę!</span>
+      </p>
+      <div>
         <h1 class="text-3xl font-bold mb-4">Najważniejsze kategorie</h1>
       </div>
-        <CategoryGallery :items="galleryItems.slice(0,23)" />
-
+      <CategoryGallery 
+        :items="galleryItems.slice(0,23)"
+      />
     </UContainer>
+  </div>
 </template>

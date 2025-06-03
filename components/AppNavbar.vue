@@ -1,10 +1,10 @@
 <template>
-    <nav class="flex relative justify-end lg:justify-end">
+    <nav class="flex relative justify-end lg:justify-end" aria-label="Main Navigation">
         <NuxtLink to="/">
-            <img class="absolute left-0 w-32 2xl:w-28 rounded-br-2xl " src="public/logo-1.webp" alt="">
+            <img class="absolute left-0 w-32 2xl:w-28 rounded-br-2xl " src="/logo-1.webp" alt="">
         </NuxtLink>
         <div class="px-4 sm:px-6 lg:px-8 pt-8">
-            <div class="hidden md:flex space-x-6">
+            <div class="hidden md:flex space-x-6" role="menubar" aria-label="Main Menu">
                 <NuxtLink to="/" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl">
                     Strona główna
                 </NuxtLink>
@@ -39,15 +39,15 @@
                 class="shadow-lg z-50 absolute md:hidden px-2 pt-2 pr-12 pb-3 space-y-1 bg-white border-t border-gray-200">
                 <NuxtLink to="/"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition-colors duration-200">
-                    Home
+                    Strona główna
+                </NuxtLink>
+                <NuxtLink to="/zwierzeta"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition-colors duration-200">
+                    Kategorie kolorowanek
                 </NuxtLink>
                 <NuxtLink to="/"
                     class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition-colors duration-200">
-                    About
-                </NuxtLink>
-                <NuxtLink to="/"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200 transition-colors duration-200">
-                    Contact
+                    Blog
                 </NuxtLink>
             </div>
         </transition>

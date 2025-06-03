@@ -70,7 +70,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useWindowSize } from '@vueuse/core'
 
 const props = defineProps({
   colors: {

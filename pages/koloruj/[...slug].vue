@@ -3,9 +3,10 @@
 <div>
 <div class="flex justify-center mt-8 w-full">
       <UContainer class="w-full">
+                  <!-- v-rainbow-text="fullTitle" -->
         <h1
           v-if="doc"
-          v-rainbow-text="fullTitle"
+
           class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         />

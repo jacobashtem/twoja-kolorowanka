@@ -1,0 +1,11 @@
+---
+title: Pieski
+description: Kolorowanka Pieski - wariant 53
+canonical: /zwierzeta/pieski
+variant_of: pieski
+image: /pieski/53/pieski-53.svg
+pdf: /pieski/53/pieski-53.pdf
+tags:
+- zwierzeta
+- pieski
+---
