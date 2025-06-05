@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static',
     prerender: {
-      routes            // <‑ pełna lista ścieżek
+      routes
     }
   },
   content: {

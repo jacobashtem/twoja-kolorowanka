@@ -13,7 +13,9 @@ const slug = Array.isArray(route.params.slug)
 
 const currentPath = '/' + slug.join('/')
 const currentTag  = slug.at(-1) || ''
-
+const levelRegex = slug.length === 1             // root /zwierzeta
+  ? `^${currentPath}/[^/]+/[0-9]+$`
+  : `^${currentPath}/[0-9]+$`
 const { width } = useWindowSize()
 const isMobile = computed(() => width.value < 768)
 
@@ -70,25 +72,22 @@ const variantsDirect = computed(() =>
 // warianty z wnuków (tylko na root /zwierzeta)
 const { data: rawGrandkids } = await useAsyncData(
   `grandkids:${currentPath}`,
-  () =>
-    queryContent()
-      .where({ _path: { $regex: `^${currentPath}/[^/]+/[0-9]+$` } })
-      .limit(48)
-      .find()
+  () => queryContent().where({ _path: { $regex: levelRegex } }).limit(48).find()
 )
 const dynamicLoaded = ref([])
 const skipped = ref(48)
 const loading = ref(false)
 const loadMore = async () => {
-   loading.value = true
-  dynamicLoaded.value = await
-    queryContent()
-      .where({ _path: { $regex: `^${currentPath}/[^/]+/[0-9]+$` } })
-      .skip(skipped.value)
-      .limit(8)
-      .find();
-      skipped.value += 8
-      loading.value = false
+  loading.value = true
+  const more = await queryContent()
+    .where({ _path: { $regex: levelRegex } })
+    .skip(skipped.value)
+    .limit(8)
+    .find()
+
+  dynamicLoaded.value.push(...more)
+  skipped.value += 8
+  loading.value = false
 }
 const dynamicGalleryVariants = computed(() =>
   dynamicLoaded.value.map(v => ({
@@ -97,6 +96,11 @@ const dynamicGalleryVariants = computed(() =>
     title: v.title
   }))
 )
+watch(() => currentPath, () => {
+  skipped.value        = 48          // znowu po pierwszej paczce
+  dynamicLoaded.value  = []          // wyczyść stare dane
+})
+
 const variantsFromGrandkids = computed(() => rawGrandkids.value || [])
 const childrenVariants = computed(() =>
   slug.length === 1
@@ -161,7 +165,7 @@ function openPreviewModal() {
   if (!doc.value?.image) return
   showPreviewModal.value = true
 }
-useHead(() => {
+[useHead(() => {
   const seoObj = doc.value
   return {
     title: seoObj?.title,
@@ -180,17 +184,17 @@ useHead(() => {
 
     ]
   }
-})
+})]
 </script>
 
 <template>
   <div>
     <div class="flex justify-center mt-8 w-full">
       <UContainer class="w-full">
-                  <!-- v-rainbow-text="fullTitle" -->
+                  
         <h1
           v-if="doc && isLeaf"
-
+          v-rainbow-text="fullTitle"
           class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         />
@@ -283,7 +287,9 @@ useHead(() => {
       </template>
 
       <template v-else>
-          <CategoryGallery class="mb-8" :items="childrenCategories" slugHandler/>
+          
+          <CategoryGallery v-if="childrenCategories.length" class="mb-8" :items="childrenCategories" slugHandler/>
+          <VariantsGallery v-else :items="galleryVariants.slice(0,8)" />
 
         <div v-if="childrenVariants.length">
             <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[1]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
@@ -295,44 +301,41 @@ useHead(() => {
         </div>
         <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[2]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            {{ doc?.seoBlocks[2]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+               <p v-html="doc.seoBlocks[2].text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.'" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(8,16)" />
         </div>
           <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[3]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            {{ doc?.seoBlocks[3]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+               <p v-if="doc?.seoBlocks" 
+               v-html="doc.seoBlocks[3].text ||''"
+               class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(16,24)" />
         </div>
                 <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[4]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            {{ doc?.seoBlocks[4]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+               <p v-html="doc.seoBlocks[4].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(24,32)" />
         </div>
         <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[5]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            {{ doc?.seoBlocks[5]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+               <p v-html="doc.seoBlocks[5].text || ''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(32,40)" />
         </div>
           <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[6]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            {{ doc?.seoBlocks[6]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+               <p v-html="doc.seoBlocks[6].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(40,48)" />
           <ClientOnly>
-              <VariantsGallery v-if="dynamicLoaded && dynamicLoaded.length" :items="dynamicGalleryVariants" />
-              
-            {{ loading }}
+              <VariantsGallery class="mt-4" v-if="dynamicLoaded && dynamicLoaded.length" :items="dynamicGalleryVariants" />
+              <div class="flex flex-col items-center">
               <LoadingSpinner v-if="loading" size="md" color="primary" text="Ładowanie..." />
-              <button v-else @click="loadMore">LoadmOre</button>
+              <button  class="my-4 rounded-sm p-3 grow border text-center border-main-500 text-main-500 font-bold uppercase text-sm tracking-widest hover:bg-main-500 hover:text-white transition" v-else @click="loadMore">Załaduj więcej kolorowanek</button>
+              </div>
           </ClientOnly>
         </div>
 

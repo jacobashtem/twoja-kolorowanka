@@ -14,6 +14,12 @@ const galleryItems = ref([
     title: "Koty",
     url: "/zwierzeta/koty"
   },
+    {
+    src: '/koniki/1/koniki-1.svg',
+    alt: "Koniki",
+    title: "Koniki",
+    url: "/zwierzeta/koniki"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Pusheen",
@@ -69,9 +75,9 @@ const galleryItems = ref([
     url: "/zwierzeta/kroliczki"
   },
   {
-    src: '/pieski/1/pieski-5.svg',
-    alt: "Pies",
-    title: "Pies",
+    src: '/pieski/26/pieski-26.svg',
+    alt: "Pieski",
+    title: "Pieski",
     url: "/zwierzeta/pieski"
   },
   // {
@@ -153,6 +159,41 @@ const galleryItems = ref([
   //   url: "/film/star-wars"
   // }
 ])
+useHead(() => {
+  const canonical = `https://twoja-kolorowanka.pl'}`
+  const image = `https://twoja-kolorowanka.pl/logo-1.webp`
+
+  return {
+    title: 'Kolorowanki dla dzieci do druku | Darmowe malowanki online',
+    htmlAttrs: {
+      lang: 'pl'
+    },
+    link: [
+      { rel: 'canonical', href: canonical }
+    ],
+    meta: [
+      { name: 'description', content: 'Darmowe kolorowanki do druku dla dzieci. Wydrukuj ulubione postacie z bajek, gier i filmów. Setki wzorów gotowych do pobrania!' },
+      { name: 'keywords', content: 'kolorowanki, malowanki, dla dzieci, do druku, bajki, gry, darmowe kolorowanki' },
+      { name: 'robots', content:  'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+
+      // Open Graph
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: 'Kolorowanki dla dzieci do druku | Darmowe malowanki online' },
+      { property: 'og:description', content: 'Darmowe kolorowanki do druku z bajek, gier i filmów. Wydrukuj i baw się kolorowaniem!' },
+      { property: 'og:url', content: canonical },
+      { property: 'og:image', content: image },
+      { property: 'og:site_name', content: 'twoja-kolorowanka.pl' },
+      { property: 'og:locale', content: 'pl_PL' },
+
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: 'Kolorowanki do druku za darmo | twoja-kolorowanka.pl' },
+      { name: 'twitter:description', content: 'Setki kolorowanek gotowych do druku. Dla dzieci i całej rodziny. Pobierz za darmo!' },
+      { name: 'twitter:image', content: image }
+    ]
+  }
+})
+
 </script>
 <template>
   <div class="index-page">
