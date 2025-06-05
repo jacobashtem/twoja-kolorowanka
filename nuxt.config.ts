@@ -21,7 +21,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@zadigetvoltaire/nuxt-gtm',
   ],
     googleFonts: {
     families: {
@@ -30,5 +31,19 @@ export default defineNuxtConfig({
     display: 'swap',
     preconnect: true,
     preload: true,
+  },
+    runtimeConfig: {
+    public: {
+      gtm: {
+        id: "GTM-PMTV7XJ8",
+        defer: false,
+        compatibility: false,
+        enabled: true,
+        debug: true,
+        loadScript: true,
+        trackOnNextTick: false,
+        devtools: true,
+      },
+    }
   },
 })
