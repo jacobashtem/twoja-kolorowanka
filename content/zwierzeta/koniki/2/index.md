@@ -1,0 +1,9 @@
+---
+title: Koniki
+description: Kolorowanka Koniki – wariant 2
+image: /koniki/2/koniki-2.svg
+pdf:   /koniki/2/koniki-2.pdf
+tags:
+ - zwierzeta
+ - koniki
+---

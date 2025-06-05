@@ -33,5 +33,4 @@ seoBlocks:
     text: "<ol class=\"list-decimal list-inside\"><li>Wybierz ulubioną kolorowankę ze zwierzętami z naszej biblioteki</li><li>Pobierz plik PDF na swój komputer</li><li>Wydrukuj na domowej drukarce</li><li>Przygotuj kredki, flamastry albo pastele</li><li>Oddaj pole do popisu małemu artyście!</li></ol>"
   - heading: "Gotowy? Pobierz i zacznij kolorować już teraz"
     text: "Nie zwlekaj – kolorowanki ze zwierzętami to świetna rozrywka na każdą pogodę. Darmowe, łatwe do pobrania i niesamowicie różnorodne. Sprawdź nasze kolekcje i wybierz ulubione obrazki. Codziennie możesz kolorować coś nowego! Pobierz kolorowanki zwierzęta do druku i stwórz własną domową galerię sztuki!"
-
 ---

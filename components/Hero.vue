@@ -15,7 +15,7 @@
                         <span class="text-tertiary-500">{{ h1.seccondPartTitle }}</span>
                     </h1>
                     <p
-                        class="max-w-80 2xl:max-w-full mt-4 text-base sm:text-lg md:text-2xl font-light text-black text-balance">
+                        class="mt-4 text-base sm:text-lg md:text-2xl font-light text-black text-balance">
                         {{ description ? description : 'Darmowe kolorowanki do wydruku dla dzieci i dorosłych. Prosto i bez kruczków.' }}
                     </p>
                     <div class="mt-6 sm:mt-8 flex flex-wrap gap-4" v-if="!isCategory">
@@ -35,6 +35,10 @@
                         <img :src="heroImg1" alt="">
                     </div>
                     <div
+                        class="sm:absolute  max-md:top-0 md:bottom-44 lg:-bottom-20 lg lg:-right-16 w-40 md:w-48 sm:w-32 lg:w-64 bg-white-500 -rotate-12 rounded-lg border-black-700 border-r-4 border-b-8">
+                        <img :src="heroImg2" alt="">
+                    </div>
+                      <div
                         class="sm:absolute  max-md:top-0 md:bottom-44 lg:-bottom-20 lg lg:-right-16 w-40 md:w-48 sm:w-32 lg:w-64 bg-white-500 -rotate-12 rounded-lg border-black-700 border-r-4 border-b-8">
                         <img :src="heroImg2" alt="">
                     </div>
