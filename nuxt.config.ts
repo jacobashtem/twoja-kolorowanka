@@ -1,9 +1,9 @@
-import { defineNuxtConfig } from "nuxt/config";
-import routes  from './prerender-routes.json'
+import { defineNuxtConfig } from "nuxt/config"
+import routes from './prerender-routes.json'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-    routeRules: {
+  routeRules: {
     '/koloruj/**': { appMiddleware: 'check-id' }
   },
   devtools: { enabled: true },
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@zadigetvoltaire/nuxt-gtm',
   ],
-    googleFonts: {
+  googleFonts: {
     families: {
       Modak: true,
     },
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     preconnect: true,
     preload: true,
   },
-    runtimeConfig: {
+  runtimeConfig: {
     public: {
       gtm: {
         id: "GTM-PMTV7XJ8",
@@ -46,4 +46,23 @@ export default defineNuxtConfig({
       },
     }
   },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'pl'
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
+        { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }
+      ],
+      meta: [
+        { name: 'theme-color', content: '#ffffff' },
+        { name: 'msapplication-TileColor', content: '#ffffff' }
+      ]
+    }
+  }
 })
