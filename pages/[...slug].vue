@@ -217,7 +217,7 @@ function openPreviewModal() {
     <template v-if="!isLeaf">
       <Hero :hero-img1="doc?.heroImg1" :hero-img2="doc?.heroImg2" :description="doc?.description" :h1="{firstPartTitle: doc?.h1First, seccondPartTitle: doc?.h1Sec}" isCategory />
       <UContainer>
-          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[0]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[0]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
           <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
             {{ doc?.seoBlocks[0]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
           </p>
@@ -294,7 +294,7 @@ function openPreviewModal() {
           <VariantsGallery v-else :items="galleryVariants.slice(0,8)" />
 
         <div v-if="childrenVariants.length">
-            <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[1]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+            <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[1]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
             {{ doc?.seoBlocks[1]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
           </p>
@@ -302,13 +302,13 @@ function openPreviewModal() {
             <VariantsGallery :items="galleryVariants.slice(0,8)" />
         </div>
         <div>
-          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[2]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[2]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <p v-html="doc.seoBlocks[2].text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.'" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(8,16)" />
         </div>
           <div>
-          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[3]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[3]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <p v-if="doc?.seoBlocks" 
                v-html="doc.seoBlocks[3].text ||''"
                class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
@@ -316,19 +316,19 @@ function openPreviewModal() {
           <VariantsGallery :items="galleryVariants.slice(16,24)" />
         </div>
                 <div>
-          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[4]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[4]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <p v-html="doc.seoBlocks[4].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(24,32)" />
         </div>
         <div>
-          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[5]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[5]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <p v-html="doc.seoBlocks[5].text || ''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(32,40)" />
         </div>
           <div>
-          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[6]?.heading || ''" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[6]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <p v-html="doc.seoBlocks[6].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <VariantsGallery :items="galleryVariants.slice(40,48)" />

@@ -10,7 +10,7 @@
                         <span class="inline-block text-5xl md:text-5xl lg:text-7xl">Wydrukuj.</span><br />
                         <span class="text-tertiary-500">Koloruj.</span>
                     </h1>
-                    <h1 class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight" v-else>
+                    <h1 :aria-label="h1.firstPartTitle + ' ' + h1.seccondPartTitle" class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight" v-else>
                         <span class="inline-block text-3xl md:text-5xl lg:text-7xl">{{h1.firstPartTitle}}</span><br />
                         <span class="text-tertiary-500">{{ h1.seccondPartTitle }}</span>
                     </h1>
