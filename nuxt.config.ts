@@ -16,7 +16,12 @@ export default defineNuxtConfig({
   content: {
     documentDriven: false
   },
+    site: {
+    url: 'https://twoja-kolorowanka.pl',
+    name: 'twoja-kolorowanka.pl',
+  },
   modules: [
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
