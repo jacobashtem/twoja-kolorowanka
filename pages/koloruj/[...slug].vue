@@ -201,4 +201,26 @@ function openPreviewModal() {
   if (!doc.value?.image) return
   showPreviewModal.value = true
 }
+[useHead(() => {
+  const seoObj = doc.value
+   const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`
+  return {
+    title: seoObj?.title,
+    link: [ { rel: 'canonical', href: canonical } ],
+    meta: [
+      { name: 'robots', content: 'noindex, nofollow' },
+      { name: 'description', content: seoObj?.description },
+      { name: 'keywords',    content: seoObj?.keywords },
+      { property: 'og:type',        content: 'website' },
+      { property: 'og:title',       content: seoObj?.title },
+      { property: 'og:description', content: seoObj?.description },
+      { property: 'og:url',         content: `https://twoja-kolorowanka.pl${seoObj?.canonical}` },
+      { property: 'og:image',       content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
+    ],
+    script: [
+
+    ]
+  }
+})]
+
 </script>
