@@ -167,9 +167,10 @@ function openPreviewModal() {
 }
 [useHead(() => {
   const seoObj = doc.value
+   const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`
   return {
     title: seoObj?.title,
-    link: [ { rel: 'canonical', href: `https://instantroom.pl${seoObj?.canonical}` } ],
+    link: [ { rel: 'canonical', href: canonical } ],
     meta: [
       { name: 'description', content: seoObj?.description },
       { name: 'keywords',    content: seoObj?.keywords },
@@ -229,6 +230,7 @@ function openPreviewModal() {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <NuxtLink
           :to="`/koloruj/${slug.join('/')}`"
+          rel="nofollow"
           class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
         >
           <img src="/vectors/crayons.svg" class="w-16 h-16" alt="Koloruj online" />
