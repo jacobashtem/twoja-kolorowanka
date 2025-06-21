@@ -77,18 +77,44 @@ const { data: rawGrandkids } = await useAsyncData(
 const dynamicLoaded = ref([])
 const skipped = ref(48)
 const loading = ref(false)
+const canLoadMore = ref(true)
 const loadMore = async () => {
-  loading.value = true
-  const more = await queryContent()
-    .where({ _path: { $regex: levelRegex } })
-    .skip(skipped.value)
-    .limit(8)
-    .find()
+  if (!import.meta.client || loading.value || !canLoadMore.value) return
 
-  dynamicLoaded.value.push(...more)
-  skipped.value += 8
-  loading.value = false
+  loading.value = true
+  try {
+    // parametry zapytania
+    const q = {
+      where: [{ _path: { $regex: levelRegex } }],
+      skip : skipped.value,
+      limit: 8,
+      sort : [{ _stem: 1, $numeric: true }],
+      only : ['_path', 'image', 'title']   // bierz tylko to, czego potrzebujesz
+    }
+
+    // GET z _params – to działa identycznie lokalnie i na produkcji SSG
+    const more = await $fetch('/api/_content/query', {
+      params: { _params: JSON.stringify(q) }  // <-- kluczowa linia
+    })
+
+    if (!more?.length) {
+      canLoadMore.value = false
+      return
+    }
+
+    dynamicLoaded.value.push(...more)
+    skipped.value += more.length
+  } catch (err) {
+    console.error('loadMore error:', err)
+    canLoadMore.value = false   // blokada przy błędzie, brak zapętlenia
+  } finally {
+    loading.value = false
+  }
 }
+
+
+
+
 const dynamicGalleryVariants = computed(() =>
   dynamicLoaded.value.map(v => ({
     img: v.image,
@@ -336,7 +362,13 @@ function openPreviewModal() {
               <VariantsGallery class="mt-4" v-if="dynamicLoaded && dynamicLoaded.length" :items="dynamicGalleryVariants" />
               <div class="flex flex-col items-center">
               <LoadingSpinner v-if="loading" size="md" color="primary" text="Ładowanie..." />
-              <button  class="my-4 rounded-sm p-3 grow border text-center border-main-500 text-main-500 font-bold uppercase text-sm tracking-widest hover:bg-main-500 hover:text-white transition" v-else @click="loadMore">Załaduj więcej kolorowanek</button>
+              <button
+                v-if="canLoadMore && !loading"
+                @click="loadMore"
+                class="my-4 rounded-sm p-3 grow border text-center border-main-500 text-main-500 font-bold uppercase text-sm tracking-widest hover:bg-main-500 hover:text-white transition"
+              >
+                Załaduj więcej kolorowanek
+              </button>
               </div>
           </ClientOnly>
         </div>
