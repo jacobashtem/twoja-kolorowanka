@@ -1,134 +1,115 @@
 <script setup>
 import { useWindowSize } from '@vueuse/core'
-import heroDesktop from '~/public/twoja-kolorowanka-hero.png'
+import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
 
-/* ────────────────────────
-   ŚCIEŻKA I REGEX
-   ──────────────────────── */
+/* ─────────  STAŁE  ───────── */
+const FIRST_BATCH = 48   // ile miniatur od razu
+const STEP        = 8    // paczka przy kliknięciu
+
+/* ─────────  ŚCIEŻKA  ───────── */
 const route = useRoute()
-const slug = Array.isArray(route.params.slug)
+const slug  = Array.isArray(route.params.slug)
   ? route.params.slug.filter(Boolean)
-  : route.params.slug
-    ? [route.params.slug]
-    : []
+  : route.params.slug ? [route.params.slug] : []
 
 const currentPath = '/' + slug.join('/')
 const currentTag  = slug.at(-1) || ''
 const isLeaf      = computed(() => /^[0-9]+$/.test(currentTag))
 
-// ścieżka bazowa: root lub kategoria
 const basePath = computed(() =>
-  isLeaf.value ? '/' + slug.slice(0, -1).join('/') : currentPath
-)
+  isLeaf.value ? '/' + slug.slice(0, -1).join('/') : currentPath)
 
-/*  root  -> /zwierzeta/<kategoria>/<num>
-    cat   -> /zwierzeta/<kategoria>/<num>          */
 const levelRegex = computed(() =>
   slug.length === 1
     ? `^${basePath.value}/[^/]+/[0-9]+$`
-    : `^${basePath.value}/[0-9]+$`
-)
+    : `^${basePath.value}/[0-9]+$`)
 
-/* ────────────────────────
-   DANE Z NUXT CONTENT
-   ──────────────────────── */
+/* sort numeryczny */
+const byNum = (a, b) =>
+  +(a._path.match(/\/(\d+)\/?$/)?.[1] || 0) -
+  +(b._path.match(/\/(\d+)\/?$/)?.[1] || 0)
+
+/* ─────────  DANE  ───────── */
 const { width } = useWindowSize()
 const isMobile  = computed(() => width.value < 768)
 
+/* plik doc */
 const { data: docData } = await useAsyncData(`doc:${currentPath}`,
   () => queryContent(currentPath).findOne())
 const doc = computed(() => docData.value)
 
-const { data: catData } = await useAsyncData(`catDoc:${basePath.value}`,
+/* dokument kategorii */
+const { data: catData } = await useAsyncData(`cat:${basePath.value}`,
   () => queryContent(basePath.value).findOne())
 const categoryDoc = computed(() => catData?.value)
 
-/* ─ siblingy i warianty ─ */
-const { data: rawSibsData } = await useAsyncData(`siblings:${basePath.value}`,
-  () => queryContent().where({ _path: { $regex: `^${basePath.value}/[^/]+$` } }).limit(200).find())
-const rawSiblings = computed(() => rawSibsData.value || [])
-const siblings    = computed(() => rawSiblings.value.filter(i => !i._path.endsWith('/index')))
+/* siblings */
+const { data: sibsData } = await useAsyncData(`sibs:${basePath.value}`,
+  () => queryContent().where({ _path: { $regex: `^${basePath.value}/[^/]+$` } }).find())
+const siblings = computed(() =>
+  (sibsData.value || []).filter(i => !i._path.endsWith('/index')))
 
-const lastSegment = p => p.split('/').pop()
+/* kategorie i warianty */
+const last = p => p.split('/').pop()
+
 const childrenCategories = computed(() =>
-  !isLeaf.value ? siblings.value.filter(i => !/^[0-9]+$/.test(lastSegment(i._path))) : [])
-const variantsDirect = computed(() =>
-  siblings.value.filter(i => /^[0-9]+$/.test(lastSegment(i._path))))
+  !isLeaf.value ? siblings.value.filter(i => !/^[0-9]+$/.test(last(i._path))) : [])
 
-/* ─ wnuki dla roota ─ */
-const { data: rawGrandkids } = await useAsyncData(`grandkids:${currentPath}`,
-  () => queryContent().where({ _path: { $regex: levelRegex.value } }).limit(200).find())
-const variantsFromGrandkids = computed(() => rawGrandkids.value || [])
+const variantsDirect = computed(() =>
+  siblings.value.filter(i => /^[0-9]+$/.test(last(i._path))).sort(byNum))
+
+/* wnuki (root) */
+const { data: rawGrand } = await useAsyncData(`grand:${currentPath}`,
+  () => queryContent()
+        .where({ _path: { $regex: levelRegex.value } })
+        .only(['_path','image','title'])
+        .find())
+const variantsGrand = computed(() => (rawGrand.value || []).sort(byNum))
 
 const childrenVariants = computed(() =>
-  slug.length === 1 ? variantsFromGrandkids.value : variantsDirect.value)
+  slug.length === 1 ? variantsGrand.value : variantsDirect.value)
 
 const galleryVariants = computed(() =>
   childrenVariants.value.map(v => ({ img: v.image, url: v._path, title: v.title })))
 
-/* ────────────────────────
-   LAZY „Załaduj więcej”
-   ──────────────────────── */
-const dynamicLoaded = ref([])
-const display = 48;
-const skipped       = ref(display)
-const loading       = ref(false)
-const canLoadMore   = ref(true)
 
-const loadMore = async () => {
-  if (!import.meta.client || loading.value || !canLoadMore.value) return
-  loading.value = true
-  try {
-    const more = await $fetch('/api/content-query', {
-      method : 'POST',
-      body   : {
-        where : [{ _path: { $regex: levelRegex.value } }],
-        skip  : skipped.value,
-        limit : 8,
-        sort  : [{ _stem: 1, $numeric: true }],
-        only  : ['_path', 'image', 'title']
-      }
-    })
-    if (!more?.length) {
-      canLoadMore.value = false
-    } else {
-      dynamicLoaded.value.push(...more)
-      skipped.value += more.length
-    }
-  } finally {
-    loading.value = false
-  }
-}
-
-const dynamicGalleryVariants = computed(() =>
-  dynamicLoaded.value.map(v => ({ img: v.image, url: v._path, title: v.title })))
-
-/* ─ reset przy nawigacji ─ */
-watch(() => currentPath, () => {
-  dynamicLoaded.value = []
-  skipped.value       = DISPLAY
-  canLoadMore.value   = true
+/* ─────────  LAZY LOAD  ───────── */
+const visibleCount = ref(0)                          // inicjalnie 0
+watchEffect(() => {                                  // gdy pojawi się lista
+  visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
 })
 
-/* ────────────────────────
-   Tytuł, indeks itd.
-   ──────────────────────── */
+const visibleGalleryVariants = computed(() =>
+  galleryVariants.value.slice(FIRST_BATCH, visibleCount.value))
+
+function loadMore () {
+  visibleCount.value = Math.min(
+    visibleCount.value + STEP,
+    galleryVariants.value.length
+  )
+}
+
+watch(() => currentPath, () => {
+  visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
+})
+
+/* ─────────  TITLE / INDEX  ───────── */
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
   const i = variantsDirect.value.findIndex(v => v._path === currentPath)
   return i >= 0 ? i + 1 : null
 })
 const totalCount = computed(() => (isLeaf.value ? variantsDirect.value.length : 0))
-const positionIndicator = computed(() =>
+const posInd = computed(() =>
   isLeaf.value && totalCount.value > 1 ? ` (${currentIndex.value}/${totalCount.value})` : '')
 
-const cleanTitle = t => t?.replace(/^Kolorowanki?\s*/i, '') || ''
-const fullTitle  = computed(() => {
+const clean = t => t?.replace(/^Kolorowanki?\s*/i, '') || ''
+const fullTitle = computed(() => {
   const base = isLeaf.value
-    ? cleanTitle(categoryDoc?.value?.title || slug[slug.length - 2])
-    : cleanTitle(doc?.value?.title      || slug.at(-1))
-  return `Kolorowanka ${base}${positionIndicator.value}`
+    ? clean(categoryDoc?.value?.title || slug[slug.length - 2])
+    : clean(doc?.value?.title || slug.at(-1))
+  return `Kolorowanka ${base}${posInd.value}`
 })
 
 /* ─ utilsy PDF / modale ─ */
@@ -141,7 +122,8 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
 /* ────────────────────────
    SEO meta
    ──────────────────────── */
-   [useHead(() => {
+/* ─────────  SEO  ───────── */
+[useHead(() => {
   const seoObj = doc.value
    const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`
   return {
@@ -168,36 +150,35 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
   <div>
     <div class="flex justify-center mt-8 w-full">
       <UContainer class="w-full">
-                  
+        
         <h1
           v-if="doc && isLeaf"
           v-rainbow-text="fullTitle"
           class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         />
-        <!-- <ClientOnly> -->
-          <div class="flex items-center justify-between">
-            <Breadcrumbs />
-              <NuxtLink
-                v-if="isLeaf"
-                :to="slug.length > 1 ? `/${slug.slice(0, -1).join('/')}` : '/'"
-                class="flex items-center gap-2 mb-6  bg-white border rounded px-4 py-2 hover:bg-gray-100"
-              >
-              <img src="/vectors/return.svg" class="w-16 h-16" alt="Koloruj online" />
-                Powrót
-              </NuxtLink>
-          </div>
-        <!-- </ClientOnly> -->
+        <div class="flex items-center justify-between">
+          <Breadcrumbs />
+          <NuxtLink
+            v-if="isLeaf"
+            :to="slug.length > 1 ? `/${slug.slice(0, -1).join('/')}` : '/'"
+            class="flex items-center gap-2 mb-6 bg-white border rounded px-4 py-2 hover:bg-gray-100"
+          >
+            <img src="/vectors/return.svg" class="w-16 h-16" alt="Koloruj online" />
+            Powrót
+          </NuxtLink>
+        </div>
+  
       </UContainer>
     </div>
     <template v-if="!isLeaf">
       <Hero :hero-img1="doc?.heroImg1" :hero-img2="doc?.heroImg2" :description="doc?.description" :h1="{firstPartTitle: doc?.h1First, seccondPartTitle: doc?.h1Sec}" isCategory />
       <UContainer>
-          <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[0]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-          <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            {{ doc?.seoBlocks[0]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
-          </p>
-          <div>
+        <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[0]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+        <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+          {{ doc?.seoBlocks[0]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+        </p>
+        <div>
         </div>
       </UContainer>
     </template>
@@ -238,27 +219,26 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
         </button>
       </div>
     </UContainer>
-    <!-- <ClientOnly> -->
-      <UContainer v-if="isLeaf" class="mb-6">
-        <div class="relative w-full mx-auto">
+
+    <UContainer v-if="isLeaf" class="mb-6">
+      <div class="relative w-full mx-auto">
+        <img
+          :src="isMobile ? heroMobileImg : heroDesktop"
+          alt="Twoja kolorowanka"
+          class="w-full h-auto"
+        />
+        <div
+          v-if="imageUrl"
+          class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        >
           <img
-            :src="isMobile ? heroMobileImg : heroDesktop"
-            alt="Twoja kolorowanka"
-            class="w-full h-auto"
+            :src="imageUrl"
+            class="max-w-[60%] h-auto"
+            style="max-height:61%; margin-top:-11%;"
           />
-          <div
-            v-if="imageUrl"
-            class="absolute inset-0 flex items-center justify-center pointer-events-none"
-          >
-            <img
-              :src="imageUrl"
-              class="max-w-[60%] h-auto"
-              style="max-height:61%; margin-top:-11%;"
-            />
-          </div>
         </div>
-      </UContainer>
-          <!-- TREŚĆ KATEGORII / ROOT -->
+      </div>
+    </UContainer>
     <UContainer v-else>
       <template v-if="!doc">
         <p class="text-red-600">Nie znaleziono strony.</p>
@@ -309,12 +289,12 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
           </p>
           <VariantsGallery :items="galleryVariants.slice(40,48)" />
           <ClientOnly>
-              <VariantsGallery class="mt-4" v-if="dynamicLoaded && dynamicLoaded.length" :items="dynamicGalleryVariants" />
+            <VariantsGallery :items="visibleGalleryVariants" />
               <div class="flex flex-col items-center">
-              <LoadingSpinner v-if="loading" size="md" color="primary" text="Ładowanie..." />
+              <!-- <LoadingSpinner v-if="loading" size="md" color="primary" text="Ładowanie..." /> -->
               <button
-                v-if="canLoadMore && !loading"
-                @click="loadMore"
+                 v-if="visibleGalleryVariants.length < galleryVariants.length"
+    @click="loadMore"
                 class="my-4 rounded-sm p-3 grow border text-center border-main-500 text-main-500 font-bold uppercase text-sm tracking-widest hover:bg-main-500 hover:text-white transition"
               >
                 Załaduj więcej kolorowanek
@@ -325,7 +305,6 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
 
       </template>
     </UContainer>
-    <!-- </ClientOnly> -->
 
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">
       <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
@@ -335,7 +314,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
         >
           <img
             v-if="doc?.image"
-            :src="doc?.image"
+            :src="doc.image"
             alt="Podgląd PDF"
             class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
           />
@@ -344,3 +323,4 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
     </UModal>
   </div>
 </template>
+
