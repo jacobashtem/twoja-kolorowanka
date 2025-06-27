@@ -289,11 +289,11 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
           </p>
           <VariantsGallery :items="galleryVariants.slice(40,48)" />
           <ClientOnly>
-            <VariantsGallery :items="visibleGalleryVariants" />
+            <VariantsGallery :items="visibleGalleryVariants"  class="mt-6"/>
               <div class="flex flex-col items-center">
               <!-- <LoadingSpinner v-if="loading" size="md" color="primary" text="Ładowanie..." /> -->
               <button
-                 v-if="visibleGalleryVariants.length < galleryVariants.length"
+                 v-if="visibleCount < galleryVariants.length"
     @click="loadMore"
                 class="my-4 rounded-sm p-3 grow border text-center border-main-500 text-main-500 font-bold uppercase text-sm tracking-widest hover:bg-main-500 hover:text-white transition"
               >
