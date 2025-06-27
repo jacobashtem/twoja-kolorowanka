@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   nitro: {
     preset: 'static',
+    routeRules: {
+      '/api/**': { prerender: false }
+    },
     prerender: {
       routes
     }

@@ -1,197 +1,147 @@
 <script setup>
-
 import { useWindowSize } from '@vueuse/core'
-import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
+import heroDesktop from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
 
+/* ────────────────────────
+   ŚCIEŻKA I REGEX
+   ──────────────────────── */
 const route = useRoute()
 const slug = Array.isArray(route.params.slug)
   ? route.params.slug.filter(Boolean)
   : route.params.slug
-    ? [ route.params.slug ]
+    ? [route.params.slug]
     : []
 
 const currentPath = '/' + slug.join('/')
 const currentTag  = slug.at(-1) || ''
-const levelRegex = slug.length === 1             // root /zwierzeta
-  ? `^${currentPath}/[^/]+/[0-9]+$`
-  : `^${currentPath}/[0-9]+$`
-const { width } = useWindowSize()
-const isMobile = computed(() => width.value < 768)
+const isLeaf      = computed(() => /^[0-9]+$/.test(currentTag))
 
-const { data: docData } = await useAsyncData(
-  `doc:${currentPath}`,
-  () => queryContent(currentPath).findOne()
+// ścieżka bazowa: root lub kategoria
+const basePath = computed(() =>
+  isLeaf.value ? '/' + slug.slice(0, -1).join('/') : currentPath
 )
+
+/*  root  -> /zwierzeta/<kategoria>/<num>
+    cat   -> /zwierzeta/<kategoria>/<num>          */
+const levelRegex = computed(() =>
+  slug.length === 1
+    ? `^${basePath.value}/[^/]+/[0-9]+$`
+    : `^${basePath.value}/[0-9]+$`
+)
+
+/* ────────────────────────
+   DANE Z NUXT CONTENT
+   ──────────────────────── */
+const { width } = useWindowSize()
+const isMobile  = computed(() => width.value < 768)
+
+const { data: docData } = await useAsyncData(`doc:${currentPath}`,
+  () => queryContent(currentPath).findOne())
 const doc = computed(() => docData.value)
 
-const basePath = computed(() =>
-  /^[0-9]+$/.test(currentTag)
-    ? '/' + slug.slice(0, -1).join('/')
-    : currentPath
-)
-const { data: catData } = await useAsyncData(
-  `catDoc:${basePath.value}`,
-  () => queryContent(basePath.value).findOne()
-)
+const { data: catData } = await useAsyncData(`catDoc:${basePath.value}`,
+  () => queryContent(basePath.value).findOne())
 const categoryDoc = computed(() => catData?.value)
 
-// liść?
-const isLeaf = computed(() => /^[0-9]+$/.test(currentTag))
-
-// rodzeństwo (bez index.md)
-const { data: rawSibsData } = await useAsyncData(
-  `siblings:${basePath.value}`,
-  () =>
-    queryContent()
-      .where({ _path: { $regex: `^${basePath.value}/[^/]+$` } })
-      .limit(48)
-      .find()
-)
+/* ─ siblingy i warianty ─ */
+const { data: rawSibsData } = await useAsyncData(`siblings:${basePath.value}`,
+  () => queryContent().where({ _path: { $regex: `^${basePath.value}/[^/]+$` } }).limit(200).find())
 const rawSiblings = computed(() => rawSibsData.value || [])
-const siblings = computed(() =>
-  rawSiblings.value.filter(i => !i._path.endsWith('/index'))
-)
+const siblings    = computed(() => rawSiblings.value.filter(i => !i._path.endsWith('/index')))
 
-function lastSegment(path) {
-  return path.split('/').pop()
-}
-
-// tylko kategorie (nie cyfrowe)
+const lastSegment = p => p.split('/').pop()
 const childrenCategories = computed(() =>
-  !isLeaf.value
-    ? siblings.value.filter(i => !/^[0-9]+$/.test(lastSegment(i._path)))
-    : []
-)
-
-// warianty bezpośrednie
+  !isLeaf.value ? siblings.value.filter(i => !/^[0-9]+$/.test(lastSegment(i._path))) : [])
 const variantsDirect = computed(() =>
-  siblings.value.filter(i => /^[0-9]+$/.test(lastSegment(i._path)))
-)
+  siblings.value.filter(i => /^[0-9]+$/.test(lastSegment(i._path))))
 
-// warianty z wnuków (tylko na root /zwierzeta)
-const { data: rawGrandkids } = await useAsyncData(
-  `grandkids:${currentPath}`,
-  () => queryContent().where({ _path: { $regex: levelRegex } }).limit(48).find()
-)
+/* ─ wnuki dla roota ─ */
+const { data: rawGrandkids } = await useAsyncData(`grandkids:${currentPath}`,
+  () => queryContent().where({ _path: { $regex: levelRegex.value } }).limit(200).find())
+const variantsFromGrandkids = computed(() => rawGrandkids.value || [])
+
+const childrenVariants = computed(() =>
+  slug.length === 1 ? variantsFromGrandkids.value : variantsDirect.value)
+
+const galleryVariants = computed(() =>
+  childrenVariants.value.map(v => ({ img: v.image, url: v._path, title: v.title })))
+
+/* ────────────────────────
+   LAZY „Załaduj więcej”
+   ──────────────────────── */
 const dynamicLoaded = ref([])
-const skipped = ref(48)
-const loading = ref(false)
-const canLoadMore = ref(true)
+const display = 48;
+const skipped       = ref(display)
+const loading       = ref(false)
+const canLoadMore   = ref(true)
+
 const loadMore = async () => {
   if (!import.meta.client || loading.value || !canLoadMore.value) return
-
   loading.value = true
   try {
-    // parametry zapytania
-    const q = {
-      where: [{ _path: { $regex: levelRegex } }],
-      skip : skipped.value,
-      limit: 8,
-      sort : [{ _stem: 1, $numeric: true }],
-      only : ['_path', 'image', 'title']   // bierz tylko to, czego potrzebujesz
-    }
-
-    // GET z _params – to działa identycznie lokalnie i na produkcji SSG
-    const more = await $fetch('/api/_content/query', {
-      params: { _params: JSON.stringify(q) }  // <-- kluczowa linia
+    const more = await $fetch('/api/content-query', {
+      method : 'POST',
+      body   : {
+        where : [{ _path: { $regex: levelRegex.value } }],
+        skip  : skipped.value,
+        limit : 8,
+        sort  : [{ _stem: 1, $numeric: true }],
+        only  : ['_path', 'image', 'title']
+      }
     })
-
     if (!more?.length) {
       canLoadMore.value = false
-      return
+    } else {
+      dynamicLoaded.value.push(...more)
+      skipped.value += more.length
     }
-
-    dynamicLoaded.value.push(...more)
-    skipped.value += more.length
-  } catch (err) {
-    console.error('loadMore error:', err)
-    canLoadMore.value = false   // blokada przy błędzie, brak zapętlenia
   } finally {
     loading.value = false
   }
 }
 
-
-
-
 const dynamicGalleryVariants = computed(() =>
-  dynamicLoaded.value.map(v => ({
-    img: v.image,
-    url: v._path,
-    title: v.title
-  }))
-)
+  dynamicLoaded.value.map(v => ({ img: v.image, url: v._path, title: v.title })))
+
+/* ─ reset przy nawigacji ─ */
 watch(() => currentPath, () => {
-  skipped.value        = 48          // znowu po pierwszej paczce
-  dynamicLoaded.value  = []          // wyczyść stare dane
+  dynamicLoaded.value = []
+  skipped.value       = DISPLAY
+  canLoadMore.value   = true
 })
 
-const variantsFromGrandkids = computed(() => rawGrandkids.value || [])
-const childrenVariants = computed(() =>
-  slug.length === 1
-    ? variantsFromGrandkids.value
-    : variantsDirect.value
-)
-const galleryVariants = computed(() =>
-  childrenVariants.value.map(v => ({
-    img: v.image,
-    url: v._path,
-    title: v.title
-  }))
-)
+/* ────────────────────────
+   Tytuł, indeks itd.
+   ──────────────────────── */
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
-  const idx = variantsDirect.value.findIndex(i => i._path === currentPath)
-  return idx >= 0 ? idx + 1 : null
+  const i = variantsDirect.value.findIndex(v => v._path === currentPath)
+  return i >= 0 ? i + 1 : null
 })
-const totalCount = computed(() =>
-  isLeaf.value ? variantsDirect.value.length : 0
-)
+const totalCount = computed(() => (isLeaf.value ? variantsDirect.value.length : 0))
 const positionIndicator = computed(() =>
-  isLeaf.value && totalCount.value > 1
-    ? ` (${currentIndex.value}/${totalCount.value})`
-    : ''
-)
-function cleanTitle(t) {
-  return t?.replace(/^Kolorowanki?\s*/i, '') || ''
-}
-const fullTitle = computed(() => {
+  isLeaf.value && totalCount.value > 1 ? ` (${currentIndex.value}/${totalCount.value})` : '')
+
+const cleanTitle = t => t?.replace(/^Kolorowanki?\s*/i, '') || ''
+const fullTitle  = computed(() => {
   const base = isLeaf.value
     ? cleanTitle(categoryDoc?.value?.title || slug[slug.length - 2])
-    : cleanTitle(doc?.value?.title || slug.at(-1))
+    : cleanTitle(doc?.value?.title      || slug.at(-1))
   return `Kolorowanka ${base}${positionIndicator.value}`
 })
 
-// przyciski PDF / druk
-const imageUrl = computed(() => doc?.value?.image)
-function printPdf() {
-  const pdfUrl = doc.value?.pdf
-  if (!pdfUrl) return
-  window.open(pdfUrl, '_blank')
-}
-function downloadPdf() {
-  const pdfUrl = doc.value?.pdf
-  if (!pdfUrl) return
-  const a = document.createElement('a')
-  a.href = pdfUrl
-  a.download = pdfUrl.split('/').pop()
-  document.body.appendChild(a)
-  a.click()
-  document.body.removeChild(a)
-}
-
-const showEditor = ref(false)
-function openEditor() { showEditor.value = true }
-function closeEditor() { showEditor.value = false }
-
-// **podgląd PDF** (z Twojego kodu)
+/* ─ utilsy PDF / modale ─ */
+const imageUrl        = computed(() => doc?.value?.image)
+const printPdf        = () => { const u = doc.value?.pdf; if (u) window.open(u, '_blank') }
+const downloadPdf     = () => { const u = doc.value?.pdf; if (!u) return; const a = Object.assign(document.createElement('a'), { href: u, download: u.split('/').pop() }); document.body.appendChild(a); a.click(); document.body.removeChild(a) }
 const showPreviewModal = ref(false)
-function openPreviewModal() {
-  if (!doc.value?.image) return
-  showPreviewModal.value = true
-}
-[useHead(() => {
+const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = true }
+
+/* ────────────────────────
+   SEO meta
+   ──────────────────────── */
+   [useHead(() => {
   const seoObj = doc.value
    const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`
   return {
@@ -211,7 +161,7 @@ function openPreviewModal() {
 
     ]
   }
-})]
+    })]
 </script>
 
 <template>
