@@ -125,7 +125,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
 /* ─────────  SEO  ───────── */
 [useHead(() => {
   const seoObj = doc.value
-   const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`
+   const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical.replace(/\/?$/, '/') || currentPath.replace(/\/?$/, '/')}`
   return {
     title: seoObj?.title,
     link: [ { rel: 'canonical', href: canonical } ],
