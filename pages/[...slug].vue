@@ -133,7 +133,6 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
       { name: 'description', content: seoObj?.description },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'keywords',    content: seoObj?.keywords },
-      { name: 'robots',      content: seoObj?.robots },
       { property: 'og:type',        content: 'website' },
       { property: 'og:title',       content: seoObj?.title },
       { property: 'og:description', content: seoObj?.description },
