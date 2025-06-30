@@ -6,4 +6,5 @@ pdf:   /koniki/43/koniki-43.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Pokoloruj koniki – darmowy szablon PDF"
 ---

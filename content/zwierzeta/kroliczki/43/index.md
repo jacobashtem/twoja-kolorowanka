@@ -8,4 +8,5 @@ pdf: /kroliczki/43/kroliczki-43.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Łatwa kolorowanka kroliczki dla przedszkolaka"
 ---

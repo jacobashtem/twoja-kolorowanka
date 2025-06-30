@@ -8,4 +8,5 @@ pdf: /kroliczki/66/kroliczki-66.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Pokoloruj kroliczki – darmowy szablon PDF"
 ---

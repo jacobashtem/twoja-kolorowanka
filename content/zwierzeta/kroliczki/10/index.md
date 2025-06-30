@@ -8,4 +8,5 @@ pdf: /kroliczki/10/kroliczki-10.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Kolorowanki kroliczki"
 ---

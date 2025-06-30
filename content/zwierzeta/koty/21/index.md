@@ -8,4 +8,5 @@ pdf: /koty/21/koty-21.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Edukacyjna kolorowanka koty do wydruku"
 ---

@@ -8,4 +8,5 @@ pdf: /pieski/38/pieski-38.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Łatwa kolorowanka pieski dla przedszkolaka"
 ---

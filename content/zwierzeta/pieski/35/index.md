@@ -8,4 +8,5 @@ pdf: /pieski/35/pieski-35.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Kolorowanka z pieski do pobrania"
 ---

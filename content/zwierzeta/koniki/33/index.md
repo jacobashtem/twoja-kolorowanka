@@ -6,4 +6,5 @@ pdf:   /koniki/33/koniki-33.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Darmowa kolorowanka koniki do druku PDF"
 ---

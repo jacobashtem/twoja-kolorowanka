@@ -8,4 +8,5 @@ pdf: /koty/10/koty-10.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Kolorowanki koty"
 ---

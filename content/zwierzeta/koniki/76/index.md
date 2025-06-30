@@ -6,4 +6,5 @@ pdf:   /koniki/76/koniki-76.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Prosta kolorowanka koniki do kolorowania"
 ---

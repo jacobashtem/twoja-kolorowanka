@@ -8,4 +8,5 @@ pdf: /koty/46/koty-46.pdf
 tags:
 - zwierzeta
 - koty
+alt: "koty kolorowanka dla dzieci"
 ---

@@ -8,4 +8,5 @@ pdf: /pieski/11/pieski-11.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "pieski kolorowanka dla dzieci"
 ---

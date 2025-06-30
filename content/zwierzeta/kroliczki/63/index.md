@@ -8,4 +8,5 @@ pdf: /kroliczki/63/kroliczki-63.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Kolorowanka kroliczki – format A4 PDF"
 ---

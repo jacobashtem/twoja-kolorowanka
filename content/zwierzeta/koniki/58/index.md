@@ -6,4 +6,5 @@ pdf:   /koniki/58/koniki-58.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Kolorowanka koniki – format A4 PDF"
 ---

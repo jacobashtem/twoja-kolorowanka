@@ -6,4 +6,5 @@ pdf:   /koniki/9/koniki-9.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Łatwa kolorowanka koniki dla przedszkolaka"
 ---

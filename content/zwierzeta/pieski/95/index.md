@@ -8,4 +8,5 @@ pdf: /pieski/95/pieski-95.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Pokoloruj pieski – darmowy szablon PDF"
 ---

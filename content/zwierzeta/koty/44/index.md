@@ -8,4 +8,5 @@ pdf: /koty/44/koty-44.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Kolorowanka koty"
 ---

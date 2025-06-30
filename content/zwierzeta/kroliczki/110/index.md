@@ -8,4 +8,5 @@ pdf: /kroliczki/110/kroliczki-110.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Edukacyjna kolorowanka kroliczki do wydruku"
 ---

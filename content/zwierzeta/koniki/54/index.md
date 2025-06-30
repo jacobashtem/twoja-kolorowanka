@@ -6,4 +6,5 @@ pdf:   /koniki/54/koniki-54.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "kolorowanka do druku koniki PDF"
 ---

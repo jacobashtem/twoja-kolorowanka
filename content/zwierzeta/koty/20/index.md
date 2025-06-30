@@ -8,4 +8,5 @@ pdf: /koty/20/koty-20.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Łatwa kolorowanka koty dla przedszkolaka"
 ---

@@ -8,4 +8,5 @@ pdf: /koty/25/koty-25.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Jednorożec kolorowanka"
 ---

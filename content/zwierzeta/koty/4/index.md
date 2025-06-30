@@ -8,4 +8,5 @@ pdf: /koty/4/koty-4.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Kogut kolorowanka dla dzieci"
 ---

@@ -8,4 +8,5 @@ pdf: /kroliczki/35/kroliczki-35.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "kroliczki kolorowanki dla dzieci"
 ---

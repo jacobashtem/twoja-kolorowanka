@@ -8,4 +8,5 @@ pdf: /koty/23/koty-23.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Kolorowanka koty – format A4 PDF"
 ---

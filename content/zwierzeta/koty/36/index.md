@@ -8,4 +8,5 @@ pdf: /koty/36/koty-36.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Malowanka koty do druku A4"
 ---

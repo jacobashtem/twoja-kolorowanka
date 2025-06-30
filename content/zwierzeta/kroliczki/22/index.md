@@ -8,4 +8,5 @@ pdf: /kroliczki/22/kroliczki-22.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "kroliczki – pobierz i wydrukuj kolorowankę"
 ---

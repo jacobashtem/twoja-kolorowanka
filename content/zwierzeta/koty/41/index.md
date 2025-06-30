@@ -8,4 +8,5 @@ pdf: /koty/41/koty-41.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Prosta kolorowanka koty do kolorowania"
 ---

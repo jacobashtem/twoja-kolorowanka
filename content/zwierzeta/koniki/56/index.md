@@ -6,4 +6,5 @@ pdf:   /koniki/56/koniki-56.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Edukacyjna kolorowanka koniki do wydruku"
 ---

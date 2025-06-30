@@ -8,4 +8,5 @@ pdf: /pieski/4/pieski-4.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Kogut kolorowanka dla dzieci"
 ---

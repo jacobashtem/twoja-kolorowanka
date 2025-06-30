@@ -8,4 +8,5 @@ pdf: /pieski/41/pieski-41.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Prosta kolorowanka pieski do kolorowania"
 ---

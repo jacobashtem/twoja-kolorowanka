@@ -6,4 +6,5 @@ pdf:   /koniki/62/koniki-62.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Kolorowanki koniki"
 ---

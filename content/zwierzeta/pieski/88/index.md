@@ -8,4 +8,5 @@ pdf: /pieski/88/pieski-88.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Malowanka pieski do druku A4"
 ---
