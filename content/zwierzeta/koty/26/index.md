@@ -8,4 +8,5 @@ pdf: /koty/26/koty-26.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Pokoloruj koty – darmowy szablon PDF"
 ---

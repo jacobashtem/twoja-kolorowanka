@@ -8,4 +8,5 @@ pdf: /kroliczki/65/kroliczki-65.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Jednorożec kolorowanka"
 ---

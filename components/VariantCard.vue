@@ -12,9 +12,9 @@
 
     <div class="relative w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform p-3">
       <img
-        class="max-w-full max-h-full object-contain rounded-3xl bg-white"
+        class="max-w-full object-contain rounded-3xl bg-white min-w-64 min-h-64 max-h-64"
         :src="item.img"
-        :alt="item.title || ''"
+        :alt="item.alt || item.title"
       />
     </div>
   </NuxtLink>

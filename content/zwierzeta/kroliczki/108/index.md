@@ -8,4 +8,5 @@ pdf: /kroliczki/108/kroliczki-108.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Malowanka kroliczki do druku A4"
 ---

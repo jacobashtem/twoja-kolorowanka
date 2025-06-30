@@ -6,4 +6,5 @@ pdf:   /koniki/70/koniki-70.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Malowanka koniki do druku A4"
 ---

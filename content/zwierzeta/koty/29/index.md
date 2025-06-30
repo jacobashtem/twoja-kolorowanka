@@ -8,4 +8,5 @@ pdf: /koty/29/koty-29.pdf
 tags:
 - zwierzeta
 - koty
+alt: "koty kolorowanka dla dzieci"
 ---

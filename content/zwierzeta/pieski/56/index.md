@@ -8,4 +8,5 @@ pdf: /pieski/56/pieski-56.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Edukacyjna kolorowanka pieski do wydruku"
 ---

@@ -8,4 +8,5 @@ pdf: /kroliczki/77/kroliczki-77.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "kolorowanka do druku kroliczki PDF"
 ---

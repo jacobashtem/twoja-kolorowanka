@@ -8,4 +8,5 @@ pdf: /kroliczki/45/kroliczki-45.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Kogut kolorowanka dla dzieci"
 ---

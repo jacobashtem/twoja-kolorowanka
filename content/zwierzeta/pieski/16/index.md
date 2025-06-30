@@ -8,4 +8,5 @@ pdf: /pieski/16/pieski-16.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Darmowa kolorowanka pieski do druku PDF"
 ---

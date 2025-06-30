@@ -8,4 +8,5 @@ pdf: /pieski/32/pieski-32.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "pieski do druku i pokolorowania"
 ---

@@ -8,4 +8,5 @@ pdf: /pieski/86/pieski-86.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "pieski – pobierz i wydrukuj kolorowankę"
 ---

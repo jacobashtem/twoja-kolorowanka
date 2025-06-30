@@ -8,4 +8,5 @@ pdf: /kroliczki/48/kroliczki-48.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Jednorożec kolorowanka"
 ---

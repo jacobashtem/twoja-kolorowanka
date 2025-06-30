@@ -8,4 +8,5 @@ pdf: /pieski/14/pieski-14.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Kolorowanki do druku pieski"
 ---

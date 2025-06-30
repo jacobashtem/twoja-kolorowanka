@@ -6,4 +6,5 @@ pdf:   /koniki/42/koniki-42.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Jednorożec kolorowanka"
 ---

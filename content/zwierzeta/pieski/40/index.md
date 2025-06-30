@@ -8,4 +8,5 @@ pdf: /pieski/40/pieski-40.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Kolorowanka pieski – format A4 PDF"
 ---

@@ -8,4 +8,5 @@ pdf: /koty/49/koty-49.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Kolorowanki do druku koty"
 ---

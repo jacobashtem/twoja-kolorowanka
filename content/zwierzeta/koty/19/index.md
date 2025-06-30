@@ -8,4 +8,5 @@ pdf: /koty/19/koty-19.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Malowanka koty do druku A4"
 ---

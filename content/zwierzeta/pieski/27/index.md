@@ -8,4 +8,5 @@ pdf: /pieski/27/pieski-27.pdf
 tags:
 - zwierzeta
 - pieski
+alt: "Kolorowanka pieski"
 ---

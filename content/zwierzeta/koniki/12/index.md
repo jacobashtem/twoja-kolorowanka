@@ -6,4 +6,5 @@ pdf:   /koniki/12/koniki-12.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "koniki kolorowanki dla dzieci"
 ---

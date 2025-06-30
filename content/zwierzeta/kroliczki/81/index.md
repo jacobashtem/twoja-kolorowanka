@@ -8,4 +8,5 @@ pdf: /kroliczki/81/kroliczki-81.pdf
 tags:
 - zwierzeta
 - kroliczki
+alt: "Prosta kolorowanka kroliczki do kolorowania"
 ---

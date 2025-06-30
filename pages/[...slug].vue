@@ -63,7 +63,7 @@ const variantsDirect = computed(() =>
 const { data: rawGrand } = await useAsyncData(`grand:${currentPath}`,
   () => queryContent()
         .where({ _path: { $regex: levelRegex.value } })
-        .only(['_path','image','title'])
+        .only(['_path','image','title', 'alt'])
         .find())
 const variantsGrand = computed(() => (rawGrand.value || []).sort(byNum))
 
@@ -71,7 +71,7 @@ const childrenVariants = computed(() =>
   slug.length === 1 ? variantsGrand.value : variantsDirect.value)
 
 const galleryVariants = computed(() =>
-  childrenVariants.value.map(v => ({ img: v.image, url: v._path, title: v.title })))
+  childrenVariants.value.map(v => ({ img: v.image, url: v._path, title: v.title , alt:  v.alt || v.title })))
 
 
 /* ─────────  LAZY LOAD  ───────── */
@@ -131,6 +131,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
     link: [ { rel: 'canonical', href: canonical } ],
     meta: [
       { name: 'description', content: seoObj?.description },
+      { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'keywords',    content: seoObj?.keywords },
       { name: 'robots',      content: seoObj?.robots },
       { property: 'og:type',        content: 'website' },
@@ -140,10 +141,81 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
       { property: 'og:image',       content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
     ],
     script: [
+    {
+  type: 'application/ld+json',
+  children: JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://twoja-kolorowanka.pl/#website",
+        "url": "https://twoja-kolorowanka.pl/",
+        "name": "Twoja Kolorowanka",
+        "inLanguage": "pl-PL"
+      },
+      {
+        "@type": "WebPage",
+        "@id": `https://twoja-kolorowanka.pl${currentPath}/#webpage`,
+        "url": `https://twoja-kolorowanka.pl${currentPath}/`,
+        "name": doc.value?.title || fullTitle.value,
+        "isPartOf": { "@id": "https://twoja-kolorowanka.pl/#website" },
+        "primaryImageOfPage": {
+          "@id": `https://twoja-kolorowanka.pl${currentPath}/#primaryimage`
+        },
+        "datePublished": doc.value?.date || "2024-01-01",
+        "dateModified": "2025-06-30",
+        "inLanguage": "pl-PL"
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `https://twoja-kolorowanka.pl${currentPath}/#primaryimage`,
+        "url": `https://twoja-kolorowanka.pl${doc.value?.heroImg1 || '/img/heroImg1.jpg'}`,
+        "contentUrl": `https://twoja-kolorowanka.pl${doc.value?.heroImg1 || '/img/heroImg1.jpg'}`,
+        "caption": doc.value?.title || "Kolorowanki zwierzęta do druku"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://twoja-kolorowanka.pl${currentPath}/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona główna",
+            "item": "https://twoja-kolorowanka.pl/"
+          },
+          ...slug.map((segment, index) => {
+            const fullPath = '/' + slug.slice(0, index + 1).join('/');
+            return {
+              "@type": "ListItem",
+              "position": index + 2,
+              "name": decodeURIComponent(segment),
+              "item": `https://twoja-kolorowanka.pl${fullPath}/`
+            };
+          })
+        ]
+      },
+      ...(Array.isArray(doc.value?.faqs) && doc.value.faqs.length > 0
+          ? [
+              {
+                "@type": "FAQPage",
+                "mainEntity": doc.value.faqs.map(faq => ({
+                  "@type": "Question",
+                  "name": faq.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                  }
+                }))
+              }
+            ]
+          : [])
+    ]
+  })
+}
 
     ]
   }
-    })]
+    })]  
 </script>
 
 <template>
@@ -245,7 +317,6 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
       </template>
 
       <template v-else>
-          
           <CategoryGallery v-if="childrenCategories.length" class="mb-8" :items="childrenCategories" slugHandler/>
           <VariantsGallery v-else :items="galleryVariants.slice(0,8)" />
 
@@ -303,6 +374,9 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
           </ClientOnly>
         </div>
 
+      </template>
+      <template v-if="doc?.faqs?.length">
+        <FaqList :faqs="doc?.faqs" />
       </template>
     </UContainer>
 

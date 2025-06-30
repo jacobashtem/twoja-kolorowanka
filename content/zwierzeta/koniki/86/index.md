@@ -6,4 +6,5 @@ pdf:   /koniki/86/koniki-86.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "koniki – pobierz i wydrukuj kolorowankę"
 ---

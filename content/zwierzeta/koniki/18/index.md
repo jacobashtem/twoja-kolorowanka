@@ -6,4 +6,5 @@ pdf:   /koniki/18/koniki-18.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Kolorowanka z koniki do pobrania"
 ---

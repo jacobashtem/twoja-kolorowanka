@@ -6,4 +6,5 @@ pdf:   /koniki/23/koniki-23.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "Kolorowanka koniki – format A4 PDF"
 ---

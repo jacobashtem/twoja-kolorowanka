@@ -8,4 +8,5 @@ pdf: /koty/32/koty-32.pdf
 tags:
 - zwierzeta
 - koty
+alt: "koty do druku i pokolorowania"
 ---

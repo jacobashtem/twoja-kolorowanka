@@ -8,4 +8,5 @@ pdf: /koty/52/koty-52.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Kolorowanka z koty do pobrania"
 ---

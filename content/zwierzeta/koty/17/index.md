@@ -8,4 +8,5 @@ pdf: /koty/17/koty-17.pdf
 tags:
 - zwierzeta
 - koty
+alt: "koty – pobierz i wydrukuj kolorowankę"
 ---

@@ -8,4 +8,5 @@ pdf: /koty/33/koty-33.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Darmowa kolorowanka koty do druku PDF"
 ---

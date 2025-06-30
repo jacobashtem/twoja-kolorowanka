@@ -8,4 +8,5 @@ pdf: /koty/55/koty-55.pdf
 tags:
 - zwierzeta
 - koty
+alt: "Łatwa kolorowanka koty dla przedszkolaka"
 ---

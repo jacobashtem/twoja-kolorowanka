@@ -6,4 +6,5 @@ pdf:   /koniki/84/koniki-84.pdf
 tags:
  - zwierzeta
  - koniki
+alt: "koniki do druku i pokolorowania"
 ---
