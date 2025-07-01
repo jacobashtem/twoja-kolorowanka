@@ -2,7 +2,7 @@
 title:          "Kolorowanki koniki i konie – darmowe PDF do druku"
 description:    "Kolorowanki koniki do druku oraz realistyczne kolorowanki koni w formacie PDF. Pobierz bez logowania i drukuj kucyki, mustangi i rumaki w wysokiej jakości."
 categoryName:   "koniki"
-canonical:      "/zwierzeta/koniki"
+canonical:      "/zwierzeta/koniki/"
 tags:           [ kolorowanki, koniki, zwierzeta, pdf, malowanki ]
 alt:            "koń do druku"
 h1First:        Kolorowanki
