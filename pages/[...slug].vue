@@ -219,7 +219,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
 
 <template>
   <div>
-    <div class="flex justify-center mt-8 w-full">
+    <div class="flex justify-center mt-20 2xl:mt-8 w-full">
       <UContainer class="w-full">
         
         <h1
