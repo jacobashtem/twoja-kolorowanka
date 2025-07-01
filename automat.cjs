@@ -17,10 +17,10 @@
     'kolorowanka do druku {{ zmienna }} PDF',
     'Łatwa kolorowanka {{ zmienna }} dla przedszkolaka',
     'Edukacyjna kolorowanka {{ zmienna }} do wydruku',
-    'Kogut kolorowanka dla dzieci',
+    '{{ zmienna }} kolorowanka dla dzieci',
     'Kolorowanka {{ zmienna }} – format A4 PDF',
     'Prosta kolorowanka {{ zmienna }} do kolorowania',
-    'Jednorożec kolorowanka',
+    '{{ zmienna }} kolorowanka',
     'Pokoloruj {{ zmienna }} – darmowy szablon PDF'
   ];
 
