@@ -8,5 +8,5 @@ pdf: /koty/22/koty-22.pdf
 tags:
 - zwierzeta
 - koty
-alt: "Kogut kolorowanka dla dzieci"
+alt: "koty kolorowanka dla dzieci"
 ---

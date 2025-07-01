@@ -220,7 +220,7 @@ const showColorOnlineBtn = computed(() => !doc.value?.hideUrlToColorOnline)
 
 <template>
   <div>
-    <div class="flex justify-center mt-8 w-full">
+    <div class="flex justify-center mt-20 2xl:mt-8 w-full">
       <UContainer class="w-full">
         
         <h1
@@ -247,9 +247,7 @@ const showColorOnlineBtn = computed(() => !doc.value?.hideUrlToColorOnline)
       <Hero :hero-img1="doc?.heroImg1" :hero-img2="doc?.heroImg2" :description="doc?.description" :h1="{firstPartTitle: doc?.h1First, seccondPartTitle: doc?.h1Sec}" isCategory />
       <UContainer>
         <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[0]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-        <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-          {{ doc?.seoBlocks[0]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
-        </p>
+          <p v-if="doc?.seoBlocks" v-html="doc.seoBlocks[0].text ||''" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8"/>
         <div>
         </div>
       </UContainer>
@@ -323,8 +321,7 @@ const showColorOnlineBtn = computed(() => !doc.value?.hideUrlToColorOnline)
 
         <div v-if="childrenVariants.length">
             <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[1]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
-               <p v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-            {{ doc?.seoBlocks[1]?.text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.' }}
+               <p v-if="doc?.seoBlocks" v-html="doc.seoBlocks[1].text ||''" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <!-- <code>{{ galleryVariants }}</code> -->
             <VariantsGallery :items="galleryVariants.slice(0,8)" />
@@ -376,9 +373,13 @@ const showColorOnlineBtn = computed(() => !doc.value?.hideUrlToColorOnline)
         </div>
 
       </template>
+
       <template v-if="doc?.faqs?.length">
         <FaqList :faqs="doc?.faqs" />
       </template>
+      <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[7]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+               <div v-html="doc.seoBlocks[7].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
+          </div>
     </UContainer>
 
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">

@@ -6,5 +6,5 @@ pdf:   /koniki/57/koniki-57.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "Kogut kolorowanka dla dzieci"
+alt: "koniki kolorowanka dla dzieci"
 ---
