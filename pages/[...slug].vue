@@ -118,6 +118,7 @@ const printPdf        = () => { const u = doc.value?.pdf; if (u) window.open(u, 
 const downloadPdf     = () => { const u = doc.value?.pdf; if (!u) return; const a = Object.assign(document.createElement('a'), { href: u, download: u.split('/').pop() }); document.body.appendChild(a); a.click(); document.body.removeChild(a) }
 const showPreviewModal = ref(false)
 const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = true }
+const showColorOnlineBtn = computed(() => !doc.value?.hideUrlToColorOnline)
 
 /* ────────────────────────
    SEO meta
@@ -257,6 +258,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
     <UContainer v-if="isLeaf" class="mb-6 mt-12">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <NuxtLink
+          v-if="showColorOnlineBtn"
           :to="`/koloruj/${slug.join('/')}`"
           rel="nofollow"
           class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
