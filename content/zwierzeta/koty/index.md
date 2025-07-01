@@ -2,7 +2,7 @@
 title:          "Kolorowanki koty do druku – Darmowe malowanki PDF z kotkami"
 description:    "Kolorowanki koty do druku – pobierz darmowe PDF z psotnymi kociętami i rasowymi kotami. Drukuj, koloruj i twórz własną domową kocią galerię!"
 categoryName:   "Koty"
-canonical:      "/zwierzeta/koty"
+canonical:      "/zwierzeta/koty/"
 tags:           [ kolorowanki, koty, zwierzeta, pdf, malowanki ]
 alt: 'kot do druku'
 h1First: Kolorowanki
