@@ -8,5 +8,5 @@ pdf: /kroliczki/28/kroliczki-28.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Kogut kolorowanka dla dzieci"
+alt: "kroliczki kolorowanka dla dzieci"
 ---

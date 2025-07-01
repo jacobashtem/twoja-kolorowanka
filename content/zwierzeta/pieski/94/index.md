@@ -8,5 +8,5 @@ pdf: /pieski/94/pieski-94.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Jednorożec kolorowanka"
+alt: "pieski kolorowanka"
 ---
