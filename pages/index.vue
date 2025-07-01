@@ -160,7 +160,7 @@ const galleryItems = ref([
   // }
 ])
 useHead(() => {
-  const canonical = `https://twoja-kolorowanka.pl'}`
+  const canonical = 'https://twoja-kolorowanka.pl'
   const image = `https://twoja-kolorowanka.pl/logo-1.webp`
 
   return {
