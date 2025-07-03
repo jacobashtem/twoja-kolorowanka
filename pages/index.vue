@@ -199,9 +199,9 @@ useHead(() => {
   <div class="index-page">
     <Hero />
     <UContainer>
-      <Heading text="Kolorowanka do druku" :as="'h1'" :backgroundColor="'bg-sec-500'" fontSize="text-2xl md:text-3xl" />
+      <Heading text="Kolorowanka do druku" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-2xl md:text-3xl" />
       <p class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
-        Znajdziesz tu szeroki wybór <span class="font-semibold">darmowych kolorowanek do druku</span>, które z łatwością pobierzesz i wydrukujesz na domowej drukarce. Nasza kolekcja obejmuje zarówno proste malowanki dla najmłodszych, jak i bardziej zaawansowane wzory dla starszych dzieci i dorosłych. Usiądź wygodnie i rozpocznij z nami swoją <span class="font-semibold">kolorową przygodę!</span>
+        Nasze malowanki to idealna propozycja dla dzieci, dorosłych, nauczycieli, przedszkoli i wszystkich, którzy kochają kreatywną zabawę z kartką i kredkami. Każda kolorowanka jest dostępna jako gotowy plik A4 do druku – wystarczy kliknąć i cieszyć się wspólnym kolorowaniem!
       </p>
       <div>
         <h1 class="text-3xl font-bold mb-4">Najważniejsze kategorie</h1>
@@ -209,6 +209,7 @@ useHead(() => {
       <CategoryGallery 
         :items="galleryItems.slice(0,23)"
       />
+
     </UContainer>
   </div>
 </template>
