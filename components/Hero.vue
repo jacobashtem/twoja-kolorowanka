@@ -6,9 +6,10 @@
                 <div class="order-2 md:order-1 flex flex-col justify-center text-left lg:text-left md:text-left z-10">
                     <h1
                         v-if="!isCategory"
+                        aria-label="Kolorowanki do druku w PDF darmowe, gotowe do zabawy!"
                         class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight">
-                        <span class="inline-block text-5xl md:text-5xl lg:text-7xl">Wydrukuj.</span><br />
-                        <span class="text-tertiary-500">Koloruj.</span>
+                        <span class="inline-block text-5xl md:text-5xl lg:text-7xl">Darmowe kolorowanki</span><br />
+                        <span class="text-tertiary-500">do druku w PDF</span>
                     </h1>
                     <h1 :aria-label="h1.firstPartTitle + ' ' + h1.seccondPartTitle" class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight" v-else>
                         <span class="inline-block text-3xl md:text-5xl lg:text-7xl">{{h1.firstPartTitle}}</span><br />
@@ -75,7 +76,7 @@ const props = defineProps({
     },
     description: {
         type: String,
-        default: 'Darmowe kolorowanki do wydruku dla dzieci i dorosłych. Prosto i bez kruczków.'
+        default: 'Znajdziesz u nas tysiące darmowych kolorowanek do druku w formacie PDF. Możesz też je kolorować na naszej stronie online!'
     }
 });
 

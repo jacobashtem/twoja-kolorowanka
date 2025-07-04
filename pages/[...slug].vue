@@ -4,7 +4,7 @@ import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
 
 /* ─────────  STAŁE  ───────── */
-const FIRST_BATCH = 48   // ile miniatur od razu
+const FIRST_BATCH = 56   // ile miniatur od razu
 const STEP        = 8    // paczka przy kliknięciu
 
 /* ─────────  ŚCIEŻKA  ───────── */
@@ -324,13 +324,13 @@ const showColorOnlineBtn = computed(() => !doc.value?.hideUrlToColorOnline)
                <p v-if="doc?.seoBlocks" v-html="doc.seoBlocks[1].text ||''" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </p>
           <!-- <code>{{ galleryVariants }}</code> -->
-            <VariantsGallery :items="galleryVariants.slice(0,8)" />
+            <VariantsGallery :items="galleryVariants.slice(8,16)" />
         </div>
         <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[2]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <div v-html="doc.seoBlocks[2].text || 'Wybierz kategorię, aby zobaczyć dostępne kolorowanki.'" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </div>
-          <VariantsGallery :items="galleryVariants.slice(8,16)" />
+          <VariantsGallery :items="galleryVariants.slice(16,24)" />
         </div>
           <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[3]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
@@ -338,25 +338,25 @@ const showColorOnlineBtn = computed(() => !doc.value?.hideUrlToColorOnline)
                v-html="doc.seoBlocks[3].text ||''"
                class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </div>
-          <VariantsGallery :items="galleryVariants.slice(16,24)" />
+          <VariantsGallery :items="galleryVariants.slice(24,32)" />
         </div>
                 <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[4]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <div v-html="doc.seoBlocks[4].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </div>
-          <VariantsGallery :items="galleryVariants.slice(24,32)" />
+          <VariantsGallery :items="galleryVariants.slice(32,40)" />
         </div>
         <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[5]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <div v-html="doc.seoBlocks[5].text || ''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </div>
-          <VariantsGallery :items="galleryVariants.slice(32,40)" />
+          <VariantsGallery :items="galleryVariants.slice(40,48)" />
         </div>
           <div>
           <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[6]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <div v-html="doc.seoBlocks[6].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </div>
-          <VariantsGallery :items="galleryVariants.slice(40,48)" />
+          <VariantsGallery :items="galleryVariants.slice(48,56)" />
           <ClientOnly>
             <VariantsGallery :items="visibleGalleryVariants"  class="mt-6"/>
               <div class="flex flex-col items-center">
