@@ -384,21 +384,19 @@
     <p><span>Serwis zawiera zarówno treści własne (ilustracje autorskie i wygenerowane z pomocą narzędzi AI), jak również fan-arty i obrazy inspirowane znanymi postaciami z bajek, gier i filmów.</span></p>
   </li>
   <li>
-    <p><strong><span>Znaki towarowe i postacie w kategoriach kolorowanek:</span></strong>
-      <ul class="list-disc pl-8">
-        <li>Wszystkie znaki towarowe i postacie przedstawione w kolorowankach (np. Peppa Pig, Elsa z Frozen, Super Mario, Barbie) są własnością ich odpowiednich właścicieli.</li>
-        <li>Serwis twoja-kolorowanka.pl <strong>nie rości sobie żadnych praw</strong> do tych znaków ani postaci.</li>
-        <li>Kolorowanki tego typu mają charakter fanowski, edukacyjny i hobbystyczny – są udostępniane wyłącznie bezpłatnie, bez pobierania opłat, bez czerpania korzyści finansowych z ich pobierania.</li>
-      </ul>
-    </p>
+    <p><strong><span>Znaki towarowe i postacie w kategoriach kolorowanek:</span></strong></p>
+    <ul class="list-disc pl-8">
+      <li>Wszystkie znaki towarowe i postacie przedstawione w kolorowankach (np. Peppa Pig, Elsa z Frozen, Super Mario, Barbie) są własnością ich odpowiednich właścicieli.</li>
+      <li>Serwis twoja-kolorowanka.pl <strong>nie rości sobie żadnych praw</strong> do tych znaków ani postaci.</li>
+      <li>Kolorowanki tego typu mają charakter fanowski, edukacyjny i hobbystyczny – są udostępniane wyłącznie bezpłatnie, bez pobierania opłat, bez czerpania korzyści finansowych z ich pobierania.</li>
+    </ul>
   </li>
   <li>
-    <p><strong><span>Źródła grafik:</span></strong>
-      <ul class="list-disc pl-8">
-        <li>Niektóre ilustracje pochodzą z domeny publicznej lub zostały uznane za takie na podstawie dostępnych informacji w Internecie.</li>
-        <li>Inne ilustracje zostały stworzone ręcznie lub przy pomocy narzędzi sztucznej inteligencji i stanowią autorską treść Usługodawcy.</li>
-      </ul>
-    </p>
+    <p><strong><span>Źródła grafik:</span></strong></p>
+    <ul class="list-disc pl-8">
+      <li>Niektóre ilustracje pochodzą z domeny publicznej lub zostały uznane za takie na podstawie dostępnych informacji w Internecie.</li>
+      <li>Inne ilustracje zostały stworzone ręcznie lub przy pomocy narzędzi sztucznej inteligencji i stanowią autorską treść Usługodawcy.</li>
+    </ul>
   </li>
   <li>
     <div><strong><span>Oświadczenie:</span></strong> Serwis twoja-kolorowanka.pl dokłada najwyższej staranności, aby nie naruszać żadnych praw własności intelektualnej osób trzecich. Jeśli jednak uważasz, że którykolwiek materiał narusza Twoje prawa – skontaktuj się z nami:
@@ -410,12 +408,11 @@
     </div>
   </li>
   <li>
-    <p><strong><span>Licencja na użycie materiałów:</span></strong>
-      <ul class="list-disc pl-8">
-        <li>Wszystkie kolorowanki dostępne w Serwisie można pobierać i drukować wyłącznie do użytku osobistego, edukacyjnego lub domowego.</li>
-        <li>Zakazuje się ich odsprzedaży w formie fizycznej lub cyfrowej, wykorzystywania komercyjnego, publikowania jako własnych, bez pisemnej zgody Usługodawcy.</li>
-      </ul>
-    </p>
+    <p><strong><span>Licencja na użycie materiałów:</span></strong></p>
+    <ul class="list-disc pl-8">
+      <li>Wszystkie kolorowanki dostępne w Serwisie można pobierać i drukować wyłącznie do użytku osobistego, edukacyjnego lub domowego.</li>
+      <li>Zakazuje się ich odsprzedaży w formie fizycznej lub cyfrowej, wykorzystywania komercyjnego, publikowania jako własnych, bez pisemnej zgody Usługodawcy.</li>
+    </ul>
   </li>
 </ul>
         <h2 class="text-4xl py-4"><span>XI. Zmiany Regulaminu</span></h2>
