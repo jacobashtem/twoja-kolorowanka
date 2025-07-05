@@ -1,4 +1,5 @@
 <template>
+  <div>
     <section class="bg-sec-500 h-64">
         <div class="mx-auto pt-40 pb-40 px-3 my-3 container max-w-6xl">
             <div class="mb-10">
@@ -169,4 +170,5 @@
         </ul>
         &nbsp;
     </article>
+  </div>
 </template>
