@@ -10,13 +10,13 @@ useHead({
 const galleryItems = ref([
   {
     src: '/koty/1/koty-1.svg',
-    alt: "Koty",
+    alt: "kolorowanki Koty do druku pdf",
     title: "Koty",
     url: "/zwierzeta/koty"
   },
     {
     src: '/koniki/1/koniki-1.svg',
-    alt: "Koniki",
+    alt: "kolorowanki Koniki do druku pdf ",
     title: "Koniki",
     url: "/zwierzeta/koniki"
   },
@@ -44,12 +44,12 @@ const galleryItems = ref([
   //   title: "Świąteczne",
   //   url: "/okazjonalne/swiateczne"
   // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Jednorożec",
-  //   title: "Jednorożec",
-  //   url: "/dla-dziewczynek/jednorozec"
-  // },
+  {
+    src: '/fantasy/jednorozce/16/jednorozce-16.svg',
+    alt: "jednorożce do druku pdf",
+    title: "jednorożce",
+    url: "/fantasy/jednorozce"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Toca Boca",
@@ -70,13 +70,13 @@ const galleryItems = ref([
   // },,
     {
     src: '/kroliczki/1/kroliczki-1.svg',
-    alt: "kroliczki",
+    alt: "kolorowanki kroliczki do druku",
     title: "Kroliczki",
     url: "/zwierzeta/kroliczki"
   },
   {
     src: '/pieski/26/pieski-26.svg',
-    alt: "Pieski",
+    alt: "kolorowanki Pieski do druku",
     title: "Pieski",
     url: "/zwierzeta/pieski"
   },
