@@ -30,7 +30,7 @@
         <h2 class="text-4xl py-4"><span>Jak można skontaktować się z administratorem danych?</span></h2>
         <p class="text-lg">Z Administratorem można skontaktować się w jeden z poniższych sposobów</p>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li><b>Adres poczty elektronicznej</b><span> – jakubasztemborski@gmail.com</span></li>
+            <li><b>Adres poczty elektronicznej</b><span> – team@twoja-kolorowanka.pl</span></li>
         </ul>
         &nbsp;
         <h2 class="text-4xl py-4"><span>Czy Administrator powołał Inspektora Danych Osobowych?</span></h2>

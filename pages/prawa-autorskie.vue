@@ -55,7 +55,7 @@
     Jeżeli jesteś właścicielem praw autorskich lub znaków towarowych i uważasz, że materiał zamieszczony w naszym serwisie narusza Twoje prawa – skontaktuj się z nami:
   </p>
   <p>
-    <a href="mailto:jakubasztemborski@gmail.com" class="text-blue-600 underline">jakubasztemborski@gmail.com</a>
+    <a href="mailto:team@twoja-kolorowanka.pl" class="text-blue-600 underline">team@twoja-kolorowanka.pl</a>
   </p>
   <p>
     W wiadomości prosimy podać:
@@ -113,7 +113,7 @@
     If you are the copyright or trademark owner and believe that any material on our website has been used in violation of your rights – please contact us at:
   </p>
   <p>
-    <a href="mailto:jakubasztemborski@gmail.com" class="text-blue-600 underline">jakubasztemborski@gmail.com</a>
+    <a href="mailto:team@twoja-kolorowanka.pl" class="text-blue-600 underline">team@twoja-kolorowanka.pl</a>
   </p>
   <p>
     Please include the following in your message:

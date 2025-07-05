@@ -424,7 +424,7 @@
         <h2 class="text-4xl py-4">§15 Kontakt do Administratora</h2>
         <p class="text-lg">Z Administratorem można skontaktować się w poniższy sposob:</p>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li><b>Adres poczty elektronicznej</b> – jakubasztemborski@gmail.com</li>
+            <li><b>Adres poczty elektronicznej</b> – team@twoja-kolorowanka.pl</li>
         </ul>
         <h2 class="text-4xl py-4">§16 Wymagania Serwisu</h2>
         <ul class="list-decimal text-lg py-2 pl-16">
