@@ -5,11 +5,11 @@
             <div class="w-full md:w-auto">
                 <div class="flex-col gap-3 font-semibold">
                     <div class="flex flex-col md:flex-row items-center gap-4 justify-center md:justify-start">
-                        <NuxtLink class="hover:text-coolGray-200 transition-all" to="regulamin">Regulamin</NuxtLink>
-                        <NuxtLink  class="hover:text-coolGray-200 transition-all" to="prawa-autorskie">Prawa autorskie</NuxtLink>
-                        <NuxtLink class="hover:text-coolGray-200 transition-all" to="polityka-prywatnosci">Polityka
+                        <NuxtLink class="hover:text-coolGray-200 transition-all" to="/regulamin">Regulamin</NuxtLink>
+                        <NuxtLink  class="hover:text-coolGray-200 transition-all" to="/prawa-autorskie">Prawa autorskie</NuxtLink>
+                        <NuxtLink class="hover:text-coolGray-200 transition-all" to="/polityka-prywatnosci">Polityka
                             prywatności</NuxtLink>
-                        <NuxtLink class="hover:text-coolGray-200 transition-all" to="obowiazek-informacyjny">RODO</NuxtLink>
+                        <NuxtLink class="hover:text-coolGray-200 transition-all" to="/obowiazek-informacyjny">RODO</NuxtLink>
                     </div>
                 </div>
                 <p class="text-center md:text-left">© 2025 Twoja Kolorowanka. Wszystkie prawa zastrzeżone.</p>
