@@ -8,7 +8,7 @@
                         v-if="!isCategory"
                         aria-label="Kolorowanki do druku w PDF darmowe, gotowe do zabawy!"
                         class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight">
-                        <span class="inline-block text-5xl md:text-5xl lg:text-7xl">Darmowe kolorowanki</span><br />
+                        <span class="inline-block text-2xl xs:text-5xl md:text-5xl lg:text-7xl">Darmowe kolorowanki</span><br />
                         <span class="text-tertiary-500">do druku w PDF</span>
                     </h1>
                     <h1 :aria-label="h1.firstPartTitle + ' ' + h1.seccondPartTitle" class="mt-0 sm:mt-8 text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-extrabold uppercase leading-tight tracking-tight" v-else>
