@@ -31,7 +31,7 @@ faqs:
 
 
 seoBlocks:
-   - heading: "Dlaczego dzieci kochają kolorowanki ze zwierzętami?"
+  - heading: "Dlaczego dzieci kochają kolorowanki ze zwierzętami?"
     text:    "Zwierzęta od zawsze fascynowały najmłodszych – czy to piesek z podwórka, czy egzotyczna żyrafa z bajki. Kolorowanki ze zwierzętami to nie tylko rozrywka, ale także doskonały sposób na rozwój. Podczas kolorowania dzieci uczą się rozpoznawać gatunki, ćwiczą precyzję ręki i rozwijają koncentrację. To forma nauki przez zabawę, która w naturalny sposób angażuje wyobraźnię i emocje. Z każdą kolejną kolorowanką maluch odkrywa świat barw i uczy się cierpliwości, a wspólne rozmowy o ulubionych zwierzątkach budują więź i pobudzają kreatywność."
   - heading: "Kolorowanki do druku – szybki sposób na świetną zabawę"
     text:    "Wystarczy jedno kliknięcie, by pobrać gotowe do druku kolorowanki zwierząt. Pliki PDF są zoptymalizowane pod format A4 i pasują do każdej domowej drukarki. Możesz drukować je dowolnie wiele razy, bez konieczności logowania czy podawania danych osobowych. To darmowa atrakcja na każdą pogodę – idealna zarówno na deszczowe popołudnie, jak i letnie dni pod parasolem. Szybki wydruk pozwoli zorganizować kreatywne zajęcia w kilka chwil, dzięki czemu nuda nie ma szans, a dziecko może cieszyć się przyjemnym treningiem manualnym."
