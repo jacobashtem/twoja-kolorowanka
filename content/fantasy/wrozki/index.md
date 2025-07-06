@@ -1,13 +1,15 @@
 ---
-title: "Kolorowanki sisinka cxzcsacsa do druku PDF – słodkie i magiczne obrazki"
-description: "Darmowe kolorowankiczxcxzcxz wrozki do pobrania i druku – idealne dla dzieci. Znajdziesz tu magiczne stworzenia, urocze scenki i wiele więcej."
+title: "Kolorowanki wróżki do druku PDF – darmowe bajkowe malowanki"
+description: "Pobierz darmowe kolorowanki wróżki do druku w formacie PDF. Magia, zaczarowane ogrody – idealne dla dzieci. "
+title: "Kolorowanki wróżki do druku PDF"
 canonical: "/fantasy/wrozki/"
+categoryName: "Wróżki"
 tags: [fantasy, wrozki]
-alt: "kolorowanki wrozki do druku"
-h1First: Kolorowanki wrozki
-h1Sec: do pobrania PDF
-heroImg1: "/fantasy/wrozki/1/wrozki-1.svg"
-heroImg2: "/fantasy/wrozki/2/wrozki-2.svg"
+alt: "kolorowanki wróżki do druku"
+h1First: Kolorowanki wróżki
+h1Sec: do druku PDF
+heroImg1: "/fantasy/wrozki/20/wrozki-20.svg"
+heroImg2: "/fantasy/wrozki/22/wrozki-22.svg"
 image: "/fantasy/wrozki/hero-desktop.png"
 keywords: "kolorowanki wrozki, malowanki PDF, darmowe do druku"
 robots: "index, follow"

@@ -1,6 +1,6 @@
 ---
 title: "Kolorowanki jednorożce do druku PDF"
-categoryName:   "jednorozce"
+categoryName:   "jednorożce"
 description: "Pobierz darmowe kolorowanki jednorożce PDF. Urocze, proste do druku ilustracje idealne dla dzieci. Magiczna zabawa czeka!"
 canonical:      "/fantasy/jednorozce/"
 tags:           [ kolorowanki, jednorozce, pdf, malowanki ]
