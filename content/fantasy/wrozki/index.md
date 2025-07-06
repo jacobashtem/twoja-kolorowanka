@@ -1,7 +1,6 @@
 ---
 title: "Kolorowanki wróżki do druku PDF – darmowe bajkowe malowanki"
 description: "Pobierz darmowe kolorowanki wróżki do druku w formacie PDF. Magia, zaczarowane ogrody – idealne dla dzieci. "
-title: "Kolorowanki wróżki do druku PDF"
 canonical: "/fantasy/wrozki/"
 categoryName: "Wróżki"
 tags: [fantasy, wrozki]
