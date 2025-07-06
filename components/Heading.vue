@@ -28,18 +28,26 @@ const props = defineProps({
 </script>
 
 <template>
-  <component :is="as" class="flex flex-row flex-nowrap items-center mt-12 mb-4 leading-tight tracking-tight">
-    <span :class="['flex-grow block border-t', borderColor]"></span>
+  <div class="flex flex-row flex-nowrap items-center mt-12 mb-4 leading-tight tracking-tight">
+    <!-- Linia z lewej -->
     <span
-      :class="[
-        'block px-4 py-2.5 rounded leading-none font-',
-        fontSize,
-        backgroundColor,
-        textColor
-      ]"
+      :class="['flex-grow block border-t', borderColor]"
+      aria-hidden="true"
+    ></span>
+
+    <!-- Tylko tekst nagłówka wewnątrz semanticznego komponentu (h2/h3/etc.) -->
+    <component
+      :is="as"
+      class="px-4 py-2.5 rounded leading-none font-semibold"
+      :class="[fontSize, backgroundColor, textColor]"
     >
       {{ text }}
-    </span>
-    <span :class="['flex-grow block border-t', borderColor]"></span>
-  </component>
+    </component>
+
+    <!-- Linia z prawej -->
+    <span
+      :class="['flex-grow block border-t', borderColor]"
+      aria-hidden="true"
+    ></span>
+  </div>
 </template>

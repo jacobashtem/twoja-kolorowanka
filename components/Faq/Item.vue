@@ -16,8 +16,7 @@
           <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
         </svg>
       </button>
-      <div v-if="isOpen" class="answer pt-2 pb-5 px-5 text-xl lg:text-2xl mt-0 font-light text-black">
-        {{ answer }}
+      <div v-if="isOpen" class="answer pt-2 pb-5 px-5 text-xl lg:text-2xl mt-0 font-light text-black" v-html="answer">
       </div>
     </div>
   </template>
