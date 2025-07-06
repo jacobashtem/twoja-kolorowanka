@@ -198,6 +198,12 @@ const galleryItems = ref([
     title: "Pieski",
     url: "/zwierzeta/pieski"
   },
+    {
+    src: '/fantasy/wrozki/20/wrozki-20.svg',
+    alt: "kolorowanki wróżki do druku",
+    title: "Wróżki",
+    url: "/fantasy/wrozki"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",

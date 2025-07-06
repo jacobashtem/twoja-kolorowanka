@@ -1,6 +1,6 @@
 ---
 title: "Kolorowanki fantasy do druku PDF – smoki, elfy i magia"
-categoryName: "jednorozce"
+categoryName: "fantasy"
 description: "Pobierz darmowe kolorowanki fantasy do druku w formacie PDF. Smoki, elfy, czarodziejki i magiczne krainy – bez logowania, bez ograniczeń, gotowe do wydruku A4."
 canonical: "/fantasy/"
 tags: [fantasy]
