@@ -73,7 +73,8 @@ const childrenVariants = computed(() =>
 const galleryVariants = computed(() =>
   childrenVariants.value.map(v => ({ img: v.image, url: v._path, title: v.title , alt:  v.alt || v.title })))
 
-
+const similarGalleryVariants = computed(() =>
+  galleryVariants.value.filter(v => v.url !== currentPath).slice(0, 8))
 /* ─────────  LAZY LOAD  ───────── */
 const visibleCount = ref(0)                          // inicjalnie 0
 watchEffect(() => {                                  // gdy pojawi się lista
@@ -307,6 +308,10 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
           />
         </div>
       </div>
+    </UContainer>
+     <UContainer v-if="isLeaf" class="mb-6">
+      <Heading text="Podobne kolorowanki" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
+      <VariantsGallery :items="similarGalleryVariants" />
     </UContainer>
     <UContainer v-else>
       <template v-if="!doc">
