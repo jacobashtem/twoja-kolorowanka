@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 39
 description: Kolorowanka Koty - wariant 39
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/39/koty-39.pdf
 tags:
 - zwierzeta
 - koty
-alt: "Edukacyjna kolorowanka koty do wydruku"
+alt: "Edukacyjna kolorowanka koty do wydruku - wariant 39"
 ---

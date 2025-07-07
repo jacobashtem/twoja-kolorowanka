@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 63
 description: Kolorowanka Koty - wariant 63
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/63/koty-63.pdf
 tags:
 - zwierzeta
 - koty
-alt: "koty kolorowanka dla dzieci"
+alt: "koty kolorowanka dla dzieci - wariant 63"
 ---

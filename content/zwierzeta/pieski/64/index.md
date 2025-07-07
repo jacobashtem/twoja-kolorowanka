@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 64
 description: Kolorowanka Pieski - wariant 64
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/64/pieski-64.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "pieski kolorowanki dla dzieci"
+alt: "pieski kolorowanki dla dzieci - wariant 64"
 ---

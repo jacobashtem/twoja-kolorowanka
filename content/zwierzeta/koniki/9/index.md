@@ -1,10 +1,10 @@
 ---
-title: Koniki
+title: Kolorowanki Koniki - wariant 9
 description: Kolorowanka Koniki – wariant 9
 image: /koniki/9/koniki-9.svg
 pdf:   /koniki/9/koniki-9.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "Łatwa kolorowanka koniki dla przedszkolaka"
+alt: "Łatwa kolorowanka koniki dla przedszkolaka - wariant 9"
 ---

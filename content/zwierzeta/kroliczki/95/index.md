@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 95
 description: Kolorowanka Kroliczki - wariant 95
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/95/kroliczki-95.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Łatwa kolorowanka kroliczki dla przedszkolaka"
+alt: "Łatwa kolorowanka kroliczki dla przedszkolaka - wariant 95"
 ---

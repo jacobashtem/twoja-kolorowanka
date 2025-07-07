@@ -1,10 +1,10 @@
 ---
-title: Koniki
+title: Kolorowanki Koniki - wariant 72
 description: Kolorowanka Koniki – wariant 72
 image: /koniki/72/koniki-72.svg
 pdf:   /koniki/72/koniki-72.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "Łatwa kolorowanka koniki dla przedszkolaka"
+alt: "Łatwa kolorowanka koniki dla przedszkolaka - wariant 72"
 ---

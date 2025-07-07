@@ -1,11 +1,11 @@
 ---
-title: Jednorozce
+title: Kolorowanki Jednorożce - wariant 39
 description: Kolorowanka Jednorozce - wariant 39
 canonical: /fantasy/jednorozce/
 variant_of: jednorozce
 image: /fantasy/jednorozce/39/jednorozce-39.svg
 pdf: /fantasy/jednorozce/39/jednorozce-39.pdf
-alt: "jednorozce kolorowanka dla dzieci"
+alt: "jednorozce kolorowanka dla dzieci - wariant 39"
 tags:
 - fantasy
 - jednorozce

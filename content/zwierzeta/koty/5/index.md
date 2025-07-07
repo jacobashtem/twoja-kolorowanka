@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 5
 description: Kolorowanka Koty - wariant 5
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/5/koty-5.pdf
 tags:
 - zwierzeta
 - koty
-alt: "koty do druku i pokolorowania"
+alt: "koty do druku i pokolorowania - wariant 5"
 ---

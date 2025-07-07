@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 59
 description: Kolorowanka Koty - wariant 59
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/59/koty-59.pdf
 tags:
 - zwierzeta
 - koty
-alt: "Prosta kolorowanka koty do kolorowania"
+alt: "Prosta kolorowanka koty do kolorowania - wariant 59"
 ---

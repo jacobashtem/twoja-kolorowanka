@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 28
 description: Kolorowanka Koty - wariant 28
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/28/koty-28.pdf
 tags:
 - zwierzeta
 - koty
-alt: "Kolorowanki koty"
+alt: "Kolorowanki koty - wariant 28"
 ---

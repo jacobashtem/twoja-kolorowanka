@@ -1,11 +1,11 @@
 ---
-title: Jednorozce
+title: Kolorowanki Jednorożce - wariant 63
 description: Kolorowanka Jednorozce - wariant 63
 canonical: /fantasy/jednorozce/
 variant_of: jednorozce
 image: /fantasy/jednorozce/63/jednorozce-63.svg
 pdf: /fantasy/jednorozce/63/jednorozce-63.pdf
-alt: "jednorozce – pobierz i wydrukuj kolorowankę"
+alt: "jednorozce – pobierz i wydrukuj kolorowankę - wariant 63"
 tags:
 - fantasy
 - jednorozce

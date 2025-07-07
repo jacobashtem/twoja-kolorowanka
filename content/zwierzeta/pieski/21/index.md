@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 21
 description: Kolorowanka Pieski - wariant 21
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/21/pieski-21.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Edukacyjna kolorowanka pieski do wydruku"
+alt: "Edukacyjna kolorowanka pieski do wydruku - wariant 21"
 ---

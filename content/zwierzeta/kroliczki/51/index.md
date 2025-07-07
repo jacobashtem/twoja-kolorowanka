@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 51
 description: Kolorowanka Kroliczki - wariant 51
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/51/kroliczki-51.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "kroliczki kolorowanka dla dzieci"
+alt: "kroliczki kolorowanka dla dzieci - wariant 51"
 ---

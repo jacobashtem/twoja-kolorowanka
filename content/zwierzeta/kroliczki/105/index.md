@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 105
 description: Kolorowanka Kroliczki - wariant 105
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/105/kroliczki-105.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Darmowa kolorowanka kroliczki do druku PDF"
+alt: "Darmowa kolorowanka kroliczki do druku PDF - wariant 105"
 ---

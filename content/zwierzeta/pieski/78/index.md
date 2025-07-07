@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 78
 description: Kolorowanka Pieski - wariant 78
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/78/pieski-78.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Pokoloruj pieski – darmowy szablon PDF"
+alt: "Pokoloruj pieski – darmowy szablon PDF - wariant 78"
 ---

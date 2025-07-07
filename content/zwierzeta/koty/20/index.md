@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 20
 description: Kolorowanka Koty - wariant 20
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/20/koty-20.pdf
 tags:
 - zwierzeta
 - koty
-alt: "Łatwa kolorowanka koty dla przedszkolaka"
+alt: "Łatwa kolorowanka koty dla przedszkolaka - wariant 20"
 ---

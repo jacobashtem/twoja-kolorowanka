@@ -9,7 +9,7 @@ h1First: Kolorowanki wróżki
 h1Sec: do druku PDF
 heroImg1: "/fantasy/wrozki/20/wrozki-20.svg"
 heroImg2: "/fantasy/wrozki/22/wrozki-22.svg"
-image: "/fantasy/wrozki/hero-desktop.png"
+image: "/fantasy/wrozki/20/wrozki-20.svg"
 keywords: "kolorowanki wrozki, malowanki PDF, darmowe do druku"
 robots: "index, follow"
 schemaType: "CollectionPage"

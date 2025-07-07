@@ -154,23 +154,39 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
         "inLanguage": "pl-PL"
       },
       {
-        "@type": "WebPage",
+        "@type": ["WebPage", "CollectionPage"],
         "@id": `https://twoja-kolorowanka.pl${currentPath}/#webpage`,
         "url": `https://twoja-kolorowanka.pl${currentPath}/`,
+        "description": doc.value?.description || 'twoja-kolorowanka.pl',
         "name": doc.value?.title || fullTitle.value,
         "isPartOf": { "@id": "https://twoja-kolorowanka.pl/#website" },
         "primaryImageOfPage": {
-          "@id": `https://twoja-kolorowanka.pl${currentPath}/#primaryimage`
+          "@id": `https://twoja-kolorowanka.pl${doc.value?.image || '/img/heroImg1.jpg'}`
         },
         "datePublished": doc.value?.date || "2024-01-01",
         "dateModified": "2025-06-30",
-        "inLanguage": "pl-PL"
+        "inLanguage": "pl-PL",
+         ...(isLeaf.value && doc.value?.image && doc.value?.pdf
+        ? {
+            mainEntity: [
+              {
+                "@type": "ImageObject",
+                "@id": `https://twoja-kolorowanka.pl${doc.value.image}`
+              },
+              {
+                "@type": "CreativeWork",
+                "name": doc.value.title,
+                "url": `https://twoja-kolorowanka.pl${doc.value.pdf}`
+              }
+            ]
+          }
+        : {})
       },
       {
         "@type": "ImageObject",
-        "@id": `https://twoja-kolorowanka.pl${currentPath}/#primaryimage`,
-        "url": `https://twoja-kolorowanka.pl${doc.value?.heroImg1 || '/img/heroImg1.jpg'}`,
-        "contentUrl": `https://twoja-kolorowanka.pl${doc.value?.heroImg1 || '/img/heroImg1.jpg'}`,
+        "@id": `https://twoja-kolorowanka.pl${doc.value?.image || '/img/heroImg1.jpg'}`,
+        "url": `https://twoja-kolorowanka.pl${doc.value?.image || '/img/heroImg1.jpg'}`,
+        "contentUrl": `https://twoja-kolorowanka.pl${doc.value?.image || '/img/heroImg1.jpg'}`,
         "caption": doc.value?.title || "Kolorowanki zwierzęta do druku"
       },
       {
@@ -209,6 +225,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
               }
             ]
           : [])
+          
     ]
   })
 }

@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 83
 description: Kolorowanka Kroliczki - wariant 83
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/83/kroliczki-83.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Pokoloruj kroliczki – darmowy szablon PDF"
+alt: "Pokoloruj kroliczki – darmowy szablon PDF - wariant 83"
 ---

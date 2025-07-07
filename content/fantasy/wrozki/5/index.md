@@ -1,11 +1,11 @@
 ---
-title: Wrozki
+title: Kolorowanki Wróżki - wariant 5
 description: Kolorowanka Wrozki - wariant 5
 canonical: /fantasy/wrozki/
 variant_of: wrozki
 image: /fantasy/wrozki/5/wrozki-5.svg
 pdf: /fantasy/wrozki/5/wrozki-5.pdf
-alt: "Kolorowanka do druku wrozki"
+alt: "Kolorowanka do druku wrozki - wariant 5"
 tags:
 - fantasy
 - wrozki

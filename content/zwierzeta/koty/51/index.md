@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 51
 description: Kolorowanka Koty - wariant 51
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/51/koty-51.pdf
 tags:
 - zwierzeta
 - koty
-alt: "koty – pobierz i wydrukuj kolorowankę"
+alt: "koty – pobierz i wydrukuj kolorowankę - wariant 51"
 ---

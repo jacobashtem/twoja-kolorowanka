@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 108
 description: Kolorowanka Kroliczki - wariant 108
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/108/kroliczki-108.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Malowanka kroliczki do druku A4"
+alt: "Malowanka kroliczki do druku A4 - wariant 108"
 ---

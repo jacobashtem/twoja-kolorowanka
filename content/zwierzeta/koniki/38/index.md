@@ -1,10 +1,10 @@
 ---
-title: Koniki
+title: Kolorowanki Koniki - wariant 38
 description: Kolorowanka Koniki – wariant 38
 image: /koniki/38/koniki-38.svg
 pdf:   /koniki/38/koniki-38.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "Łatwa kolorowanka koniki dla przedszkolaka"
+alt: "Łatwa kolorowanka koniki dla przedszkolaka - wariant 38"
 ---

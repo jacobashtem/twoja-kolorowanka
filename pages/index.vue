@@ -204,6 +204,12 @@ const galleryItems = ref([
     title: "Wróżki",
     url: "/fantasy/wrozki"
   },
+      {
+    src: '/fantasy/smoki/20/smoki-20.svg',
+    alt: "kolorowanki smoki do druku",
+    title: "smoki",
+    url: "/fantasy/wrozki"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",

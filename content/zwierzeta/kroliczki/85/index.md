@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 85
 description: Kolorowanka Kroliczki - wariant 85
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/85/kroliczki-85.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Kolorowanki kroliczki"
+alt: "Kolorowanki kroliczki - wariant 85"
 ---
