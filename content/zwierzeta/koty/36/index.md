@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 36
 description: Kolorowanka Koty - wariant 36
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/36/koty-36.pdf
 tags:
 - zwierzeta
 - koty
-alt: "Malowanka koty do druku A4"
+alt: "Malowanka koty do druku A4 - wariant 36"
 ---

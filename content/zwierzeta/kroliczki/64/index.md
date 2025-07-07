@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 64
 description: Kolorowanka Kroliczki - wariant 64
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/64/kroliczki-64.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Prosta kolorowanka kroliczki do kolorowania"
+alt: "Prosta kolorowanka kroliczki do kolorowania - wariant 64"
 ---

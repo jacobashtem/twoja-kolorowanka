@@ -1,10 +1,10 @@
 ---
-title: Koniki
+title: Kolorowanki Koniki - wariant 24
 description: Kolorowanka Koniki – wariant 24
 image: /koniki/24/koniki-24.svg
 pdf:   /koniki/24/koniki-24.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "Prosta kolorowanka koniki do kolorowania"
+alt: "Prosta kolorowanka koniki do kolorowania - wariant 24"
 ---

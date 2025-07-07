@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 88
 description: Kolorowanka Pieski - wariant 88
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/88/pieski-88.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Malowanka pieski do druku A4"
+alt: "Malowanka pieski do druku A4 - wariant 88"
 ---

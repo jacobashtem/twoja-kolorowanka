@@ -1,10 +1,10 @@
 ---
-title: Koniki
+title: Kolorowanki Koniki - wariant 4
 description: Kolorowanka Koniki – wariant 4
 image: /koniki/4/koniki-4.svg
 pdf:   /koniki/4/koniki-4.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "koniki kolorowanka dla dzieci"
+alt: "koniki kolorowanka dla dzieci - wariant 4"
 ---

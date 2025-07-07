@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 82
 description: Kolorowanka Pieski - wariant 82
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/82/pieski-82.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Kolorowanka do druku pieski"
+alt: "Kolorowanka do druku pieski - wariant 82"
 ---

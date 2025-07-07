@@ -1,10 +1,10 @@
 ---
-title: Koniki
+title: Kolorowanki Koniki - wariant 69
 description: Kolorowanka Koniki – wariant 69
 image: /koniki/69/koniki-69.svg
 pdf:   /koniki/69/koniki-69.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "koniki – pobierz i wydrukuj kolorowankę"
+alt: "koniki – pobierz i wydrukuj kolorowankę - wariant 69"
 ---

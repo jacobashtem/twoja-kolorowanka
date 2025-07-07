@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 10
 description: Kolorowanka Pieski - wariant 10
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/10/pieski-10.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Kolorowanki pieski"
+alt: "Kolorowanki pieski - wariant 10"
 ---

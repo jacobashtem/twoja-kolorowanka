@@ -6,10 +6,10 @@ canonical: "/fantasy/smoki/"
 tags: [fantasy, smoki]
 alt: "kolorowanki smoki do druku"
 h1First: Kolorowanki smoki
-h1Sec: do pobrania PDF
+h1Sec: do druku PDF
 heroImg1: "/fantasy/smoki/1/smoki-1.svg"
 heroImg2: "/fantasy/smoki/2/smoki-2.svg"
-image: "/fantasy/smoki/hero-desktop.png"
+image: "/fantasy/smoki/1/smoki-1.svg"
 keywords: "kolorowanki smoki, malowanki PDF, darmowe do druku"
 robots: "index, follow"
 schemaType: "CollectionPage"

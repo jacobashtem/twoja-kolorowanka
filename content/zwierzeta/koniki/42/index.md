@@ -1,10 +1,10 @@
 ---
-title: Koniki
+title: Kolorowanki Koniki - wariant 42
 description: Kolorowanka Koniki – wariant 42
 image: /koniki/42/koniki-42.svg
 pdf:   /koniki/42/koniki-42.pdf
 tags:
  - zwierzeta
  - koniki
-alt: "koniki kolorowanka"
+alt: "koniki kolorowanka - wariant 42"
 ---

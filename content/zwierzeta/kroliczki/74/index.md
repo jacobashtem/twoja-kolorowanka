@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 74
 description: Kolorowanka Kroliczki - wariant 74
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/74/kroliczki-74.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "kroliczki – pobierz i wydrukuj kolorowankę"
+alt: "kroliczki – pobierz i wydrukuj kolorowankę - wariant 74"
 ---

@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 9
 description: Kolorowanka Pieski - wariant 9
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/9/pieski-9.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Łatwa kolorowanka pieski dla przedszkolaka"
+alt: "Łatwa kolorowanka pieski dla przedszkolaka - wariant 9"
 ---

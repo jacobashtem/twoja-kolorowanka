@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 112
 description: Kolorowanka Kroliczki - wariant 112
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/112/kroliczki-112.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "Kolorowanka kroliczki – format A4 PDF"
+alt: "Kolorowanka kroliczki – format A4 PDF - wariant 112"
 ---

@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 106
 description: Kolorowanka Kroliczki - wariant 106
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/106/kroliczki-106.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "kroliczki – pobierz i wydrukuj kolorowankę"
+alt: "kroliczki – pobierz i wydrukuj kolorowankę - wariant 106"
 ---

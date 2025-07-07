@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 59
 description: Kolorowanka Pieski - wariant 59
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/59/pieski-59.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Prosta kolorowanka pieski do kolorowania"
+alt: "Prosta kolorowanka pieski do kolorowania - wariant 59"
 ---

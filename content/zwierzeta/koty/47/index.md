@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 47
 description: Kolorowanka Koty - wariant 47
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/47/koty-47.pdf
 tags:
 - zwierzeta
 - koty
-alt: "koty kolorowanki dla dzieci"
+alt: "koty kolorowanki dla dzieci - wariant 47"
 ---

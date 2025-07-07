@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 17
 description: Kolorowanka Koty - wariant 17
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/17/koty-17.pdf
 tags:
 - zwierzeta
 - koty
-alt: "koty – pobierz i wydrukuj kolorowankę"
+alt: "koty – pobierz i wydrukuj kolorowankę - wariant 17"
 ---

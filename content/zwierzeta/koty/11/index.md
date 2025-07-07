@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 11
 description: Kolorowanka Koty - wariant 11
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/11/koty-11.pdf
 tags:
 - zwierzeta
 - koty
-alt: "koty kolorowanka dla dzieci"
+alt: "koty kolorowanka dla dzieci - wariant 11"
 ---

@@ -1,5 +1,5 @@
 ---
-title: Koty
+title: Kolorowanki Koty - wariant 19
 description: Kolorowanka Koty - wariant 19
 canonical: /zwierzeta/koty
 variant_of: koty
@@ -8,5 +8,5 @@ pdf: /koty/19/koty-19.pdf
 tags:
 - zwierzeta
 - koty
-alt: "Malowanka koty do druku A4"
+alt: "Malowanka koty do druku A4 - wariant 19"
 ---

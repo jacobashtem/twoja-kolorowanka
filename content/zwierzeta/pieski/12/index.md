@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 12
 description: Kolorowanka Pieski - wariant 12
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/12/pieski-12.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "pieski kolorowanki dla dzieci"
+alt: "pieski kolorowanki dla dzieci - wariant 12"
 ---

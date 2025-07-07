@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 18
 description: Kolorowanka Pieski - wariant 18
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/18/pieski-18.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Kolorowanka z pieski do pobrania"
+alt: "Kolorowanka z pieski do pobrania - wariant 18"
 ---

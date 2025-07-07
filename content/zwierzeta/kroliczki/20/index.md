@@ -1,5 +1,5 @@
 ---
-title: Kroliczki
+title: Kolorowanki Króliczki - wariant 20
 description: Kolorowanka Kroliczki - wariant 20
 canonical: /zwierzeta/kroliczki
 variant_of: kroliczki
@@ -8,5 +8,5 @@ pdf: /kroliczki/20/kroliczki-20.pdf
 tags:
 - zwierzeta
 - kroliczki
-alt: "kroliczki do druku i pokolorowania"
+alt: "kroliczki do druku i pokolorowania - wariant 20"
 ---

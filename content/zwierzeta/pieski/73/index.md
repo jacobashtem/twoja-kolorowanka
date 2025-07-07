@@ -1,5 +1,5 @@
 ---
-title: Pieski
+title: Kolorowanki Pieski - wariant 73
 description: Kolorowanka Pieski - wariant 73
 canonical: /zwierzeta/pieski
 variant_of: pieski
@@ -8,5 +8,5 @@ pdf: /pieski/73/pieski-73.pdf
 tags:
 - zwierzeta
 - pieski
-alt: "Edukacyjna kolorowanka pieski do wydruku"
+alt: "Edukacyjna kolorowanka pieski do wydruku - wariant 73"
 ---
