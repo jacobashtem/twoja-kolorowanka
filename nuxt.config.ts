@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   routeRules: {
     '/koloruj/**': { appMiddleware: 'check-id' }
   },
+    colorMode: {
+    preference: 'light'
+  },
   devtools: { enabled: true },
   nitro: {
     preset: 'static',
