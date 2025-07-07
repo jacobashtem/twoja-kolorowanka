@@ -8,13 +8,13 @@
                 <NuxtLink to="/" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl">
                     Strona główna
                 </NuxtLink>
-                <NuxtLink to="/" class="text-gray-600 text-xl hover:text-gray-900 transition-colors duration-200">
+                <!-- <NuxtLink to="/" class="text-gray-600 text-xl hover:text-gray-900 transition-colors duration-200">
                     Kategorie kolorowanek
                 </NuxtLink>
                 <NuxtLink to="/"
                     class="text-gray-600 text-xl hover:text-gray-900 transition-colors duration-200">
                     Blog
-                </NuxtLink>
+                </NuxtLink> -->
             </div>
 
             <!-- Hamburger na mobile -->
