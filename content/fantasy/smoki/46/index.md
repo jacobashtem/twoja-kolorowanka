@@ -1,11 +1,11 @@
 ---
-title: Smoki
+title: Kolorowanki Smoki - wariant 46
 description: Kolorowanka Smoki - wariant 46
 canonical: /fantasy/smoki/
 variant_of: smoki
 image: /fantasy/smoki/46/smoki-46.svg
 pdf: /fantasy/smoki/46/smoki-46.pdf
-alt: "Kolorowanka z smoki do pobrania"
+alt: "Kolorowanka z smoki do pobrania - wariant 46"
 tags:
 - fantasy
 - smoki

@@ -1,11 +1,11 @@
 ---
-title: Smoki
+title: Kolorowanki Smoki - wariant 60
 description: Kolorowanka Smoki - wariant 60
 canonical: /fantasy/smoki/
 variant_of: smoki
 image: /fantasy/smoki/60/smoki-60.svg
 pdf: /fantasy/smoki/60/smoki-60.pdf
-alt: "Kolorowanki do druku smoki"
+alt: "Kolorowanki do druku smoki - wariant 60"
 tags:
 - fantasy
 - smoki
