@@ -1,6 +1,7 @@
 ---
 title: "Kolorowanki smoki do druku – PDF dla dzieci"
 description: "Pobierz darmowe kolorowanki smoki do druku w PDF. Bajkowe, groźne i zabawne smoki czekają, by je pokolorować!"
+categoryName: "smoki"
 canonical: "/fantasy/smoki/"
 tags: [fantasy, smoki]
 alt: "kolorowanki smoki do druku"

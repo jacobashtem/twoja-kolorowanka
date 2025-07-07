@@ -225,11 +225,12 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
         
         <h1
           v-if="doc && isLeaf"
-          v-rainbow-text="fullTitle"
-          class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
+          class=" text-tertiary-500 mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
-        />
-        <div class="flex items-center justify-between">
+        >
+        {{ doc?.description }}
+        </h1>
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
           <Breadcrumbs />
           <NuxtLink
             v-if="isLeaf"
@@ -294,7 +295,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
       <div class="relative w-full mx-auto">
         <img
           :src="isMobile ? heroMobileImg : heroDesktop"
-          alt="Twoja kolorowanka"
+          :alt="doc?.alt"
           class="w-full h-auto"
         />
         <div
