@@ -210,6 +210,12 @@ const galleryItems = ref([
     title: "smoki",
     url: "/fantasy/wrozki"
   },
+     {
+    src: '/zwierzeta/motyle/20/motyle-20.svg',
+    alt: "kolorowanki motyle do druku",
+    title: "motyle",
+    url: "/zwierzeta/motyle"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",
