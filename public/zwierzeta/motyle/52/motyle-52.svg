@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 2000" width="595" height="842" preserveAspectRatio="xMidYMid meet" data-scaled="true">
 <rect id="background" style="fill:#FFFFFF;" width="2000" height="2000"/>
 <path id="objects_1_" d="M961.89,912.462c-8.704-23.002-7.956-43.999,11.558-62.267c-8.132-13.088-13.761-27.997-17.959-43.499
 	c-4.164-15.376-6.626-30.968-6.036-46.716c-0.474-0.449-0.669-0.767-0.947-0.879c-18.709-7.536-27.379-23.006-31.649-41.364
@@ -637,9 +636,4 @@
 	C575.025,1180.174,570.958,1184.24,573.988,1192.52z M1425.852,1192.367c2.738-7.621-0.024-11.999-7.26-11.818
 	c-1.585,0.039-3.445-0.125-4.141,1.754c-0.581,1.567-0.338,3.243,0.784,4.572C1418.023,1190.177,1421.38,1192.398,1425.852,1192.367
 	z"/>
-
-    <text x="10" y="832" font-size="12" fill="gray" opacity="0.6" font-family="Arial, sans-serif">
-      twoja-kolorowanka.pl
-    </text>
-  
 </svg>

@@ -14,7 +14,7 @@ keywords: "kolorowanki motyle, malowanki PDF, darmowe do druku"
 robots: "index, follow"
 schemaType: "CollectionPage"
 seoBlocks:
-  - heading: "Kolorowanki motyle do druku PDF – magia barwnych skrzydeł"
+  - heading: "Magia barwnych skrzydeł"
     text: >
       Kolorowanki motyle do druku łączą w sobie urok natury i prostotę zabawy; każdy arkusz
       A4 przedstawia dokładnie narysowane kontury skrzydeł, czułków i segmentów tułowia,

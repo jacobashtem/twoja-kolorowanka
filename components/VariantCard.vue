@@ -12,6 +12,7 @@
 
     <div class="relative w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform p-3">
       <img
+        loading="lazy"
         class="max-w-full object-contain rounded-3xl bg-white min-w-64 min-h-64 max-h-64"
         :src="item.img"
         :alt="item.alt || item.title"

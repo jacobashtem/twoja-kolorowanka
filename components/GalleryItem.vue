@@ -27,7 +27,7 @@ const props = defineProps({
     <img
       :src="src"
       :alt="alt"
-      class="w-full"
+      class="w-full max-h-64"
     />
     <p
       class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition"

@@ -160,6 +160,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
         "description": doc.value?.description || 'twoja-kolorowanka.pl',
         "name": doc.value?.title || fullTitle.value,
         "isPartOf": { "@id": "https://twoja-kolorowanka.pl/#website" },
+        "headline": doc.value?.title || fullTitle.value,
         "primaryImageOfPage": {
           "@id": `https://twoja-kolorowanka.pl${doc.value?.image || '/img/heroImg1.jpg'}`
         },
@@ -214,6 +215,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
           ? [
               {
                 "@type": "FAQPage",
+                "@id": `https://twoja-kolorowanka.pl${currentPath}/#faq`,
                 "mainEntity": doc.value.faqs.map(faq => ({
                   "@type": "Question",
                   "name": faq.question,
