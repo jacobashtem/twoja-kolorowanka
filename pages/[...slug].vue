@@ -79,9 +79,6 @@ const similarGalleryVariants = computed(() =>
 const visibleCount = ref(0)                          // inicjalnie 0
 watchEffect(() => {                                  // gdy pojawi się lista
   visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
-    if (doc.value === null) {
-    navigateTo('/')
-  }
 })
 
 const visibleGalleryVariants = computed(() =>
@@ -255,9 +252,6 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
           :aria-label="fullTitle"
         >
         {{ doc?.description }}
-        <code>
-        
-        </code>
         </h1>
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
           <Breadcrumbs />
@@ -414,7 +408,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
       <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[7]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <div v-html="doc.seoBlocks[7].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </div>
-          <ContentRenderer :value="doc" />
+          <!-- <ContentRenderer :value="doc" /> -->
     </UContainer>
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">
       <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
