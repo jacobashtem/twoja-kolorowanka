@@ -94,7 +94,11 @@ function loadMore () {
 watch(() => currentPath, () => {
   visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
 })
-
+watch(doc, (val) => {
+  if (val === null) {
+    navigateTo('/')
+  }
+})
 /* ─────────  TITLE / INDEX  ───────── */
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
@@ -392,6 +396,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
                 Załaduj więcej kolorowanek
               </button>
               </div>
+           
           </ClientOnly>
         </div>
 
@@ -403,8 +408,8 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
       <Heading v-if="doc?.seoBlocks" :text="doc?.seoBlocks[7]?.heading || ''" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
                <div v-html="doc.seoBlocks[7].text ||''" v-if="doc?.seoBlocks" class="mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8">
           </div>
+          <!-- <ContentRenderer :value="doc" /> -->
     </UContainer>
-
     <UModal v-model="showPreviewModal" class="max-w-[90vw]">
       <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
         <div

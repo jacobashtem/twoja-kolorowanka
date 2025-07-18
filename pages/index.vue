@@ -216,6 +216,12 @@ const galleryItems = ref([
     title: "motyle",
     url: "/zwierzeta/motyle"
   },
+  //    {
+  //   src: '/pojazdy/samochody/1/samochody-1.svg',
+  //   alt: "kolorowanki samochody do druku",
+  //   title: "samochody",
+  //   url: "/pojazdy/samochody"
+  // },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",
