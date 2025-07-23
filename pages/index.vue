@@ -216,12 +216,12 @@ const galleryItems = ref([
     title: "motyle",
     url: "/zwierzeta/motyle"
   },
-     {
-    src: '/pojazdy/samochody/1/samochody-1.svg',
-    alt: "kolorowanki samochody do druku",
-    title: "samochody",
-    url: "/pojazdy/samochody"
-  },
+  //    {
+  //   src: '/pojazdy/samochody/1/samochody-1.svg',
+  //   alt: "kolorowanki samochody do druku",
+  //   title: "samochody",
+  //   url: "/pojazdy/samochody"
+  // },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",
@@ -382,14 +382,14 @@ const galleryVariantsUnicornsSec = [
 
 
 const galleryVariantsHorses= [
-  { img: '/koniki/1/koniki-1.svg', url: '/fantasy/koniki/1', title: 'koniki', alt: 'Kolorowanka koniki' },
-  { img: '/koniki/2/koniki-2.svg', url: '/fantasy/koniki/2', title: 'koniki', alt: 'kolorowanka do druku koniki PDF' },
-  { img: '/koniki/3/koniki-3.svg', url: '/fantasy/koniki/3', title: 'koniki', alt: 'koniki kolorowanki dla dzieci' },
-  { img: '/koniki/4/koniki-4.svg', url: '/fantasy/koniki/4', title: 'koniki', alt: 'koniki kolorowanka dla dzieci' },
-  { img: '/koniki/5/koniki-5.svg', url: '/fantasy/koniki/5', title: 'koniki', alt: 'koniki do druku i pokolorowania' },
-  { img: '/koniki/6/koniki-6.svg', url: '/fantasy/koniki/6', title: 'koniki', alt: 'koniki kolorowanka' },
-  { img: '/koniki/7/koniki-7.svg', url: '/fantasy/koniki/7', title: 'koniki', alt: 'Kolorowanki do druku koniki' },
-  { img: '/koniki/8/koniki-8.svg', url: '/fantasy/koniki/8', title: 'koniki', alt: 'koniki do druku i pokolorowania' }
+  { img: '/koniki/1/koniki-1.svg', url: '/zwierzeta/koniki/1', title: 'koniki', alt: 'Kolorowanka koniki' },
+  { img: '/koniki/2/koniki-2.svg', url: '/zwierzeta/koniki/2', title: 'koniki', alt: 'kolorowanka do druku koniki PDF' },
+  { img: '/koniki/3/koniki-3.svg', url: '/zwierzeta/koniki/3', title: 'koniki', alt: 'koniki kolorowanki dla dzieci' },
+  { img: '/koniki/4/koniki-4.svg', url: '/zwierzeta/koniki/4', title: 'koniki', alt: 'koniki kolorowanka dla dzieci' },
+  { img: '/koniki/5/koniki-5.svg', url: '/zwierzeta/koniki/5', title: 'koniki', alt: 'koniki do druku i pokolorowania' },
+  { img: '/koniki/6/koniki-6.svg', url: '/zwierzeta/koniki/6', title: 'koniki', alt: 'koniki kolorowanka' },
+  { img: '/koniki/7/koniki-7.svg', url: '/zwierzeta/koniki/7', title: 'koniki', alt: 'Kolorowanki do druku koniki' },
+  { img: '/koniki/8/koniki-8.svg', url: '/zwierzeta/koniki/8', title: 'koniki', alt: 'koniki do druku i pokolorowania' }
 ];
 
 const galleryVariantsDogs = [
@@ -415,14 +415,14 @@ const galleryVariantsDogsSec = [
 ];
 
 const galleryVariantsRabbits = [
-  { img: '/kroliczki/1/kroliczki-1.svg', url: '/fantasy/kroliczki/1', title: 'kroliczki', alt: 'Kolorowanka kroliczki' },
-  { img: '/kroliczki/2/kroliczki-2.svg', url: '/fantasy/kroliczki/2', title: 'kroliczki', alt: 'kolorowanka do druku kroliczki PDF' },
-  { img: '/kroliczki/3/kroliczki-3.svg', url: '/fantasy/kroliczki/3', title: 'kroliczki', alt: 'kroliczki kolorowanki dla dzieci' },
-  { img: '/kroliczki/4/kroliczki-4.svg', url: '/fantasy/kroliczki/4', title: 'kroliczki', alt: 'kroliczki kolorowanka dla dzieci' },
-  { img: '/kroliczki/5/kroliczki-5.svg', url: '/fantasy/kroliczki/5', title: 'kroliczki', alt: 'kroliczki do druku i pokolorowania' },
-  { img: '/kroliczki/6/kroliczki-6.svg', url: '/fantasy/kroliczki/6', title: 'kroliczki', alt: 'kroliczki kolorowanka' },
-  { img: '/kroliczki/7/kroliczki-7.svg', url: '/fantasy/kroliczki/7', title: 'kroliczki', alt: 'Kolorowanki do druku kroliczki' },
-  { img: '/kroliczki/8/kroliczki-8.svg', url: '/fantasy/kroliczki/8', title: 'kroliczki', alt: 'kroliczki do druku i pokolorowania' }
+  { img: '/kroliczki/1/kroliczki-1.svg', url: '/zwierzeta/kroliczki/1', title: 'kroliczki', alt: 'Kolorowanka kroliczki' },
+  { img: '/kroliczki/2/kroliczki-2.svg', url: '/zwierzeta/kroliczki/2', title: 'kroliczki', alt: 'kolorowanka do druku kroliczki PDF' },
+  { img: '/kroliczki/3/kroliczki-3.svg', url: '/zwierzeta/kroliczki/3', title: 'kroliczki', alt: 'kroliczki kolorowanki dla dzieci' },
+  { img: '/kroliczki/4/kroliczki-4.svg', url: '/zwierzeta/kroliczki/4', title: 'kroliczki', alt: 'kroliczki kolorowanka dla dzieci' },
+  { img: '/kroliczki/5/kroliczki-5.svg', url: '/zwierzeta/kroliczki/5', title: 'kroliczki', alt: 'kroliczki do druku i pokolorowania' },
+  { img: '/kroliczki/6/kroliczki-6.svg', url: '/zwierzeta/kroliczki/6', title: 'kroliczki', alt: 'kroliczki kolorowanka' },
+  { img: '/kroliczki/7/kroliczki-7.svg', url: '/zwierzeta/kroliczki/7', title: 'kroliczki', alt: 'Kolorowanki do druku kroliczki' },
+  { img: '/kroliczki/8/kroliczki-8.svg', url: '/zwierzeta/kroliczki/8', title: 'kroliczki', alt: 'kroliczki do druku i pokolorowania' }
 ];
 
 const galleryVariantsList = [galleryVariantsCats, galleryVariantsDogs, galleryVariantsHorses, galleryVariantsUnicorns, galleryVariantsRabbits, galleryVariantsCatsSec,galleryVariantsDogsSec,galleryVariantsUnicornsSec]

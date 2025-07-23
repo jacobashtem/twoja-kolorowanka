@@ -248,7 +248,7 @@
         <p><span>Zakres, cele, spos&oacute;b oraz zasady przetwarzania danych dostępne są w załącznikach do Regulaminu:
                 &bdquo;</span><NuxtLink class="text-sunsetOrange-500" to="obowiazek-informacyjny/"><u><span
                         >Obowiązek informacyjny RODO</span></u></NuxtLink><span>&rdquo; oraz w
-                &bdquo;</span><NuxtLink class="text-sunsetOrange-500" to="polityka-prywatnosci/"><u><span
+                &bdquo;</span><NuxtLink class="text-sunsetOrange-500" to="/polityka-prywatnosci/"><u><span
                        >Polityce prywatności</span></u></NuxtLink><span>&bdquo;, stanowiących
                 integralną część Regulaminu.</span></p>
         <ul class="list-decimal text-lg py-2 pl-16">
