@@ -365,5 +365,3 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
     </UModal>
   </div>
 </template>
-
-<component value="artykuł"> 
