@@ -48,7 +48,6 @@ faqs:
     answer: "Tak! Możesz drukować je tyle razy, ile chcesz – dla siebie, rodzeństwa, całej grupy w przedszkolu czy na zajęcia tematyczne. Użytek edukacyjny i domowy jest w pełni dozwolony."
 
 ---
-## 10 ciekawostek o pojazdach, które zaskoczą każde dziecko
 
 ## Kolorowanki samochody – ryk silnika w wersji do druku
 

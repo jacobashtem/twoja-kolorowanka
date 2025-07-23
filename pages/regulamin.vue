@@ -246,7 +246,7 @@
         <p><span>W celu prawidłowego świadczenia usług, Serwis wykorzystuje i zapisuje niekt&oacute;re anonimowe informacje o
                 Usługobiorcy w plikach cookies.</span></p>
         <p><span>Zakres, cele, spos&oacute;b oraz zasady przetwarzania danych dostępne są w załącznikach do Regulaminu:
-                &bdquo;</span><NuxtLink class="text-sunsetOrange-500" to="obowiazek-informacyjny/"><u><span
+                &bdquo;</span><NuxtLink class="text-sunsetOrange-500" to="/obowiazek-informacyjny/"><u><span
                         >Obowiązek informacyjny RODO</span></u></NuxtLink><span>&rdquo; oraz w
                 &bdquo;</span><NuxtLink class="text-sunsetOrange-500" to="/polityka-prywatnosci/"><u><span
                        >Polityce prywatności</span></u></NuxtLink><span>&bdquo;, stanowiących
