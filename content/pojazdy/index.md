@@ -1,5 +1,5 @@
 ---
-title: "Kolorowanki pojazdy do druku PDF – samochody, traktory, rakiety"
+title: "Kolorowanki pojazdy do druku PDF – samochody, traktory"
 categoryName: "pojazdy"
 description: "Pobierz darmowe kolorowanki pojazdy do druku w formacie PDF. Samochody, traktory, statki, rakiety i inne maszyny – bez logowania, gotowe do druku A4."
 canonical: "/pojazdy/"
@@ -59,9 +59,23 @@ Każda kolorowanka to okazja, by nauczyć się czegoś nowego i opowiedzieć wł
 
 Pojazdy to coś więcej niż środki transportu – to symbole przygody, szybkości, mocy i marzeń o podróżach. Dzieci wybierają je, bo kojarzą się z ruchem, dźwiękiem i przygodą. **Kolorowanki pojazdy PDF** pozwalają im wejść w ten świat w bezpieczny i twórczy sposób. Przy okazji uczą się rozpoznawania kształtów, rozwijają motorykę i uczą się skupienia.
 
-## Darmowe kolorowanki pojazdy PDF – prosto do druku
+## Ciekawostki o pojazdach
 
-Wszystkie nasze ilustracje możesz pobrać bez logowania i zupełnie za darmo. Każda z nich jest przygotowana w formacie A4 – gotowa do druku na domowej drukarce. **Kolorowanki pojazdy PDF** zawierają wyraźne kontury, które ułatwiają dzieciom precyzyjne kolorowanie i zachęcają do dokładności. Wydrukuj kilka i zabierz je w podróż – świetnie sprawdzą się też w przedszkolu i podczas zajęć plastycznych.
+Poznaj niesamowite fakty o pojazdach, które zachwycą nie tylko dzieci! Samochody, pociągi i samoloty to nie tylko środki transportu – kryją w sobie mnóstwo ciekawostek, które mogą zainspirować do kolorowania i odkrywania świata techniki.
+
+<ul class="grid grid-cols-1 mb-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-3 text-center text-base md:text-lg font-light max-w-6xl mx-auto">
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-orange-500">Pierwszy samochód napędzany silnikiem spalinowym powstał w 1885 roku i miał tylko trzy koła.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-yellow-500">Najdłuższy pociąg świata miał ponad 7 kilometrów długości i ciągnął się przez 682 wagony!</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-blue-400">Najdroższy samochód świata – Bugatti La Voiture Noire – kosztował około 70 milionów złotych.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-green-500">Samolot Concorde przekraczał prędkość dźwięku i mógł lecieć z Paryża do Nowego Jorku w 3,5 godziny.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-tertiary-400">Na świecie istnieją samochody, które potrafią pływać po wodzie niczym łódź – to tzw. amfibie.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-red-500">Największy pojazd lądowy to koparka Bagger 288 – waży ponad 13 000 ton i jest wyższa niż 20-piętrowy budynek.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-sec-500">Pierwszy motocykl został skonstruowany w 1885 roku – miał silnik benzynowy i drewnianą ramę.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-pink-400">Niektóre wyścigówki F1 potrafią przyspieszyć od 0 do 100 km/h w mniej niż 2 sekundy.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-indigo-400">W Japonii kursują pociągi, które mogą jechać z prędkością ponad 600 km/h – to tzw. maglevy.</li>
+<li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-lime-500">Niektóre samochody potrafią rozpoznawać znaki drogowe i automatycznie dostosowywać prędkość.</li>
+</ul>
+
 
 ## Twórcza zabawa – od kolorowania do budowania opowieści
 
