@@ -1,7 +1,7 @@
 ---
-title: "Kolorowanki samochody do druku PDF – auta, wyścigówki i ciężarówki"
+title: "Kolorowanki samochody do druku PDF – auta"
 categoryName: "samochody"
-description: "Pobierz darmowe kolorowanki samochody do druku w formacie PDF. Różne modele aut: sportowe, terenowe, ciężarówki i pojazdy specjalne – bez logowania, gotowe do druku A4."
+description: "Pobierz darmowe kolorowanki samochody do druku w formacie PDF. Różne modele aut: sportowe, terenowe, ciężarówki i pojazdy specjalne"
 canonical: "/pojazdy/samochody/"
 tags: [samochody, pojazdy]
 alt: "kolorowanki samochody do druku"

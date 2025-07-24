@@ -222,6 +222,12 @@ const galleryItems = ref([
     title: "samochody",
     url: "/pojazdy/samochody"
   },
+     {
+    src: '/pojazdy/traktory/12/traktory-12.svg',
+    alt: "kolorowanki traktory do druku",
+    title: "traktory",
+    url: "/pojazdy/traktory"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",
