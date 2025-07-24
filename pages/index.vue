@@ -208,7 +208,7 @@ const galleryItems = ref([
     src: '/fantasy/smoki/20/smoki-20.svg',
     alt: "kolorowanki smoki do druku",
     title: "smoki",
-    url: "/fantasy/wrozki"
+    url: "/fantasy/smoki"
   },
      {
     src: '/zwierzeta/motyle/20/motyle-20.svg',
