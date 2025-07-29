@@ -435,10 +435,12 @@ const galleryVariantsList = [galleryVariantsCats, galleryVariantsDogs, galleryVa
 </script>
 <template>
   <div class="index-page">
-    <Hero
-      :h1="{ firstPartTitle: 'Darmowe kolorowanki', seccondPartTitle: 'do druku pdf' }"
-      isCategory
-    />
+    <div class="mt-28 sm:mt-0">
+      <Hero
+        :h1="{ firstPartTitle: 'Darmowe kolorowanki', seccondPartTitle: 'do druku pdf' }"
+        isCategory
+      />
+    </div>
 
     <UContainer>
 
