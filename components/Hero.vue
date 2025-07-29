@@ -1,22 +1,22 @@
 <template>
   <UContainer class="mt-4 mb-20">
     <div class="w-full">
-      <div class="mt-8 sm:mt-0 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div class="mt-8 sm:mt-0 grid grid-cols-1 gap-8 lg:grid-cols-2">
         
         <!-- Lewa kolumna: tekst -->
-        <div class="order-2 md:order-1 flex flex-col justify-center text-left z-10">
+        <div class="order-2 lg:order-1 flex flex-col justify-center text-left z-10">
           <h1
             class="mt-0 sm:mt-8 font-extrabold uppercase leading-tight tracking-tight text"
             :class="{
-              'text-3xl sm:text-4xl md:text-5xl lg:text-8xl': true
+              'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl': true
             }"
             :aria-label="`${h1.firstPartTitle} ${h1.seccondPartTitle}`"
           >
             <span
               class="inline-block"
               :class="isCategory 
-                ? 'text-3xl md:text-5xl lg:text-7xl'
-                : 'text-2xl xs:text-5xl md:text-5xl lg:text-7xl'"
+                ? 'text-3xl md:text-5xl lg:text-6xl xl:text-7xl'
+                : 'text-2xl xs:text-5xl md:text-5xl lg:text-6xl xl:text-7xl'"
             >
               {{ h1.firstPartTitle }} &nbsp;
             </span>
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Prawa kolumna: obrazki -->
-        <div class="order-1 md:order-2 relative flex items-center justify-end sm:m-10">
+        <div class="order-1 md:order-2 relative flex items-center justify-end sm:m-10 hidden lg:flex">
           <div
             class="sm:absolute top-40 lg:-top-20 lg:left-0 w-40 sm:w-32 md:w-48 lg:w-64 rotate-12 rounded-lg border-black-700 border-b-4 border-r-8"
           >
