@@ -246,6 +246,12 @@ const galleryItems = ref([
     title: "traktory",
     url: "/pojazdy/traktory"
   },
+     {
+    src: '/pojazdy/pociagi/10/pociagi-10.svg',
+    alt: "kolorowanki pociągi do druku",
+    title: "pociągi",
+    url: "/pojazdy/pociagi"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Stitch",
