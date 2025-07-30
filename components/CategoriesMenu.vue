@@ -1,5 +1,5 @@
 <template>
-  <div class="relative" ref="wrapper">
+  <div class="relative flex items-center" ref="wrapper">
     <button
       class="text-xl font-medium flex items-center gap-1 text-gray-800 focus:outline-none"
       @mouseenter="showMenu"

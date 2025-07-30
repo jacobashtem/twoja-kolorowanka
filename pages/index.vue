@@ -21,68 +21,74 @@
       { name: 'twitter:card', content: 'summary_large_image' }
     ],
     script: [
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
+  {
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://twoja-kolorowanka.pl/#website",
+          "url": "https://twoja-kolorowanka.pl/",
+          "name": "Twoja Kolorowanka",
+          "inLanguage": "pl-PL",
+          "publisher": {
+            "@id": "https://twoja-kolorowanka.pl/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://twoja-kolorowanka.pl/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://twoja-kolorowanka.pl/#webpage",
+          "url": "https://twoja-kolorowanka.pl/",
+          "name": "Kolorowanki do druku PDF – darmowe kolorowanki dla dzieci",
+          "description": "Pobierz darmowe kolorowanki do druku w formacie A4. Zwierzęta, bajki, pojazdy i edukacyjne malowanki – wszystko bez logowania i całkowicie za darmo!",
+          "isPartOf": { "@id": "https://twoja-kolorowanka.pl/#website" },
+          "primaryImageOfPage": {
+            "@id": "https://twoja-kolorowanka.pl/#primaryimage"
+          },
+          "datePublished": "2024-01-01",
+          "dateModified": "2025-07-06",
+          "inLanguage": "pl-PL"
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://twoja-kolorowanka.pl/#primaryimage",
+          "url": "https://twoja-kolorowanka.pl/logo-1.webp",
+          "contentUrl": "https://twoja-kolorowanka.pl/logo-1.webp",
+          "caption": "Kolorowanki do druku dla dzieci – darmowe PDF"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://twoja-kolorowanka.pl/#breadcrumb",
+          "itemListElement": [
             {
-              "@type": "WebSite",
-              "@id": "https://twoja-kolorowanka.pl/#website",
-              "url": "https://twoja-kolorowanka.pl/",
-              "name": "Twoja Kolorowanka",
-              "inLanguage": "pl-PL",
-              "publisher": {
-                "@id": "https://twoja-kolorowanka.pl/#organization"
-              },
-            },
-            {
-              "@type": "WebPage",
-              "@id": "https://twoja-kolorowanka.pl/#webpage",
-              "url": "https://twoja-kolorowanka.pl/",
-              "name": "Kolorowanki do druku PDF – darmowe kolorowanki dla dzieci",
-              "description": "Pobierz darmowe kolorowanki do druku w formacie A4. Zwierzęta, bajki, pojazdy i edukacyjne malowanki – wszystko bez logowania i całkowicie za darmo!",
-              "isPartOf": { "@id": "https://twoja-kolorowanka.pl/#website" },
-              "primaryImageOfPage": {
-                "@id": "https://twoja-kolorowanka.pl/#primaryimage"
-              },
-              "datePublished": "2024-01-01",
-              "dateModified": "2025-07-06",
-              "inLanguage": "pl-PL"
-            },
-            {
-              "@type": "ImageObject",
-              "@id": "https://twoja-kolorowanka.pl/#primaryimage",
-              "url": "https://twoja-kolorowanka.pl/og-default.jpg",
-              "contentUrl": "https://twoja-kolorowanka.pl/og-default.jpg",
-              "caption": "Kolorowanki do druku dla dzieci – darmowe PDF"
-            },
-            {
-              "@type": "BreadcrumbList",
-              "@id": "https://twoja-kolorowanka.pl/#breadcrumb",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Strona główna",
-                  "item": "https://twoja-kolorowanka.pl/"
-                }
-              ]
-            },
-            {
-              "@type": "Organization",
-              "@id": "https://twoja-kolorowanka.pl/#organization",
-              "name": "Twoja Kolorowanka",
-              "url": "https://twoja-kolorowanka.pl/",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://twoja-kolorowanka.pl/logo.png"
-              }
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://twoja-kolorowanka.pl/"
             }
           ]
-        })
-      }
-    ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://twoja-kolorowanka.pl/#organization",
+          "name": "Twoja Kolorowanka",
+          "url": "https://twoja-kolorowanka.pl/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://twoja-kolorowanka.pl/logo.png"
+          }
+        }
+      ]
+    })
+  }
+]
+
   }
 })
 

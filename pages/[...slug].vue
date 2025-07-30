@@ -140,7 +140,12 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
         "@id": "https://twoja-kolorowanka.pl/#website",
         "url": "https://twoja-kolorowanka.pl/",
         "name": "Twoja Kolorowanka",
-        "inLanguage": "pl-PL"
+        "inLanguage": "pl-PL",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://twoja-kolorowanka.pl/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@type": ["WebPage", "CollectionPage"],

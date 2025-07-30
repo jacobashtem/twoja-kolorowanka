@@ -25,6 +25,9 @@
           </NuxtLink>
         </li>
         <li>
+           <SearchAutocomplete :categoryLinks="categoryLinks"  @result-selected="emit('close')" />
+        </li>
+        <li>
           <button
             class="flex items-center justify-between w-full text-lg font-semibold text-gray-800 py-2"
             @click="toggleCategories"
