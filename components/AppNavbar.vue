@@ -8,12 +8,10 @@
     <div class="px-4 sm:px-6 lg:px-8 pt-8 w-full">
       <!-- Desktop menu -->
       <div class="hidden md:flex space-x-6 justify-end" role="menubar" aria-label="Main Menu">
-        <NuxtLink to="/" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl">
+        <NuxtLink to="/" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl flex items-center">
           Strona główna
         </NuxtLink>
-        <NuxtLink to="/blog" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl">
-          Blog
-        </NuxtLink>
+        <SearchAutocomplete :categoryLinks="categoryLinks" />
         <CategoriesMenu :categoryLinks="categoryLinks" />
       </div>
 
@@ -55,7 +53,6 @@ const toggleMenu = () => {
 
 const mainLinks = [
   { name: 'Strona główna', to: '/' },
-  { name: 'Blog', to: '/blog' },
   // Dodaj kolejne linki jeśli potrzebujesz
 ]
 
