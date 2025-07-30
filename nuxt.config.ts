@@ -25,10 +25,10 @@
       site: {
       url: 'https://twoja-kolorowanka.pl',
       name: 'twoja-kolorowanka.pl',
-    trailingSlash: true
+      trailingSlash: true
     },
      sitemap: {
- exclude: [/\/\d+$/],
+      exclude: [/\/\d+$/],
   },
     modules: [
       '@nuxtjs/sitemap',
