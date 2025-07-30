@@ -252,12 +252,18 @@ const galleryItems = ref([
     title: "pociągi",
     url: "/pojazdy/pociagi"
   },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Stitch",
-  //   title: "Stitch",
-  //   url: "/bajki/stitch"
-  // },
+    {
+    src: '/pojazdy/kombajny/10/kombajny-10.svg',
+    alt: "kolorowanki kombajny do druku",
+    title: "kombajny",
+    url: "/pojazdy/kombajny"
+  },
+      {
+    src: '/pojazdy/koparki/10/koparki-10.svg',
+    alt: "kolorowanki koparki do druku",
+    title: "koparki",
+    url: "/pojazdy/koparki"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Pokemon",

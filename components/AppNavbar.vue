@@ -74,7 +74,10 @@ const categoryLinks = [
     slug: 'pojazdy',
     children: [
       { name: 'Samochody', slug: 'pojazdy/samochody' },
-      { name: 'Traktory', slug: 'pojazdy/traktory' }
+      { name: 'Traktory', slug: 'pojazdy/traktory' },
+      { name: 'Pociągi', slug: 'pojazdy/pociagi' },
+      { name: 'Kombajny', slug: 'pojazdy/kombajny' },
+      { name: 'Koparki', slug: 'pojazdy/koparki' },
     ]
   },
   {
