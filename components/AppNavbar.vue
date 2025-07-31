@@ -75,6 +75,7 @@ const categoryLinks = [
       { name: 'Pociągi', slug: 'pojazdy/pociagi' },
       { name: 'Kombajny', slug: 'pojazdy/kombajny' },
       { name: 'Koparki', slug: 'pojazdy/koparki' },
+      { name: 'Samoloty', slug: 'pojazdy/samoloty' },
     ]
   },
   {
