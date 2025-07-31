@@ -270,6 +270,12 @@ const galleryItems = ref([
     title: "koparki",
     url: "/pojazdy/koparki"
   },
+      {
+    src: '/pojazdy/samoloty/10/samoloty-10.svg',
+    alt: "kolorowanki samoloty do druku",
+    title: "samoloty",
+    url: "/pojazdy/samoloty"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Pokemon",
