@@ -28,7 +28,7 @@
       trailingSlash: true
     },
      sitemap: {
-      exclude: [/\/\d+$/],
+        exclude: [/\/\d+\/?$/],
   },
     modules: [
       '@nuxtjs/sitemap',
