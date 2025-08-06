@@ -276,6 +276,12 @@ const galleryItems = ref([
     title: "samoloty",
     url: "/pojazdy/samoloty"
   },
+    {
+    src: '/zwierzeta/1/dinozaury-1.svg',
+    alt: "kolorowanki dinozaury do druku",
+    title: "dinozaury",
+    url: "/zwierzeta/dinozaury"
+  },
   // {
   //   src: '/category/foka.jpg',
   //   alt: "Pokemon",
