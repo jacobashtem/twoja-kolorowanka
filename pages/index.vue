@@ -277,7 +277,7 @@ const galleryItems = ref([
     url: "/pojazdy/samoloty"
   },
     {
-    src: '/zwierzeta/1/dinozaury-1.svg',
+    src: '/zwierzeta/dinozaury/1/dinozaury-1.svg',
     alt: "kolorowanki dinozaury do druku",
     title: "dinozaury",
     url: "/zwierzeta/dinozaury"
