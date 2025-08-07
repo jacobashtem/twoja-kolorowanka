@@ -2,7 +2,7 @@
 title: "Kolorowanki zwierzęta do druku PDF – darmowe"
 h1First: kolorowanki zwierzęta
 h1Sec: darmowe do druku
-description:    "Pobierz darmowe kolorowanki zwierząt do druku w formacie A4. Psy, koty, lwy, delfiny i więcej – bez logowania, bez ograniczeń."
+description:    "Pobierz darmowe kolorowanki zwierząt do druku w formacie A4. Psy, koty, delfiny i więcej – bez logowania, bez ograniczeń."
 canonical:      "/zwierzeta/"
 tags:
   - kolorowanki
