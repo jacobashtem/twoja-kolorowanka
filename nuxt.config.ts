@@ -4,67 +4,26 @@ import routes from './prerender-routes.json'
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   routeRules: {
-    '/koloruj/': { ssr: false, prerender: true },
+    '/koloruj/':  { ssr: false, prerender: true },
     '/koloruj/**': { ssr: false, prerender: false },
     '/api/**': { prerender: false }
   },
-  colorMode: {
-    preference: 'light'
-  },
+  colorMode: { preference: 'light' },
   devtools: { enabled: true },
   nitro: {
     preset: 'static',
     prerender: {
-      routes: [
-        ...routes,
-        '/koloruj/'
-      ],
+      routes: [...routes, '/koloruj/'],
       crawlLinks: true,
       failOnError: false
     }
   },
-  content: {
-    documentDriven: false
-  },
-  site: {
-    url: 'https://twoja-kolorowanka.pl',
-    name: 'twoja-kolorowanka.pl',
-    trailingSlash: true
-  },
-  sitemap: {
-    exclude: [/\/\d+\/?$/, '/koloruj/**']
-  },
-  modules: [
-    '@nuxtjs/sitemap',
-    '@nuxt/content',
-    '@nuxt/ui',
-    '@nuxtjs/tailwindcss',
-    '@vueuse/nuxt',
-    '@nuxtjs/google-fonts',
-    '@zadigetvoltaire/nuxt-gtm'
-  ],
-  googleFonts: {
-    families: {
-      Modak: true
-    },
-    display: 'swap',
-    preconnect: true,
-    preload: true
-  },
-  runtimeConfig: {
-    public: {
-      gtm: {
-        id: "GTM-PMTV7XJ8",
-        defer: false,
-        compatibility: false,
-        enabled: true,
-        debug: true,
-        loadScript: true,
-        trackOnNextTick: false,
-        devtools: true
-      }
-    }
-  },
+  content: { documentDriven: false },
+  site: { url: 'https://twoja-kolorowanka.pl', name: 'twoja-kolorowanka.pl', trailingSlash: true },
+  sitemap: { exclude: [/\/\d+\/?$/, '/koloruj/**'] },
+  modules: ['@nuxtjs/sitemap','@nuxt/content','@nuxt/ui','@nuxtjs/tailwindcss','@vueuse/nuxt','@nuxtjs/google-fonts','@zadigetvoltaire/nuxt-gtm'],
+  googleFonts: { families: { Modak: true }, display: 'swap', preconnect: true, preload: true },
+  runtimeConfig: { public: { gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true } } },
   app: {
     head: {
       htmlAttrs: { lang: 'pl' },
