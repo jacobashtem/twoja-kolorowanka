@@ -7,27 +7,10 @@
 
 [[redirects]]
   from = "/koloruj"
-  to = "/koloruj/"
-  status = 301
-  force = false
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
   from = "/koloruj/*"
   to = "/index.html"
   status = 200
-
-# Ensure important files are not affected by any catch-all rules
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml"
-  status = 200
-
-[[redirects]]
-  from = "/robots.txt"
-  to = "/robots.txt"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
