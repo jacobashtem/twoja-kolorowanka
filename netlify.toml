@@ -22,24 +22,6 @@
   status = 200
 
 [[redirects]]
-  from = "/:dir"
-  to = "/:dir/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:dir/:sub"
-  to = "/:dir/:sub/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/:dir/:sub/:leaf"
-  to = "/:dir/:sub/:leaf/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
