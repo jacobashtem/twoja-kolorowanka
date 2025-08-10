@@ -26,8 +26,6 @@ faqs:
     answer: "Ustaw drukarkę na tryb wysokiej jakości i użyj papieru 90–120 g/m², aby kolory były wyraźne i trwałe."
   - question: "Czy mogę łączyć kolorowanki T-Rex z innymi dinozaurami?"
     answer: "Oczywiście – możesz stworzyć całą kolekcję scen prehistorycznych, dodając triceratopsy, pterodaktyle czy stegozaury."
-  - question: "Czy kolorowanki T-Rex rozwijają kreatywność dziecka?"
-
 ---
 
 ## Kolorowanki T-Rex do druku – wstęp
