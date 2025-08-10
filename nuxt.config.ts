@@ -4,7 +4,8 @@
   export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     routeRules: {
-        '/koloruj/**': { ssr: false, prerender: false }
+        '/koloruj/**': { ssr: false, prerender: false },
+        '/api/**': { prerender: false }
       },
       colorMode: {
       preference: 'light'
@@ -12,9 +13,6 @@
     devtools: { enabled: true },
     nitro: {
       preset: 'static',
-      routeRules: {
-        '/api/**': { prerender: false }
-      },
       prerender: {
           routes,            // Twój JSON – zachowaj
           crawlLinks: true,  // ➜ pozwól Nuxtowi odszukać dodatkowe linki
@@ -30,7 +28,7 @@
       trailingSlash: true
     },
      sitemap: {
-        exclude: [/\/\d+\/?$/],
+        exclude: [/\/\d+\/?$/, '/koloruj/**'],
   },
     modules: [
       '@nuxtjs/sitemap',
