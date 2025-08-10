@@ -87,7 +87,15 @@ const categoryLinks = [
       { name: 'Króliczki', slug: 'zwierzeta/kroliczki' },
       { name: 'Motyle', slug: 'zwierzeta/motyle' },
       { name: 'Pieski', slug: 'zwierzeta/pieski' },
-      { name: 'Dinozaury', slug: 'zwierzeta/dinozaury' }
+      { name: 'Dinozaury', slug: 'zwierzeta/dinozaury' },
+      { name: 'T-rex', slug: 'zwierzeta/t-rex' }
+    ]
+  },
+    {
+    name: 'Rośliny',
+    slug: 'rosliny',
+    children: [
+      { name: 'Kwiat', slug: 'rosliny/kwiat' },
     ]
   }
 ]
