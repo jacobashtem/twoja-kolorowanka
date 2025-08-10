@@ -1,11 +1,20 @@
+[build]
+  command = "pnpm run build"
+  publish = ".output/public"
+
 [build.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/:path.:ext"
+  to = "/:path.:ext"
+  status = 200
 
 [[redirects]]
   from = "/koloruj"
   to = "/koloruj/"
   status = 301
-  force = false
+  force = true
 
 [[redirects]]
   from = "/koloruj/*"
@@ -16,27 +25,31 @@
   from = "/:dir"
   to = "/:dir/"
   status = 301
-  force = false
+  force = true
 
 [[redirects]]
   from = "/:dir/:sub"
   to = "/:dir/:sub/"
   status = 301
-  force = false
+  force = true
 
 [[redirects]]
   from = "/:dir/:sub/:leaf"
   to = "/:dir/:sub/:leaf/"
   status = 301
-  force = false
-
-[[redirects]]
-  from = "/:a/:b/:c/:d"
-  to = "/:a/:b/:c/:d/"
-  status = 301
-  force = false
+  force = true
 
 [[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[headers]]
+  for = "/koloruj/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Debug-Edge = "on"
