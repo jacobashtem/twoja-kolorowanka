@@ -85,9 +85,9 @@ function loadMore () {
 watch(() => currentPath, () => {
   visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
 })
-watch(doc, (val) => {
-  if (val === null) {
-    navigateTo('/')
+watchEffect(() => {
+  if (doc.value === null) {
+    showError(createError({ statusCode: 404, statusMessage: 'Nie znaleziono' }))
   }
 })
 const currentIndex = computed(() => {

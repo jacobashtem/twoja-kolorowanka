@@ -4,8 +4,8 @@
   export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     routeRules: {
-      '/koloruj/**': { appMiddleware: 'check-id' }
-    },
+        '/koloruj/**': { ssr: false, prerender: false }
+      },
       colorMode: {
       preference: 'light'
     },
@@ -16,8 +16,10 @@
         '/api/**': { prerender: false }
       },
       prerender: {
-        routes
-      }
+          routes,            // Twój JSON – zachowaj
+          crawlLinks: true,  // ➜ pozwól Nuxtowi odszukać dodatkowe linki
+          failOnError: false // ➜ nie wywracaj builda na drobnostkach
+        }
     },
     content: {
       documentDriven: false
