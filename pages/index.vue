@@ -270,90 +270,35 @@ const galleryItems = ref([
     title: "koparki",
     url: "/pojazdy/koparki"
   },
-      {
+  {
     src: '/pojazdy/samoloty/10/samoloty-10.svg',
     alt: "kolorowanki samoloty do druku",
     title: "samoloty",
     url: "/pojazdy/samoloty"
   },
-    {
+  {
     src: '/zwierzeta/dinozaury/1/dinozaury-1.svg',
     alt: "kolorowanki dinozaury do druku",
     title: "dinozaury",
     url: "/zwierzeta/dinozaury"
+  },  {
+    src: '/zwierzeta/t-rex/1/t-rex-1.svg',
+    alt: "kolorowanki t-rex do druku",
+    title: "t-rex",
+    url: "/zwierzeta/t-rex"
   },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Pokemon",
-  //   title: "Pokemon",
-  //   url: "/gry/pokemon"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Barbie",
-  //   title: "Barbie",
-  //   url: "/dla-dziewczynek/barbie"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Dla Chłopców",
-  //   title: "Dla Chłopców",
-  //   url: "/dla-chlopcow"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Hello Kitty",
-  //   title: "Hello Kitty",
-  //   url: "/dla-dziewczynek/hello-kitty"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Koniki",
-  //   title: "Koniki",
-  //   url: "/natura/koniki"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Kwiat",
-  //   title: "Kwiat",
-  //   url: "/natura/kwiat"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Sonic",
-  //   title: "Sonic",
-  //   url: "/dla-chlopcow/sonic"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Traktor",
-  //   title: "Traktor",
-  //   url: "/pojazdy/traktor"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Księżniczki",
-  //   title: "Księżniczki",
-  //   url: "/dla-dziewczynek/ksiezniczki"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Peppa",
-  //   title: "Peppa",
-  //   url: "/bajki/peppa"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Samochód",
-  //   title: "Samochód",
-  //   url: "/pojazdy/samochod"
-  // },
-  // {
-  //   src: '/category/foka.jpg',
-  //   alt: "Star Wars",
-  //   title: "Star Wars",
-  //   url: "/film/star-wars"
-  // }
+   {
+    src: '/rosliny/kwiat/1/kwiat-1.svg',
+    alt: "kolorowanki rosliny do druku",
+    title: "rośliny",
+    url: "/rosliny"
+  },
+     {
+    src: '/rosliny/kwiat/4/kwiat-4.svg',
+    alt: "kolorowanki kwiat do druku",
+    title: "kwiat",
+    url: "/rosliny/kwiat"
+  },
 ])
 useHead(() => {
   const canonical = 'https://twoja-kolorowanka.pl'
