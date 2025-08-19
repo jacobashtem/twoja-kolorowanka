@@ -63,6 +63,7 @@ const categoryLinks = [
     children: [
       { name: 'Jednorożce', slug: 'fantasy/jednorozce' },
       { name: 'Smoki', slug: 'fantasy/smoki' },
+      { name: 'Syrenki', slug: 'fantasy/syrenki' },
       { name: 'Wróżki', slug: 'fantasy/wrozki' }
     ]
   },
@@ -86,7 +87,9 @@ const categoryLinks = [
       { name: 'Koty', slug: 'zwierzeta/koty' },
       { name: 'Króliczki', slug: 'zwierzeta/kroliczki' },
       { name: 'Motyle', slug: 'zwierzeta/motyle' },
+      { name: 'Misie', slug: 'zwierzeta/mis' },
       { name: 'Pieski', slug: 'zwierzeta/pieski' },
+      { name: 'Ryby', slug: 'zwierzeta/ryby' },
       { name: 'Dinozaury', slug: 'zwierzeta/dinozaury' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
@@ -96,6 +99,13 @@ const categoryLinks = [
     slug: 'rosliny',
     children: [
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
+    ]
+  },
+    {
+    name: 'Dla dorosłych',
+    slug: 'dla-doroslych',
+    children: [
+      { name: 'Mandale', slug: 'dla-doroslych/mandala' },
     ]
   }
 ]
