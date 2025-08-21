@@ -91,6 +91,7 @@ const categoryLinks = [
       { name: 'Pieski', slug: 'zwierzeta/pieski' },
       { name: 'Ryby', slug: 'zwierzeta/ryby' },
       { name: 'Dinozaury', slug: 'zwierzeta/dinozaury' },
+      { name: 'Ptaki', slug: 'zwierzeta/ptaki' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
   },
@@ -106,6 +107,7 @@ const categoryLinks = [
     slug: 'dla-doroslych',
     children: [
       { name: 'Mandale', slug: 'dla-doroslych/mandala' },
+      { name: 'Antystresowe', slug: 'dla-doroslych/antystresowe' },
     ]
   }
 ]
