@@ -28,7 +28,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex flex-row flex-nowrap items-center mt-12 mb-4 leading-tight tracking-tight">
+  <div class="flex flex-row flex-nowrap items-center mt-2 sm:mt-12 mb-4 leading-tight tracking-tight">
     <!-- Linia z lewej -->
     <span
       :class="['flex-grow block border-t', borderColor]"
