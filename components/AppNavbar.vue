@@ -91,7 +91,9 @@ const categoryLinks = [
       { name: 'Pieski', slug: 'zwierzeta/pieski' },
       { name: 'Ryby', slug: 'zwierzeta/ryby' },
       { name: 'Dinozaury', slug: 'zwierzeta/dinozaury' },
+      { name: 'Lisy', slug: 'zwierzeta/lisy' },
       { name: 'Ptaki', slug: 'zwierzeta/ptaki' },
+      { name: 'Rekiny', slug: 'zwierzeta/rekiny' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
   },
