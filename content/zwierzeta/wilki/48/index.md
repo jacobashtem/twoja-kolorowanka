@@ -1,0 +1,12 @@
+---
+title: Kolorowanka Wilki - wariant 48
+description: Kolorowanka Wilki - wariant 48
+canonical: /zwierzeta/wilki/
+variant_of: wilki
+image: /zwierzeta/wilki/48/wilki-48.svg
+pdf: /zwierzeta/wilki/48/wilki-48.pdf
+alt: "kolorowanka do druku wilki PDF"
+tags:
+- zwierzeta
+- wilki
+---
