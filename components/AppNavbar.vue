@@ -96,6 +96,8 @@ const categoryLinks = [
       { name: 'Rekiny', slug: 'zwierzeta/rekiny' },
       { name: 'Pingwiny', slug: 'zwierzeta/pingwiny' },
       { name: 'Wilki', slug: 'zwierzeta/wilki' },
+      { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
+      { name: 'Pszczoły', slug: 'zwierzeta/pszczoly' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
   },
