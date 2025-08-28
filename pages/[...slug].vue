@@ -62,8 +62,45 @@ const variantsGrand = computed(() => (rawGrand.value || []).sort(byNum))
 const childrenVariants = computed(() =>
   slug.length === 1 ? variantsGrand.value : variantsDirect.value)
 
-const galleryVariants = computed(() =>
-  childrenVariants.value.map(v => ({ img: v.image, url: v._path, title: v.title , alt:  v.alt || v.title })))
+/* --- PROSTE: lista liści po tagach z frontmatter `tagsFilter` --- */
+/* (MUSI być zdefiniowane PRZED `galleryVariants`) */
+const tagsFilter = computed(() => {
+  const t = doc.value?.tagsFilter
+  if (Array.isArray(t)) return t.map(String).filter(Boolean)
+  if (typeof t === 'string') return t.split(',').map(s => s.trim()).filter(Boolean)
+  return []
+})
+
+const { data: tagRaw } = await useAsyncData(
+  () => {
+    if (!tagsFilter.value.length || isLeaf.value) return []
+    return queryContent()
+      .where({ tags: { $containsAny: tagsFilter.value } }) // tylko po tagach
+      .where({ _path: { $regex: '^.+/[0-9]+/?$' } })       // tylko liście (numer na końcu)
+      .only(['_path','image','title','alt'])
+      .find()
+  },
+  {
+    key: () => `tag:${tagsFilter.value.join(',')}:${isLeaf.value ? 'leaf' : 'cat'}`,
+    watch: [tagsFilter, isLeaf]
+  }
+)
+
+const galleryByTag = computed(() =>
+  (tagRaw.value || []).sort(byNum).map(v => ({
+    img: v.image, url: v._path, title: v.title, alt: v.alt || v.title
+  }))
+)
+/* --- KONIEC bloku tagów --- */
+
+const galleryVariants = computed(() => {
+  if (!isLeaf.value && tagsFilter.value.length && galleryByTag.value.length) {
+    return galleryByTag.value
+  }
+  return childrenVariants.value.map(v => ({
+    img: v.image, url: v._path, title: v.title, alt: v.alt || v.title
+  }))
+})
 
 const similarGalleryVariants = computed(() =>
   galleryVariants.value.filter(v => v.url !== currentPath).slice(0, 8))
@@ -85,9 +122,9 @@ function loadMore () {
 watch(() => currentPath, () => {
   visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
 })
-watch(doc, (val) => {
-  if (val === null) {
-    navigateTo('/')
+watchEffect(() => {
+  if (doc.value === null) {
+    showError(createError({ statusCode: 404, statusMessage: 'Nie znaleziono' }))
   }
 })
 const currentIndex = computed(() => {
@@ -269,7 +306,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
     backgroundColor="bg-sec-500"
     fontSize="text-3xl"
   />
-<ContentRendererMarkdown :value="{ type: 'root', children: block.nodes }" class="prose mb-12 text-xl font-light text-center mx-auto px-4 lg:px-8 max-w-full" />
+<ContentRendererMarkdown :value="{ type: 'root', children: block.nodes }" class="prose mb-12 text-base sm:text-xl  font-light sm:text-center mx-auto px-4 lg:px-8 max-w-full" />
 
   <VariantsGallery :items="galleryVariants.slice(i * 8, (i + 1) * 8)" />
 </template>

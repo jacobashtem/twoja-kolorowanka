@@ -123,6 +123,14 @@ const categoryLinks = [
       { name: 'Mandale', slug: 'dla-doroslych/mandala' },
       { name: 'Antystresowe', slug: 'dla-doroslych/antystresowe' },
     ]
+  },
+  {
+    name: 'Dla dziewczynek',
+    slug: 'dla-dziewczynek',
+  },
+  {
+    name: 'Dla chlopcow',
+    slug: 'dla-chlopcow',
   }
 ]
 </script>

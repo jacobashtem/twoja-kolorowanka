@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="mt-4 mb-20">
+  <UContainer class="mt-4 mb-6 sm:mb-20">
     <div class="w-full">
       <div class="mt-8 sm:mt-0 grid grid-cols-1 gap-8 lg:grid-cols-2">
         
@@ -8,15 +8,15 @@
           <h1
             class="mt-0 sm:mt-8 font-extrabold uppercase leading-tight tracking-tight text"
             :class="{
-              'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl': true
+              'text-3xl sm:text-4xl md:text-5xl lg:text-6xl': true
             }"
             :aria-label="`${h1.firstPartTitle} ${h1.seccondPartTitle}`"
           >
             <span
               class="inline-block"
               :class="isCategory 
-                ? 'text-3xl md:text-5xl lg:text-6xl xl:text-7xl'
-                : 'text-2xl xs:text-5xl md:text-5xl lg:text-6xl xl:text-7xl'"
+                ? 'text-3xl md:text-5xl lg:text-6xl'
+                : 'text-2xl xs:text-5xl md:text-5xl lg:text-6xl'"
             >
               {{ h1.firstPartTitle }} &nbsp;
             </span>
