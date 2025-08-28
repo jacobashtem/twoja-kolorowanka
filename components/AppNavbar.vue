@@ -108,6 +108,14 @@ const categoryLinks = [
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
     ]
   },
+  {
+    name: 'Pory roku',
+    slug: 'pory-roku',
+    children: [
+      { name: 'Jesień', slug: 'pory-roku/jesien' },
+      { name: 'Zima', slug: 'pory-roku/zima' },
+    ]
+  },
     {
     name: 'Dla dorosłych',
     slug: 'dla-doroslych',
