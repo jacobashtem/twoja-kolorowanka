@@ -298,8 +298,55 @@ const galleryItems = ref([
   alt: 'kolorowanki antystresowe do druku',
   title: 'Antystresowe',
   url: '/dla-doroslych/antystresowe'
-}
-
+},
+{
+  src: '/zwierzeta/pingwiny/1/pingwiny-1.svg',
+  alt: 'kolorowanki pingwiny do druku',
+  title: 'Pingwiny',
+  url: '/zwierzeta/pingwiny'
+},
+{
+  src: '/zwierzeta/wilki/1/wilki-1.svg',
+  alt: 'kolorowanki wilki do druku',
+  title: 'Wilki',
+  url: '/zwierzeta/wilki/'
+},
+{
+  src: '/zwierzeta/lisy/11/lisy-11.svg',
+  alt: 'kolorowanki lisy do druku',
+  title: 'Lisy',
+  url: '/zwierzeta/lisy'
+},
+{
+  src: '/zwierzeta/rekiny/1/rekiny-1.svg',
+  alt: 'kolorowanki rekiny do druku',
+  title: 'Rekiny',
+  url: '/zwierzeta/rekiny'
+},
+{
+  src: '/zwierzeta/biedronki/1/biedronki-1.svg',
+  alt: 'kolorowanki biedronki do druku',
+  title: 'Biedronki',
+  url: '/zwierzeta/biedronki'
+},
+{
+  src: '/zwierzeta/pszczoly/1/pszczoly-1.svg',
+  alt: 'kolorowanki pszczoly do druku',
+  title: 'Pszczoły',
+  url: '/zwierzeta/pszczoly/'
+},
+{
+  src: '/zwierzeta/pszczoly/1/pszczoly-1.svg',
+  alt: 'kolorowanki pszczoly do druku',
+  title: 'Pszczoły',
+  url: '/zwierzeta/pszczoly/'
+},
+{
+  src: '/zwierzeta/pszczoly/1/pszczoly-1.svg',
+  alt: 'kolorowanki pszczoly do druku',
+  title: 'Pszczoły',
+  url: '/zwierzeta/pszczoly/'
+},
 ])
 useHead(() => {
   const canonical = 'https://twoja-kolorowanka.pl'
@@ -346,6 +393,8 @@ const galleryVariantsList = computed(() => [
   galleryItems.value.slice(16, 20),
   galleryItems.value.slice(20, 24),
   galleryItems.value.slice(24, 28),
+  galleryItems.value.slice(28, 32),
+  galleryItems.value.slice(32, 35),
 ])
 </script>
 <template>
@@ -399,7 +448,14 @@ const galleryVariantsList = computed(() => [
          <CategoryGallery  :items="galleryVariantsList[i]" />
       </div>
     </UContainer>
-
+<UContainer class="mb-12">
+       <div class="mt-4 mb-12">
+            <CategoryGallery  :items="galleryVariantsList[7]" />
+         </div>
+                  <div class="mt-4 mb-12">
+            <CategoryGallery  :items="galleryVariantsList[8]" />
+         </div>
+  </UContainer> 
     <!-- FAQ na dole strony -->
     <FaqList :faqs="faqs" />
   </div>
