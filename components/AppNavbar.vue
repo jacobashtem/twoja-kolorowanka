@@ -64,6 +64,7 @@ const categoryLinks = [
       { name: 'Jednorożce', slug: 'fantasy/jednorozce' },
       { name: 'Smoki', slug: 'fantasy/smoki' },
       { name: 'Syrenki', slug: 'fantasy/syrenki' },
+      { name: 'Elfy', slug: 'fantasy/elfy' },
       { name: 'Wróżki', slug: 'fantasy/wrozki' }
     ]
   },
@@ -97,6 +98,8 @@ const categoryLinks = [
       { name: 'Pingwiny', slug: 'zwierzeta/pingwiny' },
       { name: 'Wilki', slug: 'zwierzeta/wilki' },
       { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
+      { name: 'Lwy', slug: 'zwierzeta/lwy' },
+      { name: 'Sowy', slug: 'zwierzeta/sowy' },
       { name: 'Pszczoły', slug: 'zwierzeta/pszczoly' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
