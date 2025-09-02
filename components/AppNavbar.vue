@@ -100,6 +100,7 @@ const categoryLinks = [
       { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
       { name: 'Lwy', slug: 'zwierzeta/lwy' },
       { name: 'Sowy', slug: 'zwierzeta/sowy' },
+      { name: 'Pandy', slug: 'zwierzeta/pandy' },
       { name: 'Pszczoły', slug: 'zwierzeta/pszczoly' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
@@ -109,6 +110,13 @@ const categoryLinks = [
     slug: 'rosliny',
     children: [
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
+    ]
+  },
+  {
+    name: 'Jedzenie',
+    slug: 'jedzenie',
+    children: [
+      { name: 'Lody', slug: 'jedzenie/lody' },
     ]
   },
   {
