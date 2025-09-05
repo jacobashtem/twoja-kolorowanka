@@ -117,6 +117,7 @@ const categoryLinks = [
     slug: 'jedzenie',
     children: [
       { name: 'Lody', slug: 'jedzenie/lody' },
+      { name: 'Torty', slug: 'jedzenie/torty' },
     ]
   },
   {
