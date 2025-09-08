@@ -77,6 +77,7 @@ const categoryLinks = [
       { name: 'Pociągi', slug: 'pojazdy/pociagi' },
       { name: 'Kombajny', slug: 'pojazdy/kombajny' },
       { name: 'Koparki', slug: 'pojazdy/koparki' },
+      { name: 'Rakiety', slug: 'pojazdy/rakiety' },
       { name: 'Samoloty', slug: 'pojazdy/samoloty' },
     ]
   },
@@ -110,6 +111,8 @@ const categoryLinks = [
     slug: 'rosliny',
     children: [
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
+      { name: 'Dynie', slug: 'rosliny/dynie' },
+
     ]
   },
   {
