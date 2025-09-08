@@ -336,16 +336,88 @@ const galleryItems = ref([
   url: '/zwierzeta/pszczoly/'
 },
 {
-  src: '/zwierzeta/pszczoly/1/pszczoly-1.svg',
-  alt: 'kolorowanki pszczoly do druku',
-  title: 'Pszczoły',
-  url: '/zwierzeta/pszczoly/'
+  src: '/zwierzeta/lwy/1/lwy-1.svg',
+  alt: 'kolorowanki lwy do druku',
+  title: 'Lwy',
+  url: '/zwierzeta/lwy/'
 },
 {
-  src: '/zwierzeta/pszczoly/1/pszczoly-1.svg',
-  alt: 'kolorowanki pszczoly do druku',
-  title: 'Pszczoły',
-  url: '/zwierzeta/pszczoly/'
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/fantasy/elfy/12/elfy-12.svg',
+  alt: 'kolorowanki elfy do druku',
+  title: 'Elfy',
+  url: '/fantasy/elfy/'
+},
+{
+  src: '/pory-roku/zima/12/zima-12.svg',
+  alt: 'kolorowanki pory roku do druku',
+  title: 'Pory roku',
+  url: '/pory-roku/'
+},
+{
+  src: '/pory-roku/jesien/1/jesien-1.svg',
+  alt: 'kolorowanki jesień do druku',
+  title: 'Jesień',
+  url: '/pory-roku/jesien/'
+},
+{
+  src: '/pory-roku/zima/1/zima-1.svg',
+  alt: 'kolorowanki zima do druku',
+  title: 'Zima',
+  url: '/pory-roku/zima/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
+},
+{
+  src: '/zwierzeta/sowy/1/sowy-1.svg',
+  alt: 'kolorowanki sowy do druku',
+  title: 'Sowy',
+  url: '/zwierzeta/sowy/'
 },
 ])
 useHead(() => {
@@ -386,15 +458,11 @@ useHead(() => {
 
 
 const galleryVariantsList = computed(() => [
-  galleryItems.value.slice(0, 4),
-  galleryItems.value.slice(4, 8),
-  galleryItems.value.slice(8, 12),
-  galleryItems.value.slice(12, 16),
-  galleryItems.value.slice(16, 20),
-  galleryItems.value.slice(20, 24),
-  galleryItems.value.slice(24, 28),
-  galleryItems.value.slice(28, 32),
-  galleryItems.value.slice(32, 35),
+  galleryItems.value.slice(0, 8),
+  galleryItems.value.slice(8, 16),
+  galleryItems.value.slice(16, 24),
+  galleryItems.value.slice(24, 32),
+  galleryItems.value.slice(32, 40),
 ])
 </script>
 <template>
@@ -452,7 +520,7 @@ const galleryVariantsList = computed(() => [
        <div class="mt-4 mb-12">
             <CategoryGallery  :items="galleryVariantsList[7]" />
          </div>
-                  <div class="mt-4 mb-12">
+          <div class="mt-4 mb-12">
             <CategoryGallery  :items="galleryVariantsList[8]" />
          </div>
   </UContainer> 
