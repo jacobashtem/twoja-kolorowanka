@@ -77,6 +77,7 @@ const categoryLinks = [
       { name: 'Pociągi', slug: 'pojazdy/pociagi' },
       { name: 'Kombajny', slug: 'pojazdy/kombajny' },
       { name: 'Koparki', slug: 'pojazdy/koparki' },
+      { name: 'Rakiety', slug: 'pojazdy/rakiety' },
       { name: 'Samoloty', slug: 'pojazdy/samoloty' },
     ]
   },
@@ -100,6 +101,7 @@ const categoryLinks = [
       { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
       { name: 'Lwy', slug: 'zwierzeta/lwy' },
       { name: 'Sowy', slug: 'zwierzeta/sowy' },
+      { name: 'Pandy', slug: 'zwierzeta/pandy' },
       { name: 'Pszczoły', slug: 'zwierzeta/pszczoly' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
@@ -109,6 +111,16 @@ const categoryLinks = [
     slug: 'rosliny',
     children: [
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
+      { name: 'Dynie', slug: 'rosliny/dynie' },
+
+    ]
+  },
+  {
+    name: 'Jedzenie',
+    slug: 'jedzenie',
+    children: [
+      { name: 'Lody', slug: 'jedzenie/lody' },
+      { name: 'Torty', slug: 'jedzenie/torty' },
     ]
   },
   {
