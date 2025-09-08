@@ -32,6 +32,9 @@ const isMobile  = computed(() => width.value < 768)
 const { data: docData } = await useAsyncData(`doc:${currentPath}`,
   () => queryContent(currentPath).findOne())
 const doc = computed(() => docData.value)
+if (!doc.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Nie znaleziono' })
+}
 
 const h2Blocks = computed(() => extractH2Blocks(doc.value?.body))
 
@@ -121,11 +124,6 @@ function loadMore () {
 
 watch(() => currentPath, () => {
   visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
-})
-watchEffect(() => {
-  if (doc.value === null) {
-    showError(createError({ statusCode: 404, statusMessage: 'Nie znaleziono' }))
-  }
 })
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
