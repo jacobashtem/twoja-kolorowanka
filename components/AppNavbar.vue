@@ -112,6 +112,8 @@ const categoryLinks = [
     children: [
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
       { name: 'Dynie', slug: 'rosliny/dynie' },
+      { name: 'Grzyby', slug: 'rosliny/grzyby' },
+
 
     ]
   },
@@ -121,6 +123,8 @@ const categoryLinks = [
     children: [
       { name: 'Lody', slug: 'jedzenie/lody' },
       { name: 'Torty', slug: 'jedzenie/torty' },
+      { name: 'Jabłka', slug: 'jedzenie/jablka' },
+
     ]
   },
   {
