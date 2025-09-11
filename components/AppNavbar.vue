@@ -78,6 +78,8 @@ const categoryLinks = [
       { name: 'Kombajny', slug: 'pojazdy/kombajny' },
       { name: 'Koparki', slug: 'pojazdy/koparki' },
       { name: 'Rakiety', slug: 'pojazdy/rakiety' },
+      { name: 'Tiry', slug: 'pojazdy/tiry' },
+      { name: 'Czołgi', slug: 'pojazdy/czolgi' },
       { name: 'Samoloty', slug: 'pojazdy/samoloty' },
     ]
   },
