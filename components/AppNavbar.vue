@@ -133,6 +133,8 @@ const categoryLinks = [
     children: [
       { name: 'Jesień', slug: 'pory-roku/jesien' },
       { name: 'Zima', slug: 'pory-roku/zima' },
+      { name: 'Lato', slug: 'pory-roku/lato' },
+
     ]
   },
     {
