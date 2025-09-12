@@ -105,6 +105,8 @@ const categoryLinks = [
       { name: 'Sowy', slug: 'zwierzeta/sowy' },
       { name: 'Pandy', slug: 'zwierzeta/pandy' },
       { name: 'Pszczoły', slug: 'zwierzeta/pszczoly' },
+      { name: 'Tygrysy', slug: 'zwierzeta/tygrysy' },
+      { name: 'Myszki', slug: 'zwierzeta/myszki' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
   },
