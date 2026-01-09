@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 // Palette colors
 const COLORS = [
@@ -44,12 +44,21 @@ const COLORS = [
 
 // Selected color for fill
 const selected = ref(COLORS[0])
-</script>
 
-<script>
-document.addEventListener('click', e => {
+// Handle click on SVG paths
+function handlePathClick(e) {
   if (e.target.tagName.toLowerCase() === 'path') {
     e.target.setAttribute('fill', selected.value)
   }
+}
+
+onMounted(() => {
+  if (typeof document === 'undefined') return
+  document.addEventListener('click', handlePathClick)
+})
+
+onUnmounted(() => {
+  if (typeof document === 'undefined') return
+  document.removeEventListener('click', handlePathClick)
 })
 </script>

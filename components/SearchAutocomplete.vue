@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
 import { useDebounce } from '@vueuse/core'
 
 const emit = defineEmits(['result-selected'])
@@ -18,7 +19,13 @@ const showResults = ref(false)
 const activeResultIndex = ref(-1)
 
 onMounted(() => {
+  if (typeof document === 'undefined') return
   document.addEventListener('click', handleClickOutside)
+})
+
+onUnmounted(() => {
+  if (typeof document === 'undefined') return
+  document.removeEventListener('click', handleClickOutside)
 })
 
 function handleClickOutside(event) {
