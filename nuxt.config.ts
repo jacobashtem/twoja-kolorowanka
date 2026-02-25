@@ -6,7 +6,9 @@ export default defineNuxtConfig({
   routeRules: {
     '/koloruj/':  { ssr: false, prerender: true },
     '/koloruj/**': { ssr: false, prerender: false },
-    '/api/**': { prerender: false }
+    '/api/**': { prerender: false },
+    '/blog': { isr: 3600 },
+    '/blog/**': { isr: 3600 },
   },
   colorMode: { preference: 'light' },
   devtools: { enabled: true },
@@ -20,10 +22,28 @@ export default defineNuxtConfig({
   },
   content: { documentDriven: false },
   site: { url: 'https://twoja-kolorowanka.pl', name: 'twoja-kolorowanka.pl', trailingSlash: true },
-  sitemap: { exclude: [/\/\d+\/?$/, '/koloruj/**'] },
+  sitemap: {
+    exclude: [/\/\d+\/?$/, '/koloruj/**'],
+    sources: ['/api/__sitemap__/blog'],
+  },
   modules: ['@nuxtjs/sitemap','@nuxt/content','@nuxt/ui','@nuxtjs/tailwindcss','@vueuse/nuxt','@nuxtjs/google-fonts','@zadigetvoltaire/nuxt-gtm'],
-  googleFonts: { families: { Modak: true }, display: 'swap', preconnect: true, preload: true },
-  runtimeConfig: { public: { gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true } } },
+  googleFonts: {
+    families: {
+      Modak: true,
+      'Baloo+2': [400, 500, 600, 700, 800],
+      Quicksand: [400, 500, 600, 700],
+    },
+    display: 'swap', preconnect: true, preload: true
+  },
+  runtimeConfig: {
+    public: {
+      wordpressApiUrl: process.env.WORDPRESS_API_URL || 'https://tk.delash.pl/wp-json/wp/v2',
+      blogRevalidateSeconds: parseInt(process.env.BLOG_REVALIDATE_SECONDS || '3600'),
+      mockBlog: process.env.MOCK_BLOG === 'true',
+      gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true }
+    }
+  },
+  css: ['~/assets/css/blog-tokens.css'],
   app: {
     head: {
       htmlAttrs: { lang: 'pl' },
