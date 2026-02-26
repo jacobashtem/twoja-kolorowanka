@@ -7,8 +7,6 @@ export default defineNuxtConfig({
     '/koloruj/':  { ssr: false, prerender: true },
     '/koloruj/**': { ssr: false, prerender: false },
     '/api/**': { prerender: false },
-    '/blog': { isr: 3600 },
-    '/blog/**': { isr: 3600 },
   },
   colorMode: { preference: 'light' },
   devtools: { enabled: true },
@@ -39,7 +37,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       wordpressApiUrl: process.env.WORDPRESS_API_URL || 'https://tk.delash.pl/wp-json/wp/v2',
-      blogRevalidateSeconds: parseInt(process.env.BLOG_REVALIDATE_SECONDS || '3600'),
       mockBlog: process.env.MOCK_BLOG === 'true',
       gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true }
     }

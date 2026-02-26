@@ -1,4 +1,7 @@
+[routes] Nie udało się pobrać postów z WordPress API
+[routes] Nie udało się pobrać kategorii z WordPress API
 [
+  "/blog",
   "/dla-chlopcow",
   "/dla-doroslych",
   "/dla-doroslych/antystresowe",
