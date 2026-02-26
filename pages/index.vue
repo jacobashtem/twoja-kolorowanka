@@ -524,6 +524,9 @@ const galleryVariantsList = computed(() => [
             <CategoryGallery  :items="galleryVariantsList[8]" />
          </div>
   </UContainer> 
+    <!-- Newsletter -->
+    <NewsletterSection />
+
     <!-- FAQ na dole strony -->
     <FaqList :faqs="faqs" />
   </div>
