@@ -6,11 +6,31 @@ const POLISH_MONTHS = [
 ]
 
 /**
- * Strip HTML tags from string
+ * Decode HTML entities (named + numeric)
+ */
+function decodeHtmlEntities(text) {
+  if (!text) return ''
+  const namedEntities = {
+    '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"',
+    '&apos;': "'", '&hellip;': '…', '&ndash;': '–', '&mdash;': '—',
+    '&laquo;': '«', '&raquo;': '»', '&nbsp;': ' ', '&shy;': '',
+    '&lsquo;': '\u2018', '&rsquo;': '\u2019',
+    '&ldquo;': '\u201C', '&rdquo;': '\u201D',
+  }
+  return text
+    .replace(/&[a-z]+;/gi, m => namedEntities[m.toLowerCase()] ?? m)
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)))
+}
+
+/**
+ * Strip HTML tags from string and decode entities
  */
 function stripHtml(html) {
   if (!html) return ''
-  return html.replace(/<[^>]*>/g, '').replace(/&nbsp;/g, ' ').trim()
+  return decodeHtmlEntities(
+    html.replace(/<[^>]*>/g, '')
+  ).replace(/\[…\]/g, '').replace(/\[\.\.\.\]/g, '').trim()
 }
 
 /**

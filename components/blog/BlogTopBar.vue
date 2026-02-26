@@ -11,7 +11,16 @@
           <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent -mt-0.5">Kolorowanka</span>
         </div>
       </NuxtLink>
-      <div class="flex gap-2 overflow-x-auto scrollbar-none flex-1 py-1">
+      <div
+        ref="scrollContainer"
+        class="flex gap-2 overflow-x-auto scrollbar-none flex-1 py-1 select-none"
+        :class="{ 'cursor-grab': !isDragging, 'cursor-grabbing': isDragging }"
+        @mousedown="startDrag"
+        @mousemove="onDrag"
+        @mouseup="stopDrag"
+        @mouseleave="stopDrag"
+        @click.capture="preventClickIfDragged"
+      >
         <NuxtLink
           to="/blog/"
           class="inline-flex items-center gap-1.5 py-[7px] px-4 rounded-full border-2 border-transparent font-baloo text-sm font-semibold cursor-pointer whitespace-nowrap transition-all duration-200 no-underline hover:bg-[rgba(155,114,207,0.08)] hover:text-[#9B72CF]"
@@ -42,6 +51,41 @@ defineProps({
 
 const sortedCategories = getSortedCategories()
 const isScrolled = ref(false)
+
+// Mouse drag scroll for desktop
+const scrollContainer = ref(null)
+const isDragging = ref(false)
+const dragStartX = ref(0)
+const dragScrollLeft = ref(0)
+const dragDistance = ref(0)
+
+function startDrag(e) {
+  if (!scrollContainer.value) return
+  isDragging.value = true
+  dragDistance.value = 0
+  dragStartX.value = e.pageX - scrollContainer.value.offsetLeft
+  dragScrollLeft.value = scrollContainer.value.scrollLeft
+}
+
+function onDrag(e) {
+  if (!isDragging.value || !scrollContainer.value) return
+  e.preventDefault()
+  const x = e.pageX - scrollContainer.value.offsetLeft
+  const walk = x - dragStartX.value
+  dragDistance.value = Math.abs(walk)
+  scrollContainer.value.scrollLeft = dragScrollLeft.value - walk
+}
+
+function stopDrag() {
+  isDragging.value = false
+}
+
+function preventClickIfDragged(e) {
+  if (dragDistance.value > 5) {
+    e.preventDefault()
+    e.stopPropagation()
+  }
+}
 
 onMounted(() => {
   const onScroll = () => {
