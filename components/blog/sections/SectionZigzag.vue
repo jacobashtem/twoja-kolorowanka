@@ -1,6 +1,6 @@
 <template>
-  <div class="layout-zigzag">
-    <div class="zigzag-row">
+  <div class="flex flex-col gap-[22px]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr] gap-[22px]">
       <BlogCard
         v-for="post in row1"
         :key="post.id"
@@ -8,7 +8,7 @@
         image-height="200px"
       />
     </div>
-    <div class="zigzag-row zigzag-row--reverse">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1.6fr] gap-[22px]">
       <BlogCard
         v-for="post in row2"
         :key="post.id"
@@ -27,32 +27,3 @@ const props = defineProps({
 const row1 = computed(() => props.posts.slice(0, 3))
 const row2 = computed(() => props.posts.slice(3, 6))
 </script>
-
-<style scoped>
-.layout-zigzag {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-.zigzag-row {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 22px;
-}
-.zigzag-row--reverse {
-  grid-template-columns: 1fr 1fr 1.6fr;
-}
-
-@media (max-width: 900px) {
-  .zigzag-row,
-  .zigzag-row--reverse {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .zigzag-row,
-  .zigzag-row--reverse {
-    grid-template-columns: 1fr;
-  }
-}
-</style>

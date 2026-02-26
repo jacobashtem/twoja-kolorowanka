@@ -1,7 +1,7 @@
 <template>
-  <div v-if="totalPages > 1" class="blog-pagination">
+  <div v-if="totalPages > 1" class="flex justify-center items-center gap-2 my-12">
     <button
-      class="blog-pagination__arrow"
+      class="w-11 h-11 rounded-[14px] border-none bg-transparent text-xl text-[#8B7BA5] cursor-pointer flex items-center justify-center transition-all duration-200 hover:text-[#9B72CF] hover:scale-110 disabled:opacity-30 disabled:cursor-default disabled:hover:scale-100"
       :disabled="currentPage <= 1"
       @click="goToPage(currentPage - 1)"
     >
@@ -10,14 +10,16 @@
     <button
       v-for="page in visiblePages"
       :key="page"
-      class="blog-pagination__btn"
-      :class="{ 'blog-pagination__btn--active': page === currentPage }"
+      class="w-11 h-11 rounded-[14px] border-2 font-baloo text-base font-bold cursor-pointer flex items-center justify-center transition-all duration-200 hover:scale-110 hover:border-[#9B72CF] hover:text-[#9B72CF]"
+      :class="page === currentPage
+        ? 'bg-gradient-to-br from-[#9B72CF] to-[#FF6B9D] text-white border-transparent scale-110'
+        : 'bg-white text-[#8B7BA5] border-[rgba(200,180,220,0.2)]'"
       @click="goToPage(page)"
     >
       {{ page }}
     </button>
     <button
-      class="blog-pagination__arrow"
+      class="w-11 h-11 rounded-[14px] border-none bg-transparent text-xl text-[#8B7BA5] cursor-pointer flex items-center justify-center transition-all duration-200 hover:text-[#9B72CF] hover:scale-110 disabled:opacity-30 disabled:cursor-default disabled:hover:scale-100"
       :disabled="currentPage >= totalPages"
       @click="goToPage(currentPage + 1)"
     >
@@ -57,62 +59,3 @@ function goToPage(page) {
   emit('page-change', page)
 }
 </script>
-
-<style scoped>
-.blog-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 48px 0;
-}
-.blog-pagination__btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: 2px solid rgba(200, 180, 220, 0.2);
-  background: var(--blog-card);
-  font-family: 'Baloo 2', cursive;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--blog-text-light);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.blog-pagination__btn:hover {
-  transform: scale(1.1);
-  border-color: var(--blog-lavender);
-  color: var(--blog-lavender);
-}
-.blog-pagination__btn--active {
-  background: linear-gradient(135deg, var(--blog-lavender), var(--blog-bubblegum));
-  color: white;
-  border-color: transparent;
-  transform: scale(1.1);
-}
-.blog-pagination__arrow {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: none;
-  background: transparent;
-  font-size: 1.4rem;
-  color: var(--blog-text-light);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
-}
-.blog-pagination__arrow:hover:not(:disabled) {
-  color: var(--blog-lavender);
-  transform: scale(1.15);
-}
-.blog-pagination__arrow:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-</style>

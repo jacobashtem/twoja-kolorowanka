@@ -1,18 +1,21 @@
 <template>
-  <div class="section-header">
-    <div class="section-header__label">
-      <div class="section-header__icon" :style="{ background: iconBg }">
+  <div class="flex items-center justify-between mb-7">
+    <div class="flex items-center gap-3">
+      <div
+        class="w-11 h-11 rounded-[14px] flex items-center justify-center text-xl"
+        :style="{ background: iconBg }"
+      >
         {{ emoji }}
       </div>
       <div>
-        <div class="section-header__title">{{ title }}</div>
-        <div v-if="subtitle" class="section-header__subtitle">{{ subtitle }}</div>
+        <div class="font-baloo text-2xl font-extrabold text-[#2A1B3D] leading-tight">{{ title }}</div>
+        <div v-if="subtitle" class="text-sm text-[#8B7BA5] mt-0.5">{{ subtitle }}</div>
       </div>
     </div>
     <NuxtLink
       v-if="categorySlug"
       :to="`/blog/kategoria/${categorySlug}/`"
-      class="section-header__link"
+      class="font-baloo text-sm font-bold no-underline flex items-center gap-1 rounded-full py-2 px-4 transition-all duration-200 whitespace-nowrap hover:gap-2 hover:brightness-90"
       :style="{ color: linkColor, background: linkBg }"
     >
       <span>Wszystkie wpisy</span> →
@@ -29,63 +32,7 @@ const props = defineProps({
   color: { type: String, default: '#9B72CF' },
 })
 
-const iconBg = computed(() => {
-  const hex = props.color
-  return `${hex}1A` // ~10% opacity via hex alpha
-})
-
+const iconBg = computed(() => `${props.color}1A`)
 const linkColor = computed(() => props.color)
 const linkBg = computed(() => `${props.color}14`)
 </script>
-
-<style scoped>
-.section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 28px;
-}
-.section-header__label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.section-header__icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-}
-.section-header__title {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--blog-text);
-  line-height: 1.2;
-}
-.section-header__subtitle {
-  font-size: 0.85rem;
-  color: var(--blog-text-light);
-  margin-top: 2px;
-}
-.section-header__link {
-  font-family: 'Baloo 2', cursive;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  border-radius: 50px;
-  padding: 8px 18px;
-  transition: all 0.2s;
-  white-space: nowrap;
-}
-.section-header__link:hover {
-  gap: 8px;
-  filter: brightness(0.9);
-}
-</style>

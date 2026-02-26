@@ -3,8 +3,8 @@
     <section
       v-for="cat in homepageCategories"
       :key="cat.slug"
-      class="blog-section reveal"
-      :class="sectionClass(cat)"
+      class="blog-section max-w-[1260px] mx-auto pt-16 px-8 sm:px-4 reveal"
+      :class="{ 'mt-14': cat.bgColor && cat.bgColor !== 'transparent' }"
       :style="sectionBgStyle(cat)"
       :ref="el => setSectionRef(cat.slug, el)"
     >
@@ -58,16 +58,9 @@ function setSectionRef(slug, el) {
   if (el) sectionRefs[slug] = el
 }
 
-function sectionClass(cat) {
-  if (cat.bgColor && cat.bgColor !== 'transparent') {
-    return 'blog-section--padded'
-  }
-  return ''
-}
-
 function sectionBgStyle(cat) {
   if (cat.bgColor && cat.bgColor !== 'transparent') {
-    return { background: cat.bgColor, borderRadius: 'var(--blog-radius-xl)', padding: '40px' }
+    return { background: cat.bgColor, borderRadius: '24px', padding: '40px' }
   }
   return {}
 }
@@ -101,16 +94,7 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-.blog-section {
-  max-width: 1260px;
-  margin: 0 auto;
-  padding: 64px 32px 0;
-}
-.blog-section--padded {
-  margin-top: 56px;
-}
-
+<style>
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -119,14 +103,5 @@ onMounted(() => {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-@media (max-width: 600px) {
-  .blog-section {
-    padding: 40px 16px 0;
-  }
-  .blog-section--padded {
-    padding: 24px !important;
-  }
 }
 </style>

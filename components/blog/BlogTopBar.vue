@@ -1,18 +1,21 @@
 <template>
-  <nav class="blog-topbar" :class="{ 'blog-topbar--scrolled': isScrolled }">
-    <div class="blog-topbar__inner">
-      <NuxtLink to="/blog/" class="blog-topbar__logo">
+  <nav
+    class="sticky top-0 z-50 bg-[rgba(255,251,245,0.88)] backdrop-blur-xl border-b border-[rgba(200,180,220,0.15)] py-2.5 transition-shadow duration-300"
+    :class="{ 'shadow-[0_4px_20px_rgba(90,50,130,0.08)]': isScrolled }"
+  >
+    <div class="max-w-[1260px] mx-auto px-8 max-sm:px-4 flex items-center gap-5">
+      <NuxtLink to="/blog/" class="flex items-center gap-2.5 no-underline flex-shrink-0 transition-transform duration-200 hover:scale-[1.03]">
         <BlogLogo :size="38" />
-        <div class="blog-topbar__logo-text">
-          <span class="blog-topbar__logo-top">TWOJA</span>
-          <span class="blog-topbar__logo-bottom">Kolorowanka</span>
+        <div class="flex flex-col leading-none max-sm:hidden">
+          <span class="font-baloo text-[0.72rem] font-bold text-[#8B7BA5] tracking-wide">TWOJA</span>
+          <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent -mt-0.5">Kolorowanka</span>
         </div>
       </NuxtLink>
-      <div class="blog-topbar__scroll" ref="scrollContainer">
+      <div class="flex gap-2 overflow-x-auto scrollbar-none flex-1 py-1">
         <NuxtLink
           to="/blog/"
-          class="blog-topbar__chip"
-          :class="{ 'blog-topbar__chip--active': !activeSlug }"
+          class="inline-flex items-center gap-1.5 py-[7px] px-4 rounded-full border-2 border-transparent font-baloo text-sm font-semibold cursor-pointer whitespace-nowrap transition-all duration-200 no-underline hover:bg-[rgba(155,114,207,0.08)] hover:text-[#9B72CF]"
+          :class="!activeSlug ? 'bg-[#2A1B3D] text-white border-[#2A1B3D]' : 'bg-transparent text-[#5C4A72]'"
         >
           🌈 Wszystkie
         </NuxtLink>
@@ -20,8 +23,8 @@
           v-for="cat in sortedCategories"
           :key="cat.slug"
           :to="`/blog/kategoria/${cat.slug}/`"
-          class="blog-topbar__chip"
-          :class="{ 'blog-topbar__chip--active': activeSlug === cat.slug }"
+          class="inline-flex items-center gap-1.5 py-[7px] px-4 rounded-full border-2 border-transparent font-baloo text-sm font-semibold cursor-pointer whitespace-nowrap transition-all duration-200 no-underline hover:bg-[rgba(155,114,207,0.08)] hover:text-[#9B72CF]"
+          :class="activeSlug === cat.slug ? 'bg-[#2A1B3D] text-white border-[#2A1B3D]' : 'bg-transparent text-[#5C4A72]'"
         >
           {{ cat.emoji }} {{ cat.slug.charAt(0).toUpperCase() + cat.slug.slice(1) }}
         </NuxtLink>
@@ -48,107 +51,3 @@ onMounted(() => {
   onUnmounted(() => window.removeEventListener('scroll', onScroll))
 })
 </script>
-
-<style scoped>
-.blog-topbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 251, 245, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(200, 180, 220, 0.15);
-  padding: 10px 0;
-  transition: box-shadow 0.3s;
-}
-.blog-topbar--scrolled {
-  box-shadow: 0 4px 20px rgba(90, 50, 130, 0.08);
-}
-.blog-topbar__inner {
-  max-width: 1260px;
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.blog-topbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  flex-shrink: 0;
-  transition: transform 0.2s;
-}
-.blog-topbar__logo:hover {
-  transform: scale(1.03);
-}
-.blog-topbar__logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-.blog-topbar__logo-top {
-  font-family: 'Baloo 2', cursive;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--blog-text-light);
-  letter-spacing: 0.5px;
-}
-.blog-topbar__logo-bottom {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.15rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--blog-coral), var(--blog-lavender));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-top: -2px;
-}
-.blog-topbar__scroll {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  flex: 1;
-  padding: 4px 0;
-}
-.blog-topbar__scroll::-webkit-scrollbar {
-  display: none;
-}
-.blog-topbar__chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 7px 16px;
-  border-radius: 50px;
-  border: 2px solid transparent;
-  background: transparent;
-  font-family: 'Baloo 2', cursive;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--blog-text-mid);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s;
-  text-decoration: none;
-}
-.blog-topbar__chip:hover {
-  background: rgba(155, 114, 207, 0.08);
-  color: var(--blog-lavender);
-}
-.blog-topbar__chip--active {
-  background: var(--blog-text);
-  color: white;
-  border-color: var(--blog-text);
-}
-
-@media (max-width: 600px) {
-  .blog-topbar__inner {
-    padding: 0 16px;
-  }
-  .blog-topbar__logo-text {
-    display: none;
-  }
-}
-</style>

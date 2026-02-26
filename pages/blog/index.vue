@@ -31,21 +31,21 @@ const { data: sections, error: sectionsError } = await useAsyncData('blog-sectio
 </script>
 
 <template>
-  <div class="blog-page">
+  <div class="bg-[#FDFBFF] min-h-screen font-quicksand text-[#2A1B3D] overflow-x-hidden">
     <!-- Background blobs -->
-    <div class="page-bg-shapes">
-      <div class="bg-blob"></div>
-      <div class="bg-blob"></div>
-      <div class="bg-blob"></div>
-      <div class="bg-blob"></div>
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.06] w-[500px] h-[500px] bg-[#FF6B6B] -top-[10%] -left-[5%]"></div>
+      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.06] w-[600px] h-[600px] bg-[#4D96FF] top-[30%] -right-[10%] [animation-delay:-8s]"></div>
+      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.06] w-[400px] h-[400px] bg-[#FFD93D] bottom-[10%] left-[20%] [animation-delay:-15s]"></div>
+      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.06] w-[350px] h-[350px] bg-[#6BCB77] top-[60%] left-[50%] [animation-delay:-20s]"></div>
     </div>
 
-    <div class="content-wrapper">
+    <div class="relative z-[1]">
       <BlogTopBar />
 
       <!-- Hero -->
       <BlogHero v-if="heroData" :post="heroData" />
-      <div v-else-if="heroError" class="blog-error">
+      <div v-else-if="heroError" class="max-w-[1260px] mx-auto my-10 px-8 text-center text-[#5C4A72]">
         <p>Nie udało się załadować najnowszego artykułu. Spróbuj odświeżyć stronę.</p>
       </div>
 
@@ -53,113 +53,31 @@ const { data: sections, error: sectionsError } = await useAsyncData('blog-sectio
       <BlogHomepage v-if="sections" :sections="sections" />
 
       <!-- Footer -->
-      <footer class="blog-footer">
-        <div class="blog-footer__logo">✏️ Twoja Kolorowanka</div>
-        <p class="blog-footer__text">Darmowe kolorowanki do druku dla dzieci i dorosłych</p>
-        <div class="blog-footer__cats">
-          <NuxtLink to="/blog/kategoria/zabawa/">Zabawa</NuxtLink>
-          <NuxtLink to="/blog/kategoria/edukacja/">Edukacja</NuxtLink>
-          <NuxtLink to="/blog/kategoria/wychowanie/">Wychowanie</NuxtLink>
-          <NuxtLink to="/blog/kategoria/inspiracje/">Inspiracje</NuxtLink>
-          <NuxtLink to="/blog/kategoria/zdrowie/">Zdrowie</NuxtLink>
-          <NuxtLink to="/blog/kategoria/kuchnia/">Kuchnia</NuxtLink>
+      <footer class="max-w-[1260px] mx-auto mt-20 px-8 py-10 text-center border-t border-[#C8B4DC]/20">
+        <div class="font-baloo text-[1.6rem] font-extrabold bg-gradient-to-br from-[#FF6B6B] via-[#9B72CF] to-[#4D96FF] bg-clip-text text-transparent mb-2">✏️ Twoja Kolorowanka</div>
+        <p class="text-[#8B7BA5] text-[0.9rem]">Darmowe kolorowanki do druku dla dzieci i dorosłych</p>
+        <div class="flex justify-center flex-wrap gap-2 mt-4">
+          <NuxtLink
+            v-for="cat in ['zabawa', 'edukacja', 'wychowanie', 'inspiracje', 'zdrowie', 'kuchnia']"
+            :key="cat"
+            :to="`/blog/kategoria/${cat}/`"
+            class="font-baloo text-[0.82rem] text-[#8B7BA5] no-underline py-1 px-3.5 rounded-full border border-[#C8B4DC]/25 transition-all duration-200 hover:border-[#9B72CF] hover:text-[#9B72CF] hover:bg-[#9B72CF]/5"
+          >
+            {{ cat.charAt(0).toUpperCase() + cat.slice(1) }}
+          </NuxtLink>
         </div>
       </footer>
     </div>
   </div>
 </template>
 
-<style scoped>
-.blog-page {
-  background: var(--blog-bg);
-  min-height: 100vh;
-  font-family: 'Quicksand', sans-serif;
-  color: var(--blog-text);
-  overflow-x: hidden;
+<style>
+.blog-blob {
+  animation: blogDrift 25s ease-in-out infinite;
 }
-
-/* BG Blobs */
-.page-bg-shapes {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-.bg-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.06;
-  animation: drift 25s ease-in-out infinite;
-}
-.bg-blob:nth-child(1) { width: 500px; height: 500px; background: var(--blog-coral); top: -10%; left: -5%; }
-.bg-blob:nth-child(2) { width: 600px; height: 600px; background: var(--blog-sky); top: 30%; right: -10%; animation-delay: -8s; }
-.bg-blob:nth-child(3) { width: 400px; height: 400px; background: var(--blog-sunny); bottom: 10%; left: 20%; animation-delay: -15s; }
-.bg-blob:nth-child(4) { width: 350px; height: 350px; background: var(--blog-mint); top: 60%; left: 50%; animation-delay: -20s; }
-
-@keyframes drift {
+@keyframes blogDrift {
   0%, 100% { transform: translate(0, 0) scale(1); }
   33% { transform: translate(30px, -40px) scale(1.05); }
   66% { transform: translate(-20px, 30px) scale(0.95); }
-}
-
-.content-wrapper {
-  position: relative;
-  z-index: 1;
-}
-
-/* Error */
-.blog-error {
-  max-width: 1260px;
-  margin: 40px auto;
-  padding: 0 32px;
-  text-align: center;
-  color: var(--blog-text-mid);
-}
-
-/* Footer */
-.blog-footer {
-  max-width: 1260px;
-  margin: 80px auto 0;
-  padding: 40px 32px;
-  text-align: center;
-  border-top: 1px solid rgba(200, 180, 220, 0.2);
-}
-.blog-footer__logo {
-  font-family: 'Baloo 2', cursive;
-  font-size: 1.6rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--blog-coral), var(--blog-lavender), var(--blog-sky));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 8px;
-}
-.blog-footer__text {
-  color: var(--blog-text-light);
-  font-size: 0.9rem;
-}
-.blog-footer__cats {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
-.blog-footer__cats a {
-  font-family: 'Baloo 2', cursive;
-  font-size: 0.82rem;
-  color: var(--blog-text-light);
-  text-decoration: none;
-  padding: 4px 14px;
-  border-radius: 50px;
-  border: 1px solid rgba(200, 180, 220, 0.25);
-  transition: all 0.2s;
-}
-.blog-footer__cats a:hover {
-  border-color: var(--blog-lavender);
-  color: var(--blog-lavender);
-  background: rgba(155, 114, 207, 0.05);
 }
 </style>

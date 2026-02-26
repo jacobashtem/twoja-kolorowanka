@@ -20,12 +20,13 @@ export default defineNuxtConfig({
       failOnError: false
     }
   },
+  components: [
+    { path: '~/components/blog/sections', pathPrefix: false },
+    { path: '~/components' },
+  ],
   content: { documentDriven: false },
   site: { url: 'https://twoja-kolorowanka.pl', name: 'twoja-kolorowanka.pl', trailingSlash: true },
-  sitemap: {
-    exclude: [/\/\d+\/?$/, '/koloruj/**'],
-    sources: ['/api/__sitemap__/blog'],
-  },
+  sitemap: { exclude: [/\/\d+\/?$/, '/koloruj/**'] },
   modules: ['@nuxtjs/sitemap','@nuxt/content','@nuxt/ui','@nuxtjs/tailwindcss','@vueuse/nuxt','@nuxtjs/google-fonts','@zadigetvoltaire/nuxt-gtm'],
   googleFonts: {
     families: {
@@ -43,7 +44,6 @@ export default defineNuxtConfig({
       gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true }
     }
   },
-  css: ['~/assets/css/blog-tokens.css'],
   app: {
     head: {
       htmlAttrs: { lang: 'pl' },

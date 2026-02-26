@@ -1,36 +1,36 @@
 <template>
-  <div class="slider-wrapper">
+  <div class="relative">
     <button
-      class="slider-arrow slider-arrow--prev"
+      class="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-[18px] z-10 w-12 h-12 rounded-full bg-white border-2 border-[#C8B4DC]/20 shadow items-center justify-center text-[1.4rem] text-[#5C4A72] cursor-pointer transition-all duration-300 hover:scale-[1.12] hover:shadow-lg hover:text-[#FFAB76] hover:border-[#FFAB76]"
       @click="scrollPrev"
       aria-label="Poprzedni"
     >
-      ‹
+      &#8249;
     </button>
     <button
-      class="slider-arrow slider-arrow--next"
+      class="hidden md:flex absolute top-1/2 -translate-y-1/2 -right-[18px] z-10 w-12 h-12 rounded-full bg-white border-2 border-[#C8B4DC]/20 shadow items-center justify-center text-[1.4rem] text-[#5C4A72] cursor-pointer transition-all duration-300 hover:scale-[1.12] hover:shadow-lg hover:text-[#FFAB76] hover:border-[#FFAB76]"
       @click="scrollNext"
       aria-label="Następny"
     >
-      ›
+      &#8250;
     </button>
     <div
       ref="trackRef"
-      class="slider-track"
-      :class="{ 'slider-track--grabbing': isDragging }"
+      class="flex gap-[22px] overflow-x-auto snap-x snap-mandatory scrollbar-none cursor-grab select-none pb-2"
+      :class="{ '!cursor-grabbing': isDragging }"
       @mousedown="onMouseDown"
       @touchstart.passive="onTouchStart"
     >
-      <div v-for="post in posts" :key="post.id" class="slider-card">
+      <div v-for="post in posts" :key="post.id" class="min-w-[300px] max-w-[300px] shrink-0 snap-start">
         <BlogCard :post="post" image-height="200px" />
       </div>
     </div>
-    <div class="slider-dots">
+    <div class="flex justify-center gap-2 mt-5">
       <button
         v-for="(_, i) in dotsCount"
         :key="i"
-        class="slider-dot"
-        :class="{ 'slider-dot--active': i === activeDot }"
+        class="w-[10px] h-[10px] rounded-full border-none cursor-pointer transition-all duration-300"
+        :class="i === activeDot ? 'bg-[#FFAB76] scale-[1.3]' : 'bg-[#FFAB76]/25'"
         @click="scrollToDot(i)"
         :aria-label="`Strona ${i + 1}`"
       />
@@ -137,87 +137,12 @@ onUnmounted(() => {
 })
 </script>
 
-<style scoped>
-.slider-wrapper {
-  position: relative;
-}
-.slider-track {
-  display: flex;
-  gap: 22px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-  user-select: none;
-  padding-bottom: 8px;
-}
-.slider-track::-webkit-scrollbar {
+<style>
+.scrollbar-none::-webkit-scrollbar {
   display: none;
 }
-.slider-track--grabbing {
-  cursor: grabbing;
-}
-.slider-card {
-  min-width: 300px;
-  max-width: 300px;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-}
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--blog-card);
-  border: 2px solid rgba(200, 180, 220, 0.2);
-  box-shadow: var(--blog-shadow);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  color: var(--blog-text-mid);
-  z-index: 10;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-.slider-arrow:hover {
-  transform: translateY(-50%) scale(1.12);
-  box-shadow: var(--blog-shadow-lg);
-  color: var(--blog-peach);
-  border-color: var(--blog-peach);
-}
-.slider-arrow--prev {
-  left: -18px;
-}
-.slider-arrow--next {
-  right: -18px;
-}
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-}
-.slider-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 171, 118, 0.25);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.slider-dot--active {
-  background: var(--blog-peach);
-  transform: scale(1.3);
-}
-
-@media (max-width: 900px) {
-  .slider-arrow {
-    display: none;
-  }
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 </style>

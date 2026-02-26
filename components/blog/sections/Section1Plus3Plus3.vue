@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="layout-1plus3">
+    <div class="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-[22px]">
       <BlogCard
         v-if="posts[0]"
         :post="posts[0]"
         variant="big"
         :excerpt-lines="3"
       />
-      <div class="side-triple">
+      <div class="flex flex-col gap-[22px]">
         <BlogCardCompact
           v-for="post in sidePosts"
           :key="post.id"
@@ -15,7 +15,7 @@
         />
       </div>
     </div>
-    <div v-if="bottomPosts.length" class="bottom-row">
+    <div v-if="bottomPosts.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[22px] mt-[22px]">
       <BlogCard
         v-for="post in bottomPosts"
         :key="post.id"
@@ -34,36 +34,3 @@ const props = defineProps({
 const sidePosts = computed(() => props.posts.slice(1, 4))
 const bottomPosts = computed(() => props.posts.slice(4, 7))
 </script>
-
-<style scoped>
-.layout-1plus3 {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 22px;
-}
-.side-triple {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-.bottom-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 22px;
-}
-
-@media (max-width: 900px) {
-  .layout-1plus3 {
-    grid-template-columns: 1fr;
-  }
-  .bottom-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .bottom-row {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
