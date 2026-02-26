@@ -2,9 +2,12 @@
   <nav class="px-4 sm:px-6 lg:px-8 pt-6 relative" aria-label="Main Navigation">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-2 shrink-0 no-underline">
-        <BlogLogo :size="36" />
-        <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent hidden sm:inline">Twoja Kolorowanka</span>
+      <NuxtLink to="/" class="flex items-center gap-2.5 shrink-0 no-underline transition-transform duration-200 hover:scale-[1.03]">
+        <BlogLogo :size="38" />
+        <div class="flex flex-col leading-none hidden sm:flex">
+          <span class="font-baloo text-[0.72rem] font-bold text-[#8B7BA5] tracking-wide">TWOJA</span>
+          <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent -mt-0.5">Kolorowanka</span>
+        </div>
       </NuxtLink>
 
       <!-- Desktop menu -->
