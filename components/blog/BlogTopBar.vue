@@ -4,7 +4,7 @@
     :class="{ 'shadow-[0_4px_20px_rgba(90,50,130,0.08)]': isScrolled }"
   >
     <div class="max-w-[1260px] mx-auto px-8 max-sm:px-4 flex items-center gap-5">
-      <NuxtLink to="/blog/" class="flex items-center gap-2.5 no-underline flex-shrink-0 transition-transform duration-200 hover:scale-[1.03]">
+      <NuxtLink to="/" class="flex items-center gap-2.5 no-underline flex-shrink-0 transition-transform duration-200 hover:scale-[1.03]">
         <BlogLogo :size="38" />
         <div class="flex flex-col leading-none max-sm:hidden">
           <span class="font-baloo text-[0.72rem] font-bold text-[#8B7BA5] tracking-wide">TWOJA</span>
