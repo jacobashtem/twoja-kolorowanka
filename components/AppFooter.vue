@@ -10,6 +10,7 @@
                         <NuxtLink class="hover:text-coolGray-200 transition-all" to="/polityka-prywatnosci">Polityka
                             prywatności</NuxtLink>
                         <NuxtLink class="hover:text-coolGray-200 transition-all" to="/obowiazek-informacyjny">RODO</NuxtLink>
+                        <NuxtLink class="hover:text-coolGray-200 transition-all" to="/blog/">Blog</NuxtLink>
                     </div>
                 </div>
                 <p class="text-center md:text-left">© 2025 Twoja Kolorowanka. Wszystkie prawa zastrzeżone.</p>

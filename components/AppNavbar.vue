@@ -1,8 +1,9 @@
 <template>
   <nav class="flex relative justify-end lg:justify-end" aria-label="Main Navigation">
     <!-- Logo -->
-    <NuxtLink to="/">
-      <img class="absolute left-0 w-32 2xl:w-28 rounded-br-2xl " src="/logo-1.webp" alt="">
+    <NuxtLink to="/" class="absolute left-0 flex items-center gap-1 pl-2 pt-2">
+      <BlogLogo :size="40" />
+      <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent hidden sm:inline">Twoja Kolorowanka</span>
     </NuxtLink>
 
     <div class="px-4 sm:px-6 lg:px-8 pt-8 w-full">
@@ -10,6 +11,9 @@
       <div class="hidden md:flex space-x-6 justify-end" role="menubar" aria-label="Main Menu">
         <NuxtLink to="/" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl flex items-center">
           Strona główna
+        </NuxtLink>
+        <NuxtLink to="/blog/" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl flex items-center">
+          Blog
         </NuxtLink>
         <SearchAutocomplete :categoryLinks="categoryLinks" />
         <CategoriesMenu :categoryLinks="categoryLinks" />
@@ -53,7 +57,7 @@ const toggleMenu = () => {
 
 const mainLinks = [
   { name: 'Strona główna', to: '/' },
-  // Dodaj kolejne linki jeśli potrzebujesz
+  { name: 'Blog', to: '/blog/' },
 ]
 
 const categoryLinks = [

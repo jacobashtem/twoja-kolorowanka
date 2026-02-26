@@ -16,6 +16,16 @@ const SAMPLE_TITLES = [
   'Kolorowankowe bingo — gra planszowa do wydruku',
   'Wiosenne kolorowanki — nowe wzory',
   'Jak budować pewność siebie u dziecka',
+  'Zabawa w kolorowanie — jak zacząć przygodę?',
+  'Najpiękniejsze mandale dla dzieci',
+  'Kreatywne techniki kolorowania — nie tylko kredki',
+  'Kolorowanki terapeutyczne — kiedy warto sięgnąć?',
+  'Podróż z kredkami — zabawy w podróży',
+  'Jak rozmawiać z dzieckiem o emocjach przez sztukę?',
+  'Domowe farby plakatowe — przepis krok po kroku',
+  'Kolorowanie a rozwój mowy — nieoczywiste połączenie',
+  'Zabawy z kredkami na świeżym powietrzu',
+  'Jak motywować dziecko do rysowania?',
 ]
 
 const SAMPLE_EXCERPTS = [
@@ -26,6 +36,9 @@ const SAMPLE_EXCERPTS = [
   'Wspólne kolorowanie plakatów jako aktywność integracyjna dla grupy dzieci.',
   'Zamień ekran na kredki — wieczorne kolorowanie pomaga dziecku zasnąć szybciej.',
   'Podpowiadamy, które kredki sprawdzą się najlepiej w różnych grupach wiekowych.',
+  'Zabawy plastyczne nie muszą kończyć się bałaganem — oto sprawdzone sposoby.',
+  'Jak wykorzystać kolorowanki w nauce alfabetu? Praktyczne wskazówki.',
+  'Proste projekty, które możesz zrobić z dzieckiem w deszczowe popołudnie.',
 ]
 
 const SAMPLE_CONTENT = `
@@ -45,7 +58,7 @@ const SAMPLE_CONTENT = `
 <p>Kolorowanie to nie tylko „czas z kredkami". To kompleksowe narzędzie rozwojowe, które wspiera motorykę, koncentrację, kreatywność i wyrażanie emocji.</p>
 `
 
-const EMOJIS = ['🦕', '🧠', '✋', '😊', '🎯', '🤝', '💤', '🖍️', '🖨️', '📦', '🦄', '🎭', '🌈', '🔤', '🎲', '🌸', '☀️', '🍂', '⛄']
+const EMOJIS = ['🦕', '🧠', '✋', '😊', '🎯', '🤝', '💤', '🖍️', '🖨️', '📦', '🦄', '🎭', '🌈', '🔤', '🎲', '🌸', '☀️', '🍂', '⛄', '🎪', '🧩', '🎨', '🏠', '📚', '🌻']
 
 const GRADIENTS = [
   'linear-gradient(135deg, #A7F3D0, #6EE7B7)',
@@ -58,12 +71,16 @@ const GRADIENTS = [
   'linear-gradient(135deg, #FDE68A, #FBCFE8)',
 ]
 
+// Deterministyczny generator - stabilne ID na podstawie seeda
 function generateMockPost(id, catSlug) {
   const catConfig = CATEGORY_CONFIG.find(c => c.slug === catSlug) || CATEGORY_CONFIG[0]
   const titleIdx = (id - 1) % SAMPLE_TITLES.length
   const excerptIdx = (id - 1) % SAMPLE_EXCERPTS.length
-  const day = Math.max(1, 28 - id * 2)
-  const dateStr = `2026-02-${String(day).padStart(2, '0')}T10:00:00`
+  const month = id <= 14 ? 2 : 1
+  const day = id <= 14 ? Math.max(1, 28 - id * 2) : Math.max(1, 31 - (id - 14) * 2)
+  const monthName = month === 2 ? 'lutego' : 'stycznia'
+  const monthShort = month === 2 ? 'lut' : 'sty'
+  const dateStr = `2026-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}T10:00:00`
 
   return {
     id,
@@ -72,12 +89,12 @@ function generateMockPost(id, catSlug) {
     excerpt: SAMPLE_EXCERPTS[excerptIdx],
     content: SAMPLE_CONTENT,
     date: dateStr,
-    dateFormatted: `${day} lutego 2026`,
-    dateShort: `${day} lut`,
+    dateFormatted: `${day} ${monthName} 2026`,
+    dateShort: `${day} ${monthShort}`,
     readingTime: 3 + (id % 8),
-    thumbnail: null, // brak thumbnails w mockach - komponent pokaze placeholder
+    thumbnail: null,
     category: {
-      id: id * 100,
+      id: catConfig.slug.charCodeAt(0) * 100,
       slug: catSlug,
       name: catConfig.slug.charAt(0).toUpperCase() + catConfig.slug.slice(1),
       emoji: catConfig.emoji,
@@ -89,53 +106,84 @@ function generateMockPost(id, catSlug) {
   }
 }
 
-export function useBlogMock() {
-  let nextId = 1
+// Pre-generuj pulę postów per kategoria (deterministyczna, bez dubli)
+const CATEGORY_POOLS = {}
+let globalId = 1
 
+// Pula "najnowsze" - posty z roznych kategorii
+const ALL_POSTS_POOL = []
+
+for (const cat of CATEGORY_CONFIG) {
+  CATEGORY_POOLS[cat.slug] = []
+  const count = 25 // wystarczajaco na 2+ strony paginacji
+  for (let i = 0; i < count; i++) {
+    const post = generateMockPost(globalId++, cat.slug)
+    CATEGORY_POOLS[cat.slug].push(post)
+    ALL_POSTS_POOL.push(post)
+  }
+}
+
+// Sortuj po dacie (najnowsze najpierw)
+ALL_POSTS_POOL.sort((a, b) => new Date(b.date) - new Date(a.date))
+
+export function useBlogMock() {
   async function getPosts(params = {}) {
     const { page = 1, perPage = 12, categoryId, exclude = [] } = params
-    const catSlug = categoryId ? 'wychowanie' : 'zabawa'
 
-    const posts = []
-    for (let i = 0; i < perPage; i++) {
-      const post = generateMockPost(nextId++, catSlug)
-      if (!exclude.includes(post.id)) {
-        posts.push(post)
-      }
+    // Wybierz pule postow
+    let pool
+    if (categoryId) {
+      // Znajdz slug na podstawie categoryId
+      const cat = CATEGORY_CONFIG.find(c => c.slug.charCodeAt(0) * 100 === categoryId)
+      pool = cat ? CATEGORY_POOLS[cat.slug] : ALL_POSTS_POOL
+    } else {
+      pool = ALL_POSTS_POOL
     }
 
+    // Filtruj exclude
+    const filtered = pool.filter(p => !exclude.includes(p.id))
+    const total = filtered.length
+
+    // Paginacja
+    const start = (page - 1) * perPage
+    const posts = filtered.slice(start, start + perPage)
+
     return {
-      posts: posts.slice(0, perPage),
-      total: 42,
-      totalPages: Math.ceil(42 / perPage),
+      posts,
+      total,
+      totalPages: Math.ceil(total / perPage),
     }
   }
 
   async function getPostBySlug(slug) {
-    return generateMockPost(1, 'wychowanie')
+    const found = ALL_POSTS_POOL.find(p => p.slug === slug)
+    return found || generateMockPost(1, 'wychowanie')
   }
 
   async function getCategories() {
-    return CATEGORY_CONFIG.map((c, i) => ({
-      id: (i + 1) * 100,
+    return CATEGORY_CONFIG.map((c) => ({
+      id: c.slug.charCodeAt(0) * 100,
       slug: c.slug,
       name: c.slug.charAt(0).toUpperCase() + c.slug.slice(1),
-      count: 10 + i * 3,
+      count: CATEGORY_POOLS[c.slug]?.length || 0,
       description: `Artykuły z kategorii ${c.slug}`,
     }))
   }
 
-  async function getHomepagePosts() {
+  async function getHomepagePosts(params = {}) {
+    const { featuredPostId, excludeIds = [] } = params
     const sections = {}
     const homepageCats = getHomepageCategories()
-    let id = 2
+    const usedIds = new Set([
+      ...(featuredPostId ? [featuredPostId] : []),
+      ...excludeIds,
+    ])
 
     for (const cat of homepageCats) {
       const count = getPostsCountForLayout(cat.layoutType)
-      const posts = []
-      for (let i = 0; i < count; i++) {
-        posts.push(generateMockPost(id++, cat.slug))
-      }
+      const pool = CATEGORY_POOLS[cat.slug] || []
+      const posts = pool.filter(p => !usedIds.has(p.id)).slice(0, count)
+      posts.forEach(p => usedIds.add(p.id))
       sections[cat.slug] = posts
     }
 

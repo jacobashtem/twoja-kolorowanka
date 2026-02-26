@@ -66,9 +66,7 @@ export const CATEGORY_CONFIG = [
     bgColor: 'transparent',
     tagBg: '#CCFBF1',
     tagColor: '#115E59',
-    layoutType: 'banner-plus-grid',
-    homepage: true,
-    homepageOrder: 6,
+    homepage: false,
   },
 
   // === KATEGORIE BEZ SEKCJI NA STRONIE GLOWNEJ ===
@@ -97,7 +95,9 @@ export const CATEGORY_CONFIG = [
     bgColor: '#FFF0F5',
     tagBg: '#FCE7F3',
     tagColor: '#9D174D',
-    homepage: false,
+    layoutType: 'banner-plus-grid',
+    homepage: true,
+    homepageOrder: 6,
   },
   {
     slug: 'technologie',

@@ -134,11 +134,6 @@ function onPageChange(newPage) {
         />
       </div>
 
-      <!-- Footer -->
-      <footer class="max-w-[1260px] mx-auto px-8 py-10 text-center border-t border-[#C8B4DC]/20">
-        <div class="font-baloo text-[1.4rem] font-extrabold bg-gradient-to-br from-[#FF6B6B] via-[#9B72CF] to-[#4D96FF] bg-clip-text text-transparent mb-1.5">✏️ Twoja Kolorowanka</div>
-        <p class="text-[#8B7BA5] text-[0.85rem]">Darmowe kolorowanki do druku dla dzieci i dorosłych</p>
-      </footer>
     </div>
   </div>
 </template>

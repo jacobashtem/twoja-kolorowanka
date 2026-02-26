@@ -95,7 +95,7 @@ export function useBlogApi() {
    * Pobierz posty dla strony glownej bloga per kategoria z deduplikacja
    */
   async function getHomepagePosts(params = {}) {
-    const { featuredPostId } = params
+    const { featuredPostId, excludeIds = [] } = params
     const homepageCategories = getHomepageCategories()
 
     // Najpierw pobierz kategorie WP zeby miec ID
@@ -103,7 +103,10 @@ export function useBlogApi() {
     const categoryMap = {}
     wpCategories.forEach(c => { categoryMap[c.slug] = c.id })
 
-    const usedIds = featuredPostId ? [featuredPostId] : []
+    const usedIds = [
+      ...(featuredPostId ? [featuredPostId] : []),
+      ...excludeIds,
+    ]
     const sections = {}
 
     // Sekwencyjnie per kategoria (zeby exclude dzialal poprawnie)

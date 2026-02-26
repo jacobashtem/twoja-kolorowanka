@@ -1,8 +1,6 @@
-<script setup>
-</script>
-
 <template>
   <main>
     <slot />
   </main>
+  <AppFooter />
 </template>

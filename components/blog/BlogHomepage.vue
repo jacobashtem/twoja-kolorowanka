@@ -71,7 +71,7 @@ const subtitles = {
   wychowanie: 'Jak wspierać malucha przez kreatywne zabawy',
   zdrowie: 'Praktyczne wskazówki na co dzień',
   inspiracje: 'Pomysły na kreatywne zabawy i projekty',
-  kuchnia: 'Kolorowanki na każdą porę roku i okazję',
+  rodzic: 'Codzienne wyzwania i radości rodzicielstwa',
 }
 
 function sectionSubtitle(slug) {

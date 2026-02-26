@@ -22,10 +22,22 @@ const { data: heroData, error: heroError } = await useAsyncData('blog-hero', asy
   return result.posts[0] || null
 })
 
-// 2. Pobierz posty per kategoria z deduplikacja
-const { data: sections, error: sectionsError } = await useAsyncData('blog-sections', async () => {
+// 2. Pobierz najnowsze posty (pod hero, z wykluczeniem hero)
+const { data: latestPosts } = await useAsyncData('blog-latest', async () => {
+  const excludeIds = heroData.value?.id ? [heroData.value.id] : []
+  const result = await getPosts({ perPage: 6, page: 1, exclude: excludeIds })
+  return result.posts
+})
+
+// 3. Pobierz posty per kategoria z deduplikacja
+const { data: sections } = await useAsyncData('blog-sections', async () => {
+  const excludeIds = [
+    ...(heroData.value?.id ? [heroData.value.id] : []),
+    ...(latestPosts.value || []).map(p => p.id),
+  ]
   return await getHomepagePosts({
     featuredPostId: heroData.value?.id,
+    excludeIds,
   })
 })
 </script>
@@ -49,24 +61,27 @@ const { data: sections, error: sectionsError } = await useAsyncData('blog-sectio
         <p>Nie udało się załadować najnowszego artykułu. Spróbuj odświeżyć stronę.</p>
       </div>
 
+      <!-- Najnowsze wpisy -->
+      <section v-if="latestPosts?.length" class="max-w-[1260px] mx-auto pt-12 px-8 sm:px-4">
+        <BlogSectionHeader
+          emoji="🆕"
+          title="Najnowsze wpisy"
+          subtitle="Świeże artykuły z naszego bloga"
+          color="#4D96FF"
+        />
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[22px]">
+          <BlogCard
+            v-for="post in latestPosts"
+            :key="post.id"
+            :post="post"
+            image-height="190px"
+          />
+        </div>
+      </section>
+
       <!-- Category sections -->
       <BlogHomepage v-if="sections" :sections="sections" />
 
-      <!-- Footer -->
-      <footer class="max-w-[1260px] mx-auto mt-20 px-8 py-10 text-center border-t border-[#C8B4DC]/20">
-        <div class="font-baloo text-[1.6rem] font-extrabold bg-gradient-to-br from-[#FF6B6B] via-[#9B72CF] to-[#4D96FF] bg-clip-text text-transparent mb-2">✏️ Twoja Kolorowanka</div>
-        <p class="text-[#8B7BA5] text-[0.9rem]">Darmowe kolorowanki do druku dla dzieci i dorosłych</p>
-        <div class="flex justify-center flex-wrap gap-2 mt-4">
-          <NuxtLink
-            v-for="cat in ['zabawa', 'edukacja', 'wychowanie', 'inspiracje', 'zdrowie', 'kuchnia']"
-            :key="cat"
-            :to="`/blog/kategoria/${cat}/`"
-            class="font-baloo text-[0.82rem] text-[#8B7BA5] no-underline py-1 px-3.5 rounded-full border border-[#C8B4DC]/25 transition-all duration-200 hover:border-[#9B72CF] hover:text-[#9B72CF] hover:bg-[#9B72CF]/5"
-          >
-            {{ cat.charAt(0).toUpperCase() + cat.slice(1) }}
-          </NuxtLink>
-        </div>
-      </footer>
     </div>
   </div>
 </template>
