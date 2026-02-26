@@ -35,13 +35,13 @@ export default defineNuxtConfig({
       'Baloo+2': [400, 500, 600, 700, 800],
       Quicksand: [400, 500, 600, 700],
     },
-    display: 'swap', preconnect: true, preload: true
+    display: 'swap', download: true, inject: true
   },
   runtimeConfig: {
     public: {
       wordpressApiUrl: process.env.WORDPRESS_API_URL || 'https://tk.delash.pl/wp-json/wp/v2',
       mockBlog: process.env.MOCK_BLOG === 'true',
-      gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true }
+      gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: false, debug: true, loadScript: false, trackOnNextTick: false, devtools: true }
     }
   },
   app: {

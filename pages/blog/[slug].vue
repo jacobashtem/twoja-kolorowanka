@@ -81,6 +81,16 @@ async function copyLink() {
     // fallback - ignore
   }
 }
+
+// Disqus consent via Klaro
+const klaroConsents = useState('klaro-consents', () => ({}))
+const hasDisqusConsent = computed(() => klaroConsents.value?.disqus ?? false)
+
+function openKlaroSettings() {
+  if (typeof window !== 'undefined' && window.klaro) {
+    window.klaro.show()
+  }
+}
 </script>
 
 <template>
@@ -195,7 +205,19 @@ async function copyLink() {
         <section class="mt-16 pt-12 border-t border-[#C8B4DC]/20">
           <h2 class="font-baloo text-[1.4rem] font-extrabold mb-6 text-[#2A1B3D]">Komentarze</h2>
           <ClientOnly>
-            <DisqusComments :identifier="`/blog/${slug}/`" :url="`https://twoja-kolorowanka.pl/blog/${slug}/`" />
+            <template v-if="hasDisqusConsent">
+              <DisqusComments :identifier="`/blog/${slug}/`" :url="`https://twoja-kolorowanka.pl/blog/${slug}/`" />
+            </template>
+            <div v-else class="text-center py-10 px-6 bg-[#F8F5FF] rounded-2xl border border-[#C8B4DC]/20">
+              <p class="text-[#5C4A72] mb-1 font-semibold">Komentarze wymagają zgody na pliki cookie Disqus</p>
+              <p class="text-[#8B7BA5] text-sm mb-4">Aby zobaczyć i dodawać komentarze, zaakceptuj usługę Disqus w ustawieniach prywatności.</p>
+              <button
+                class="py-2.5 px-6 rounded-full bg-[#9B72CF] text-white font-baloo font-bold text-sm transition-all duration-200 hover:bg-[#7B5AAF] hover:shadow-md cursor-pointer"
+                @click="openKlaroSettings"
+              >
+                Zmień ustawienia prywatności
+              </button>
+            </div>
             <template #fallback>
               <p class="text-[#8B7BA5] text-sm">Ładowanie komentarzy...</p>
             </template>
