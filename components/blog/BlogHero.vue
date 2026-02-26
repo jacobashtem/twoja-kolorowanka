@@ -30,12 +30,12 @@
           <span class="w-2 h-2 rounded-full" :style="{ background: post.category.color }"></span>
           {{ post.category.name }}
         </div>
-        <h1 class="font-baloo text-[clamp(1.8rem,3vw,2.6rem)] font-extrabold mb-4 leading-tight text-[#2A1B3D]">
+        <h2 class="font-baloo text-[clamp(1.8rem,3vw,2.6rem)] font-extrabold mb-4 leading-tight text-[#2A1B3D]">
           {{ post.title }}
-        </h1>
+        </h2>
         <p class="text-base leading-relaxed text-[#5C4A72] mb-7 max-w-[420px]">
-          {{ post.excerpt }}
-        </p>
+{{ post.excerpt }}
+        </p> 
         <div class="flex gap-5 text-sm text-[#8B7BA5]">
           <span>📅 {{ post.dateFormatted }}</span>
           <span>⏱ {{ post.readingTime }} min czytania</span>

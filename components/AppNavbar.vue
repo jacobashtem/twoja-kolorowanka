@@ -4,7 +4,10 @@
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-2 shrink-0 no-underline">
         <BlogLogo :size="36" />
-        <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent hidden sm:inline">Twoja Kolorowanka</span>
+          <div class="flex flex-col leading-none max-sm:hidden">
+          <span class="font-baloo text-[0.72rem] font-bold text-[#8B7BA5] tracking-wide">TWOJA</span>
+          <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent -mt-0.5">Kolorowanka</span>
+        </div>
       </NuxtLink>
 
       <!-- Desktop menu -->

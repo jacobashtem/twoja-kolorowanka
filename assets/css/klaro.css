@@ -1,0 +1,86 @@
+/* Klaro cookie consent - theme overrides for Twoja Kolorowanka */
+
+.klaro {
+  /* Override Klaro's green accent with our purple */
+  --green1: #9B72CF;
+  --green2: #7B5AAF;
+  --green3: #5C4A72;
+  --blue1: #9B72CF;
+  --blue2: #7B5AAF;
+  --blue3: #5C4A72;
+  --dark1: #2A1B3D;
+  --dark2: #5C4A72;
+  --dark3: #8B7BA5;
+  --light1: #FDFBFF;
+  --light2: #F8F5FF;
+  --light3: #C8B4DC;
+  --white1: #FDFBFF;
+  --white2: #F8F5FF;
+  --white3: #EDE6F5;
+  --border-radius: 16px;
+  --font-family: 'Quicksand', sans-serif;
+  --font-size: 14px;
+}
+
+.klaro .cookie-notice {
+  border-radius: 20px !important;
+  box-shadow: 0 8px 40px rgba(42, 27, 61, 0.15) !important;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.klaro .cookie-modal .cm-modal {
+  border-radius: 20px !important;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.klaro .cm-btn {
+  border-radius: 999px !important;
+  font-family: 'Baloo 2', cursive !important;
+  font-weight: 700 !important;
+  padding: 10px 24px !important;
+  transition: all 0.2s ease !important;
+}
+
+.klaro .cm-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(155, 114, 207, 0.3);
+}
+
+.klaro .cm-btn.cm-btn-accept-all {
+  background: linear-gradient(135deg, #FF6B6B, #FFAB76) !important;
+  border: none !important;
+}
+
+.klaro .cm-btn.cm-btn-accept-all:hover {
+  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.4) !important;
+}
+
+.klaro .cm-btn.cm-btn-decline {
+  background: transparent !important;
+  border: 2px solid #C8B4DC !important;
+  color: #5C4A72 !important;
+}
+
+.klaro .cm-btn.cm-btn-decline:hover {
+  border-color: #9B72CF !important;
+  color: #9B72CF !important;
+}
+
+/* Toggle switch */
+.klaro .cm-list-input:checked + .cm-list-label .slider {
+  background-color: #9B72CF !important;
+}
+
+.klaro .cm-list-title {
+  font-family: 'Baloo 2', cursive !important;
+  font-weight: 700 !important;
+}
+
+.klaro .cm-list-description {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+/* Cookie notice positioning */
+.klaro .cookie-notice:not(.cookie-modal-notice) {
+  margin: 16px !important;
+}

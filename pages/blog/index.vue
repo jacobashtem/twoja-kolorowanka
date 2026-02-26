@@ -55,6 +55,14 @@ const { data: sections } = await useAsyncData('blog-sections', async () => {
     <div class="relative z-[1]">
       <BlogTopBar />
 
+      <!-- Blog H1 header -->
+      <div class="max-w-[1260px] mx-auto pt-10 pb-2 px-8 max-sm:px-4 max-sm:pt-6 text-center">
+        <h1 class="font-baloo text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold leading-tight text-[#2A1B3D]">
+          Blog <span class="bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent">Twoja Kolorowanka</span>
+        </h1>
+        <p class="text-[#5C4A72] text-base sm:text-lg mt-1.5 mb-0">Porady, inspiracje i pomysły na kreatywne zabawy z dziećmi</p>
+      </div>
+
       <!-- Hero -->
       <BlogHero v-if="heroData" :post="heroData" />
       <div v-else-if="heroError" class="max-w-[1260px] mx-auto my-10 px-8 text-center text-[#5C4A72]">
