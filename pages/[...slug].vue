@@ -75,6 +75,7 @@ const tagsFilter = computed(() => {
 })
 
 const { data: tagRaw } = await useAsyncData(
+  `tag:${currentPath}`,
   () => {
     if (!tagsFilter.value.length || isLeaf.value) return []
     return queryContent()
@@ -84,7 +85,6 @@ const { data: tagRaw } = await useAsyncData(
       .find()
   },
   {
-    key: () => `tag:${tagsFilter.value.join(',')}:${isLeaf.value ? 'leaf' : 'cat'}`,
     watch: [tagsFilter, isLeaf]
   }
 )
@@ -148,7 +148,7 @@ const downloadPdf     = () => { const u = doc.value?.pdf; if (!u) return; const 
 const showPreviewModal = ref(false)
 const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = true }
 
-[useHead(() => {
+useHead(() => {
   const seoObj = doc.value
   const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`;
   return {
@@ -263,7 +263,7 @@ const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = 
 
     ]
   }
-    })]  
+    })
 </script>
 
 <template>
