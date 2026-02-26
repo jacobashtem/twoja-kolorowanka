@@ -2,11 +2,11 @@
   <UContainer class="mt-4 mb-6 sm:mb-20">
     <div class="w-full">
       <div class="mt-8 sm:mt-0 grid grid-cols-1 gap-8 lg:grid-cols-2">
-        
+
         <!-- Lewa kolumna: tekst -->
         <div class="order-2 lg:order-1 flex flex-col justify-center text-left z-10">
           <h1
-            class="mt-0 sm:mt-8 font-extrabold uppercase leading-tight tracking-tight text"
+            class="mt-0 sm:mt-8 font-extrabold uppercase leading-tight tracking-tight"
             :class="{
               'text-3xl sm:text-4xl md:text-5xl lg:text-6xl': true
             }"
@@ -14,7 +14,7 @@
           >
             <span
               class="inline-block"
-              :class="isCategory 
+              :class="isCategory
                 ? 'text-3xl md:text-5xl lg:text-6xl'
                 : 'text-2xl xs:text-5xl md:text-5xl lg:text-6xl'"
             >
@@ -48,14 +48,24 @@
         </div>
 
         <!-- Prawa kolumna: obrazki -->
-        <div class="order-1 md:order-2 relative flex items-center justify-end sm:m-10 hidden lg:flex">
+        <!-- Mobile/tablet: row above text, images side by side -->
+        <div class="order-1 lg:order-2 flex lg:hidden items-center justify-center gap-4 py-4">
+          <div class="w-32 xs:w-36 sm:w-44 rotate-6 rounded-lg border-black-700 border-b-4 border-r-8 shrink-0">
+            <img :src="heroImg1" alt="" class="w-full rounded-lg" />
+          </div>
+          <div class="w-32 xs:w-36 sm:w-44 -rotate-6 rounded-lg border-black-700 border-r-4 border-b-8 shrink-0">
+            <img :src="heroImg2" alt="" class="w-full rounded-lg" />
+          </div>
+        </div>
+        <!-- Desktop: absolute positioned -->
+        <div class="order-1 lg:order-2 relative hidden lg:flex items-center justify-center min-h-[340px]">
           <div
-            class="sm:absolute top-40 lg:-top-20 lg:left-0 w-40 sm:w-32 md:w-48 lg:w-64 rotate-12 rounded-lg border-black-700 border-b-4 border-r-8"
+            class="absolute -top-4 left-8 xl:left-12 w-56 xl:w-64 rotate-12 rounded-lg border-black-700 border-b-4 border-r-8"
           >
             <img :src="heroImg1" alt="" />
           </div>
           <div
-            class="sm:absolute max-md:top-0 md:bottom-44 lg:-bottom-20 lg:-right-16 w-40 sm:w-32 md:w-48 lg:w-64 bg-white-500 -rotate-12 rounded-lg border-black-700 border-r-4 border-b-8"
+            class="absolute bottom-0 right-4 xl:right-0 w-56 xl:w-64 -rotate-12 rounded-lg border-black-700 border-r-4 border-b-8"
           >
             <img :src="heroImg2" alt="" />
           </div>

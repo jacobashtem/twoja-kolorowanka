@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   routeRules: {
     '/koloruj/':  { ssr: false, prerender: true },
     '/koloruj/**': { ssr: false, prerender: false },
-    '/api/**': { prerender: false }
+    '/api/**': { prerender: false },
   },
   colorMode: { preference: 'light' },
   devtools: { enabled: true },
@@ -18,12 +18,32 @@ export default defineNuxtConfig({
       failOnError: false
     }
   },
+  components: [
+    { path: '~/components/blog/sections', pathPrefix: false },
+    { path: '~/components' },
+  ],
   content: { documentDriven: false },
   site: { url: 'https://twoja-kolorowanka.pl', name: 'twoja-kolorowanka.pl', trailingSlash: true },
   sitemap: { exclude: [/\/\d+\/?$/, '/koloruj/**'] },
-  modules: ['@nuxtjs/sitemap','@nuxt/content','@nuxt/ui','@nuxtjs/tailwindcss','@vueuse/nuxt','@nuxtjs/google-fonts','@zadigetvoltaire/nuxt-gtm'],
-  googleFonts: { families: { Modak: true }, display: 'swap', preconnect: true, preload: true },
-  runtimeConfig: { public: { gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true } } },
+  modules: ['@nuxtjs/sitemap','@nuxt/content','@nuxt/ui','@nuxtjs/tailwindcss','@vueuse/nuxt','@nuxtjs/google-fonts','@zadigetvoltaire/nuxt-gtm','nuxt-disqus'],
+  disqus: {
+    shortname: process.env.DISQUS_SHORTNAME || '',
+  },
+  googleFonts: {
+    families: {
+      Modak: true,
+      'Baloo+2': [400, 500, 600, 700, 800],
+      Quicksand: [400, 500, 600, 700],
+    },
+    display: 'swap', preconnect: true, preload: true
+  },
+  runtimeConfig: {
+    public: {
+      wordpressApiUrl: process.env.WORDPRESS_API_URL || 'https://tk.delash.pl/wp-json/wp/v2',
+      mockBlog: process.env.MOCK_BLOG === 'true',
+      gtm: { id: "GTM-PMTV7XJ8", defer: false, compatibility: false, enabled: true, debug: true, loadScript: true, trackOnNextTick: false, devtools: true }
+    }
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'pl' },

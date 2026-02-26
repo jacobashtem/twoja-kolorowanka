@@ -25,6 +25,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "npm:@nuxtjs/tailwindcss@nightly",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
+    "nuxt-disqus": "^1.2.0",
     "ts-node": "^10.9.2"
   }
 }

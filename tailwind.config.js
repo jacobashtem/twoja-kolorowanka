@@ -68,6 +68,8 @@ module.exports = {
         },
         fontFamily: {
         modak: ['Modak', ...defaultTheme.fontFamily.sans],
+        baloo: ['"Baloo 2"', 'cursive', ...defaultTheme.fontFamily.sans],
+        quicksand: ['Quicksand', 'sans-serif', ...defaultTheme.fontFamily.sans],
       },
         listStyleType: {
           none: 'none',
