@@ -30,7 +30,7 @@
         , który określa zasady, prawa i obowiązki Użytkowników korzystających z Serwisu.</p>
         <h2 class="text-4xl py-4">§1 Definicje</h2>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li><b>Serwis</b> – serwis internetowy twaoja-kolorowanka” działający pod adresem https://twoja-kolorowanka.pl</li>
+            <li><b>Serwis</b> – serwis internetowy „twoja-kolorowanka” działający pod adresem https://twoja-kolorowanka.pl</li>
             <li><b>Serwis zewnętrzny</b> – serwisy internetowe partnerów, usługodawców lub usługobiorców
                 współpracujących z Administratorem</li>
             <li><b>Administrator Serwisu / Danych</b> – Administratorem Serwisu oraz Administratorem Danych (dalej
@@ -225,37 +225,30 @@
                     <li>YouTube (youtube.com/t/terms)</li>
                 </ul>
             </li>
-            <li><b>Usługi społecznościowe / łączone:</b>(Rejestracja, Logowanie, udostępnianie treści, komunikacja,
-                itp.)
+            <li><b>Usługi społecznościowe / łączone:</b> (udostępnianie treści, komentarze, itp.)
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Twitter (twitter.com/en/tos?wcmmode=disabled#intlTerms)</li>
-                    <li>Facebook (facebook.com/legal/terms)</li>
-                    <li>LinkedIn (linkedin.com/legal/user-agreement)</li>
+                    <li>Facebook (facebook.com/legal/terms) – udostępnianie treści</li>
+                    <li>Disqus (disqus.com/terms) – system komentarzy na blogu</li>
                 </ul>
             </li>
             <li><b>Usługi Newslettera:</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Freshmail (freshmail.pl/polityka-prywatnosci/)</li>
-                    <li>MailChimp (mailchimp.com/legal/privacy/)</li>
+                    <li>MailerLite (mailerlite.com/legal/privacy-policy)</li>
                 </ul>
             </li>
-            <li><b>Usługi serwowania reklam oraz sieci afiliacyjne:</b>
+            <li><b>Zarządzanie zgodami (cookie consent):</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Google Adsense (policies.google.com/privacy?hl=pl)</li>
-                    <li>MyLead (mylead.global/pl/polityka-prywatnosci)</li>
+                    <li>Klaro (klaro.org) – narzędzie do zarządzania zgodami na pliki cookie i usługi zewnętrzne</li>
                 </ul>
             </li>
             <li><b>Prowadzenie statystyk:</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Google Analytics (policies.google.com/privacy?hl=pl)</li>
-                    <li>SEMrush (semrush.com/company/legal/privacy-policy/)</li>
-                    <li>WordPress Stats (Automattic Inc.) (automattic.com/privacy/)</li>
-                    <li>Facebook Analytics for Apps (facebook.com/privacy/explanation)</li>
+                    <li>Google Tag Manager (policies.google.com/privacy?hl=pl) – zarządzanie tagami analitycznymi i marketingowymi</li>
                 </ul>
             </li>
-            <li><b>Usługi inne:</b>
+            <li><b>Usługi hostingowe:</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Mapy Google (google.com/intl/en_be/help/terms_maps/)</li>
+                    <li>Netlify (netlify.com/privacy) – hosting serwisu i funkcje serwerowe</li>
                 </ul>
             </li>
         </ul>
@@ -292,7 +285,6 @@
         </ul>
         <b>Dane gromadzone podczas zapisu do usługi Newsletter</b>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li>Imię / nazwisko / pseudonim</li>
             <li>Adres e-mail</li>
             <li>Adres IP (zbierane automatycznie)</li>
         </ul>
@@ -319,25 +311,27 @@
         <b>Powierzenie przetwarzania danych osobowych – Newsletter</b>
 
         <p class="text-lg">Administrator w celu świadczenia usługi Newsletter, korzysta z usług podmiotu trzeciego – serwisu
-        <b>Freshmail (freshmail.pl/polityka-prywatnosci/</b>)<b>, MailChimp (mailchimp.com/legal/privacy/</b>)</p>
-        <p class="text-lg">. Dane wprowadzone w formularzu zapisu do newslettera są przekazywane, przechowywane i przetwarzane w
-            serwisie zewnętrznym tego usługodawcy.</p>
+        <b>MailerLite</b> (mailerlite.com/legal/privacy-policy), z siedzibą na Litwie (MailerLite Limited, Vilnius).</p>
+        <p class="text-lg">Dane wprowadzone w formularzu zapisu do newslettera (adres e-mail) są przekazywane, przechowywane i przetwarzane w
+            serwisie zewnętrznym tego usługodawcy. MailerLite przetwarza dane na terenie Unii Europejskiej.</p>
 
         <p class="text-lg">Informujemy, że wskazany partner może modyfikować wskazaną politykę prywatności bez zgody Administratora.</p>
 
-        <b>Powierzenie przetwarzania danych osobowych – Usługi Hostingu, VPS lub Serwerów Dedykowanych</b>
+        <b>Powierzenie przetwarzania danych osobowych – Usługi Hostingu</b>
 
-        <p class="text-lg">Administrator w celu prowadzenia serwisu korzysta z usług zewnętrznego dostawcy hostingu, VPS lub Serwerów
-            Dedykowanych – <b>Kru.pl Sp. z o.o</b>. Wszelkie dane gromadzone i przetwarzane w serwisie są
-        przechowywane i przetwarzane w infrastrukturze usługodawcy zlokalizowanej w Polsce. Istnieje możliwość dostępu
-        do danych wskutek prac serwisowych realizowanych przez personel usługodawcy. Dostęp do tych danych reguluje
-        umowa zawarta pomiędzy Administratorem a Usługodawcą.</p>
+        <p class="text-lg">Administrator w celu prowadzenia serwisu korzysta z usług zewnętrznego dostawcy hostingu –
+            <b>Netlify, Inc.</b> (netlify.com/privacy), z siedzibą w San Francisco, USA. Dane gromadzone i przetwarzane
+        w serwisie mogą być przechowywane w infrastrukturze usługodawcy zlokalizowanej na terenie Stanów Zjednoczonych
+        oraz Unii Europejskiej. Netlify zapewnia odpowiedni poziom ochrony danych osobowych zgodnie z postanowieniami
+        EU-U.S. Data Privacy Framework. Istnieje możliwość dostępu do danych wskutek prac serwisowych realizowanych
+        przez personel usługodawcy. Dostęp do tych danych reguluje polityka prywatności usługodawcy.</p>
         <h2 class="text-4xl py-4">§10 Sposób przetwarzania danych osobowych</h2>
         <b>Dane osobowe podane dobrowolnie przez Użytkowników:</b>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li>Dane osobowe nie będą przekazywane poza Unię Europejską, chyba że zostały opublikowane na skutek
-                indywidualnego działania Użytkownika (np. wprowadzenie komentarza lub wpisu), co sprawi, że dane będą
-                dostępne dla każdej osoby odwiedzającej serwis.</li>
+            <li>Dane osobowe mogą być przekazywane poza Unię Europejską wyłącznie w zakresie niezbędnym do
+                świadczenia usług hostingowych (Netlify, Inc., USA) na podstawie EU-U.S. Data Privacy Framework,
+                lub gdy zostały opublikowane na skutek indywidualnego działania Użytkownika (np. wprowadzenie
+                komentarza lub wpisu), co sprawi, że dane będą dostępne dla każdej osoby odwiedzającej serwis.</li>
             <li>Dane osobowe nie będą wykorzystywane do zautomatyzowanego podejmowania decyzji (profilowania).</li>
             <li>Dane osobowe nie będą odsprzedawane podmiotom trzecim.</li>
         </ul>
