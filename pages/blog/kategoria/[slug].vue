@@ -25,14 +25,19 @@ const wpCategory = computed(() =>
   (wpCategories.value || []).find(c => c.slug === slug)
 )
 
-// Pobierz posty
+// Pobierz posty (tylko jesli mamy ID kategorii — bez niego API zwroci WSZYSTKIE posty)
 const { data: result, error: postsError } = await useAsyncData(
   `cat-${slug}-page-${page.value}`,
-  () => getPosts({
-    categoryId: wpCategory.value?.id,
-    page: page.value,
-    perPage,
-  }),
+  () => {
+    if (!wpCategory.value?.id) {
+      return { posts: [], total: 0, totalPages: 0 }
+    }
+    return getPosts({
+      categoryId: wpCategory.value.id,
+      page: page.value,
+      perPage,
+    })
+  },
   { watch: [page] }
 )
 
