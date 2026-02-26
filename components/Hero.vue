@@ -48,14 +48,24 @@
         </div>
 
         <!-- Prawa kolumna: obrazki -->
-        <div class="order-1 lg:order-2 relative hidden lg:flex items-center justify-center min-h-[280px] lg:min-h-[340px]">
+        <!-- Mobile/tablet: row above text, images side by side -->
+        <div class="order-1 lg:order-2 flex lg:hidden items-center justify-center gap-4 py-4">
+          <div class="w-32 xs:w-36 sm:w-44 rotate-6 rounded-lg border-black-700 border-b-4 border-r-8 shrink-0">
+            <img :src="heroImg1" alt="" class="w-full rounded-lg" />
+          </div>
+          <div class="w-32 xs:w-36 sm:w-44 -rotate-6 rounded-lg border-black-700 border-r-4 border-b-8 shrink-0">
+            <img :src="heroImg2" alt="" class="w-full rounded-lg" />
+          </div>
+        </div>
+        <!-- Desktop: absolute positioned -->
+        <div class="order-1 lg:order-2 relative hidden lg:flex items-center justify-center min-h-[340px]">
           <div
-            class="absolute -top-4 left-4 xl:left-8 w-48 lg:w-56 xl:w-64 rotate-12 rounded-lg border-black-700 border-b-4 border-r-8"
+            class="absolute -top-4 left-8 xl:left-12 w-56 xl:w-64 rotate-12 rounded-lg border-black-700 border-b-4 border-r-8"
           >
             <img :src="heroImg1" alt="" />
           </div>
           <div
-            class="absolute bottom-0 right-4 xl:right-0 w-48 lg:w-56 xl:w-64 -rotate-12 rounded-lg border-black-700 border-r-4 border-b-8"
+            class="absolute bottom-0 right-4 xl:right-0 w-56 xl:w-64 -rotate-12 rounded-lg border-black-700 border-r-4 border-b-8"
           >
             <img :src="heroImg2" alt="" />
           </div>

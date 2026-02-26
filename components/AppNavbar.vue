@@ -1,14 +1,14 @@
 <template>
-  <nav class="flex relative justify-end lg:justify-end" aria-label="Main Navigation">
-    <!-- Logo -->
-    <NuxtLink to="/" class="absolute left-0 flex items-center gap-1 pl-2 pt-2">
-      <BlogLogo :size="40" />
-      <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent hidden sm:inline">Twoja Kolorowanka</span>
-    </NuxtLink>
+  <nav class="px-4 sm:px-6 lg:px-8 pt-6 relative" aria-label="Main Navigation">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <NuxtLink to="/" class="flex items-center gap-2 shrink-0 no-underline">
+        <BlogLogo :size="36" />
+        <span class="font-baloo text-lg font-extrabold bg-gradient-to-br from-[#FF6B6B] to-[#9B72CF] bg-clip-text text-transparent hidden sm:inline">Twoja Kolorowanka</span>
+      </NuxtLink>
 
-    <div class="px-4 sm:px-6 lg:px-8 pt-8 w-full">
       <!-- Desktop menu -->
-      <div class="hidden md:flex space-x-6 justify-end" role="menubar" aria-label="Main Menu">
+      <div class="hidden md:flex items-center space-x-6" role="menubar" aria-label="Main Menu">
         <NuxtLink to="/" class="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-xl flex items-center">
           Strona główna
         </NuxtLink>
@@ -32,7 +32,7 @@
             height="36"
             name="ci:hamburger-md"
             dynamic
-            class="w-6 h-6 transition-transform duration-300 absolute top-4 right-4"
+            class="w-6 h-6 transition-transform duration-300"
           />
         </button>
       </div>
@@ -114,15 +114,13 @@ const categoryLinks = [
       { name: 'T-rex', slug: 'zwierzeta/t-rex' }
     ]
   },
-    {
+  {
     name: 'Rośliny',
     slug: 'rosliny',
     children: [
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
       { name: 'Dynie', slug: 'rosliny/dynie' },
       { name: 'Grzyby', slug: 'rosliny/grzyby' },
-
-
     ]
   },
   {
@@ -132,7 +130,6 @@ const categoryLinks = [
       { name: 'Lody', slug: 'jedzenie/lody' },
       { name: 'Torty', slug: 'jedzenie/torty' },
       { name: 'Jabłka', slug: 'jedzenie/jablka' },
-
     ]
   },
   {
@@ -142,10 +139,9 @@ const categoryLinks = [
       { name: 'Jesień', slug: 'pory-roku/jesien' },
       { name: 'Zima', slug: 'pory-roku/zima' },
       { name: 'Lato', slug: 'pory-roku/lato' },
-
     ]
   },
-    {
+  {
     name: 'Dla dorosłych',
     slug: 'dla-doroslych',
     children: [

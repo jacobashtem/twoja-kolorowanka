@@ -42,6 +42,9 @@ importers:
       '@zadigetvoltaire/nuxt-gtm':
         specifier: ^0.0.13
         version: 0.0.13(magicast@0.5.2)(nuxt@3.21.1(@parcel/watcher@2.5.6)(@types/node@25.3.1)(@vue/compiler-sfc@3.5.29)(cac@6.7.14)(db0@0.3.4)(ioredis@5.9.3)(magicast@0.5.2)(rollup@4.59.0)(terser@5.46.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.3.1)(jiti@2.6.1)(terser@5.46.0)(yaml@2.8.2))(yaml@2.8.2))(vue@3.5.29(typescript@5.9.3))
+      nuxt-disqus:
+        specifier: ^1.2.0
+        version: 1.2.0(magicast@0.5.2)(typescript@5.9.3)
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@25.3.1)(typescript@5.9.3)
@@ -3203,6 +3206,10 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
+  nuxt-disqus@1.2.0:
+    resolution: {integrity: sha512-SWgOAv/ZHVg3u4NM9XLJXyTIo4fu2g+B7kA83xBIbyXLML7CvHvieajwZqsSG5ShyiT+ywHWtFLl0Z0P6fqg5A==}
+    engines: {node: '>=20.0.0'}
+
   nuxt-site-config-kit@3.2.21:
     resolution: {integrity: sha512-fvvAyv/mBUqnzsqro4iuXHypFtEUVIPYVW7e5j1/oP9JANfHFrGqosUhY8FAkI21HZgJ8H/8GdcQtnnN2xk+QA==}
 
@@ -4474,6 +4481,9 @@ packages:
         optional: true
       pinia:
         optional: true
+
+  vue3-disqus@1.0.7:
+    resolution: {integrity: sha512-6aidR9tU9lBbB8Ib8zZ0+wQks7a9X7g7vzuqwLvcf+PKTzumxST9UbNXRf8/D2KprChf5qEnt2qtf9Bev6AMUw==}
 
   vue@3.5.29:
     resolution: {integrity: sha512-BZqN4Ze6mDQVNAni0IHeMJ5mwr8VAJ3MQC9FmprRhcBYENw+wOAAjRj8jfmN6FLl0j96OXbR+CjWhmAmM+QGnA==}
@@ -8268,6 +8278,15 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
+  nuxt-disqus@1.2.0(magicast@0.5.2)(typescript@5.9.3):
+    dependencies:
+      '@nuxt/kit': 4.3.1(magicast@0.5.2)
+      defu: 6.1.4
+      vue3-disqus: 1.0.7(typescript@5.9.3)
+    transitivePeerDependencies:
+      - magicast
+      - typescript
+
   nuxt-site-config-kit@3.2.21(magicast@0.5.2)(vue@3.5.29(typescript@5.9.3)):
     dependencies:
       '@nuxt/kit': 4.3.1(magicast@0.5.2)
@@ -9835,6 +9854,12 @@ snapshots:
       yaml: 2.8.2
     optionalDependencies:
       '@vue/compiler-sfc': 3.5.29
+
+  vue3-disqus@1.0.7(typescript@5.9.3):
+    dependencies:
+      vue: 3.5.29(typescript@5.9.3)
+    transitivePeerDependencies:
+      - typescript
 
   vue@3.5.29(typescript@5.9.3):
     dependencies:

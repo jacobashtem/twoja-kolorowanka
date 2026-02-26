@@ -191,6 +191,17 @@ async function copyLink() {
           </ClientOnly>
         </div>
 
+        <!-- Comments -->
+        <section class="mt-16 pt-12 border-t border-[#C8B4DC]/20">
+          <h2 class="font-baloo text-[1.4rem] font-extrabold mb-6 text-[#2A1B3D]">Komentarze</h2>
+          <ClientOnly>
+            <DisqusComments :identifier="`/blog/${slug}/`" :url="`https://twoja-kolorowanka.pl/blog/${slug}/`" />
+            <template #fallback>
+              <p class="text-[#8B7BA5] text-sm">Ładowanie komentarzy...</p>
+            </template>
+          </ClientOnly>
+        </section>
+
         <!-- Related posts -->
         <BlogRelatedPosts v-if="relatedPosts" :posts="relatedPosts" />
       </article>

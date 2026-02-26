@@ -1,6 +1,6 @@
 <script setup>
 import { useBlog } from '~/composables/useBlog'
-import { getCategoryConfig } from '~/composables/useBlogCategories'
+import { getCategoryConfig, getSortedCategories } from '~/composables/useBlogCategories'
 
 definePageMeta({
   layout: 'blog',
@@ -65,6 +65,11 @@ const heroBgStyle = computed(() => {
   }
 })
 
+// Suggested categories for empty state (exclude current)
+const suggestedCategories = computed(() =>
+  getSortedCategories().filter(c => c.slug !== slug).slice(0, 4)
+)
+
 function onPageChange(newPage) {
   router.push({ query: { strona: newPage > 1 ? newPage : undefined } })
 }
@@ -120,9 +125,42 @@ function onPageChange(newPage) {
           />
         </div>
 
-        <div v-else class="text-center py-10 text-[#5C4A72]">
-          <p>Brak artykułów w tej kategorii.</p>
-          <NuxtLink to="/blog/" class="text-[#9B72CF] font-semibold no-underline inline-block mt-3">← Wróć do bloga</NuxtLink>
+        <div v-else class="my-16 flex flex-col items-center text-center">
+          <!-- Decorative illustration -->
+          <div class="relative mb-8">
+            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-[#F5F0FF] to-[#E8DEF8] flex items-center justify-center">
+              <span class="text-6xl">{{ catConfig?.emoji || '📝' }}</span>
+            </div>
+            <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#FFD93D]/30 flex items-center justify-center text-sm">✨</div>
+            <div class="absolute -bottom-1 -left-3 w-6 h-6 rounded-full bg-[#FF6B6B]/20"></div>
+          </div>
+
+          <h2 class="font-baloo text-2xl font-extrabold text-[#2A1B3D] mb-3">
+            Tu jeszcze pusto...
+          </h2>
+          <p class="text-[#5C4A72] text-base max-w-md leading-relaxed mb-2">
+            Pracujemy nad artykułami z kategorii <strong>{{ categoryName }}</strong>.
+          </p>
+          <p class="text-[#8B7BA5] text-sm max-w-sm mb-8">
+            Wkrótce pojawią się tutaj wartościowe treści. Tymczasem zajrzyj do innych kategorii!
+          </p>
+
+          <div class="flex flex-wrap gap-3 justify-center">
+            <NuxtLink
+              to="/blog/"
+              class="inline-flex items-center gap-2 py-2.5 px-6 rounded-full bg-gradient-to-r from-[#FF6B6B] to-[#9B72CF] text-white font-baloo font-bold text-sm no-underline transition-all duration-300 hover:shadow-lg hover:scale-105"
+            >
+              ← Wróć do bloga
+            </NuxtLink>
+            <NuxtLink
+              v-for="sug in suggestedCategories"
+              :key="sug.slug"
+              :to="`/blog/kategoria/${sug.slug}/`"
+              class="inline-flex items-center gap-1.5 py-2.5 px-5 rounded-full border-2 border-[#C8B4DC]/25 text-[#5C4A72] font-baloo font-semibold text-sm no-underline transition-all duration-200 hover:border-[#9B72CF] hover:text-[#9B72CF] hover:bg-[#9B72CF]/5"
+            >
+              {{ sug.emoji }} {{ sug.slug.charAt(0).toUpperCase() + sug.slug.slice(1) }}
+            </NuxtLink>
+          </div>
         </div>
 
         <!-- Pagination -->
