@@ -45,7 +45,7 @@ export function useBlogApi() {
     } = params
 
     const queryParams = {
-      _embed: '',
+      _embed: '1',
       page,
       per_page: perPage,
       orderby: 'date',
@@ -70,7 +70,7 @@ export function useBlogApi() {
    */
   async function getPostBySlug(slug) {
     const result = await wpFetch('/posts', {
-      _embed: '',
+      _embed: '1',
       slug,
       per_page: 1,
     })

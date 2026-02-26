@@ -1,5 +1,17 @@
+[DEBUG] Pobieram z: https://tk.delash.pl/wp-json/wp/v2/posts?per_page=100&page=1&_fields=slug&status=publish
 [
   "/blog",
+  "/blog/deszczowy-weekend-z-dzieckiem-5-kreatywnych-zabaw-w-domu-ktore-uratuja-wam-dzien-i-dywan",
+  "/blog/kategoria/edukacja",
+  "/blog/kategoria/inspiracje",
+  "/blog/kategoria/kuchnia",
+  "/blog/kategoria/podroze",
+  "/blog/kategoria/recenzje",
+  "/blog/kategoria/rodzic",
+  "/blog/kategoria/technologie",
+  "/blog/kategoria/wychowanie",
+  "/blog/kategoria/zabawa",
+  "/blog/kategoria/zdrowie",
   "/dla-chlopcow",
   "/dla-doroslych",
   "/dla-doroslych/antystresowe",

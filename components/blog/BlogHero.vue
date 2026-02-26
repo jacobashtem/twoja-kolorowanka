@@ -34,8 +34,8 @@
           {{ post.title }}
         </h1>
         <p class="text-base leading-relaxed text-[#5C4A72] mb-7 max-w-[420px]">
-          {{ post.excerpt }}
-        </p>
+{{ post.excerpt }}
+        </p> 
         <div class="flex gap-5 text-sm text-[#8B7BA5]">
           <span>📅 {{ post.dateFormatted }}</span>
           <span>⏱ {{ post.readingTime }} min czytania</span>
