@@ -268,12 +268,12 @@ useHead(() => {
 
 <template>
   <div>
-    <div class="flex justify-center mt-20 2xl:mt-8 w-full">
+    <div class="flex justify-center mt-4 sm:mt-12 md:mt-20 2xl:mt-8 w-full">
       <UContainer class="w-full">
 
         <h1
           v-if="doc && isLeaf"
-          class=" text-tertiary-500 mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
+          class=" text-tertiary-500 mt-4 sm:mt-8 md:mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
           :aria-label="fullTitle"
         >
           {{ doc?.description }}
