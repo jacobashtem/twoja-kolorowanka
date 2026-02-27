@@ -39,12 +39,12 @@ export default defineNuxtPlugin(() => {
         consentModal: {
           title: '🍪 Szanujemy Twoją prywatność',
           description:
-            'Używamy plików cookie, aby zapewnić prawidłowe działanie strony, analizować ruch i umożliwić interakcję z innymi użytkownikami. Poniżej możesz wybrać, na które kategorie plików cookie wyrażasz zgodę. Możesz zmienić swoje preferencje w dowolnym momencie.',
+            'Używamy ciasteczek, aby zapewnić prawidłowe działanie strony, analizować ruch i umożliwić Ci interakcję z innymi użytkownikami. Poniżej możesz zdecydować, na które z nich wyrażasz zgodę. Swoje preferencje możesz zmienić w dowolnym momencie.',
         },
         consentNotice: {
           description:
-            'Nasza strona używa plików cookie do celów {purposes}. Klikając „Akceptuję wszystkie", wyrażasz zgodę na wszystkie kategorie cookies. Możesz też dostosować swoje preferencje klikając „Ustawienia".',
-          changeDescription: 'Nastąpiły zmiany od Twojej ostatniej wizyty. Zaktualizuj swoje zgody.',
+            'Nasza strona używa ciasteczek z następujących kategorii: {purposes}. Klikając „Akceptuję wszystkie”, wyrażasz zgodę na użycie ich wszystkich. Możesz też dostosować swoje preferencje, klikając „Ustawienia”.',
+          changeDescription: 'Od Twojej ostatniej wizyty wprowadziliśmy zmiany. Prosimy o aktualizację preferencji dotyczących plików cookie.',
           learnMore: 'Ustawienia',
         },
         acceptAll: 'Akceptuję wszystkie',
@@ -56,25 +56,25 @@ export default defineNuxtPlugin(() => {
         purposes: {
           niezbedne: {
             title: 'Niezbędne',
-            description: 'Te pliki cookie są konieczne do prawidłowego działania strony. Nie można ich wyłączyć.',
+            description: 'Te pliki cookie są konieczne do prawidłowego funkcjonowania naszej strony i nie mogą zostać wyłączone.',
           },
           analytics: {
             title: 'Statystyczne',
-            description: 'Pliki cookie statystyczne pomagają nam zrozumieć, w jaki sposób użytkownicy korzystają ze strony, zbierając anonimowe informacje o ruchu i zachowaniach.',
+            description: 'Statystyczne pliki cookie pomagają nam zrozumieć, jak użytkownicy korzystają ze strony. Zbierają i raportują anonimowe informacje o ruchu.',
           },
           social: {
             title: 'Społecznościowe',
-            description: 'Pliki cookie społecznościowe umożliwiają komentowanie artykułów i interakcję z innymi użytkownikami.',
+            description: 'Społecznościowe pliki cookie pozwalają m.in. na komentowanie artykułów i łatwą interakcję z innymi użytkownikami.',
           },
         },
         'klaro-cookie': {
-          description: 'Przechowuje informacje o Twoich preferencjach dotyczących plików cookie (ten wybór). Maksymalny okres przechowywania: 1 rok.',
+          description: 'Zapisuje Twój wybór dotyczący zgody na pliki cookie. Maksymalny czas przechowywania: 1 rok.',
         },
         gtm: {
-          description: 'Google Analytics zbiera anonimowe statystyki odwiedzin, które pomagają nam ulepszać stronę. Cookies: _ga (2 lata), _gid (24h), _gat (1 min).',
+          description: 'Narzędzie Google Analytics zbiera anonimowe statystyki, które pomagają nam ulepszać stronę. Ciasteczka: _ga (2 lata), _gid (24 godziny), _gat (1 minuta).',
         },
         disqus: {
-          description: 'System komentarzy Disqus umożliwia dyskusję pod artykułami na naszym blogu. Cookies: disqus_unique (1 rok).',
+          description: 'System Disqus umożliwia dodawanie komentarzy pod materiałami. Ciasteczka: disqus_unique (1 rok).',
         },
       },
     },
