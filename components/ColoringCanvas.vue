@@ -1,66 +1,121 @@
 <template>
-  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
-    <div class="border rounded-lg shadow-sm bg-white">
-      <!-- Toolbar -->
-      <div class="flex items-center justify-between border-b p-4 flex-wrap wrap">
-        <span class="block md:inline-block font-semibold text-lg">Tryb kolorowania</span>
-        <div class="flex gap-2 items-center flex-wrap">
-          <button @click="mode = 'fill'" :class="mode==='fill'?btnActive:btn">
-            <UIcon name="ion:color-wand-sharp" class="text-2xl" dynamic /> Wypełnij
-          </button>
-          <button @click="mode = 'draw'" :class="mode==='draw'?btnActive:btn">
-            <UIcon name="material-symbols:brush-sharp" class="text-2xl" dynamic /> Rysuj
-          </button>
-          <div>
-            <UIcon name="material-symbols:undo" @click="undo" class="text-2xl cursor-pointer hover:opacity-30" dynamic />
-            <UIcon name="bi:trash-fill" @click="resetAll" class="text-2xl cursor-pointer hover:opacity-30" dynamic />
+  <div class="coloring-app w-full px-2 sm:px-4 pb-4">
+
+    <!-- Floating Toolbar -->
+    <div class="max-w-5xl mx-auto mb-3">
+      <div class="toolbar-glass rounded-2xl px-3 py-2.5 sm:px-5 sm:py-3 flex items-center justify-between gap-2 flex-wrap">
+
+        <!-- Left: Mode Toggle -->
+        <div class="flex items-center gap-2">
+          <div class="inline-flex rounded-xl overflow-hidden shadow-sm bg-white/60 border border-white/40">
+            <button
+              @click="mode = 'fill'"
+              class="flex items-center gap-1.5 px-3.5 py-2 sm:px-5 sm:py-2.5 text-sm font-bold transition-all duration-200 rounded-l-xl"
+              :class="mode === 'fill'
+                ? 'bg-gradient-to-r from-sec-500 to-sec-400 text-white shadow-md'
+                : 'text-coolGray-600 hover:bg-white/80'"
+            >
+              <UIcon name="ion:color-wand-sharp" class="text-lg" dynamic />
+              <span class="hidden xs:inline">Wypełnij</span>
+            </button>
+            <button
+              @click="mode = 'draw'"
+              class="flex items-center gap-1.5 px-3.5 py-2 sm:px-5 sm:py-2.5 text-sm font-bold transition-all duration-200 rounded-r-xl"
+              :class="mode === 'draw'
+                ? 'bg-gradient-to-r from-tertiary-500 to-tertiary-400 text-white shadow-md'
+                : 'text-coolGray-600 hover:bg-white/80'"
+            >
+              <UIcon name="material-symbols:brush-sharp" class="text-lg" dynamic />
+              <span class="hidden xs:inline">Rysuj</span>
+            </button>
           </div>
         </div>
-      </div>
 
-      <!-- Canvas + Palette -->
-      <div class="p-4 grid lg:grid-cols-4 gap-6">
-        <div class="lg:col-span-1">
-          
-          <h3 class="text-lg font-semibold mb-4">Paleta Kolorów</h3>
-          <div class="flex flex-wrap gap-2">
+        <!-- Center: Brush Size (draw mode only) -->
+        <transition name="slide-fade">
+          <div v-if="mode === 'draw'" class="flex items-center gap-2 sm:gap-3 flex-1 justify-center max-w-xs">
             <div
-              v-for="c in COLORS" :key="c"
-              @click="selectedColor = c"
-              :style="{ backgroundColor: c }"
-              class="w-6 h-6 rounded-lg cursor-pointer border transition-all hover:scale-110"
-              :class="selectedColor === c ? 'ring-2 ring-offset-1 ring-black' : ''"
+              class="w-5 h-5 rounded-full border-2 border-coolGray-300 shrink-0"
+              :style="{ backgroundColor: selectedColor }"
             />
+            <input
+              type="range" min="1" max="80" v-model="drawSize"
+              class="brush-slider flex-1 h-2 rounded-full appearance-none cursor-pointer"
+            />
+            <span class="text-xs font-bold text-coolGray-500 bg-white/70 px-2 py-1 rounded-full min-w-[40px] text-center">{{ drawSize }}px</span>
           </div>
-          <div class="my-4">
-            <label class="block text-sm font-medium mb-1">Rozmiar pędzla: {{ drawSize }}px</label>
-            <input type="range" min="1" max="100" v-model="drawSize" class="w-full" />
-          </div>
-          <div class="p-3 bg-gray-50 rounded-lg">
-            <p class="text-sm font-medium">Wybrany kolor:</p>
-            <div class="flex items-center gap-2 mt-1">
-              <div class="w-6 h-6 rounded border" :style="{ backgroundColor: selectedColor }" />
-              <span class="text-sm font-mono">{{ selectedColor }}</span>
-            </div>
-          </div>
-        </div>
+        </transition>
 
-        <div class="lg:col-span-3">
-          <div class="flex items-center justify-center">
-            <canvas
-              ref="canvas"
-              class="block mx-auto border"
-              @click="onCanvasClick"
-              @pointerdown="onPointerDown"
-              @pointermove="onPointerMove"
-              @pointerup="onPointerUp"
-              @pointerleave="onPointerUp"
-            />
-          </div>
-          <p class="mt-4 text-center text-sm text-gray-600">💡 <strong>Tip:</strong> Kliknij lub rysuj!</p>
+        <!-- Right: Action Buttons -->
+        <div class="flex items-center gap-1">
+          <button
+            @click="undo"
+            class="p-2.5 rounded-xl text-coolGray-500 hover:text-sec-600 hover:bg-white/80 transition-all duration-150"
+            title="Cofnij"
+          >
+            <UIcon name="material-symbols:undo" class="text-xl" dynamic />
+          </button>
+          <button
+            @click="resetAll"
+            class="p-2.5 rounded-xl text-coolGray-500 hover:text-main-500 hover:bg-white/80 transition-all duration-150"
+            title="Wyczyść wszystko"
+          >
+            <UIcon name="bi:trash-fill" class="text-xl" dynamic />
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- Canvas Area - big and centered -->
+    <div class="max-w-5xl mx-auto mb-3">
+      <div class="canvas-container rounded-2xl overflow-hidden shadow-xl bg-white border-2 border-coolGray-200/60">
+        <div class="flex items-center justify-center p-2 sm:p-3">
+          <canvas
+            ref="canvas"
+            class="block rounded-xl"
+            :class="mode === 'fill' ? 'cursor-cell' : 'cursor-crosshair'"
+            @click="onCanvasClick"
+            @pointerdown="onPointerDown"
+            @pointermove="onPointerMove"
+            @pointerup="onPointerUp"
+            @pointerleave="onPointerUp"
+          />
+        </div>
+      </div>
+      <p class="mt-2 text-center text-sm text-coolGray-400 font-medium">
+        <span v-if="mode === 'fill'">Kliknij w obszar, aby go wypełnić kolorem</span>
+        <span v-else>Przytrzymaj i rysuj po obrazku</span>
+      </p>
+    </div>
+
+    <!-- Color Palette - big beautiful buttons at the bottom -->
+    <div class="max-w-5xl mx-auto">
+      <div class="palette-glass rounded-2xl px-3 py-3 sm:px-5 sm:py-4">
+        <!-- Selected color preview + label -->
+        <div class="flex items-center gap-3 mb-3">
+          <div
+            class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl shadow-md border-2 border-white shrink-0 transition-colors duration-200"
+            :style="{ backgroundColor: selectedColor }"
+          />
+          <div class="flex-1 min-w-0">
+            <p class="text-xs font-bold text-coolGray-500 uppercase tracking-wider">Paleta kolorów</p>
+            <p class="text-xs font-mono text-coolGray-400 truncate">{{ selectedColor }}</p>
+          </div>
+        </div>
+
+        <!-- Color Groups -->
+        <div class="color-grid">
+          <button
+            v-for="c in COLORS" :key="c"
+            @click="selectedColor = c"
+            :style="{ backgroundColor: c }"
+            class="color-btn"
+            :class="selectedColor === c ? 'color-btn-active' : ''"
+          />
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -70,26 +125,31 @@ import { useWindowSize } from '@vueuse/core'
 
 const props = defineProps({ svgUrl: String })
 
-// --- full color palette ---
+// --- full color palette (organized by hue groups) ---
 const COLORS = [
-  '#FF0000','#FFA500','#FFFF00','#00FF00','#0000FF','#800080','#FF69B4','#964B00','#000000',
-  '#FFFFFF','#343433','#4E4D4E','#676868','#979797','#CECCCC','#ECECEC',
-  '#EC2527','#D91E36','#A62E32','#EF3C46','#B44426','#931B1E','#F26F68','#7D4829','#AD732A',
-  '#E0398C','#EC4394','#DD64A5','#DB778D','#C296C5','#BA539F','#9D2482','#9060A8','#6B449B','#5A499E',
-  '#F37123','#F16824','#F16A2D','#F99B2A','#FDBE17','#FFCD37','#FDD209','#FCD55A',
-  '#F7ED45','#FBEE34','#BACD3F','#68AF46','#54B948',
-  '#6ABD46','#169E49','#06753D','#8DC63F','#3E8733','#A4C400','#C9E265',
-  '#71CCDC','#3CBEB7','#00FFFF','#1AA6B7','#009688','#40E0D0',
-  '#1890CA','#3C75BB','#4455A4','#024259','#0066CC','#00008B','#5DA9E9',
-  '#E89D5E','#D8C077','#C47EDB','#583E98'
+  // Neutrals
+  '#FFFFFF','#ECECEC','#CECCCC','#979797','#676868','#4E4D4E','#343433','#000000',
+  // Reds & pinks
+  '#FF0000','#EC2527','#D91E36','#A62E32','#931B1E','#EF3C46','#F26F68','#FF69B4',
+  '#E0398C','#EC4394','#DD64A5','#DB778D',
+  // Purples
+  '#800080','#C296C5','#BA539F','#9D2482','#C47EDB','#9060A8','#6B449B','#5A499E','#583E98',
+  // Blues
+  '#0000FF','#00008B','#4455A4','#3C75BB','#0066CC','#5DA9E9','#1890CA','#024259',
+  // Teals & cyans
+  '#00FFFF','#71CCDC','#3CBEB7','#1AA6B7','#009688','#40E0D0',
+  // Greens
+  '#00FF00','#54B948','#6ABD46','#68AF46','#169E49','#06753D','#8DC63F','#3E8733','#A4C400','#BACD3F','#C9E265',
+  // Yellows
+  '#FFFF00','#FBEE34','#F7ED45','#FDD209','#FCD55A','#FFCD37','#FDBE17',
+  // Oranges & browns
+  '#FFA500','#F99B2A','#F37123','#F16824','#F16A2D','#B44426','#AD732A','#964B00','#7D4829',
+  '#E89D5E','#D8C077',
 ]
-
-const btn       = 'flex gap-3 rounded-sm p-3 grow border text-center border-sec-500 text-sec-500 font-bold uppercase text-sm'
-const btnActive = 'flex gap-3 items-center rounded-sm p-3 grow text-center bg-main-500 text-white font-bold uppercase text-sm tracking-widest'
 
 // --- reactive state ---
 const mode          = ref('fill')
-const selectedColor = ref(COLORS[0])
+const selectedColor = ref(COLORS[8]) // red
 const drawSize      = ref(10)
 const isDrawing     = ref(false)
 const lastPos       = ref({ x: 0, y: 0 })
@@ -99,16 +159,22 @@ const canvas       = ref(null)
 let   ctx          = null
 let   imgDataInit  = null
 
-const { width: winWidth } = useWindowSize()
+const { width: winWidth, height: winHeight } = useWindowSize()
 const DPR = typeof window !== 'undefined' ? window.devicePixelRatio || 1 : 1
 const canvasWidth  = ref(0)
 const canvasHeight = ref(0)
 
 // --- resize & load background SVG ---
 function resizeCanvas() {
-  canvasWidth.value  = Math.min(800, winWidth.value * 0.75)
-  canvasHeight.value = canvasWidth.value * 0.75
   const el = canvas.value
+  if (!el) return
+  const parent = el.parentElement
+  // Use much more space - up to 1100px width, and calculate height from viewport
+  const maxW = Math.min(1100, parent ? parent.clientWidth - 16 : winWidth.value - 32)
+  // Taller aspect ratio to maximize canvas size
+  const maxH = Math.max(400, winHeight.value - 340)
+  canvasWidth.value  = maxW
+  canvasHeight.value = Math.min(maxW * 0.75, maxH)
   el.width  = canvasWidth.value * DPR
   el.height = canvasHeight.value * DPR
   el.style.width  = canvasWidth.value + 'px'
@@ -164,7 +230,7 @@ function floodFill(x,y,fillColor){
   while(stack.length){
     const [cx,cy] = stack.pop()
     let ny = cy
-    while(ny>=0 && match(cx,ny)) ny-- 
+    while(ny>=0 && match(cx,ny)) ny--
     ny++
     let reachL=false,reachR=false
     while(ny<h && match(cx,ny)){
@@ -273,6 +339,136 @@ watch(() => props.svgUrl, () => {
 </script>
 
 <style scoped>
-canvas { display: block; }
-.border { border: 1px solid #ccc; }
+.toolbar-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.palette-glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.06),
+    0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.canvas-container {
+  background: repeating-conic-gradient(#f8f8f8 0% 25%, #fff 0% 50%) 50% / 20px 20px;
+}
+
+/* Color grid - responsive big buttons */
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+@media (min-width: 640px) {
+  .color-grid {
+    gap: 7px;
+  }
+}
+
+.color-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+@media (min-width: 480px) {
+  .color-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+}
+@media (min-width: 640px) {
+  .color-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .color-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  z-index: 10;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.color-btn-active {
+  transform: scale(1.15);
+  box-shadow:
+    0 0 0 3px #40ceac,
+    0 4px 12px rgba(64, 206, 172, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+.color-btn-active:hover {
+  transform: scale(1.25);
+}
+
+/* Brush slider */
+.brush-slider {
+  background: linear-gradient(to right, #e5e7eb, #9060a8);
+}
+.brush-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b45eb2, #9060a8);
+  cursor: pointer;
+  border: 2.5px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}
+.brush-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+.brush-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b45eb2, #9060a8);
+  cursor: pointer;
+  border: 2.5px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Transitions */
+.slide-fade-enter-active {
+  transition: all 0.25s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all 0.2s ease-in;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+canvas {
+  touch-action: none;
+}
 </style>

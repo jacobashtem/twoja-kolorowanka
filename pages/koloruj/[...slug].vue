@@ -1,80 +1,113 @@
 <template>
+<div class="min-h-screen bg-gradient-to-b from-coolGray-100/50 to-white">
 
-<div>
-<div class="flex justify-center mt-8 w-full">
-      <UContainer class="w-full">
-                  <!-- v-rainbow-text="fullTitle" -->
+  <!-- Page header with title and back button -->
+  <div class="bg-white border-b border-coolGray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+      <div class="flex items-center gap-3 sm:gap-4">
+        <NuxtLink
+          v-if="isLeaf"
+          :to="returnPath"
+          class="shrink-0 inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sec-50 text-sec-600 hover:bg-sec-100 hover:text-sec-700 transition-colors duration-150 border border-sec-200"
+          title="Powrót"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </NuxtLink>
+
         <h1
           v-if="doc"
-
-          class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
+          class="font-modak text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-coolGray-800 leading-tight"
           :aria-label="fullTitle"
+          v-rainbow-text="fullTitle"
         />
-      </UContainer>
+      </div>
     </div>
-      <ClientOnly>
-      <UContainer v-if="isLeaf" class="mb-6 mt-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <NuxtLink
-            :to="returnPath"
-            class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
-          >
-            <img src="/vectors/return.svg" class="w-16 h-16" alt="Powrót" />
-            Powrót
-          </NuxtLink>
-        </div>
-      </UContainer>
-
-      <div v-if="isLeaf">
-        <ColoringCanvas :svg-url="imageUrl"/>
-      </div>
-      <div v-else class="container mx-auto mt-12">
-        <div v-if="!doc" class="text-red-600">Nie znaleziono strony.</div>
-
-        <div v-else class="space-y-6">
-          <div v-if="Array.isArray(childrenCategories) && childrenCategories.length">
-            <p class="font-semibold text-lg mb-2">Podkategorie:</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li v-for="c in childrenCategories" :key="c._path">
-                <NuxtLink :to="c._path" class="text-blue-600 hover:underline">
-                  {{ c.title || lastSegment(c._path) }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div v-if="Array.isArray(childrenVariants) && childrenVariants.length">
-            <p class="font-semibold text-lg mb-2">
-              {{ childrenCategories?.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
-            </p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li v-for="v in childrenVariants" :key="v._path">
-                <NuxtLink :to="v._path" class="text-blue-600 hover:underline">
-                  {{ v.title || lastSegment(v._path) }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      </ClientOnly>
-
-    <UModal v-model="showPreviewModal" class="max-w-[90vw]">
-      <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
-        <div
-          class="bg-white shadow-md relative overflow-hidden"
-          style="aspect-ratio: 1 / 1.414; width: min(100%, 600px);"
-        >
-          <img
-            v-if="doc?.image"
-            :src="doc.image"
-            alt="Podgląd PDF"
-            class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
-          />
-        </div>
-      </div>
-    </UModal>
   </div>
+
+  <ClientOnly>
+    <!-- Canvas editor for leaf pages -->
+    <div v-if="isLeaf" class="mt-3 sm:mt-4">
+      <ColoringCanvas :svg-url="imageUrl"/>
+    </div>
+
+    <!-- Category/subcategory listing for non-leaf pages -->
+    <div v-else class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div v-if="!doc" class="text-center py-16">
+        <p class="text-coolGray-500 text-lg">Nie znaleziono strony.</p>
+      </div>
+
+      <div v-else class="space-y-8">
+        <!-- Subcategories -->
+        <div v-if="Array.isArray(childrenCategories) && childrenCategories.length">
+          <h2 class="font-baloo font-bold text-xl sm:text-2xl text-coolGray-700 mb-4">Podkategorie</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <NuxtLink
+              v-for="c in childrenCategories" :key="c._path"
+              :to="c._path"
+              class="flex items-center gap-3 p-4 bg-white rounded-xl border border-coolGray-200 shadow-sm hover:shadow-md hover:border-sec-300 transition-all duration-200 group"
+            >
+              <div class="w-10 h-10 rounded-lg bg-tertiary-100 text-tertiary-600 flex items-center justify-center shrink-0 group-hover:bg-tertiary-200 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                </svg>
+              </div>
+              <span class="font-semibold text-coolGray-700 group-hover:text-sec-600 transition-colors">
+                {{ c.title || lastSegment(c._path) }}
+              </span>
+            </NuxtLink>
+          </div>
+        </div>
+
+        <!-- Variants listing -->
+        <div v-if="Array.isArray(childrenVariants) && childrenVariants.length">
+          <h2 class="font-baloo font-bold text-xl sm:text-2xl text-coolGray-700 mb-4">
+            {{ childrenCategories?.length ? 'Warianty' : 'Dostępne kolorowanki' }}
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+            <NuxtLink
+              v-for="(v, idx) in childrenVariants" :key="v._path"
+              :to="'/koloruj' + v._path"
+              class="group flex flex-col items-center p-4 bg-white rounded-xl border border-coolGray-200 shadow-sm hover:shadow-md transition-all duration-200"
+              :class="[
+                'hover:border-' + ['main', 'sec', 'tertiary', 'yellow'][idx % 4] + '-300'
+              ]"
+            >
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg mb-2"
+                :class="[
+                  ['bg-main-400', 'bg-sec-400', 'bg-tertiary-400', 'bg-yellow-400'][idx % 4]
+                ]"
+              >
+                {{ lastSegment(v._path) }}
+              </div>
+              <span class="text-sm text-coolGray-600 text-center font-medium line-clamp-2">
+                {{ v.title || 'Wariant ' + lastSegment(v._path) }}
+              </span>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ClientOnly>
+
+  <UModal v-model="showPreviewModal" class="max-w-[90vw]">
+    <div class="flex justify-center items-center min-h-[80vh] bg-coolGray-100 p-4">
+      <div
+        class="bg-white shadow-lg rounded-xl relative overflow-hidden"
+        style="aspect-ratio: 1 / 1.414; width: min(100%, 600px);"
+      >
+        <img
+          v-if="doc?.image"
+          :src="doc.image"
+          alt="Podgląd PDF"
+          class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
+        />
+      </div>
+    </div>
+  </UModal>
+</div>
 </template>
 
 <script setup>
