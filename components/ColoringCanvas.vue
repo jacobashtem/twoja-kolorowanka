@@ -1,64 +1,147 @@
 <template>
-  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
-    <div class="border rounded-lg shadow-sm bg-white">
+  <div class="mx-auto px-2 sm:px-4 lg:px-8 max-w-7xl w-full pb-8">
+    <div class="rounded-2xl shadow-xl bg-white overflow-hidden border border-coolGray-200">
+
       <!-- Toolbar -->
-      <div class="flex items-center justify-between border-b p-4 flex-wrap wrap">
-        <span class="block md:inline-block font-semibold text-lg">Tryb kolorowania</span>
-        <div class="flex gap-2 items-center flex-wrap">
-          <button @click="mode = 'fill'" :class="mode==='fill'?btnActive:btn">
-            <UIcon name="ion:color-wand-sharp" class="text-2xl" dynamic /> Wypełnij
-          </button>
-          <button @click="mode = 'draw'" :class="mode==='draw'?btnActive:btn">
-            <UIcon name="material-symbols:brush-sharp" class="text-2xl" dynamic /> Rysuj
-          </button>
-          <div>
-            <UIcon name="material-symbols:undo" @click="undo" class="text-2xl cursor-pointer hover:opacity-30" dynamic />
-            <UIcon name="bi:trash-fill" @click="resetAll" class="text-2xl cursor-pointer hover:opacity-30" dynamic />
+      <div class="bg-gradient-to-r from-sec-500 to-sec-600 px-4 py-3 sm:px-6 sm:py-4">
+        <div class="flex items-center justify-between flex-wrap gap-3">
+          <div class="flex items-center gap-2 text-white">
+            <UIcon name="material-symbols:palette" class="text-2xl" dynamic />
+            <span class="font-baloo font-bold text-lg hidden sm:inline">Tryb kolorowania</span>
+          </div>
+
+          <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+            <!-- Mode toggle buttons -->
+            <div class="inline-flex rounded-xl overflow-hidden shadow-sm border border-white/20">
+              <button
+                @click="mode = 'fill'"
+                class="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 text-sm font-bold transition-all duration-200"
+                :class="mode === 'fill'
+                  ? 'bg-white text-sec-600 shadow-inner'
+                  : 'bg-white/10 text-white hover:bg-white/20'"
+              >
+                <UIcon name="ion:color-wand-sharp" class="text-lg" dynamic />
+                <span class="hidden xs:inline">Wypełnij</span>
+              </button>
+              <button
+                @click="mode = 'draw'"
+                class="flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 text-sm font-bold transition-all duration-200"
+                :class="mode === 'draw'
+                  ? 'bg-white text-sec-600 shadow-inner'
+                  : 'bg-white/10 text-white hover:bg-white/20'"
+              >
+                <UIcon name="material-symbols:brush-sharp" class="text-lg" dynamic />
+                <span class="hidden xs:inline">Rysuj</span>
+              </button>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex items-center gap-1">
+              <button
+                @click="undo"
+                class="p-2 rounded-lg text-white hover:bg-white/20 transition-colors duration-150"
+                title="Cofnij"
+              >
+                <UIcon name="material-symbols:undo" class="text-xl" dynamic />
+              </button>
+              <button
+                @click="resetAll"
+                class="p-2 rounded-lg text-white hover:bg-white/20 transition-colors duration-150"
+                title="Wyczyść wszystko"
+              >
+                <UIcon name="bi:trash-fill" class="text-xl" dynamic />
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Canvas + Palette -->
-      <div class="p-4 grid lg:grid-cols-4 gap-6">
-        <div class="lg:col-span-1">
-          
-          <h3 class="text-lg font-semibold mb-4">Paleta Kolorów</h3>
-          <div class="flex flex-wrap gap-2">
-            <div
-              v-for="c in COLORS" :key="c"
-              @click="selectedColor = c"
-              :style="{ backgroundColor: c }"
-              class="w-6 h-6 rounded-lg cursor-pointer border transition-all hover:scale-110"
-              :class="selectedColor === c ? 'ring-2 ring-offset-1 ring-black' : ''"
-            />
-          </div>
-          <div class="my-4">
-            <label class="block text-sm font-medium mb-1">Rozmiar pędzla: {{ drawSize }}px</label>
-            <input type="range" min="1" max="100" v-model="drawSize" class="w-full" />
-          </div>
-          <div class="p-3 bg-gray-50 rounded-lg">
-            <p class="text-sm font-medium">Wybrany kolor:</p>
-            <div class="flex items-center gap-2 mt-1">
-              <div class="w-6 h-6 rounded border" :style="{ backgroundColor: selectedColor }" />
-              <span class="text-sm font-mono">{{ selectedColor }}</span>
+      <!-- Main content area -->
+      <div class="flex flex-col lg:flex-row">
+
+        <!-- Sidebar: Color Palette (desktop: left side, mobile: below toolbar) -->
+        <div class="lg:w-64 xl:w-72 shrink-0 border-b lg:border-b-0 lg:border-r border-coolGray-200 bg-coolGray-100/50">
+          <div class="p-4 sm:p-5">
+
+            <!-- Selected color preview -->
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="w-10 h-10 rounded-xl border-2 border-coolGray-300 shadow-sm shrink-0"
+                :style="{ backgroundColor: selectedColor }"
+              />
+              <div class="min-w-0">
+                <p class="text-xs font-semibold text-coolGray-500 uppercase tracking-wide">Wybrany kolor</p>
+                <p class="text-sm font-mono text-coolGray-700 truncate">{{ selectedColor }}</p>
+              </div>
             </div>
+
+            <!-- Color palette -->
+            <div class="mb-4">
+              <p class="text-xs font-semibold text-coolGray-500 uppercase tracking-wide mb-2">Paleta kolorów</p>
+              <div class="grid grid-cols-9 sm:grid-cols-12 lg:grid-cols-7 gap-1.5">
+                <button
+                  v-for="c in COLORS" :key="c"
+                  @click="selectedColor = c"
+                  :style="{ backgroundColor: c }"
+                  class="aspect-square rounded-lg cursor-pointer border border-black/10 transition-all duration-150 hover:scale-110 hover:shadow-md hover:z-10 relative"
+                  :class="selectedColor === c
+                    ? 'ring-2 ring-sec-500 ring-offset-2 scale-110 shadow-md z-10'
+                    : ''"
+                />
+              </div>
+            </div>
+
+            <!-- Brush size (only in draw mode) -->
+            <transition name="slide-fade">
+              <div v-if="mode === 'draw'" class="mb-3">
+                <div class="flex items-center justify-between mb-1.5">
+                  <p class="text-xs font-semibold text-coolGray-500 uppercase tracking-wide">Rozmiar pędzla</p>
+                  <span class="text-sm font-bold text-sec-600 bg-sec-100 px-2 py-0.5 rounded-full">{{ drawSize }}px</span>
+                </div>
+                <input
+                  type="range" min="1" max="100" v-model="drawSize"
+                  class="w-full h-2 bg-coolGray-200 rounded-full appearance-none cursor-pointer accent-sec-500"
+                />
+                <div class="flex items-center justify-center mt-2">
+                  <div
+                    class="rounded-full border border-coolGray-300 transition-all duration-150"
+                    :style="{
+                      width: Math.max(4, Math.min(drawSize, 60)) + 'px',
+                      height: Math.max(4, Math.min(drawSize, 60)) + 'px',
+                      backgroundColor: selectedColor
+                    }"
+                  />
+                </div>
+              </div>
+            </transition>
+
           </div>
         </div>
 
-        <div class="lg:col-span-3">
-          <div class="flex items-center justify-center">
-            <canvas
-              ref="canvas"
-              class="block mx-auto border"
-              @click="onCanvasClick"
-              @pointerdown="onPointerDown"
-              @pointermove="onPointerMove"
-              @pointerup="onPointerUp"
-              @pointerleave="onPointerUp"
-            />
+        <!-- Canvas area -->
+        <div class="flex-1 min-w-0">
+          <div class="p-3 sm:p-4 lg:p-6">
+            <div class="flex items-center justify-center">
+              <div class="relative rounded-xl overflow-hidden shadow-lg border border-coolGray-200 bg-white">
+                <canvas
+                  ref="canvas"
+                  class="block cursor-crosshair"
+                  :class="mode === 'fill' ? 'cursor-cell' : 'cursor-crosshair'"
+                  @click="onCanvasClick"
+                  @pointerdown="onPointerDown"
+                  @pointermove="onPointerMove"
+                  @pointerup="onPointerUp"
+                  @pointerleave="onPointerUp"
+                />
+              </div>
+            </div>
+            <p class="mt-3 text-center text-sm text-coolGray-400 font-medium">
+              <span v-if="mode === 'fill'">Kliknij w obszar, aby go wypełnić kolorem</span>
+              <span v-else>Przytrzymaj i rysuj po obrazku</span>
+            </p>
           </div>
-          <p class="mt-4 text-center text-sm text-gray-600">💡 <strong>Tip:</strong> Kliknij lub rysuj!</p>
         </div>
+
       </div>
     </div>
   </div>
@@ -84,9 +167,6 @@ const COLORS = [
   '#E89D5E','#D8C077','#C47EDB','#583E98'
 ]
 
-const btn       = 'flex gap-3 rounded-sm p-3 grow border text-center border-sec-500 text-sec-500 font-bold uppercase text-sm'
-const btnActive = 'flex gap-3 items-center rounded-sm p-3 grow text-center bg-main-500 text-white font-bold uppercase text-sm tracking-widest'
-
 // --- reactive state ---
 const mode          = ref('fill')
 const selectedColor = ref(COLORS[0])
@@ -106,9 +186,12 @@ const canvasHeight = ref(0)
 
 // --- resize & load background SVG ---
 function resizeCanvas() {
-  canvasWidth.value  = Math.min(800, winWidth.value * 0.75)
-  canvasHeight.value = canvasWidth.value * 0.75
   const el = canvas.value
+  if (!el) return
+  const parent = el.parentElement
+  const maxW = Math.min(800, parent ? parent.clientWidth - 4 : winWidth.value * 0.75)
+  canvasWidth.value  = maxW
+  canvasHeight.value = maxW * 0.75
   el.width  = canvasWidth.value * DPR
   el.height = canvasHeight.value * DPR
   el.style.width  = canvasWidth.value + 'px'
@@ -164,7 +247,7 @@ function floodFill(x,y,fillColor){
   while(stack.length){
     const [cx,cy] = stack.pop()
     let ny = cy
-    while(ny>=0 && match(cx,ny)) ny-- 
+    while(ny>=0 && match(cx,ny)) ny--
     ny++
     let reachL=false,reachR=false
     while(ny<h && match(cx,ny)){
@@ -273,6 +356,40 @@ watch(() => props.svgUrl, () => {
 </script>
 
 <style scoped>
-canvas { display: block; }
-.border { border: 1px solid #ccc; }
+.slide-fade-enter-active {
+  transition: all 0.25s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all 0.2s ease-in;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #40ceac;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #40ceac;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+canvas {
+  touch-action: none;
+}
 </style>
