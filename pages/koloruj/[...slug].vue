@@ -28,7 +28,7 @@
 
   <ClientOnly>
     <!-- Canvas editor for leaf pages -->
-    <div v-if="isLeaf" class="mt-4 sm:mt-6 lg:mt-8">
+    <div v-if="isLeaf" class="mt-3 sm:mt-4">
       <ColoringCanvas :svg-url="imageUrl"/>
     </div>
 
