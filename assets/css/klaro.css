@@ -20,8 +20,17 @@
   --white2: #F3F4F6;
   --white3: #E5E7EB;
   --border-radius: 16px;
+  --border-style: solid;
+  --border-width: 1px;
   --font-family: 'Quicksand', sans-serif;
   --font-size: 15px;
+  --button-text-color: #ffffff;
+  --notice-position: fixed;
+  --notice-right: auto;
+  --notice-left: auto;
+  --notice-bottom: auto;
+  --notice-top: auto;
+  --notice-max-width: 520px;
 }
 
 /* ========== NAPRAWA BIAŁYCH TEKSTÓW (GLOBALNIE DLA KLARO) ========== */
@@ -81,6 +90,7 @@
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
   z-index: -1;
+  pointer-events: auto;
 }
 
 /* Tło dla szerokiego modala ustawień */
@@ -91,14 +101,16 @@
 
 /* ========== CONSENT NOTICE (Mały Pop-up na środku) ========== */
 
-.klaro .cookie-notice {
+.klaro .cookie-notice:not(.cookie-modal-notice) {
+  background-color: #ffffff !important;
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
   right: auto !important;
   bottom: auto !important;
   transform: translate(-50%, -50%) !important;
-  margin: 0 !important;
+  width: 90vw !important;
+  max-width: 520px !important;
   z-index: 10001 !important;
   border-radius: 20px !important;
   box-shadow: 0 12px 60px rgba(17, 24, 39, 0.15) !important;
@@ -238,6 +250,8 @@
   transition: all 0.25s ease !important;
   cursor: pointer !important;
   letter-spacing: 0.02em !important;
+  margin-right: 0 !important;
+  border: none !important;
 }
 
 .klaro .cm-btn:hover {
@@ -267,6 +281,7 @@
   flex: 1 1 auto !important; /* Rośnie w dużym modalu */
 }
 
+.klaro .cm-btn.cm-btn-success-var:hover,
 .klaro .cm-btn.cm-btn-accept:hover {
   background-color: #f2fcfa !important; /* sec-50 */
 }
@@ -339,20 +354,22 @@
 /* ========== RESPONSyWNOŚĆ (Mobile) ========== */
 
 @media (max-width: 640px) {
-  .klaro .cookie-notice {
-    padding: 24px 20px !important;
-    max-width: calc(100vw - 24px) !important;
+  .klaro .cookie-notice:not(.cookie-modal-notice) {
     width: calc(100vw - 24px) !important;
   }
 
-  .klaro .cookie-modal .cm-modal {
+  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok {
+    padding: 12px 20px 20px !important;
+  }
+
+  .klaro .cookie-modal .cm-modal.cm-klaro {
     width: 98vw !important;
     max-height: 95vh !important;
   }
 
-  .klaro .cookie-modal .cm-header,
-  .klaro .cookie-modal .cm-body,
-  .klaro .cookie-modal .cm-footer {
+  .klaro .cookie-modal .cm-modal .cm-header,
+  .klaro .cookie-modal .cm-modal .cm-body,
+  .klaro .cookie-modal .cm-modal .cm-footer {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
