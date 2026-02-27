@@ -467,7 +467,7 @@ const galleryVariantsList = computed(() => [
 </script>
 <template>
   <div class="index-page">
-    <div class="mt-28">
+    <div class="mt-6 sm:mt-16 md:mt-28">
       <Hero
         :h1="{ firstPartTitle: 'Darmowe kolorowanki', seccondPartTitle: 'do druku pdf' }"
         isCategory

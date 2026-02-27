@@ -19,40 +19,126 @@
   --white3: #EDE6F5;
   --border-radius: 16px;
   --font-family: 'Quicksand', sans-serif;
-  --font-size: 14px;
+  --font-size: 15px;
 }
+
+/* ========== CONSENT NOTICE (banner at bottom) ========== */
 
 .klaro .cookie-notice {
   border-radius: 20px !important;
-  box-shadow: 0 8px 40px rgba(42, 27, 61, 0.15) !important;
+  box-shadow: 0 8px 48px rgba(42, 27, 61, 0.22) !important;
   font-family: 'Quicksand', sans-serif !important;
+  padding: 28px 32px !important;
+  max-width: 560px !important;
+  border: 2px solid rgba(155, 114, 207, 0.15) !important;
+}
+
+.klaro .cookie-notice:not(.cookie-modal-notice) {
+  margin: 20px !important;
+}
+
+.klaro .cookie-notice .cn-body {
+  padding: 0 !important;
+  margin-bottom: 16px !important;
+}
+
+.klaro .cookie-notice .cn-body p {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: #2A1B3D !important;
+}
+
+.klaro .cookie-notice .cn-ok {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  justify-content: center !important;
+}
+
+/* ========== CONSENT MODAL (full settings) ========== */
+
+.klaro .cookie-modal {
+  z-index: 10000 !important;
 }
 
 .klaro .cookie-modal .cm-modal {
-  border-radius: 20px !important;
+  border-radius: 24px !important;
   font-family: 'Quicksand', sans-serif !important;
+  max-width: 680px !important;
+  width: 95vw !important;
+  box-shadow: 0 12px 60px rgba(42, 27, 61, 0.25) !important;
+  border: 2px solid rgba(155, 114, 207, 0.12) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
 }
+
+.klaro .cookie-modal .cm-header {
+  padding: 28px 32px 16px !important;
+  border-bottom: 1px solid #EDE6F5 !important;
+}
+
+.klaro .cookie-modal .cm-header h1 {
+  font-family: 'Baloo 2', cursive !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  color: #2A1B3D !important;
+}
+
+.klaro .cookie-modal .cm-body {
+  padding: 20px 32px !important;
+}
+
+.klaro .cookie-modal .cm-body p {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  color: #5C4A72 !important;
+  margin-bottom: 16px !important;
+}
+
+.klaro .cookie-modal .cm-footer {
+  padding: 16px 32px 28px !important;
+  border-top: 1px solid #EDE6F5 !important;
+}
+
+/* ========== BUTTONS ========== */
 
 .klaro .cm-btn {
   border-radius: 999px !important;
   font-family: 'Baloo 2', cursive !important;
   font-weight: 700 !important;
-  padding: 10px 24px !important;
-  transition: all 0.2s ease !important;
+  padding: 12px 28px !important;
+  font-size: 15px !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer !important;
+  letter-spacing: 0.02em !important;
 }
 
 .klaro .cm-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(155, 114, 207, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(155, 114, 207, 0.3);
 }
 
 .klaro .cm-btn.cm-btn-accept-all {
   background: linear-gradient(135deg, #FF6B6B, #FFAB76) !important;
   border: none !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  padding: 14px 36px !important;
 }
 
 .klaro .cm-btn.cm-btn-accept-all:hover {
-  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.4) !important;
+  box-shadow: 0 6px 24px rgba(255, 107, 107, 0.45) !important;
+  transform: translateY(-2px) !important;
+}
+
+.klaro .cm-btn.cm-btn-accept {
+  background: linear-gradient(135deg, #9B72CF, #7B5AAF) !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.klaro .cm-btn.cm-btn-accept:hover {
+  box-shadow: 0 6px 20px rgba(155, 114, 207, 0.4) !important;
 }
 
 .klaro .cm-btn.cm-btn-decline {
@@ -64,6 +150,34 @@
 .klaro .cm-btn.cm-btn-decline:hover {
   border-color: #9B72CF !important;
   color: #9B72CF !important;
+  background: rgba(155, 114, 207, 0.05) !important;
+}
+
+/* ========== SERVICE LIST ========== */
+
+.klaro .cm-services,
+.klaro .cm-list-input {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.klaro .cm-list-title {
+  font-family: 'Baloo 2', cursive !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: #2A1B3D !important;
+}
+
+.klaro .cm-list-description {
+  font-family: 'Quicksand', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #5C4A72 !important;
+}
+
+/* Purpose titles (category headers) */
+.klaro .cm-purpose .cm-list-title {
+  font-size: 17px !important;
+  padding: 8px 0 !important;
 }
 
 /* Toggle switch */
@@ -71,16 +185,71 @@
   background-color: #9B72CF !important;
 }
 
-.klaro .cm-list-title {
-  font-family: 'Baloo 2', cursive !important;
-  font-weight: 700 !important;
+.klaro .cm-list-label .slider {
+  transition: background-color 0.25s ease !important;
 }
 
-.klaro .cm-list-description {
-  font-family: 'Quicksand', sans-serif !important;
+/* Required service styling */
+.klaro .cm-list-input.required:checked + .cm-list-label .slider {
+  background-color: #7B5AAF !important;
+  opacity: 0.7 !important;
 }
 
-/* Cookie notice positioning */
-.klaro .cookie-notice:not(.cookie-modal-notice) {
-  margin: 16px !important;
+/* ========== PRIVACY POLICY LINK ========== */
+
+.klaro a {
+  color: #9B72CF !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(155, 114, 207, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+.klaro a:hover {
+  color: #7B5AAF !important;
+  text-decoration-color: #7B5AAF !important;
+}
+
+/* ========== BACKDROP ========== */
+
+.klaro .cookie-modal .cm-bg {
+  background: rgba(42, 27, 61, 0.55) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 640px) {
+  .klaro .cookie-notice {
+    margin: 12px !important;
+    padding: 20px 20px !important;
+    max-width: calc(100vw - 24px) !important;
+    border-radius: 16px !important;
+  }
+
+  .klaro .cookie-notice .cn-body p {
+    font-size: 14px !important;
+  }
+
+  .klaro .cookie-modal .cm-modal {
+    width: 98vw !important;
+    border-radius: 16px !important;
+    max-height: 95vh !important;
+  }
+
+  .klaro .cookie-modal .cm-header,
+  .klaro .cookie-modal .cm-body,
+  .klaro .cookie-modal .cm-footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .klaro .cm-btn {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+  }
+
+  .klaro .cm-btn.cm-btn-accept-all {
+    padding: 12px 28px !important;
+    font-size: 15px !important;
+  }
 }

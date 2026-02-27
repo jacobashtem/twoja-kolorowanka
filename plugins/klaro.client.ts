@@ -37,44 +37,62 @@ export default defineNuxtPlugin(() => {
       pl: {
         privacyPolicyUrl: '/polityka-prywatnosci/',
         consentModal: {
-          title: 'Ustawienia prywatności',
+          title: '🍪 Szanujemy Twoją prywatność',
           description:
-            'Tu możesz ocenić i dostosować usługi, które chcielibyśmy wykorzystywać na tej stronie. To Ty decydujesz! Włącz lub wyłącz usługi zgodnie ze swoimi preferencjami.',
+            'Używamy plików cookie, aby zapewnić prawidłowe działanie strony, analizować ruch i umożliwić interakcję z innymi użytkownikami. Poniżej możesz wybrać, na które kategorie plików cookie wyrażasz zgodę. Możesz zmienić swoje preferencje w dowolnym momencie.',
         },
         consentNotice: {
           description:
-            'Cześć! Czy możemy uruchomić dodatkowe usługi do celów {purposes}? Możesz zmienić swoją zgodę w każdej chwili.',
+            'Nasza strona używa plików cookie do celów {purposes}. Klikając „Akceptuję wszystkie", wyrażasz zgodę na wszystkie kategorie cookies. Możesz też dostosować swoje preferencje klikając „Ustawienia".',
           changeDescription: 'Nastąpiły zmiany od Twojej ostatniej wizyty. Zaktualizuj swoje zgody.',
           learnMore: 'Ustawienia',
         },
         acceptAll: 'Akceptuję wszystkie',
         acceptSelected: 'Akceptuję wybrane',
-        decline: 'Odrzucam',
+        decline: 'Odrzucam wszystkie',
         ok: 'OK',
-        save: 'Zapisz',
+        save: 'Zapisz ustawienia',
         close: 'Zamknij',
         purposes: {
+          niezbedne: {
+            title: 'Niezbędne',
+            description: 'Te pliki cookie są konieczne do prawidłowego działania strony. Nie można ich wyłączyć.',
+          },
           analytics: {
-            title: 'Analityka i statystyki',
-            description: 'Usługi pomagające analizować ruch na stronie i zachowania użytkowników.',
+            title: 'Statystyczne',
+            description: 'Pliki cookie statystyczne pomagają nam zrozumieć, w jaki sposób użytkownicy korzystają ze strony, zbierając anonimowe informacje o ruchu i zachowaniach.',
           },
           social: {
-            title: 'Interakcje społecznościowe',
-            description: 'Usługi umożliwiające komentowanie i interakcję z innymi użytkownikami.',
+            title: 'Społecznościowe',
+            description: 'Pliki cookie społecznościowe umożliwiają komentowanie artykułów i interakcję z innymi użytkownikami.',
           },
         },
+        'klaro-cookie': {
+          description: 'Przechowuje informacje o Twoich preferencjach dotyczących plików cookie (ten wybór). Maksymalny okres przechowywania: 1 rok.',
+        },
         gtm: {
-          description: 'Google Tag Manager służy do zarządzania tagami analitycznymi i marketingowymi na naszej stronie.',
+          description: 'Google Analytics zbiera anonimowe statystyki odwiedzin, które pomagają nam ulepszać stronę. Cookies: _ga (2 lata), _gid (24h), _gat (1 min).',
         },
         disqus: {
-          description: 'System komentarzy umożliwiający dyskusję pod artykułami na naszym blogu.',
+          description: 'System komentarzy Disqus umożliwia dyskusję pod artykułami na naszym blogu. Cookies: disqus_unique (1 rok).',
         },
       },
     },
     services: [
       {
+        name: 'klaro-cookie',
+        title: 'Pliki cookie serwisu',
+        purposes: ['niezbedne'],
+        cookies: [
+          [/^klaro/, '/', '.twoja-kolorowanka.pl'],
+        ],
+        required: true,
+        optOut: false,
+        onlyOnce: false,
+      },
+      {
         name: 'gtm',
-        title: 'Google Tag Manager',
+        title: 'Google Analytics',
         purposes: ['analytics'],
         cookies: [
           [/^_ga/, '/', '.twoja-kolorowanka.pl'],
@@ -92,7 +110,7 @@ export default defineNuxtPlugin(() => {
       },
       {
         name: 'disqus',
-        title: 'Disqus',
+        title: 'Disqus (komentarze)',
         purposes: ['social'],
         cookies: [
           [/^disqus/, '/', '.disqus.com'],
@@ -109,4 +127,20 @@ export default defineNuxtPlugin(() => {
   }
 
   Klaro.setup(klaroConfig)
+
+  // Ensure GTM is injected if consent was previously given (returning visitors)
+  try {
+    const manager = Klaro.getManager(klaroConfig)
+    if (manager && manager.getConsent('gtm')) {
+      injectGTM()
+    }
+  } catch (_) {
+    // Klaro manager not ready yet, callback will handle it
+  }
+
+  return {
+    provide: {
+      showKlaro: () => Klaro.show(klaroConfig, true),
+    },
+  }
 })

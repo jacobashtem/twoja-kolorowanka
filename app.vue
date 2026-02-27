@@ -15,9 +15,11 @@ const pageTransition = {
   }
 };
 
+const { $showKlaro } = useNuxtApp()
+
 function openCookieSettings() {
-  if (typeof window !== 'undefined' && window.klaro) {
-    window.klaro.show()
+  if (typeof window !== 'undefined' && $showKlaro) {
+    $showKlaro()
   }
 }
 </script>
@@ -64,7 +66,7 @@ function openCookieSettings() {
 .cookie-settings-btn {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 9999;
   width: 48px;
   height: 48px;
