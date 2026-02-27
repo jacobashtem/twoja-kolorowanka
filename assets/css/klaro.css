@@ -1,22 +1,24 @@
-/* Klaro cookie consent - LIGHT theme overrides for Twoja Kolorowanka */
+/* ==========================================================================
+   KLARO COOKIE CONSENT - PEŁNY MOTYW (TAILWIND CONFIG + SZEROKI MODAL)
+   ========================================================================== */
 
 .klaro {
-  /* Flip Klaro's dark palette to light */
-  --dark1: #ffffff;
-  --dark2: #e0e0e0;
-  --dark3: #999999;
-  --light1: #222222;
-  --light2: #f5f5f5;
-  --light3: #666666;
-  --green1: #9B72CF;
-  --green2: #7B5AAF;
-  --green3: #5C4A72;
-  --blue1: #9B72CF;
-  --blue2: #7B5AAF;
-  --blue3: #5C4A72;
+  /* Zmienne Klaro oparte na Twoim Tailwind config */
+  --green1: #40ceac; /* sec-500 */
+  --green2: #2fa48a; /* sec-600 */
+  --green3: #23806c; /* sec-700 */
+  --blue1: #b45eb2;  /* tertiary-500 */
+  --blue2: #9d459d;  /* tertiary-600 */
+  --blue3: #803280;  /* tertiary-700 */
+  --dark1: #111827;  /* coolGray-900 */
+  --dark2: #374151;  /* coolGray-700 */
+  --dark3: #6B7280;  /* coolGray-500 */
+  --light1: #ffffff;
+  --light2: #F3F4F6; /* coolGray-100 */
+  --light3: #E5E7EB; /* coolGray-200 */
   --white1: #ffffff;
-  --white2: #f0f0f0;
-  --white3: #e0e0e0;
+  --white2: #F3F4F6;
+  --white3: #E5E7EB;
   --border-radius: 16px;
   --border-style: solid;
   --border-width: 1px;
@@ -31,22 +33,73 @@
   --notice-max-width: 520px;
 }
 
-/* ========== BACKDROP OVERLAY for cookie notice ========== */
+/* ========== NAPRAWA BIAŁYCH TEKSTÓW (GLOBALNIE DLA KLARO) ========== */
 
-.klaro .cookie-notice:not(.cookie-modal-notice)::before {
+/* Główne teksty i akapity */
+.klaro p, 
+.klaro p span, 
+.klaro .cn-body span, 
+.klaro .cm-body span {
+  color: #4B5563 !important; /* coolGray-600 */
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+/* NAPRAWA: Znaczniki <strong> i <b> (wypełnienie białej dziury) */
+.klaro strong,
+.klaro b {
+  color: #111827 !important; /* coolGray-900 */
+  font-weight: 700 !important;
+}
+
+/* Nagłówki i tytuły */
+.klaro h1, 
+.klaro h1 span, 
+.klaro .title, 
+.klaro .title span {
+  color: #111827 !important; /* coolGray-900 */
+  font-family: 'Baloo 2', cursive !important;
+  font-weight: 700 !important;
+}
+
+/* Tytuły kategorii w głównym modalu ("Niezbędne", "Statystyczne" itp.) */
+.klaro .cm-list-title, 
+.klaro .cm-list-title span {
+  font-family: 'Baloo 2', cursive !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+  color: #111827 !important; /* coolGray-900 */
+}
+
+/* Opisy pod kategoriami */
+.klaro .cm-list-description, 
+.klaro .cm-list-description span {
+  font-family: 'Quicksand', sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #6B7280 !important; /* coolGray-500 */
+}
+
+/* ========== BACKDROP OVERLAY ========== */
+
+/* Tło dla powiadomienia na środku */
+.klaro .cookie-notice::before {
   content: '';
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
   z-index: -1;
   pointer-events: auto;
 }
 
-/* ========== CONSENT NOTICE – centered, white, visible ========== */
+/* Tło dla szerokiego modala ustawień */
+.klaro .cookie-modal .cm-bg {
+  background: rgba(17, 24, 39, 0.6) !important; /* coolGray-900 z alpha */
+  backdrop-filter: blur(4px) !important;
+}
+
+/* ========== CONSENT NOTICE (Mały Pop-up na środku) ========== */
 
 .klaro .cookie-notice:not(.cookie-modal-notice) {
   background-color: #ffffff !important;
@@ -60,80 +113,140 @@
   max-width: 520px !important;
   z-index: 10001 !important;
   border-radius: 20px !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 12px 60px rgba(17, 24, 39, 0.15) !important;
   font-family: 'Quicksand', sans-serif !important;
+  padding: 32px 36px !important;
+  max-width: 540px !important;
+  width: 90vw !important;
+  background: #ffffff !important;
+  border: 1px solid #E5E7EB !important;
+}
+
+.klaro .cookie-notice .cn-body {
   padding: 0 !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  margin-bottom: 0 !important;
+  text-align: center !important; /* Wyśrodkowanie tekstu zgodnie ze screenem */
 }
 
-/* Text inside notice – force dark on white */
-.klaro .cookie-notice p,
-.klaro .cookie-notice strong,
-.klaro .cookie-notice h1,
-.klaro .cookie-notice h2,
-.klaro .cookie-notice ul,
-.klaro .cookie-notice li,
-.klaro .cookie-notice span {
-  color: #333333 !important;
+.klaro .cookie-notice .cn-body p {
+  margin-bottom: 24px !important;
 }
 
-.klaro .cookie-notice strong {
-  color: #111111 !important;
-  font-weight: 700 !important;
-}
-
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body {
-  padding: 28px 32px 20px !important;
-  margin: 0 !important;
-}
-
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
-  font-size: 15px !important;
-  line-height: 1.7 !important;
-  color: #444444 !important;
-  margin: 0 !important;
-}
-
-/* ========== NOTICE BUTTONS AREA ========== */
-
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok {
+/* Układ linku "Ustawienia" i przycisków */
+.klaro .cookie-notice .cn-ok {
   display: flex !important;
-  flex-flow: row !important;
-  flex-wrap: wrap !important;
-  gap: 10px !important;
-  justify-content: flex-end !important;
+  flex-direction: column !important;
+  gap: 20px !important;
   align-items: center !important;
-  margin-top: 0 !important;
-  padding: 16px 32px 24px !important;
-  border-top: 1px solid #eeeeee !important;
+  margin-top: 16px !important;
 }
 
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok a,
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok div {
-  margin-top: 0 !important;
+.klaro .cookie-notice .cn-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 16px !important;
+  justify-content: center !important;
+  width: 100% !important;
 }
 
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons {
-  display: inline-flex !important;
-  gap: 10px !important;
-  margin-top: 0 !important;
+.klaro .cookie-notice .cn-buttons .cm-btn {
+  flex: 1 !important; /* Równe połówki dla przycisków OK i Odrzuć */
+  margin: 0 !important;
 }
 
-.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn {
-  margin-top: 0 !important;
-  margin-right: 0 !important;
+/* ========== CONSENT MODAL (Szeroki Modal Ustawień) ========== */
+
+.klaro .cookie-modal {
+  z-index: 10002 !important;
 }
 
-/* ========== ALL BUTTONS (notice + modal) ========== */
+.klaro .cookie-modal .cm-modal {
+  max-width: 1000px !important; /* Ekstra szeroki modal */
+  width: 95vw !important;
+  max-height: 98vh !important; /* Prawie cała wysokość okna przeglądarki */
+  border-radius: 24px !important;
+  font-family: 'Quicksand', sans-serif !important;
+  box-shadow: 0 20px 60px rgba(17, 24, 39, 0.2) !important;
+  border: 1px solid #E5E7EB !important;
+  overflow-y: auto !important; /* Zabezpieczenie tylko dla bardzo małych ekranów */
+  background: #ffffff !important;
+  position: relative !important;
+}
 
-.klaro .cookie-modal .cm-btn,
-.klaro .context-notice .cm-btn,
-.klaro .cookie-notice .cm-btn {
-  border-radius: 999px !important;
+.klaro .cookie-modal .cm-header {
+  padding: 28px 40px 16px !important;
+  border-bottom: 1px solid #E5E7EB !important;
+}
+
+.klaro .cookie-modal .cm-header h1 {
+  font-size: 1.6rem !important;
+}
+
+.klaro .cookie-modal .cm-body {
+  padding: 24px 40px !important;
+}
+
+.klaro .cookie-modal .cm-footer {
+  padding: 24px 40px 32px !important;
+  border-top: 1px solid #E5E7EB !important;
+}
+
+.klaro .cookie-modal .cm-footer-buttons {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* ========== PRZYCISK ZAMKNIJ (KRZYŻYK / POWRÓT) ========== */
+
+/* Upewniamy się, że przycisk jest widoczny i ładny */
+.klaro .cookie-modal .cm-header button.hide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: 24px !important;
+  right: 24px !important;
+  background: #F3F4F6 !important; /* coolGray-100 */
+  border: none !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.klaro .cookie-modal .cm-header button.hide svg {
+  stroke: #6B7280 !important; /* coolGray-500 */
+  stroke-width: 2 !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.klaro .cookie-modal .cm-header button.hide:hover {
+  background: #E5E7EB !important; /* coolGray-200 */
+  transform: scale(1.05) !important;
+}
+
+.klaro .cookie-modal .cm-header button.hide:hover svg {
+  stroke: #111827 !important; /* coolGray-900 */
+}
+
+/* ========== PRZYCISKI W MODALU ========== */
+
+.klaro .cm-btn {
+  min-width: 160px !important;
+  border-radius: 9999px !important; /* Kształt pigułki */
   font-family: 'Baloo 2', cursive !important;
   font-weight: 700 !important;
-  padding: 12px 28px !important;
+  padding: 12px 24px !important;
   font-size: 15px !important;
+  text-align: center !important;
   transition: all 0.25s ease !important;
   cursor: pointer !important;
   letter-spacing: 0.02em !important;
@@ -145,260 +258,104 @@
   transform: translateY(-2px);
 }
 
-/* "Akceptuję wszystkie" / OK – prominent gradient */
-.klaro .cookie-modal .cm-btn.cm-btn-success,
-.klaro .cookie-notice .cm-btn.cm-btn-success,
+/* Akceptacja (OK / Akceptuję wszystkie) - Pełne Tło sec-500 */
+.klaro .cm-btn.cm-btn-success,
 .klaro .cm-btn.cm-btn-accept-all {
-  background: linear-gradient(135deg, #FF6B6B, #FFAB76) !important;
-  border: none !important;
+  background-color: #40ceac !important; /* sec-500 */
+  border: 2px solid #40ceac !important;
   color: #ffffff !important;
-  font-size: 16px !important;
-  padding: 14px 32px !important;
 }
 
 .klaro .cm-btn.cm-btn-success:hover,
 .klaro .cm-btn.cm-btn-accept-all:hover {
-  box-shadow: 0 6px 24px rgba(255, 107, 107, 0.45) !important;
-  transform: translateY(-2px) !important;
+  background-color: #2fa48a !important; /* sec-600 */
+  border-color: #2fa48a !important;
+  box-shadow: 0 6px 20px rgba(64, 206, 172, 0.4) !important;
 }
 
-/* "Akceptuję wybrane" – purple */
-.klaro .cookie-modal .cm-btn.cm-btn-success-var,
-.klaro .cookie-notice .cm-btn.cm-btn-success-var,
+/* Akceptuję wybrane - Outline sec-500 */
 .klaro .cm-btn.cm-btn-accept {
-  background: linear-gradient(135deg, #9B72CF, #7B5AAF) !important;
-  border: none !important;
-  color: #ffffff !important;
+  background-color: transparent !important;
+  border: 2px solid #40ceac !important; /* sec-500 */
+  color: #40ceac !important;
+  flex: 1 1 auto !important; /* Rośnie w dużym modalu */
 }
 
 .klaro .cm-btn.cm-btn-success-var:hover,
 .klaro .cm-btn.cm-btn-accept:hover {
-  box-shadow: 0 6px 20px rgba(155, 114, 207, 0.4) !important;
+  background-color: #f2fcfa !important; /* sec-50 */
 }
 
-/* "Odrzucam wszystkie" – outlined, visible on white */
-.klaro .cookie-modal .cm-btn.cm-btn-close,
-.klaro .cookie-notice .cm-btn.cm-btn-close,
-.klaro .cm-btn.cm-btn-decline {
-  background: #ffffff !important;
-  border: 2px solid #cccccc !important;
-  color: #444444 !important;
+/* Odrzucam - Outline coolGray-300, ciemny tekst */
+.klaro .cm-btn.cm-btn-decline,
+.klaro .cm-btn.cm-btn-danger,
+.klaro .cm-btn.cn-decline {
+  background-color: transparent !important;
+  border: 1px solid #D1D5DB !important; /* coolGray-300 */
+  color: #4B5563 !important; /* coolGray-600 */
 }
 
-.klaro .cm-btn.cm-btn-close:hover,
-.klaro .cm-btn.cm-btn-decline:hover {
-  border-color: #9B72CF !important;
-  color: #9B72CF !important;
-  background: rgba(155, 114, 207, 0.05) !important;
+.klaro .cm-btn.cm-btn-decline:hover,
+.klaro .cm-btn.cm-btn-danger:hover,
+.klaro .cm-btn.cn-decline:hover {
+  border-color: #9CA3AF !important; /* coolGray-400 */
+  color: #111827 !important; /* coolGray-900 */
+  background-color: #F3F4F6 !important; /* coolGray-100 */
 }
 
-/* "Ustawienia" link */
-.klaro .cookie-notice .cm-link,
-.klaro .cm-btn.cm-btn-info {
-  background: transparent !important;
-  border: 2px solid #C8B4DC !important;
-  color: #7B5AAF !important;
-}
+/* ========== LINKI ("Ustawienia", "Polityka") ========== */
 
-.klaro .cm-btn.cm-btn-info:hover {
-  border-color: #9B72CF !important;
-  color: #9B72CF !important;
-}
-
-/* ========== CONSENT MODAL (full settings) – white theme ========== */
-
-.klaro .cookie-modal {
-  z-index: 10002 !important;
-}
-
-.klaro .cookie-modal .cm-modal.cm-klaro {
-  background-color: #ffffff !important;
-  color: #333333 !important;
-  border-radius: 24px !important;
-  font-family: 'Quicksand', sans-serif !important;
-  max-width: 680px !important;
-  width: 95vw !important;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  max-height: 90vh !important;
-  overflow-y: auto !important;
-}
-
-/* Modal text – dark on white */
-.klaro .cookie-modal p,
-.klaro .cookie-modal strong,
-.klaro .cookie-modal h1,
-.klaro .cookie-modal h2,
-.klaro .cookie-modal ul,
-.klaro .cookie-modal li {
-  color: #333333 !important;
-}
-
-.klaro .cookie-modal .cm-modal .cm-header {
-  padding: 28px 32px 16px !important;
-  border-bottom-color: #eeeeee !important;
-}
-
-.klaro .cookie-modal .cm-modal .cm-header h1 {
-  font-family: 'Baloo 2', cursive !important;
-  font-size: 1.6rem !important;
+.klaro a,
+.klaro .cm-link,
+.klaro .cn-learn-more {
+  color: #b45eb2 !important; /* tertiary-500 */
+  text-decoration: none !important;
   font-weight: 700 !important;
-  color: #1a1a2e !important;
-}
-
-.klaro .cookie-modal .cm-modal .cm-body {
-  padding: 20px 32px !important;
-}
-
-.klaro .cookie-modal .cm-modal .cm-body p {
+  font-family: 'Quicksand', sans-serif !important;
   font-size: 15px !important;
-  line-height: 1.65 !important;
-  color: #444444 !important;
-  margin-bottom: 16px !important;
+  transition: all 0.2s ease !important;
 }
 
-.klaro .cookie-modal .cm-modal .cm-footer {
-  padding: 16px 32px 28px !important;
-  border-top-color: #eeeeee !important;
+.klaro a:hover,
+.klaro .cm-link:hover,
+.klaro .cn-learn-more:hover {
+  color: #9d459d !important; /* tertiary-600 */
+  text-decoration: underline !important;
 }
 
-.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by a {
-  color: #999999 !important;
+/* Polisa prywatności w modalu - można podkreślić domyślnie */
+.klaro .cookie-modal .cm-header p a,
+.klaro .cookie-modal .cm-body p a {
+  text-decoration: underline !important;
+  text-decoration-color: rgba(180, 94, 178, 0.4) !important;
 }
 
-/* Close (X) button in modal – dark stroke on white bg */
-.klaro .cookie-modal .cm-modal .hide svg {
-  stroke: #333333 !important;
+/* Ukrycie logotypu "Technologia dostarczona przez" */
+.klaro .cm-powered-by {
+  display: none !important;
 }
 
-/* ========== MODAL NOTICE (mustConsent variant) ========== */
+/* ========== TOGGLE SWITCHES (PRZEŁĄCZNIKI) ========== */
 
-.klaro .cookie-modal-notice {
-  background-color: #ffffff !important;
-  color: #333333 !important;
-}
-
-/* ========== SERVICE LIST ========== */
-
-.klaro .cm-services,
-.klaro .cm-list-input {
-  font-family: 'Quicksand', sans-serif !important;
-}
-
-.klaro .cookie-modal .cm-list-title,
-.klaro .context-notice .cm-list-title,
-.klaro .cookie-notice .cm-list-title {
-  font-family: 'Baloo 2', cursive !important;
-  font-weight: 700 !important;
-  font-size: 16px !important;
-  color: #222222 !important;
-}
-
-.klaro .cookie-modal .cm-list-description,
-.klaro .context-notice .cm-list-description,
-.klaro .cookie-notice .cm-list-description {
-  font-family: 'Quicksand', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-  color: #666666 !important;
-}
-
-/* Purpose titles (category headers) */
-.klaro .cm-purpose .cm-list-title {
-  font-size: 17px !important;
-  padding: 8px 0 !important;
-}
-
-/* Toggle switch */
-.klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider,
-.klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
-.klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider {
-  background-color: #9B72CF !important;
+.klaro .cm-list-input:checked + .cm-list-label .slider {
+  background-color: #40ceac !important; /* sec-500 */
 }
 
 .klaro .cm-list-label .slider {
   transition: background-color 0.25s ease !important;
+  background-color: #D1D5DB !important; /* coolGray-300 */
 }
 
-/* Required service toggle */
-.klaro .cookie-modal .cm-list-input.required:checked + .cm-list-label .slider,
-.klaro .context-notice .cm-list-input.required:checked + .cm-list-label .slider,
-.klaro .cookie-notice .cm-list-input.required:checked + .cm-list-label .slider {
-  background-color: #7B5AAF !important;
-  opacity: 0.7 !important;
+.klaro .cm-list-input.required:checked + .cm-list-label .slider {
+  background-color: #2fa48a !important; /* sec-600 */
+  opacity: 0.6 !important;
 }
 
-/* Service badges (opt-out, required) */
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li span.cm-opt-out,
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li span.cm-required,
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li span.cm-opt-out,
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li span.cm-required {
-  color: #999999 !important;
-}
-
-/* Purpose descriptions */
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p.purposes,
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p.purposes {
-  color: #888888 !important;
-}
-
-/* Caret / expand arrows */
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-caret,
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-caret {
-  color: #999999 !important;
-}
-
-/* Toggle-all border */
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-toggle-all,
-.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-toggle-all {
-  border-top-color: #eeeeee !important;
-}
-
-/* Switch container border */
-.klaro .cookie-modal .cm-switch-container,
-.klaro .context-notice .cm-switch-container,
-.klaro .cookie-notice .cm-switch-container {
-  border-bottom-color: #eeeeee !important;
-}
-
-/* ========== LINKS ========== */
-
-.klaro .cookie-modal a,
-.klaro .context-notice a,
-.klaro .cookie-notice a {
-  color: #9B72CF !important;
-  text-decoration: underline !important;
-  text-decoration-color: rgba(155, 114, 207, 0.3) !important;
-  transition: all 0.2s ease !important;
-}
-
-.klaro a:hover {
-  color: #7B5AAF !important;
-  text-decoration-color: #7B5AAF !important;
-}
-
-/* ========== BACKDROP (modal settings) ========== */
-
-.klaro .cookie-modal .cm-bg {
-  background: rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(3px) !important;
-}
-
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSyWNOŚĆ (Mobile) ========== */
 
 @media (max-width: 640px) {
   .klaro .cookie-notice:not(.cookie-modal-notice) {
     width: calc(100vw - 24px) !important;
-    max-width: calc(100vw - 24px) !important;
-    border-radius: 16px !important;
-  }
-
-  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body {
-    padding: 20px 20px 16px !important;
-  }
-
-  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
-    font-size: 14px !important;
   }
 
   .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok {
@@ -407,7 +364,6 @@
 
   .klaro .cookie-modal .cm-modal.cm-klaro {
     width: 98vw !important;
-    border-radius: 16px !important;
     max-height: 95vh !important;
   }
 
@@ -418,14 +374,14 @@
     padding-right: 20px !important;
   }
 
-  .klaro .cm-btn {
-    padding: 10px 20px !important;
-    font-size: 14px !important;
+  /* Przewijanie do 1 kolumny na małych telefonach */
+  .klaro .cookie-notice .cn-buttons,
+  .klaro .cookie-modal .cm-footer-buttons {
+    flex-direction: column !important;
   }
 
-  .klaro .cm-btn.cm-btn-success,
-  .klaro .cm-btn.cm-btn-accept-all {
-    padding: 12px 28px !important;
-    font-size: 15px !important;
+  .klaro .cm-btn {
+    width: 100% !important;
+    flex: none !important;
   }
 }
