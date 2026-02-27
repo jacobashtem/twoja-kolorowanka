@@ -30,7 +30,7 @@
         , który określa zasady, prawa i obowiązki Użytkowników korzystających z Serwisu.</p>
         <h2 class="text-4xl py-4">§1 Definicje</h2>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li><b>Serwis</b> – serwis internetowy twaoja-kolorowanka” działający pod adresem https://twoja-kolorowanka.pl</li>
+            <li><b>Serwis</b> – serwis internetowy „twoja-kolorowanka” działający pod adresem https://twoja-kolorowanka.pl</li>
             <li><b>Serwis zewnętrzny</b> – serwisy internetowe partnerów, usługodawców lub usługobiorców
                 współpracujących z Administratorem</li>
             <li><b>Administrator Serwisu / Danych</b> – Administratorem Serwisu oraz Administratorem Danych (dalej
@@ -173,31 +173,23 @@
                 ograniczony i realizowany zgodnie z ich przeznaczeniem i celami przetwarzania. Administrator zapewnia
                 także, że dokonuje wszelkich starań w celu zabezpieczenia posiadanych danych przed ich utratą, poprzez
                 stosowanie odpowiednich zabezpieczeń fizycznych jak i organizacyjnych.</li>
-            <li><b>Przechowywanie haseł</b> – Administrator oświadcza, że hasła przechowywane są w zaszyfrowanej
-                postaci, używając najnowszych standardów i wytycznych w tym zakresie. Deszyfracja podawanych w Serwisie
-                haseł dostępu do konta jest praktycznie niemożliwa.</li>
         </ul>
         <h2 class="text-4xl py-4">§5 Cele do których wykorzystywane są pliki Cookie</h2>
         <ul class="list-decimal text-lg py-2 pl-16">
             <li>Usprawnienie i ułatwienie dostępu do Serwisu</li>
             <li>Personalizacja Serwisu dla Użytkowników</li>
-            <li>Umożliwienie Logowania do serwisu</li>
-            <li>Marketing, Remarketing w serwisach zewnętrznych</li>
-            <li>Usługi serwowania reklam</li>
-            <li>Usługi afiliacyjne</li>
+            <li>Zarządzanie zgodami Użytkowników (Klaro)</li>
             <li>Prowadzenie statystyk (użytkowników, ilości odwiedzin, rodzajów urządzeń, łącze itp.)</li>
-            <li>Serwowanie usług multimedialnych</li>
             <li>Świadczenie usług społecznościowych</li>
+            <li>Obsługa systemu komentarzy (Disqus)</li>
         </ul>
         <h2 class="text-4xl py-4">§6 Cele przetwarzania danych osobowych</h2>
         <p class="text-lg">Dane osobowe dobrowolnie podane przez Użytkowników są przetwarzane w jednym z następujących celów:</p>
         <ul class="list-decimal text-lg py-2 pl-16">
             <li>Realizacji usług elektronicznych:
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Usługi rejestracji i utrzymania konta Użytkownika w Serwisie i funkcjonalności z nim związanych
-                    </li>
                     <li>Usługi Newslettera (w tym przesyłania za zgodą treści reklamowych)</li>
-                    <li>Usługi komentowania / polubienia wpisów w Serwisie bez konieczności rejestrowania się</li>
+                    <li>Usługi komentowania wpisów w Serwisie za pośrednictwem systemu Disqus</li>
                     <li>Usługi udostępniania informacji o treści umieszczonych w Serwisie w serwisach społecznościowych
                         lub innych witrynach.</li>
                 </ul>
@@ -208,9 +200,6 @@
         <p class="text-lg">Dane o Użytkownikach gromadzone anonimowo i automatycznie są przetwarzane w jednym z następujących celów:</p>
         <ul class="list-decimal text-lg py-2 pl-16">
             <li>Prowadzenie statystyk</li>
-            <li>Remarketing</li>
-            <li>Serwowanie reklam dostosowanych do preferencji Użytkowników</li>
-            <li>Obsługi programów afiliacyjnych</li>
             <li>Zapewnienia prawnie uzasadnionego interesu Administratora</li>
         </ul>
         <h2 class="text-4xl py-4">§7 Pliki Cookies Serwisów zewnętrznych</h2>
@@ -220,42 +209,41 @@
             internetowe. Poniżej znajduje się lista partnerów lub ich usług zaimplementowanych w Serwisie, mogących
             umieszczać pliki cookies:</p>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li><b>Usługi multimedialne:</b>
+            <li><b>Usługi społecznościowe / łączone:</b>(udostępnianie treści, komunikacja, itp.)
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>YouTube (youtube.com/t/terms)</li>
-                </ul>
-            </li>
-            <li><b>Usługi społecznościowe / łączone:</b>(Rejestracja, Logowanie, udostępnianie treści, komunikacja,
-                itp.)
-                <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Twitter (twitter.com/en/tos?wcmmode=disabled#intlTerms)</li>
+                    <li>X / dawny Twitter (x.com/en/tos)</li>
                     <li>Facebook (facebook.com/legal/terms)</li>
-                    <li>LinkedIn (linkedin.com/legal/user-agreement)</li>
+                    <li>Pinterest (policy.pinterest.com/pl/privacy-policy)</li>
                 </ul>
             </li>
             <li><b>Usługi Newslettera:</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Freshmail (freshmail.pl/polityka-prywatnosci/)</li>
-                    <li>MailChimp (mailchimp.com/legal/privacy/)</li>
-                </ul>
-            </li>
-            <li><b>Usługi serwowania reklam oraz sieci afiliacyjne:</b>
-                <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Google Adsense (policies.google.com/privacy?hl=pl)</li>
-                    <li>MyLead (mylead.global/pl/polityka-prywatnosci)</li>
+                    <li>MailerLite (mailerlite.com/legal/privacy-policy)</li>
                 </ul>
             </li>
             <li><b>Prowadzenie statystyk:</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Google Analytics (policies.google.com/privacy?hl=pl)</li>
-                    <li>SEMrush (semrush.com/company/legal/privacy-policy/)</li>
-                    <li>WordPress Stats (Automattic Inc.) (automattic.com/privacy/)</li>
-                    <li>Facebook Analytics for Apps (facebook.com/privacy/explanation)</li>
+                    <li>Google Tag Manager (policies.google.com/privacy?hl=pl)</li>
                 </ul>
             </li>
-            <li><b>Usługi inne:</b>
+            <li><b>Usługi komentarzy:</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
-                    <li>Mapy Google (google.com/intl/en_be/help/terms_maps/)</li>
+                    <li>Disqus (disqus.com/terms/)</li>
+                </ul>
+            </li>
+            <li><b>Zarządzanie zgodami (cookies):</b>
+                <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
+                    <li>Klaro (klaro.org/privacy-policy)</li>
+                </ul>
+            </li>
+            <li><b>Czcionki:</b>
+                <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
+                    <li>Google Fonts (policies.google.com/privacy?hl=pl)</li>
+                </ul>
+            </li>
+            <li><b>Źródło treści blogowych:</b>
+                <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
+                    <li>WordPress API (wordpress.org/about/privacy/)</li>
                 </ul>
             </li>
         </ul>
@@ -283,26 +271,18 @@
             <li>Dostawca usług internetowych</li>
             <li>Dane demograficzne (wiek, płeć)</li>
         </ul>
-        <b>Dane gromadzone podczas rejestracji:</b>
-        <ul class="list-decimal text-lg py-2 pl-16">
-            <li>Imię / nazwisko / pseudonim</li>
-            <li>Login</li>
-            <li>Adres e-mail</li>
-            <li>Adres IP (zbierane automatycznie)</li>
-        </ul>
         <b>Dane gromadzone podczas zapisu do usługi Newsletter</b>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li>Imię / nazwisko / pseudonim</li>
             <li>Adres e-mail</li>
             <li>Adres IP (zbierane automatycznie)</li>
         </ul>
-        <b>Dane gromadzone podczas dodawania komentarza</b>
+        <b>Dane gromadzone podczas dodawania komentarza (za pośrednictwem Disqus)</b>
         <ul class="list-decimal text-lg py-2 pl-16">
             <li>Imię i nazwisko / pseudonim</li>
             <li>Adres e-mail</li>
-            <li>Adres www</li>
             <li>Adres IP (zbierane automatycznie)</li>
         </ul>
+        <p class="text-lg">Komentarze są obsługiwane przez zewnętrzny serwis Disqus. Szczegółowe informacje o danych zbieranych przez Disqus znajdują się w polityce prywatności Disqus (disqus.com/terms/).</p>
         <p class="text-lg">Część danych (bez danych identyfikujących) może być przechowywana w plikach cookies. Cześć danych (bez danych
             identyfikujących) może być przekazywana do dostawcy usług statystycznych.</p>
         <h2 class="text-4xl py-4">§9 Dostęp do danych osobowych przez podmioty trzecie</h2>
@@ -312,24 +292,23 @@
         <p class="text-lg">Dostęp do danych (najczęściej na podstawie Umowy powierzenia przetwarzania danych) mogą posiadać podmioty,
             odpowiedzialne za utrzymania infrastruktury i usług niezbędnych do prowadzenia serwisu tj.:</p>
         <ul class="list-decimal text-lg py-2 pl-16">
-            <li>Firmy hostingowe, świadczące usługi hostingu lub usług pokrewnych dla Administratora</li>
-            <li>Firmy, za pośrednictwem których świadczona jest usługa Newslettera</li>
-            <li>Firmy, za pośrednictwem których świadczone są usługi SEO/SEM</li>
+            <li>Firmy hostingowe, świadczące usługi hostingu lub usług pokrewnych dla Administratora (Netlify, Inc.)</li>
+            <li>Firmy, za pośrednictwem których świadczona jest usługa Newslettera (MailerLite)</li>
+            <li>Firmy, za pośrednictwem których świadczona jest usługa komentarzy (Disqus)</li>
         </ul>
         <b>Powierzenie przetwarzania danych osobowych – Newsletter</b>
 
         <p class="text-lg">Administrator w celu świadczenia usługi Newsletter, korzysta z usług podmiotu trzeciego – serwisu
-        <b>Freshmail (freshmail.pl/polityka-prywatnosci/</b>)<b>, MailChimp (mailchimp.com/legal/privacy/</b>)</p>
+        <b>MailerLite (mailerlite.com/legal/privacy-policy)</b></p>
         <p class="text-lg">. Dane wprowadzone w formularzu zapisu do newslettera są przekazywane, przechowywane i przetwarzane w
             serwisie zewnętrznym tego usługodawcy.</p>
 
         <p class="text-lg">Informujemy, że wskazany partner może modyfikować wskazaną politykę prywatności bez zgody Administratora.</p>
 
-        <b>Powierzenie przetwarzania danych osobowych – Usługi Hostingu, VPS lub Serwerów Dedykowanych</b>
+        <b>Powierzenie przetwarzania danych osobowych – Usługi Hostingu</b>
 
-        <p class="text-lg">Administrator w celu prowadzenia serwisu korzysta z usług zewnętrznego dostawcy hostingu, VPS lub Serwerów
-            Dedykowanych – <b>Kru.pl Sp. z o.o</b>. Wszelkie dane gromadzone i przetwarzane w serwisie są
-        przechowywane i przetwarzane w infrastrukturze usługodawcy zlokalizowanej w Polsce. Istnieje możliwość dostępu
+        <p class="text-lg">Administrator w celu prowadzenia serwisu korzysta z usług zewnętrznego dostawcy hostingu – <b>Netlify, Inc.</b> (netlify.com/privacy). Wszelkie dane gromadzone i przetwarzane w serwisie są
+        przechowywane i przetwarzane w infrastrukturze usługodawcy. Istnieje możliwość dostępu
         do danych wskutek prac serwisowych realizowanych przez personel usługodawcy. Dostęp do tych danych reguluje
         umowa zawarta pomiędzy Administratorem a Usługodawcą.</p>
         <h2 class="text-4xl py-4">§10 Sposób przetwarzania danych osobowych</h2>
@@ -382,7 +361,7 @@
 
         <p class="text-lg">Co do zasady wskazane dane osobowe są przechowywane wyłącznie przez okres świadczenia Usługi w ramach Serwisu
             przez Administratora. Są one usuwane lub anonimizowane w okresie do 30 dni od chwili zakończenia świadczenia
-            usług (np. usunięcie zarejestrowanego konta użytkownika, wypisanie z listy Newsletter, itp.)</p>
+            usług (np. wypisanie z listy Newsletter, itp.)</p>
 
         <p class="text-lg">Wyjątek stanowi sytuacja, która wymaga zabezpieczenia prawnie uzasadnionych celów dalszego przetwarzania tych
             danych przez Administratora. W takiej sytuacji Administrator będzie przechowywał wskazane dane, od czasu
@@ -402,9 +381,8 @@
                 niezwłocznego sprostowania danych osobowych, które są nieprawidłowe lub / oraz uzupełnienia
                 niekompletnych danych osobowych, realizowane na żądanie złożone do Administratora</li>
             <li><b>Prawo do usunięcia danych osobowych</b><br/>Użytkownikom przysługuje prawo żądania od Administratora
-                niezwłocznego usunięcia danych osobowych, realizowane na żądanie złożone do Administratora W przypadku
-                kont użytkowników, usunięcie danych polega na anonimizacji danych umożliwiających identyfikację
-                Użytkownika. Administrator zastrzega sobie prawo wstrzymania realizacji żądania usunięcia danych w celu
+                niezwłocznego usunięcia danych osobowych, realizowane na żądanie złożone do Administratora.
+                Administrator zastrzega sobie prawo wstrzymania realizacji żądania usunięcia danych w celu
                 ochrony prawnie uzasadnionego interesu Administratora (np. w gdy Użytkownik dopuścił się naruszenia
                 Regulaminu czy dane zostały pozyskane wskutek prowadzonej korespondencji).
                 W przypadku usługi Newsletter, Użytkownik ma możliwość samodzielnego usunięcia swoich danych osobowych
@@ -445,11 +423,11 @@
                 informowania o tym Użytkowników w zakresie stosowania i wykorzystywania danych anonimowych lub
                 stosowania plików Cookie.</li>
             <li>Administrator zastrzega sobie prawo do dowolnej zmiany niniejszej Polityki Prywatności w zakresie
-                przetwarzania Danych Osobowych, o czym poinformuje Użytkowników posiadających konta użytkownika lub
-                zapisanych do usługi newsletter, za pośrednictwem poczty elektronicznej w terminie do 7 dni od zmiany
+                przetwarzania Danych Osobowych, o czym poinformuje Użytkowników zapisanych do usługi Newsletter,
+                za pośrednictwem poczty elektronicznej w terminie do 7 dni od zmiany
                 zapisów. Dalsze korzystanie z usług oznacza zapoznanie się i akceptację wprowadzonych zmian Polityki
                 Prywatności. W przypadku w którym Użytkownik nie będzie się zgadzał z wprowadzonymi zmianami, ma
-                obowiązek usunąć swoje konto z Serwisu lub wypisać się z usługi Newsletter.</li>
+                obowiązek wypisać się z usługi Newsletter.</li>
             <li>Wprowadzone zmiany w Polityce Prywatności będą publikowane na tej podstronie Serwisu.</li>
             <li>Wprowadzone zmiany wchodzą w życie z chwilą ich publikacji.</li>
         </ul>
