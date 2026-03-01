@@ -78,8 +78,7 @@ const currentTag = slug.at(-1) || ''
 
 const returnPath = computed(() => {
   if (isLeaf.value) {
-    const parts = slug.slice(0, -1)
-    return parts.length ? '/koloruj/' + parts.join('/') : '/koloruj'
+    return '/' + slug.join('/')
   }
   return '/'
 })
@@ -102,6 +101,12 @@ const { data: catData } = await useAsyncData(
 const categoryDoc = computed(() => catData.value)
 
 const isLeaf = computed(() => /^[0-9]+$/.test(currentTag))
+
+// Kategorie /koloruj/[coś-bez-liczby] nie istnieją jako porządne strony –
+// przekieruj na odpowiednik bez prefiksu /koloruj/
+if (!isLeaf.value && slug.length > 0) {
+  await navigateTo('/' + slug.join('/'), { replace: true })
+}
 
 const { data: rawSibsData } = await useAsyncData(
   `siblings:${basePath.value}`,
