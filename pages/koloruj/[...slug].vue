@@ -1,102 +1,89 @@
 <template>
+  <div>
+  <NuxtLayout :name="isLeaf ? 'coloring' : 'default'">
 
-<div>
-<div class="flex justify-center mt-8 w-full">
-      <UContainer class="w-full">
-                  <!-- v-rainbow-text="fullTitle" -->
-        <h1
-          v-if="doc"
+    <!-- LEAF PAGE: coloring mode -->
+    <ClientOnly v-if="isLeaf">
+      <ColoringPage
+        :svg-url="imageUrl"
+        :title="fullTitle"
+        :return-path="returnPath"
+      />
+    </ClientOnly>
 
-          class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
-          :aria-label="fullTitle"
-        />
-      </UContainer>
-    </div>
-      <ClientOnly>
-      <UContainer v-if="isLeaf" class="mb-6 mt-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <NuxtLink
-            :to="returnPath"
-            class="flex items-center gap-2 bg-white border rounded px-4 py-2 hover:bg-gray-100"
-          >
-            <img src="/vectors/return.svg" class="w-16 h-16" alt="Powrót" />
-            Powrót
-          </NuxtLink>
-        </div>
-      </UContainer>
-
-      <div v-if="isLeaf">
-        <ColoringCanvas :svg-url="imageUrl"/>
-      </div>
-      <div v-else class="container mx-auto mt-12">
-        <div v-if="!doc" class="text-red-600">Nie znaleziono strony.</div>
-
-        <div v-else class="space-y-6">
-          <div v-if="Array.isArray(childrenCategories) && childrenCategories.length">
-            <p class="font-semibold text-lg mb-2">Podkategorie:</p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li v-for="c in childrenCategories" :key="c._path">
-                <NuxtLink :to="c._path" class="text-blue-600 hover:underline">
-                  {{ c.title || lastSegment(c._path) }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div v-if="Array.isArray(childrenVariants) && childrenVariants.length">
-            <p class="font-semibold text-lg mb-2">
-              {{ childrenCategories?.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
-            </p>
-            <ul class="space-y-1 list-disc list-inside">
-              <li v-for="v in childrenVariants" :key="v._path">
-                <NuxtLink :to="v._path" class="text-blue-600 hover:underline">
-                  {{ v.title || lastSegment(v._path) }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      </ClientOnly>
-
-    <UModal v-model="showPreviewModal" class="max-w-[90vw]">
-      <div class="flex justify-center items-center min-h-[80vh] bg-gray-100 p-4">
-        <div
-          class="bg-white shadow-md relative overflow-hidden"
-          style="aspect-ratio: 1 / 1.414; width: min(100%, 600px);"
-        >
-          <img
-            v-if="doc?.image"
-            :src="doc.image"
-            alt="Podgląd PDF"
-            class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
+    <!-- CATEGORY PAGE: browse subcategories / variants -->
+    <template v-else>
+      <div class="flex justify-center mt-8 w-full">
+        <UContainer class="w-full">
+          <h1
+            v-if="doc"
+            class="mt-16 font-modak text-4xl md:text-7xl flex gap-1 flex-wrap"
+            :aria-label="fullTitle"
           />
-        </div>
+        </UContainer>
       </div>
-    </UModal>
+
+      <ClientOnly>
+        <div class="container mx-auto mt-12">
+          <div v-if="!doc" class="text-red-600">Nie znaleziono strony.</div>
+
+          <div v-else class="space-y-6">
+            <div v-if="Array.isArray(childrenCategories) && childrenCategories.length">
+              <p class="font-semibold text-lg mb-2">Podkategorie:</p>
+              <ul class="space-y-1 list-disc list-inside">
+                <li v-for="c in childrenCategories" :key="c._path">
+                  <NuxtLink :to="c._path" class="text-blue-600 hover:underline">
+                    {{ c.title || lastSegment(c._path) }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+
+            <div v-if="Array.isArray(childrenVariants) && childrenVariants.length">
+              <p class="font-semibold text-lg mb-2">
+                {{ childrenCategories?.length ? 'Warianty:' : 'Dostępne kolorowanki:' }}
+              </p>
+              <ul class="space-y-1 list-disc list-inside">
+                <li v-for="v in childrenVariants" :key="v._path">
+                  <NuxtLink :to="v._path" class="text-blue-600 hover:underline">
+                    {{ v.title || lastSegment(v._path) }}
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ClientOnly>
+    </template>
+
+  </NuxtLayout>
   </div>
 </template>
 
 <script setup>
-
 import { ref, computed } from 'vue'
-import { useWindowSize } from '@vueuse/core'
 import { useAsyncData, queryContent, useRoute } from '#imports'
+
+definePageMeta({ layout: false })
 
 const route = useRoute()
 const slug = Array.isArray(route.params.slug)
   ? route.params.slug.filter(Boolean)
   : route.params.slug
     ? [route.params.slug]
-    : [];
-const currentPath = '/' + slug.join('/');
+    : []
+
+const currentPath = '/' + slug.join('/')
 const currentTag = slug.at(-1) || ''
-const { width } = useWindowSize()
-const isMobile = computed(() => width.value < 768)
+
 const returnPath = computed(() => {
-  const parts = [...slug]
-  return '/' + parts.join('/')
+  if (isLeaf.value) {
+    const parts = slug.slice(0, -1)
+    return parts.length ? '/koloruj/' + parts.join('/') : '/koloruj'
+  }
+  return '/'
 })
+
 const { data: docData } = await useAsyncData(
   `doc:${currentPath}`,
   () => queryContent(currentPath).findOne()
@@ -169,6 +156,7 @@ const positionIndicator = computed(() =>
     ? ` (${currentIndex.value}/${totalCount.value})`
     : ''
 )
+
 function cleanTitle(t) {
   return t?.replace(/^Kolorowanki?\s*/i, '') || ''
 }
@@ -180,47 +168,23 @@ const fullTitle = computed(() => {
 })
 
 const imageUrl = computed(() => doc.value?.image)
-function printPdf() {
-  const pdfUrl = doc.value?.pdf
-  if (!pdfUrl) return
-  window.open(pdfUrl, '_blank')
-}
-function downloadPdf() {
-  const pdfUrl = doc.value?.pdf
-  if (!pdfUrl) return
-  const a = document.createElement('a')
-  a.href = pdfUrl
-  a.download = pdfUrl.split('/').pop()
-  document.body.appendChild(a)
-  a.click()
-  document.body.removeChild(a)
-}
 
-const showPreviewModal = ref(false)
-function openPreviewModal() {
-  if (!doc.value?.image) return
-  showPreviewModal.value = true
-}
-[useHead(() => {
+useHead(() => {
   const seoObj = doc.value
-   const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`
+  const canonical = `https://twoja-kolorowanka.pl${seoObj?.canonical || currentPath}`
   return {
     title: seoObj?.title,
-    link: [ { rel: 'canonical', href: canonical } ],
+    link: [{ rel: 'canonical', href: canonical }],
     meta: [
       { name: 'robots', content: 'noindex, nofollow' },
       { name: 'description', content: seoObj?.description },
-      { name: 'keywords',    content: seoObj?.keywords },
-      { property: 'og:type',        content: 'website' },
-      { property: 'og:title',       content: seoObj?.title },
+      { name: 'keywords', content: seoObj?.keywords },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: seoObj?.title },
       { property: 'og:description', content: seoObj?.description },
-      { property: 'og:url',         content: `https://twoja-kolorowanka.pl${seoObj?.canonical}` },
-      { property: 'og:image',       content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
+      { property: 'og:url', content: `https://twoja-kolorowanka.pl${seoObj?.canonical}` },
+      { property: 'og:image', content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
     ],
-    script: [
-
-    ]
   }
-})]
-
+})
 </script>
