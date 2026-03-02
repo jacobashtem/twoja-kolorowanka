@@ -100,12 +100,10 @@ function openKlaroSettings() {
 
 <template>
   <div class="bg-[#FDFBFF] min-h-screen font-quicksand text-[#2A1B3D]">
-    <!-- BG blobs -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.05] w-[500px] h-[500px] bg-[#FF6B6B] -top-[10%] -left-[5%]"></div>
-      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.05] w-[600px] h-[600px] bg-[#4D96FF] top-[40%] -right-[10%] [animation-delay:-8s]"></div>
-      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.05] w-[400px] h-[400px] bg-[#FFD93D] bottom-[5%] left-[30%] [animation-delay:-15s]"></div>
-    </div>
+    <!-- BG blobs – każdy fixed osobno, bez overflow-hidden wrappera który blokuje sticky -->
+    <div class="blog-blob fixed pointer-events-none z-0 rounded-full blur-[80px] opacity-[0.05] w-[500px] h-[500px] bg-[#FF6B6B] -top-[10%] -left-[5%]"></div>
+    <div class="blog-blob fixed pointer-events-none z-0 rounded-full blur-[80px] opacity-[0.05] w-[600px] h-[600px] bg-[#4D96FF] top-[40%] -right-[10%] [animation-delay:-8s]"></div>
+    <div class="blog-blob fixed pointer-events-none z-0 rounded-full blur-[80px] opacity-[0.05] w-[400px] h-[400px] bg-[#FFD93D] bottom-[5%] left-[30%] [animation-delay:-15s]"></div>
 
     <div class="relative z-[1]">
       <BlogTopBar :active-slug="post?.category?.slug || ''" />
@@ -118,8 +116,7 @@ function openKlaroSettings() {
       </div>
 
       <!-- Article -->
-      <div v-else class="max-w-[1100px] mx-auto px-8 sm:px-4 pt-10 pb-20">
-        <div class="xl:grid xl:grid-cols-[1fr_240px] xl:gap-12">
+      <div v-else class="max-w-[820px] mx-auto px-8 sm:px-4 pt-10 pb-20">
         <article>
         <!-- Breadcrumbs -->
         <nav class="flex items-center gap-2 flex-wrap text-[0.85rem] text-[#8B7BA5] mb-8">
@@ -172,10 +169,10 @@ function openKlaroSettings() {
           </div>
         </div>
 
-        <!-- Mobile TOC (collapsible, ukryty na xl) -->
+        <!-- TOC (collapsible) -->
         <details
           v-if="headings.length >= 2"
-          class="xl:hidden mb-8 rounded-2xl border border-[#C8B4DC]/20 bg-white/80 p-5"
+          class="mb-8 rounded-2xl border border-[#C8B4DC]/20 bg-white/80 p-5"
         >
           <summary class="font-baloo text-[0.9rem] font-extrabold text-[#2A1B3D] cursor-pointer list-none flex items-center gap-2">
             <span class="text-[#9B72CF]">☰</span> Spis treści <span class="ml-auto text-[#C8B4DC] text-sm">▾</span>
@@ -256,23 +253,7 @@ function openKlaroSettings() {
         <!-- Related posts -->
         <BlogRelatedPosts v-if="relatedPosts" :posts="relatedPosts" />
         </article>
-
-        <!-- Grid spacer – rezerwuje kolumnę dla TOC na xl -->
-        <aside class="hidden xl:block" aria-hidden="true" />
-        </div>
       </div>
-
-      <ClientOnly>
-        <Teleport to="body">
-          <div
-            v-if="headings.length >= 2"
-            class="hidden xl:block fixed w-[240px] z-50"
-            style="top: 96px; left: calc(50vw + 278px)"
-          >
-            <BlogToc :headings="headings" />
-          </div>
-        </Teleport>
-      </ClientOnly>
 
     </div>
   </div>

@@ -5,7 +5,7 @@ export const QUICK_COLORS = [
 
 export const BRUSH_SIZES = [2, 5, 10, 18, 28, 40]
 
-export const COLOR_CATEGORIES: Record<string, string[]> = {
+export const COLOR_CATEGORIES = {
   'Czerwone':     ['#FF0000', '#E53935', '#C62828', '#FF5252', '#FF1744', '#B71C1C'],
   'Różowe':       ['#F48FB1', '#F06292', '#EC407A', '#E91E63', '#C2185B', '#880E4F', '#FCE4EC', '#FFCDD2'],
   'Pomarańczowe': ['#FF6D00', '#FF9100', '#FFAB40', '#FFD180', '#E65100', '#F4511E', '#FF7043', '#FFAB91'],
