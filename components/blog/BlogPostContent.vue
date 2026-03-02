@@ -10,6 +10,11 @@ defineProps({
 
 <!-- Non-scoped style needed for v-html injected WordPress content -->
 <style>
+.wp-content h2,
+.wp-content h3,
+.wp-content h4 {
+  scroll-margin-top: 88px;
+}
 .wp-content h2 {
   font-family: 'Baloo 2', cursive;
   font-size: 1.5rem;

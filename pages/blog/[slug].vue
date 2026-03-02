@@ -1,6 +1,7 @@
 <script setup>
 import { useBlog } from '~/composables/useBlog'
 import { getCategoryConfig } from '~/composables/useBlogCategories'
+import { parseToc } from '~/composables/useToc'
 
 definePageMeta({
   layout: 'blog',
@@ -61,6 +62,10 @@ const catConfig = computed(() => {
   return getCategoryConfig(post.value.category.slug)
 })
 
+const toc = computed(() => parseToc(post.value?.content || ''))
+const processedHtml = computed(() => toc.value.processedHtml)
+const headings = computed(() => toc.value.headings)
+
 // Share functions
 function shareOnFacebook() {
   const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`
@@ -94,13 +99,11 @@ function openKlaroSettings() {
 </script>
 
 <template>
-  <div class="bg-[#FDFBFF] min-h-screen font-quicksand text-[#2A1B3D] overflow-x-hidden">
-    <!-- BG blobs -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.05] w-[500px] h-[500px] bg-[#FF6B6B] -top-[10%] -left-[5%]"></div>
-      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.05] w-[600px] h-[600px] bg-[#4D96FF] top-[40%] -right-[10%] [animation-delay:-8s]"></div>
-      <div class="blog-blob absolute rounded-full blur-[80px] opacity-[0.05] w-[400px] h-[400px] bg-[#FFD93D] bottom-[5%] left-[30%] [animation-delay:-15s]"></div>
-    </div>
+  <div class="bg-[#FDFBFF] min-h-screen font-quicksand text-[#2A1B3D]">
+    <!-- BG blobs – każdy fixed osobno, bez overflow-hidden wrappera który blokuje sticky -->
+    <div class="blog-blob fixed pointer-events-none z-0 rounded-full blur-[80px] opacity-[0.05] w-[500px] h-[500px] bg-[#FF6B6B] -top-[10%] -left-[5%]"></div>
+    <div class="blog-blob fixed pointer-events-none z-0 rounded-full blur-[80px] opacity-[0.05] w-[600px] h-[600px] bg-[#4D96FF] top-[40%] -right-[10%] [animation-delay:-8s]"></div>
+    <div class="blog-blob fixed pointer-events-none z-0 rounded-full blur-[80px] opacity-[0.05] w-[400px] h-[400px] bg-[#FFD93D] bottom-[5%] left-[30%] [animation-delay:-15s]"></div>
 
     <div class="relative z-[1]">
       <BlogTopBar :active-slug="post?.category?.slug || ''" />
@@ -113,7 +116,8 @@ function openKlaroSettings() {
       </div>
 
       <!-- Article -->
-      <article v-else class="max-w-[820px] mx-auto px-8 sm:px-4 pt-10 pb-20">
+      <div v-else class="max-w-[820px] mx-auto px-8 sm:px-4 pt-10 pb-20">
+        <article>
         <!-- Breadcrumbs -->
         <nav class="flex items-center gap-2 flex-wrap text-[0.85rem] text-[#8B7BA5] mb-8">
           <NuxtLink to="/" class="text-[#8B7BA5] no-underline transition-colors duration-200 hover:text-[#9B72CF]">🏠 Strona główna</NuxtLink>
@@ -165,8 +169,30 @@ function openKlaroSettings() {
           </div>
         </div>
 
+        <!-- TOC (collapsible) -->
+        <details
+          v-if="headings.length >= 2"
+          class="mb-8 rounded-2xl border border-[#C8B4DC]/20 bg-white/80 p-5"
+        >
+          <summary class="font-baloo text-[0.9rem] font-extrabold text-[#2A1B3D] cursor-pointer list-none flex items-center gap-2">
+            <span class="text-[#9B72CF]">☰</span> Spis treści <span class="ml-auto text-[#C8B4DC] text-sm">▾</span>
+          </summary>
+          <ul class="mt-3 space-y-[3px]">
+            <li
+              v-for="item in headings"
+              :key="item.id"
+              :class="item.level === 3 ? 'pl-4' : ''"
+            >
+              <a
+                :href="`#${item.id}`"
+                class="text-[0.82rem] text-[#8B7BA5] no-underline hover:text-[#9B72CF]"
+              >{{ item.text }}</a>
+            </li>
+          </ul>
+        </details>
+
         <!-- Content -->
-        <BlogPostContent :content="post.content" />
+        <BlogPostContent :content="processedHtml" />
 
         <!-- Tags -->
         <div v-if="post.tags.length" class="flex items-center flex-wrap gap-2 pt-8 mt-10 border-t border-[#C8B4DC]/20">
@@ -226,7 +252,8 @@ function openKlaroSettings() {
 
         <!-- Related posts -->
         <BlogRelatedPosts v-if="relatedPosts" :posts="relatedPosts" />
-      </article>
+        </article>
+      </div>
 
     </div>
   </div>

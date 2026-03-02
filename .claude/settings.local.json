@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm:*)",
+      "Bash(npx nuxi:*)",
+      "Bash(curl:*)",
+      "Bash(find:*)"
+    ]
+  }
+}
