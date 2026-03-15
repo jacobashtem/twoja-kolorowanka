@@ -110,6 +110,7 @@ const categoryLinks = [
       { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
       { name: 'Lwy', slug: 'zwierzeta/lwy' },
       { name: 'Sowy', slug: 'zwierzeta/sowy' },
+      { name: 'Świnki', slug: 'zwierzeta/swinki' },
       { name: 'Pandy', slug: 'zwierzeta/pandy' },
       { name: 'Pszczoły', slug: 'zwierzeta/pszczoly' },
       { name: 'Tygrysy', slug: 'zwierzeta/tygrysy' },
@@ -139,6 +140,7 @@ const categoryLinks = [
     name: 'Pory roku',
     slug: 'pory-roku',
     children: [
+      { name: 'Wiosna', slug: 'pory-roku/wiosna' },
       { name: 'Jesień', slug: 'pory-roku/jesien' },
       { name: 'Zima', slug: 'pory-roku/zima' },
       { name: 'Lato', slug: 'pory-roku/lato' },
