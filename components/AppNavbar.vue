@@ -79,11 +79,13 @@ const categoryLinks = [
     name: 'Pojazdy',
     slug: 'pojazdy',
     children: [
+      { name: 'BMW', slug: 'pojazdy/bmw' },
       { name: 'Samochody', slug: 'pojazdy/samochody' },
       { name: 'Traktory', slug: 'pojazdy/traktory' },
       { name: 'Pociągi', slug: 'pojazdy/pociagi' },
       { name: 'Kombajny', slug: 'pojazdy/kombajny' },
       { name: 'Koparki', slug: 'pojazdy/koparki' },
+      { name: 'Lamborghini', slug: 'pojazdy/lamborghini' },
       { name: 'Rakiety', slug: 'pojazdy/rakiety' },
       { name: 'Tiry', slug: 'pojazdy/tiry' },
       { name: 'Czołgi', slug: 'pojazdy/czolgi' },
