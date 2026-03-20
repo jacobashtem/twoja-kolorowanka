@@ -114,11 +114,13 @@ const categoryLinks = [
       { name: 'Sowy', slug: 'zwierzeta/sowy' },
       { name: 'Świnki', slug: 'zwierzeta/swinki' },
       { name: 'Pandy', slug: 'zwierzeta/pandy' },
+      { name: 'Papugi', slug: 'zwierzeta/papugi' },
       { name: 'Pszczoły', slug: 'zwierzeta/pszczoly' },
       { name: 'Tygrysy', slug: 'zwierzeta/tygrysy' },
       { name: 'Myszki', slug: 'zwierzeta/myszki' },
-      { name: 'T-rex', slug: 'zwierzeta/t-rex' }
-    ]
+      { name: 'T-rex', slug: 'zwierzeta/t-rex' },
+      { name: 'Żabki', slug: 'zwierzeta/zabki' }
+  ]
   },
   {
     name: 'Rośliny',
