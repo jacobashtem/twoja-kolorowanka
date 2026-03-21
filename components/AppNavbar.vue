@@ -110,6 +110,7 @@ const categoryLinks = [
       { name: 'Pingwiny', slug: 'zwierzeta/pingwiny' },
       { name: 'Wilki', slug: 'zwierzeta/wilki' },
       { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
+      { name: 'Flamingi', slug: 'zwierzeta/flamingi' },
       { name: 'Lwy', slug: 'zwierzeta/lwy' },
       { name: 'Sowy', slug: 'zwierzeta/sowy' },
       { name: 'Świnki', slug: 'zwierzeta/swinki' },
