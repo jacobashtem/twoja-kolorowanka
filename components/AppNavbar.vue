@@ -79,6 +79,8 @@ const categoryLinks = [
     name: 'Pojazdy',
     slug: 'pojazdy',
     children: [
+      { name: 'Bugattii', slug: 'pojazdy/bugattii' },
+      { name: 'Ciągniki', slug: 'pojazdy/ciagniki' },
       { name: 'BMW', slug: 'pojazdy/bmw' },
       { name: 'Samochody', slug: 'pojazdy/samochody' },
       { name: 'Traktory', slug: 'pojazdy/traktory' },
