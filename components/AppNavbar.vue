@@ -160,6 +160,8 @@ const categoryLinks = [
     children: [
       { name: 'Mandale', slug: 'dla-doroslych/mandala' },
       { name: 'Antystresowe', slug: 'dla-doroslych/antystresowe' },
+      { name: 'Jednorożce', slug: 'dla-doroslych/jednorozce' },
+      { name: 'Po numerach', slug: 'dla-doroslych/po-numerach' },
     ]
   },
   {
