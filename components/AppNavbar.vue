@@ -114,6 +114,7 @@ const categoryLinks = [
       { name: 'Wilki', slug: 'zwierzeta/wilki' },
       { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
       { name: 'Flamingi', slug: 'zwierzeta/flamingi' },
+      { name: 'Niedźwiedzie', slug: 'zwierzeta/niedzwiedzie' },
       { name: 'Lwy', slug: 'zwierzeta/lwy' },
       { name: 'Sowy', slug: 'zwierzeta/sowy' },
       { name: 'Świnki', slug: 'zwierzeta/swinki' },
@@ -123,6 +124,7 @@ const categoryLinks = [
       { name: 'Tygrysy', slug: 'zwierzeta/tygrysy' },
       { name: 'Myszki', slug: 'zwierzeta/myszki' },
       { name: 'T-rex', slug: 'zwierzeta/t-rex' },
+      { name: 'Zające', slug: 'zwierzeta/zajace' },
       { name: 'Żabki', slug: 'zwierzeta/zabki' }
   ]
   },
