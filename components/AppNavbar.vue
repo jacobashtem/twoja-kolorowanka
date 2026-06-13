@@ -76,6 +76,14 @@ const categoryLinks = [
     ]
   },
   {
+    name: 'Okolicznościowe',
+    slug: 'okolicznosciowe',
+    children: [
+      { name: 'Urodziny', slug: 'okolicznosciowe/urodziny' },
+      { name: 'Andrzejki', slug: 'okolicznosciowe/andrzejki' }
+    ]
+  },
+  {
     name: 'Pojazdy',
     slug: 'pojazdy',
     children: [
