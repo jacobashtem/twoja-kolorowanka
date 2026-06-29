@@ -3,6 +3,7 @@ import { useWindowSize } from '@vueuse/core'
 import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
 import { extractH2Blocks } from '@/utils/extractH2Blocks'
+
 const FIRST_BATCH = 56
 const STEP        = 8
 
@@ -18,11 +19,6 @@ const isLeaf      = computed(() => /^[0-9]+$/.test(currentTag))
 const basePath = computed(() =>
   isLeaf.value ? '/' + slug.slice(0, -1).join('/') : currentPath)
 
-const levelRegex = computed(() =>
-  slug.length === 1
-    ? `^${basePath.value}/[^/]+/[0-9]+$`
-    : `^${basePath.value}/[0-9]+$`)
-
 const byNum = (a, b) =>
   +(a._path.match(/\/(\d+)\/?$/)?.[1] || 0) - +(b._path.match(/\/(\d+)\/?$/)?.[1] || 0)
 
@@ -32,6 +28,7 @@ const isMobile  = computed(() => width.value < 768)
 const { data: docData } = await useAsyncData(`doc:${currentPath}`,
   () => queryContent(currentPath).findOne())
 const doc = computed(() => docData.value)
+
 if (!doc.value) {
   throw createError({ statusCode: 404, statusMessage: 'Nie znaleziono' })
 }
@@ -55,6 +52,13 @@ const childrenCategories = computed(() =>
 const variantsDirect = computed(() =>
   siblings.value.filter(i => /^[0-9]+$/.test(last(i._path))).sort(byNum))
 
+// Dopasowujemy regex zależnie od tego, czy kategoria ma podkategorie, czy od razu liście
+const levelRegex = computed(() =>
+  childrenCategories.value.length > 0
+    ? `^${basePath.value}/[^/]+/[0-9]+$`
+    : `^${basePath.value}/[0-9]+$`
+)
+
 const { data: rawGrand } = await useAsyncData(`grand:${currentPath}`,
   () => queryContent()
         .where({ _path: { $regex: levelRegex.value } })
@@ -63,10 +67,9 @@ const { data: rawGrand } = await useAsyncData(`grand:${currentPath}`,
 const variantsGrand = computed(() => (rawGrand.value || []).sort(byNum))
 
 const childrenVariants = computed(() =>
-  slug.length === 1 ? variantsGrand.value : variantsDirect.value)
+  isLeaf.value ? variantsDirect.value : variantsGrand.value)
 
 /* --- PROSTE: lista liści po tagach z frontmatter `tagsFilter` --- */
-/* (MUSI być zdefiniowane PRZED `galleryVariants`) */
 const tagsFilter = computed(() => {
   const t = doc.value?.tagsFilter
   if (Array.isArray(t)) return t.map(String).filter(Boolean)
@@ -74,13 +77,33 @@ const tagsFilter = computed(() => {
   return []
 })
 
+// Oczyszczona i poprawiona funkcja naprawiająca zduplikowane foldery
+const fixImageUrl = (imgUrl) => {
+  if (!imgUrl) return ''
+  
+  let clean = imgUrl.replace(/\/+/g, '/')
+  if (!clean.startsWith('/')) {
+    clean = '/' + clean
+  }
+
+  const category = slug[0]
+  if (!category) return clean
+
+  const duplicatePattern = new RegExp(`^\\/${category}\\/${category}\\/`)
+  if (duplicatePattern.test(clean)) {
+    clean = clean.replace(`/${category}`, '')
+  }
+
+  return clean
+}
+
 const { data: tagRaw } = await useAsyncData(
   `tag:${currentPath}`,
   () => {
     if (!tagsFilter.value.length || isLeaf.value) return []
     return queryContent()
-      .where({ tags: { $containsAny: tagsFilter.value } }) // tylko po tagach
-      .where({ _path: { $regex: '^.+/[0-9]+/?$' } })       // tylko liście (numer na końcu)
+      .where({ tags: { $containsAny: tagsFilter.value } }) 
+      .where({ _path: { $regex: '^.+/[0-9]+/?$' } })      
       .only(['_path','image','title','alt'])
       .find()
   },
@@ -91,7 +114,10 @@ const { data: tagRaw } = await useAsyncData(
 
 const galleryByTag = computed(() =>
   (tagRaw.value || []).sort(byNum).map(v => ({
-    img: v.image, url: v._path, title: v.title, alt: v.alt || v.title
+    img: fixImageUrl(v.image),
+    url: v._path, 
+    title: v.title, 
+    alt: v.alt || v.title
   }))
 )
 /* --- KONIEC bloku tagów --- */
@@ -101,7 +127,10 @@ const galleryVariants = computed(() => {
     return galleryByTag.value
   }
   return childrenVariants.value.map(v => ({
-    img: v.image, url: v._path, title: v.title, alt: v.alt || v.title
+    img: fixImageUrl(v.image),
+    url: v._path, 
+    title: v.title, 
+    alt: v.alt || v.title
   }))
 })
 
@@ -125,11 +154,13 @@ function loadMore () {
 watch(() => currentPath, () => {
   visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
 })
+
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
   const i = variantsDirect.value.findIndex(v => v._path === currentPath)
   return i >= 0 ? i + 1 : null
 })
+
 const totalCount = computed(() => (isLeaf.value ? variantsDirect.value.length : 0))
 const posInd = computed(() =>
   isLeaf.value && totalCount.value > 1 ? ` (${currentIndex.value}/${totalCount.value})` : '')
@@ -142,9 +173,13 @@ const fullTitle = computed(() => {
   return `Kolorowanka ${base}${posInd.value}`
 })
 
-const imageUrl        = computed(() => doc?.value?.image)
-const printPdf        = () => { const u = doc.value?.pdf; if (u) window.open(u, '_blank') }
-const downloadPdf     = () => { const u = doc.value?.pdf; if (!u) return; const a = Object.assign(document.createElement('a'), { href: u, download: u.split('/').pop() }); document.body.appendChild(a); a.click(); document.body.removeChild(a) }
+// Zastosowanie naprawy ścieżek do obrazka głównego i PDF
+const imageUrl        = computed(() => fixImageUrl(doc?.value?.image))
+const pdfUrl          = computed(() => fixImageUrl(doc?.value?.pdf))
+
+const printPdf        = () => { const u = pdfUrl.value; if (u) window.open(u, '_blank') }
+const downloadPdf     = () => { const u = pdfUrl.value; if (!u) return; const a = Object.assign(document.createElement('a'), { href: u, download: u.split('/').pop() }); document.body.appendChild(a); a.click(); document.body.removeChild(a) }
+
 const showPreviewModal = ref(false)
 const openPreviewModal = () => { if (doc.value?.image) showPreviewModal.value = true }
 
@@ -297,7 +332,6 @@ useHead(() => {
       <UContainer>
            <CategoryGallery v-if="childrenCategories.length" class="mb-8" :items="childrenCategories" slugHandler/>
 <template v-for="(block, i) in h2Blocks" :key="i">
-  <!-- nagłówek -->
   <Heading
     :text="block.heading"
     as="h2"
@@ -381,8 +415,6 @@ useHead(() => {
       <VariantsGallery :items="similarGalleryVariants" />
     </UContainer>
 
-
-
     
     <UContainer v-if="doc?.faqs?.length">
       <FaqList :faqs="doc?.faqs" />
@@ -395,8 +427,8 @@ useHead(() => {
           style="aspect-ratio: 1 / 1.414; width: min(100%, 600px);"
         >
           <img
-            v-if="doc?.image"
-            :src="doc.image"
+            v-if="imageUrl"
+            :src="imageUrl"
             alt="Podgląd PDF"
             class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
           />

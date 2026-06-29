@@ -2,7 +2,6 @@
   <div>
   <NuxtLayout :name="isLeaf ? 'coloring' : 'default'">
 
-    <!-- LEAF PAGE: coloring mode -->
     <ClientOnly v-if="isLeaf">
       <ColoringPage
         :svg-url="imageUrl"
@@ -11,7 +10,6 @@
       />
     </ClientOnly>
 
-    <!-- CATEGORY PAGE: browse subcategories / variants -->
     <template v-else>
       <div class="flex justify-center mt-8 w-full">
         <UContainer class="w-full">
@@ -62,7 +60,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import { useAsyncData, queryContent, useRoute } from '#imports'
+import { useAsyncData, queryContent, useRoute, navigateTo, useHead } from '#imports'
 
 definePageMeta({ layout: false })
 
@@ -75,6 +73,7 @@ const slug = Array.isArray(route.params.slug)
 
 const currentPath = '/' + slug.join('/')
 const currentTag = slug.at(-1) || ''
+const isLeaf = computed(() => /^[0-9]+$/.test(currentTag))
 
 const returnPath = computed(() => {
   if (isLeaf.value) {
@@ -83,28 +82,27 @@ const returnPath = computed(() => {
   return '/'
 })
 
+const basePath = computed(() =>
+  isLeaf.value
+    ? '/' + slug.slice(0, -1).join('/')
+    : currentPath
+)
+
 const { data: docData } = await useAsyncData(
   `doc:${currentPath}`,
   () => queryContent(currentPath).findOne()
 )
 const doc = computed(() => docData.value)
 
-const basePath = computed(() =>
-  /^[0-9]+$/.test(currentTag)
-    ? '/' + slug.slice(0, -1).join('/')
-    : currentPath
-)
 const { data: catData } = await useAsyncData(
   `catDoc:${basePath.value}`,
   () => queryContent(basePath.value).findOne()
 )
 const categoryDoc = computed(() => catData.value)
 
-const isLeaf = computed(() => /^[0-9]+$/.test(currentTag))
-
 // Kategorie /koloruj/[coś-bez-liczby] nie istnieją jako porządne strony –
 // przekieruj na odpowiednik bez prefiksu /koloruj/
-if (!isLeaf.value && slug.length > 0) {
+if (!isLeaf.value && slug.length > 1) {
   await navigateTo('/' + slug.join('/'), { replace: true })
 }
 
@@ -134,18 +132,26 @@ const variantsDirect = computed(() =>
   siblings.value.filter(i => /^[0-9]+$/.test(lastSegment(i._path)))
 )
 
+// Nowa logika wykrywania głębokości ścieżek
+const levelRegex = computed(() =>
+  childrenCategories.value.length > 0
+    ? `^${basePath.value}/[^/]+/[0-9]+$`
+    : `^${basePath.value}/[0-9]+$`
+)
+
 const { data: rawGrandkids } = await useAsyncData(
   `grandkids:${currentPath}`,
   () =>
     queryContent()
-      .where({ _path: { $regex: `^${currentPath}/[^/]+/[0-9]+$` } })
+      .where({ _path: { $regex: levelRegex.value } })
       .find()
 )
 const variantsFromGrandkids = computed(() => rawGrandkids.value || [])
+
 const childrenVariants = computed(() =>
-  slug.length === 1
-    ? variantsFromGrandkids.value
-    : variantsDirect.value
+  isLeaf.value
+    ? variantsDirect.value
+    : variantsFromGrandkids.value
 )
 
 const currentIndex = computed(() => {
@@ -172,7 +178,28 @@ const fullTitle = computed(() => {
   return `Kolorowanka ${base}${positionIndicator.value}`
 })
 
-const imageUrl = computed(() => doc.value?.image)
+// Oczyszczona funkcja do linków
+const fixImageUrl = (imgUrl) => {
+  if (!imgUrl) return ''
+  
+  let clean = imgUrl.replace(/\/+/g, '/')
+  if (!clean.startsWith('/')) {
+    clean = '/' + clean
+  }
+
+  const category = slug[0]
+  if (!category) return clean
+
+  const duplicatePattern = new RegExp(`^\\/${category}\\/${category}\\/`)
+  if (duplicatePattern.test(clean)) {
+    clean = clean.replace(`/${category}`, '')
+  }
+
+  return clean
+}
+
+// Zastosowanie dla obrazka przekazywanego do ColoringPage
+const imageUrl = computed(() => fixImageUrl(doc.value?.image))
 
 useHead(() => {
   const seoObj = doc.value
@@ -188,7 +215,7 @@ useHead(() => {
       { property: 'og:title', content: seoObj?.title },
       { property: 'og:description', content: seoObj?.description },
       { property: 'og:url', content: `https://twoja-kolorowanka.pl${seoObj?.canonical}` },
-      { property: 'og:image', content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
+      { property: 'og:image', content: `https://twoja-kolorowanka.pl${fixImageUrl(seoObj?.image)}` },
     ],
   }
 })

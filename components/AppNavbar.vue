@@ -103,6 +103,14 @@ const categoryLinks = [
     ]
   },
   {
+    name: 'Serce',
+    slug: 'serce',
+  },
+  {
+    name: 'Dom',
+    slug: 'dom',
+  },
+  {
     name: 'Zwierzęta',
     slug: 'zwierzeta',
     children: [
