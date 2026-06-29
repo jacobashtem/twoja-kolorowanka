@@ -118,6 +118,7 @@ const categoryLinks = [
       { name: 'Lisy', slug: 'zwierzeta/lisy' },
       { name: 'Ptaki', slug: 'zwierzeta/ptaki' },
       { name: 'Rekiny', slug: 'zwierzeta/rekiny' },
+      { name: 'Pawie', slug: 'zwierzeta/pawie' },
       { name: 'Pingwiny', slug: 'zwierzeta/pingwiny' },
       { name: 'Wilki', slug: 'zwierzeta/wilki' },
       { name: 'Biedronki', slug: 'zwierzeta/biedronki' },
@@ -140,6 +141,7 @@ const categoryLinks = [
     name: 'Rośliny',
     slug: 'rosliny',
     children: [
+      { name: 'Bukiet', slug: 'rosliny/bukiet' },
       { name: 'Kwiat', slug: 'rosliny/kwiat' },
       { name: 'Dynie', slug: 'rosliny/dynie' },
       { name: 'Grzyby', slug: 'rosliny/grzyby' },
