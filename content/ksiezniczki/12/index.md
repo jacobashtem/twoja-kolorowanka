@@ -1,0 +1,12 @@
+---
+title: Kolorowanka Ksiezniczki - wariant 12
+description: Kolorowanka Ksiezniczki - wariant 12
+canonical: /ksiezniczki/ksiezniczki/
+variant_of: ksiezniczki
+image: /ksiezniczki/ksiezniczki/12/ksiezniczki-12.svg
+pdf: /ksiezniczki/ksiezniczki/12/ksiezniczki-12.pdf
+alt: "kolorowanka do druku ksiezniczki PDF"
+tags:
+- ksiezniczki
+- ksiezniczki
+---
