@@ -111,6 +111,14 @@ const categoryLinks = [
     slug: 'dom',
   },
   {
+    name: 'Księżniczki',
+    slug: 'ksiezniczki',
+  },
+  {
+    name: 'Kosmos',
+    slug: 'kosmos',
+  },
+  {
     name: 'Zwierzęta',
     slug: 'zwierzeta',
     children: [
