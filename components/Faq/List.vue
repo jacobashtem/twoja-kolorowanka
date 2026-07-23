@@ -3,7 +3,7 @@
       <section id="faq" class="max-w-6xl mx-auto pb-24">
         <div class="text-center lg:text-left flex items-center justify-center flex-col gap-y-2 py-5">
           <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold leading-none">
-            <span class="font-extrabold bg-sec-500 text-sec-900 px-6">Najczęściej</span> zadawane pytania
+            <span class="font-extrabold bg-sec-500 text-white px-6">Najczęściej</span> zadawane pytania
           </h2>
           <p class="text-xl lg:text-2xl mt-3 font-light">Wszystko co musisz wiedzieć</p>
         </div>
