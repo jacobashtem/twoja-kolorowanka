@@ -23,9 +23,10 @@ useSeoMeta({
   description: () => post.value?.excerpt || '',
   ogTitle: () => post.value?.title || '',
   ogDescription: () => post.value?.excerpt || '',
-  ogImage: () => post.value?.thumbnail?.url || '/og-blog.jpg',
+  ogImage: () => post.value?.thumbnail?.url || 'https://twoja-kolorowanka.pl/logo-1.webp',
   ogType: 'article',
   articlePublishedTime: () => post.value?.date || '',
+  twitterCard: 'summary_large_image',
 })
 
 // Structured data

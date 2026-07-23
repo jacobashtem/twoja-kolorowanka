@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Ksiezniczki - wariant 45
 description: Kolorowanka Ksiezniczki - wariant 45
-canonical: /ksiezniczki/ksiezniczki/
+canonical: /ksiezniczki/
 variant_of: ksiezniczki
 image: /ksiezniczki/ksiezniczki/45/ksiezniczki-45.svg
 pdf: /ksiezniczki/ksiezniczki/45/ksiezniczki-45.pdf

@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Koty - wariant 36
 description: Kolorowanka Koty - wariant 36
-canonical: /zwierzeta/koty
+canonical: /zwierzeta/koty/
 variant_of: koty
 image: /koty/36/koty-36.svg
 pdf: /koty/36/koty-36.pdf

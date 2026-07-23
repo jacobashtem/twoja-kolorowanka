@@ -1,4 +1,5 @@
 ---
+canonical: /zwierzeta/koniki/
 title: Kolorowanki Koniki - wariant 75
 description: Kolorowanka Koniki – wariant 75
 image: /koniki/75/koniki-75.svg

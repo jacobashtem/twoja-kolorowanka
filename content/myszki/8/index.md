@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Myszki - wariant 8
 description: Kolorowanka Myszki - wariant 8
-canonical: /zwierzeta/myszki/
+canonical: /myszki/
 variant_of: myszki
 image: /zwierzeta/myszki/8/myszki-8.svg
 pdf: /zwierzeta/myszki/8/myszki-8.pdf

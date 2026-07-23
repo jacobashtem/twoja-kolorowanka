@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Koty - wariant 65
 description: Kolorowanka Koty - wariant 65
-canonical: /zwierzeta/koty
+canonical: /zwierzeta/koty/
 variant_of: koty
 image: /koty/65/koty-65.svg
 pdf: /koty/65/koty-65.pdf

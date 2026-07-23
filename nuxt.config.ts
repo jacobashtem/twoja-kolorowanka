@@ -1,6 +1,10 @@
 import { defineNuxtConfig } from "nuxt/config"
 import routes from './prerender-routes.json'
 
+// Cookieless analytics (bez zgody wg RODO — brak cookies i identyfikatorów).
+// Token: Cloudflare dashboard -> Web Analytics -> Add site; ustaw CF_ANALYTICS_TOKEN w env Netlify.
+const cfAnalyticsToken = process.env.CF_ANALYTICS_TOKEN
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   routeRules: {
@@ -58,7 +62,14 @@ export default defineNuxtConfig({
       meta: [
         { name: 'theme-color', content: '#ffffff' },
         { name: 'msapplication-TileColor', content: '#ffffff' }
-      ]
+      ],
+      script: cfAnalyticsToken ? [
+        {
+          src: 'https://static.cloudflareinsights.com/beacon.min.js',
+          defer: true,
+          'data-cf-beacon': `{"token": "${cfAnalyticsToken}"}`
+        }
+      ] : []
     }
   }
 })

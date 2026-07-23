@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Myszki - wariant 10
 description: Kolorowanka Myszki - wariant 10
-canonical: /zwierzeta/myszki/
+canonical: /myszki/
 variant_of: myszki
 image: /zwierzeta/myszki/10/myszki-10.svg
 pdf: /zwierzeta/myszki/10/myszki-10.pdf

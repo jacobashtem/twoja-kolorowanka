@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 93
 description: Kolorowanka Kroliczki - wariant 93
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/93/kroliczki-93.svg
 pdf: /kroliczki/93/kroliczki-93.pdf

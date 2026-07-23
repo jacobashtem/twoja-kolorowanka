@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Kosmos - wariant 43
 description: Kolorowanka Kosmos - wariant 43
-canonical: /kosmos/kosmos/
+canonical: /kosmos/
 variant_of: kosmos
 image: /kosmos/kosmos/43/kosmos-43.svg
 pdf: /kosmos/kosmos/43/kosmos-43.pdf

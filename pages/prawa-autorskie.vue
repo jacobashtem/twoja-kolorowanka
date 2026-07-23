@@ -24,31 +24,22 @@
   </p>
 
   <p>
-    Wszystkie treści w serwisie są udostępniane bezpłatnie i mają charakter hobbystyczny oraz edukacyjny – nie są wykorzystywane w celach komercyjnych. Nie prowadzimy sprzedaży kolorowanek, nie monetyzujemy pobrań ani nie czerpiemy korzyści majątkowych z materiałów zawierających cudze znaki towarowe czy postacie fikcyjne.
+    Dostęp do wszystkich kolorowanek w serwisie jest bezpłatny. Materiały są przeznaczone do użytku osobistego, edukacyjnego i hobbystycznego – w domu, przedszkolu i szkole.
   </p>
 
   <h2 class="text-2xl font-semibold pt-6">Własność intelektualna</h2>
   <p>
-    Niektóre kolorowanki mogą przedstawiać postacie inspirowane znanymi markami, bajkami, grami czy filmami. Wszystkie znaki towarowe, nazwy, postacie i inne elementy chronione są własnością ich prawnych właścicieli. Serwis <strong>twoja-kolorowanka.pl</strong> nie rości sobie żadnych praw do tych materiałów.
+    Kolorowanki udostępniane w serwisie stanowią <strong>autorskie treści Usługodawcy</strong> – zostały stworzone ręcznie lub przy pomocy narzędzi sztucznej inteligencji. Prawa autorskie do ilustracji, tekstów, układu graficznego i kodu serwisu przysługują Usługodawcy. Kolorowanki nie przedstawiają postaci z bajek, gier ani filmów objętych ochroną praw osób trzecich i nie są z nimi powiązane.
   </p>
   <p>
-    Materiały te mają charakter <strong>fanowski i edukacyjny</strong>. Są udostępniane zgodnie z zasadami <strong>dozwolonego użytku osobistego</strong> oraz <strong>prawa cytatu</strong> (art. 29 ustawy o prawie autorskim), w celach edukacyjnych, informacyjnych lub analitycznych.
+    Nazwy handlowe i znaki towarowe, które mogą pojawiać się w treściach serwisu (np. w opisach lub artykułach na blogu), są własnością ich prawnych właścicieli i są używane wyłącznie w celach informacyjnych lub opisowych. Serwis <strong>twoja-kolorowanka.pl</strong> nie rości sobie do nich żadnych praw i nie jest powiązany z ich właścicielami ani przez nich sponsorowany.
   </p>
 
-  <h2 class="text-2xl font-semibold pt-6">Źródła materiałów</h2>
+  <h2 class="text-2xl font-semibold pt-6">Zasady korzystania z materiałów</h2>
   <ul class="list-disc list-inside">
-    <li>Część grafik została wygenerowana przy pomocy narzędzi sztucznej inteligencji na podstawie ogólnych opisów (promptów).</li>
-    <li>Niektóre ilustracje pochodzą z zasobów uznanych za domenę publiczną, dostępnych w wolnych repozytoriach.</li>
-    <li>Inne są autorskimi projektami wykonanymi ręcznie lub przetworzonymi fan-artami, stworzonymi z myślą o edukacyjnym i niekomercyjnym wykorzystaniu.</li>
+    <li>Możesz drukować i wykorzystywać kolorowanki do użytku osobistego, edukacyjnego i hobbystycznego (w tym na zajęciach w przedszkolu lub szkole).</li>
+    <li>Zabronione jest odsprzedawanie, masowe rozpowszechnianie oraz publikowanie materiałów serwisu jako własnych – w całości lub w części – bez pisemnej zgody Usługodawcy.</li>
   </ul>
-
-  <h2 class="text-2xl font-semibold pt-6">Dozwolony użytek i edukacyjne wykorzystanie</h2>
-  <p>
-    W Polsce obowiązuje <strong>dozwolony użytek osobisty</strong>, który pozwala na korzystanie z chronionych prawem utworów bez zgody autora – w zakresie prywatnym i niekomercyjnym. Ponadto prawo <strong>cytatu</strong> (art. 29 ustawy o prawie autorskim) umożliwia korzystanie z cudzych materiałów w celu edukacyjnym, dydaktycznym lub analitycznym.
-  </p>
-  <p>
-    Kolorowanki w naszym serwisie wpisują się w ten zakres. Udostępniamy je za darmo, z myślą o rozwoju dzieci, wspieraniu rodziców i nauczycieli. Nie mają one charakteru handlowego ani promocyjnego.
-  </p>
 
   <h2 class="text-2xl font-semibold pt-6">Zgłaszanie naruszeń własności intelektualnej</h2>
   <p>
@@ -71,7 +62,7 @@
 
   <h2 class="text-2xl font-semibold pt-6">Zastrzeżenie</h2>
   <p>
-    Wierzymy, że wszystkie obrazy opublikowane w naszej witrynie zostały opublikowane w dobrej wierze, zgodnie z obowiązującymi przepisami. Jeżeli mimo to doszło do nieumyślnego naruszenia praw – prosimy o kontakt. Szanujemy cudzą własność intelektualną i jesteśmy gotowi natychmiast reagować.
+    Dokładamy najwyższej staranności, aby publikowane materiały nie naruszały praw osób trzecich. Jeżeli mimo to uważasz, że doszło do nieumyślnego naruszenia – prosimy o kontakt. Szanujemy cudzą własność intelektualną i reagujemy niezwłocznie po otrzymaniu zgłoszenia.
   </p>
 </section>
 <section class="prose max-w-6xl mx-auto px-4 py-8">
@@ -82,31 +73,22 @@
   </p>
 
   <p>
-    All content on the website is provided free of charge for non-commercial, educational, and hobby purposes. We do not sell coloring pages or derive financial profit from materials that may contain third-party intellectual property (IP).
+    Access to all coloring pages on the website is free of charge. The materials are intended for personal, educational, and hobby use – at home, in kindergartens, and in schools.
   </p>
 
   <h2 class="text-2xl font-semibold pt-6">Intellectual property</h2>
   <p>
-    Some coloring pages may depict characters inspired by well-known brands, cartoons, games, or movies. All trademarks, names, and characters are the property of their respective owners. The website <strong>twoja-kolorowanka.pl</strong> does not claim any rights to these materials.
+    The coloring pages available on this website are the <strong>original works of the Service Provider</strong> – created by hand or with the assistance of artificial intelligence tools. Copyright to the illustrations, texts, layout, and code of the website belongs to the Service Provider. The coloring pages do not depict characters from cartoons, games, or movies protected by third-party rights and are not affiliated with them.
   </p>
   <p>
-    Such materials are shared as <strong>fan art</strong> or educational illustrations in accordance with the principles of <strong>personal fair use</strong> and the <strong>right to quotation</strong> under Polish copyright law (Article 29).
+    Trade names and trademarks that may appear in the website's content (e.g., in descriptions or blog articles) are the property of their respective owners and are used solely for informational or descriptive purposes. The website <strong>twoja-kolorowanka.pl</strong> claims no rights to them and is not affiliated with or sponsored by their owners.
   </p>
 
-  <h2 class="text-2xl font-semibold pt-6">Sources of materials</h2>
+  <h2 class="text-2xl font-semibold pt-6">Terms of use</h2>
   <ul class="list-disc list-inside">
-    <li>Some graphics were generated using artificial intelligence tools based on general prompts.</li>
-    <li>Some illustrations come from resources recognized as being in the public domain.</li>
-    <li>Others are original creations or fan-made adaptations designed for non-commercial, educational use.</li>
+    <li>You may print and use the coloring pages for personal, educational, and hobby purposes (including kindergarten or school activities).</li>
+    <li>Reselling, mass distribution, or publishing the website's materials as your own – in whole or in part – without the Service Provider's written consent is prohibited.</li>
   </ul>
-
-  <h2 class="text-2xl font-semibold pt-6">Fair use and educational application</h2>
-  <p>
-    In Poland, the concept of <strong>personal fair use</strong> allows for the use of copyrighted works without the author's permission in private, non-commercial contexts. Additionally, the <strong>right to quotation</strong> (Article 29 of the Copyright Act) permits the use of third-party materials for educational, informational, or analytical purposes.
-  </p>
-  <p>
-    The coloring pages on our website fall within this scope. They are shared for free, aimed at children's development and support for parents and teachers. They are not intended for commercial or promotional use.
-  </p>
 
   <h2 class="text-2xl font-semibold pt-6">Reporting IP infringement</h2>
   <p>
@@ -129,7 +111,7 @@
 
   <h2 class="text-2xl font-semibold pt-6">Disclaimer</h2>
   <p>
-    We believe that all images published on our website are either in the public domain or have been published in good faith as fan art. We do not intend to infringe on any copyrights or trademarks. If such a case has occurred unintentionally – please reach out. We respect intellectual property and will act immediately upon notification.
+    We take the utmost care to ensure that the published materials do not infringe on third-party rights. If you nevertheless believe that an unintentional infringement has occurred – please contact us. We respect intellectual property and act promptly upon notification.
   </p>
 </section>
 

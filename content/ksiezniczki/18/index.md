@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Ksiezniczki - wariant 18
 description: Kolorowanka Ksiezniczki - wariant 18
-canonical: /ksiezniczki/ksiezniczki/
+canonical: /ksiezniczki/
 variant_of: ksiezniczki
 image: /ksiezniczki/ksiezniczki/18/ksiezniczki-18.svg
 pdf: /ksiezniczki/ksiezniczki/18/ksiezniczki-18.pdf

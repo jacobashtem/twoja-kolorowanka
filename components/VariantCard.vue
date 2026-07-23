@@ -14,8 +14,9 @@
       <img
         loading="lazy"
         class="max-w-full object-contain rounded-3xl bg-white min-w-64 min-h-64 max-h-64"
-        :src="item.img"
+        :src="displaySrc"
         :alt="item.alt || item.title"
+        @error="onImgError"
       />
     </div>
   </NuxtLink>
@@ -32,4 +33,10 @@ const props = defineProps({
     default: 'bg-orange-500'
   }
 })
+
+const displaySrc = ref(svgPreview(props.item.img))
+watch(() => props.item.img, s => { displaySrc.value = svgPreview(s) })
+const onImgError = () => {
+  if (displaySrc.value !== props.item.img) displaySrc.value = props.item.img
+}
 </script>

@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Pieski - wariant 56
 description: Kolorowanka Pieski - wariant 56
-canonical: /zwierzeta/pieski
+canonical: /zwierzeta/pieski/
 variant_of: pieski
 image: /pieski/56/pieski-56.svg
 pdf: /pieski/56/pieski-56.pdf

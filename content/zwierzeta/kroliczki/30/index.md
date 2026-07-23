@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 30
 description: Kolorowanka Kroliczki - wariant 30
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/30/kroliczki-30.svg
 pdf: /kroliczki/30/kroliczki-30.pdf

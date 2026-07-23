@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Ksiezniczki - wariant 31
 description: Kolorowanka Ksiezniczki - wariant 31
-canonical: /ksiezniczki/ksiezniczki/
+canonical: /ksiezniczki/
 variant_of: ksiezniczki
 image: /ksiezniczki/ksiezniczki/31/ksiezniczki-31.svg
 pdf: /ksiezniczki/ksiezniczki/31/ksiezniczki-31.pdf

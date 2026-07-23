@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Pieski - wariant 23
 description: Kolorowanka Pieski - wariant 23
-canonical: /zwierzeta/pieski
+canonical: /zwierzeta/pieski/
 variant_of: pieski
 image: /pieski/23/pieski-23.svg
 pdf: /pieski/23/pieski-23.pdf

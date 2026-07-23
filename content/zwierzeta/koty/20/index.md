@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Koty - wariant 20
 description: Kolorowanka Koty - wariant 20
-canonical: /zwierzeta/koty
+canonical: /zwierzeta/koty/
 variant_of: koty
 image: /koty/20/koty-20.svg
 pdf: /koty/20/koty-20.pdf

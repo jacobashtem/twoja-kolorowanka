@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Pieski - wariant 28
 description: Kolorowanka Pieski - wariant 28
-canonical: /zwierzeta/pieski
+canonical: /zwierzeta/pieski/
 variant_of: pieski
 image: /pieski/28/pieski-28.svg
 pdf: /pieski/28/pieski-28.pdf

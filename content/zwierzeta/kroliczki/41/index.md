@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 41
 description: Kolorowanka Kroliczki - wariant 41
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/41/kroliczki-41.svg
 pdf: /kroliczki/41/kroliczki-41.pdf

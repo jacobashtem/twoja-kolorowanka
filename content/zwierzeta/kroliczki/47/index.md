@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 47
 description: Kolorowanka Kroliczki - wariant 47
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/47/kroliczki-47.svg
 pdf: /kroliczki/47/kroliczki-47.pdf

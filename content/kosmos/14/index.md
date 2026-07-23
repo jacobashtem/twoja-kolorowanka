@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Kosmos - wariant 14
 description: Kolorowanka Kosmos - wariant 14
-canonical: /kosmos/kosmos/
+canonical: /kosmos/
 variant_of: kosmos
 image: /kosmos/kosmos/14/kosmos-14.svg
 pdf: /kosmos/kosmos/14/kosmos-14.pdf

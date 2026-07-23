@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Myszki - wariant 14
 description: Kolorowanka Myszki - wariant 14
-canonical: /zwierzeta/myszki/
+canonical: /myszki/
 variant_of: myszki
 image: /zwierzeta/myszki/14/myszki-14.svg
 pdf: /zwierzeta/myszki/14/myszki-14.pdf

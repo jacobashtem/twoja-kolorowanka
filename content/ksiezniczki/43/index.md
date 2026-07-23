@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Ksiezniczki - wariant 43
 description: Kolorowanka Ksiezniczki - wariant 43
-canonical: /ksiezniczki/ksiezniczki/
+canonical: /ksiezniczki/
 variant_of: ksiezniczki
 image: /ksiezniczki/ksiezniczki/43/ksiezniczki-43.svg
 pdf: /ksiezniczki/ksiezniczki/43/ksiezniczki-43.pdf

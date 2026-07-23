@@ -2,23 +2,30 @@
 // definePageMeta({
 //   layout: 'default'
 // })
-[
-  useHead(() => {
+useHead(() => {
   const canonical = 'https://twoja-kolorowanka.pl/'
+  const title = 'Kolorowanki dla dzieci do druku | Darmowe malowanki online'
+  const description = 'Pobierz darmowe kolorowanki do druku w formacie A4. Zwierzęta, bajki, pojazdy i edukacyjne malowanki – wszystko bez logowania i całkowicie za darmo!'
+  const image = 'https://twoja-kolorowanka.pl/logo-1.webp'
 
   return {
-    title: 'Kolorowanki do druku PDF – darmowe kolorowanki dla dzieci',
+    title,
     link: [{ rel: 'canonical', href: canonical }],
     meta: [
-      { name: 'description', content: 'Pobierz darmowe kolorowanki do druku w formacie A4. Zwierzęta, bajki, pojazdy i edukacyjne malowanki – wszystko bez logowania i całkowicie za darmo!' },
+      { name: 'description', content: description },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       { name: 'keywords', content: 'kolorowanki do druku, darmowe kolorowanki PDF, kolorowanki dla dzieci, malowanki A4, bajki do kolorowania' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:title', content: 'Kolorowanki do druku PDF – darmowe kolorowanki dla dzieci' },
-      { property: 'og:description', content: 'Pobierz darmowe kolorowanki do druku w formacie A4. Zwierzęta, bajki, pojazdy i edukacyjne malowanki – wszystko bez logowania i całkowicie za darmo!' },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
       { property: 'og:url', content: canonical },
-      { property: 'og:image', content: 'https://twoja-kolorowanka.pl/logo-1.webp' },
-      { name: 'twitter:card', content: 'summary_large_image' }
+      { property: 'og:image', content: image },
+      { property: 'og:site_name', content: 'twoja-kolorowanka.pl' },
+      { property: 'og:locale', content: 'pl_PL' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: image }
     ],
     script: [
   {
@@ -45,7 +52,7 @@
           "@type": "WebPage",
           "@id": "https://twoja-kolorowanka.pl/#webpage",
           "url": "https://twoja-kolorowanka.pl/",
-          "name": "Kolorowanki do druku PDF – darmowe kolorowanki dla dzieci",
+          "name": "Kolorowanki dla dzieci do druku | Darmowe malowanki online",
           "description": "Pobierz darmowe kolorowanki do druku w formacie A4. Zwierzęta, bajki, pojazdy i edukacyjne malowanki – wszystko bez logowania i całkowicie za darmo!",
           "isPartOf": { "@id": "https://twoja-kolorowanka.pl/#website" },
           "primaryImageOfPage": {
@@ -92,8 +99,6 @@
   }
 })
 
-]  
-
 const faqs = [
   {
     question: "Czy kolorowanki na Twoja-Kolorowanka.pl są całkowicie darmowe?",
@@ -109,7 +114,7 @@ const faqs = [
   },
   {
     question: "Jakie kategorie kolorowanek znajdę na stronie?",
-    answer: "<p>Masz do wyboru dziesiątki kategorii: <strong>zwierzęta</strong> (psy, koty, jednorożce), <strong>bajki</strong> (Frozen, Peppa Pig, Psi Patrol), <strong>pojazdy</strong> (samochody, traktory), <strong>edukacyjne</strong> (cyfry, litery, pory roku), a także wzory sezonowe i świąteczne.</p>"
+    answer: "<p>Masz do wyboru dziesiątki kategorii: <strong>zwierzęta</strong> (psy, koty, dinozaury), <strong>fantasy</strong> (jednorożce, smoki, wróżki, syrenki), <strong>pojazdy</strong> (samochody, traktory), <strong>edukacyjne</strong> (cyfry, litery, pory roku), a także wzory sezonowe i świąteczne.</p>"
   },
   {
     question: "Czy na Twoja-Kolorowanka.pl są dostępne interaktywne kolorowanki online?",
@@ -129,8 +134,8 @@ const faqs = [
   }
 ];
 
-const seoBlocks = [{"heading": "Kolorowanki do druku PDF – świat kreatywności dla dzieci", "text": "<p><strong>Twoja Kolorowanka</strong> to skarbnica <strong>darmowych kolorowanek PDF do druku</strong>, stworzona z myślą o dzieciach, rodzicach i nauczycielach. Znajdziesz tu setki tematycznych ilustracji gotowych do pobrania w formacie A4 – od bajkowych postaci, przez zwierzęta, aż po edukacyjne arkusze. Każda kolorowanka to zaproszenie do świata wyobraźni, bez potrzeby logowania i całkowicie za darmo.</p>"}, {"heading": "Dlaczego dzieci kochają kolorowanki? Psychologia koloru i radości", "text": "<p>Kolorowanie pozwala dziecku być twórcą – to nie tylko rozrywka, ale także proces budowania tożsamości, wyrażania emocji i rozwijania cierpliwości. Kiedy maluch sięga po kredki, ćwiczy motorykę, planowanie i podejmowanie decyzji. Dzieci czują dumę z ukończonego obrazka, co wzmacnia pewność siebie. To bezpieczna alternatywa dla ekranów i sposób na ciche, skupione popołudnie.</p>"}, {"heading": "Darmowe kolorowanki PDF – bajki, edukacja i zabawa w jednym", "text": "<p>W naszej bibliotece znajdziesz <strong>kolorowanki z Frozen, Świnką Peppą, Pokemonami i Spidermanem</strong>, ale też dinozaury, pojazdy, litery, cyfry i mandale. Wszystkie ilustracje dostępne są w formacie PDF i zoptymalizowane do wydruku A4. Każdy plik został starannie przygotowany – z wyraźnym konturem i formatem przyjaznym dzieciom w różnym wieku.</p>"}, {"heading": "Zalety kolorowanek – 10 powodów, dla których warto je pobierać", "text": "<ul class=\"grid grid-cols-1 mb-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-3 text-center text-base md:text-lg font-light max-w-5xl mx-auto\"><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-orange-500\">Rozwijają wyobraźnię</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-tertiary-400\">Ćwiczą motorykę małą</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-yellow-500\">Uspokajają i wyciszają</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-sec-500\">Uczą koncentracji</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-main-500\">Pomagają w nauce liter i cyfr</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-coolGray-500\">Wzmacniają koordynację ręka-oko</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-orange-500\">To świetna zabawa offline</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-tertiary-400\">Wspierają rozwój emocjonalny</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-yellow-500\">Są tanie i łatwe w użyciu</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-sec-500\">Dają dzieciom poczucie sprawczości</li></ul><p class=\"text-center text-base md:text-lg font-light max-w-2xl mx-auto\">Kolorowanie to coś więcej niż hobby – to narzędzie rozwojowe.</p>"  
-}, {"heading": "Jak działa Twoja Kolorowanka? Bez logowania, bez reklam, bez stresu", "text": "<p>Chcemy, by korzystanie z naszej strony było przyjemne i intuicyjne. Wybierasz kategorię, przeglądasz ilustracje, klikasz „<strong>Pobierz</strong>” i gotowe – <strong>plik PDF</strong> trafia na Twój dysk. Nie wymagamy konta, nie zasypujemy reklamami. Nasze kolorowanki są dostępne natychmiast, gotowe do druku w domu, w szkole lub na zajęciach terapeutycznych.</p>"}, {"heading": "Mikrofabuła: Zosia i jednorożec – jak kolorowanka stała się rytuałem", "text": "<p>Zosia ma cztery lata i każdego ranka po śniadaniu wybiera sobie nową kolorowankę. Jej ulubione to te z jednorożcami. Koloruje zawsze z mamą przy kuchennym stole – to ich wspólny rytuał. Dzięki temu Zosia ćwiczy rączkę, a mama ma chwilę na kawę. Ten prosty rytuał stał się ich najważniejszą częścią dnia – a wszystko zaczęło się od kliknięcia „Pobierz PDF”.</p>"}, {"heading": "Kolorowanki sezonowe i świąteczne – zawsze na czas!", "text": "<p>Co miesiąc dodajemy nowe ilustracje dostosowane do kalendarza: <strong>walentynki, Wielkanoc, Dzień Dinozaura, wakacje, Halloween, Boże Narodzenie</strong>. Dzięki temu dzieci mogą uczyć się o tradycjach i porach roku, bawiąc się kreatywnie. To idealne rozwiązanie do zajęć tematycznych w przedszkolach, szkołach i w domu.</p>"}, {"heading": "Dołącz do społeczności Twoja Kolorowanka – setki rodzin, jedna pasja", "text": "<p>Nasze kolorowanki pobierane są codziennie przez rodziny z całej Polski. Rodzice dzielą się pracami dzieci na Facebooku i Instagramie, a nauczyciele wykorzystują nasze materiały na lekcjach i warsztatach. Dołącz do tej rosnącej społeczności – kliknij, pobierz i przekonaj się, jak wielką radość może dać kilka kredek i kawałek papieru.</p>"}];
+const seoBlocks = [{"heading": "Kolorowanki do druku PDF – świat kreatywności dla dzieci", "text": "<p><strong>Twoja Kolorowanka</strong> to skarbnica <strong>darmowych kolorowanek PDF do druku</strong>, stworzona z myślą o dzieciach, rodzicach i nauczycielach. Znajdziesz tu setki tematycznych ilustracji gotowych do pobrania w formacie A4 – od bajkowych postaci, przez zwierzęta, aż po edukacyjne arkusze. Każda kolorowanka to zaproszenie do świata wyobraźni, bez potrzeby logowania i całkowicie za darmo.</p>"}, {"heading": "Dlaczego dzieci kochają kolorowanki? Psychologia koloru i radości", "text": "<p>Kolorowanie pozwala dziecku być twórcą – to nie tylko rozrywka, ale także proces budowania tożsamości, wyrażania emocji i rozwijania cierpliwości. Kiedy maluch sięga po kredki, ćwiczy motorykę, planowanie i podejmowanie decyzji. Dzieci czują dumę z ukończonego obrazka, co wzmacnia pewność siebie. To bezpieczna alternatywa dla ekranów i sposób na ciche, skupione popołudnie.</p>"}, {"heading": "Darmowe kolorowanki PDF – bajki, edukacja i zabawa w jednym", "text": "<p>W naszej bibliotece znajdziesz <strong>kolorowanki z jednorożcami, smokami, syrenkami i dzielnymi rycerzami</strong>, ale też dinozaury, pojazdy, litery, cyfry i mandale. Wszystkie ilustracje dostępne są w formacie PDF i zoptymalizowane do wydruku A4. Każdy plik został starannie przygotowany – z wyraźnym konturem i formatem przyjaznym dzieciom w różnym wieku.</p>"}, {"heading": "Zalety kolorowanek – 10 powodów, dla których warto je pobierać", "text": "<ul class=\"grid grid-cols-1 mb-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-3 text-center text-base md:text-lg font-light max-w-5xl mx-auto\"><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-orange-500\">Rozwijają wyobraźnię</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-tertiary-400\">Ćwiczą motorykę małą</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-yellow-500\">Uspokajają i wyciszają</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-sec-500\">Uczą koncentracji</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-main-500\">Pomagają w nauce liter i cyfr</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-coolGray-500\">Wzmacniają koordynację ręka-oko</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-orange-500\">To świetna zabawa offline</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-tertiary-400\">Wspierają rozwój emocjonalny</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-yellow-500\">Są tanie i łatwe w użyciu</li><li class=\"bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-sec-500\">Dają dzieciom poczucie sprawczości</li></ul><p class=\"text-center text-base md:text-lg font-light max-w-2xl mx-auto\">Kolorowanie to coś więcej niż hobby – to narzędzie rozwojowe.</p>"  
+}, {"heading": "Jak działa Twoja Kolorowanka? Bez logowania, bez stresu", "text": "<p>Chcemy, by korzystanie z naszej strony było przyjemne i intuicyjne. Wybierasz kategorię, przeglądasz ilustracje, klikasz „<strong>Pobierz</strong>” i gotowe – <strong>plik PDF</strong> trafia na Twój dysk. Nie wymagamy konta ani rejestracji. Nasze kolorowanki są dostępne natychmiast, gotowe do druku w domu, w szkole lub na zajęciach terapeutycznych.</p>"}, {"heading": "Mikrofabuła: Zosia i jednorożec – jak kolorowanka stała się rytuałem", "text": "<p>Zosia ma cztery lata i każdego ranka po śniadaniu wybiera sobie nową kolorowankę. Jej ulubione to te z jednorożcami. Koloruje zawsze z mamą przy kuchennym stole – to ich wspólny rytuał. Dzięki temu Zosia ćwiczy rączkę, a mama ma chwilę na kawę. Ten prosty rytuał stał się ich najważniejszą częścią dnia – a wszystko zaczęło się od kliknięcia „Pobierz PDF”.</p>"}, {"heading": "Kolorowanki sezonowe i świąteczne – zawsze na czas!", "text": "<p>Co miesiąc dodajemy nowe ilustracje dostosowane do kalendarza: <strong>walentynki, Wielkanoc, Dzień Dinozaura, wakacje, Halloween, Boże Narodzenie</strong>. Dzięki temu dzieci mogą uczyć się o tradycjach i porach roku, bawiąc się kreatywnie. To idealne rozwiązanie do zajęć tematycznych w przedszkolach, szkołach i w domu.</p>"}, {"heading": "Dołącz do społeczności Twoja Kolorowanka – setki rodzin, jedna pasja", "text": "<p>Nasze kolorowanki pobierane są codziennie przez rodziny z całej Polski. Rodzice dzielą się pracami dzieci na Facebooku i Instagramie, a nauczyciele wykorzystują nasze materiały na lekcjach i warsztatach. Dołącz do tej rosnącej społeczności – kliknij, pobierz i przekonaj się, jak wielką radość może dać kilka kredek i kawałek papieru.</p>"}];
 const galleryItems = ref([
   {
     src: '/fantasy/jednorozce/26/jednorozce-26.svg',
@@ -371,54 +376,6 @@ const galleryItems = ref([
   title: 'Zima',
   url: '/pory-roku/zima/'
 },
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
-{
-  src: '/zwierzeta/sowy/1/sowy-1.svg',
-  alt: 'kolorowanki sowy do druku',
-  title: 'Sowy',
-  url: '/zwierzeta/sowy/'
-},
 ])
 useHead(() => {
   const canonical = 'https://twoja-kolorowanka.pl'
@@ -484,7 +441,7 @@ const galleryVariantsList = computed(() => [
           as="h2"
           backgroundColor="bg-sec-500"
           fontSize="text-xl sm:text-3xl"
-          textColor="text-white"
+          textColor="text-sec-900"
         />
         <span class="flex-grow border-t border-black" aria-hidden="true"></span>
       </div>
@@ -504,7 +461,7 @@ const galleryVariantsList = computed(() => [
             as="h2"
             backgroundColor="bg-sec-500"
             fontSize="text-xl sm:text-3xl"
-            textColor="text-white"
+            textColor="text-sec-900"
           />
           <span class="flex-grow border-t border-black" aria-hidden="true"></span>
         </div>
