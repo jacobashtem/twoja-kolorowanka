@@ -125,6 +125,7 @@ Frazy do weryfikacji wolumenów (SEMrush, baza per kraj):
 
 - [ ] Newsletter (MailerLite, darmowy próg) + lead magnet „paczka 10 PDF"; zapis na leafach i po pobraniu PDF.
 - [ ] Pierwsza płatna paczka PDF (np. „50 kolorowanek antystresowych — 19 zł", Gumroad/EasyCart) jako test popytu.
+- [ ] **Pomysły Jakuba na produkty tematyczne (2026-07-23):** poczet królów Polski (podstawa programowa kl. 4–5 → kupują też nauczyciele, popyt cykliczny), księżniczki z historii Polski, mity słowiańskie (nisza bez konkurencji, wersja EN „Slavic mythology" = rynek globalny). Tematyczność broni ceny 29–49 zł vs 19 zł za generyk. Piki sprzedażowe: wrzesień (rok szkolny), 11 XI, Dzień Flagi — publikacja 2 mies. wcześniej. Do weryfikacji w SEMrush: „kolorowanki historia polski", „kolorowanki mity słowiańskie", „poczet królów dla dzieci". Realistyczny model konwersji: 0,1–0,5% ruchu → przy dzisiejszym ruchu 500–1500 zł/mies., po roku 2–7 tys., dojrzale 7–18 tys. zł/mies. (produkty + osobno reklamy).
 - [ ] Generator kolorowanek z imieniem dziecka (sekcje `generator-cta` już istnieją w contencie) — produkt premium.
 - [ ] Afiliacja: recenzje kredek/markerów na blogu + webePartners/Awin (Empik, Allegro).
 - [ ] **WhitePress** (artykuły sponsorowane na blogu): rejestracja portalu, wycena startowa ~300–800 zł/artykuł. Zasady bezpieczeństwa: max 2–4 artykuły/mies., oznaczanie „artykuł sponsorowany" (wymóg UOKiK), tematyka zbliżona do niszy (dzieci/rodzina/edukacja), nie pozwolić żeby sponsorowane zdominowały blog — nadmiar płatnych linków dofollow to ryzyko kary od Google.
