@@ -21,7 +21,7 @@
 ## NAJBLIŻSZE KROKI — kolejka do zrobienia (stan po quick winach 2026-07-23)
 
 Wykonawcze (Claude):
-- [ ] Commit + PR quick winów: branch `feature/quick-wins-seo-thumbs` — w trakcie.
+- [x] Commit + PR quick winów: https://github.com/jacobashtem/twoja-kolorowanka/pull/124 (branch `feature/quick-wins-seo-thumbs`; 633 zmodyfikowane pliki + 8341 nowych). (2026-07-23)
 - [x] Stopka (`AppFooter.vue`): 15 linków do najważniejszych kategorii. (2026-07-23)
 - [x] Twitter cards na kategoriach/leafach + blogu; `og:image`/`twitter:image` leafów wskazują teraz raster WebP zamiast SVG (crawlery social nie renderują SVG). (2026-07-23)
 - [x] Odporność builda na awarię WordPressa: `routes-from-content.js` przy padzie WP przepisuje trasy bloga z poprzedniego `prerender-routes.json` (przetestowane symulacją), a nowy `scripts/check-build.mjs` (wpięty w `pnpm build`) wywala deploy przy pustym blogu/kategorii/leafie — koniec cichych pustych deployów mimo `failOnError:false`. (2026-07-23)
