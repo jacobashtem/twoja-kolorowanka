@@ -346,7 +346,6 @@ useHead(() => {
     :text="block.heading"
     as="h2"
     backgroundColor="bg-sec-500"
-    textColor="text-sec-900"
     fontSize="text-3xl"
   />
 <ContentRendererMarkdown :value="{ type: 'root', children: block.nodes }" class="prose mb-12 text-base sm:text-xl  font-light sm:text-center mx-auto px-4 lg:px-8 max-w-full" />
@@ -424,7 +423,7 @@ useHead(() => {
       </div>
     </UContainer>
     <UContainer v-if="isLeaf" class="mb-6">
-      <Heading text="Podobne kolorowanki" :as="'h2'" :backgroundColor="'bg-sec-500'" textColor="text-sec-900" fontSize="text-3xl" />
+      <Heading text="Podobne kolorowanki" :as="'h2'" :backgroundColor="'bg-sec-500'" fontSize="text-3xl" />
       <VariantsGallery :items="similarGalleryVariants" />
     </UContainer>
 

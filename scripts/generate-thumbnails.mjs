@@ -2,9 +2,13 @@
 //   nazwa-thumb.webp (400px szer., galerie/miniatury)
 //   nazwa-view.webp  (800px szer., obraz główny na stronie kolorowanki)
 // Pełne SVG pobiera się odtąd tylko w edytorze /koloruj/. Uruchom: node scripts/generate-thumbnails.mjs
+// --missing-only: generuj tylko brakujące pliki, bez porównywania mtime — do użycia w CI,
+// gdzie świeży checkout gita nadaje wszystkim plikom zbliżone mtime i porównanie jest losowe.
 import { readdirSync, statSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import sharp from 'sharp'
+
+const MISSING_ONLY = process.argv.includes('--missing-only')
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const PUBLIC = join(ROOT, 'public')
@@ -28,7 +32,7 @@ async function processOne (svgPath) {
   const srcMtime = statSync(svgPath).mtimeMs
   for (const { suffix, width } of SIZES) {
     const out = svgPath.replace(/\.svg$/, `${suffix}.webp`)
-    if (existsSync(out) && statSync(out).mtimeMs >= srcMtime) { skipped++; continue }
+    if (existsSync(out) && (MISSING_ONLY || statSync(out).mtimeMs >= srcMtime)) { skipped++; continue }
     try {
       await sharp(svgPath, { density: 150 })
         .resize({ width, withoutEnlargement: false })
@@ -49,4 +53,8 @@ await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
 }))
 
 console.log(`Gotowe. SVG: ${svgs.length}, wygenerowano: ${generated}, pominięto (aktualne): ${skipped}, błędy: ${errors.length}`)
-if (errors.length) console.log(errors.slice(0, 30).join('\n'))
+if (errors.length) {
+  console.log(errors.slice(0, 30).join('\n'))
+  // Zepsuty SVG = brak og:image i podglądów dla tej kolorowanki — deploy ma się wywalić, nie przejść po cichu.
+  process.exitCode = 1
+}
