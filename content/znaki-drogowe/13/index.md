@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Znaki-drogowe - wariant 13
 description: Kolorowanka Znaki-drogowe - wariant 13
-canonical: /znaki-drogowe/znaki-drogowe/
+canonical: /znaki-drogowe/
 variant_of: znaki-drogowe
-image: /znaki-drogowe/znaki-drogowe/13/znaki-drogowe-13.svg
-pdf: /znaki-drogowe/znaki-drogowe/13/znaki-drogowe-13.pdf
+image: /znaki-drogowe/13/znaki-drogowe-13.svg
+pdf: /znaki-drogowe/13/znaki-drogowe-13.pdf
 alt: "Łatwa kolorowanka znaki-drogowe dla przedszkolaka"
 tags:
 - znaki-drogowe

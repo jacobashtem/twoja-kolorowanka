@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Znaki-drogowe - wariant 43
 description: Kolorowanka Znaki-drogowe - wariant 43
-canonical: /znaki-drogowe/znaki-drogowe/
+canonical: /znaki-drogowe/
 variant_of: znaki-drogowe
-image: /znaki-drogowe/znaki-drogowe/43/znaki-drogowe-43.svg
-pdf: /znaki-drogowe/znaki-drogowe/43/znaki-drogowe-43.pdf
+image: /znaki-drogowe/43/znaki-drogowe-43.svg
+pdf: /znaki-drogowe/43/znaki-drogowe-43.pdf
 alt: "znaki-drogowe do druku i pokolorowania"
 tags:
 - znaki-drogowe

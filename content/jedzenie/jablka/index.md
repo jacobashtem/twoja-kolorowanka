@@ -9,7 +9,7 @@ h1First: Kolorowanki jabłka
 h1Sec: do druku PDF
 heroImg1: "/jedzenie/jablka/12/jablka-12.svg"
 heroImg2: "/jedzenie/jablka/13/jablka-13.svg"
-image: "/jedzenie/jablka/12/jablka-1.svg"
+image: "/jedzenie/jablka/12/jablka-12.svg"
 keywords: "kolorowanki jabłka, malowanki PDF, darmowe do druku"
 robots: "index, follow"
 schemaType: "CollectionPage"

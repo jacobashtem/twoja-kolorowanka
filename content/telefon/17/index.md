@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Telefon - wariant 17
 description: Kolorowanka Telefon - wariant 17
-canonical: /telefon/telefon/
+canonical: /telefon/
 variant_of: telefon
-image: /telefon/telefon/17/telefon-17.svg
-pdf: /telefon/telefon/17/telefon-17.pdf
+image: /telefon/17/telefon-17.svg
+pdf: /telefon/17/telefon-17.pdf
 alt: "Prosta kolorowanka telefon do kolorowania"
 tags:
 - telefon

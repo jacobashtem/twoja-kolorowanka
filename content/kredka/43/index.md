@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Kredka - wariant 43
 description: Kolorowanka Kredka - wariant 43
-canonical: /kredka/kredka/
+canonical: /kredka/
 variant_of: kredka
-image: /kredka/kredka/43/kredka-43.svg
-pdf: /kredka/kredka/43/kredka-43.pdf
+image: /kredka/43/kredka-43.svg
+pdf: /kredka/43/kredka-43.pdf
 alt: "kredka do druku i pokolorowania"
 tags:
 - kredka

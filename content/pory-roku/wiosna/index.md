@@ -1,7 +1,7 @@
 ---
 title: "Kolorowanki wiosna do druku PDF – kwiaty, króliczki i wiosenne malowanki"
 description: "Darmowe kolorowanki wiosna do druku w PDF. Wiosenne malowanki z kwiatami, króliczkami i przyrodą idealne dla dzieci w przedszkolu i w domu."
-canonical: "/wiosna/"
+canonical: "/pory-roku/wiosna/"
 categoryName: "Wiosna"
 tags: [wiosna, kwiaty, króliczek]
 alt: "kolorowanki wiosna do druku PDF"

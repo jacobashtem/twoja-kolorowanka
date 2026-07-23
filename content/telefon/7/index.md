@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Telefon - wariant 7
 description: Kolorowanka Telefon - wariant 7
-canonical: /telefon/telefon/
+canonical: /telefon/
 variant_of: telefon
-image: /telefon/telefon/7/telefon-7.svg
-pdf: /telefon/telefon/7/telefon-7.pdf
+image: /telefon/7/telefon-7.svg
+pdf: /telefon/7/telefon-7.pdf
 alt: "telefon do druku i pokolorowania"
 tags:
 - telefon

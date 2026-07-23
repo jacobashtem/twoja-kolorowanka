@@ -9,7 +9,7 @@ h1First: Kolorowanki motyle
 h1Sec: do druku PDF
 heroImg1: "/zwierzeta/motyle/1/motyle-1.svg"
 heroImg2: "/zwierzeta/motyle/2/motyle-2.svg"
-image: "/zwierzeta/motyle/hero-desktop.png"
+image: "/zwierzeta/motyle/1/motyle-1.svg"
 keywords: "kolorowanki motyle, malowanki PDF, darmowe do druku"
 robots: "index, follow"
 schemaType: "CollectionPage"

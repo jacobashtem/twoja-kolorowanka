@@ -2,7 +2,7 @@
 title: "Kolorowanki króliczki do druku – darmowe PDF z królikami"
 categoryName:   "kroliczki"
 description: "Kolorowanki króliczki do druku: pobierz darmowe PDF z uroczymi królikami domowymi i polnymi. Drukuj, koloruj i twórz własną galerię skaczących futrzaków!"
-canonical:      "/zwierzeta/kroliczki"
+canonical:      "/zwierzeta/kroliczki/"
 tags:           [ kolorowanki, kroliczki, zwierzeta, pdf, malowanki ]
 alt: 'króliczki do druku'
 h1First: Kolorowanki

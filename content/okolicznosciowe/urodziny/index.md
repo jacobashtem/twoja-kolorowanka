@@ -1,7 +1,7 @@
 ---
 title: "Kolorowanki urodzinowe do druku PDF – darmowe malowanki na urodziny"
 description: "Pobierz darmowe kolorowanki na urodziny do druku w PDF. Malowanki na urodziny dla mamy, taty, przyjaciół."
-canonical: "/okolicznosciowe/urodziny"
+canonical: "/okolicznosciowe/urodziny/"
 categoryName: "Urodziny"
 tags: [okolicznosciowe, urodziny]
 alt: "kolorowanki na urodziny do druku"

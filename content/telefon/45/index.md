@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Telefon - wariant 45
 description: Kolorowanka Telefon - wariant 45
-canonical: /telefon/telefon/
+canonical: /telefon/
 variant_of: telefon
-image: /telefon/telefon/45/telefon-45.svg
-pdf: /telefon/telefon/45/telefon-45.pdf
+image: /telefon/45/telefon-45.svg
+pdf: /telefon/45/telefon-45.pdf
 alt: "telefon – pobierz i wydrukuj kolorowankę"
 tags:
 - telefon

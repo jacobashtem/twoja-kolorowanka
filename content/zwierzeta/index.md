@@ -12,7 +12,7 @@ tags:
   - online
 heroImgDesktop: "/zwierzeta/hero-desktop.png"
 heroImgMobile:  "/zwierzeta/hero-mobile.png"
-image:          "/zwierzeta/hero-desktop.png"
+image:          "/koty/1/koty-1.svg"
 keywords:       "kolorowanki zwierzęta, malowanki zwierzęta PDF, darmowe kolorowanki online"
 robots:         "index, follow"
 twitterCard:    "summary_large_image"

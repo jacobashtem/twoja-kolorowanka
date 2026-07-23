@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Kredka - wariant 2
 description: Kolorowanka Kredka - wariant 2
-canonical: /kredka/kredka/
+canonical: /kredka/
 variant_of: kredka
-image: /kredka/kredka/2/kredka-2.svg
-pdf: /kredka/kredka/2/kredka-2.pdf
+image: /kredka/2/kredka-2.svg
+pdf: /kredka/2/kredka-2.pdf
 alt: "Kolorowanki kredka"
 tags:
 - kredka
