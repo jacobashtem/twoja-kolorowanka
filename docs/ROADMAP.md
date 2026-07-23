@@ -70,7 +70,7 @@ Zasada: pełny SVG pobiera się TYLKO w `/koloruj/` (edytor). Wszędzie indziej 
 ## Etap 3 — Start monetyzacji
 
 - [ ] Klaro: dodać Google Consent Mode v2 (wymóg reklam w EOG). **Zaimplementowane w PR #129 — czeka na review Jakuba** (domyślnie wszystko denied, zgody sterują sygnałami; kategoria Reklamowe + usługa AdSense w banerze gotowe na Etap 3). (2026-07-23)
-- [ ] Wniosek do **AdSense** (po czystce brandów z Etapu 1) — start i punkt odniesienia. Alternatywa/test B: Ezoic (brak progu, zwykle wyższy RPM).
+- [ ] Wniosek do **AdSense** (po czystce brandów z Etapu 1) — start i punkt odniesienia. Alternatywa/test B: Ezoic (brak progu, zwykle wyższy RPM). **DECYZJA (2026-07-23): odroczony do zebrania baseline'u** — przy szacowanych 40–60k odsłon/mies. i RPM 2–6 zł (PL, nisza dziecięca, made-for-kids, część ruchu bez zgody) wyszłoby ~100–350 zł/mies. Ocena po ~miesiącu danych z Cloudflare; wtedy też planowanie placementów na realnych top stronach. Pamiętać: review AdSense trwa 2–4 tyg., doliczyć do timeline'u.
 - [ ] Placement: strony kategorii (in-content między sekcjami galerii) + leafy (pod przyciskami, nad „Podobnymi"). NIGDY w `/koloruj/` (UX dzieci + i tak noindex).
 - [ ] Po 2–3 mies. danych: ocena RPM, decyzja o kolejnych krokach (Setupad przy ~100k odwiedzin/mies.).
 
@@ -87,7 +87,7 @@ To jest silnik wzrostu na rynku PL: skalujemy to, co już działa (79 landingów
 
 W niszy printables Pinterest bywa większy niż Google. Mechanika: pin = pionowa grafika (1000×1500) z linkiem do naszej strony; piny żyją miesiącami i się kumulują.
 
-- [ ] Konto firmowe Pinterest + weryfikacja domeny + włączenie Rich Pins (czytają OG tagi — już je mamy).
+- [ ] Konto firmowe Pinterest + weryfikacja domeny + włączenie Rich Pins (czytają OG tagi — już je mamy). **W TOKU (2026-07-23): Jakub zakłada konto**; weryfikacja metodą „Add HTML tag" — tag wkleja Claude'owi, trafia do `nuxt.config.ts`. Decyzja: startujemy teraz, żeby konto wygrzało się przed pikiem Q4 (publikacja sezonowa od września).
 - [x] Skrypt `scripts/generate-pins.mjs`: miniatura kolorowanki → grafika pinu 2:3 (1000×1500, biała ramka, pasek z tytułem i domeną) — masowo z istniejących WebP. Flagi `--limit`/`--only`, wyjście do `pins-output/` (gitignore). Masowe uruchomienie po założeniu konta. (PR #131, 2026-07-23)
 - [ ] Automatyzacja publikacji: **Pinterest API v5** (oficjalne, darmowe) — skrypt planujący 3–5 pinów/dzień z kolejki; boardy per kategoria + boardy sezonowe. Alternatywa bez kodu: Buffer/Tailwind (płatne).
 - [ ] Start: 5 boardów (zwierzęta, mandale/antystres, sezonowe, edukacyjne, pojazdy), potem rozbudowa wg statystyk.
