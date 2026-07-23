@@ -366,7 +366,7 @@
         <p><span>tworzenia materiałów zawierających treści wulgarne, pornograficzne, rasistowskie lub nawołujące do przemocy,</span></p>
       </li>
       <li>
-        <p><span>wykorzystywania ilustracji z postaciami objętymi ochroną IP (np. Elsa, Peppa, Mario) w celu ich dalszego publikowania, kopiowania lub dystrybucji w formie masowej lub w celach zarobkowych.</span></p>
+        <p><span>masowego publikowania, kopiowania lub dystrybucji ilustracji z Serwisu, w tym w celach zarobkowych, bez pisemnej zgody Usługodawcy.</span></p>
       </li>
     </ul>
   </li>
@@ -381,21 +381,19 @@
     <p><span>Właścicielem Serwisu twoja-kolorowanka.pl oraz praw autorskich do jego treści – w tym kodu źródłowego, układu graficznego, tekstów i autorskich grafik – jest Usługodawca.</span></p>
   </li>
   <li>
-    <p><span>Serwis zawiera zarówno treści własne (ilustracje autorskie i wygenerowane z pomocą narzędzi AI), jak również fan-arty i obrazy inspirowane znanymi postaciami z bajek, gier i filmów.</span></p>
+    <p><span>Ilustracje udostępniane w Serwisie stanowią treści własne Usługodawcy – prace autorskie, stworzone ręcznie lub z pomocą narzędzi sztucznej inteligencji. Kolorowanki nie przedstawiają postaci z bajek, gier ani filmów objętych ochroną praw osób trzecich i nie są z nimi powiązane.</span></p>
   </li>
   <li>
-    <p><strong><span>Znaki towarowe i postacie w kategoriach kolorowanek:</span></strong></p>
+    <p><strong><span>Znaki towarowe:</span></strong></p>
     <ul class="list-disc pl-8">
-      <li>Wszystkie znaki towarowe i postacie przedstawione w kolorowankach (np. Peppa Pig, Elsa z Frozen, Super Mario, Barbie) są własnością ich odpowiednich właścicieli.</li>
-      <li>Serwis twoja-kolorowanka.pl <strong>nie rości sobie żadnych praw</strong> do tych znaków ani postaci.</li>
-      <li>Kolorowanki tego typu mają charakter fanowski, edukacyjny i hobbystyczny – są udostępniane wyłącznie bezpłatnie, bez pobierania opłat, bez czerpania korzyści finansowych z ich pobierania.</li>
+      <li>Nazwy handlowe i znaki towarowe, które mogą pojawiać się w treściach Serwisu (np. w opisach lub artykułach na blogu), są własnością ich odpowiednich właścicieli i są używane wyłącznie w celach informacyjnych lub opisowych.</li>
+      <li>Serwis twoja-kolorowanka.pl <strong>nie rości sobie żadnych praw</strong> do tych znaków i nie jest powiązany z ich właścicielami ani przez nich sponsorowany.</li>
     </ul>
   </li>
   <li>
     <p><strong><span>Źródła grafik:</span></strong></p>
     <ul class="list-disc pl-8">
-      <li>Niektóre ilustracje pochodzą z domeny publicznej lub zostały uznane za takie na podstawie dostępnych informacji w Internecie.</li>
-      <li>Inne ilustracje zostały stworzone ręcznie lub przy pomocy narzędzi sztucznej inteligencji i stanowią autorską treść Usługodawcy.</li>
+      <li>Ilustracje zostały stworzone ręcznie lub przy pomocy narzędzi sztucznej inteligencji i stanowią autorską treść Usługodawcy.</li>
     </ul>
   </li>
   <li>

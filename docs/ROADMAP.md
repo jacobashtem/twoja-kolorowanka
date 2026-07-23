@@ -30,7 +30,7 @@ Wykonawcze (Claude):
 
 Decyzje (Jakub):
 - [ ] Kategorie aut z brandami (`pojazdy/bmw|bugattii|lamborghini`, 145 podstron): zostawić i obserwować vs przemianować z redirectami 301 (przed wnioskiem AdSense).
-- [ ] Regulamin (`pages/regulamin.vue:369,389`): akceptacja przeredagowania wzmianek o Peppie/Elsie/Barbie na generyczny disclaimer.
+- [x] Regulamin + Prawa autorskie przeredagowane (2026-07-23, w PR #124): usunięte deklaracje fan-artów/postaci z bajek/domeny publicznej („uznane za takie na podstawie internetu"), usunięta obietnica „nie monetyzujemy" (kolizja z planowanym AdSense — zastąpiona „dostęp bezpłatny"), dodany generyczny disclaimer znaków towarowych. Objęte: `pages/regulamin.vue` (sekcje IX–X) i `pages/prawa-autorskie.vue` (PL+EN). UWAGA: przy okazji wdrażania sprzedaży paczek PDF (Etap 7) trzeba będzie zaktualizować zakaz użytku komercyjnego o wyjątek dla płatnych licencji.
 - [ ] Cloudflare przed Netlify: darmowy proxy (cache statyków) vs migracja na Cloudflare Pages vs zostawić jak jest.
 
 ## Etap 0 — Pomiar (baseline przed monetyzacją)
