@@ -13,7 +13,7 @@
 ## Decyzje strategiczne (ustalone — nie podważać w kolejnych sesjach)
 
 1. **Leafy poza sitemapą, canonical → kategoria.** Budżet crawlowania idzie w 79 landingów, nie w 4116 cienkich podstron. Linki do wariantów mogą być nofollow / niewidoczne dla Google — to celowe.
-2. **Żadnych cudzych brandów w contencie.** Kolorowanki są własne/generyczne; nazwy i opisy sugerujące brandy (Barbie, Psi Patrol itd.) do wyczyszczenia (Etap 1).
+2. **Żadnych cudzych brandów w contencie.** Nazwy i opisy sugerujące brandy (Barbie, Psi Patrol itd.) do wyczyszczenia (Etap 1). **KOREKTA (2026-07-23): grafiki NIE są własne** — kolorowanki pochodzą z komercyjnej licencji Freepik (wg Jakuba platforma działa teraz pod nazwą „Magniic"); Delfina nie rysuje, tylko obrabia i dodaje content. Własne (zlecone) rysunki dopiero przy produktach tematycznych z Etapu 7 — z licencji Freepika NIE WOLNO robić płatnych paczek.
 3. **Wysokiej jakości SVG zostają** — są potrzebne do trybu kolorowania online. Optymalizacja = osobne małe pliki do podglądów, nie degradacja źródeł.
 
 ---
@@ -29,8 +29,9 @@ Wykonawcze (Claude):
 - [ ] Po deployu: tydzień obserwacji transferu Netlify → jeśli spadł zgodnie z planem (80–95%), rozważyć powrót na tańszy pakiet.
 
 Decyzje (Jakub):
-- [x] Kategorie aut z brandami — **DECYZJA (2026-07-23): zostawiamy** (ryzyko niskie, frazy z markami mają wolumen SEO; disclaimer znaków towarowych w regulaminie asekuruje). Plan awaryjny gotowy na wypadek odmowy AdSense lub pisma od marki: rename na generyczne + redirecty 301 w netlify.toml + zmiana menu (~1h pracy). Do sprawdzenia przy okazji u Delfiny: czy rysunki to generyczne auta, czy wierne modele (wierne = ryzyko rośnie).
+- [x] Kategorie aut z brandami — **DECYZJA (2026-07-23): zostawiamy** (ryzyko niskie, frazy z markami mają wolumen SEO; disclaimer znaków towarowych w regulaminie asekuruje). Plan awaryjny gotowy na wypadek odmowy AdSense lub pisma od marki: rename na generyczne + redirecty 301 w netlify.toml + zmiana menu (~1h pracy). Do sprawdzenia przy okazji (na Freepiku, skąd pochodzą grafiki): czy auta to generyczne sylwetki, czy wierne modele (wierne = ryzyko rośnie).
 - [x] Regulamin + Prawa autorskie przeredagowane (2026-07-23, w PR #124): usunięte deklaracje fan-artów/postaci z bajek/domeny publicznej („uznane za takie na podstawie internetu"), usunięta obietnica „nie monetyzujemy" (kolizja z planowanym AdSense — zastąpiona „dostęp bezpłatny"), dodany generyczny disclaimer znaków towarowych. Objęte: `pages/regulamin.vue` (sekcje IX–X) i `pages/prawa-autorskie.vue` (PL+EN). UWAGA: przy okazji wdrażania sprzedaży paczek PDF (Etap 7) trzeba będzie zaktualizować zakaz użytku komercyjnego o wyjątek dla płatnych licencji.
+- [ ] **WAŻNE — weryfikacja licencji Freepik (przed AdSense):** sprawdzić, czy posiadany plan licencyjny pozwala na udostępnianie grafik jako samodzielnych plików do pobrania (SVG/PDF). Standardowe licencje Freepika zabraniają redystrybucji zasobów „as is" na stronach oferujących downloady — a to jest nasz core model. Jeśli licencja tego nie obejmuje → rozważyć plan wyższy/enterprise albo doprecyzować z Freepikiem. Dotyczy też przeglądu przed wnioskiem AdSense (Google wymaga praw do monetyzowanych treści). Korekta stron prawnych w PR #136 (czeka na akceptację).
 - [ ] Cloudflare przed Netlify: darmowy proxy (cache statyków) vs zostawić jak jest. **DECYZJA (2026-07-23): z Netlify nie rezygnujemy** — migracja na Cloudflare Pages odpada; do rozstrzygnięcia zostaje tylko ewentualny proxy (Netlify pozostaje originem).
 
 ## Etap 0 — Pomiar (baseline przed monetyzacją)
