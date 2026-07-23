@@ -25,7 +25,7 @@ Wykonawcze (Claude):
 - [x] Stopka (`AppFooter.vue`): 15 linków do najważniejszych kategorii. (2026-07-23)
 - [x] Twitter cards na kategoriach/leafach + blogu; `og:image`/`twitter:image` leafów wskazują teraz raster WebP zamiast SVG (crawlery social nie renderują SVG). (2026-07-23)
 - [x] Odporność builda na awarię WordPressa: `routes-from-content.js` przy padzie WP przepisuje trasy bloga z poprzedniego `prerender-routes.json` (przetestowane symulacją), a nowy `scripts/check-build.mjs` (wpięty w `pnpm build`) wywala deploy przy pustym blogu/kategorii/leafie — koniec cichych pustych deployów mimo `failOnError:false`. (2026-07-23)
-- [x] Cloudflare Web Analytics wpięte w `nuxt.config.ts` przez env `CF_ANALYTICS_TOKEN` (bez tokena w repo). **Do aktywacji przez Jakuba:** darmowe konto Cloudflare → Web Analytics → Add site → skopiować token → Netlify: Site settings → Environment variables → `CF_ANALYTICS_TOKEN` → redeploy. (2026-07-23)
+- [x] Cloudflare Web Analytics wpięte w `nuxt.config.ts` przez env `CF_ANALYTICS_TOKEN` (bez tokena w repo). **AKTYWOWANE i zweryfikowane** — beacon na produkcji, dane spływają do panelu CF. Poza Klaro celowo (pomiar bez cookies = bez zgody, 100% ruchu); wpis w polityce prywatności + klauzula transferu poza EOG w PR #127. Etap 0 (baseline 2–4 tyg.) tym samym wystartował. (2026-07-23)
 - [ ] Po deployu: tydzień obserwacji transferu Netlify → jeśli spadł zgodnie z planem (80–95%), rozważyć powrót na tańszy pakiet.
 
 Decyzje (Jakub):
