@@ -131,11 +131,17 @@
             <li><span>Firmy, za pośrednictwem których świadczone mogą być usługi SEO/SEM</span></li>
             <li><span>Firmy serwisowe i wsparcia IT dokonujące konserwacji lub odpowiedzialne za utrzymanie
                     infrastruktury IT</span></li>
+            <li><span>Firmy dostarczające narzędzia statystyczne dla Serwisu (pomiar odwiedzin bez plików cookies
+                    i bez identyfikatorów Użytkownika)</span></li>
         </ul>
         <h2 class="text-4xl py-4"><span>Czy Państwa dane osobowe będą przekazywane poza Unię Europejską?</span></h2>
-        <p class="text-lg">Dane osobowe<b>nie będą przekazywane poza Unię Europejską</b>, chyba że zostały opublikowane
-            na skutek indywidualnego działania Użytkownika (np. wprowadzenie komentarza lub wpisu), co sprawi, że dane
-            będą dostępne dla każdej osoby odwiedzającej serwis.</p>
+        <p class="text-lg">Dane osobowe co do zasady <b>nie będą przekazywane poza Europejski Obszar Gospodarczy</b>.
+            Jeżeli w związku z korzystaniem przez Administratora z usług dostawców technicznych (np. hosting,
+            statystyki odwiedzin) dochodzi do przekazania danych do państwa trzeciego, odbywa się ono wyłącznie na
+            podstawie zabezpieczeń przewidzianych w RODO – decyzji Komisji Europejskiej stwierdzającej odpowiedni
+            stopień ochrony (w tym ram EU-US Data Privacy Framework) lub standardowych klauzul umownych. Dane
+            opublikowane na skutek indywidualnego działania Użytkownika (np. wprowadzenie komentarza lub wpisu) będą
+            dostępne dla każdej osoby odwiedzającej Serwis.</p>
         <h2 class="text-4xl py-4"><span>Czy dane osobowe będą podstawą zautomatyzowanego podejmowania decyzji?</span>
         </h2>
         <p class="text-lg">Dane osobowe <b>nie będą wykorzystywane</b> do zautomatyzowanego podejmowania decyzji
