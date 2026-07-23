@@ -1,0 +1,12 @@
+---
+title: Kolorowanka Kredka - wariant 32
+description: Kolorowanka Kredka - wariant 32
+canonical: /kredka/kredka/
+variant_of: kredka
+image: /kredka/kredka/32/kredka-32.svg
+pdf: /kredka/kredka/32/kredka-32.pdf
+alt: "Edukacyjna kolorowanka kredka do wydruku"
+tags:
+- kredka
+- kredka
+---
