@@ -5,9 +5,11 @@
 // Uzycie: node scripts/generate-pins.mjs [--limit N] [--only kategoria]
 // Wyjscie: pins-output/<kategoria>-<wariant>.jpg (poza public/, katalog w .gitignore).
 // Masowe uruchomienie planowane po zalozeniu konta firmowego Pinterest.
-import { readdirSync, statSync, existsSync, readFileSync, mkdirSync } from 'node:fs'
+import { readdirSync, statSync, existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { join } from 'node:path'
 import sharp from 'sharp'
+
+const SITE = 'https://twoja-kolorowanka.pl'
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const CONTENT = join(ROOT, 'content')
@@ -76,6 +78,7 @@ function overlaySvg (titleLines) {
 
 let done = 0, skipped = 0
 const errors = []
+const manifest = []   // wiersze CSV do recznej/API publikacji: plik, link, tytul, opis
 const queue = leafs.filter(dir => !ONLY || dir.replace(/\\/g, '/').includes(`/${ONLY}/`)).slice(0, LIMIT)
 console.log(`Leafow do przetworzenia: ${queue.length}`)
 
@@ -113,5 +116,21 @@ await Promise.all(Array.from({ length: 8 }, async () => {
   }
 }))
 
-console.log(`Gotowe. Wygenerowano: ${done}, pominieto: ${skipped}, bledy: ${errors.length}`)
+// Manifest obejmuje WSZYSTKIE piny obecne w pins-output/ (nie tylko z tego uruchomienia),
+// wiec kolejne partie (--only rozne kategorie) kumuluja sie w jednym pliku.
+for (const dir of leafs) {
+  const fm = frontmatter(join(dir, 'index.md'))
+  const relParts = dir.slice(CONTENT.length).replace(/\\/g, '/').split('/').filter(Boolean)
+  const outName = relParts.join('-') + '.jpg'
+  if (!existsSync(join(OUT, outName))) continue
+  const pinDesc = (fm.description || fm.title || '').replace(/"/g, "'") +
+    ' Darmowa kolorowanka do druku (PDF) i kolorowania online.'
+  manifest.push([outName, `${SITE}/${relParts.join('/')}/`, pinTitle(fm, relParts[relParts.length - 2]).join(' '), pinDesc])
+}
+manifest.sort((a, b) => a[0].localeCompare(b[0]))
+writeFileSync(join(OUT, 'manifest.csv'),
+  'plik;link;tytul;opis\n' + manifest.map(r => r.map(c => `"${c}"`).join(';')).join('\n') + '\n',
+  'utf8')
+
+console.log(`Gotowe. Wygenerowano: ${done}, pominieto: ${skipped}, bledy: ${errors.length}. Manifest: ${manifest.length} pozycji.`)
 if (errors.length) { console.log(errors.slice(0, 10).join('\n')); process.exitCode = 1 }
