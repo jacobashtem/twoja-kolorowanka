@@ -224,6 +224,12 @@
             <li><b>Prowadzenie statystyk:</b>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
                     <li>Google Tag Manager (policies.google.com/privacy?hl=pl)</li>
+                    <li>Cloudflare Web Analytics (cloudflare.com/privacypolicy) – pomiar odwiedzin <b>bez plików
+                        cookies</b>: skrypt nie zapisuje żadnych danych na Urządzeniu Użytkownika, nie wykorzystuje
+                        identyfikatorów Użytkownika i nie śledzi Użytkowników między witrynami; gromadzi wyłącznie
+                        zbiorcze, anonimowe statystyki odwiedzin (m.in. liczba odsłon, kraj, typ przeglądarki).
+                        Podstawą przetwarzania jest prawnie uzasadniony interes Administratora
+                        (art. 6 ust. 1 lit. f RODO).</li>
                 </ul>
             </li>
             <li><b>Usługi komentarzy:</b>
