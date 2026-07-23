@@ -61,7 +61,8 @@ export default defineNuxtConfig({
       ],
       meta: [
         { name: 'theme-color', content: '#ffffff' },
-        { name: 'msapplication-TileColor', content: '#ffffff' }
+        { name: 'msapplication-TileColor', content: '#ffffff' },
+        { name: 'p:domain_verify', content: '4c6a41c67fdd215de97174116d655479' }
       ],
       script: cfAnalyticsToken ? [
         {
