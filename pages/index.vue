@@ -441,7 +441,7 @@ const galleryVariantsList = computed(() => [
           as="h2"
           backgroundColor="bg-sec-500"
           fontSize="text-xl sm:text-3xl"
-          textColor="text-white"
+          textColor="text-sec-900"
         />
         <span class="flex-grow border-t border-black" aria-hidden="true"></span>
       </div>
@@ -461,7 +461,7 @@ const galleryVariantsList = computed(() => [
             as="h2"
             backgroundColor="bg-sec-500"
             fontSize="text-xl sm:text-3xl"
-            textColor="text-white"
+            textColor="text-sec-900"
           />
           <span class="flex-grow border-t border-black" aria-hidden="true"></span>
         </div>
