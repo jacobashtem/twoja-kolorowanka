@@ -6,6 +6,7 @@
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "generate:routes": "node scripts/routes-from-content.js > prerender-routes.json",
+    "health": "node scripts/health-check.mjs",
     "build": "pnpm run generate:routes && node scripts/generate-thumbnails.mjs --missing-only && nuxt generate && node scripts/check-build.mjs",
     "dev": "nuxi dev",
     "preview": "nuxt preview"

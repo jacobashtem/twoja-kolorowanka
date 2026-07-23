@@ -1,7 +1,7 @@
 ---
 title: "Kolorowanki bukiet do druku PDF – darmowe bukiety kwiatów dla dzieci"
 description: "Pobierz darmowe kolorowanki bukiet do druku w PDF. Piękne bukiety kwiatów i wiosenne kwiaty do kolorowania dla dzieci i miłośników przyrody."
-canonical: "/bukiet/"
+canonical: "/rosliny/bukiet/"
 categoryName: "Bukiet"
 tags: [bukiet, kwiaty, wiosenne kwiaty]
 alt: "kolorowanki bukiet do druku PDF"

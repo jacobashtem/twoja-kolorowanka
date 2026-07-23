@@ -1,7 +1,7 @@
 ---
 title: "Kolorowanki ciągniki do druku PDF – darmowe malowanki pojazdy Ursus John Deere"
 description: "Pobierz darmowe kolorowanki ciągniki do druku w formacie PDF. Maszyny rolnicze i traktory w malowankach dla dzieci."
-canonical: "/pojazdy/ciagniki"
+canonical: "/pojazdy/ciagniki/"
 categoryName: "Ciągniki"
 tags: [pojazdy, ciagniki]
 alt: "kolorowanki ciągniki do druku"

@@ -3,8 +3,8 @@ title: Kolorowanka Serce - wariant 42
 description: Kolorowanka Serce - wariant 42
 canonical: /serce/
 variant_of: serce
-image: /serce/serce/42/serce-42.svg
-pdf: /serce/serce/42/serce-42.pdf
+image: /serce/42/serce-42.svg
+pdf: /serce/42/serce-42.pdf
 alt: "Kolorowanki do druku serce"
 tags:
 - serce

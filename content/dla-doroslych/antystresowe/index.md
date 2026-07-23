@@ -1,7 +1,7 @@
 ---
 title: "Kolorowanki antystresowe do druku PDF – darmowe mandale i wzory relaksacyjne"
 description: "Pobierz darmowe kolorowanki antystresowe do druku w formacie PDF. Mandale, wzory geometryczne i roślinne – idealne na relaks, uważność i wyciszenie."
-canonical: "dla-doroslych/antystresowe/"
+canonical: "/dla-doroslych/antystresowe/"
 categoryName: "Antystresowe"
 tags: [antystresowe, relaks, mandala]
 alt: "kolorowanki antystresowe do druku PDF – mandale i wzory relaksacyjne"

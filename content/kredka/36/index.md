@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Kredka - wariant 36
 description: Kolorowanka Kredka - wariant 36
-canonical: /kredka/kredka/
+canonical: /kredka/
 variant_of: kredka
-image: /kredka/kredka/36/kredka-36.svg
-pdf: /kredka/kredka/36/kredka-36.pdf
+image: /kredka/36/kredka-36.svg
+pdf: /kredka/36/kredka-36.pdf
 alt: "Pokoloruj kredka – darmowy szablon PDF"
 tags:
 - kredka

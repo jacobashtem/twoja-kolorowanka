@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Telefon - wariant 33
 description: Kolorowanka Telefon - wariant 33
-canonical: /telefon/telefon/
+canonical: /telefon/
 variant_of: telefon
-image: /telefon/telefon/33/telefon-33.svg
-pdf: /telefon/telefon/33/telefon-33.pdf
+image: /telefon/33/telefon-33.svg
+pdf: /telefon/33/telefon-33.pdf
 alt: "telefon kolorowanka dla dzieci"
 tags:
 - telefon

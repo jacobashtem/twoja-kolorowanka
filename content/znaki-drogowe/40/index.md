@@ -1,10 +1,10 @@
 ---
 title: Kolorowanka Znaki-drogowe - wariant 40
 description: Kolorowanka Znaki-drogowe - wariant 40
-canonical: /znaki-drogowe/znaki-drogowe/
+canonical: /znaki-drogowe/
 variant_of: znaki-drogowe
-image: /znaki-drogowe/znaki-drogowe/40/znaki-drogowe-40.svg
-pdf: /znaki-drogowe/znaki-drogowe/40/znaki-drogowe-40.pdf
+image: /znaki-drogowe/40/znaki-drogowe-40.svg
+pdf: /znaki-drogowe/40/znaki-drogowe-40.pdf
 alt: "znaki-drogowe kolorowanki dla dzieci"
 tags:
 - znaki-drogowe
