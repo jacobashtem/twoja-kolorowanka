@@ -1,0 +1,14 @@
+{
+  "_comment": "Mapowanie pierwszego segmentu sciezki content/ na nazwe boardu Pinterest. Brakujace boardy publikator tworzy sam. _default lapie wszystko bez wpisu.",
+  "zwierzeta": "Kolorowanki zwierzęta",
+  "pojazdy": "Kolorowanki pojazdy",
+  "dla-doroslych": "Mandale i antystresowe",
+  "fantasy": "Kolorowanki bajkowe",
+  "ksiezniczki": "Kolorowanki bajkowe",
+  "dla-dziewczynek": "Kolorowanki bajkowe",
+  "okolicznosciowe": "Kolorowanki sezonowe",
+  "pory-roku": "Kolorowanki sezonowe",
+  "wedlug-kodu": "Kolorowanki edukacyjne",
+  "znaki-drogowe": "Kolorowanki edukacyjne",
+  "_default": "Kolorowanki do druku"
+}
