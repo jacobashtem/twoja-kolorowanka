@@ -59,7 +59,8 @@ Cel: znać PRAWDZIWE odsłony/sesje/UU (GA za zgodą niedoszacowuje; SEMrush to 
 
 Zasada: pełny SVG pobiera się TYLKO w `/koloruj/` (edytor). Wszędzie indziej — mały raster.
 
-- [x] Skrypt `scripts/generate-thumbnails.mjs` (sharp): każdy SVG → `-thumb.webp` 400px + `-view.webp` 800px obok oryginału. 4168/4168 wygenerowane (281 MB), efekt np. `serce-11.svg` 9,6 MB → 19 KB thumb. Uruchamiać po dodaniu nowych kolorowanek. Naprawiono też 4 SVG z zepsutym XML (brak xmlns:serif/vectornator). (2026-07-23)
+- [x] Skrypt `scripts/generate-thumbnails.mjs` (sharp): każdy SVG → `-thumb.webp` 400px + `-view.webp` 800px obok oryginału. 4168/4168 wygenerowane (281 MB), efekt np. `serce-11.svg` 9,6 MB → 19 KB thumb. Naprawiono też 4 SVG z zepsutym XML (brak xmlns:serif/vectornator). (2026-07-23)
+- [x] Automatyzacja miniatur dla nowych kolorowanek: `pnpm build` odpala skrypt z flagą `--missing-only` przed `nuxt generate` — nowe SVG dostają WebP przy deployu na Netlify, zepsuty SVG wywala build. Ręczne uruchomienie lokalnie (bez flagi) nadal możliwe, jeśli chcesz commitować WebP do repo. (2026-07-23)
 - [x] `utils/thumbs.js` (`svgPreview()`) + podmiana w `GalleryItem`, `VariantCard` (galerie, „Podobne", wyszukiwarka) i obraz główny + modal leafa na WebP z fallbackiem do SVG przy braku pliku; druk = PDF, edytor `/koloruj/` = pełny SVG. (2026-07-23)
 - [x] `loading="lazy"` w `GalleryItem` (VariantCard już miał). (2026-07-23)
 - [x] Nagłówki cache w `netlify.toml`: `max-age=31536000, immutable` dla SVG/PDF/WebP. (2026-07-23)
