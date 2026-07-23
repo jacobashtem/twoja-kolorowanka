@@ -1,0 +1,12 @@
+---
+title: Kolorowanka Telefon - wariant 13
+description: Kolorowanka Telefon - wariant 13
+canonical: /telefon/telefon/
+variant_of: telefon
+image: /telefon/telefon/13/telefon-13.svg
+pdf: /telefon/telefon/13/telefon-13.pdf
+alt: "Łatwa kolorowanka telefon dla przedszkolaka"
+tags:
+- telefon
+- telefon
+---

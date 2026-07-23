@@ -121,6 +121,22 @@ const categoryLinks = [
     slug: 'kosmos',
   },
   {
+    name: 'Znaki drogowe',
+    slug: 'znaki-drogowe',
+  },
+  {
+    name: 'Telefon',
+    slug: 'telefon',
+  },
+    {
+    name: 'Kredka',
+    slug: 'kredka',
+  },
+    {
+    name: 'Według kodu',
+    slug: 'wedlug-kodu',
+  },
+  {
     name: 'Zwierzęta',
     slug: 'zwierzeta',
     children: [
