@@ -119,6 +119,14 @@ const categoryLinks = [
     slug: 'kosmos',
   },
   {
+    name: 'Znaki drogowe',
+    slug: 'znaki-drogowe',
+  },
+  {
+    name: 'Telefon',
+    slug: 'telefon',
+  },
+  {
     name: 'Zwierzęta',
     slug: 'zwierzeta',
     children: [
