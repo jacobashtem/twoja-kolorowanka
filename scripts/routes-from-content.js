@@ -1,10 +1,11 @@
 // scripts/routes-from-content.js
-import { readdir } from 'fs/promises'
+import { readdir, readFile } from 'fs/promises'
 import { join, sep } from 'path'
 import { fileURLToPath } from 'url'
 
 const cwd = fileURLToPath(new URL('.', import.meta.url))
 const CONTENT_ROOT = join(cwd, '..', 'content')
+const PREV_ROUTES_FILE = join(cwd, '..', 'prerender-routes.json')
 
 const WP_API = process.env.WORDPRESS_API_URL || 'https://tk.delash.pl/wp-json/wp/v2'
 
@@ -87,6 +88,16 @@ for (const slug of categorySlugs) {
 
 if (postSlugs.length || categorySlugs.length) {
   console.error(`[routes] WordPress: ${postSlugs.length} postów, ${categorySlugs.length} kategorii`)
+} else {
+  // WP API padło — nie gub istniejących tras bloga, przepisz je z poprzedniego builda
+  try {
+    const prev = JSON.parse(await readFile(PREV_ROUTES_FILE, 'utf8'))
+    const prevBlog = prev.filter(r => r.startsWith('/blog/'))
+    prevBlog.forEach(r => routes.add(r))
+    console.error(`[routes] UWAGA: WordPress API niedostępne — użyto ${prevBlog.length} tras bloga z poprzedniego prerender-routes.json`)
+  } catch {
+    console.error('[routes] UWAGA: WordPress API niedostępne i brak poprzedniego prerender-routes.json — build bez tras bloga')
+  }
 }
 
 console.log(JSON.stringify([...routes].sort(), null, 2))

@@ -32,6 +32,22 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+# Assety kolorowanek sie nie zmieniaja - agresywny cache przegladarki/CDN zbija transfer
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/*"
   [headers.values]

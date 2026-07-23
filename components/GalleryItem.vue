@@ -17,6 +17,12 @@ const props = defineProps({
     default: '/',
   },
 })
+
+const displaySrc = ref(svgPreview(props.src))
+watch(() => props.src, s => { displaySrc.value = svgPreview(s) })
+const onImgError = () => {
+  if (displaySrc.value !== props.src) displaySrc.value = props.src
+}
 </script>
 
 <template>
@@ -25,8 +31,10 @@ const props = defineProps({
     class="relative block rounded-lg overflow-hidden group"
   >
     <img
-      :src="src"
-      :alt="alt"
+      :src="displaySrc"
+      :alt="alt || title"
+      loading="lazy"
+      @error="onImgError"
       class="w-full max-h-64"
     />
     <p

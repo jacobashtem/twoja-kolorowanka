@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 112
 description: Kolorowanka Kroliczki - wariant 112
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/112/kroliczki-112.svg
 pdf: /kroliczki/112/kroliczki-112.pdf

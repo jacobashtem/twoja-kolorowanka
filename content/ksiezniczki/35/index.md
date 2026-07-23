@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Ksiezniczki - wariant 35
 description: Kolorowanka Ksiezniczki - wariant 35
-canonical: /ksiezniczki/ksiezniczki/
+canonical: /ksiezniczki/
 variant_of: ksiezniczki
 image: /ksiezniczki/ksiezniczki/35/ksiezniczki-35.svg
 pdf: /ksiezniczki/ksiezniczki/35/ksiezniczki-35.pdf

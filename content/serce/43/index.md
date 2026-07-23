@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Serce - wariant 43
 description: Kolorowanka Serce - wariant 43
-canonical: /serce/serce/
+canonical: /serce/
 variant_of: serce
 image: /serce/serce/43/serce-43.svg
 pdf: /serce/serce/43/serce-43.pdf

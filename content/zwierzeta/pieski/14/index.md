@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Pieski - wariant 14
 description: Kolorowanka Pieski - wariant 14
-canonical: /zwierzeta/pieski
+canonical: /zwierzeta/pieski/
 variant_of: pieski
 image: /pieski/14/pieski-14.svg
 pdf: /pieski/14/pieski-14.pdf

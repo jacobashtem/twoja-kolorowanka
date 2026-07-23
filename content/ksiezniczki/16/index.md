@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Ksiezniczki - wariant 16
 description: Kolorowanka Ksiezniczki - wariant 16
-canonical: /ksiezniczki/ksiezniczki/
+canonical: /ksiezniczki/
 variant_of: ksiezniczki
 image: /ksiezniczki/ksiezniczki/16/ksiezniczki-16.svg
 pdf: /ksiezniczki/ksiezniczki/16/ksiezniczki-16.pdf

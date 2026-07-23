@@ -6,7 +6,7 @@
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "generate:routes": "node scripts/routes-from-content.js > prerender-routes.json",
-    "build": "pnpm run generate:routes && nuxt generate",
+    "build": "pnpm run generate:routes && nuxt generate && node scripts/check-build.mjs",
     "dev": "nuxi dev",
     "preview": "nuxt preview"
   },
@@ -27,6 +27,7 @@
     "@nuxtjs/tailwindcss": "npm:@nuxtjs/tailwindcss@nightly",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "nuxt-disqus": "^1.2.0",
+    "sharp": "^0.35.3",
     "ts-node": "^10.9.2"
   }
 }

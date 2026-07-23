@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 75
 description: Kolorowanka Kroliczki - wariant 75
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/75/kroliczki-75.svg
 pdf: /kroliczki/75/kroliczki-75.pdf

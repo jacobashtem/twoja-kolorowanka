@@ -177,6 +177,11 @@ const fullTitle = computed(() => {
 const imageUrl        = computed(() => fixImageUrl(doc?.value?.image))
 const pdfUrl          = computed(() => fixImageUrl(doc?.value?.pdf))
 
+// Rastrowy podgląd (WebP 800px) zamiast pełnego SVG; fallback do SVG gdy brak pliku
+const imageViewUrl = ref('')
+watchEffect(() => { imageViewUrl.value = svgPreview(imageUrl.value, 'view') })
+const onViewError = () => { if (imageViewUrl.value !== imageUrl.value) imageViewUrl.value = imageUrl.value }
+
 const printPdf        = () => { const u = pdfUrl.value; if (u) window.open(u, '_blank') }
 const downloadPdf     = () => { const u = pdfUrl.value; if (!u) return; const a = Object.assign(document.createElement('a'), { href: u, download: u.split('/').pop() }); document.body.appendChild(a); a.click(); document.body.removeChild(a) }
 
@@ -196,8 +201,13 @@ useHead(() => {
       { property: 'og:type',        content: 'website' },
       { property: 'og:title',       content: seoObj?.title },
       { property: 'og:description', content: seoObj?.description },
-      { property: 'og:url',         content: `https://twoja-kolorowanka.pl${seoObj?.canonical}` },
-      { property: 'og:image',       content: `https://twoja-kolorowanka.pl${seoObj?.image}` },
+      { property: 'og:url',         content: canonical },
+      // svgPreview: crawlery social (FB/Twitter) nie renderują SVG — podajemy raster WebP
+      { property: 'og:image',       content: `https://twoja-kolorowanka.pl${svgPreview(fixImageUrl(seoObj?.image), 'view')}` },
+      { name: 'twitter:card',        content: 'summary_large_image' },
+      { name: 'twitter:title',       content: seoObj?.title },
+      { name: 'twitter:description', content: seoObj?.description },
+      { name: 'twitter:image',       content: `https://twoja-kolorowanka.pl${svgPreview(fixImageUrl(seoObj?.image), 'view')}` },
     ],
     script: [
     {
@@ -403,7 +413,9 @@ useHead(() => {
           class="absolute inset-0 flex items-center justify-center pointer-events-none"
         >
           <img
-            :src="imageUrl"
+            :src="imageViewUrl"
+            :alt="doc?.alt"
+            @error="onViewError"
             class="max-w-[60%] h-auto"
             style="max-height:61%; margin-top:-11%;"
           />
@@ -428,8 +440,9 @@ useHead(() => {
         >
           <img
             v-if="imageUrl"
-            :src="imageUrl"
+            :src="imageViewUrl"
             alt="Podgląd PDF"
+            @error="onViewError"
             class="absolute inset-0 m-auto max-w-full max-h-full object-contain p-4"
           />
         </div>

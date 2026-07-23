@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Pieski - wariant 91
 description: Kolorowanka Pieski - wariant 91
-canonical: /zwierzeta/pieski
+canonical: /zwierzeta/pieski/
 variant_of: pieski
 image: /pieski/91/pieski-91.svg
 pdf: /pieski/91/pieski-91.pdf

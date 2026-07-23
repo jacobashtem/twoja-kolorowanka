@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Koty - wariant 3
 description: Kolorowanka Koty - wariant 3
-canonical: /zwierzeta/koty
+canonical: /zwierzeta/koty/
 variant_of: koty
 image: /koty/3/koty-3.svg
 pdf: /koty/3/koty-3.pdf

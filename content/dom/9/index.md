@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Dom - wariant 9
 description: Kolorowanka Dom - wariant 9
-canonical: /dom/dom/
+canonical: /dom/
 variant_of: dom
 image: /dom/dom/9/dom-9.svg
 pdf: /dom/dom/9/dom-9.pdf

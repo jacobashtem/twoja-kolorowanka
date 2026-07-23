@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Pieski - wariant 42
 description: Kolorowanka Pieski - wariant 42
-canonical: /zwierzeta/pieski
+canonical: /zwierzeta/pieski/
 variant_of: pieski
 image: /pieski/42/pieski-42.svg
 pdf: /pieski/42/pieski-42.pdf

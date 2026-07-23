@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 4
 description: Kolorowanka Kroliczki - wariant 4
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/4/kroliczki-4.svg
 pdf: /kroliczki/4/kroliczki-4.pdf

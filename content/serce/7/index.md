@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Serce - wariant 7
 description: Kolorowanka Serce - wariant 7
-canonical: /serce/serce/
+canonical: /serce/
 variant_of: serce
 image: /serce/serce/7/serce-7.svg
 pdf: /serce/serce/7/serce-7.pdf

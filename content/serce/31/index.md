@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Serce - wariant 31
 description: Kolorowanka Serce - wariant 31
-canonical: /serce/serce/
+canonical: /serce/
 variant_of: serce
 image: /serce/serce/31/serce-31.svg
 pdf: /serce/serce/31/serce-31.pdf

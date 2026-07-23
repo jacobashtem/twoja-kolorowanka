@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Koty - wariant 34
 description: Kolorowanka Koty - wariant 34
-canonical: /zwierzeta/koty
+canonical: /zwierzeta/koty/
 variant_of: koty
 image: /koty/34/koty-34.svg
 pdf: /koty/34/koty-34.pdf

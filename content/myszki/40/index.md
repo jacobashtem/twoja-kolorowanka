@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Myszki - wariant 40
 description: Kolorowanka Myszki - wariant 40
-canonical: /zwierzeta/myszki/
+canonical: /myszki/
 variant_of: myszki
 image: /zwierzeta/myszki/40/myszki-40.svg
 pdf: /zwierzeta/myszki/40/myszki-40.pdf

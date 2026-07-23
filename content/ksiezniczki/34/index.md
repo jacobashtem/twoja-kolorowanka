@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Ksiezniczki - wariant 34
 description: Kolorowanka Ksiezniczki - wariant 34
-canonical: /ksiezniczki/ksiezniczki/
+canonical: /ksiezniczki/
 variant_of: ksiezniczki
 image: /ksiezniczki/ksiezniczki/34/ksiezniczki-34.svg
 pdf: /ksiezniczki/ksiezniczki/34/ksiezniczki-34.pdf

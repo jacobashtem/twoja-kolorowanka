@@ -1,7 +1,7 @@
 ---
 title: Kolorowanka Myszki - wariant 36
 description: Kolorowanka Myszki - wariant 36
-canonical: /zwierzeta/myszki/
+canonical: /myszki/
 variant_of: myszki
 image: /zwierzeta/myszki/36/myszki-36.svg
 pdf: /zwierzeta/myszki/36/myszki-36.pdf

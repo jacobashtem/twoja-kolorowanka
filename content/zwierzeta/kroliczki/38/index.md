@@ -1,7 +1,7 @@
 ---
 title: Kolorowanki Króliczki - wariant 38
 description: Kolorowanka Kroliczki - wariant 38
-canonical: /zwierzeta/kroliczki
+canonical: /zwierzeta/kroliczki/
 variant_of: kroliczki
 image: /kroliczki/38/kroliczki-38.svg
 pdf: /kroliczki/38/kroliczki-38.pdf
