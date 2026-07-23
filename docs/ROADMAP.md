@@ -31,7 +31,7 @@ Wykonawcze (Claude):
 Decyzje (Jakub):
 - [x] Kategorie aut z brandami — **DECYZJA (2026-07-23): zostawiamy** (ryzyko niskie, frazy z markami mają wolumen SEO; disclaimer znaków towarowych w regulaminie asekuruje). Plan awaryjny gotowy na wypadek odmowy AdSense lub pisma od marki: rename na generyczne + redirecty 301 w netlify.toml + zmiana menu (~1h pracy). Do sprawdzenia przy okazji u Delfiny: czy rysunki to generyczne auta, czy wierne modele (wierne = ryzyko rośnie).
 - [x] Regulamin + Prawa autorskie przeredagowane (2026-07-23, w PR #124): usunięte deklaracje fan-artów/postaci z bajek/domeny publicznej („uznane za takie na podstawie internetu"), usunięta obietnica „nie monetyzujemy" (kolizja z planowanym AdSense — zastąpiona „dostęp bezpłatny"), dodany generyczny disclaimer znaków towarowych. Objęte: `pages/regulamin.vue` (sekcje IX–X) i `pages/prawa-autorskie.vue` (PL+EN). UWAGA: przy okazji wdrażania sprzedaży paczek PDF (Etap 7) trzeba będzie zaktualizować zakaz użytku komercyjnego o wyjątek dla płatnych licencji.
-- [ ] Cloudflare przed Netlify: darmowy proxy (cache statyków) vs migracja na Cloudflare Pages vs zostawić jak jest.
+- [ ] Cloudflare przed Netlify: darmowy proxy (cache statyków) vs zostawić jak jest. **DECYZJA (2026-07-23): z Netlify nie rezygnujemy** — migracja na Cloudflare Pages odpada; do rozstrzygnięcia zostaje tylko ewentualny proxy (Netlify pozostaje originem).
 
 ## Etap 0 — Pomiar (baseline przed monetyzacją)
 
