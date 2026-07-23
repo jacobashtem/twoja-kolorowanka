@@ -69,7 +69,7 @@ Zasada: pełny SVG pobiera się TYLKO w `/koloruj/` (edytor). Wszędzie indziej 
 
 ## Etap 3 — Start monetyzacji
 
-- [ ] Klaro: dodać Google Consent Mode v2 (wymóg reklam w EOG).
+- [ ] Klaro: dodać Google Consent Mode v2 (wymóg reklam w EOG). **Zaimplementowane w PR #129 — czeka na review Jakuba** (domyślnie wszystko denied, zgody sterują sygnałami; kategoria Reklamowe + usługa AdSense w banerze gotowe na Etap 3). (2026-07-23)
 - [ ] Wniosek do **AdSense** (po czystce brandów z Etapu 1) — start i punkt odniesienia. Alternatywa/test B: Ezoic (brak progu, zwykle wyższy RPM).
 - [ ] Placement: strony kategorii (in-content między sekcjami galerii) + leafy (pod przyciskami, nad „Podobnymi"). NIGDY w `/koloruj/` (UX dzieci + i tak noindex).
 - [ ] Po 2–3 mies. danych: ocena RPM, decyzja o kolejnych krokach (Setupad przy ~100k odwiedzin/mies.).
@@ -88,7 +88,7 @@ To jest silnik wzrostu na rynku PL: skalujemy to, co już działa (79 landingów
 W niszy printables Pinterest bywa większy niż Google. Mechanika: pin = pionowa grafika (1000×1500) z linkiem do naszej strony; piny żyją miesiącami i się kumulują.
 
 - [ ] Konto firmowe Pinterest + weryfikacja domeny + włączenie Rich Pins (czytają OG tagi — już je mamy).
-- [ ] Skrypt `scripts/generate-pins.mjs`: miniatura kolorowanki → grafika pinu 2:3 (biała ramka, tytuł, subtelne logo) — masowo z istniejących WebP z Etapu 2.
+- [x] Skrypt `scripts/generate-pins.mjs`: miniatura kolorowanki → grafika pinu 2:3 (1000×1500, biała ramka, pasek z tytułem i domeną) — masowo z istniejących WebP. Flagi `--limit`/`--only`, wyjście do `pins-output/` (gitignore). Masowe uruchomienie po założeniu konta. (PR #131, 2026-07-23)
 - [ ] Automatyzacja publikacji: **Pinterest API v5** (oficjalne, darmowe) — skrypt planujący 3–5 pinów/dzień z kolejki; boardy per kategoria + boardy sezonowe. Alternatywa bez kodu: Buffer/Tailwind (płatne).
 - [ ] Start: 5 boardów (zwierzęta, mandale/antystres, sezonowe, edukacyjne, pojazdy), potem rozbudowa wg statystyk.
 
@@ -135,7 +135,7 @@ Nie klon SEMrusha — własne skrypty na darmowych API, uruchamiane z GitHub Act
 
 - [ ] **GSC query mining** (najcenniejsze): dzienny pull z Google Search Console API (kliknięcia/wyświetlenia/pozycje per fraza i per landing). Automatyczny raport: frazy z wyświetleniami, na które NIE mamy landinga → gotowa lista tematów do Etapu 4; frazy na pozycjach 8–20 → landingi do dopieszczenia. To realnie zastępuje 80% tego, do czego używa się SEMrusha przy własnej stronie — za darmo i na prawdziwych danych.
 - [ ] **Monitor transferu Netlify**: pull z Netlify API (usage), alert (e-mail/commit do repo) przy >70% pakietu — koniec niespodzianek na fakturze.
-- [ ] **Health check tygodniowy**: skrypt sprawdzający sitemapę (200-ki), canonicale w `content/**` (czy wskazują istniejące strony — wyłapałby `/dom/dom/`), 404 w linkach wewnętrznych, brakujące pliki z frontmatter (`image:`/`pdf:`).
+- [x] **Health check tygodniowy**: `scripts/health-check.mjs` (`pnpm health`, `--remote` odpytuje sitemapę produkcji, `--all` pełna lista). Pierwsze uruchomienie wykryło i naprawiliśmy **1023 błędy** (PR #130): 191 canonicali leafów `/kat/kat/`→404 w 8 kategoriach od Delfiny, ~390 zdublowanych ścieżek image/pdf (JSON-LD emitował 404), 6 kategorii z martwym og:image, 6 złych canonicali kategorii. Zostało 38 ostrzeżeń: martwe pola `heroImgDesktop/Mobile` (nieużywane w kodzie) — decyzja: dostarczyć grafiki czy usunąć pola. **TODO: wpiąć w cron GitHub Actions z alertem.** UWAGA na przyszłość: generator contentu Delfiny systematycznie produkuje ścieżki `/kategoria/kategoria/` — health-check łapie to od teraz. (2026-07-23)
 - [ ] **Core Web Vitals tracker**: dzienne odpytanie CrUX/PSI API dla 10 kluczowych stron, wykres trendu LCP/CLS — wcześnie łapie regresje po deployach.
 - [ ] **Radar konkurencji**: tygodniowy diff publicznych sitemap 3–5 konkurentów (kolorowankowe portale PL/DE) → co nowego dodają, jakie sezony obstawiają.
 - [ ] **Pinterest stats pull** (po Etapie 5): API → które motywy pinów ciągną ruch, feedback do produkcji kolorowanek.
