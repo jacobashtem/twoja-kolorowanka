@@ -126,6 +126,14 @@ const categoryLinks = [
     name: 'Telefon',
     slug: 'telefon',
   },
+    {
+    name: 'Kredka',
+    slug: 'kredka',
+  },
+    {
+    name: 'Według kodu',
+    slug: 'wedlug-kodu',
+  },
   {
     name: 'Zwierzęta',
     slug: 'zwierzeta',
