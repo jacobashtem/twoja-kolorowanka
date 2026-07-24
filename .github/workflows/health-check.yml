@@ -1,0 +1,19 @@
+# Cotygodniowy health-check serwisu (Etap 8). Sprawdza spojnosc content/ (canonicale,
+# brakujace pliki, podglady WebP) oraz 200-ki wszystkich URL-i z sitemapy produkcji.
+# Fail = GitHub wysyla mail o nieudanym workflow — to jest nasz alert.
+name: health-check
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # poniedzialek 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Health check (content + sitemapa produkcji)
+        run: node scripts/health-check.mjs --remote --all
