@@ -29,7 +29,7 @@
 
   <h2 class="text-2xl font-semibold pt-6">Własność intelektualna</h2>
   <p>
-    Kolorowanki udostępniane w serwisie stanowią <strong>autorskie treści Usługodawcy</strong> – zostały stworzone ręcznie lub przy pomocy narzędzi sztucznej inteligencji. Prawa autorskie do ilustracji, tekstów, układu graficznego i kodu serwisu przysługują Usługodawcy. Kolorowanki nie przedstawiają postaci z bajek, gier ani filmów objętych ochroną praw osób trzecich i nie są z nimi powiązane.
+    Kolorowanki udostępniane w serwisie są publikowane legalnie – stanowią <strong>treści własne Usługodawcy lub są wykorzystywane na podstawie komercyjnych licencji</strong> uzyskanych od zewnętrznych dostawców grafik. Prawa autorskie do poszczególnych ilustracji przysługują odpowiednio Usługodawcy lub ich twórcom i licencjodawcom. Prawa do tekstów, układu graficznego i kodu serwisu przysługują Usługodawcy. Kolorowanki nie przedstawiają postaci z bajek, gier ani filmów objętych ochroną praw osób trzecich i nie są z nimi powiązane.
   </p>
   <p>
     Nazwy handlowe i znaki towarowe, które mogą pojawiać się w treściach serwisu (np. w opisach lub artykułach na blogu), są własnością ich prawnych właścicieli i są używane wyłącznie w celach informacyjnych lub opisowych. Serwis <strong>twoja-kolorowanka.pl</strong> nie rości sobie do nich żadnych praw i nie jest powiązany z ich właścicielami ani przez nich sponsorowany.
@@ -78,7 +78,7 @@
 
   <h2 class="text-2xl font-semibold pt-6">Intellectual property</h2>
   <p>
-    The coloring pages available on this website are the <strong>original works of the Service Provider</strong> – created by hand or with the assistance of artificial intelligence tools. Copyright to the illustrations, texts, layout, and code of the website belongs to the Service Provider. The coloring pages do not depict characters from cartoons, games, or movies protected by third-party rights and are not affiliated with them.
+    The coloring pages available on this website are published lawfully – they are <strong>either the Service Provider's own content or are used under commercial licenses</strong> obtained from external graphics providers. Copyright to individual illustrations belongs to the Service Provider or to their respective creators and licensors. Rights to the texts, layout, and code of the website belong to the Service Provider. The coloring pages do not depict characters from cartoons, games, or movies protected by third-party rights and are not affiliated with them.
   </p>
   <p>
     Trade names and trademarks that may appear in the website's content (e.g., in descriptions or blog articles) are the property of their respective owners and are used solely for informational or descriptive purposes. The website <strong>twoja-kolorowanka.pl</strong> claims no rights to them and is not affiliated with or sponsored by their owners.
