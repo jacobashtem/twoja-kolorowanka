@@ -136,6 +136,14 @@ const categoryLinks = [
     name: 'Według kodu',
     slug: 'wedlug-kodu',
   },
+   {
+    name: 'Zabawki',
+    slug: 'zabawki',
+    children: [
+      { name: 'Lalki', slug: 'zabawki/lalki' },
+      { name: 'Prezenty', slug: 'zabawki/prezenty' },
+    ]
+  },
   {
     name: 'Zwierzęta',
     slug: 'zwierzeta',
