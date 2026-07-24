@@ -97,14 +97,23 @@ const fixImageUrl = (imgUrl) => {
   return clean
 }
 
+// Drugi filtr (logika I): leaf musi miec dowolny tag z tagsFilter ORAZ dowolny z tagsFilterAnd.
+// Uzycie: przekroje typu motyw x trudnosc (np. dla dziewczynek 10 lat).
+const tagsFilterAnd = computed(() => {
+  const t = doc.value?.tagsFilterAnd
+  if (Array.isArray(t)) return t.map(String).filter(Boolean)
+  if (typeof t === 'string') return t.split(',').map(s => s.trim()).filter(Boolean)
+  return []
+})
+
 const { data: tagRaw } = await useAsyncData(
   `tag:${currentPath}`,
   () => {
     if (!tagsFilter.value.length || isLeaf.value) return []
     return queryContent()
-      .where({ tags: { $containsAny: tagsFilter.value } }) 
-      .where({ _path: { $regex: '^.+/[0-9]+/?$' } })      
-      .only(['_path','image','title','alt'])
+      .where({ tags: { $containsAny: tagsFilter.value } })
+      .where({ _path: { $regex: '^.+/[0-9]+/?$' } })
+      .only(['_path','image','title','alt','tags'])
       .find()
   },
   {
@@ -113,12 +122,15 @@ const { data: tagRaw } = await useAsyncData(
 )
 
 const galleryByTag = computed(() =>
-  (tagRaw.value || []).sort(byNum).map(v => ({
-    img: fixImageUrl(v.image),
-    url: v._path, 
-    title: v.title, 
-    alt: v.alt || v.title
-  }))
+  (tagRaw.value || [])
+    .filter(v => !tagsFilterAnd.value.length ||
+      (Array.isArray(v.tags) && v.tags.some(t => tagsFilterAnd.value.includes(t))))
+    .sort(byNum).map(v => ({
+      img: fixImageUrl(v.image),
+      url: v._path,
+      title: v.title,
+      alt: v.alt || v.title
+    }))
 )
 /* --- KONIEC bloku tagów --- */
 

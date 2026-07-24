@@ -46,9 +46,23 @@ function frontmatter (file) {
 
 const rel = p => p.slice(ROOT.length).replace(/\\/g, '/')
 
+// Pelna walidacja YAML frontmattera - zepsuty frontmatter wywala caly build @nuxt/content
+const YAML = await import('yaml').then(m => m.default).catch(() => null)
+
 for (const file of mdFiles) {
   const fm = frontmatter(file)
   const where = rel(file)
+
+  if (YAML) {
+    const raw = readFileSync(file, 'utf8')
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/)
+    if (m) {
+      try { YAML.parse(m[1]) } catch (e) {
+        errors.push(`${where}: zepsuty YAML we frontmatter - ${e.message.split('\n')[0]}`)
+        continue
+      }
+    }
+  }
 
   // 1. canonical -> istniejaca strona (blog jest z WordPressa, poza content/)
   if (fm.canonical && !fm.canonical.startsWith('/blog')) {

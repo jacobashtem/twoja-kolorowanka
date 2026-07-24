@@ -13,6 +13,11 @@
    przez `scripts/tag-difficulty.mjs` na podstawie złożoności SVG — cron miesięczny je uzupełnia
    dla nowych kolorowanek). Przekroje wiekowe/poziomowe filtruj po trudności, tematyczne po kategoriach.
    Ile leafów ma dany tag: `grep -rl "^- koty$" content --include=index.md | grep -E "/[0-9]+/" | wc -l`
+   **Logika I (motyw × trudność):** dodatkowe pole `tagsFilterAnd` — leaf musi mieć dowolny tag
+   z `tagsFilter` ORAZ dowolny z `tagsFilterAnd`. Np. strony „dla dziewczynek X lat":
+   `tagsFilter: [jednorozce, syrenki, ...]` + `tagsFilterAnd: [trudnosc-7, trudnosc-8]`.
+   UWAGA: cudzysłowy typograficzne i dwukropki w polach YAML potrafią wywalić parser —
+   `pnpm health` waliduje teraz YAML całego content/.
 4. **Napisz copy** (patrz szablon niżej): title, description, 4–6 sekcji `##`, 3–4 FAQ.
 5. **Sprawdź**: `pnpm health` (canonical + obrazki), lokalnie `pnpm dev` → `localhost:3000/kolorowanki/<slug>/`.
 6. Commit + PR. Po deployu strona sama trafia do sitemapy i jako kafelek na hub `/kolorowanki/`.
@@ -71,7 +76,11 @@ Zamknięcie z wezwaniem do działania i informacją o darmowych PDF A4.
 - Unikalne copy per przekrój — żadnego kopiowania sekcji między stronami.
 - Zmiana sluga po publikacji = redirect 301 w `netlify.toml`.
 
-## Dotychczasowe przekroje (2026-07-24)
+## Dotychczasowe przekroje (2026-07-24; pełna lista = podkatalogi `content/kolorowanki/`)
+
+Drabinka wiekowa (po trudności): 2 latka → 1; 3 latka → 1–2; 4 latka → 2–3; 5 latka → 3–4;
+6 latka → 4–5; 7 latka → 5–6; dziewczynki 8 lat → motyw×5–6; 9 lat → ×6–7; 10 lat → ×7–8;
+11 lat → ×8–9; od 12 lat → ×9–10.
 
 | URL | tagsFilter |
 |---|---|

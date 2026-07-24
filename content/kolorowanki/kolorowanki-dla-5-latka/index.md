@@ -4,7 +4,7 @@ description:    "Kolorowanki dla 5-latka: koty, pieski, dinozaury, samochody, je
 categoryName:   "Kolorowanki dla 5-latka"
 canonical:      "/kolorowanki/kolorowanki-dla-5-latka/"
 tags:           [ kolorowanki, dla-5-latka, przedszkolak, pdf ]
-tagsFilter:     [ koty, pieski, dinozaury, samochody, jednorozce, syrenki ]
+tagsFilter:     [ trudnosc-3, trudnosc-4 ]
 alt: 'kolorowanki dla 5-latka'
 h1First: Kolorowanki
 h1Sec:  dla 5-latka
