@@ -7,6 +7,7 @@ image: /zabawki/lalki/43/lalki-43.svg
 pdf: /zabawki/lalki/43/lalki-43.pdf
 alt: "lalki do druku i pokolorowania"
 tags:
+- trudnosc-9
 - zabawki
 - lalki
 ---

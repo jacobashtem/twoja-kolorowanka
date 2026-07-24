@@ -7,6 +7,7 @@ image: /zabawki/prezenty/48/prezenty-48.svg
 pdf: /zabawki/prezenty/48/prezenty-48.pdf
 alt: "kolorowanka do druku prezenty PDF"
 tags:
+- trudnosc-6
 - zabawki
 - prezenty
 ---

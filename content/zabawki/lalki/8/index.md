@@ -7,6 +7,7 @@ image: /zabawki/lalki/8/lalki-8.svg
 pdf: /zabawki/lalki/8/lalki-8.pdf
 alt: "Darmowa kolorowanka lalki do druku PDF"
 tags:
+- trudnosc-8
 - zabawki
 - lalki
 ---

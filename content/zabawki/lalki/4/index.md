@@ -7,6 +7,7 @@ image: /zabawki/lalki/4/lalki-4.svg
 pdf: /zabawki/lalki/4/lalki-4.pdf
 alt: "lalki kolorowanki dla dzieci"
 tags:
+- trudnosc-5
 - zabawki
 - lalki
 ---

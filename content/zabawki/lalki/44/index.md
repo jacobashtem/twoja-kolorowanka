@@ -7,6 +7,7 @@ image: /zabawki/lalki/44/lalki-44.svg
 pdf: /zabawki/lalki/44/lalki-44.pdf
 alt: "Darmowa kolorowanka lalki do druku PDF"
 tags:
+- trudnosc-9
 - zabawki
 - lalki
 ---

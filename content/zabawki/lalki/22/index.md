@@ -7,6 +7,7 @@ image: /zabawki/lalki/22/lalki-22.svg
 pdf: /zabawki/lalki/22/lalki-22.pdf
 alt: "lalki kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - zabawki
 - lalki
 ---

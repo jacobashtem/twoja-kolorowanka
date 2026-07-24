@@ -7,6 +7,7 @@ image: /zabawki/lalki/13/lalki-13.svg
 pdf: /zabawki/lalki/13/lalki-13.pdf
 alt: "Łatwa kolorowanka lalki dla przedszkolaka"
 tags:
+- trudnosc-2
 - zabawki
 - lalki
 ---

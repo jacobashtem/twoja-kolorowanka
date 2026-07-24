@@ -7,6 +7,7 @@ image: /zabawki/lalki/20/lalki-20.svg
 pdf: /zabawki/lalki/20/lalki-20.pdf
 alt: "Kolorowanki lalki"
 tags:
+- trudnosc-2
 - zabawki
 - lalki
 ---

@@ -7,6 +7,7 @@ image: /zabawki/prezenty/28/prezenty-28.svg
 pdf: /zabawki/prezenty/28/prezenty-28.pdf
 alt: "Kolorowanka z prezenty do pobrania"
 tags:
+- trudnosc-8
 - zabawki
 - prezenty
 ---

@@ -7,6 +7,7 @@ image: /zabawki/lalki/35/lalki-35.svg
 pdf: /zabawki/lalki/35/lalki-35.pdf
 alt: "Prosta kolorowanka lalki do kolorowania"
 tags:
+- trudnosc-6
 - zabawki
 - lalki
 ---

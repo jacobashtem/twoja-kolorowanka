@@ -7,6 +7,7 @@ image: /zabawki/prezenty/44/prezenty-44.svg
 pdf: /zabawki/prezenty/44/prezenty-44.pdf
 alt: "Darmowa kolorowanka prezenty do druku PDF"
 tags:
+- trudnosc-1
 - zabawki
 - prezenty
 ---

@@ -7,6 +7,7 @@ image: /zabawki/prezenty/7/prezenty-7.svg
 pdf: /zabawki/prezenty/7/prezenty-7.pdf
 alt: "prezenty do druku i pokolorowania"
 tags:
+- trudnosc-10
 - zabawki
 - prezenty
 ---

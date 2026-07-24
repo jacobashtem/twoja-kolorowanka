@@ -7,6 +7,7 @@ image: /zabawki/lalki/25/lalki-25.svg
 pdf: /zabawki/lalki/25/lalki-25.pdf
 alt: "lalki do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zabawki
 - lalki
 ---

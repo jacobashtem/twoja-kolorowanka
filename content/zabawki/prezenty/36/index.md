@@ -7,6 +7,7 @@ image: /zabawki/prezenty/36/prezenty-36.svg
 pdf: /zabawki/prezenty/36/prezenty-36.pdf
 alt: "Pokoloruj prezenty – darmowy szablon PDF"
 tags:
+- trudnosc-6
 - zabawki
 - prezenty
 ---

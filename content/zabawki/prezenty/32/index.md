@@ -7,6 +7,7 @@ image: /zabawki/prezenty/32/prezenty-32.svg
 pdf: /zabawki/prezenty/32/prezenty-32.pdf
 alt: "Edukacyjna kolorowanka prezenty do wydruku"
 tags:
+- trudnosc-1
 - zabawki
 - prezenty
 ---

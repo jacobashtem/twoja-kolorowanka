@@ -7,6 +7,7 @@ image: /zabawki/prezenty/14/prezenty-14.svg
 pdf: /zabawki/prezenty/14/prezenty-14.pdf
 alt: "Edukacyjna kolorowanka prezenty do wydruku"
 tags:
+- trudnosc-10
 - zabawki
 - prezenty
 ---

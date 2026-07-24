@@ -7,6 +7,7 @@ image: /zabawki/lalki/41/lalki-41.svg
 pdf: /zabawki/lalki/41/lalki-41.pdf
 alt: "Kolorowanka do druku lalki"
 tags:
+- trudnosc-9
 - zabawki
 - lalki
 ---

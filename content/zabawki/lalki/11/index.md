@@ -7,6 +7,7 @@ image: /zabawki/lalki/11/lalki-11.svg
 pdf: /zabawki/lalki/11/lalki-11.pdf
 alt: "Malowanka lalki do druku A4"
 tags:
+- trudnosc-2
 - zabawki
 - lalki
 ---

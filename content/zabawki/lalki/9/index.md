@@ -7,6 +7,7 @@ image: /zabawki/lalki/9/lalki-9.svg
 pdf: /zabawki/lalki/9/lalki-9.pdf
 alt: "lalki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - zabawki
 - lalki
 ---

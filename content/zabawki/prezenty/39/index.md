@@ -7,6 +7,7 @@ image: /zabawki/prezenty/39/prezenty-39.svg
 pdf: /zabawki/prezenty/39/prezenty-39.pdf
 alt: "prezenty kolorowanka dla dzieci"
 tags:
+- trudnosc-7
 - zabawki
 - prezenty
 ---

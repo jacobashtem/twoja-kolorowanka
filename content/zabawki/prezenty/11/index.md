@@ -7,6 +7,7 @@ image: /zabawki/prezenty/11/prezenty-11.svg
 pdf: /zabawki/prezenty/11/prezenty-11.pdf
 alt: "Malowanka prezenty do druku A4"
 tags:
+- trudnosc-8
 - zabawki
 - prezenty
 ---

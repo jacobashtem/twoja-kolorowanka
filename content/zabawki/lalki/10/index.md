@@ -7,6 +7,7 @@ image: /zabawki/lalki/10/lalki-10.svg
 pdf: /zabawki/lalki/10/lalki-10.pdf
 alt: "Kolorowanka z lalki do pobrania"
 tags:
+- trudnosc-5
 - zabawki
 - lalki
 ---
