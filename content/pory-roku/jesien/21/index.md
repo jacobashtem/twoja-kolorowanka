@@ -7,6 +7,7 @@ image: /pory-roku/jesien/21/jesien-21.svg
 pdf: /pory-roku/jesien/21/jesien-21.pdf
 alt: "jesien kolorowanka dla dzieci"
 tags:
+- trudnosc-9
 - pory-roku
 - jesien
 ---

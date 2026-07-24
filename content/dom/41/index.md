@@ -7,6 +7,7 @@ image: /dom/41/dom-41.svg
 pdf: /dom/41/dom-41.pdf
 alt: "Kolorowanka do druku dom"
 tags:
+- trudnosc-4
 - dom
 - dom
 ---

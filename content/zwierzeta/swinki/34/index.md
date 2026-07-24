@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/34/swinki-34.svg
 pdf: /zwierzeta/swinki/34/swinki-34.pdf
 alt: "Kolorowanka swinki – format A4 PDF"
 tags:
+- trudnosc-6
 - zwierzeta
 - swinki
 ---

@@ -7,6 +7,7 @@ image: /kredka/10/kredka-10.svg
 pdf: /kredka/10/kredka-10.pdf
 alt: "Kolorowanka z kredka do pobrania"
 tags:
+- trudnosc-1
 - kredka
 - kredka
 ---

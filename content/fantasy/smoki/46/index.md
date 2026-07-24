@@ -7,6 +7,7 @@ image: /fantasy/smoki/46/smoki-46.svg
 pdf: /fantasy/smoki/46/smoki-46.pdf
 alt: "Kolorowanka z smoki do pobrania - wariant 46"
 tags:
+- trudnosc-5
 - fantasy
 - smoki
 ---

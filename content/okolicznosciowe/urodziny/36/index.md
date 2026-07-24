@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/36/urodziny-36.svg
 pdf: /okolicznosciowe/urodziny/36/urodziny-36.pdf
 alt: "Prosta kolorowanka urodziny do kolorowania"
 tags:
+- trudnosc-6
 - okolicznosciowe
 - urodziny
 ---

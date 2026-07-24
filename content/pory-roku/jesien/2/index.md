@@ -7,6 +7,7 @@ image: /pory-roku/jesien/2/jesien-2.svg
 pdf: /pory-roku/jesien/2/jesien-2.pdf
 alt: "Kolorowanki jesien"
 tags:
+- trudnosc-10
 - pory-roku
 - jesien
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samochody/83/samochody-83.svg
 pdf: /pojazdy/samochody/83/samochody-83.pdf
 alt: "Malowanka samochody do druku A4"
 tags:
+- trudnosc-8
 - pojazdy
 - samochody
 ---

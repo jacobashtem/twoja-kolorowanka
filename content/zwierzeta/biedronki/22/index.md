@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/22/biedronki-22.svg
 pdf: /zwierzeta/biedronki/22/biedronki-22.pdf
 alt: "biedronki kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - zwierzeta
 - biedronki
 ---

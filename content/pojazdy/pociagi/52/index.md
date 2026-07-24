@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/52/pociagi-52.svg
 pdf: /pojazdy/pociagi/52/pociagi-52.pdf
 alt: "Kolorowanka pociagi – format A4 PDF"
 tags:
+- trudnosc-7
 - pojazdy
 - pociagi
 ---

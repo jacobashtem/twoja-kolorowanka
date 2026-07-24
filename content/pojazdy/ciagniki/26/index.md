@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/26/ciagniki-26.svg
 pdf: /pojazdy/ciagniki/26/ciagniki-26.pdf
 alt: "Darmowa kolorowanka ciagniki do druku PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - ciagniki
 ---

@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/15/jednorozce-15.svg
 pdf: /fantasy/jednorozce/15/jednorozce-15.pdf
 alt: "jednorozce kolorowanka dla dzieci - wariant 15"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

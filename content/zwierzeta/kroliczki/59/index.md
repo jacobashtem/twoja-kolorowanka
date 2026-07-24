@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/59/kroliczki-59.svg
 pdf: /kroliczki/59/kroliczki-59.pdf
 tags:
+- trudnosc-8
 - zwierzeta
 - kroliczki
 alt: "Malowanka kroliczki do druku A4 - wariant 59"

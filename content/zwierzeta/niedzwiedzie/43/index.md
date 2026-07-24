@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/43/niedzwiedzie-43.svg
 pdf: /zwierzeta/niedzwiedzie/43/niedzwiedzie-43.pdf
 alt: "niedzwiedzie do druku i pokolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - niedzwiedzie
 ---

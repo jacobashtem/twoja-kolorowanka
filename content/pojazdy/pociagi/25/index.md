@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/25/pociagi-25.svg
 pdf: /pojazdy/pociagi/25/pociagi-25.pdf
 alt: "pociagi do druku i pokolorowania"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

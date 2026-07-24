@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/50/pociagi-50.svg
 pdf: /pojazdy/pociagi/50/pociagi-50.pdf
 alt: "Edukacyjna kolorowanka pociagi do wydruku"
 tags:
+- trudnosc-6
 - pojazdy
 - pociagi
 ---

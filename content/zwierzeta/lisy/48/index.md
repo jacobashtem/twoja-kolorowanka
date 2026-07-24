@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/48/lisy-48.svg
 pdf: /zwierzeta/lisy/48/lisy-48.pdf
 alt: "kolorowanka do druku lisy PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - lisy
 ---

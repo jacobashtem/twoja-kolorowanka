@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/32/chomiki-32.svg
 pdf: /zwierzeta/chomiki/32/chomiki-32.pdf
 alt: "Edukacyjna kolorowanka chomiki do wydruku"
 tags:
+- trudnosc-3
 - zwierzeta
 - chomiki
 ---

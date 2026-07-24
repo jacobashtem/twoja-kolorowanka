@@ -7,6 +7,7 @@ image: /fantasy/smoki/16/smoki-16.svg
 pdf: /fantasy/smoki/16/smoki-16.pdf
 alt: "Kolorowanka smoki – format A4 PDF - wariant 16"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

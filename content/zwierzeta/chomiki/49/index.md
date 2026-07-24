@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/49/chomiki-49.svg
 pdf: /zwierzeta/chomiki/49/chomiki-49.pdf
 alt: "Łatwa kolorowanka chomiki dla przedszkolaka"
 tags:
+- trudnosc-2
 - zwierzeta
 - chomiki
 ---

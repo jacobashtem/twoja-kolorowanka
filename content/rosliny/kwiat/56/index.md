@@ -7,6 +7,7 @@ image: /rosliny/kwiat/56/kwiat-56.svg
 pdf: /rosliny/kwiat/56/kwiat-56.pdf
 alt: "Kolorowanka z kwiat do pobrania"
 tags:
+- trudnosc-10
 - rosliny
 - kwiat
 ---

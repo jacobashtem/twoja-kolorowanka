@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/9/ryby-9.svg
 pdf: /zwierzeta/ryby/9/ryby-9.pdf
 alt: "ryby – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - zwierzeta
 - ryby
 ---

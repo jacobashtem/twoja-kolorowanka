@@ -7,6 +7,7 @@ image: /pojazdy/traktory/15/traktory-15.svg
 pdf: /pojazdy/traktory/15/traktory-15.pdf
 alt: "traktory kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - pojazdy
 - traktory
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/tiry/7/tir-7.svg
 pdf: /pojazdy/tiry/7/tir-7.pdf
 alt: "tir do druku i pokolorowania"
 tags:
+- trudnosc-7
 - pojazdy
 - tir
 ---

@@ -7,6 +7,7 @@ image: /wedlug-kodu/32/wedlug-kodu-32.svg
 pdf: /wedlug-kodu/32/wedlug-kodu-32.pdf
 alt: "Edukacyjna kolorowanka wedlug-kodu do wydruku"
 tags:
+- trudnosc-5
 - wedlug-kodu
 - wedlug-kodu
 ---

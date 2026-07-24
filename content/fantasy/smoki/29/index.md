@@ -7,6 +7,7 @@ image: /fantasy/smoki/29/smoki-29.svg
 pdf: /fantasy/smoki/29/smoki-29.pdf
 alt: "Malowanka smoki do druku A4 - wariant 29"
 tags:
+- trudnosc-5
 - fantasy
 - smoki
 ---

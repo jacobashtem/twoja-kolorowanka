@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/34/pawie-34.svg
 pdf: /zwierzeta/pawie/34/pawie-34.pdf
 alt: "Kolorowanka pawie – format A4 PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - pawie
 ---

@@ -7,6 +7,7 @@ image: /fantasy/wrozki/25/wrozki-25.svg
 pdf: /fantasy/wrozki/25/wrozki-25.pdf
 alt: "wrozki do druku i pokolorowania - wariant 25"
 tags:
+- trudnosc-7
 - fantasy
 - wrozki
 ---

@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/23/andrzejki-23.svg
 pdf: /okolicznosciowe/andrzejki/23/andrzejki-23.pdf
 alt: "Kolorowanka do druku andrzejki"
 tags:
+- trudnosc-2
 - okolicznosciowe
 - andrzejki
 ---

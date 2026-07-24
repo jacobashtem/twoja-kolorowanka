@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/50/rakiety-50.svg
 pdf: /pojazdy/rakiety/50/rakiety-50.pdf
 alt: "Edukacyjna kolorowanka rakiety do wydruku"
 tags:
+- trudnosc-7
 - pojazdy
 - rakiety
 ---

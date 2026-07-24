@@ -7,6 +7,7 @@ image: /fantasy/syrenki/43/syrenki-43.svg
 pdf: /fantasy/syrenki/43/syrenki-43.pdf
 alt: "Kolorowanka syrenki"
 tags:
+- trudnosc-5
 - fantasy
 - syrenki
 ---

@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/4/po-numerach-4.svg
 pdf: /dla-doroslych/po-numerach/4/po-numerach-4.pdf
 alt: "po-numerach kolorowanki dla dzieci"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

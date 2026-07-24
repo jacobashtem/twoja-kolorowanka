@@ -7,6 +7,7 @@ image: /jedzenie/jablka/13/jablka-13.svg
 pdf: /jedzenie/jablka/13/jablka-13.pdf
 alt: "Łatwa kolorowanka jablka dla przedszkolaka"
 tags:
+- trudnosc-1
 - jedzenie
 - jablka
 ---

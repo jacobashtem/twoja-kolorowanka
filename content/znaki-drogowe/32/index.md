@@ -7,6 +7,7 @@ image: /znaki-drogowe/32/znaki-drogowe-32.svg
 pdf: /znaki-drogowe/32/znaki-drogowe-32.pdf
 alt: "Edukacyjna kolorowanka znaki-drogowe do wydruku"
 tags:
+- trudnosc-1
 - znaki-drogowe
 - znaki-drogowe
 ---

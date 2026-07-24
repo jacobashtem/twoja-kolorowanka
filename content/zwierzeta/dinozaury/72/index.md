@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/72/dinozaury-72.svg
 pdf: /zwierzeta/dinozaury/72/dinozaury-72.pdf
 alt: "Pokoloruj dinozaury – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - dinozaury
 ---

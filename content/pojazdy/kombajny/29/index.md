@@ -7,6 +7,7 @@ image: /pojazdy/kombajny/29/kombajny-29.svg
 pdf: /pojazdy/kombajny/29/kombajny-29.pdf
 alt: "Malowanka kombajny do druku A4"
 tags:
+- trudnosc-10
 - pojazdy
 - kombajny
 ---

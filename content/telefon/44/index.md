@@ -7,6 +7,7 @@ image: /telefon/44/telefon-44.svg
 pdf: /telefon/44/telefon-44.pdf
 alt: "Darmowa kolorowanka telefon do druku PDF"
 tags:
+- trudnosc-2
 - telefon
 - telefon
 ---

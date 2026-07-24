@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/25/po-numerach-25.svg
 pdf: /dla-doroslych/po-numerach/25/po-numerach-25.pdf
 alt: "po-numerach do druku i pokolorowania"
 tags:
+- trudnosc-6
 - dla-doroslych
 - po-numerach
 ---

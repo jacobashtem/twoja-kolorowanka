@@ -7,6 +7,7 @@ image: /rosliny/bukiet/37/bukiet-37.svg
 pdf: /rosliny/bukiet/37/bukiet-37.pdf
 alt: "Kolorowanka bukiet"
 tags:
+- trudnosc-4
 - rosliny
 - bukiet
 ---

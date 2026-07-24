@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/60/kroliczki-60.svg
 pdf: /kroliczki/60/kroliczki-60.pdf
 tags:
+- trudnosc-8
 - zwierzeta
 - kroliczki
 alt: "Łatwa kolorowanka kroliczki dla przedszkolaka - wariant 60"

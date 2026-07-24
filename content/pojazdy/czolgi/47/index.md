@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/47/czolgi-47.svg
 pdf: /pojazdy/czolgi/47/czolgi-47.pdf
 alt: "Malowanka czolgi do druku A4"
 tags:
+- trudnosc-8
 - pojazdy
 - czolgi
 ---

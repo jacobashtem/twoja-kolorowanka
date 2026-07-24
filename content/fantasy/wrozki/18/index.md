@@ -7,6 +7,7 @@ image: /fantasy/wrozki/18/wrozki-18.svg
 pdf: /fantasy/wrozki/18/wrozki-18.pdf
 alt: "Pokoloruj wrozki – darmowy szablon PDF - wariant 18"
 tags:
+- trudnosc-4
 - fantasy
 - wrozki
 ---

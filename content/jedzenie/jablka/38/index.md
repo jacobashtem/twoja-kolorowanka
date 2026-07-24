@@ -7,6 +7,7 @@ image: /jedzenie/jablka/38/jablka-38.svg
 pdf: /jedzenie/jablka/38/jablka-38.pdf
 alt: "Kolorowanki jablka"
 tags:
+- trudnosc-1
 - jedzenie
 - jablka
 ---

@@ -7,6 +7,7 @@ image: /jedzenie/torty/49/torty-49.svg
 pdf: /jedzenie/torty/49/torty-49.pdf
 alt: "Łatwa kolorowanka torty dla przedszkolaka"
 tags:
+- trudnosc-6
 - jedzenie
 - torty
 ---

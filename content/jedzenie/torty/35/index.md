@@ -7,6 +7,7 @@ image: /jedzenie/torty/35/torty-35.svg
 pdf: /jedzenie/torty/35/torty-35.pdf
 alt: "Prosta kolorowanka torty do kolorowania"
 tags:
+- trudnosc-4
 - jedzenie
 - torty
 ---

@@ -7,6 +7,7 @@ image: /rosliny/grzyby/8/grzyby-8.svg
 pdf: /rosliny/grzyby/8/grzyby-8.pdf
 alt: "Darmowa kolorowanka grzyby do druku PDF"
 tags:
+- trudnosc-6
 - rosliny
 - grzyby
 ---

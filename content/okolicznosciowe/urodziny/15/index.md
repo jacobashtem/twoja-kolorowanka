@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/15/urodziny-15.svg
 pdf: /okolicznosciowe/urodziny/15/urodziny-15.pdf
 alt: "Edukacyjna kolorowanka urodziny do wydruku"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - urodziny
 ---

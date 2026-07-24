@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/56/koty-56.svg
 pdf: /koty/56/koty-56.pdf
 tags:
+- trudnosc-7
 - zwierzeta
 - koty
 alt: "Edukacyjna kolorowanka koty do wydruku - wariant 56"

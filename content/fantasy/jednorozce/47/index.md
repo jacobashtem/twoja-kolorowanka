@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/47/jednorozce-47.svg
 pdf: /fantasy/jednorozce/47/jednorozce-47.pdf
 alt: "Malowanka jednorozce do druku A4 - wariant 47"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

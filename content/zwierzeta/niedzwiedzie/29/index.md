@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/29/niedzwiedzie-29.svg
 pdf: /zwierzeta/niedzwiedzie/29/niedzwiedzie-29.pdf
 alt: "Malowanka niedzwiedzie do druku A4"
 tags:
+- trudnosc-4
 - zwierzeta
 - niedzwiedzie
 ---

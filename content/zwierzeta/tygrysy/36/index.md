@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/36/tygrysy-36.svg
 pdf: /zwierzeta/tygrysy/36/tygrysy-36.pdf
 alt: "Pokoloruj tygrysy – darmowy szablon PDF"
 tags:
+- trudnosc-6
 - zwierzeta
 - tygrysy
 ---

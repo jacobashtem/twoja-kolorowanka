@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/25/pieski-25.svg
 pdf: /pieski/25/pieski-25.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - pieski
 alt: "pieski kolorowanka - wariant 25"

@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/37/kroliczki-37.svg
 pdf: /kroliczki/37/kroliczki-37.pdf
 tags:
+- trudnosc-3
 - zwierzeta
 - kroliczki
 alt: "Kolorowanki do druku kroliczki - wariant 37"

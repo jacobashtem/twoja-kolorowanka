@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/42/urodziny-42.svg
 pdf: /okolicznosciowe/urodziny/42/urodziny-42.pdf
 alt: "Kolorowanka do druku urodziny"
 tags:
+- trudnosc-2
 - okolicznosciowe
 - urodziny
 ---

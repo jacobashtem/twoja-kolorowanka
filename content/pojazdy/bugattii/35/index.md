@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/35/bugattii-35.svg
 pdf: /pojazdy/bugattii/35/bugattii-35.pdf
 alt: "Prosta kolorowanka bugattii do kolorowania"
 tags:
+- trudnosc-5
 - pojazdy
 - bugattii
 ---

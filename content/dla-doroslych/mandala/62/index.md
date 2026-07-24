@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/62/mandala-62.svg
 pdf: /dla-doroslych/mandala/62/mandala-62.pdf
 alt: "Darmowa kolorowanka mandala do druku PDF"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

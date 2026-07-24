@@ -7,6 +7,7 @@ image: /pory-roku/zima/78/zima-78.svg
 pdf: /pory-roku/zima/78/zima-78.pdf
 alt: "Pokoloruj zima – darmowy szablon PDF"
 tags:
+- trudnosc-10
 - pory-roku
 - zima
 ---

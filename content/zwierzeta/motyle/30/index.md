@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/30/motyle-30.svg
 pdf: /zwierzeta/motyle/30/motyle-30.pdf
 alt: "kolorowanka do druku motyle PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - motyle
 ---

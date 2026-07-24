@@ -7,6 +7,7 @@ image: /pojazdy/koparki/64/koparki-64.svg
 pdf: /pojazdy/koparki/64/koparki-64.pdf
 alt: "Kolorowanka z koparki do pobrania"
 tags:
+- trudnosc-6
 - pojazdy
 - koparki
 ---

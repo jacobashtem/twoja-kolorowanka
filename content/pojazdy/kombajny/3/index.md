@@ -7,6 +7,7 @@ image: /pojazdy/kombajny/3/kombajny-3.svg
 pdf: /pojazdy/kombajny/3/kombajny-3.pdf
 alt: "kombajny kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - pojazdy
 - kombajny
 ---

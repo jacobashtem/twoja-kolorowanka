@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/42/pawie-42.svg
 pdf: /zwierzeta/pawie/42/pawie-42.pdf
 alt: "Kolorowanki do druku pawie"
 tags:
+- trudnosc-5
 - zwierzeta
 - pawie
 ---

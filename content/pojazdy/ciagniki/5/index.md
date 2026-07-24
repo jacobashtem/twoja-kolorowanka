@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/5/ciagniki-5.svg
 pdf: /pojazdy/ciagniki/5/ciagniki-5.pdf
 alt: "Kolorowanka do druku ciagniki"
 tags:
+- trudnosc-10
 - pojazdy
 - ciagniki
 ---

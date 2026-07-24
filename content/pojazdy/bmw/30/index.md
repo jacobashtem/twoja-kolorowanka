@@ -7,6 +7,7 @@ image: /pojazdy/bmw/30/bmw-30.svg
 pdf: /pojazdy/bmw/30/bmw-30.pdf
 alt: "kolorowanka do druku bmw PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - bmw
 ---

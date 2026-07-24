@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/19/pociagi-19.svg
 pdf: /pojazdy/pociagi/19/pociagi-19.pdf
 alt: "Kolorowanka pociagi"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

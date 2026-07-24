@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/24/koty-24.svg
 pdf: /koty/24/koty-24.pdf
 tags:
+- trudnosc-9
 - zwierzeta
 - koty
 alt: "Prosta kolorowanka koty do kolorowania - wariant 24"

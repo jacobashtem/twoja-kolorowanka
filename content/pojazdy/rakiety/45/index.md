@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/45/rakiety-45.svg
 pdf: /pojazdy/rakiety/45/rakiety-45.pdf
 alt: "rakiety – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - pojazdy
 - rakiety
 ---

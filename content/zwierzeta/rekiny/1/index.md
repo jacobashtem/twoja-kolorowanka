@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/1/rekiny-1.svg
 pdf: /zwierzeta/rekiny/1/rekiny-1.pdf
 alt: "Kolorowanka rekiny"
 tags:
+- trudnosc-2
 - zwierzeta
 - rekiny
 ---

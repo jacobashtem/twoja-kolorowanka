@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/45/lwy-45.svg
 pdf: /zwierzeta/lwy/45/lwy-45.pdf
 alt: "lwy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - zwierzeta
 - lwy
 ---

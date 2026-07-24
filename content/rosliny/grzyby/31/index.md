@@ -7,6 +7,7 @@ image: /rosliny/grzyby/31/grzyby-31.svg
 pdf: /rosliny/grzyby/31/grzyby-31.pdf
 alt: "Łatwa kolorowanka grzyby dla przedszkolaka"
 tags:
+- trudnosc-5
 - rosliny
 - grzyby
 ---

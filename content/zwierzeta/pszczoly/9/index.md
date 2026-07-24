@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/9/pszczoly-9.svg
 pdf: /zwierzeta/pszczoly/9/pszczoly-9.pdf
 alt: "pszczoly – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - zwierzeta
 - pszczoly
 ---

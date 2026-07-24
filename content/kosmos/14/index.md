@@ -7,6 +7,7 @@ image: /kosmos/14/kosmos-14.svg
 pdf: /kosmos/14/kosmos-14.pdf
 alt: "Edukacyjna kolorowanka kosmos do wydruku"
 tags:
+- trudnosc-7
 - kosmos
 - kosmos
 ---

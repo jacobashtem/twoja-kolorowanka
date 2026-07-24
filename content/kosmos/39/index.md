@@ -7,6 +7,7 @@ image: /kosmos/39/kosmos-39.svg
 pdf: /kosmos/39/kosmos-39.pdf
 alt: "kosmos kolorowanka dla dzieci"
 tags:
+- trudnosc-7
 - kosmos
 - kosmos
 ---

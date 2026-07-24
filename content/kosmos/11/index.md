@@ -7,6 +7,7 @@ image: /kosmos/11/kosmos-11.svg
 pdf: /kosmos/11/kosmos-11.pdf
 alt: "Malowanka kosmos do druku A4"
 tags:
+- trudnosc-6
 - kosmos
 - kosmos
 ---

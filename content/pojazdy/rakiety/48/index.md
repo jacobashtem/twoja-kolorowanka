@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/48/rakiety-48.svg
 pdf: /pojazdy/rakiety/48/rakiety-48.pdf
 alt: "kolorowanka do druku rakiety PDF"
 tags:
+- trudnosc-5
 - pojazdy
 - rakiety
 ---

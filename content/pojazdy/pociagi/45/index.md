@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/45/pociagi-45.svg
 pdf: /pojazdy/pociagi/45/pociagi-45.pdf
 alt: "pociagi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - pojazdy
 - pociagi
 ---

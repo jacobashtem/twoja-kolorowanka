@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/19/motyle-19.svg
 pdf: /zwierzeta/motyle/19/motyle-19.pdf
 alt: "Kolorowanka motyle"
 tags:
+- trudnosc-4
 - zwierzeta
 - motyle
 ---

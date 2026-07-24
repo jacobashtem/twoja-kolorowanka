@@ -7,6 +7,7 @@ image: /pojazdy/bmw/37/bmw-37.svg
 pdf: /pojazdy/bmw/37/bmw-37.pdf
 alt: "Kolorowanka bmw"
 tags:
+- trudnosc-8
 - pojazdy
 - bmw
 ---

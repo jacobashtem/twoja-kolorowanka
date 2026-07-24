@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/16/rekiny-16.svg
 pdf: /zwierzeta/rekiny/16/rekiny-16.pdf
 alt: "Kolorowanka rekiny – format A4 PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - rekiny
 ---

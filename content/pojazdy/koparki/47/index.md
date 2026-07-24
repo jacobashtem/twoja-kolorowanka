@@ -7,6 +7,7 @@ image: /pojazdy/koparki/47/koparki-47.svg
 pdf: /pojazdy/koparki/47/koparki-47.pdf
 alt: "Malowanka koparki do druku A4"
 tags:
+- trudnosc-5
 - pojazdy
 - koparki
 ---

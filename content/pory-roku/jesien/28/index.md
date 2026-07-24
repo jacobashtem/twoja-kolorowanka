@@ -7,6 +7,7 @@ image: /pory-roku/jesien/28/jesien-28.svg
 pdf: /pory-roku/jesien/28/jesien-28.pdf
 alt: "Kolorowanka z jesien do pobrania"
 tags:
+- trudnosc-2
 - pory-roku
 - jesien
 ---

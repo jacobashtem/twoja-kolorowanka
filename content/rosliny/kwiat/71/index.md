@@ -7,6 +7,7 @@ image: /rosliny/kwiat/71/kwiat-71.svg
 pdf: /rosliny/kwiat/71/kwiat-71.pdf
 alt: "kwiat do druku i pokolorowania"
 tags:
+- trudnosc-6
 - rosliny
 - kwiat
 ---

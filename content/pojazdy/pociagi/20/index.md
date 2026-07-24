@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/20/pociagi-20.svg
 pdf: /pojazdy/pociagi/20/pociagi-20.pdf
 alt: "Kolorowanki pociagi"
 tags:
+- trudnosc-7
 - pojazdy
 - pociagi
 ---

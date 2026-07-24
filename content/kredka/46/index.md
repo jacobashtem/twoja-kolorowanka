@@ -7,6 +7,7 @@ image: /kredka/46/kredka-46.svg
 pdf: /kredka/46/kredka-46.pdf
 alt: "Kolorowanka z kredka do pobrania"
 tags:
+- trudnosc-7
 - kredka
 - kredka
 ---

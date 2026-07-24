@@ -7,6 +7,7 @@ image: /serce/7/serce-7.svg
 pdf: /serce/7/serce-7.pdf
 alt: "serce do druku i pokolorowania"
 tags:
+- trudnosc-1
 - serce
 - serce
 ---

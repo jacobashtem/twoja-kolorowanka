@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/39/wilki-39.svg
 pdf: /zwierzeta/wilki/39/wilki-39.pdf
 alt: "wilki kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - zwierzeta
 - wilki
 ---

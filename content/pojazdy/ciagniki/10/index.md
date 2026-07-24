@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/10/ciagniki-10.svg
 pdf: /pojazdy/ciagniki/10/ciagniki-10.pdf
 alt: "Kolorowanka z ciagniki do pobrania"
 tags:
+- trudnosc-9
 - pojazdy
 - ciagniki
 ---

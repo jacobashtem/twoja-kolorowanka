@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/47/urodziny-47.svg
 pdf: /okolicznosciowe/urodziny/47/urodziny-47.pdf
 alt: "Kolorowanka z urodziny do pobrania"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - urodziny
 ---

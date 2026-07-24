@@ -7,6 +7,7 @@ image: /pory-roku/jesien/61/jesien-61.svg
 pdf: /pory-roku/jesien/61/jesien-61.pdf
 alt: "jesien do druku i pokolorowania"
 tags:
+- trudnosc-5
 - pory-roku
 - jesien
 ---

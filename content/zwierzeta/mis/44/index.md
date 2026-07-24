@@ -7,6 +7,7 @@ image: /zwierzeta/mis/44/mis-44.svg
 pdf: /zwierzeta/mis/44/mis-44.pdf
 alt: "Darmowa kolorowanka mis do druku PDF"
 tags:
+- trudnosc-9
 - zwierzeta
 - mis
 ---

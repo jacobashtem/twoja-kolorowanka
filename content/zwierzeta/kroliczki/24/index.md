@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/24/kroliczki-24.svg
 pdf: /kroliczki/24/kroliczki-24.pdf
 tags:
+- trudnosc-6
 - zwierzeta
 - kroliczki
 alt: "Malowanka kroliczki do druku A4 - wariant 24"

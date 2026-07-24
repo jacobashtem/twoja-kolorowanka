@@ -7,6 +7,7 @@ image: /rosliny/grzyby/32/grzyby-32.svg
 pdf: /rosliny/grzyby/32/grzyby-32.pdf
 alt: "Edukacyjna kolorowanka grzyby do wydruku"
 tags:
+- trudnosc-6
 - rosliny
 - grzyby
 ---

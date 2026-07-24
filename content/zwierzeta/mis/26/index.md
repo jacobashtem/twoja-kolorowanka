@@ -7,6 +7,7 @@ image: /zwierzeta/mis/26/mis-26.svg
 pdf: /zwierzeta/mis/26/mis-26.pdf
 alt: "Darmowa kolorowanka mis do druku PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - mis
 ---

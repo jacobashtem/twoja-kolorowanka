@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/35/tygrysy-35.svg
 pdf: /zwierzeta/tygrysy/35/tygrysy-35.pdf
 alt: "Prosta kolorowanka tygrysy do kolorowania"
 tags:
+- trudnosc-7
 - zwierzeta
 - tygrysy
 ---

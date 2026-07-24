@@ -7,6 +7,7 @@ image: /pory-roku/jesien/56/jesien-56.svg
 pdf: /pory-roku/jesien/56/jesien-56.pdf
 alt: "Kolorowanki jesien"
 tags:
+- trudnosc-9
 - pory-roku
 - jesien
 ---

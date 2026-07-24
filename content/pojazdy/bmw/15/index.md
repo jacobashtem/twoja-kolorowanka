@@ -7,6 +7,7 @@ image: /pojazdy/bmw/15/bmw-15.svg
 pdf: /pojazdy/bmw/15/bmw-15.pdf
 alt: "bmw kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - pojazdy
 - bmw
 ---

@@ -7,6 +7,7 @@ image: /fantasy/elfy/18/elfy-18.svg
 pdf: /fantasy/elfy/18/elfy-18.pdf
 alt: "Pokoloruj elfy – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - fantasy
 - elfy
 ---

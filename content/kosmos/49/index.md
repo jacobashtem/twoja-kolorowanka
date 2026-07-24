@@ -7,6 +7,7 @@ image: /kosmos/49/kosmos-49.svg
 pdf: /kosmos/49/kosmos-49.pdf
 alt: "Łatwa kolorowanka kosmos dla przedszkolaka"
 tags:
+- trudnosc-3
 - kosmos
 - kosmos
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/30/pociagi-30.svg
 pdf: /pojazdy/pociagi/30/pociagi-30.pdf
 alt: "kolorowanka do druku pociagi PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - pociagi
 ---

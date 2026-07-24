@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/17/ciagniki-17.svg
 pdf: /pojazdy/ciagniki/17/ciagniki-17.pdf
 alt: "Prosta kolorowanka ciagniki do kolorowania"
 tags:
+- trudnosc-4
 - pojazdy
 - ciagniki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/10/chomiki-10.svg
 pdf: /zwierzeta/chomiki/10/chomiki-10.pdf
 alt: "Kolorowanka z chomiki do pobrania"
 tags:
+- trudnosc-1
 - zwierzeta
 - chomiki
 ---

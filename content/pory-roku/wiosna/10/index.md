@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/10/wiosna-10.svg
 pdf: /pory-roku/wiosna/10/wiosna-10.pdf
 alt: "Kolorowanka z wiosna do pobrania"
 tags:
+- trudnosc-10
 - pory-roku
 - wiosna
 ---

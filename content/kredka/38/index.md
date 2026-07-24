@@ -7,6 +7,7 @@ image: /kredka/38/kredka-38.svg
 pdf: /kredka/38/kredka-38.pdf
 alt: "Kolorowanki kredka"
 tags:
+- trudnosc-8
 - kredka
 - kredka
 ---

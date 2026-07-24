@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/13/urodziny-13.svg
 pdf: /okolicznosciowe/urodziny/13/urodziny-13.pdf
 alt: "kolorowanka do druku urodziny PDF"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - urodziny
 ---

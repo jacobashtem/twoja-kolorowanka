@@ -7,6 +7,7 @@ image: /znaki-drogowe/44/znaki-drogowe-44.svg
 pdf: /znaki-drogowe/44/znaki-drogowe-44.pdf
 alt: "Darmowa kolorowanka znaki-drogowe do druku PDF"
 tags:
+- trudnosc-9
 - znaki-drogowe
 - znaki-drogowe
 ---

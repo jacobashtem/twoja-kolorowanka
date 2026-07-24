@@ -7,6 +7,7 @@ image: /pojazdy/traktory/42/traktory-42.svg
 pdf: /pojazdy/traktory/42/traktory-42.pdf
 alt: "Kolorowanki do druku traktory"
 tags:
+- trudnosc-2
 - pojazdy
 - traktory
 ---

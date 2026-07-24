@@ -7,6 +7,7 @@ image: /pory-roku/jesien/60/jesien-60.svg
 pdf: /pory-roku/jesien/60/jesien-60.pdf
 alt: "Kolorowanki do druku jesien"
 tags:
+- trudnosc-4
 - pory-roku
 - jesien
 ---

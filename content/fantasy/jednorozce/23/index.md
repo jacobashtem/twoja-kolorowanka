@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/23/jednorozce-23.svg
 pdf: /fantasy/jednorozce/23/jednorozce-23.pdf
 alt: "Kolorowanka do druku jednorozce - wariant 23"
 tags:
+- trudnosc-2
 - fantasy
 - jednorozce
 ---

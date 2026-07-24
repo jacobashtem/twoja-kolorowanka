@@ -7,6 +7,7 @@ image: /ksiezniczki/47/ksiezniczki-47.svg
 pdf: /ksiezniczki/47/ksiezniczki-47.pdf
 alt: "Malowanka ksiezniczki do druku A4"
 tags:
+- trudnosc-9
 - ksiezniczki
 - ksiezniczki
 ---

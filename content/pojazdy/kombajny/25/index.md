@@ -7,6 +7,7 @@ image: /pojazdy/kombajny/25/kombajny-25.svg
 pdf: /pojazdy/kombajny/25/kombajny-25.pdf
 alt: "kombajny do druku i pokolorowania"
 tags:
+- trudnosc-10
 - pojazdy
 - kombajny
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/26/ryby-26.svg
 pdf: /zwierzeta/ryby/26/ryby-26.pdf
 alt: "Prosta kolorowanka ryby do kolorowania"
 tags:
+- trudnosc-3
 - zwierzeta
 - ryby
 ---

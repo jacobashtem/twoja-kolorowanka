@@ -7,6 +7,7 @@ image: /fantasy/smoki/81/smoki-81.svg
 pdf: /fantasy/smoki/81/smoki-81.pdf
 alt: "smoki – pobierz i wydrukuj kolorowankę - wariant 81"
 tags:
+- trudnosc-3
 - fantasy
 - smoki
 ---

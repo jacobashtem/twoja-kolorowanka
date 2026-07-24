@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/2/andrzejki-2.svg
 pdf: /okolicznosciowe/andrzejki/2/andrzejki-2.pdf
 alt: "Kolorowanki andrzejki"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - andrzejki
 ---

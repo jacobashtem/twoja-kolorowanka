@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/43/dinozaury-43.svg
 pdf: /zwierzeta/dinozaury/43/dinozaury-43.pdf
 alt: "dinozaury do druku i pokolorowania"
 tags:
+- trudnosc-3
 - zwierzeta
 - dinozaury
 ---

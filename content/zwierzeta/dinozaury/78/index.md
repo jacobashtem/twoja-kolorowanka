@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/78/dinozaury-78.svg
 pdf: /zwierzeta/dinozaury/78/dinozaury-78.pdf
 alt: "Kolorowanki do druku dinozaury"
 tags:
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

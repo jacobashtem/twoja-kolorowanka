@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/3/papugi-3.svg
 pdf: /zwierzeta/papugi/3/papugi-3.pdf
 alt: "papugi kolorowanka dla dzieci"
 tags:
+- trudnosc-5
 - zwierzeta
 - papugi
 ---

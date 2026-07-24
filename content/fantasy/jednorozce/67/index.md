@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/67/jednorozce-67.svg
 pdf: /fantasy/jednorozce/67/jednorozce-67.pdf
 alt: "Łatwa kolorowanka jednorozce dla przedszkolaka - wariant 67"
 tags:
+- trudnosc-5
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/29/chomiki-29.svg
 pdf: /zwierzeta/chomiki/29/chomiki-29.pdf
 alt: "Malowanka chomiki do druku A4"
 tags:
+- trudnosc-4
 - zwierzeta
 - chomiki
 ---

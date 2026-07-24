@@ -7,6 +7,7 @@ image: /jedzenie/jablka/19/jablka-19.svg
 pdf: /jedzenie/jablka/19/jablka-19.pdf
 alt: "Kolorowanka jablka"
 tags:
+- trudnosc-2
 - jedzenie
 - jablka
 ---

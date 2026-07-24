@@ -7,6 +7,7 @@ image: /zwierzeta/mis/32/mis-32.svg
 pdf: /zwierzeta/mis/32/mis-32.pdf
 alt: "Edukacyjna kolorowanka mis do wydruku"
 tags:
+- trudnosc-2
 - zwierzeta
 - mis
 ---

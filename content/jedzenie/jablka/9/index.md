@@ -7,6 +7,7 @@ image: /jedzenie/jablka/9/jablka-9.svg
 pdf: /jedzenie/jablka/9/jablka-9.pdf
 alt: "jablka – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - jedzenie
 - jablka
 ---

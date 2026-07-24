@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/19/ryby-19.svg
 pdf: /zwierzeta/ryby/19/ryby-19.pdf
 alt: "Kolorowanka z ryby do pobrania"
 tags:
+- trudnosc-2
 - zwierzeta
 - ryby
 ---

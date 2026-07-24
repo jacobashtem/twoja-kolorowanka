@@ -7,6 +7,7 @@ image: /pojazdy/traktory/41/traktory-41.svg
 pdf: /pojazdy/traktory/41/traktory-41.pdf
 alt: "Kolorowanka do druku traktory"
 tags:
+- trudnosc-6
 - pojazdy
 - traktory
 ---

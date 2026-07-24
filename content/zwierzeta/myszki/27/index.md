@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/27/myszki-27.svg
 pdf: /zwierzeta/myszki/27/myszki-27.pdf
 alt: "myszki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - zwierzeta
 - myszki
 ---

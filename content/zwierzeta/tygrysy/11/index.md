@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/11/tygrysy-11.svg
 pdf: /zwierzeta/tygrysy/11/tygrysy-11.pdf
 alt: "Malowanka tygrysy do druku A4"
 tags:
+- trudnosc-8
 - zwierzeta
 - tygrysy
 ---

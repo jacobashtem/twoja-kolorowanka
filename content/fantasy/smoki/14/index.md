@@ -7,6 +7,7 @@ image: /fantasy/smoki/14/smoki-14.svg
 pdf: /fantasy/smoki/14/smoki-14.pdf
 alt: "Edukacyjna kolorowanka smoki do wydruku - wariant 14"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

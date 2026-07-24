@@ -7,6 +7,7 @@ image: /pory-roku/lato/64/lato-64.svg
 pdf: /pory-roku/lato/64/lato-64.pdf
 alt: "Kolorowanka z lato do pobrania"
 tags:
+- trudnosc-8
 - pory-roku
 - lato
 ---

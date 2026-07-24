@@ -7,6 +7,7 @@ image: /rosliny/kwiat/29/kwiat-29.svg
 pdf: /rosliny/kwiat/29/kwiat-29.pdf
 alt: "Malowanka kwiat do druku A4"
 tags:
+- trudnosc-9
 - rosliny
 - kwiat
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/traktory/37/traktory-37.svg
 pdf: /pojazdy/traktory/37/traktory-37.pdf
 alt: "Kolorowanka traktory"
 tags:
+- trudnosc-4
 - pojazdy
 - traktory
 ---

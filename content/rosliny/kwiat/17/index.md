@@ -7,6 +7,7 @@ image: /rosliny/kwiat/17/kwiat-17.svg
 pdf: /rosliny/kwiat/17/kwiat-17.pdf
 alt: "Prosta kolorowanka kwiat do kolorowania"
 tags:
+- trudnosc-10
 - rosliny
 - kwiat
 ---

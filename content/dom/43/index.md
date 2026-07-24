@@ -7,6 +7,7 @@ image: /dom/43/dom-43.svg
 pdf: /dom/43/dom-43.pdf
 alt: "dom do druku i pokolorowania"
 tags:
+- trudnosc-6
 - dom
 - dom
 ---

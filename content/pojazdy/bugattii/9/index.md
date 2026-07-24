@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/9/bugattii-9.svg
 pdf: /pojazdy/bugattii/9/bugattii-9.pdf
 alt: "bugattii – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - pojazdy
 - bugattii
 ---

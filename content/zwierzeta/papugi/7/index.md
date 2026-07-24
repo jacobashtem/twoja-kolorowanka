@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/7/papugi-7.svg
 pdf: /zwierzeta/papugi/7/papugi-7.pdf
 alt: "papugi do druku i pokolorowania"
 tags:
+- trudnosc-8
 - zwierzeta
 - papugi
 ---

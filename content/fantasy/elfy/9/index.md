@@ -7,6 +7,7 @@ image: /fantasy/elfy/9/elfy-9.svg
 pdf: /fantasy/elfy/9/elfy-9.pdf
 alt: "elfy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - fantasy
 - elfy
 ---

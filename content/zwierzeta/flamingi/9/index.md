@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/9/flamingi-9.svg
 pdf: /zwierzeta/flamingi/9/flamingi-9.pdf
 alt: "flamingi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-10
 - zwierzeta
 - flamingi
 ---

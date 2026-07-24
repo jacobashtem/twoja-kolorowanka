@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/45/urodziny-45.svg
 pdf: /okolicznosciowe/urodziny/45/urodziny-45.pdf
 alt: "Darmowa kolorowanka urodziny do druku PDF"
 tags:
+- trudnosc-1
 - okolicznosciowe
 - urodziny
 ---

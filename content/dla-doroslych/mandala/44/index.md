@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/44/mandala-44.svg
 pdf: /dla-doroslych/mandala/44/mandala-44.pdf
 alt: "Darmowa kolorowanka mandala do druku PDF"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

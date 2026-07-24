@@ -7,6 +7,7 @@ image: /fantasy/smoki/53/smoki-53.svg
 pdf: /fantasy/smoki/53/smoki-53.pdf
 alt: "Prosta kolorowanka smoki do kolorowania - wariant 53"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

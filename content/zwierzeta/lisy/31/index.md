@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/31/lisy-31.svg
 pdf: /zwierzeta/lisy/31/lisy-31.pdf
 alt: "Łatwa kolorowanka lisy dla przedszkolaka"
 tags:
+- trudnosc-4
 - zwierzeta
 - lisy
 ---

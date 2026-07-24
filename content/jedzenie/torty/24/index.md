@@ -7,6 +7,7 @@ image: /jedzenie/torty/24/torty-24.svg
 pdf: /jedzenie/torty/24/torty-24.pdf
 alt: "Kolorowanki do druku torty"
 tags:
+- trudnosc-4
 - jedzenie
 - torty
 ---

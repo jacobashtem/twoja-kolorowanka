@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/87/samoloty-87.svg
 pdf: /pojazdy/samoloty/87/samoloty-87.pdf
 alt: "samoloty kolorowanka dla dzieci"
 tags:
+- trudnosc-7
 - pojazdy
 - samoloty
 ---

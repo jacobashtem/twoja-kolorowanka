@@ -7,6 +7,7 @@ image: /dom/19/dom-19.svg
 pdf: /dom/19/dom-19.pdf
 alt: "Kolorowanka dom"
 tags:
+- trudnosc-3
 - dom
 - dom
 ---

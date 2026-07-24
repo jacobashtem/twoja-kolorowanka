@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/10/ptaki-10.svg
 pdf: /zwierzeta/ptaki/10/ptaki-10.pdf
 alt: "Kolorowanka z ptaki do pobrania"
 tags:
+- trudnosc-4
 - zwierzeta
 - ptaki
 ---

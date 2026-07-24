@@ -7,6 +7,7 @@ image: /pory-roku/jesien/48/jesien-48.svg
 pdf: /pory-roku/jesien/48/jesien-48.pdf
 alt: "kolorowanka do druku jesien PDF"
 tags:
+- trudnosc-1
 - pory-roku
 - jesien
 ---

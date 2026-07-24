@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/45/pszczoly-45.svg
 pdf: /zwierzeta/pszczoly/45/pszczoly-45.pdf
 alt: "pszczoly – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - zwierzeta
 - pszczoly
 ---

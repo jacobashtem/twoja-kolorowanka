@@ -7,6 +7,7 @@ image: /fantasy/elfy/12/elfy-12.svg
 pdf: /fantasy/elfy/12/elfy-12.pdf
 alt: "kolorowanka do druku elfy PDF"
 tags:
+- trudnosc-6
 - fantasy
 - elfy
 ---

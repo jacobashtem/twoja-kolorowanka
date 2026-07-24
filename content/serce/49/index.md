@@ -7,6 +7,7 @@ image: /serce/49/serce-49.svg
 pdf: /serce/49/serce-49.pdf
 alt: "Łatwa kolorowanka serce dla przedszkolaka"
 tags:
+- trudnosc-2
 - serce
 - serce
 ---

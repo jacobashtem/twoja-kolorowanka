@@ -7,6 +7,7 @@ image: /jedzenie/torty/28/torty-28.svg
 pdf: /jedzenie/torty/28/torty-28.pdf
 alt: "Kolorowanka z torty do pobrania"
 tags:
+- trudnosc-5
 - jedzenie
 - torty
 ---

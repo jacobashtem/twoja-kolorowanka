@@ -7,6 +7,7 @@ image: /pory-roku/lato/54/lato-54.svg
 pdf: /pory-roku/lato/54/lato-54.pdf
 alt: "Pokoloruj lato – darmowy szablon PDF"
 tags:
+- trudnosc-1
 - pory-roku
 - lato
 ---

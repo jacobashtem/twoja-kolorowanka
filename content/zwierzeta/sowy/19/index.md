@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/19/sowy-19.svg
 pdf: /zwierzeta/sowy/19/sowy-19.pdf
 alt: "Kolorowanka sowy"
 tags:
+- trudnosc-5
 - zwierzeta
 - sowy
 ---

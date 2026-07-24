@@ -7,6 +7,7 @@ image: /pory-roku/lato/83/lato-83.svg
 pdf: /pory-roku/lato/83/lato-83.pdf
 alt: "Malowanka lato do druku A4"
 tags:
+- trudnosc-6
 - pory-roku
 - lato
 ---

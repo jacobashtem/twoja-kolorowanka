@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/14/niedzwiedzie-14.svg
 pdf: /zwierzeta/niedzwiedzie/14/niedzwiedzie-14.pdf
 alt: "Edukacyjna kolorowanka niedzwiedzie do wydruku"
 tags:
+- trudnosc-6
 - zwierzeta
 - niedzwiedzie
 ---

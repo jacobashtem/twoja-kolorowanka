@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/44/myszki-44.svg
 pdf: /zwierzeta/myszki/44/myszki-44.pdf
 alt: "Darmowa kolorowanka myszki do druku PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - myszki
 ---

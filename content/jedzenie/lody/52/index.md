@@ -7,6 +7,7 @@ image: /jedzenie/lody/52/lody-52.svg
 pdf: /jedzenie/lody/52/lody-52.pdf
 alt: "Edukacyjna kolorowanka lody do wydruku"
 tags:
+- trudnosc-7
 - jedzenie
 - lody
 ---

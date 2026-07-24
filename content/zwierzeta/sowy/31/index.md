@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/31/sowy-31.svg
 pdf: /zwierzeta/sowy/31/sowy-31.pdf
 alt: "Łatwa kolorowanka sowy dla przedszkolaka"
 tags:
+- trudnosc-10
 - zwierzeta
 - sowy
 ---

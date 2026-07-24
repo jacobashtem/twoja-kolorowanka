@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/84/pieski-84.svg
 pdf: /pieski/84/pieski-84.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - pieski
 alt: "pieski do druku i pokolorowania - wariant 84"

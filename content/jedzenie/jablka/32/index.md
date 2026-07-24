@@ -7,6 +7,7 @@ image: /jedzenie/jablka/32/jablka-32.svg
 pdf: /jedzenie/jablka/32/jablka-32.pdf
 alt: "Edukacyjna kolorowanka jablka do wydruku"
 tags:
+- trudnosc-6
 - jedzenie
 - jablka
 ---

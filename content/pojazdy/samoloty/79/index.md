@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/79/samoloty-79.svg
 pdf: /pojazdy/samoloty/79/samoloty-79.pdf
 alt: "samoloty do druku i pokolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - samoloty
 ---

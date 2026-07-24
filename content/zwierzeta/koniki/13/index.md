@@ -5,6 +5,7 @@ description: Kolorowanka Koniki – wariant 13
 image: /koniki/13/koniki-13.svg
 pdf:   /koniki/13/koniki-13.pdf
 tags:
+- trudnosc-9
  - zwierzeta
  - koniki
 alt: "Kolorowanka do druku koniki - wariant 13"

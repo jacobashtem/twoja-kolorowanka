@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/28/niedzwiedzie-28.svg
 pdf: /zwierzeta/niedzwiedzie/28/niedzwiedzie-28.pdf
 alt: "Kolorowanka z niedzwiedzie do pobrania"
 tags:
+- trudnosc-4
 - zwierzeta
 - niedzwiedzie
 ---

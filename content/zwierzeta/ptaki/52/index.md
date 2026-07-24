@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/52/ptaki-52.svg
 pdf: /zwierzeta/ptaki/52/ptaki-52.pdf
 alt: "Kolorowanka ptaki – format A4 PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - ptaki
 ---

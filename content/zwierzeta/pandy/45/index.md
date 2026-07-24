@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/45/pandy-45.svg
 pdf: /zwierzeta/pandy/45/pandy-45.pdf
 alt: "pandy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - zwierzeta
 - pandy
 ---

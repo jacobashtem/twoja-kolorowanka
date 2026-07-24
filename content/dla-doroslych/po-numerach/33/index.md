@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/33/po-numerach-33.svg
 pdf: /dla-doroslych/po-numerach/33/po-numerach-33.pdf
 alt: "po-numerach kolorowanka dla dzieci"
 tags:
+- trudnosc-5
 - dla-doroslych
 - po-numerach
 ---

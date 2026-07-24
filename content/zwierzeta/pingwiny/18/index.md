@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/18/pingwiny-18.svg
 pdf: /zwierzeta/pingwiny/18/pingwiny-18.pdf
 alt: "Pokoloruj pingwiny – darmowy szablon PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - pingwiny
 ---

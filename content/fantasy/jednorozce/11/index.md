@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/11/jednorozce-11.svg
 pdf: /fantasy/jednorozce/11/jednorozce-11.pdf
 alt: "Malowanka jednorozce do druku A4 - wariant 11"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/19/biedronki-19.svg
 pdf: /zwierzeta/biedronki/19/biedronki-19.pdf
 alt: "Kolorowanka biedronki"
 tags:
+- trudnosc-9
 - zwierzeta
 - biedronki
 ---

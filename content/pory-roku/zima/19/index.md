@@ -7,6 +7,7 @@ image: /pory-roku/zima/19/zima-19.svg
 pdf: /pory-roku/zima/19/zima-19.pdf
 alt: "Kolorowanka zima"
 tags:
+- trudnosc-4
 - pory-roku
 - zima
 ---

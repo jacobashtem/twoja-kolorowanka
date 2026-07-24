@@ -7,6 +7,7 @@ image: /wedlug-kodu/49/wedlug-kodu-49.svg
 pdf: /wedlug-kodu/49/wedlug-kodu-49.pdf
 alt: "Łatwa kolorowanka wedlug-kodu dla przedszkolaka"
 tags:
+- trudnosc-8
 - wedlug-kodu
 - wedlug-kodu
 ---

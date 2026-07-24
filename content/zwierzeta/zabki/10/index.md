@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/10/zabki-10.svg
 pdf: /zwierzeta/zabki/10/zabki-10.pdf
 alt: "Kolorowanka z zabka do pobrania"
 tags:
+- trudnosc-5
 - zwierzeta
 - zabki
 ---

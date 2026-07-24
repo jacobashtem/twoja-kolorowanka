@@ -7,6 +7,7 @@ image: /kredka/20/kredka-20.svg
 pdf: /kredka/20/kredka-20.pdf
 alt: "Kolorowanki kredka"
 tags:
+- trudnosc-1
 - kredka
 - kredka
 ---

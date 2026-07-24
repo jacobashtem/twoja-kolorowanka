@@ -7,6 +7,7 @@ image: /pory-roku/zima/80/zima-80.svg
 pdf: /pory-roku/zima/80/zima-80.pdf
 alt: "Kolorowanki zima"
 tags:
+- trudnosc-1
 - pory-roku
 - zima
 ---

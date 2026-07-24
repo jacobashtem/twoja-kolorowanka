@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/8/zabki-8.svg
 pdf: /zwierzeta/zabki/8/zabki-8.pdf
 alt: "Darmowa Kolorowanka Zabki do druku PDF"
 tags:
+- trudnosc-6
 - zwierzeta
 - zabki
 ---

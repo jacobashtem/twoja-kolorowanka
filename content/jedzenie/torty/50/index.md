@@ -7,6 +7,7 @@ image: /jedzenie/torty/50/torty-50.svg
 pdf: /jedzenie/torty/50/torty-50.pdf
 alt: "Edukacyjna kolorowanka torty do wydruku"
 tags:
+- trudnosc-7
 - jedzenie
 - torty
 ---

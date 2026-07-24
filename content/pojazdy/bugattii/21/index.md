@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/21/bugattii-21.svg
 pdf: /pojazdy/bugattii/21/bugattii-21.pdf
 alt: "bugattii kolorowanka dla dzieci"
 tags:
+- trudnosc-2
 - pojazdy
 - bugattii
 ---

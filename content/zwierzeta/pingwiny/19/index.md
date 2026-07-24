@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/19/pingwiny-19.svg
 pdf: /zwierzeta/pingwiny/19/pingwiny-19.pdf
 alt: "Kolorowanka pingwiny"
 tags:
+- trudnosc-1
 - zwierzeta
 - pingwiny
 ---

@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/54/antystresowe-54.svg
 pdf: /dla-doroslych/antystresowe/54/antystresowe-54.pdf
 alt: "Pokoloruj antystresowe – darmowy szablon PDF"
 tags:
+- trudnosc-10
 - dla-doroslych
 - antystresowe
 ---

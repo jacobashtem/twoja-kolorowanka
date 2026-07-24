@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/83/jednorozce-83.svg
 pdf: /fantasy/jednorozce/83/jednorozce-83.pdf
 alt: "Malowanka jednorozce do druku A4 - wariant 83"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

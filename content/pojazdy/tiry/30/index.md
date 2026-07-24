@@ -7,6 +7,7 @@ image: /pojazdy/tiry/30/tir-30.svg
 pdf: /pojazdy/tiry/30/tir-30.pdf
 alt: "kolorowanka do druku tir PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - tir
 ---

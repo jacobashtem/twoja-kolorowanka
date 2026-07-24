@@ -7,6 +7,7 @@ image: /pojazdy/tiry/14/tir-14.svg
 pdf: /pojazdy/tiry/14/tir-14.pdf
 alt: "Edukacyjna kolorowanka tir do wydruku"
 tags:
+- trudnosc-7
 - pojazdy
 - tir
 ---

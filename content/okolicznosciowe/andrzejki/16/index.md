@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/16/andrzejki-16.svg
 pdf: /okolicznosciowe/andrzejki/16/andrzejki-16.pdf
 alt: "Kolorowanka andrzejki – format A4 PDF"
 tags:
+- trudnosc-1
 - okolicznosciowe
 - andrzejki
 ---

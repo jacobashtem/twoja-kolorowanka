@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/10/bugattii-10.svg
 pdf: /pojazdy/bugattii/10/bugattii-10.pdf
 alt: "Kolorowanka z bugattii do pobrania"
 tags:
+- trudnosc-2
 - pojazdy
 - bugattii
 ---

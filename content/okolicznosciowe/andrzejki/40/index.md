@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/40/andrzejki-40.svg
 pdf: /okolicznosciowe/andrzejki/40/andrzejki-40.pdf
 alt: "andrzejki kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - andrzejki
 ---

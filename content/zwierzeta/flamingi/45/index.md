@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/45/flamingi-45.svg
 pdf: /zwierzeta/flamingi/45/flamingi-45.pdf
 alt: "kolorowanka do druku flamingi PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - flamingi
 ---

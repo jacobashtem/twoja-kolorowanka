@@ -7,6 +7,7 @@ image: /dla-doroslych/jednorozce/28/jednorozce-28.svg
 pdf: /dla-doroslych/jednorozce/28/jednorozce-28.pdf
 alt: "Kolorowanka z jednorozce do pobrania"
 tags:
+- trudnosc-8
 - dla-doroslych
 - jednorozce
 ---

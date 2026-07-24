@@ -7,6 +7,7 @@ image: /jedzenie/lody/13/lody-13.svg
 pdf: /jedzenie/lody/13/lody-13.pdf
 alt: "Łatwa kolorowanka lody dla przedszkolaka"
 tags:
+- trudnosc-5
 - jedzenie
 - lody
 ---

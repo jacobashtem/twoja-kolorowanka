@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/26/motyle-26.svg
 pdf: /zwierzeta/motyle/26/motyle-26.pdf
 alt: "Darmowa kolorowanka motyle do druku PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - motyle
 ---

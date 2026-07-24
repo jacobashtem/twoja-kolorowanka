@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/42/wiosna-42.svg
 pdf: /pory-roku/wiosna/42/wiosna-42.pdf
 alt: "Kolorowanki do druku wiosna"
 tags:
+- trudnosc-2
 - pory-roku
 - wiosna
 ---

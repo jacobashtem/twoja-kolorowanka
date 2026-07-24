@@ -7,6 +7,7 @@ image: /kosmos/26/kosmos-26.svg
 pdf: /kosmos/26/kosmos-26.pdf
 alt: "Darmowa kolorowanka kosmos do druku PDF"
 tags:
+- trudnosc-9
 - kosmos
 - kosmos
 ---

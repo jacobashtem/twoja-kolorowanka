@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/23/wiosna-23.svg
 pdf: /pory-roku/wiosna/23/wiosna-23.pdf
 alt: "Kolorowanka do druku wiosna"
 tags:
+- trudnosc-5
 - pory-roku
 - wiosna
 ---

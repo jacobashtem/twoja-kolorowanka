@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/44/antystresowe-44.svg
 pdf: /dla-doroslych/antystresowe/44/antystresowe-44.pdf
 alt: "Darmowa kolorowanka antystresowe do druku PDF"
 tags:
+- trudnosc-10
 - dla-doroslych
 - antystresowe
 ---

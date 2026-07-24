@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/63/samoloty-63.svg
 pdf: /pojazdy/samoloty/63/samoloty-63.pdf
 alt: "samoloty – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

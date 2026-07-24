@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/46/po-numerach-46.svg
 pdf: /dla-doroslych/po-numerach/46/po-numerach-46.pdf
 alt: "Kolorowanka z po-numerach do pobrania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

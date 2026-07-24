@@ -7,6 +7,7 @@ image: /pojazdy/traktory/46/traktory-46.svg
 pdf: /pojazdy/traktory/46/traktory-46.pdf
 alt: "Kolorowanka z traktory do pobrania"
 tags:
+- trudnosc-4
 - pojazdy
 - traktory
 ---

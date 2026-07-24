@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/52/antystresowe-52.svg
 pdf: /dla-doroslych/antystresowe/52/antystresowe-52.pdf
 alt: "Kolorowanka antystresowe – format A4 PDF"
 tags:
+- trudnosc-10
 - dla-doroslych
 - antystresowe
 ---

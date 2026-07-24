@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/8/lwy-8.svg
 pdf: /zwierzeta/lwy/8/lwy-8.pdf
 alt: "Darmowa kolorowanka lwy do druku PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - lwy
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/lato/33/lato-33.svg
 pdf: /pory-roku/lato/33/lato-33.pdf
 alt: "lato kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - pory-roku
 - lato
 ---

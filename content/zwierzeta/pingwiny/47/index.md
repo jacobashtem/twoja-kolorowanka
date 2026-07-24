@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/47/pingwiny-47.svg
 pdf: /zwierzeta/pingwiny/47/pingwiny-47.pdf
 alt: "Malowanka pingwiny do druku A4"
 tags:
+- trudnosc-4
 - zwierzeta
 - pingwiny
 ---

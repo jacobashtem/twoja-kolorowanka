@@ -7,6 +7,7 @@ image: /jedzenie/torty/12/torty-12.svg
 pdf: /jedzenie/torty/12/torty-12.pdf
 alt: "kolorowanka do druku torty PDF"
 tags:
+- trudnosc-5
 - jedzenie
 - torty
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/42/dinozaury-42.svg
 pdf: /zwierzeta/dinozaury/42/dinozaury-42.pdf
 alt: "Kolorowanki do druku dinozaury"
 tags:
+- trudnosc-6
 - zwierzeta
 - dinozaury
 ---

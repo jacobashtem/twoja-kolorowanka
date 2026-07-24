@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/48/bugattii-48.svg
 pdf: /pojazdy/bugattii/48/bugattii-48.pdf
 alt: "kolorowanka do druku bugattii PDF"
 tags:
+- trudnosc-10
 - pojazdy
 - bugattii
 ---

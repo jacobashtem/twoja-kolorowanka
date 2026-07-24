@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/49/dinozaury-49.svg
 pdf: /zwierzeta/dinozaury/49/dinozaury-49.pdf
 alt: "Łatwa kolorowanka dinozaury dla przedszkolaka"
 tags:
+- trudnosc-6
 - zwierzeta
 - dinozaury
 ---

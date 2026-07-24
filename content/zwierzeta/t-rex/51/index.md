@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/51/t-rex-51.svg
 pdf: /zwierzeta/t-rex/51/t-rex-51.pdf
 alt: "kolorowanka do druku t-rex PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - t-rex
 ---

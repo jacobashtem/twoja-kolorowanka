@@ -7,6 +7,7 @@ image: /pojazdy/bmw/21/bmw-21.svg
 pdf: /pojazdy/bmw/21/bmw-21.pdf
 alt: "bmw kolorowanka dla dzieci"
 tags:
+- trudnosc-7
 - pojazdy
 - bmw
 ---

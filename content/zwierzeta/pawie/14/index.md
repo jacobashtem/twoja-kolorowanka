@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/14/pawie-14.svg
 pdf: /zwierzeta/pawie/14/pawie-14.pdf
 alt: "Edukacyjna kolorowanka pawie do wydruku"
 tags:
+- trudnosc-7
 - zwierzeta
 - pawie
 ---

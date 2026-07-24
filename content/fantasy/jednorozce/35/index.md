@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/35/jednorozce-35.svg
 pdf: /fantasy/jednorozce/35/jednorozce-35.pdf
 alt: "Prosta kolorowanka jednorozce do kolorowania - wariant 35"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/14/chomiki-14.svg
 pdf: /zwierzeta/chomiki/14/chomiki-14.pdf
 alt: "Edukacyjna kolorowanka chomiki do wydruku"
 tags:
+- trudnosc-1
 - zwierzeta
 - chomiki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/9/chomiki-9.svg
 pdf: /zwierzeta/chomiki/9/chomiki-9.pdf
 alt: "chomiki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - zwierzeta
 - chomiki
 ---

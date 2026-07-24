@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/8/wiosna-8.svg
 pdf: /pory-roku/wiosna/8/wiosna-8.pdf
 alt: "Darmowa kolorowanka wiosna do druku PDF"
 tags:
+- trudnosc-10
 - pory-roku
 - wiosna
 ---

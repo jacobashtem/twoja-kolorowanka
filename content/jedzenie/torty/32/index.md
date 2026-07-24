@@ -7,6 +7,7 @@ image: /jedzenie/torty/32/torty-32.svg
 pdf: /jedzenie/torty/32/torty-32.pdf
 alt: "Edukacyjna kolorowanka torty do wydruku"
 tags:
+- trudnosc-4
 - jedzenie
 - torty
 ---

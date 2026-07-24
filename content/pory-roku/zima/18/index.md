@@ -7,6 +7,7 @@ image: /pory-roku/zima/18/zima-18.svg
 pdf: /pory-roku/zima/18/zima-18.pdf
 alt: "Pokoloruj zima – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - pory-roku
 - zima
 ---

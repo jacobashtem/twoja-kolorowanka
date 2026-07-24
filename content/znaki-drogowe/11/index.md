@@ -7,6 +7,7 @@ image: /znaki-drogowe/11/znaki-drogowe-11.svg
 pdf: /znaki-drogowe/11/znaki-drogowe-11.pdf
 alt: "Malowanka znaki-drogowe do druku A4"
 tags:
+- trudnosc-1
 - znaki-drogowe
 - znaki-drogowe
 ---

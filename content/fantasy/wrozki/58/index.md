@@ -7,6 +7,7 @@ image: /fantasy/wrozki/58/wrozki-58.svg
 pdf: /fantasy/wrozki/58/wrozki-58.pdf
 alt: "wrozki kolorowanki dla dzieci - wariant 58"
 tags:
+- trudnosc-10
 - fantasy
 - wrozki
 ---

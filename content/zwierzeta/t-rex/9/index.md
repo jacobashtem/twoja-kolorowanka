@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/9/t-rex-9.svg
 pdf: /zwierzeta/t-rex/9/t-rex-9.pdf
 alt: "t-rex – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - zwierzeta
 - t-rex
 ---

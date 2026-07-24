@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/32/urodziny-32.svg
 pdf: /okolicznosciowe/urodziny/32/urodziny-32.pdf
 alt: "Łatwa kolorowanka urodziny dla przedszkolaka"
 tags:
+- trudnosc-10
 - okolicznosciowe
 - urodziny
 ---

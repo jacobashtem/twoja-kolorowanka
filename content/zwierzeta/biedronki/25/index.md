@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/25/biedronki-25.svg
 pdf: /zwierzeta/biedronki/25/biedronki-25.pdf
 alt: "biedronki do druku i pokolorowania"
 tags:
+- trudnosc-8
 - zwierzeta
 - biedronki
 ---

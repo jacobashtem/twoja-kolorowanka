@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/36/pociagi-36.svg
 pdf: /pojazdy/pociagi/36/pociagi-36.pdf
 alt: "Pokoloruj pociagi – darmowy szablon PDF"
 tags:
+- trudnosc-7
 - pojazdy
 - pociagi
 ---

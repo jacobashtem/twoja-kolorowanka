@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/27/ptaki-27.svg
 pdf: /zwierzeta/ptaki/27/ptaki-27.pdf
 alt: "ptaki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - zwierzeta
 - ptaki
 ---

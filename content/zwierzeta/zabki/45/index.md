@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/45/zabki-45.svg
 pdf: /zwierzeta/zabki/45/zabki-45.pdf
 alt: "zabka – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - zwierzeta
 - zabki
 ---

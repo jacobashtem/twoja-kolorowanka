@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/88/pieski-88.svg
 pdf: /pieski/88/pieski-88.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - pieski
 alt: "Malowanka pieski do druku A4 - wariant 88"

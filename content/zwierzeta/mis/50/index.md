@@ -7,6 +7,7 @@ image: /zwierzeta/mis/50/mis-50.svg
 pdf: /zwierzeta/mis/50/mis-50.pdf
 alt: "Edukacyjna kolorowanka mis do wydruku"
 tags:
+- trudnosc-7
 - zwierzeta
 - mis
 ---

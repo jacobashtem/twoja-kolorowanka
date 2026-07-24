@@ -7,6 +7,7 @@ image: /fantasy/smoki/61/smoki-61.svg
 pdf: /fantasy/smoki/61/smoki-61.pdf
 alt: "smoki do druku i pokolorowania - wariant 61"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

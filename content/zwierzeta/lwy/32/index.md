@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/32/lwy-32.svg
 pdf: /zwierzeta/lwy/32/lwy-32.pdf
 alt: "Edukacyjna kolorowanka lwy do wydruku"
 tags:
+- trudnosc-2
 - zwierzeta
 - lwy
 ---

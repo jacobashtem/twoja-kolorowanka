@@ -7,6 +7,7 @@ image: /kosmos/15/kosmos-15.svg
 pdf: /kosmos/15/kosmos-15.pdf
 alt: "kosmos kolorowanka dla dzieci"
 tags:
+- trudnosc-6
 - kosmos
 - kosmos
 ---

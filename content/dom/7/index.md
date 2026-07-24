@@ -7,6 +7,7 @@ image: /dom/7/dom-7.svg
 pdf: /dom/7/dom-7.pdf
 alt: "dom do druku i pokolorowania"
 tags:
+- trudnosc-10
 - dom
 - dom
 ---

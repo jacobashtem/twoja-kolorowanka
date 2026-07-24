@@ -7,6 +7,7 @@ image: /rosliny/grzyby/19/grzyby-19.svg
 pdf: /rosliny/grzyby/19/grzyby-19.pdf
 alt: "Kolorowanka grzyby"
 tags:
+- trudnosc-5
 - rosliny
 - grzyby
 ---

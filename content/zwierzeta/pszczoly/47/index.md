@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/47/pszczoly-47.svg
 pdf: /zwierzeta/pszczoly/47/pszczoly-47.pdf
 alt: "Malowanka pszczoly do druku A4"
 tags:
+- trudnosc-5
 - zwierzeta
 - pszczoly
 ---

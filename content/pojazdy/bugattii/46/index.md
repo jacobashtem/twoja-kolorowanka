@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/46/bugattii-46.svg
 pdf: /pojazdy/bugattii/46/bugattii-46.pdf
 alt: "Kolorowanka z bugattii do pobrania"
 tags:
+- trudnosc-5
 - pojazdy
 - bugattii
 ---

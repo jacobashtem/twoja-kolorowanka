@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/18/swinki-18.svg
 pdf: /zwierzeta/swinki/18/swinki-18.pdf
 alt: "Pokoloruj swinki – darmowy szablon PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - swinki
 ---

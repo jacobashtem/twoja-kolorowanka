@@ -7,6 +7,7 @@ image: /fantasy/wrozki/68/wrozki-68.svg
 pdf: /fantasy/wrozki/68/wrozki-68.pdf
 alt: "Edukacyjna kolorowanka wrozki do wydruku - wariant 68"
 tags:
+- trudnosc-10
 - fantasy
 - wrozki
 ---

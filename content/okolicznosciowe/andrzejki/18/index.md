@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/18/andrzejki-18.svg
 pdf: /okolicznosciowe/andrzejki/18/andrzejki-18.pdf
 alt: "Pokoloruj andrzejki – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - okolicznosciowe
 - andrzejki
 ---

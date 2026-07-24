@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/9/pingwiny-9.svg
 pdf: /zwierzeta/pingwiny/9/pingwiny-9.pdf
 alt: "pingwiny – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - zwierzeta
 - pingwiny
 ---

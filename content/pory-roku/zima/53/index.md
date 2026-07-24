@@ -7,6 +7,7 @@ image: /pory-roku/zima/53/zima-53.svg
 pdf: /pory-roku/zima/53/zima-53.pdf
 alt: "Malowanka zima do druku A4"
 tags:
+- trudnosc-9
 - pory-roku
 - zima
 ---

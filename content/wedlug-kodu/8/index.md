@@ -7,6 +7,7 @@ image: /wedlug-kodu/8/wedlug-kodu-8.svg
 pdf: /wedlug-kodu/8/wedlug-kodu-8.pdf
 alt: "Darmowa kolorowanka wedlug-kodu do druku PDF"
 tags:
+- trudnosc-9
 - wedlug-kodu
 - wedlug-kodu
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/33/chomiki-33.svg
 pdf: /zwierzeta/chomiki/33/chomiki-33.pdf
 alt: "chomiki kolorowanka dla dzieci"
 tags:
+- trudnosc-5
 - zwierzeta
 - chomiki
 ---

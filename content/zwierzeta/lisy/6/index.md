@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/6/lisy-6.svg
 pdf: /zwierzeta/lisy/6/lisy-6.pdf
 alt: "Kolorowanki do druku lisy"
 tags:
+- trudnosc-7
 - zwierzeta
 - lisy
 ---

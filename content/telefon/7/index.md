@@ -7,6 +7,7 @@ image: /telefon/7/telefon-7.svg
 pdf: /telefon/7/telefon-7.pdf
 alt: "telefon do druku i pokolorowania"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

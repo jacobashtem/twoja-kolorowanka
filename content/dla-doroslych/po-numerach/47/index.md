@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/47/po-numerach-47.svg
 pdf: /dla-doroslych/po-numerach/47/po-numerach-47.pdf
 alt: "Malowanka po-numerach do druku A4"
 tags:
+- trudnosc-6
 - dla-doroslych
 - po-numerach
 ---

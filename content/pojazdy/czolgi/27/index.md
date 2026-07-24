@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/27/czolgi-27.svg
 pdf: /pojazdy/czolgi/27/czolgi-27.pdf
 alt: "czolgi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - pojazdy
 - czolgi
 ---

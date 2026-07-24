@@ -7,6 +7,7 @@ image: /jedzenie/jablka/3/jablka-3.svg
 pdf: /jedzenie/jablka/3/jablka-3.pdf
 alt: "jablka kolorowanka dla dzieci"
 tags:
+- trudnosc-1
 - jedzenie
 - jablka
 ---

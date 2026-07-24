@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/39/kroliczki-39.svg
 pdf: /kroliczki/39/kroliczki-39.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - kroliczki
 alt: "Darmowa kolorowanka kroliczki do druku PDF - wariant 39"

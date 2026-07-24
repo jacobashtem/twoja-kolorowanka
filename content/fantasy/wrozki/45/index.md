@@ -7,6 +7,7 @@ image: /fantasy/wrozki/45/wrozki-45.svg
 pdf: /fantasy/wrozki/45/wrozki-45.pdf
 alt: "wrozki – pobierz i wydrukuj kolorowankę - wariant 45"
 tags:
+- trudnosc-4
 - fantasy
 - wrozki
 ---

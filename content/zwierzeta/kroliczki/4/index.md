@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/4/kroliczki-4.svg
 pdf: /kroliczki/4/kroliczki-4.pdf
 tags:
+- trudnosc-1
 - zwierzeta
 - kroliczki
 alt: "kroliczki – pobierz i wydrukuj kolorowankę - wariant 4"

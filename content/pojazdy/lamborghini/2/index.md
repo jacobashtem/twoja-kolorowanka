@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/2/lamborghini-2.svg
 pdf: /pojazdy/lamborghini/2/lamborghini-2.pdf
 alt: "Kolorowanki lamborghini"
 tags:
+- trudnosc-10
 - pojazdy
 - lamborghini
 ---

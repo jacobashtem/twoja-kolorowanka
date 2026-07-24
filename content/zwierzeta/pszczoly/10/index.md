@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/10/pszczoly-10.svg
 pdf: /zwierzeta/pszczoly/10/pszczoly-10.pdf
 alt: "Kolorowanka z pszczoly do pobrania"
 tags:
+- trudnosc-6
 - zwierzeta
 - pszczoly
 ---

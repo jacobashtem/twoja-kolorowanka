@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/19/lamborghini-19.svg
 pdf: /pojazdy/lamborghini/19/lamborghini-19.pdf
 alt: "Kolorowanka lamborghini"
 tags:
+- trudnosc-2
 - pojazdy
 - lamborghini
 ---

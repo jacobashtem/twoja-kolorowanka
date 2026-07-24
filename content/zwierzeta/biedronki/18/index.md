@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/18/biedronki-18.svg
 pdf: /zwierzeta/biedronki/18/biedronki-18.pdf
 alt: "Pokoloruj biedronki – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - biedronki
 ---

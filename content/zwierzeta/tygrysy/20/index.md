@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/20/tygrysy-20.svg
 pdf: /zwierzeta/tygrysy/20/tygrysy-20.pdf
 alt: "Kolorowanki tygrysy"
 tags:
+- trudnosc-5
 - zwierzeta
 - tygrysy
 ---

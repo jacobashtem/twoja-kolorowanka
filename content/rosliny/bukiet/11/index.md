@@ -7,6 +7,7 @@ image: /rosliny/bukiet/11/bukiet-11.svg
 pdf: /rosliny/bukiet/11/bukiet-11.pdf
 alt: "Malowanka bukiet do druku A4"
 tags:
+- trudnosc-3
 - rosliny
 - bukiet
 ---

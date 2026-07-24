@@ -7,6 +7,7 @@ image: /rosliny/bukiet/7/bukiet-7.svg
 pdf: /rosliny/bukiet/7/bukiet-7.pdf
 alt: "bukiet do druku i pokolorowania"
 tags:
+- trudnosc-5
 - rosliny
 - bukiet
 ---

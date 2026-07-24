@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/20/zabki-20.svg
 pdf: /zwierzeta/zabki/20/zabki-20.pdf
 alt: "Kolorowanki zabka"
 tags:
+- trudnosc-2
 - zwierzeta
 - zabki
 ---

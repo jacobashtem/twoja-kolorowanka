@@ -7,6 +7,7 @@ image: /zwierzeta/mis/37/mis-37.svg
 pdf: /zwierzeta/mis/37/mis-37.pdf
 alt: "Kolorowanka mis"
 tags:
+- trudnosc-3
 - zwierzeta
 - mis
 ---

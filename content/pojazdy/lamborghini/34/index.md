@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/34/lamborghini-34.svg
 pdf: /pojazdy/lamborghini/34/lamborghini-34.pdf
 alt: "Kolorowanka lamborghini – format A4 PDF"
 tags:
+- trudnosc-5
 - pojazdy
 - lamborghini
 ---

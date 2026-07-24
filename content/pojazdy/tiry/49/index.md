@@ -7,6 +7,7 @@ image: /pojazdy/tiry/49/tir-49.svg
 pdf: /pojazdy/tiry/49/tir-49.pdf
 alt: "Łatwa kolorowanka tir dla przedszkolaka"
 tags:
+- trudnosc-7
 - pojazdy
 - tir
 ---

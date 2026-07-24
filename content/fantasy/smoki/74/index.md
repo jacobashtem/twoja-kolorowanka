@@ -7,6 +7,7 @@ image: /fantasy/smoki/74/smoki-74.svg
 pdf: /fantasy/smoki/74/smoki-74.pdf
 alt: "Kolorowanki smoki - wariant 74"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

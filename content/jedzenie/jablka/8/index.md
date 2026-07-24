@@ -7,6 +7,7 @@ image: /jedzenie/jablka/8/jablka-8.svg
 pdf: /jedzenie/jablka/8/jablka-8.pdf
 alt: "Darmowa kolorowanka jablka do druku PDF"
 tags:
+- trudnosc-5
 - jedzenie
 - jablka
 ---

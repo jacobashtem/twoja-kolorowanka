@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/38/pawie-38.svg
 pdf: /zwierzeta/pawie/38/pawie-38.pdf
 alt: "Kolorowanki pawie"
 tags:
+- trudnosc-7
 - zwierzeta
 - pawie
 ---

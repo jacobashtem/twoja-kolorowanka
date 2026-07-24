@@ -7,6 +7,7 @@ image: /pojazdy/traktory/43/traktory-43.svg
 pdf: /pojazdy/traktory/43/traktory-43.pdf
 alt: "traktory do druku i pokolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - traktory
 ---

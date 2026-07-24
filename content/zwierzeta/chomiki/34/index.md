@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/34/chomiki-34.svg
 pdf: /zwierzeta/chomiki/34/chomiki-34.pdf
 alt: "Kolorowanka chomiki – format A4 PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - chomiki
 ---

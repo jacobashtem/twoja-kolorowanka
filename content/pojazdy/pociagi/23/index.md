@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/23/pociagi-23.svg
 pdf: /pojazdy/pociagi/23/pociagi-23.pdf
 alt: "Kolorowanka do druku pociagi"
 tags:
+- trudnosc-4
 - pojazdy
 - pociagi
 ---

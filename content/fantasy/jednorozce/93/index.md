@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/93/jednorozce-93.svg
 pdf: /fantasy/jednorozce/93/jednorozce-93.pdf
 alt: "jednorozce kolorowanka dla dzieci - wariant 93"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

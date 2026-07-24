@@ -7,6 +7,7 @@ image: /pory-roku/zima/56/zima-56.svg
 pdf: /pory-roku/zima/56/zima-56.pdf
 alt: "Edukacyjna kolorowanka zima do wydruku"
 tags:
+- trudnosc-4
 - pory-roku
 - zima
 ---

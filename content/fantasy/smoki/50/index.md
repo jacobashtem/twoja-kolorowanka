@@ -7,6 +7,7 @@ image: /fantasy/smoki/50/smoki-50.svg
 pdf: /fantasy/smoki/50/smoki-50.pdf
 alt: "Edukacyjna kolorowanka smoki do wydruku - wariant 50"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

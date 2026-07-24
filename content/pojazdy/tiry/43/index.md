@@ -7,6 +7,7 @@ image: /pojazdy/tiry/43/tir-43.svg
 pdf: /pojazdy/tiry/43/tir-43.pdf
 alt: "tir do druku i pokolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - tir
 ---

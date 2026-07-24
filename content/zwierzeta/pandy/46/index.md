@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/46/pandy-46.svg
 pdf: /zwierzeta/pandy/46/pandy-46.pdf
 alt: "Kolorowanka z pandy do pobrania"
 tags:
+- trudnosc-5
 - zwierzeta
 - pandy
 ---

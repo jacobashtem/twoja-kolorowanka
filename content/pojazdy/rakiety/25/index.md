@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/25/rakiety-25.svg
 pdf: /pojazdy/rakiety/25/rakiety-25.pdf
 alt: "rakiety do druku i pokolorowania"
 tags:
+- trudnosc-2
 - pojazdy
 - rakiety
 ---

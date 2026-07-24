@@ -7,6 +7,7 @@ image: /wedlug-kodu/21/wedlug-kodu-21.svg
 pdf: /wedlug-kodu/21/wedlug-kodu-21.pdf
 alt: "wedlug-kodu kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - wedlug-kodu
 - wedlug-kodu
 ---

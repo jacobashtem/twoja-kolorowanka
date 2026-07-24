@@ -7,6 +7,7 @@ image: /pory-roku/jesien/32/jesien-32.svg
 pdf: /pory-roku/jesien/32/jesien-32.pdf
 alt: "Edukacyjna kolorowanka jesien do wydruku"
 tags:
+- trudnosc-9
 - pory-roku
 - jesien
 ---

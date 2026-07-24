@@ -7,6 +7,7 @@ image: /telefon/16/telefon-16.svg
 pdf: /telefon/16/telefon-16.pdf
 alt: "Kolorowanka telefon – format A4 PDF"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

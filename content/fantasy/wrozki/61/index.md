@@ -7,6 +7,7 @@ image: /fantasy/wrozki/61/wrozki-61.svg
 pdf: /fantasy/wrozki/61/wrozki-61.pdf
 alt: "wrozki do druku i pokolorowania - wariant 61"
 tags:
+- trudnosc-10
 - fantasy
 - wrozki
 ---

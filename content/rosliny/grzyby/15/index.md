@@ -7,6 +7,7 @@ image: /rosliny/grzyby/15/grzyby-15.svg
 pdf: /rosliny/grzyby/15/grzyby-15.pdf
 alt: "grzyby kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - rosliny
 - grzyby
 ---

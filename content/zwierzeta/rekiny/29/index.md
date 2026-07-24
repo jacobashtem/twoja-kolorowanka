@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/29/rekiny-29.svg
 pdf: /zwierzeta/rekiny/29/rekiny-29.pdf
 alt: "Malowanka rekiny do druku A4"
 tags:
+- trudnosc-7
 - zwierzeta
 - rekiny
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/7/wiosna-7.svg
 pdf: /pory-roku/wiosna/7/wiosna-7.pdf
 alt: "wiosna do druku i pokolorowania"
 tags:
+- trudnosc-9
 - pory-roku
 - wiosna
 ---

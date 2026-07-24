@@ -7,6 +7,7 @@ image: /dom/17/dom-17.svg
 pdf: /dom/17/dom-17.pdf
 alt: "Prosta kolorowanka dom do kolorowania"
 tags:
+- trudnosc-6
 - dom
 - dom
 ---

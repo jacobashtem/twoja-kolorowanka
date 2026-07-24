@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/89/motyle-89.svg
 pdf: /zwierzeta/motyle/89/motyle-89.pdf
 alt: "Prosta kolorowanka motyle do kolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - motyle
 ---

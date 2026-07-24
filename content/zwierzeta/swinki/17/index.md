@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/17/swinki-17.svg
 pdf: /zwierzeta/swinki/17/swinki-17.pdf
 alt: "Prosta kolorowanka swinki do kolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - swinki
 ---

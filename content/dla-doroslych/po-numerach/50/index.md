@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/50/po-numerach-50.svg
 pdf: /dla-doroslych/po-numerach/50/po-numerach-50.pdf
 alt: "Edukacyjna kolorowanka po-numerach do wydruku"
 tags:
+- trudnosc-8
 - dla-doroslych
 - po-numerach
 ---

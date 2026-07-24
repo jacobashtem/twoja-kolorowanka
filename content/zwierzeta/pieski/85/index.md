@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/85/pieski-85.svg
 pdf: /pieski/85/pieski-85.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - pieski
 alt: "Darmowa kolorowanka pieski do druku PDF - wariant 85"

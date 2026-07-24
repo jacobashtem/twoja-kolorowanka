@@ -7,6 +7,7 @@ image: /pojazdy/tiry/32/tir-32.svg
 pdf: /pojazdy/tiry/32/tir-32.pdf
 alt: "Edukacyjna kolorowanka tir do wydruku"
 tags:
+- trudnosc-3
 - pojazdy
 - tir
 ---

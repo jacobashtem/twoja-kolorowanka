@@ -7,6 +7,7 @@ image: /zwierzeta/mis/16/mis-16.svg
 pdf: /zwierzeta/mis/16/mis-16.pdf
 alt: "Kolorowanka mis – format A4 PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - mis
 ---

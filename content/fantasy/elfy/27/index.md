@@ -7,6 +7,7 @@ image: /fantasy/elfy/27/elfy-27.svg
 pdf: /fantasy/elfy/27/elfy-27.pdf
 alt: "elfy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - fantasy
 - elfy
 ---

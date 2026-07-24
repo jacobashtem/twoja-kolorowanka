@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/39/t-rex-39.svg
 pdf: /zwierzeta/t-rex/39/t-rex-39.pdf
 alt: "t-rex kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - zwierzeta
 - t-rex
 ---

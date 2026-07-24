@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/41/pingwiny-41.svg
 pdf: /zwierzeta/pingwiny/41/pingwiny-41.pdf
 alt: "Kolorowanka do druku pingwiny"
 tags:
+- trudnosc-6
 - zwierzeta
 - pingwiny
 ---

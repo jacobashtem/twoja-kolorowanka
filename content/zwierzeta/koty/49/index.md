@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/49/koty-49.svg
 pdf: /koty/49/koty-49.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Kolorowanki do druku koty - wariant 49"

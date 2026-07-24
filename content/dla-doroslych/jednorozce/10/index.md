@@ -7,6 +7,7 @@ image: /dla-doroslych/jednorozce/10/jednorozce-10.svg
 pdf: /dla-doroslych/jednorozce/10/jednorozce-10.pdf
 alt: "Kolorowanka z jednorozce do pobrania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - jednorozce
 ---

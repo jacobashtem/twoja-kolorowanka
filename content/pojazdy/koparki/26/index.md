@@ -7,6 +7,7 @@ image: /pojazdy/koparki/26/koparki-26.svg
 pdf: /pojazdy/koparki/26/koparki-26.pdf
 alt: "Darmowa kolorowanka koparki do druku PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - koparki
 ---

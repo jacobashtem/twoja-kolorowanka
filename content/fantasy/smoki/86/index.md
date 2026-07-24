@@ -7,6 +7,7 @@ image: /fantasy/smoki/86/smoki-86.svg
 pdf: /fantasy/smoki/86/smoki-86.pdf
 alt: "Edukacyjna kolorowanka smoki do wydruku - wariant 86"
 tags:
+- trudnosc-3
 - fantasy
 - smoki
 ---

@@ -7,6 +7,7 @@ image: /ksiezniczki/22/ksiezniczki-22.svg
 pdf: /ksiezniczki/22/ksiezniczki-22.pdf
 alt: "ksiezniczki kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - ksiezniczki
 - ksiezniczki
 ---

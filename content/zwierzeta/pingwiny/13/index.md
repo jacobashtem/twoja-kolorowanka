@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/13/pingwiny-13.svg
 pdf: /zwierzeta/pingwiny/13/pingwiny-13.pdf
 alt: "Łatwa kolorowanka pingwiny dla przedszkolaka"
 tags:
+- trudnosc-1
 - zwierzeta
 - pingwiny
 ---

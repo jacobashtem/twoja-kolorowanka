@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/3/antystresowe-3.svg
 pdf: /dla-doroslych/antystresowe/3/antystresowe-3.pdf
 alt: "antystresowe kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - dla-doroslych
 - antystresowe
 ---

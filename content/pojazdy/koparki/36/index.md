@@ -7,6 +7,7 @@ image: /pojazdy/koparki/36/koparki-36.svg
 pdf: /pojazdy/koparki/36/koparki-36.pdf
 alt: "Pokoloruj koparki – darmowy szablon PDF"
 tags:
+- trudnosc-1
 - pojazdy
 - koparki
 ---

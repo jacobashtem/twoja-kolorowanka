@@ -7,6 +7,7 @@ image: /ksiezniczki/9/ksiezniczki-9.svg
 pdf: /ksiezniczki/9/ksiezniczki-9.pdf
 alt: "ksiezniczki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - ksiezniczki
 - ksiezniczki
 ---

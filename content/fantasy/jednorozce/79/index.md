@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/79/jednorozce-79.svg
 pdf: /fantasy/jednorozce/79/jednorozce-79.pdf
 alt: "jednorozce do druku i pokolorowania - wariant 79"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

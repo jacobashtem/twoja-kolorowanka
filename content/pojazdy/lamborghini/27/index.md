@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/27/lamborghini-27.svg
 pdf: /pojazdy/lamborghini/27/lamborghini-27.pdf
 alt: "lamborghini – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - pojazdy
 - lamborghini
 ---

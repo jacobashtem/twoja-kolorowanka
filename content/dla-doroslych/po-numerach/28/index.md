@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/28/po-numerach-28.svg
 pdf: /dla-doroslych/po-numerach/28/po-numerach-28.pdf
 alt: "Kolorowanka z po-numerach do pobrania"
 tags:
+- trudnosc-8
 - dla-doroslych
 - po-numerach
 ---

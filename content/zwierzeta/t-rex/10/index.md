@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/10/t-rex-10.svg
 pdf: /zwierzeta/t-rex/10/t-rex-10.pdf
 alt: "Kolorowanka z t-rex do pobrania"
 tags:
+- trudnosc-10
 - zwierzeta
 - t-rex
 ---

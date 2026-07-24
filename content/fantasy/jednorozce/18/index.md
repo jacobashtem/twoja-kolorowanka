@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/18/jednorozce-18.svg
 pdf: /fantasy/jednorozce/18/jednorozce-18.pdf
 alt: "Pokoloruj jednorozce – darmowy szablon PDF - wariant 18"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

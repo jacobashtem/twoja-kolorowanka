@@ -7,6 +7,7 @@ image: /pory-roku/lato/98/lato-98.svg
 pdf: /pory-roku/lato/98/lato-98.pdf
 alt: "Darmowa kolorowanka lato do druku PDF"
 tags:
+- trudnosc-9
 - pory-roku
 - lato
 ---

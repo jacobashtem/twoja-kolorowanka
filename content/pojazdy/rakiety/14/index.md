@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/14/rakiety-14.svg
 pdf: /pojazdy/rakiety/14/rakiety-14.pdf
 alt: "Edukacyjna kolorowanka rakiety do wydruku"
 tags:
+- trudnosc-1
 - pojazdy
 - rakiety
 ---

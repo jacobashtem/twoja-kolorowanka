@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/7/flamingi-7.svg
 pdf: /zwierzeta/flamingi/7/flamingi-7.pdf
 alt: "flamingi do druku i pokolorowania"
 tags:
+- trudnosc-7
 - zwierzeta
 - flamingi
 ---

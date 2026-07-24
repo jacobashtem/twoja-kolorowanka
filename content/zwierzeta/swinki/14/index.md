@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/14/swinki-14.svg
 pdf: /zwierzeta/swinki/14/swinki-14.pdf
 alt: "Edukacyjna kolorowanka swinki do wydruku"
 tags:
+- trudnosc-9
 - zwierzeta
 - swinki
 ---

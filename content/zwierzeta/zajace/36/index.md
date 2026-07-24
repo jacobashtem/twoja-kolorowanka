@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/36/zajace-36.svg
 pdf: /zwierzeta/zajace/36/zajace-36.pdf
 alt: "Pokoloruj zajace – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - zajace
 ---

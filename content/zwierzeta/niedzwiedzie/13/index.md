@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/13/niedzwiedzie-13.svg
 pdf: /zwierzeta/niedzwiedzie/13/niedzwiedzie-13.pdf
 alt: "Łatwa kolorowanka niedzwiedzie dla przedszkolaka"
 tags:
+- trudnosc-5
 - zwierzeta
 - niedzwiedzie
 ---

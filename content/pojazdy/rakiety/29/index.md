@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/29/rakiety-29.svg
 pdf: /pojazdy/rakiety/29/rakiety-29.pdf
 alt: "Malowanka rakiety do druku A4"
 tags:
+- trudnosc-8
 - pojazdy
 - rakiety
 ---

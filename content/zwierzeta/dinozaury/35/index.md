@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/35/dinozaury-35.svg
 pdf: /zwierzeta/dinozaury/35/dinozaury-35.pdf
 alt: "Prosta kolorowanka dinozaury do kolorowania"
 tags:
+- trudnosc-10
 - zwierzeta
 - dinozaury
 ---

@@ -7,6 +7,7 @@ image: /fantasy/wrozki/54/wrozki-54.svg
 pdf: /fantasy/wrozki/54/wrozki-54.pdf
 alt: "Pokoloruj wrozki – darmowy szablon PDF - wariant 54"
 tags:
+- trudnosc-5
 - fantasy
 - wrozki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/5/zabki-5.svg
 pdf: /zwierzeta/zabki/5/zabki-5.pdf
 alt: "Kolorowanka do druku zabka"
 tags:
+- trudnosc-5
 - zwierzeta
 - zabki
 ---

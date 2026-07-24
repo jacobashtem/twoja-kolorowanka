@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/47/swinki-47.svg
 pdf: /zwierzeta/swinki/47/swinki-47.pdf
 alt: "Malowanka swinki do druku A4"
 tags:
+- trudnosc-4
 - zwierzeta
 - swinki
 ---

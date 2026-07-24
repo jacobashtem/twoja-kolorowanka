@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/28/t-rex-28.svg
 pdf: /zwierzeta/t-rex/28/t-rex-28.pdf
 alt: "Kolorowanka z t-rex do pobrania"
 tags:
+- trudnosc-8
 - zwierzeta
 - t-rex
 ---

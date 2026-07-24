@@ -7,6 +7,7 @@ image: /rosliny/dynie/7/dynie-7.svg
 pdf: /rosliny/dynie/7/dynie-7.pdf
 alt: "dynie do druku i pokolorowania"
 tags:
+- trudnosc-10
 - rosliny
 - dynie
 ---

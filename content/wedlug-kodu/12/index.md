@@ -7,6 +7,7 @@ image: /wedlug-kodu/12/wedlug-kodu-12.svg
 pdf: /wedlug-kodu/12/wedlug-kodu-12.pdf
 alt: "kolorowanka do druku wedlug-kodu PDF"
 tags:
+- trudnosc-9
 - wedlug-kodu
 - wedlug-kodu
 ---

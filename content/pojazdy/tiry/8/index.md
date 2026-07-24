@@ -7,6 +7,7 @@ image: /pojazdy/tiry/8/tir-8.svg
 pdf: /pojazdy/tiry/8/tir-8.pdf
 alt: "Darmowa kolorowanka tir do druku PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - tir
 ---

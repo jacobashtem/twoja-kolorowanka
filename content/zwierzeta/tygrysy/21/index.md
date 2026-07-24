@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/21/tygrysy-21.svg
 pdf: /zwierzeta/tygrysy/21/tygrysy-21.pdf
 alt: "tygrysy kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - zwierzeta
 - tygrysy
 ---

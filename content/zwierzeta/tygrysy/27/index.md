@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/27/tygrysy-27.svg
 pdf: /zwierzeta/tygrysy/27/tygrysy-27.pdf
 alt: "tygrysy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - zwierzeta
 - tygrysy
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samochody/56/samochody-56.svg
 pdf: /pojazdy/samochody/56/samochody-56.pdf
 alt: "Kolorowanki samochody"
 tags:
+- trudnosc-6
 - pojazdy
 - samochody
 ---

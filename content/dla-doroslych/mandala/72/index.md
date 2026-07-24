@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/72/mandala-72.svg
 pdf: /dla-doroslych/mandala/72/mandala-72.pdf
 alt: "Pokoloruj mandala – darmowy szablon PDF"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

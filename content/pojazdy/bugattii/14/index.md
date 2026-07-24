@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/14/bugattii-14.svg
 pdf: /pojazdy/bugattii/14/bugattii-14.pdf
 alt: "Edukacyjna kolorowanka bugattii do wydruku"
 tags:
+- trudnosc-9
 - pojazdy
 - bugattii
 ---

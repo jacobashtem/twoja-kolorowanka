@@ -7,6 +7,7 @@ image: /pory-roku/jesien/53/jesien-53.svg
 pdf: /pory-roku/jesien/53/jesien-53.pdf
 alt: "Prosta kolorowanka jesien do kolorowania"
 tags:
+- trudnosc-4
 - pory-roku
 - jesien
 ---

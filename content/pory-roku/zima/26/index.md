@@ -7,6 +7,7 @@ image: /pory-roku/zima/26/zima-26.svg
 pdf: /pory-roku/zima/26/zima-26.pdf
 alt: "Kolorowanki zima"
 tags:
+- trudnosc-6
 - pory-roku
 - zima
 ---

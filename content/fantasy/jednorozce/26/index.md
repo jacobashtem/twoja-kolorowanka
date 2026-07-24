@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/26/jednorozce-26.svg
 pdf: /fantasy/jednorozce/26/jednorozce-26.pdf
 alt: "Darmowa kolorowanka jednorozce do druku PDF - wariant 26"
 tags:
+- trudnosc-6
 - fantasy
 - jednorozce
 ---

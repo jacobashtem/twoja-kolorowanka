@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/26/niedzwiedzie-26.svg
 pdf: /zwierzeta/niedzwiedzie/26/niedzwiedzie-26.pdf
 alt: "Darmowa kolorowanka niedzwiedzie do druku PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - niedzwiedzie
 ---

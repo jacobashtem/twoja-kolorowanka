@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/16/bugattii-16.svg
 pdf: /pojazdy/bugattii/16/bugattii-16.pdf
 alt: "Kolorowanka bugattii – format A4 PDF"
 tags:
+- trudnosc-7
 - pojazdy
 - bugattii
 ---

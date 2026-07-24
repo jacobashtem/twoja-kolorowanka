@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/22/pociagi-22.svg
 pdf: /pojazdy/pociagi/22/pociagi-22.pdf
 alt: "pociagi kolorowanki dla dzieci"
 tags:
+- trudnosc-4
 - pojazdy
 - pociagi
 ---

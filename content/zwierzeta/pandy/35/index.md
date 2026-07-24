@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/35/pandy-35.svg
 pdf: /zwierzeta/pandy/35/pandy-35.pdf
 alt: "Prosta kolorowanka pandy do kolorowania"
 tags:
+- trudnosc-10
 - zwierzeta
 - pandy
 ---

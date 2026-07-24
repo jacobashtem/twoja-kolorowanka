@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/4/wilki-4.svg
 pdf: /zwierzeta/wilki/4/wilki-4.pdf
 alt: "wilki kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - zwierzeta
 - wilki
 ---

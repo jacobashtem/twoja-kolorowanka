@@ -7,6 +7,7 @@ image: /wedlug-kodu/30/wedlug-kodu-30.svg
 pdf: /wedlug-kodu/30/wedlug-kodu-30.pdf
 alt: "kolorowanka do druku wedlug-kodu PDF"
 tags:
+- trudnosc-9
 - wedlug-kodu
 - wedlug-kodu
 ---

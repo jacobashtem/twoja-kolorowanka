@@ -7,6 +7,7 @@ image: /pojazdy/samochody/17/samochody-17.svg
 pdf: /pojazdy/samochody/17/samochody-17.pdf
 alt: "Prosta kolorowanka samochody do kolorowania"
 tags:
+- trudnosc-5
 - pojazdy
 - samochody
 ---

@@ -7,6 +7,7 @@ image: /jedzenie/lody/16/lody-16.svg
 pdf: /jedzenie/lody/16/lody-16.pdf
 alt: "Kolorowanka lody – format A4 PDF"
 tags:
+- trudnosc-3
 - jedzenie
 - lody
 ---

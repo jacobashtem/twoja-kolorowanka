@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/4/ciagniki-4.svg
 pdf: /pojazdy/ciagniki/4/ciagniki-4.pdf
 alt: "ciagniki kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - pojazdy
 - ciagniki
 ---

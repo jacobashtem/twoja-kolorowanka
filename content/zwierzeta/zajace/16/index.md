@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/16/zajace-16.svg
 pdf: /zwierzeta/zajace/16/zajace-16.pdf
 alt: "Kolorowanka zajace – format A4 PDF"
 tags:
+- trudnosc-7
 - zwierzeta
 - zajace
 ---

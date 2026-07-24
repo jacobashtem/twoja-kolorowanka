@@ -7,6 +7,7 @@ image: /fantasy/elfy/38/elfy-38.svg
 pdf: /fantasy/elfy/38/elfy-38.pdf
 alt: "Kolorowanki elfy"
 tags:
+- trudnosc-10
 - fantasy
 - elfy
 ---

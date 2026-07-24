@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/28/flamingi-28.svg
 pdf: /zwierzeta/flamingi/28/flamingi-28.pdf
 alt: "Kolorowanka z flamingi do pobrania"
 tags:
+- trudnosc-9
 - zwierzeta
 - flamingi
 ---

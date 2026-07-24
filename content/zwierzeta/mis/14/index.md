@@ -7,6 +7,7 @@ image: /zwierzeta/mis/14/mis-14.svg
 pdf: /zwierzeta/mis/14/mis-14.pdf
 alt: "Edukacyjna kolorowanka mis do wydruku"
 tags:
+- trudnosc-2
 - zwierzeta
 - mis
 ---

@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/17/mandala-17.svg
 pdf: /dla-doroslych/mandala/17/mandala-17.pdf
 alt: "Prosta kolorowanka mandala do kolorowania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

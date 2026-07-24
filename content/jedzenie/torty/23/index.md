@@ -7,6 +7,7 @@ image: /jedzenie/torty/23/torty-23.svg
 pdf: /jedzenie/torty/23/torty-23.pdf
 alt: "Kolorowanka do druku torty"
 tags:
+- trudnosc-5
 - jedzenie
 - torty
 ---

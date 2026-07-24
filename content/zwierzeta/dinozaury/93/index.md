@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/93/dinozaury-93.svg
 pdf: /zwierzeta/dinozaury/93/dinozaury-93.pdf
 alt: "dinozaury kolorowanka dla dzieci"
 tags:
+- trudnosc-6
 - zwierzeta
 - dinozaury
 ---

@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/8/urodziny-8.svg
 pdf: /okolicznosciowe/urodziny/8/urodziny-8.pdf
 alt: "urodziny do druku i pokolorowania"
 tags:
+- trudnosc-3
 - okolicznosciowe
 - urodziny
 ---

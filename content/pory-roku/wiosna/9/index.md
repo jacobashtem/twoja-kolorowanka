@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/9/wiosna-9.svg
 pdf: /pory-roku/wiosna/9/wiosna-9.pdf
 alt: "wiosna – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-10
 - pory-roku
 - wiosna
 ---

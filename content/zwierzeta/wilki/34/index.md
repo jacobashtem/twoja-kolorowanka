@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/34/wilki-34.svg
 pdf: /zwierzeta/wilki/34/wilki-34.pdf
 alt: "Kolorowanka wilki – format A4 PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - wilki
 ---

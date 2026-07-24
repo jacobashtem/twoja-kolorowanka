@@ -7,6 +7,7 @@ image: /pojazdy/bmw/8/bmw-8.svg
 pdf: /pojazdy/bmw/8/bmw-8.pdf
 alt: "Darmowa kolorowanka bmw do druku PDF"
 tags:
+- trudnosc-5
 - pojazdy
 - bmw
 ---

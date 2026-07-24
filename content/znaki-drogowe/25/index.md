@@ -7,6 +7,7 @@ image: /znaki-drogowe/25/znaki-drogowe-25.svg
 pdf: /znaki-drogowe/25/znaki-drogowe-25.pdf
 alt: "znaki-drogowe do druku i pokolorowania"
 tags:
+- trudnosc-1
 - znaki-drogowe
 - znaki-drogowe
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/lato/90/lato-90.svg
 pdf: /pory-roku/lato/90/lato-90.pdf
 alt: "Pokoloruj lato – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - pory-roku
 - lato
 ---

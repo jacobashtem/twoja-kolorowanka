@@ -7,6 +7,7 @@ image: /fantasy/wrozki/23/wrozki-23.svg
 pdf: /fantasy/wrozki/23/wrozki-23.pdf
 alt: "Kolorowanka do druku wrozki - wariant 23"
 tags:
+- trudnosc-8
 - fantasy
 - wrozki
 ---

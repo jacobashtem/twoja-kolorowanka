@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/27/pociagi-27.svg
 pdf: /pojazdy/pociagi/27/pociagi-27.pdf
 alt: "pociagi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - pojazdy
 - pociagi
 ---

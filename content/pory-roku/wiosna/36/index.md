@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/36/wiosna-36.svg
 pdf: /pory-roku/wiosna/36/wiosna-36.pdf
 alt: "Pokoloruj wiosna – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - pory-roku
 - wiosna
 ---

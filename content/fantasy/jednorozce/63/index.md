@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/63/jednorozce-63.svg
 pdf: /fantasy/jednorozce/63/jednorozce-63.pdf
 alt: "jednorozce – pobierz i wydrukuj kolorowankę - wariant 63"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/25/flamingi-25.svg
 pdf: /zwierzeta/flamingi/25/flamingi-25.pdf
 alt: "flamingi do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - flamingi
 ---

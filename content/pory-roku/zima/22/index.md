@@ -7,6 +7,7 @@ image: /pory-roku/zima/22/zima-22.svg
 pdf: /pory-roku/zima/22/zima-22.pdf
 alt: "zima kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - pory-roku
 - zima
 ---

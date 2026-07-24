@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/83/kroliczki-83.svg
 pdf: /kroliczki/83/kroliczki-83.pdf
 tags:
+- trudnosc-1
 - zwierzeta
 - kroliczki
 alt: "Pokoloruj kroliczki – darmowy szablon PDF - wariant 83"

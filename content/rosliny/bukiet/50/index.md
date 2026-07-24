@@ -7,6 +7,7 @@ image: /rosliny/bukiet/50/bukiet-50.svg
 pdf: /rosliny/bukiet/50/bukiet-50.pdf
 alt: "Edukacyjna kolorowanka bukiet do wydruku"
 tags:
+- trudnosc-10
 - rosliny
 - bukiet
 ---

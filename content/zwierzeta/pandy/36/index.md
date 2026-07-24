@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/36/pandy-36.svg
 pdf: /zwierzeta/pandy/36/pandy-36.pdf
 alt: "Pokoloruj pandy – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - pandy
 ---

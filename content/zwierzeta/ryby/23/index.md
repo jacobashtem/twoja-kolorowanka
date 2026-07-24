@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/23/ryby-23.svg
 pdf: /zwierzeta/ryby/23/ryby-23.pdf
 alt: "Edukacyjna kolorowanka ryby do wydruku"
 tags:
+- trudnosc-8
 - zwierzeta
 - ryby
 ---

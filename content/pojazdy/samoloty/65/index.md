@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/65/samoloty-65.svg
 pdf: /pojazdy/samoloty/65/samoloty-65.pdf
 alt: "Malowanka samoloty do druku A4"
 tags:
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

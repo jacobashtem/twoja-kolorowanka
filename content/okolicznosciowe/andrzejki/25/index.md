@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/25/andrzejki-25.svg
 pdf: /okolicznosciowe/andrzejki/25/andrzejki-25.pdf
 alt: "andrzejki do druku i pokolorowania"
 tags:
+- trudnosc-6
 - okolicznosciowe
 - andrzejki
 ---

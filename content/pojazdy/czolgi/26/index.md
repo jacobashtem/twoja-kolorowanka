@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/26/czolgi-26.svg
 pdf: /pojazdy/czolgi/26/czolgi-26.pdf
 alt: "Darmowa kolorowanka czolgi do druku PDF"
 tags:
+- trudnosc-7
 - pojazdy
 - czolgi
 ---

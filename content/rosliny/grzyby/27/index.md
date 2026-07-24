@@ -7,6 +7,7 @@ image: /rosliny/grzyby/27/grzyby-27.svg
 pdf: /rosliny/grzyby/27/grzyby-27.pdf
 alt: "grzyby – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - rosliny
 - grzyby
 ---

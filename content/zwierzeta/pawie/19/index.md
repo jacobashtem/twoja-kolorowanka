@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/19/pawie-19.svg
 pdf: /zwierzeta/pawie/19/pawie-19.pdf
 alt: "Kolorowanka pawie"
 tags:
+- trudnosc-8
 - zwierzeta
 - pawie
 ---

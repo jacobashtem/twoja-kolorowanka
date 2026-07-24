@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/46/sowy-46.svg
 pdf: /zwierzeta/sowy/46/sowy-46.pdf
 alt: "Kolorowanka z sowy do pobrania"
 tags:
+- trudnosc-9
 - zwierzeta
 - sowy
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/31/zabki-31.svg
 pdf: /zwierzeta/zabki/31/zabki-31.pdf
 alt: "Łatwa Kolorowanka Zabki dla przedszkolaka"
 tags:
+- trudnosc-5
 - zwierzeta
 - zabki
 ---

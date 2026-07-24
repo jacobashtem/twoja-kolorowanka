@@ -7,6 +7,7 @@ image: /pojazdy/tiry/1/tir-1.svg
 pdf: /pojazdy/tiry/1/tir-1.pdf
 alt: "Kolorowanka tir"
 tags:
+- trudnosc-6
 - pojazdy
 - tir
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/bmw/45/bmw-45.svg
 pdf: /pojazdy/bmw/45/bmw-45.pdf
 alt: "bmw – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - pojazdy
 - bmw
 ---

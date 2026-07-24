@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/4/urodziny-4.svg
 pdf: /okolicznosciowe/urodziny/4/urodziny-4.pdf
 alt: "urodziny kolorowanka dla dzieci"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - urodziny
 ---

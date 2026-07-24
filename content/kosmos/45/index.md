@@ -7,6 +7,7 @@ image: /kosmos/45/kosmos-45.svg
 pdf: /kosmos/45/kosmos-45.pdf
 alt: "kosmos – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-10
 - kosmos
 - kosmos
 ---

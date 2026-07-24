@@ -7,6 +7,7 @@ image: /rosliny/kwiat/69/kwiat-69.svg
 pdf: /rosliny/kwiat/69/kwiat-69.pdf
 alt: "Kolorowanka do druku kwiat"
 tags:
+- trudnosc-8
 - rosliny
 - kwiat
 ---

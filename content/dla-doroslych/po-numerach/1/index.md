@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/1/po-numerach-1.svg
 pdf: /dla-doroslych/po-numerach/1/po-numerach-1.pdf
 alt: "Kolorowanka po-numerach"
 tags:
+- trudnosc-9
 - dla-doroslych
 - po-numerach
 ---

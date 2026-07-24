@@ -7,6 +7,7 @@ image: /pojazdy/traktory/8/traktory-8.svg
 pdf: /pojazdy/traktory/8/traktory-8.pdf
 alt: "Darmowa kolorowanka traktory do druku PDF"
 tags:
+- trudnosc-10
 - pojazdy
 - traktory
 ---

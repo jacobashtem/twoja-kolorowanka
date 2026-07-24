@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/5/po-numerach-5.svg
 pdf: /dla-doroslych/po-numerach/5/po-numerach-5.pdf
 alt: "Kolorowanka do druku po-numerach"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

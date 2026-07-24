@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/37/swinki-37.svg
 pdf: /zwierzeta/swinki/37/swinki-37.pdf
 alt: "Kolorowanka swinki"
 tags:
+- trudnosc-5
 - zwierzeta
 - swinki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/38/biedronki-38.svg
 pdf: /zwierzeta/biedronki/38/biedronki-38.pdf
 alt: "Kolorowanki biedronki"
 tags:
+- trudnosc-7
 - zwierzeta
 - biedronki
 ---

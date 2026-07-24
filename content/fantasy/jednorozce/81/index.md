@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/81/jednorozce-81.svg
 pdf: /fantasy/jednorozce/81/jednorozce-81.pdf
 alt: "jednorozce – pobierz i wydrukuj kolorowankę - wariant 81"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

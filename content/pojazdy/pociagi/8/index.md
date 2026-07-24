@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/8/pociagi-8.svg
 pdf: /pojazdy/pociagi/8/pociagi-8.pdf
 alt: "Darmowa kolorowanka pociagi do druku PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

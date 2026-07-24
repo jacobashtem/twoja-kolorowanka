@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/20/rakiety-20.svg
 pdf: /pojazdy/rakiety/20/rakiety-20.pdf
 alt: "Kolorowanki rakiety"
 tags:
+- trudnosc-2
 - pojazdy
 - rakiety
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/59/ptaki-59.svg
 pdf: /zwierzeta/ptaki/59/ptaki-59.pdf
 alt: "Kolorowanka do druku ptaki"
 tags:
+- trudnosc-4
 - zwierzeta
 - ptaki
 ---

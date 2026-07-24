@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/15/dinozaury-15.svg
 pdf: /zwierzeta/dinozaury/15/dinozaury-15.pdf
 alt: "dinozaury kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - zwierzeta
 - dinozaury
 ---

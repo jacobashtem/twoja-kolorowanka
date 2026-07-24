@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/14/andrzejki-14.svg
 pdf: /okolicznosciowe/andrzejki/14/andrzejki-14.pdf
 alt: "Edukacyjna kolorowanka andrzejki do wydruku"
 tags:
+- trudnosc-6
 - okolicznosciowe
 - andrzejki
 ---

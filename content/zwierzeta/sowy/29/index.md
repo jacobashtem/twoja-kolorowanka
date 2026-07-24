@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/29/sowy-29.svg
 pdf: /zwierzeta/sowy/29/sowy-29.pdf
 alt: "Malowanka sowy do druku A4"
 tags:
+- trudnosc-1
 - zwierzeta
 - sowy
 ---

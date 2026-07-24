@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/11/wiosna-11.svg
 pdf: /pory-roku/wiosna/11/wiosna-11.pdf
 alt: "Malowanka wiosna do druku A4"
 tags:
+- trudnosc-8
 - pory-roku
 - wiosna
 ---

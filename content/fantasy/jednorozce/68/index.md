@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/68/jednorozce-68.svg
 pdf: /fantasy/jednorozce/68/jednorozce-68.pdf
 alt: "Edukacyjna kolorowanka jednorozce do wydruku - wariant 68"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

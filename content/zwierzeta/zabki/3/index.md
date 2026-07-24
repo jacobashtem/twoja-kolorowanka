@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/3/zabki-3.svg
 pdf: /zwierzeta/zabki/3/zabki-3.pdf
 alt: "zabka kolorowanka dla dzieci"
 tags:
+- trudnosc-6
 - zwierzeta
 - zabki
 ---

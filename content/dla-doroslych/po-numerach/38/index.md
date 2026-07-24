@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/38/po-numerach-38.svg
 pdf: /dla-doroslych/po-numerach/38/po-numerach-38.pdf
 alt: "Kolorowanki po-numerach"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

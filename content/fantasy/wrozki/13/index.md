@@ -7,6 +7,7 @@ image: /fantasy/wrozki/13/wrozki-13.svg
 pdf: /fantasy/wrozki/13/wrozki-13.pdf
 alt: "Łatwa kolorowanka wrozki dla przedszkolaka - wariant 13"
 tags:
+- trudnosc-2
 - fantasy
 - wrozki
 ---

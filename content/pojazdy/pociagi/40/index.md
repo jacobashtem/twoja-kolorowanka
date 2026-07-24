@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/40/pociagi-40.svg
 pdf: /pojazdy/pociagi/40/pociagi-40.pdf
 alt: "pociagi kolorowanki dla dzieci"
 tags:
+- trudnosc-5
 - pojazdy
 - pociagi
 ---

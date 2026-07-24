@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/37/ciagniki-37.svg
 pdf: /pojazdy/ciagniki/37/ciagniki-37.pdf
 alt: "Kolorowanka ciagniki"
 tags:
+- trudnosc-5
 - pojazdy
 - ciagniki
 ---

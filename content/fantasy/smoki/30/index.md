@@ -7,6 +7,7 @@ image: /fantasy/smoki/30/smoki-30.svg
 pdf: /fantasy/smoki/30/smoki-30.pdf
 alt: "kolorowanka do druku smoki PDF - wariant 30"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

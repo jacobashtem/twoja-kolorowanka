@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/17/papugi-17.svg
 pdf: /zwierzeta/papugi/17/papugi-17.pdf
 alt: "Prosta kolorowanka papugi do kolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - papugi
 ---

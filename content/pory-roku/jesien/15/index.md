@@ -7,6 +7,7 @@ image: /pory-roku/jesien/15/jesien-15.svg
 pdf: /pory-roku/jesien/15/jesien-15.pdf
 alt: "jesien kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - pory-roku
 - jesien
 ---

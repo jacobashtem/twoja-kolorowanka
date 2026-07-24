@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/28/ryby-28.svg
 pdf: /zwierzeta/ryby/28/ryby-28.pdf
 alt: "Kolorowanka ryby"
 tags:
+- trudnosc-3
 - zwierzeta
 - ryby
 ---

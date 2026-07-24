@@ -7,6 +7,7 @@ image: /jedzenie/torty/27/torty-27.svg
 pdf: /jedzenie/torty/27/torty-27.pdf
 alt: "torty – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - jedzenie
 - torty
 ---

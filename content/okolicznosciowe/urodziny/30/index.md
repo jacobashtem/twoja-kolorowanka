@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/30/urodziny-30.svg
 pdf: /okolicznosciowe/urodziny/30/urodziny-30.pdf
 alt: "Malowanka urodziny do druku A4"
 tags:
+- trudnosc-3
 - okolicznosciowe
 - urodziny
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/17/samoloty-17.svg
 pdf: /pojazdy/samoloty/17/samoloty-17.pdf
 alt: "Prosta kolorowanka samoloty do kolorowania"
 tags:
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

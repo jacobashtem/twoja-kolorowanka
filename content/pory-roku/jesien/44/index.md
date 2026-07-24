@@ -7,6 +7,7 @@ image: /pory-roku/jesien/44/jesien-44.svg
 pdf: /pory-roku/jesien/44/jesien-44.pdf
 alt: "Darmowa kolorowanka jesien do druku PDF"
 tags:
+- trudnosc-3
 - pory-roku
 - jesien
 ---

@@ -1,8 +1,9 @@
 // Wspolna logika pinow Pinterest: chodzenie po leafach, frontmatter, kompozycja grafiki 1000x1500.
 // Uzywana przez scripts/generate-pins.mjs (pliki na dysk) i scripts/pinterest/publish.mjs (API, in-memory).
+// sharp importowany leniwie w composePin - dzieki temu skrypty czysto-contentowe
+// (tag-difficulty w CI) dzialaja bez instalowania zaleznosci graficznych.
 import { readdirSync, statSync, existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
-import sharp from 'sharp'
 
 export const ROOT = new URL('../..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 export const CONTENT = join(ROOT, 'content')
@@ -85,6 +86,7 @@ export function pinMeta (leafDir) {
 
 // Buffer JPEG pinu 1000x1500
 export async function composePin (meta) {
+  const sharp = (await import('sharp')).default
   const img = await sharp(meta.view)
     .resize({ width: IMG_BOX.w, height: IMG_BOX.h, fit: 'inside' })
     .toBuffer({ resolveWithObject: true })

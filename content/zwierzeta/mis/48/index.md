@@ -7,6 +7,7 @@ image: /zwierzeta/mis/48/mis-48.svg
 pdf: /zwierzeta/mis/48/mis-48.pdf
 alt: "kolorowanka do druku mis PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - mis
 ---

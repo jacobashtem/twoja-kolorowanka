@@ -7,6 +7,7 @@ image: /pojazdy/traktory/32/traktory-32.svg
 pdf: /pojazdy/traktory/32/traktory-32.pdf
 alt: "Edukacyjna kolorowanka traktory do wydruku"
 tags:
+- trudnosc-5
 - pojazdy
 - traktory
 ---

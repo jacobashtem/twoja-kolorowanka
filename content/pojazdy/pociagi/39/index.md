@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/39/pociagi-39.svg
 pdf: /pojazdy/pociagi/39/pociagi-39.pdf
 alt: "pociagi kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

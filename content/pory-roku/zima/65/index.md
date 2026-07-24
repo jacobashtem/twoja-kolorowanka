@@ -7,6 +7,7 @@ image: /pory-roku/zima/65/zima-65.svg
 pdf: /pory-roku/zima/65/zima-65.pdf
 alt: "Kolorowanka do druku zima"
 tags:
+- trudnosc-8
 - pory-roku
 - zima
 ---

@@ -7,6 +7,7 @@ image: /fantasy/smoki/83/smoki-83.svg
 pdf: /fantasy/smoki/83/smoki-83.pdf
 alt: "Malowanka smoki do druku A4 - wariant 83"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

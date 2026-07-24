@@ -7,6 +7,7 @@ image: /pory-roku/lato/70/lato-70.svg
 pdf: /pory-roku/lato/70/lato-70.pdf
 alt: "Kolorowanka lato – format A4 PDF"
 tags:
+- trudnosc-8
 - pory-roku
 - lato
 ---

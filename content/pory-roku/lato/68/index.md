@@ -7,6 +7,7 @@ image: /pory-roku/lato/68/lato-68.svg
 pdf: /pory-roku/lato/68/lato-68.pdf
 alt: "Edukacyjna kolorowanka lato do wydruku"
 tags:
+- trudnosc-8
 - pory-roku
 - lato
 ---

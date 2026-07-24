@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/7/czolgi-7.svg
 pdf: /pojazdy/czolgi/7/czolgi-7.pdf
 alt: "czolgi do druku i pokolorowania"
 tags:
+- trudnosc-10
 - pojazdy
 - czolgi
 ---

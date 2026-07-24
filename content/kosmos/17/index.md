@@ -7,6 +7,7 @@ image: /kosmos/17/kosmos-17.svg
 pdf: /kosmos/17/kosmos-17.pdf
 alt: "Prosta kolorowanka kosmos do kolorowania"
 tags:
+- trudnosc-2
 - kosmos
 - kosmos
 ---

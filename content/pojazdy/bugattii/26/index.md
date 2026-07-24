@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/26/bugattii-26.svg
 pdf: /pojazdy/bugattii/26/bugattii-26.pdf
 alt: "Darmowa kolorowanka bugattii do druku PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - bugattii
 ---

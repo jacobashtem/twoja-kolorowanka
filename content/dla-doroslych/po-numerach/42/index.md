@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/42/po-numerach-42.svg
 pdf: /dla-doroslych/po-numerach/42/po-numerach-42.pdf
 alt: "Kolorowanki do druku po-numerach"
 tags:
+- trudnosc-8
 - dla-doroslych
 - po-numerach
 ---

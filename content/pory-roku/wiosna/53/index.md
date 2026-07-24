@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/53/wiosna-53.svg
 pdf: /pory-roku/wiosna/53/wiosna-53.pdf
 alt: "Prosta kolorowanka wiosna do kolorowania"
 tags:
+- trudnosc-7
 - pory-roku
 - wiosna
 ---

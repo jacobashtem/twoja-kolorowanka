@@ -7,6 +7,7 @@ image: /rosliny/grzyby/18/grzyby-18.svg
 pdf: /rosliny/grzyby/18/grzyby-18.pdf
 alt: "Pokoloruj grzyby – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - rosliny
 - grzyby
 ---

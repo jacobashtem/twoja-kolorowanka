@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/20/koty-20.svg
 pdf: /koty/20/koty-20.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Łatwa kolorowanka koty dla przedszkolaka - wariant 20"

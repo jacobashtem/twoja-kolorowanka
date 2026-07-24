@@ -7,6 +7,7 @@ image: /dom/16/dom-16.svg
 pdf: /dom/16/dom-16.pdf
 alt: "Kolorowanka dom – format A4 PDF"
 tags:
+- trudnosc-9
 - dom
 - dom
 ---

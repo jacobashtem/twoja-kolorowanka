@@ -7,6 +7,7 @@ image: /pojazdy/traktory/11/traktory-11.svg
 pdf: /pojazdy/traktory/11/traktory-11.pdf
 alt: "Malowanka traktory do druku A4"
 tags:
+- trudnosc-5
 - pojazdy
 - traktory
 ---

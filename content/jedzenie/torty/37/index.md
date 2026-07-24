@@ -7,6 +7,7 @@ image: /jedzenie/torty/37/torty-37.svg
 pdf: /jedzenie/torty/37/torty-37.pdf
 alt: "Kolorowanka torty"
 tags:
+- trudnosc-5
 - jedzenie
 - torty
 ---

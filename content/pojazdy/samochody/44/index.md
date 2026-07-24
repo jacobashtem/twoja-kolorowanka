@@ -7,6 +7,7 @@ image: /pojazdy/samochody/44/samochody-44.svg
 pdf: /pojazdy/samochody/44/samochody-44.pdf
 alt: "Darmowa kolorowanka samochody do druku PDF"
 tags:
+- trudnosc-10
 - pojazdy
 - samochody
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/21/chomiki-21.svg
 pdf: /zwierzeta/chomiki/21/chomiki-21.pdf
 alt: "chomiki kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - zwierzeta
 - chomiki
 ---

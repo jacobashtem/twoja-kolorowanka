@@ -7,6 +7,7 @@ image: /fantasy/smoki/65/smoki-65.svg
 pdf: /fantasy/smoki/65/smoki-65.pdf
 alt: "Malowanka smoki do druku A4 - wariant 65"
 tags:
+- trudnosc-3
 - fantasy
 - smoki
 ---

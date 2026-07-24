@@ -7,6 +7,7 @@ image: /fantasy/elfy/17/elfy-17.svg
 pdf: /fantasy/elfy/17/elfy-17.pdf
 alt: "Prosta kolorowanka elfy do kolorowania"
 tags:
+- trudnosc-9
 - fantasy
 - elfy
 ---

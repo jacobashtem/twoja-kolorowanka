@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/43/lwy-43.svg
 pdf: /zwierzeta/lwy/43/lwy-43.pdf
 alt: "lwy do druku i pokolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - lwy
 ---

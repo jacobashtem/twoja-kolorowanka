@@ -7,6 +7,7 @@ image: /rosliny/grzyby/4/grzyby-4.svg
 pdf: /rosliny/grzyby/4/grzyby-4.pdf
 alt: "grzyby kolorowanki dla dzieci"
 tags:
+- trudnosc-8
 - rosliny
 - grzyby
 ---

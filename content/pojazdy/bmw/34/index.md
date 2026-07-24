@@ -7,6 +7,7 @@ image: /pojazdy/bmw/34/bmw-34.svg
 pdf: /pojazdy/bmw/34/bmw-34.pdf
 alt: "Kolorowanka bmw – format A4 PDF"
 tags:
+- trudnosc-10
 - pojazdy
 - bmw
 ---

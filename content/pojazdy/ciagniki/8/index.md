@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/8/ciagniki-8.svg
 pdf: /pojazdy/ciagniki/8/ciagniki-8.pdf
 alt: "Darmowa kolorowanka ciagniki do druku PDF"
 tags:
+- trudnosc-5
 - pojazdy
 - ciagniki
 ---

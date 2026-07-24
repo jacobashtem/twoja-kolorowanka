@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/63/dinozaury-63.svg
 pdf: /zwierzeta/dinozaury/63/dinozaury-63.pdf
 alt: "dinozaury – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---

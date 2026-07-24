@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/10/po-numerach-10.svg
 pdf: /dla-doroslych/po-numerach/10/po-numerach-10.pdf
 alt: "Kolorowanka z po-numerach do pobrania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/35/biedronki-35.svg
 pdf: /zwierzeta/biedronki/35/biedronki-35.pdf
 alt: "Prosta kolorowanka biedronki do kolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - biedronki
 ---

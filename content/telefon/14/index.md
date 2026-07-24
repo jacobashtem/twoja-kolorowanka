@@ -7,6 +7,7 @@ image: /telefon/14/telefon-14.svg
 pdf: /telefon/14/telefon-14.pdf
 alt: "Edukacyjna kolorowanka telefon do wydruku"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

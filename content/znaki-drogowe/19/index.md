@@ -7,6 +7,7 @@ image: /znaki-drogowe/19/znaki-drogowe-19.svg
 pdf: /znaki-drogowe/19/znaki-drogowe-19.pdf
 alt: "Kolorowanka znaki-drogowe"
 tags:
+- trudnosc-2
 - znaki-drogowe
 - znaki-drogowe
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/52/samoloty-52.svg
 pdf: /pojazdy/samoloty/52/samoloty-52.pdf
 alt: "Kolorowanka samoloty – format A4 PDF"
 tags:
+- trudnosc-8
 - pojazdy
 - samoloty
 ---

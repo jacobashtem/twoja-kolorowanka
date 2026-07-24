@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/36/bugattii-36.svg
 pdf: /pojazdy/bugattii/36/bugattii-36.pdf
 alt: "Pokoloruj bugattii – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - bugattii
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/2/bugattii-2.svg
 pdf: /pojazdy/bugattii/2/bugattii-2.pdf
 alt: "Kolorowanki bugattii"
 tags:
+- trudnosc-10
 - pojazdy
 - bugattii
 ---

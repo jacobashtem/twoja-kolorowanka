@@ -7,6 +7,7 @@ image: /fantasy/wrozki/50/wrozki-50.svg
 pdf: /fantasy/wrozki/50/wrozki-50.pdf
 alt: "Edukacyjna kolorowanka wrozki do wydruku - wariant 50"
 tags:
+- trudnosc-9
 - fantasy
 - wrozki
 ---

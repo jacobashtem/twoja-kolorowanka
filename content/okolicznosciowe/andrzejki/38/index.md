@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/38/andrzejki-38.svg
 pdf: /okolicznosciowe/andrzejki/38/andrzejki-38.pdf
 alt: "Kolorowanki andrzejki"
 tags:
+- trudnosc-4
 - okolicznosciowe
 - andrzejki
 ---

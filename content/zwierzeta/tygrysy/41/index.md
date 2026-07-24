@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/41/tygrysy-41.svg
 pdf: /zwierzeta/tygrysy/41/tygrysy-41.pdf
 alt: "Kolorowanka do druku tygrysy"
 tags:
+- trudnosc-8
 - zwierzeta
 - tygrysy
 ---

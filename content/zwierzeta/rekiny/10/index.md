@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/10/rekiny-10.svg
 pdf: /zwierzeta/rekiny/10/rekiny-10.pdf
 alt: "Kolorowanka z rekiny do pobrania"
 tags:
+- trudnosc-5
 - zwierzeta
 - rekiny
 ---

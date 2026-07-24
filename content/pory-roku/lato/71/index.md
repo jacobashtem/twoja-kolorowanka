@@ -7,6 +7,7 @@ image: /pory-roku/lato/71/lato-71.svg
 pdf: /pory-roku/lato/71/lato-71.pdf
 alt: "Prosta kolorowanka lato do kolorowania"
 tags:
+- trudnosc-3
 - pory-roku
 - lato
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/traktory/52/traktory-52.svg
 pdf: /pojazdy/traktory/52/traktory-52.pdf
 alt: "Kolorowanka traktory – format A4 PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - traktory
 ---

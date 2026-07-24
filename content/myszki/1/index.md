@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/1/myszki-1.svg
 pdf: /zwierzeta/myszki/1/myszki-1.pdf
 alt: "Kolorowanka myszki"
 tags:
+- trudnosc-9
 - zwierzeta
 - myszki
 ---

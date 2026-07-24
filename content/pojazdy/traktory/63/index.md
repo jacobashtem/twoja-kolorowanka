@@ -7,6 +7,7 @@ image: /pojazdy/traktory/63/traktory-63.svg
 pdf: /pojazdy/traktory/63/traktory-63.pdf
 alt: "traktory – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - pojazdy
 - traktory
 ---

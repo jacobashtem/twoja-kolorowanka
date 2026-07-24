@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/20/biedronki-20.svg
 pdf: /zwierzeta/biedronki/20/biedronki-20.pdf
 alt: "Kolorowanki biedronki"
 tags:
+- trudnosc-7
 - zwierzeta
 - biedronki
 ---

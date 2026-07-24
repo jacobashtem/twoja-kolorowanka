@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/16/pieski-16.svg
 pdf: /pieski/16/pieski-16.pdf
 tags:
+- trudnosc-9
 - zwierzeta
 - pieski
 alt: "Darmowa kolorowanka pieski do druku PDF - wariant 16"

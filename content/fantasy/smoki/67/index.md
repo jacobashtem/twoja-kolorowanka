@@ -7,6 +7,7 @@ image: /fantasy/smoki/67/smoki-67.svg
 pdf: /fantasy/smoki/67/smoki-67.pdf
 alt: "Łatwa kolorowanka smoki dla przedszkolaka - wariant 67"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

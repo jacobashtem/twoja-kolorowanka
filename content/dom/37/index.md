@@ -7,6 +7,7 @@ image: /dom/37/dom-37.svg
 pdf: /dom/37/dom-37.pdf
 alt: "Kolorowanka dom"
 tags:
+- trudnosc-4
 - dom
 - dom
 ---

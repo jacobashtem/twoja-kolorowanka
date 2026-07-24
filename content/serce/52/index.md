@@ -7,6 +7,7 @@ image: /serce/52/serce-52.svg
 pdf: /serce/52/serce-52.pdf
 alt: "Kolorowanka serce – format A4 PDF"
 tags:
+- trudnosc-4
 - serce
 - serce
 ---

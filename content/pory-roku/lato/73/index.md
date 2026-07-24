@@ -7,6 +7,7 @@ image: /pory-roku/lato/73/lato-73.svg
 pdf: /pory-roku/lato/73/lato-73.pdf
 alt: "Kolorowanka lato"
 tags:
+- trudnosc-8
 - pory-roku
 - lato
 ---

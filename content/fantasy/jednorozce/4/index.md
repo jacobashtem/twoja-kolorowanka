@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/4/jednorozce-4.svg
 pdf: /fantasy/jednorozce/4/jednorozce-4.pdf
 alt: "jednorozce kolorowanki dla dzieci - wariant 4"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

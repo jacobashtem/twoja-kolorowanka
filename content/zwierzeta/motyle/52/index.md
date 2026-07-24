@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/52/motyle-52.svg
 pdf: /zwierzeta/motyle/52/motyle-52.pdf
 alt: "Kolorowanka motyle – format A4 PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - motyle
 ---

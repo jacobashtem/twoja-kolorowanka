@@ -7,6 +7,7 @@ image: /rosliny/grzyby/17/grzyby-17.svg
 pdf: /rosliny/grzyby/17/grzyby-17.pdf
 alt: "Prosta kolorowanka grzyby do kolorowania"
 tags:
+- trudnosc-8
 - rosliny
 - grzyby
 ---

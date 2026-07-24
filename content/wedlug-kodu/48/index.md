@@ -7,6 +7,7 @@ image: /wedlug-kodu/48/wedlug-kodu-48.svg
 pdf: /wedlug-kodu/48/wedlug-kodu-48.pdf
 alt: "kolorowanka do druku wedlug-kodu PDF"
 tags:
+- trudnosc-8
 - wedlug-kodu
 - wedlug-kodu
 ---

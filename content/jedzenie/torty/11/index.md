@@ -7,6 +7,7 @@ image: /jedzenie/torty/11/torty-11.svg
 pdf: /jedzenie/torty/11/torty-11.pdf
 alt: "Malowanka torty do druku A4"
 tags:
+- trudnosc-4
 - jedzenie
 - torty
 ---

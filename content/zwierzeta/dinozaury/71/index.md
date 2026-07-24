@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/71/dinozaury-71.svg
 pdf: /zwierzeta/dinozaury/71/dinozaury-71.pdf
 alt: "Prosta kolorowanka dinozaury do kolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - dinozaury
 ---

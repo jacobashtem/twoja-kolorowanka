@@ -7,6 +7,7 @@ image: /wedlug-kodu/11/wedlug-kodu-11.svg
 pdf: /wedlug-kodu/11/wedlug-kodu-11.pdf
 alt: "Malowanka wedlug-kodu do druku A4"
 tags:
+- trudnosc-10
 - wedlug-kodu
 - wedlug-kodu
 ---

@@ -7,6 +7,7 @@ image: /rosliny/kwiat/63/kwiat-63.svg
 pdf: /rosliny/kwiat/63/kwiat-63.pdf
 alt: "Prosta kolorowanka kwiat do kolorowania"
 tags:
+- trudnosc-7
 - rosliny
 - kwiat
 ---

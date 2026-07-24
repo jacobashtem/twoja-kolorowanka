@@ -7,6 +7,7 @@ image: /fantasy/syrenki/50/syrenki-50.svg
 pdf: /fantasy/syrenki/50/syrenki-50.pdf
 alt: "Darmowa kolorowanka syrenki do druku PDF"
 tags:
+- trudnosc-10
 - fantasy
 - syrenki
 ---

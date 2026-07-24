@@ -7,6 +7,7 @@ image: /dom/10/dom-10.svg
 pdf: /dom/10/dom-10.pdf
 alt: "Kolorowanka z dom do pobrania"
 tags:
+- trudnosc-6
 - dom
 - dom
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/7/pociagi-7.svg
 pdf: /pojazdy/pociagi/7/pociagi-7.pdf
 alt: "pociagi do druku i pokolorowania"
 tags:
+- trudnosc-10
 - pojazdy
 - pociagi
 ---

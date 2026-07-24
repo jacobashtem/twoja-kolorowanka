@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/20/wiosna-20.svg
 pdf: /pory-roku/wiosna/20/wiosna-20.pdf
 alt: "Kolorowanki wiosna"
 tags:
+- trudnosc-9
 - pory-roku
 - wiosna
 ---

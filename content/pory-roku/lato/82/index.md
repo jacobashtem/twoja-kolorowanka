@@ -7,6 +7,7 @@ image: /pory-roku/lato/82/lato-82.svg
 pdf: /pory-roku/lato/82/lato-82.pdf
 alt: "Kolorowanka z lato do pobrania"
 tags:
+- trudnosc-8
 - pory-roku
 - lato
 ---

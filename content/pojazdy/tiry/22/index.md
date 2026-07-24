@@ -7,6 +7,7 @@ image: /pojazdy/tiry/22/tir-22.svg
 pdf: /pojazdy/tiry/22/tir-22.pdf
 alt: "tir kolorowanki dla dzieci"
 tags:
+- trudnosc-7
 - pojazdy
 - tir
 ---

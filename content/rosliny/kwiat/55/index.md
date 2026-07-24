@@ -7,6 +7,7 @@ image: /rosliny/kwiat/55/kwiat-55.svg
 pdf: /rosliny/kwiat/55/kwiat-55.pdf
 alt: "kwiat – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - rosliny
 - kwiat
 ---

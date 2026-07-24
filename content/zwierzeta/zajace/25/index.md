@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/25/zajace-25.svg
 pdf: /zwierzeta/zajace/25/zajace-25.pdf
 alt: "zajace do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - zajace
 ---

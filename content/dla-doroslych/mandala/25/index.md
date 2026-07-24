@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/25/mandala-25.svg
 pdf: /dla-doroslych/mandala/25/mandala-25.pdf
 alt: "mandala do druku i pokolorowania"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

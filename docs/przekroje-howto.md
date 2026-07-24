@@ -8,7 +8,10 @@
 1. **Wybierz frazę** (np. „kolorowanki na Mikołajki") i slug URL: `kolorowanki-na-mikolajki`.
 2. **Utwórz plik** `content/kolorowanki/<slug>/index.md` (nazwa folderu = URL).
 3. **Dobierz tagi** do `tagsFilter` — galeria pokaże wszystkie leafy mające którykolwiek z nich.
-   Tagi leafów = slugi ich kategorii/podkategorii (np. `koty`, `mandala`, `kredka`).
+   Tagi leafów = slugi ich kategorii/podkategorii (np. `koty`, `mandala`, `kredka`) ORAZ
+   **tagi trudności `trudnosc-1` … `trudnosc-10`** (1 = najprostsze; nadawane automatycznie
+   przez `scripts/tag-difficulty.mjs` na podstawie złożoności SVG — cron miesięczny je uzupełnia
+   dla nowych kolorowanek). Przekroje wiekowe/poziomowe filtruj po trudności, tematyczne po kategoriach.
    Ile leafów ma dany tag: `grep -rl "^- koty$" content --include=index.md | grep -E "/[0-9]+/" | wc -l`
 4. **Napisz copy** (patrz szablon niżej): title, description, 4–6 sekcji `##`, 3–4 FAQ.
 5. **Sprawdź**: `pnpm health` (canonical + obrazki), lokalnie `pnpm dev` → `localhost:3000/kolorowanki/<slug>/`.
@@ -72,8 +75,8 @@ Zamknięcie z wezwaniem do działania i informacją o darmowych PDF A4.
 
 | URL | tagsFilter |
 |---|---|
-| /kolorowanki/latwe-kolorowanki/ | serce, dom, mis, zabki, jablka, lody |
-| /kolorowanki/kolorowanki-dla-3-latka/ | serce, dom, mis, zabki, jablka |
+| /kolorowanki/latwe-kolorowanki/ | trudnosc-1, trudnosc-2 |
+| /kolorowanki/kolorowanki-dla-3-latka/ | trudnosc-1 |
 | /kolorowanki/kolorowanki-dla-5-latka/ | koty, pieski, dinozaury, samochody, jednorozce, syrenki |
 | /kolorowanki/kolorowanki-do-wydruku-a4/ | koty, pieski, jednorozce, mandala, samochody, dinozaury, smoki, motyle |
 | /kolorowanki/pierwszy-dzien-szkoly/ | kredka, wedlug-kodu, znaki-drogowe |

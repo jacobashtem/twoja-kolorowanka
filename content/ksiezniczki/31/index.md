@@ -7,6 +7,7 @@ image: /ksiezniczki/31/ksiezniczki-31.svg
 pdf: /ksiezniczki/31/ksiezniczki-31.pdf
 alt: "Łatwa kolorowanka ksiezniczki dla przedszkolaka"
 tags:
+- trudnosc-5
 - ksiezniczki
 - ksiezniczki
 ---

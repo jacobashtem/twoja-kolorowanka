@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/16/rakiety-16.svg
 pdf: /pojazdy/rakiety/16/rakiety-16.pdf
 alt: "Kolorowanka rakiety – format A4 PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - rakiety
 ---

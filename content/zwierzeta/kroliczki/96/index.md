@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/96/kroliczki-96.svg
 pdf: /kroliczki/96/kroliczki-96.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - kroliczki
 alt: "Edukacyjna kolorowanka kroliczki do wydruku - wariant 96"

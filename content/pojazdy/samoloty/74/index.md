@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/74/samoloty-74.svg
 pdf: /pojazdy/samoloty/74/samoloty-74.pdf
 alt: "Kolorowanki samoloty"
 tags:
+- trudnosc-9
 - pojazdy
 - samoloty
 ---

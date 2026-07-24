@@ -5,6 +5,7 @@ description: Kolorowanka Koniki – wariant 16
 image: /koniki/16/koniki-16.svg
 pdf:   /koniki/16/koniki-16.pdf
 tags:
+- trudnosc-1
  - zwierzeta
  - koniki
 alt: "Darmowa kolorowanka koniki do druku PDF - wariant 16"

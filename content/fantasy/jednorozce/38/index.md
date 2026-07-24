@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/38/jednorozce-38.svg
 pdf: /fantasy/jednorozce/38/jednorozce-38.pdf
 alt: "Kolorowanki jednorozce - wariant 38"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

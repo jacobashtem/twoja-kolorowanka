@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/10/tygrysy-10.svg
 pdf: /zwierzeta/tygrysy/10/tygrysy-10.pdf
 alt: "Kolorowanka z tygrysy do pobrania"
 tags:
+- trudnosc-7
 - zwierzeta
 - tygrysy
 ---

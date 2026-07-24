@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/32/koty-32.svg
 pdf: /koty/32/koty-32.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - koty
 alt: "koty do druku i pokolorowania - wariant 32"

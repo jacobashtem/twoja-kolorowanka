@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/4/czolgi-4.svg
 pdf: /pojazdy/czolgi/4/czolgi-4.pdf
 alt: "czolgi kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - pojazdy
 - czolgi
 ---

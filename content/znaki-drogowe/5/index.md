@@ -7,6 +7,7 @@ image: /znaki-drogowe/5/znaki-drogowe-5.svg
 pdf: /znaki-drogowe/5/znaki-drogowe-5.pdf
 alt: "Kolorowanka do druku znaki-drogowe"
 tags:
+- trudnosc-4
 - znaki-drogowe
 - znaki-drogowe
 ---

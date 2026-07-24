@@ -7,6 +7,7 @@ image: /zwierzeta/mis/17/mis-17.svg
 pdf: /zwierzeta/mis/17/mis-17.pdf
 alt: "Prosta kolorowanka mis do kolorowania"
 tags:
+- trudnosc-3
 - zwierzeta
 - mis
 ---

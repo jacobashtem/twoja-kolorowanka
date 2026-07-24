@@ -7,6 +7,7 @@ image: /pory-roku/lato/85/lato-85.svg
 pdf: /pory-roku/lato/85/lato-85.pdf
 alt: "Łatwa kolorowanka lato dla przedszkolaka"
 tags:
+- trudnosc-5
 - pory-roku
 - lato
 ---

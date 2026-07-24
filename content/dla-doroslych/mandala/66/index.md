@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/66/mandala-66.svg
 pdf: /dla-doroslych/mandala/66/mandala-66.pdf
 alt: "kolorowanka do druku mandala PDF"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

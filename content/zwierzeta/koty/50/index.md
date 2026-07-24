@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/50/koty-50.svg
 pdf: /koty/50/koty-50.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - koty
 alt: "Darmowa kolorowanka koty do druku PDF - wariant 50"

@@ -7,6 +7,7 @@ image: /kredka/39/kredka-39.svg
 pdf: /kredka/39/kredka-39.pdf
 alt: "kredka kolorowanka dla dzieci"
 tags:
+- trudnosc-6
 - kredka
 - kredka
 ---

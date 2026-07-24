@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/64/pociagi-64.svg
 pdf: /pojazdy/pociagi/64/pociagi-64.pdf
 alt: "Kolorowanka z pociagi do pobrania"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

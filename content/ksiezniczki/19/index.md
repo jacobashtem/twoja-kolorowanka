@@ -7,6 +7,7 @@ image: /ksiezniczki/19/ksiezniczki-19.svg
 pdf: /ksiezniczki/19/ksiezniczki-19.pdf
 alt: "Kolorowanka ksiezniczki"
 tags:
+- trudnosc-6
 - ksiezniczki
 - ksiezniczki
 ---

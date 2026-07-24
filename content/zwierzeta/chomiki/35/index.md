@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/35/chomiki-35.svg
 pdf: /zwierzeta/chomiki/35/chomiki-35.pdf
 alt: "Prosta kolorowanka chomiki do kolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - chomiki
 ---

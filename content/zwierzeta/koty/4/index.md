@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/4/koty-4.svg
 pdf: /koty/4/koty-4.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - koty
 alt: "koty kolorowanka dla dzieci - wariant 4"

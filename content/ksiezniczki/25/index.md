@@ -7,6 +7,7 @@ image: /ksiezniczki/25/ksiezniczki-25.svg
 pdf: /ksiezniczki/25/ksiezniczki-25.pdf
 alt: "ksiezniczki do druku i pokolorowania"
 tags:
+- trudnosc-9
 - ksiezniczki
 - ksiezniczki
 ---

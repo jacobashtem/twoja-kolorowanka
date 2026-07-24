@@ -7,6 +7,7 @@ image: /jedzenie/lody/37/lody-37.svg
 pdf: /jedzenie/lody/37/lody-37.pdf
 alt: "Kolorowanka lody"
 tags:
+- trudnosc-9
 - jedzenie
 - lody
 ---

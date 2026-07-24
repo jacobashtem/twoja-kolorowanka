@@ -7,6 +7,7 @@ image: /pojazdy/traktory/27/traktory-27.svg
 pdf: /pojazdy/traktory/27/traktory-27.pdf
 alt: "traktory – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - pojazdy
 - traktory
 ---

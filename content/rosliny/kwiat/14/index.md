@@ -7,6 +7,7 @@ image: /rosliny/kwiat/14/kwiat-14.svg
 pdf: /rosliny/kwiat/14/kwiat-14.pdf
 alt: "Edukacyjna kolorowanka kwiat do wydruku"
 tags:
+- trudnosc-6
 - rosliny
 - kwiat
 ---

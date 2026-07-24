@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/21/pszczoly-21.svg
 pdf: /zwierzeta/pszczoly/21/pszczoly-21.pdf
 alt: "pszczoly kolorowanka dla dzieci"
 tags:
+- trudnosc-1
 - zwierzeta
 - pszczoly
 ---

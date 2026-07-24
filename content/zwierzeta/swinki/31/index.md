@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/31/swinki-31.svg
 pdf: /zwierzeta/swinki/31/swinki-31.pdf
 alt: "Łatwa kolorowanka swinki dla przedszkolaka"
 tags:
+- trudnosc-4
 - zwierzeta
 - swinki
 ---

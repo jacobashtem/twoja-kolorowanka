@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/50/tygrysy-50.svg
 pdf: /zwierzeta/tygrysy/50/tygrysy-50.pdf
 alt: "Edukacyjna kolorowanka tygrysy do wydruku"
 tags:
+- trudnosc-10
 - zwierzeta
 - tygrysy
 ---

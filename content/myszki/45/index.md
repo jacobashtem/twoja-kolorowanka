@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/45/myszki-45.svg
 pdf: /zwierzeta/myszki/45/myszki-45.pdf
 alt: "myszki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - zwierzeta
 - myszki
 ---

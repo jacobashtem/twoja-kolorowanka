@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/46/lwy-46.svg
 pdf: /zwierzeta/lwy/46/lwy-46.pdf
 alt: "Kolorowanka z lwy do pobrania"
 tags:
+- trudnosc-7
 - zwierzeta
 - lwy
 ---

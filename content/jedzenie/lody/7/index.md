@@ -7,6 +7,7 @@ image: /jedzenie/lody/7/lody-7.svg
 pdf: /jedzenie/lody/7/lody-7.pdf
 alt: "lody do druku i pokolorowania"
 tags:
+- trudnosc-6
 - jedzenie
 - lody
 ---

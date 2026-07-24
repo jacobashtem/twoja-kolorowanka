@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/38/flamingi-38.svg
 pdf: /zwierzeta/flamingi/38/flamingi-38.pdf
 alt: "Kolorowanka do druku flamingi"
 tags:
+- trudnosc-1
 - zwierzeta
 - flamingi
 ---

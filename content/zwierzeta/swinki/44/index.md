@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/44/swinki-44.svg
 pdf: /zwierzeta/swinki/44/swinki-44.pdf
 alt: "Darmowa kolorowanka swinki do druku PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - swinki
 ---

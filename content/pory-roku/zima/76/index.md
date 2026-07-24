@@ -7,6 +7,7 @@ image: /pory-roku/zima/76/zima-76.svg
 pdf: /pory-roku/zima/76/zima-76.pdf
 alt: "Kolorowanka zima – format A4 PDF"
 tags:
+- trudnosc-6
 - pory-roku
 - zima
 ---

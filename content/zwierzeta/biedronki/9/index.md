@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/9/biedronki-9.svg
 pdf: /zwierzeta/biedronki/9/biedronki-9.pdf
 alt: "biedronki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - zwierzeta
 - biedronki
 ---

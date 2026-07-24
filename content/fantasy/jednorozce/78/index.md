@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/78/jednorozce-78.svg
 pdf: /fantasy/jednorozce/78/jednorozce-78.pdf
 alt: "Kolorowanki do druku jednorozce - wariant 78"
 tags:
+- trudnosc-1
 - fantasy
 - jednorozce
 ---

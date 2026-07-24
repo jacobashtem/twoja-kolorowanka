@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/52/dinozaury-52.svg
 pdf: /zwierzeta/dinozaury/52/dinozaury-52.pdf
 alt: "Kolorowanka dinozaury – format A4 PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/48/samoloty-48.svg
 pdf: /pojazdy/samoloty/48/samoloty-48.pdf
 alt: "kolorowanka do druku samoloty PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - samoloty
 ---

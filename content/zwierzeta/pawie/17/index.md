@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/17/pawie-17.svg
 pdf: /zwierzeta/pawie/17/pawie-17.pdf
 alt: "Prosta kolorowanka pawie do kolorowania"
 tags:
+- trudnosc-7
 - zwierzeta
 - pawie
 ---

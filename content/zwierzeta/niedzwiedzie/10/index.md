@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/10/niedzwiedzie-10.svg
 pdf: /zwierzeta/niedzwiedzie/10/niedzwiedzie-10.pdf
 alt: "Kolorowanka z niedzwiedzie do pobrania"
 tags:
+- trudnosc-2
 - zwierzeta
 - niedzwiedzie
 ---

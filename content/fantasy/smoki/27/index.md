@@ -7,6 +7,7 @@ image: /fantasy/smoki/27/smoki-27.svg
 pdf: /fantasy/smoki/27/smoki-27.pdf
 alt: "smoki – pobierz i wydrukuj kolorowankę - wariant 27"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

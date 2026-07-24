@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/77/pociagi-77.svg
 pdf: /pojazdy/pociagi/77/pociagi-77.pdf
 alt: "Kolorowanka do druku pociagi"
 tags:
+- trudnosc-7
 - pojazdy
 - pociagi
 ---

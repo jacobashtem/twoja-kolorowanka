@@ -7,6 +7,7 @@ image: /serce/26/serce-26.svg
 pdf: /serce/26/serce-26.pdf
 alt: "Darmowa kolorowanka serce do druku PDF"
 tags:
+- trudnosc-5
 - serce
 - serce
 ---

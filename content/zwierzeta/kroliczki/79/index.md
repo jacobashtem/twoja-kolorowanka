@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/79/kroliczki-79.svg
 pdf: /kroliczki/79/kroliczki-79.pdf
 tags:
+- trudnosc-9
 - zwierzeta
 - kroliczki
 alt: "Edukacyjna kolorowanka kroliczki do wydruku - wariant 79"

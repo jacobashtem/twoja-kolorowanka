@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/27/wiosna-27.svg
 pdf: /pory-roku/wiosna/27/wiosna-27.pdf
 alt: "wiosna – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - pory-roku
 - wiosna
 ---

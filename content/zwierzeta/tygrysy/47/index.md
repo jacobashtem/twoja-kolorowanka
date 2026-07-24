@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/47/tygrysy-47.svg
 pdf: /zwierzeta/tygrysy/47/tygrysy-47.pdf
 alt: "Malowanka tygrysy do druku A4"
 tags:
+- trudnosc-7
 - zwierzeta
 - tygrysy
 ---

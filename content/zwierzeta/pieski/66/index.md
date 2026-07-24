@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/66/pieski-66.svg
 pdf: /pieski/66/pieski-66.pdf
 tags:
+- trudnosc-7
 - zwierzeta
 - pieski
 alt: "Kolorowanki do druku pieski - wariant 66"

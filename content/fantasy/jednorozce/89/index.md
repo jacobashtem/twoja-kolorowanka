@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/89/jednorozce-89.svg
 pdf: /fantasy/jednorozce/89/jednorozce-89.pdf
 alt: "Prosta kolorowanka jednorozce do kolorowania - wariant 89"
 tags:
+- trudnosc-4
 - fantasy
 - jednorozce
 ---

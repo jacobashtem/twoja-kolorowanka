@@ -7,6 +7,7 @@ image: /pojazdy/samochody/21/samochody-21.svg
 pdf: /pojazdy/samochody/21/samochody-21.pdf
 alt: "samochody kolorowanka dla dzieci"
 tags:
+- trudnosc-5
 - pojazdy
 - samochody
 ---

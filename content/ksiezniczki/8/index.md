@@ -7,6 +7,7 @@ image: /ksiezniczki/8/ksiezniczki-8.svg
 pdf: /ksiezniczki/8/ksiezniczki-8.pdf
 alt: "Darmowa kolorowanka ksiezniczki do druku PDF"
 tags:
+- trudnosc-4
 - ksiezniczki
 - ksiezniczki
 ---

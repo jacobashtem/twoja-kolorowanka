@@ -7,6 +7,7 @@ image: /rosliny/bukiet/49/bukiet-49.svg
 pdf: /rosliny/bukiet/49/bukiet-49.pdf
 alt: "Łatwa kolorowanka bukiet dla przedszkolaka"
 tags:
+- trudnosc-10
 - rosliny
 - bukiet
 ---

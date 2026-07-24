@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/29/zabki-29.svg
 pdf: /zwierzeta/zabki/29/zabki-29.pdf
 alt: "Malowanka zabka do druku A4"
 tags:
+- trudnosc-6
 - zwierzeta
 - zabki
 ---

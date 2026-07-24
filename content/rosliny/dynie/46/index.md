@@ -7,6 +7,7 @@ image: /rosliny/dynie/46/dynie-46.svg
 pdf: /rosliny/dynie/46/dynie-46.pdf
 alt: "Kolorowanka z dynie do pobrania"
 tags:
+- trudnosc-1
 - rosliny
 - dynie
 ---

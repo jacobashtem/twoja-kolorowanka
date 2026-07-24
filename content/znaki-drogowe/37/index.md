@@ -7,6 +7,7 @@ image: /znaki-drogowe/37/znaki-drogowe-37.svg
 pdf: /znaki-drogowe/37/znaki-drogowe-37.pdf
 alt: "Kolorowanka znaki-drogowe"
 tags:
+- trudnosc-7
 - znaki-drogowe
 - znaki-drogowe
 ---

@@ -7,6 +7,7 @@ image: /fantasy/elfy/19/elfy-19.svg
 pdf: /fantasy/elfy/19/elfy-19.pdf
 alt: "Kolorowanka elfy"
 tags:
+- trudnosc-7
 - fantasy
 - elfy
 ---

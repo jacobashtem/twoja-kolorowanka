@@ -7,6 +7,7 @@ image: /pojazdy/tiry/28/tir-28.svg
 pdf: /pojazdy/tiry/28/tir-28.pdf
 alt: "Kolorowanka z tir do pobrania"
 tags:
+- trudnosc-8
 - pojazdy
 - tir
 ---

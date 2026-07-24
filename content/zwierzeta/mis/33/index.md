@@ -7,6 +7,7 @@ image: /zwierzeta/mis/33/mis-33.svg
 pdf: /zwierzeta/mis/33/mis-33.pdf
 alt: "mis kolorowanka dla dzieci"
 tags:
+- trudnosc-9
 - zwierzeta
 - mis
 ---

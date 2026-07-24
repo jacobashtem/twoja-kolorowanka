@@ -7,6 +7,7 @@ image: /fantasy/wrozki/64/wrozki-64.svg
 pdf: /fantasy/wrozki/64/wrozki-64.pdf
 alt: "Kolorowanka z wrozki do pobrania - wariant 64"
 tags:
+- trudnosc-5
 - fantasy
 - wrozki
 ---

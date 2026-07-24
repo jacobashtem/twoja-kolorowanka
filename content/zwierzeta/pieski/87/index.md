@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/87/pieski-87.svg
 pdf: /pieski/87/pieski-87.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - pieski
 alt: "Kolorowanka z pieski do pobrania - wariant 87"

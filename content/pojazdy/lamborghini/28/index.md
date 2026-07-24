@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/28/lamborghini-28.svg
 pdf: /pojazdy/lamborghini/28/lamborghini-28.pdf
 alt: "Kolorowanka z lamborghini do pobrania"
 tags:
+- trudnosc-10
 - pojazdy
 - lamborghini
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/16/pociagi-16.svg
 pdf: /pojazdy/pociagi/16/pociagi-16.pdf
 alt: "Kolorowanka pociagi – format A4 PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - pociagi
 ---

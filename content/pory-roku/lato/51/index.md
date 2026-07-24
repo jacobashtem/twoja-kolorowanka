@@ -7,6 +7,7 @@ image: /pory-roku/lato/51/lato-51.svg
 pdf: /pory-roku/lato/51/lato-51.pdf
 alt: "lato kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - pory-roku
 - lato
 ---

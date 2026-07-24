@@ -7,6 +7,7 @@ image: /dom/33/dom-33.svg
 pdf: /dom/33/dom-33.pdf
 alt: "dom kolorowanka dla dzieci"
 tags:
+- trudnosc-5
 - dom
 - dom
 ---

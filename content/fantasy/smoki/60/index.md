@@ -7,6 +7,7 @@ image: /fantasy/smoki/60/smoki-60.svg
 pdf: /fantasy/smoki/60/smoki-60.pdf
 alt: "Kolorowanki do druku smoki - wariant 60"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

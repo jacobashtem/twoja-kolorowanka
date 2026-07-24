@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/14/pociagi-14.svg
 pdf: /pojazdy/pociagi/14/pociagi-14.pdf
 alt: "Edukacyjna kolorowanka pociagi do wydruku"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

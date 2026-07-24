@@ -7,6 +7,7 @@ image: /pojazdy/bmw/42/bmw-42.svg
 pdf: /pojazdy/bmw/42/bmw-42.pdf
 alt: "Kolorowanki do druku bmw"
 tags:
+- trudnosc-10
 - pojazdy
 - bmw
 ---

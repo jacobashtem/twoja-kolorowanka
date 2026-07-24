@@ -7,6 +7,7 @@ image: /kredka/11/kredka-11.svg
 pdf: /kredka/11/kredka-11.pdf
 alt: "Malowanka kredka do druku A4"
 tags:
+- trudnosc-1
 - kredka
 - kredka
 ---

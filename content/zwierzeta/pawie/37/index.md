@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/37/pawie-37.svg
 pdf: /zwierzeta/pawie/37/pawie-37.pdf
 alt: "Kolorowanka pawie"
 tags:
+- trudnosc-7
 - zwierzeta
 - pawie
 ---

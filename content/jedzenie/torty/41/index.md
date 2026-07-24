@@ -7,6 +7,7 @@ image: /jedzenie/torty/41/torty-41.svg
 pdf: /jedzenie/torty/41/torty-41.pdf
 alt: "Kolorowanka do druku torty"
 tags:
+- trudnosc-6
 - jedzenie
 - torty
 ---

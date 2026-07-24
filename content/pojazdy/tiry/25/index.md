@@ -7,6 +7,7 @@ image: /pojazdy/tiry/25/tir-25.svg
 pdf: /pojazdy/tiry/25/tir-25.pdf
 alt: "tir do druku i pokolorowania"
 tags:
+- trudnosc-4
 - pojazdy
 - tir
 ---

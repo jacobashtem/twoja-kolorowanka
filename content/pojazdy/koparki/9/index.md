@@ -7,6 +7,7 @@ image: /pojazdy/koparki/9/koparki-9.svg
 pdf: /pojazdy/koparki/9/koparki-9.pdf
 alt: "koparki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - pojazdy
 - koparki
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/bmw/17/bmw-17.svg
 pdf: /pojazdy/bmw/17/bmw-17.pdf
 alt: "Prosta kolorowanka bmw do kolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - bmw
 ---

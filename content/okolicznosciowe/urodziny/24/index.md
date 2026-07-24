@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/24/urodziny-24.svg
 pdf: /okolicznosciowe/urodziny/24/urodziny-24.pdf
 alt: "Kolorowanka do druku urodziny"
 tags:
+- trudnosc-8
 - okolicznosciowe
 - urodziny
 ---

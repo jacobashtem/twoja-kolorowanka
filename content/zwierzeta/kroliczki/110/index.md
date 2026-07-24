@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/110/kroliczki-110.svg
 pdf: /kroliczki/110/kroliczki-110.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - kroliczki
 alt: "Edukacyjna kolorowanka kroliczki do wydruku - wariant 110"

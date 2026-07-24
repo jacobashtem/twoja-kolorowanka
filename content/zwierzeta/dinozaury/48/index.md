@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/48/dinozaury-48.svg
 pdf: /zwierzeta/dinozaury/48/dinozaury-48.pdf
 alt: "kolorowanka do druku dinozaury PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

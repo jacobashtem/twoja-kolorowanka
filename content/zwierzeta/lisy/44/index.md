@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/44/lisy-44.svg
 pdf: /zwierzeta/lisy/44/lisy-44.pdf
 alt: "Darmowa kolorowanka lisy do druku PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - lisy
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/30/ryby-30.svg
 pdf: /zwierzeta/ryby/30/ryby-30.pdf
 alt: "ryby kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - zwierzeta
 - ryby
 ---

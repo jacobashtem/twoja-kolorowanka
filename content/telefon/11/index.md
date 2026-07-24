@@ -7,6 +7,7 @@ image: /telefon/11/telefon-11.svg
 pdf: /telefon/11/telefon-11.pdf
 alt: "Malowanka telefon do druku A4"
 tags:
+- trudnosc-2
 - telefon
 - telefon
 ---

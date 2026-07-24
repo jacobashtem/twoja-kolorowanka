@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/7/pszczoly-7.svg
 pdf: /zwierzeta/pszczoly/7/pszczoly-7.pdf
 alt: "pszczoly do druku i pokolorowania"
 tags:
+- trudnosc-2
 - zwierzeta
 - pszczoly
 ---

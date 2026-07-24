@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/7/t-rex-7.svg
 pdf: /zwierzeta/t-rex/7/t-rex-7.pdf
 alt: "t-rex do druku i pokolorowania"
 tags:
+- trudnosc-7
 - zwierzeta
 - t-rex
 ---

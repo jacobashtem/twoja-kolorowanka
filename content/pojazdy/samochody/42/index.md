@@ -7,6 +7,7 @@ image: /pojazdy/samochody/42/samochody-42.svg
 pdf: /pojazdy/samochody/42/samochody-42.pdf
 alt: "Kolorowanki do druku samochody"
 tags:
+- trudnosc-9
 - pojazdy
 - samochody
 ---

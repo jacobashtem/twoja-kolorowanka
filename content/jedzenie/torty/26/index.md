@@ -7,6 +7,7 @@ image: /jedzenie/torty/26/torty-26.svg
 pdf: /jedzenie/torty/26/torty-26.pdf
 alt: "Darmowa kolorowanka torty do druku PDF"
 tags:
+- trudnosc-3
 - jedzenie
 - torty
 ---

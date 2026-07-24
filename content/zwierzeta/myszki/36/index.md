@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/36/myszki-36.svg
 pdf: /zwierzeta/myszki/36/myszki-36.pdf
 alt: "Pokoloruj myszki – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - myszki
 ---

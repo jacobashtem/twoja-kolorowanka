@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/23/antystresowe-23.svg
 pdf: /dla-doroslych/antystresowe/23/antystresowe-23.pdf
 alt: "Kolorowanka do druku antystresowe"
 tags:
+- trudnosc-10
 - dla-doroslych
 - antystresowe
 ---

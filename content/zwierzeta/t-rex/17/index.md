@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/17/t-rex-17.svg
 pdf: /zwierzeta/t-rex/17/t-rex-17.pdf
 alt: "Prosta kolorowanka t-rex do kolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - t-rex
 ---

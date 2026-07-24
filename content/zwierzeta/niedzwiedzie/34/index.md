@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/34/niedzwiedzie-34.svg
 pdf: /zwierzeta/niedzwiedzie/34/niedzwiedzie-34.pdf
 alt: "Kolorowanka niedzwiedzie – format A4 PDF"
 tags:
+- trudnosc-6
 - zwierzeta
 - niedzwiedzie
 ---

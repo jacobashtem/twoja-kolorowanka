@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/14/myszki-14.svg
 pdf: /zwierzeta/myszki/14/myszki-14.pdf
 alt: "Edukacyjna kolorowanka myszki do wydruku"
 tags:
+- trudnosc-6
 - zwierzeta
 - myszki
 ---

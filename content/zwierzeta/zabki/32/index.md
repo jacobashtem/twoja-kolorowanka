@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/32/zabki-32.svg
 pdf: /zwierzeta/zabki/32/zabki-32.pdf
 alt: "Edukacyjna Kolorowanka Zabki do wydruku"
 tags:
+- trudnosc-10
 - zwierzeta
 - zabki
 ---

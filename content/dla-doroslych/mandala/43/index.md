@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/43/mandala-43.svg
 pdf: /dla-doroslych/mandala/43/mandala-43.pdf
 alt: "mandala do druku i pokolorowania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

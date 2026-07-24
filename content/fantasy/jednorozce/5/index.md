@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/5/jednorozce-5.svg
 pdf: /fantasy/jednorozce/5/jednorozce-5.pdf
 alt: "Kolorowanka do druku jednorozce - wariant 5"
 tags:
+- trudnosc-2
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/32/t-rex-32.svg
 pdf: /zwierzeta/t-rex/32/t-rex-32.pdf
 alt: "Edukacyjna kolorowanka t-rex do wydruku"
 tags:
+- trudnosc-4
 - zwierzeta
 - t-rex
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/46/biedronki-46.svg
 pdf: /zwierzeta/biedronki/46/biedronki-46.pdf
 alt: "Kolorowanka z biedronki do pobrania"
 tags:
+- trudnosc-4
 - zwierzeta
 - biedronki
 ---

@@ -7,6 +7,7 @@ image: /rosliny/kwiat/54/kwiat-54.svg
 pdf: /rosliny/kwiat/54/kwiat-54.pdf
 alt: "Darmowa kolorowanka kwiat do druku PDF"
 tags:
+- trudnosc-4
 - rosliny
 - kwiat
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/40/zajace-40.svg
 pdf: /zwierzeta/zajace/40/zajace-40.pdf
 alt: "zajace kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - zwierzeta
 - zajace
 ---

@@ -7,6 +7,7 @@ image: /kredka/23/kredka-23.svg
 pdf: /kredka/23/kredka-23.pdf
 alt: "Kolorowanka do druku kredka"
 tags:
+- trudnosc-3
 - kredka
 - kredka
 ---

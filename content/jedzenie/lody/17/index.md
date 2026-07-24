@@ -7,6 +7,7 @@ image: /jedzenie/lody/17/lody-17.svg
 pdf: /jedzenie/lody/17/lody-17.pdf
 alt: "Prosta kolorowanka lody do kolorowania"
 tags:
+- trudnosc-4
 - jedzenie
 - lody
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/44/bugattii-44.svg
 pdf: /pojazdy/bugattii/44/bugattii-44.pdf
 alt: "Darmowa kolorowanka bugattii do druku PDF"
 tags:
+- trudnosc-5
 - pojazdy
 - bugattii
 ---

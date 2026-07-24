@@ -7,6 +7,7 @@ image: /fantasy/wrozki/38/wrozki-38.svg
 pdf: /fantasy/wrozki/38/wrozki-38.pdf
 alt: "Kolorowanki wrozki - wariant 38"
 tags:
+- trudnosc-6
 - fantasy
 - wrozki
 ---

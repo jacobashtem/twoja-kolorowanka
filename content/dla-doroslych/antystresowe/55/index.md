@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/55/antystresowe-55.svg
 pdf: /dla-doroslych/antystresowe/55/antystresowe-55.pdf
 alt: "Kolorowanka antystresowe"
 tags:
+- trudnosc-8
 - dla-doroslych
 - antystresowe
 ---

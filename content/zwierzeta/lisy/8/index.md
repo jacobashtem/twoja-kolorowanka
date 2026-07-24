@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/8/lisy-8.svg
 pdf: /zwierzeta/lisy/8/lisy-8.pdf
 alt: "Darmowa kolorowanka lisy do druku PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - lisy
 ---

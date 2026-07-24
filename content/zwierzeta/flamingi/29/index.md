@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/29/flamingi-29.svg
 pdf: /zwierzeta/flamingi/29/flamingi-29.pdf
 alt: "Malowanka flamingi do druku A4"
 tags:
+- trudnosc-4
 - zwierzeta
 - flamingi
 ---

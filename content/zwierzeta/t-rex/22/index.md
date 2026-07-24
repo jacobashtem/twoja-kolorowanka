@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/22/t-rex-22.svg
 pdf: /zwierzeta/t-rex/22/t-rex-22.pdf
 alt: "t-rex kolorowanki dla dzieci"
 tags:
+- trudnosc-3
 - zwierzeta
 - t-rex
 ---

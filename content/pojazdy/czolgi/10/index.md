@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/10/czolgi-10.svg
 pdf: /pojazdy/czolgi/10/czolgi-10.pdf
 alt: "Kolorowanka z czolgi do pobrania"
 tags:
+- trudnosc-4
 - pojazdy
 - czolgi
 ---

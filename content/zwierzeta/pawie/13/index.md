@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/13/pawie-13.svg
 pdf: /zwierzeta/pawie/13/pawie-13.pdf
 alt: "Łatwa kolorowanka pawie dla przedszkolaka"
 tags:
+- trudnosc-8
 - zwierzeta
 - pawie
 ---

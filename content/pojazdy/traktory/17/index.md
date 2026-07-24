@@ -7,6 +7,7 @@ image: /pojazdy/traktory/17/traktory-17.svg
 pdf: /pojazdy/traktory/17/traktory-17.pdf
 alt: "Prosta kolorowanka traktory do kolorowania"
 tags:
+- trudnosc-9
 - pojazdy
 - traktory
 ---

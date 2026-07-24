@@ -7,6 +7,7 @@ image: /fantasy/wrozki/14/wrozki-14.svg
 pdf: /fantasy/wrozki/14/wrozki-14.pdf
 alt: "Edukacyjna kolorowanka wrozki do wydruku - wariant 14"
 tags:
+- trudnosc-5
 - fantasy
 - wrozki
 ---

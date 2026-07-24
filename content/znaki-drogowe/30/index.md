@@ -7,6 +7,7 @@ image: /znaki-drogowe/30/znaki-drogowe-30.svg
 pdf: /znaki-drogowe/30/znaki-drogowe-30.pdf
 alt: "kolorowanka do druku znaki-drogowe PDF"
 tags:
+- trudnosc-1
 - znaki-drogowe
 - znaki-drogowe
 ---

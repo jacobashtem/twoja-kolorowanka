@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/32/flamingi-32.svg
 pdf: /zwierzeta/flamingi/32/flamingi-32.pdf
 alt: "Edukacyjna kolorowanka flamingi do wydruku"
 tags:
+- trudnosc-1
 - zwierzeta
 - flamingi
 ---

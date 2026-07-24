@@ -7,6 +7,7 @@ image: /rosliny/bukiet/42/bukiet-42.svg
 pdf: /rosliny/bukiet/42/bukiet-42.pdf
 alt: "Kolorowanki do druku bukiet"
 tags:
+- trudnosc-10
 - rosliny
 - bukiet
 ---

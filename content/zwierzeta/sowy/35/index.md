@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/35/sowy-35.svg
 pdf: /zwierzeta/sowy/35/sowy-35.pdf
 alt: "Prosta kolorowanka sowy do kolorowania"
 tags:
+- trudnosc-3
 - zwierzeta
 - sowy
 ---

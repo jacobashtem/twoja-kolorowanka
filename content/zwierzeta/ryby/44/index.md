@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/44/ryby-44.svg
 pdf: /zwierzeta/ryby/44/ryby-44.pdf
 alt: "Prosta kolorowanka ryby do kolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - ryby
 ---

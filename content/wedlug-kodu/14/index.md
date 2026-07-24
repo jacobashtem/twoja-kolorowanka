@@ -7,6 +7,7 @@ image: /wedlug-kodu/14/wedlug-kodu-14.svg
 pdf: /wedlug-kodu/14/wedlug-kodu-14.pdf
 alt: "Edukacyjna kolorowanka wedlug-kodu do wydruku"
 tags:
+- trudnosc-5
 - wedlug-kodu
 - wedlug-kodu
 ---

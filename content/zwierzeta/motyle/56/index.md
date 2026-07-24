@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/56/motyle-56.svg
 pdf: /zwierzeta/motyle/56/motyle-56.pdf
 alt: "Kolorowanki motyle"
 tags:
+- trudnosc-6
 - zwierzeta
 - motyle
 ---

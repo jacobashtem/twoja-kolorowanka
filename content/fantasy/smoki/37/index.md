@@ -7,6 +7,7 @@ image: /fantasy/smoki/37/smoki-37.svg
 pdf: /fantasy/smoki/37/smoki-37.pdf
 alt: "Kolorowanka smoki - wariant 37"
 tags:
+- trudnosc-9
 - fantasy
 - smoki
 ---

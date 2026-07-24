@@ -7,6 +7,7 @@ image: /fantasy/elfy/11/elfy-11.svg
 pdf: /fantasy/elfy/11/elfy-11.pdf
 alt: "Malowanka elfy do druku A4"
 tags:
+- trudnosc-4
 - fantasy
 - elfy
 ---

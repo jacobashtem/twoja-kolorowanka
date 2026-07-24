@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/11/lwy-11.svg
 pdf: /zwierzeta/lwy/11/lwy-11.pdf
 alt: "Malowanka lwy do druku A4"
 tags:
+- trudnosc-3
 - zwierzeta
 - lwy
 ---

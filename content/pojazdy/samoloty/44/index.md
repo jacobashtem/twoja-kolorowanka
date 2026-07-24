@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/44/samoloty-44.svg
 pdf: /pojazdy/samoloty/44/samoloty-44.pdf
 alt: "Darmowa kolorowanka samoloty do druku PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

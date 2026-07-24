@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/46/andrzejki-46.svg
 pdf: /okolicznosciowe/andrzejki/46/andrzejki-46.pdf
 alt: "Kolorowanka z andrzejki do pobrania"
 tags:
+- trudnosc-2
 - okolicznosciowe
 - andrzejki
 ---

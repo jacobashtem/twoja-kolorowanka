@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/38/mandala-38.svg
 pdf: /dla-doroslych/mandala/38/mandala-38.pdf
 alt: "Kolorowanki mandala"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/jesien/16/jesien-16.svg
 pdf: /pory-roku/jesien/16/jesien-16.pdf
 alt: "Kolorowanka jesien – format A4 PDF"
 tags:
+- trudnosc-5
 - pory-roku
 - jesien
 ---

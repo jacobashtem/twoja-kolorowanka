@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/7/lamborghini-7.svg
 pdf: /pojazdy/lamborghini/7/lamborghini-7.pdf
 alt: "lamborghini do druku i pokolorowania"
 tags:
+- trudnosc-8
 - pojazdy
 - lamborghini
 ---

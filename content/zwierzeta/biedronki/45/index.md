@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/45/biedronki-45.svg
 pdf: /zwierzeta/biedronki/45/biedronki-45.pdf
 alt: "biedronki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - zwierzeta
 - biedronki
 ---

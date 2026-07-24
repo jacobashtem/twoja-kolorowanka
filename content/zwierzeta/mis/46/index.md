@@ -7,6 +7,7 @@ image: /zwierzeta/mis/46/mis-46.svg
 pdf: /zwierzeta/mis/46/mis-46.pdf
 alt: "Kolorowanka z mis do pobrania"
 tags:
+- trudnosc-2
 - zwierzeta
 - mis
 ---

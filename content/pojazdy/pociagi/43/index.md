@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/43/pociagi-43.svg
 pdf: /pojazdy/pociagi/43/pociagi-43.pdf
 alt: "pociagi do druku i pokolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - pociagi
 ---

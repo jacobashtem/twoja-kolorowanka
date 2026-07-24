@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/50/papugi-50.svg
 pdf: /zwierzeta/papugi/50/papugi-50.pdf
 alt: "Darmowa kolorowanka papugi do druku PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - papugi
 ---

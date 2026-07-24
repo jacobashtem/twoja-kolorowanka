@@ -7,6 +7,7 @@ image: /pojazdy/traktory/28/traktory-28.svg
 pdf: /pojazdy/traktory/28/traktory-28.pdf
 alt: "Kolorowanka z traktory do pobrania"
 tags:
+- trudnosc-7
 - pojazdy
 - traktory
 ---

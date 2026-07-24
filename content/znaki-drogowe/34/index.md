@@ -7,6 +7,7 @@ image: /znaki-drogowe/34/znaki-drogowe-34.svg
 pdf: /znaki-drogowe/34/znaki-drogowe-34.pdf
 alt: "Kolorowanka znaki-drogowe – format A4 PDF"
 tags:
+- trudnosc-3
 - znaki-drogowe
 - znaki-drogowe
 ---

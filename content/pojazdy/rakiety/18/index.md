@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/18/rakiety-18.svg
 pdf: /pojazdy/rakiety/18/rakiety-18.pdf
 alt: "Pokoloruj rakiety – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - rakiety
 ---

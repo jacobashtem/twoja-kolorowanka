@@ -7,6 +7,7 @@ image: /pory-roku/lato/25/lato-25.svg
 pdf: /pory-roku/lato/25/lato-25.pdf
 alt: "lato do druku i pokolorowania"
 tags:
+- trudnosc-9
 - pory-roku
 - lato
 ---

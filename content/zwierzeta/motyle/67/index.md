@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/67/motyle-67.svg
 pdf: /zwierzeta/motyle/67/motyle-67.pdf
 alt: "Łatwa kolorowanka motyle dla przedszkolaka"
 tags:
+- trudnosc-9
 - zwierzeta
 - motyle
 ---

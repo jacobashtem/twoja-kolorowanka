@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/18/kroliczki-18.svg
 pdf: /kroliczki/18/kroliczki-18.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - kroliczki
 alt: "kroliczki kolorowanki dla dzieci - wariant 18"

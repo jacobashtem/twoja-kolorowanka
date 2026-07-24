@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/51/pieski-51.svg
 pdf: /pieski/51/pieski-51.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - pieski
 alt: "pieski – pobierz i wydrukuj kolorowankę - wariant 51"

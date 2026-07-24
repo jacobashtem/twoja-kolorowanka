@@ -7,6 +7,7 @@ image: /rosliny/dynie/44/dynie-44.svg
 pdf: /rosliny/dynie/44/dynie-44.pdf
 alt: "Darmowa kolorowanka dynie do druku PDF"
 tags:
+- trudnosc-7
 - rosliny
 - dynie
 ---

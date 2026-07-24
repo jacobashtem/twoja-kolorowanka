@@ -7,6 +7,7 @@ image: /kosmos/1/kosmos-1.svg
 pdf: /kosmos/1/kosmos-1.pdf
 alt: "Kolorowanka kosmos"
 tags:
+- trudnosc-10
 - kosmos
 - kosmos
 ---

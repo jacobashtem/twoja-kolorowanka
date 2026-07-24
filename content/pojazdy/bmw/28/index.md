@@ -7,6 +7,7 @@ image: /pojazdy/bmw/28/bmw-28.svg
 pdf: /pojazdy/bmw/28/bmw-28.pdf
 alt: "Kolorowanka z bmw do pobrania"
 tags:
+- trudnosc-3
 - pojazdy
 - bmw
 ---

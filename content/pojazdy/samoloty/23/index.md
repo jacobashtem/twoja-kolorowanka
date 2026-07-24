@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/23/samoloty-23.svg
 pdf: /pojazdy/samoloty/23/samoloty-23.pdf
 alt: "Kolorowanka do druku samoloty"
 tags:
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

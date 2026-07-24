@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/51/koty-51.svg
 pdf: /koty/51/koty-51.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - koty
 alt: "koty – pobierz i wydrukuj kolorowankę - wariant 51"

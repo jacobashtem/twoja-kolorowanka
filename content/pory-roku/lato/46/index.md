@@ -7,6 +7,7 @@ image: /pory-roku/lato/46/lato-46.svg
 pdf: /pory-roku/lato/46/lato-46.pdf
 alt: "Kolorowanka z lato do pobrania"
 tags:
+- trudnosc-5
 - pory-roku
 - lato
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/44/dinozaury-44.svg
 pdf: /zwierzeta/dinozaury/44/dinozaury-44.pdf
 alt: "Darmowa kolorowanka dinozaury do druku PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - dinozaury
 ---

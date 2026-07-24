@@ -7,6 +7,7 @@ image: /fantasy/smoki/2/smoki-2.svg
 pdf: /fantasy/smoki/2/smoki-2.pdf
 alt: "Kolorowanki smoki - wariant 2"
 tags:
+- trudnosc-7
 - fantasy
 - smoki
 ---

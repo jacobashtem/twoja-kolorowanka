@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/10/papugi-10.svg
 pdf: /zwierzeta/papugi/10/papugi-10.pdf
 alt: "Kolorowanka z papugi do pobrania"
 tags:
+- trudnosc-6
 - zwierzeta
 - papugi
 ---

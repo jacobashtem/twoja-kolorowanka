@@ -7,6 +7,7 @@ image: /pojazdy/koparki/42/koparki-42.svg
 pdf: /pojazdy/koparki/42/koparki-42.pdf
 alt: "Kolorowanki do druku koparki"
 tags:
+- trudnosc-4
 - pojazdy
 - koparki
 ---

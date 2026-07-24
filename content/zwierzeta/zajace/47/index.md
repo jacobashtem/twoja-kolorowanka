@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/47/zajace-47.svg
 pdf: /zwierzeta/zajace/47/zajace-47.pdf
 alt: "Malowanka zajace do druku A4"
 tags:
+- trudnosc-10
 - zwierzeta
 - zajace
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/18/ptaki-18.svg
 pdf: /zwierzeta/ptaki/18/ptaki-18.pdf
 alt: "Pokoloruj ptaki – darmowy szablon PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - ptaki
 ---

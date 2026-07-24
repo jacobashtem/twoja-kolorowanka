@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/54/pszczoly-54.svg
 pdf: /zwierzeta/pszczoly/54/pszczoly-54.pdf
 alt: "Pokoloruj pszczoly – darmowy szablon PDF"
 tags:
+- trudnosc-10
 - zwierzeta
 - pszczoly
 ---

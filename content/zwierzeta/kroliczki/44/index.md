@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/44/kroliczki-44.svg
 pdf: /kroliczki/44/kroliczki-44.pdf
 tags:
+- trudnosc-1
 - zwierzeta
 - kroliczki
 alt: "Edukacyjna kolorowanka kroliczki do wydruku - wariant 44"

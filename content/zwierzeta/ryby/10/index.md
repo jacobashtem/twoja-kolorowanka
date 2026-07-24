@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/10/ryby-10.svg
 pdf: /zwierzeta/ryby/10/ryby-10.pdf
 alt: "Kolorowanka ryby"
 tags:
+- trudnosc-10
 - zwierzeta
 - ryby
 ---

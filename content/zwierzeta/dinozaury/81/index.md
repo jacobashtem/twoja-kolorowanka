@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/81/dinozaury-81.svg
 pdf: /zwierzeta/dinozaury/81/dinozaury-81.pdf
 alt: "dinozaury – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---

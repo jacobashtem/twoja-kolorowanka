@@ -7,6 +7,7 @@ image: /pory-roku/zima/51/zima-51.svg
 pdf: /pory-roku/zima/51/zima-51.pdf
 alt: "zima – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - pory-roku
 - zima
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/19/lwy-19.svg
 pdf: /zwierzeta/lwy/19/lwy-19.pdf
 alt: "Kolorowanka lwy"
 tags:
+- trudnosc-3
 - zwierzeta
 - lwy
 ---

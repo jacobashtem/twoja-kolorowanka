@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/9/andrzejki-9.svg
 pdf: /okolicznosciowe/andrzejki/9/andrzejki-9.pdf
 alt: "andrzejki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - okolicznosciowe
 - andrzejki
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/tiry/29/tir-29.svg
 pdf: /pojazdy/tiry/29/tir-29.pdf
 alt: "Malowanka tir do druku A4"
 tags:
+- trudnosc-6
 - pojazdy
 - tir
 ---

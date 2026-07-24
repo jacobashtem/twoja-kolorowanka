@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/7/ptaki-7.svg
 pdf: /zwierzeta/ptaki/7/ptaki-7.pdf
 alt: "ptaki do druku i pokolorowania"
 tags:
+- trudnosc-3
 - zwierzeta
 - ptaki
 ---

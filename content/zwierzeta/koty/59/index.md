@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/59/koty-59.svg
 pdf: /koty/59/koty-59.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - koty
 alt: "Prosta kolorowanka koty do kolorowania - wariant 59"

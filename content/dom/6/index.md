@@ -7,6 +7,7 @@ image: /dom/6/dom-6.svg
 pdf: /dom/6/dom-6.pdf
 alt: "Kolorowanki do druku dom"
 tags:
+- trudnosc-5
 - dom
 - dom
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/21/niedzwiedzie-21.svg
 pdf: /zwierzeta/niedzwiedzie/21/niedzwiedzie-21.pdf
 alt: "niedzwiedzie kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - zwierzeta
 - niedzwiedzie
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/56/ptaki-56.svg
 pdf: /zwierzeta/ptaki/56/ptaki-56.pdf
 alt: "Kolorowanki ptaki"
 tags:
+- trudnosc-3
 - zwierzeta
 - ptaki
 ---

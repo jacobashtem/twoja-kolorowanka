@@ -7,6 +7,7 @@ image: /fantasy/elfy/32/elfy-32.svg
 pdf: /fantasy/elfy/32/elfy-32.pdf
 alt: "Edukacyjna kolorowanka elfy do wydruku"
 tags:
+- trudnosc-9
 - fantasy
 - elfy
 ---

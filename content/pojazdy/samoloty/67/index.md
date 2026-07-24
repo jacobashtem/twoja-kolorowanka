@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/67/samoloty-67.svg
 pdf: /pojazdy/samoloty/67/samoloty-67.pdf
 alt: "Łatwa kolorowanka samoloty dla przedszkolaka"
 tags:
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

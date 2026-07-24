@@ -7,6 +7,7 @@ image: /pojazdy/koparki/52/koparki-52.svg
 pdf: /pojazdy/koparki/52/koparki-52.pdf
 alt: "Kolorowanka koparki – format A4 PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - koparki
 ---

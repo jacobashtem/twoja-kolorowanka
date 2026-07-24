@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/74/dinozaury-74.svg
 pdf: /zwierzeta/dinozaury/74/dinozaury-74.pdf
 alt: "Kolorowanki dinozaury"
 tags:
+- trudnosc-8
 - zwierzeta
 - dinozaury
 ---

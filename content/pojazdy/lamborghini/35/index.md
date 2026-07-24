@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/35/lamborghini-35.svg
 pdf: /pojazdy/lamborghini/35/lamborghini-35.pdf
 alt: "Prosta kolorowanka lamborghini do kolorowania"
 tags:
+- trudnosc-5
 - pojazdy
 - lamborghini
 ---

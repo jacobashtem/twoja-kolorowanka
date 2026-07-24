@@ -7,6 +7,7 @@ image: /pojazdy/traktory/18/traktory-18.svg
 pdf: /pojazdy/traktory/18/traktory-18.pdf
 alt: "Pokoloruj traktory – darmowy szablon PDF"
 tags:
+- trudnosc-9
 - pojazdy
 - traktory
 ---

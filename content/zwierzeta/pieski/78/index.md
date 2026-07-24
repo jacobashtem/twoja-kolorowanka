@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/78/pieski-78.svg
 pdf: /pieski/78/pieski-78.pdf
 tags:
+- trudnosc-9
 - zwierzeta
 - pieski
 alt: "Pokoloruj pieski – darmowy szablon PDF - wariant 78"

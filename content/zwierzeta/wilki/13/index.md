@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/13/wilki-13.svg
 pdf: /zwierzeta/wilki/13/wilki-13.pdf
 alt: "Łatwa kolorowanka wilki dla przedszkolaka"
 tags:
+- trudnosc-2
 - zwierzeta
 - wilki
 ---

@@ -7,6 +7,7 @@ image: /rosliny/dynie/18/dynie-18.svg
 pdf: /rosliny/dynie/18/dynie-18.pdf
 alt: "Pokoloruj dynie – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - rosliny
 - dynie
 ---

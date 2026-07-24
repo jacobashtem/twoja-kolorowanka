@@ -7,6 +7,7 @@ image: /jedzenie/lody/6/lody-6.svg
 pdf: /jedzenie/lody/6/lody-6.pdf
 alt: "Kolorowanki do druku lody"
 tags:
+- trudnosc-6
 - jedzenie
 - lody
 ---

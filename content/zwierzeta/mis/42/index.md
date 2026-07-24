@@ -7,6 +7,7 @@ image: /zwierzeta/mis/42/mis-42.svg
 pdf: /zwierzeta/mis/42/mis-42.pdf
 alt: "Kolorowanki do druku mis"
 tags:
+- trudnosc-6
 - zwierzeta
 - mis
 ---

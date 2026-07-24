@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/41/ciagniki-41.svg
 pdf: /pojazdy/ciagniki/41/ciagniki-41.pdf
 alt: "Kolorowanka do druku ciagniki"
 tags:
+- trudnosc-5
 - pojazdy
 - ciagniki
 ---

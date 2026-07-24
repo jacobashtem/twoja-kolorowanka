@@ -7,6 +7,7 @@ image: /serce/16/serce-16.svg
 pdf: /serce/16/serce-16.pdf
 alt: "Kolorowanka serce – format A4 PDF"
 tags:
+- trudnosc-7
 - serce
 - serce
 ---

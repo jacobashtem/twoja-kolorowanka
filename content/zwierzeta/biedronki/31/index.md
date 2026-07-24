@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/31/biedronki-31.svg
 pdf: /zwierzeta/biedronki/31/biedronki-31.pdf
 alt: "Łatwa kolorowanka biedronki dla przedszkolaka"
 tags:
+- trudnosc-5
 - zwierzeta
 - biedronki
 ---

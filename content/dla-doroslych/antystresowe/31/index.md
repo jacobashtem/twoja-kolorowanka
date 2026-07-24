@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/31/antystresowe-31.svg
 pdf: /dla-doroslych/antystresowe/31/antystresowe-31.pdf
 alt: "Łatwa kolorowanka antystresowe dla przedszkolaka"
 tags:
+- trudnosc-9
 - dla-doroslych
 - antystresowe
 ---

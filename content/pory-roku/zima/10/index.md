@@ -7,6 +7,7 @@ image: /pory-roku/zima/10/zima-10.svg
 pdf: /pory-roku/zima/10/zima-10.pdf
 alt: "Kolorowanka z zima do pobrania"
 tags:
+- trudnosc-10
 - pory-roku
 - zima
 ---

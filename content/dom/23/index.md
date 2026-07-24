@@ -7,6 +7,7 @@ image: /dom/23/dom-23.svg
 pdf: /dom/23/dom-23.pdf
 alt: "Kolorowanka do druku dom"
 tags:
+- trudnosc-6
 - dom
 - dom
 ---

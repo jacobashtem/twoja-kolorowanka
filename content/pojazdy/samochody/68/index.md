@@ -7,6 +7,7 @@ image: /pojazdy/samochody/68/samochody-68.svg
 pdf: /pojazdy/samochody/68/samochody-68.pdf
 alt: "Edukacyjna kolorowanka samochody do wydruku"
 tags:
+- trudnosc-4
 - pojazdy
 - samochody
 ---

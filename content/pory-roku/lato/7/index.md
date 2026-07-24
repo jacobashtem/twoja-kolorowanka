@@ -7,6 +7,7 @@ image: /pory-roku/lato/7/lato-7.svg
 pdf: /pory-roku/lato/7/lato-7.pdf
 alt: "lato do druku i pokolorowania"
 tags:
+- trudnosc-8
 - pory-roku
 - lato
 ---

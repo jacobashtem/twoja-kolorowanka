@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/17/biedronki-17.svg
 pdf: /zwierzeta/biedronki/17/biedronki-17.pdf
 alt: "Prosta kolorowanka biedronki do kolorowania"
 tags:
+- trudnosc-8
 - zwierzeta
 - biedronki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/55/dinozaury-55.svg
 pdf: /zwierzeta/dinozaury/55/dinozaury-55.pdf
 alt: "Kolorowanka dinozaury"
 tags:
+- trudnosc-8
 - zwierzeta
 - dinozaury
 ---

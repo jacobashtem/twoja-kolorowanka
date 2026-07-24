@@ -7,6 +7,7 @@ image: /zwierzeta/mis/11/mis-11.svg
 pdf: /zwierzeta/mis/11/mis-11.pdf
 alt: "Malowanka mis do druku A4"
 tags:
+- trudnosc-3
 - zwierzeta
 - mis
 ---

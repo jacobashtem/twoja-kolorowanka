@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/23/pieski-23.svg
 pdf: /pieski/23/pieski-23.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - pieski
 alt: "Kolorowanka pieski – format A4 PDF - wariant 23"

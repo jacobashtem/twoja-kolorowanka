@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/32/pawie-32.svg
 pdf: /zwierzeta/pawie/32/pawie-32.pdf
 alt: "Edukacyjna kolorowanka pawie do wydruku"
 tags:
+- trudnosc-3
 - zwierzeta
 - pawie
 ---

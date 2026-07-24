@@ -7,6 +7,7 @@ image: /rosliny/dynie/40/dynie-40.svg
 pdf: /rosliny/dynie/40/dynie-40.pdf
 alt: "dynie kolorowanki dla dzieci"
 tags:
+- trudnosc-6
 - rosliny
 - dynie
 ---

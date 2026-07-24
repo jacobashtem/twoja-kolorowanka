@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/25/rekiny-25.svg
 pdf: /zwierzeta/rekiny/25/rekiny-25.pdf
 alt: "rekiny do druku i pokolorowania"
 tags:
+- trudnosc-2
 - zwierzeta
 - rekiny
 ---

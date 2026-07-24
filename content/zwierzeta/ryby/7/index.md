@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/7/ryby-7.svg
 pdf: /zwierzeta/ryby/7/ryby-7.pdf
 alt: "ryby do druku i pokolorowania"
 tags:
+- trudnosc-7
 - zwierzeta
 - ryby
 ---

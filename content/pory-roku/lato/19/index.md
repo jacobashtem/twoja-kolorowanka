@@ -7,6 +7,7 @@ image: /pory-roku/lato/19/lato-19.svg
 pdf: /pory-roku/lato/19/lato-19.pdf
 alt: "Kolorowanka lato"
 tags:
+- trudnosc-9
 - pory-roku
 - lato
 ---

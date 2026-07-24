@@ -7,6 +7,7 @@ image: /jedzenie/torty/30/torty-30.svg
 pdf: /jedzenie/torty/30/torty-30.pdf
 alt: "kolorowanka do druku torty PDF"
 tags:
+- trudnosc-7
 - jedzenie
 - torty
 ---

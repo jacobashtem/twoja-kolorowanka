@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/56/ryby-56.svg
 pdf: /zwierzeta/ryby/56/ryby-56.pdf
 alt: "Malowanka ryby do druku A4"
 tags:
+- trudnosc-1
 - zwierzeta
 - ryby
 ---

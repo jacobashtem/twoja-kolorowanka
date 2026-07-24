@@ -7,6 +7,7 @@ image: /pory-roku/jesien/47/jesien-47.svg
 pdf: /pory-roku/jesien/47/jesien-47.pdf
 alt: "Malowanka jesien do druku A4"
 tags:
+- trudnosc-3
 - pory-roku
 - jesien
 ---

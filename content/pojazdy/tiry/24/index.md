@@ -7,6 +7,7 @@ image: /pojazdy/tiry/24/tir-24.svg
 pdf: /pojazdy/tiry/24/tir-24.pdf
 alt: "Kolorowanki do druku tir"
 tags:
+- trudnosc-5
 - pojazdy
 - tir
 ---

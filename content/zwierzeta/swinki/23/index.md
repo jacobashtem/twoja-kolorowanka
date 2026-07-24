@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/23/swinki-23.svg
 pdf: /zwierzeta/swinki/23/swinki-23.pdf
 alt: "Kolorowanka do druku swinki"
 tags:
+- trudnosc-1
 - zwierzeta
 - swinki
 ---

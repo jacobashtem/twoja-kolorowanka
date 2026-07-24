@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/37/niedzwiedzie-37.svg
 pdf: /zwierzeta/niedzwiedzie/37/niedzwiedzie-37.pdf
 alt: "Kolorowanka niedzwiedzie"
 tags:
+- trudnosc-2
 - zwierzeta
 - niedzwiedzie
 ---

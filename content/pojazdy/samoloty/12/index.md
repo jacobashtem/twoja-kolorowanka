@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/12/samoloty-12.svg
 pdf: /pojazdy/samoloty/12/samoloty-12.pdf
 alt: "kolorowanka do druku samoloty PDF"
 tags:
+- trudnosc-7
 - pojazdy
 - samoloty
 ---

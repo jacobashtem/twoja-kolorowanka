@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/16/urodziny-16.svg
 pdf: /okolicznosciowe/urodziny/16/urodziny-16.pdf
 alt: "urodziny kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - okolicznosciowe
 - urodziny
 ---

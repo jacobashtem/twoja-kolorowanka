@@ -7,6 +7,7 @@ image: /fantasy/wrozki/35/wrozki-35.svg
 pdf: /fantasy/wrozki/35/wrozki-35.pdf
 alt: "Prosta kolorowanka wrozki do kolorowania - wariant 35"
 tags:
+- trudnosc-10
 - fantasy
 - wrozki
 ---

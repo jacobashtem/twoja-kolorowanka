@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/63/pieski-63.svg
 pdf: /pieski/63/pieski-63.pdf
 tags:
+- trudnosc-9
 - zwierzeta
 - pieski
 alt: "pieski kolorowanka dla dzieci - wariant 63"

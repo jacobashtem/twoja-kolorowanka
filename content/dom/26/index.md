@@ -7,6 +7,7 @@ image: /dom/26/dom-26.svg
 pdf: /dom/26/dom-26.pdf
 alt: "Darmowa kolorowanka dom do druku PDF"
 tags:
+- trudnosc-7
 - dom
 - dom
 ---

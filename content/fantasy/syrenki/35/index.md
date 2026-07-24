@@ -7,6 +7,7 @@ image: /fantasy/syrenki/35/syrenki-35.svg
 pdf: /fantasy/syrenki/35/syrenki-35.pdf
 alt: "Prosta kolorowanka syrenki do kolorowania"
 tags:
+- trudnosc-8
 - fantasy
 - syrenki
 ---

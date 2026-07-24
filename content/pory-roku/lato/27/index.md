@@ -7,6 +7,7 @@ image: /pory-roku/lato/27/lato-27.svg
 pdf: /pory-roku/lato/27/lato-27.pdf
 alt: "lato – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - pory-roku
 - lato
 ---

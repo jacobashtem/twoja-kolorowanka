@@ -7,6 +7,7 @@ image: /fantasy/smoki/88/smoki-88.svg
 pdf: /fantasy/smoki/88/smoki-88.pdf
 alt: "Kolorowanka smoki – format A4 PDF - wariant 88"
 tags:
+- trudnosc-10
 - fantasy
 - smoki
 ---

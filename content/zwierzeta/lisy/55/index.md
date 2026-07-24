@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/55/lisy-55.svg
 pdf: /zwierzeta/lisy/55/lisy-55.pdf
 alt: "Kolorowanka lisy"
 tags:
+- trudnosc-6
 - zwierzeta
 - lisy
 ---

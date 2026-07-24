@@ -7,6 +7,7 @@ image: /fantasy/smoki/64/smoki-64.svg
 pdf: /fantasy/smoki/64/smoki-64.pdf
 alt: "Kolorowanka z smoki do pobrania - wariant 64"
 tags:
+- trudnosc-2
 - fantasy
 - smoki
 ---

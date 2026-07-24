@@ -7,6 +7,7 @@ image: /fantasy/smoki/31/smoki-31.svg
 pdf: /fantasy/smoki/31/smoki-31.pdf
 alt: "Łatwa kolorowanka smoki dla przedszkolaka - wariant 31"
 tags:
+- trudnosc-5
 - fantasy
 - smoki
 ---

@@ -7,6 +7,7 @@ image: /kosmos/47/kosmos-47.svg
 pdf: /kosmos/47/kosmos-47.pdf
 alt: "Malowanka kosmos do druku A4"
 tags:
+- trudnosc-7
 - kosmos
 - kosmos
 ---

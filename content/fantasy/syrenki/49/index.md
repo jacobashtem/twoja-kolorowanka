@@ -7,6 +7,7 @@ image: /fantasy/syrenki/49/syrenki-49.svg
 pdf: /fantasy/syrenki/49/syrenki-49.pdf
 alt: "syrenki do druku i pokolorowania"
 tags:
+- trudnosc-5
 - fantasy
 - syrenki
 ---

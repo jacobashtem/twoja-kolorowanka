@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/10/myszki-10.svg
 pdf: /zwierzeta/myszki/10/myszki-10.pdf
 alt: "Kolorowanka z myszki do pobrania"
 tags:
+- trudnosc-4
 - zwierzeta
 - myszki
 ---

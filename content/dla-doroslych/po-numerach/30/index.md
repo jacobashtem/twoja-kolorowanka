@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/30/po-numerach-30.svg
 pdf: /dla-doroslych/po-numerach/30/po-numerach-30.pdf
 alt: "kolorowanka do druku po-numerach PDF"
 tags:
+- trudnosc-5
 - dla-doroslych
 - po-numerach
 ---

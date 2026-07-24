@@ -7,6 +7,7 @@ image: /rosliny/grzyby/38/grzyby-38.svg
 pdf: /rosliny/grzyby/38/grzyby-38.pdf
 alt: "Kolorowanki grzyby"
 tags:
+- trudnosc-6
 - rosliny
 - grzyby
 ---

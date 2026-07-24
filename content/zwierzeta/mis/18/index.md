@@ -7,6 +7,7 @@ image: /zwierzeta/mis/18/mis-18.svg
 pdf: /zwierzeta/mis/18/mis-18.pdf
 alt: "Pokoloruj mis – darmowy szablon PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - mis
 ---

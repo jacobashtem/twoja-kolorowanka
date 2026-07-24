@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/60/pieski-60.svg
 pdf: /pieski/60/pieski-60.pdf
 tags:
+- trudnosc-3
 - zwierzeta
 - pieski
 alt: "Pokoloruj pieski – darmowy szablon PDF - wariant 60"

@@ -7,6 +7,7 @@ image: /rosliny/grzyby/37/grzyby-37.svg
 pdf: /rosliny/grzyby/37/grzyby-37.pdf
 alt: "Kolorowanka grzyby"
 tags:
+- trudnosc-2
 - rosliny
 - grzyby
 ---

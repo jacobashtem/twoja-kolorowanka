@@ -7,6 +7,7 @@ image: /jedzenie/torty/22/torty-22.svg
 pdf: /jedzenie/torty/22/torty-22.pdf
 alt: "torty kolorowanki dla dzieci"
 tags:
+- trudnosc-6
 - jedzenie
 - torty
 ---

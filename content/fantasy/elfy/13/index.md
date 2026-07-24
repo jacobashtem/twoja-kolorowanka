@@ -7,6 +7,7 @@ image: /fantasy/elfy/13/elfy-13.svg
 pdf: /fantasy/elfy/13/elfy-13.pdf
 alt: "Łatwa kolorowanka elfy dla przedszkolaka"
 tags:
+- trudnosc-8
 - fantasy
 - elfy
 ---

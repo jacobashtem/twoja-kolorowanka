@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/31/czolgi-31.svg
 pdf: /pojazdy/czolgi/31/czolgi-31.pdf
 alt: "Łatwa kolorowanka czolgi dla przedszkolaka"
 tags:
+- trudnosc-9
 - pojazdy
 - czolgi
 ---

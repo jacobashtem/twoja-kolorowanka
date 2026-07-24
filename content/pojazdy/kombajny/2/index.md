@@ -7,6 +7,7 @@ image: /pojazdy/kombajny/2/kombajny-2.svg
 pdf: /pojazdy/kombajny/2/kombajny-2.pdf
 alt: "Kolorowanki kombajny"
 tags:
+- trudnosc-9
 - pojazdy
 - kombajny
 ---

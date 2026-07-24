@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/18/po-numerach-18.svg
 pdf: /dla-doroslych/po-numerach/18/po-numerach-18.pdf
 alt: "Pokoloruj po-numerach – darmowy szablon PDF"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---
