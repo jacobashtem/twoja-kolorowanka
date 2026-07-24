@@ -41,7 +41,7 @@ const onImgError = () => {
       class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-2xl text-center text-white font-roboto font-medium group-hover:bg-opacity-60 transition"
     >
       <span
-        class="flex-none block mx-4 px-4 py-2.5 rounded-lg leading-none text-2xl bg-yellow-500 text-white"
+        class="block max-w-[calc(100%-2rem)] px-4 py-2.5 rounded-lg leading-tight text-2xl bg-yellow-500 text-white"
       >
         {{ title }}
       </span>
