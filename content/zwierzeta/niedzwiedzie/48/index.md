@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/48/niedzwiedzie-48.svg
 pdf: /zwierzeta/niedzwiedzie/48/niedzwiedzie-48.pdf
 alt: "kolorowanka do druku niedzwiedzie PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - niedzwiedzie
 ---

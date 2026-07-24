@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/26/urodziny-26.svg
 pdf: /okolicznosciowe/urodziny/26/urodziny-26.pdf
 alt: "urodziny do druku i pokolorowania"
 tags:
+- trudnosc-7
 - okolicznosciowe
 - urodziny
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/9/ciagniki-9.svg
 pdf: /pojazdy/ciagniki/9/ciagniki-9.pdf
 alt: "ciagniki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - pojazdy
 - ciagniki
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/jesien/46/jesien-46.svg
 pdf: /pory-roku/jesien/46/jesien-46.pdf
 alt: "Kolorowanka z jesien do pobrania"
 tags:
+- trudnosc-7
 - pory-roku
 - jesien
 ---

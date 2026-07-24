@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/7/lwy-7.svg
 pdf: /zwierzeta/lwy/7/lwy-7.pdf
 alt: "lwy do druku i pokolorowania"
 tags:
+- trudnosc-8
 - zwierzeta
 - lwy
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/37/rakiety-37.svg
 pdf: /pojazdy/rakiety/37/rakiety-37.pdf
 alt: "Kolorowanka rakiety"
 tags:
+- trudnosc-3
 - pojazdy
 - rakiety
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/39/flamingi-39.svg
 pdf: /zwierzeta/flamingi/39/flamingi-39.pdf
 alt: "Kolorowanki do druku flamingi"
 tags:
+- trudnosc-10
 - zwierzeta
 - flamingi
 ---

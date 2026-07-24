@@ -7,6 +7,7 @@ image: /pojazdy/samochody/7/samochody-7.svg
 pdf: /pojazdy/samochody/7/samochody-7.pdf
 alt: "samochody do druku i pokolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - samochody
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/8/t-rex-8.svg
 pdf: /zwierzeta/t-rex/8/t-rex-8.pdf
 alt: "Darmowa kolorowanka t-rex do druku PDF"
 tags:
+- trudnosc-7
 - zwierzeta
 - t-rex
 ---

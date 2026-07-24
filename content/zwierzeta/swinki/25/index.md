@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/25/swinki-25.svg
 pdf: /zwierzeta/swinki/25/swinki-25.pdf
 alt: "swinki do druku i pokolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - swinki
 ---

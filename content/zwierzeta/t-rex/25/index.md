@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/25/t-rex-25.svg
 pdf: /zwierzeta/t-rex/25/t-rex-25.pdf
 alt: "t-rex do druku i pokolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - t-rex
 ---

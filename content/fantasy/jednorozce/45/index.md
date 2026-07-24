@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/45/jednorozce-45.svg
 pdf: /fantasy/jednorozce/45/jednorozce-45.pdf
 alt: "jednorozce – pobierz i wydrukuj kolorowankę - wariant 45"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

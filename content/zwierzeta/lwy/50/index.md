@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/50/lwy-50.svg
 pdf: /zwierzeta/lwy/50/lwy-50.pdf
 alt: "Edukacyjna kolorowanka lwy do wydruku"
 tags:
+- trudnosc-10
 - zwierzeta
 - lwy
 ---

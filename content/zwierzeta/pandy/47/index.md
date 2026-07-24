@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/47/pandy-47.svg
 pdf: /zwierzeta/pandy/47/pandy-47.pdf
 alt: "Malowanka pandy do druku A4"
 tags:
+- trudnosc-5
 - zwierzeta
 - pandy
 ---

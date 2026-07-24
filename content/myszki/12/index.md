@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/12/myszki-12.svg
 pdf: /zwierzeta/myszki/12/myszki-12.pdf
 alt: "kolorowanka do druku myszki PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - myszki
 ---

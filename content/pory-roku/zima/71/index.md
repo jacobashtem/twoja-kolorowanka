@@ -7,6 +7,7 @@ image: /pory-roku/zima/71/zima-71.svg
 pdf: /pory-roku/zima/71/zima-71.pdf
 alt: "Malowanka zima do druku A4"
 tags:
+- trudnosc-6
 - pory-roku
 - zima
 ---

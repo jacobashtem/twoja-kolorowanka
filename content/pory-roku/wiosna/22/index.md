@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/22/wiosna-22.svg
 pdf: /pory-roku/wiosna/22/wiosna-22.pdf
 alt: "wiosna kolorowanki dla dzieci"
 tags:
+- trudnosc-3
 - pory-roku
 - wiosna
 ---

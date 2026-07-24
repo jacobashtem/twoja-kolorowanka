@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/50/samoloty-50.svg
 pdf: /pojazdy/samoloty/50/samoloty-50.pdf
 alt: "Edukacyjna kolorowanka samoloty do wydruku"
 tags:
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

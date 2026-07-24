@@ -7,6 +7,7 @@ image: /fantasy/wrozki/19/wrozki-19.svg
 pdf: /fantasy/wrozki/19/wrozki-19.pdf
 alt: "Kolorowanka wrozki - wariant 19"
 tags:
+- trudnosc-4
 - fantasy
 - wrozki
 ---

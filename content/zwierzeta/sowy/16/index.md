@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/16/sowy-16.svg
 pdf: /zwierzeta/sowy/16/sowy-16.pdf
 alt: "Kolorowanka sowy – format A4 PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - sowy
 ---

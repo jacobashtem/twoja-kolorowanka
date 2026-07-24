@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/22/kroliczki-22.svg
 pdf: /kroliczki/22/kroliczki-22.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - kroliczki
 alt: "kroliczki – pobierz i wydrukuj kolorowankę - wariant 22"

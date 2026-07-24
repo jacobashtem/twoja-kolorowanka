@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/27/sowy-27.svg
 pdf: /zwierzeta/sowy/27/sowy-27.pdf
 alt: "sowy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - zwierzeta
 - sowy
 ---

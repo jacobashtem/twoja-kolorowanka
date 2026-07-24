@@ -7,6 +7,7 @@ image: /pojazdy/bmw/20/bmw-20.svg
 pdf: /pojazdy/bmw/20/bmw-20.pdf
 alt: "Kolorowanki bmw"
 tags:
+- trudnosc-3
 - pojazdy
 - bmw
 ---

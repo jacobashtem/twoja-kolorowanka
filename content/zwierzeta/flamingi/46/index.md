@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/46/flamingi-46.svg
 pdf: /zwierzeta/flamingi/46/flamingi-46.pdf
 alt: "Łatwa kolorowanka flamingi dla przedszkolaka"
 tags:
+- trudnosc-3
 - zwierzeta
 - flamingi
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/17/lwy-17.svg
 pdf: /zwierzeta/lwy/17/lwy-17.pdf
 alt: "Prosta kolorowanka lwy do kolorowania"
 tags:
+- trudnosc-2
 - zwierzeta
 - lwy
 ---

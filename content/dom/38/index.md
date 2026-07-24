@@ -7,6 +7,7 @@ image: /dom/38/dom-38.svg
 pdf: /dom/38/dom-38.pdf
 alt: "Kolorowanki dom"
 tags:
+- trudnosc-5
 - dom
 - dom
 ---

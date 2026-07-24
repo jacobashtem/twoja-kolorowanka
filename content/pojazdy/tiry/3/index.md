@@ -7,6 +7,7 @@ image: /pojazdy/tiry/3/tir-3.svg
 pdf: /pojazdy/tiry/3/tir-3.pdf
 alt: "tir kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - pojazdy
 - tir
 ---

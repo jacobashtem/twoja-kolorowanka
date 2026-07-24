@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/6/wiosna-6.svg
 pdf: /pory-roku/wiosna/6/wiosna-6.pdf
 alt: "Kolorowanki do druku wiosna"
 tags:
+- trudnosc-10
 - pory-roku
 - wiosna
 ---

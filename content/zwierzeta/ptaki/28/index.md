@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/28/ptaki-28.svg
 pdf: /zwierzeta/ptaki/28/ptaki-28.pdf
 alt: "Kolorowanka z ptaki do pobrania"
 tags:
+- trudnosc-1
 - zwierzeta
 - ptaki
 ---

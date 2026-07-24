@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/19/czolgi-19.svg
 pdf: /pojazdy/czolgi/19/czolgi-19.pdf
 alt: "Kolorowanka czolgi"
 tags:
+- trudnosc-3
 - pojazdy
 - czolgi
 ---

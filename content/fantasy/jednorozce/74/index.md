@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/74/jednorozce-74.svg
 pdf: /fantasy/jednorozce/74/jednorozce-74.pdf
 alt: "Kolorowanki jednorozce - wariant 74"
 tags:
+- trudnosc-10
 - fantasy
 - jednorozce
 ---

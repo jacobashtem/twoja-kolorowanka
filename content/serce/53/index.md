@@ -7,6 +7,7 @@ image: /serce/53/serce-53.svg
 pdf: /serce/53/serce-53.pdf
 alt: "Prosta kolorowanka serce do kolorowania"
 tags:
+- trudnosc-5
 - serce
 - serce
 ---

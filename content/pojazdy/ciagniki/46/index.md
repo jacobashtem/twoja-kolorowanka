@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/46/ciagniki-46.svg
 pdf: /pojazdy/ciagniki/46/ciagniki-46.pdf
 alt: "Kolorowanka z ciagniki do pobrania"
 tags:
+- trudnosc-1
 - pojazdy
 - ciagniki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/38/dinozaury-38.svg
 pdf: /zwierzeta/dinozaury/38/dinozaury-38.pdf
 alt: "Kolorowanki dinozaury"
 tags:
+- trudnosc-8
 - zwierzeta
 - dinozaury
 ---

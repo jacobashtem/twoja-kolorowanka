@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/45/tygrysy-45.svg
 pdf: /zwierzeta/tygrysy/45/tygrysy-45.pdf
 alt: "tygrysy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - zwierzeta
 - tygrysy
 ---

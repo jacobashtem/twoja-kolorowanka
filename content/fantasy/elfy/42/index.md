@@ -7,6 +7,7 @@ image: /fantasy/elfy/42/elfy-42.svg
 pdf: /fantasy/elfy/42/elfy-42.pdf
 alt: "Kolorowanki do druku elfy"
 tags:
+- trudnosc-2
 - fantasy
 - elfy
 ---

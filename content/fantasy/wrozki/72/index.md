@@ -7,6 +7,7 @@ image: /fantasy/wrozki/72/wrozki-72.svg
 pdf: /fantasy/wrozki/72/wrozki-72.pdf
 alt: "Pokoloruj wrozki – darmowy szablon PDF - wariant 72"
 tags:
+- trudnosc-7
 - fantasy
 - wrozki
 ---

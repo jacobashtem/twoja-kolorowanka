@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/13/chomiki-13.svg
 pdf: /zwierzeta/chomiki/13/chomiki-13.pdf
 alt: "Łatwa kolorowanka chomiki dla przedszkolaka"
 tags:
+- trudnosc-1
 - zwierzeta
 - chomiki
 ---

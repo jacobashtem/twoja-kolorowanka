@@ -7,6 +7,7 @@ image: /pojazdy/samochody/10/samochody-10.svg
 pdf: /pojazdy/samochody/10/samochody-10.pdf
 alt: "Kolorowanka z samochody do pobrania"
 tags:
+- trudnosc-4
 - pojazdy
 - samochody
 ---

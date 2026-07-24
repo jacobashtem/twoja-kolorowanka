@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/27/rekiny-27.svg
 pdf: /zwierzeta/rekiny/27/rekiny-27.pdf
 alt: "rekiny – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - zwierzeta
 - rekiny
 ---

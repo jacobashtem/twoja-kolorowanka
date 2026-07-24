@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/86/dinozaury-86.svg
 pdf: /zwierzeta/dinozaury/86/dinozaury-86.pdf
 alt: "Edukacyjna kolorowanka dinozaury do wydruku"
 tags:
+- trudnosc-4
 - zwierzeta
 - dinozaury
 ---

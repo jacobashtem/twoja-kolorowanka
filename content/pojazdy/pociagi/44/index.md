@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/44/pociagi-44.svg
 pdf: /pojazdy/pociagi/44/pociagi-44.pdf
 alt: "Darmowa kolorowanka pociagi do druku PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - pociagi
 ---

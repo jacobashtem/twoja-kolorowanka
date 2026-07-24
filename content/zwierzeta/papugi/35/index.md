@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/35/papugi-35.svg
 pdf: /zwierzeta/papugi/35/papugi-35.pdf
 alt: "Malowanka papugi do druku A4"
 tags:
+- trudnosc-8
 - zwierzeta
 - papugi
 ---

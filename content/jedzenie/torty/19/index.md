@@ -7,6 +7,7 @@ image: /jedzenie/torty/19/torty-19.svg
 pdf: /jedzenie/torty/19/torty-19.pdf
 alt: "Kolorowanka torty"
 tags:
+- trudnosc-6
 - jedzenie
 - torty
 ---

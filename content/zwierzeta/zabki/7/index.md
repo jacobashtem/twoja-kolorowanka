@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/7/zabki-7.svg
 pdf: /zwierzeta/zabki/7/zabki-7.pdf
 alt: "zabka do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - zabki
 ---

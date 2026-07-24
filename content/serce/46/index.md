@@ -7,6 +7,7 @@ image: /serce/46/serce-46.svg
 pdf: /serce/46/serce-46.pdf
 alt: "Kolorowanka z serce do pobrania"
 tags:
+- trudnosc-9
 - serce
 - serce
 ---

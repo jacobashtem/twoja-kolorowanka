@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/60/mandala-60.svg
 pdf: /dla-doroslych/mandala/60/mandala-60.pdf
 alt: "Kolorowanki do druku mandala"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

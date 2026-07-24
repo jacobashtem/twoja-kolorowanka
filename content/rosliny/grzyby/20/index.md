@@ -7,6 +7,7 @@ image: /rosliny/grzyby/20/grzyby-20.svg
 pdf: /rosliny/grzyby/20/grzyby-20.pdf
 alt: "Kolorowanki grzyby"
 tags:
+- trudnosc-2
 - rosliny
 - grzyby
 ---

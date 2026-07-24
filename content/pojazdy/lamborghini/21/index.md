@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/21/lamborghini-21.svg
 pdf: /pojazdy/lamborghini/21/lamborghini-21.pdf
 alt: "lamborghini kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - pojazdy
 - lamborghini
 ---

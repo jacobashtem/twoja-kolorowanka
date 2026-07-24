@@ -7,6 +7,7 @@ image: /rosliny/dynie/34/dynie-34.svg
 pdf: /rosliny/dynie/34/dynie-34.pdf
 alt: "Kolorowanka dynie – format A4 PDF"
 tags:
+- trudnosc-8
 - rosliny
 - dynie
 ---

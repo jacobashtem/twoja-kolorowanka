@@ -7,6 +7,7 @@ image: /pojazdy/samochody/32/samochody-32.svg
 pdf: /pojazdy/samochody/32/samochody-32.pdf
 alt: "Edukacyjna kolorowanka samochody do wydruku"
 tags:
+- trudnosc-6
 - pojazdy
 - samochody
 ---

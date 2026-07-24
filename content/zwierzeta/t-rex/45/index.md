@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/45/t-rex-45.svg
 pdf: /zwierzeta/t-rex/45/t-rex-45.pdf
 alt: "Kolorowanki do druku t-rex"
 tags:
+- trudnosc-6
 - zwierzeta
 - t-rex
 ---

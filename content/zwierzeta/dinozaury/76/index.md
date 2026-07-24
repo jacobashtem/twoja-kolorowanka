@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/76/dinozaury-76.svg
 pdf: /zwierzeta/dinozaury/76/dinozaury-76.pdf
 alt: "dinozaury kolorowanki dla dzieci"
 tags:
+- trudnosc-6
 - zwierzeta
 - dinozaury
 ---

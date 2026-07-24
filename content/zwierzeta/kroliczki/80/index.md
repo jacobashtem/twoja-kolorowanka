@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/80/kroliczki-80.svg
 pdf: /kroliczki/80/kroliczki-80.pdf
 tags:
+- trudnosc-6
 - zwierzeta
 - kroliczki
 alt: "Kolorowanka kroliczki – format A4 PDF - wariant 80"

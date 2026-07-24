@@ -7,6 +7,7 @@ image: /pojazdy/traktory/33/traktory-33.svg
 pdf: /pojazdy/traktory/33/traktory-33.pdf
 alt: "traktory kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - pojazdy
 - traktory
 ---

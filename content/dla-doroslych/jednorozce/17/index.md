@@ -7,6 +7,7 @@ image: /dla-doroslych/jednorozce/17/jednorozce-17.svg
 pdf: /dla-doroslych/jednorozce/17/jednorozce-17.pdf
 alt: "Prosta kolorowanka jednorozce do kolorowania"
 tags:
+- trudnosc-8
 - dla-doroslych
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/43/lisy-43.svg
 pdf: /zwierzeta/lisy/43/lisy-43.pdf
 alt: "lisy do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - lisy
 ---

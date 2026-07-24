@@ -7,6 +7,7 @@ image: /pojazdy/koparki/40/koparki-40.svg
 pdf: /pojazdy/koparki/40/koparki-40.pdf
 alt: "koparki kolorowanki dla dzieci"
 tags:
+- trudnosc-7
 - pojazdy
 - koparki
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/jesien/52/jesien-52.svg
 pdf: /pory-roku/jesien/52/jesien-52.pdf
 alt: "Kolorowanka jesien – format A4 PDF"
 tags:
+- trudnosc-10
 - pory-roku
 - jesien
 ---

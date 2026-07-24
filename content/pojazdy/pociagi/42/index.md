@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/42/pociagi-42.svg
 pdf: /pojazdy/pociagi/42/pociagi-42.pdf
 alt: "Kolorowanki do druku pociagi"
 tags:
+- trudnosc-7
 - pojazdy
 - pociagi
 ---

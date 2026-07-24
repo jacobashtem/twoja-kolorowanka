@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/39/lamborghini-39.svg
 pdf: /pojazdy/lamborghini/39/lamborghini-39.pdf
 alt: "lamborghini kolorowanka dla dzieci"
 tags:
+- trudnosc-7
 - pojazdy
 - lamborghini
 ---

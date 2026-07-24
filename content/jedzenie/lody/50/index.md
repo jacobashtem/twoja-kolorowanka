@@ -7,6 +7,7 @@ image: /jedzenie/lody/50/lody-50.svg
 pdf: /jedzenie/lody/50/lody-50.pdf
 alt: "kolorowanka do druku lody PDF"
 tags:
+- trudnosc-3
 - jedzenie
 - lody
 ---

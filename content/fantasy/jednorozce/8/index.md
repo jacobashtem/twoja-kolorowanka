@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/8/jednorozce-8.svg
 pdf: /fantasy/jednorozce/8/jednorozce-8.pdf
 alt: "Darmowa kolorowanka jednorozce do druku PDF - wariant 8"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

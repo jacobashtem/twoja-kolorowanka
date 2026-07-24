@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/37/ryby-37.svg
 pdf: /zwierzeta/ryby/37/ryby-37.pdf
 alt: "Kolorowanka z ryby do pobrania"
 tags:
+- trudnosc-2
 - zwierzeta
 - ryby
 ---

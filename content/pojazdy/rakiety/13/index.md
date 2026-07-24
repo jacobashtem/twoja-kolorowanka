@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/13/rakiety-13.svg
 pdf: /pojazdy/rakiety/13/rakiety-13.pdf
 alt: "Łatwa kolorowanka rakiety dla przedszkolaka"
 tags:
+- trudnosc-1
 - pojazdy
 - rakiety
 ---

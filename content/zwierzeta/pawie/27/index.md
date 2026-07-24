@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/27/pawie-27.svg
 pdf: /zwierzeta/pawie/27/pawie-27.pdf
 alt: "pawie – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - zwierzeta
 - pawie
 ---

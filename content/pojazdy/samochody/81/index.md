@@ -7,6 +7,7 @@ image: /pojazdy/samochody/81/samochody-81.svg
 pdf: /pojazdy/samochody/81/samochody-81.pdf
 alt: "samochody – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - pojazdy
 - samochody
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/30/biedronki-30.svg
 pdf: /zwierzeta/biedronki/30/biedronki-30.pdf
 alt: "kolorowanka do druku biedronki PDF"
 tags:
+- trudnosc-9
 - zwierzeta
 - biedronki
 ---

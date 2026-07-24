@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/28/pingwiny-28.svg
 pdf: /zwierzeta/pingwiny/28/pingwiny-28.pdf
 alt: "Kolorowanka z pingwiny do pobrania"
 tags:
+- trudnosc-5
 - zwierzeta
 - pingwiny
 ---

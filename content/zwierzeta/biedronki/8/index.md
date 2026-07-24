@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/8/biedronki-8.svg
 pdf: /zwierzeta/biedronki/8/biedronki-8.pdf
 alt: "Darmowa kolorowanka biedronki do druku PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - biedronki
 ---

@@ -7,6 +7,7 @@ image: /rosliny/dynie/11/dynie-11.svg
 pdf: /rosliny/dynie/11/dynie-11.pdf
 alt: "Malowanka dynie do druku A4"
 tags:
+- trudnosc-4
 - rosliny
 - dynie
 ---

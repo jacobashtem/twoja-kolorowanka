@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/28/rakiety-28.svg
 pdf: /pojazdy/rakiety/28/rakiety-28.pdf
 alt: "Kolorowanka z rakiety do pobrania"
 tags:
+- trudnosc-7
 - pojazdy
 - rakiety
 ---

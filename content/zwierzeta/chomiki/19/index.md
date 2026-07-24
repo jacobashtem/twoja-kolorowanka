@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/19/chomiki-19.svg
 pdf: /zwierzeta/chomiki/19/chomiki-19.pdf
 alt: "Kolorowanka chomiki"
 tags:
+- trudnosc-3
 - zwierzeta
 - chomiki
 ---

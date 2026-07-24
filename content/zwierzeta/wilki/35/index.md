@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/35/wilki-35.svg
 pdf: /zwierzeta/wilki/35/wilki-35.pdf
 alt: "Prosta kolorowanka wilki do kolorowania"
 tags:
+- trudnosc-7
 - zwierzeta
 - wilki
 ---

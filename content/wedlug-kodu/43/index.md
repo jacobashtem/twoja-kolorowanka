@@ -7,6 +7,7 @@ image: /wedlug-kodu/43/wedlug-kodu-43.svg
 pdf: /wedlug-kodu/43/wedlug-kodu-43.pdf
 alt: "wedlug-kodu do druku i pokolorowania"
 tags:
+- trudnosc-7
 - wedlug-kodu
 - wedlug-kodu
 ---

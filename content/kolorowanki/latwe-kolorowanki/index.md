@@ -4,7 +4,7 @@ description:    "Łatwe kolorowanki z dużymi, prostymi konturami – idealne dl
 categoryName:   "Łatwe kolorowanki"
 canonical:      "/kolorowanki/latwe-kolorowanki/"
 tags:           [ kolorowanki, latwe, proste, dla-dzieci, pdf ]
-tagsFilter:     [ serce, dom, mis, zabki, jablka, lody ]
+tagsFilter:     [ trudnosc-1, trudnosc-2 ]
 alt: 'łatwe kolorowanki dla dzieci'
 h1First: Łatwe
 h1Sec:  kolorowanki

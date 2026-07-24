@@ -7,6 +7,7 @@ image: /rosliny/grzyby/25/grzyby-25.svg
 pdf: /rosliny/grzyby/25/grzyby-25.pdf
 alt: "grzyby do druku i pokolorowania"
 tags:
+- trudnosc-10
 - rosliny
 - grzyby
 ---

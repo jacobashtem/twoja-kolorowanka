@@ -7,6 +7,7 @@ image: /jedzenie/torty/9/torty-9.svg
 pdf: /jedzenie/torty/9/torty-9.pdf
 alt: "torty – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - jedzenie
 - torty
 ---

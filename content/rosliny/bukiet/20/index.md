@@ -7,6 +7,7 @@ image: /rosliny/bukiet/20/bukiet-20.svg
 pdf: /rosliny/bukiet/20/bukiet-20.pdf
 alt: "Kolorowanki bukiet"
 tags:
+- trudnosc-9
 - rosliny
 - bukiet
 ---

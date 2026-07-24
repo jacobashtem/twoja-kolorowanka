@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/25/niedzwiedzie-25.svg
 pdf: /zwierzeta/niedzwiedzie/25/niedzwiedzie-25.pdf
 alt: "niedzwiedzie do druku i pokolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - niedzwiedzie
 ---

@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/22/andrzejki-22.svg
 pdf: /okolicznosciowe/andrzejki/22/andrzejki-22.pdf
 alt: "andrzejki kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - okolicznosciowe
 - andrzejki
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/lato/2/lato-2.svg
 pdf: /pory-roku/lato/2/lato-2.pdf
 alt: "Kolorowanki lato"
 tags:
+- trudnosc-6
 - pory-roku
 - lato
 ---

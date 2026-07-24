@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/37/papugi-37.svg
 pdf: /zwierzeta/papugi/37/papugi-37.pdf
 alt: "Łatwa kolorowanka papugi dla przedszkolaka"
 tags:
+- trudnosc-5
 - zwierzeta
 - papugi
 ---

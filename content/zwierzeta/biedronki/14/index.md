@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/14/biedronki-14.svg
 pdf: /zwierzeta/biedronki/14/biedronki-14.pdf
 alt: "Edukacyjna kolorowanka biedronki do wydruku"
 tags:
+- trudnosc-1
 - zwierzeta
 - biedronki
 ---

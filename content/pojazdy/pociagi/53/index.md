@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/53/pociagi-53.svg
 pdf: /pojazdy/pociagi/53/pociagi-53.pdf
 alt: "Prosta kolorowanka pociagi do kolorowania"
 tags:
+- trudnosc-8
 - pojazdy
 - pociagi
 ---

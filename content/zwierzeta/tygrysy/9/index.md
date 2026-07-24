@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/9/tygrysy-9.svg
 pdf: /zwierzeta/tygrysy/9/tygrysy-9.pdf
 alt: "tygrysy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - zwierzeta
 - tygrysy
 ---

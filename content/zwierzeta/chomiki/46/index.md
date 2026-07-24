@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/46/chomiki-46.svg
 pdf: /zwierzeta/chomiki/46/chomiki-46.pdf
 alt: "Kolorowanka z chomiki do pobrania"
 tags:
+- trudnosc-3
 - zwierzeta
 - chomiki
 ---

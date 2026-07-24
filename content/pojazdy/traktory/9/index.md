@@ -7,6 +7,7 @@ image: /pojazdy/traktory/9/traktory-9.svg
 pdf: /pojazdy/traktory/9/traktory-9.pdf
 alt: "traktory – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-10
 - pojazdy
 - traktory
 ---

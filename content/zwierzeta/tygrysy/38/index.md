@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/38/tygrysy-38.svg
 pdf: /zwierzeta/tygrysy/38/tygrysy-38.pdf
 alt: "Kolorowanki tygrysy"
 tags:
+- trudnosc-10
 - zwierzeta
 - tygrysy
 ---

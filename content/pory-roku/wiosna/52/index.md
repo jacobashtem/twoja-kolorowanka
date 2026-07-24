@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/52/wiosna-52.svg
 pdf: /pory-roku/wiosna/52/wiosna-52.pdf
 alt: "Kolorowanka wiosna – format A4 PDF"
 tags:
+- trudnosc-7
 - pory-roku
 - wiosna
 ---

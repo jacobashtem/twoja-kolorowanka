@@ -7,6 +7,7 @@ image: /pojazdy/tiry/20/tir-20.svg
 pdf: /pojazdy/tiry/20/tir-20.pdf
 alt: "Kolorowanki tir"
 tags:
+- trudnosc-3
 - pojazdy
 - tir
 ---

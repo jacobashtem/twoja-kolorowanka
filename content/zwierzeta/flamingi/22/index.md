@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/22/flamingi-22.svg
 pdf: /zwierzeta/flamingi/22/flamingi-22.pdf
 alt: "flamingi kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - zwierzeta
 - flamingi
 ---

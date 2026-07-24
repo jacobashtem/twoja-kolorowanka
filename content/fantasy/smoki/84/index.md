@@ -7,6 +7,7 @@ image: /fantasy/smoki/84/smoki-84.svg
 pdf: /fantasy/smoki/84/smoki-84.pdf
 alt: "kolorowanka do druku smoki PDF - wariant 84"
 tags:
+- trudnosc-9
 - fantasy
 - smoki
 ---

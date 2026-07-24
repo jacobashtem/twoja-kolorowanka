@@ -7,6 +7,7 @@ image: /dom/15/dom-15.svg
 pdf: /dom/15/dom-15.pdf
 alt: "dom kolorowanka dla dzieci"
 tags:
+- trudnosc-2
 - dom
 - dom
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/2/sowy-2.svg
 pdf: /zwierzeta/sowy/2/sowy-2.pdf
 alt: "Kolorowanki sowy"
 tags:
+- trudnosc-8
 - zwierzeta
 - sowy
 ---

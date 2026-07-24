@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/61/dinozaury-61.svg
 pdf: /zwierzeta/dinozaury/61/dinozaury-61.pdf
 alt: "dinozaury do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

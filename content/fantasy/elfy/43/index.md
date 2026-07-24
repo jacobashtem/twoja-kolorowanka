@@ -7,6 +7,7 @@ image: /fantasy/elfy/43/elfy-43.svg
 pdf: /fantasy/elfy/43/elfy-43.pdf
 alt: "elfy do druku i pokolorowania"
 tags:
+- trudnosc-10
 - fantasy
 - elfy
 ---

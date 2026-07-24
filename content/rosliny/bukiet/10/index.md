@@ -7,6 +7,7 @@ image: /rosliny/bukiet/10/bukiet-10.svg
 pdf: /rosliny/bukiet/10/bukiet-10.pdf
 alt: "Kolorowanka z bukiet do pobrania"
 tags:
+- trudnosc-5
 - rosliny
 - bukiet
 ---

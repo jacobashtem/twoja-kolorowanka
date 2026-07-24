@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/1/zabki-1.svg
 pdf: /zwierzeta/zabki/1/zabki-1.pdf
 alt: "Kolorowanka zabki"
 tags:
+- trudnosc-8
 - zwierzeta
 - zabki
 ---

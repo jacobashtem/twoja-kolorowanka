@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/49/flamingi-49.svg
 pdf: /zwierzeta/flamingi/49/flamingi-49.pdf
 alt: "Kolorowanka flamingi – format A4 PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - flamingi
 ---

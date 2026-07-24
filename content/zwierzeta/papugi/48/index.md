@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/48/papugi-48.svg
 pdf: /zwierzeta/papugi/48/papugi-48.pdf
 alt: "Kolorowanki do druku papugi"
 tags:
+- trudnosc-3
 - zwierzeta
 - papugi
 ---

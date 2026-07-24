@@ -7,6 +7,7 @@ image: /rosliny/kwiat/47/kwiat-47.svg
 pdf: /rosliny/kwiat/47/kwiat-47.pdf
 alt: "Kolorowanka kwiat"
 tags:
+- trudnosc-4
 - rosliny
 - kwiat
 ---

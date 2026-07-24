@@ -7,6 +7,7 @@ image: /pory-roku/jesien/72/jesien-72.svg
 pdf: /pory-roku/jesien/72/jesien-72.pdf
 alt: "Kolorowanka do druku jesien"
 tags:
+- trudnosc-10
 - pory-roku
 - jesien
 ---

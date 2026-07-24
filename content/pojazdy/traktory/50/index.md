@@ -7,6 +7,7 @@ image: /pojazdy/traktory/50/traktory-50.svg
 pdf: /pojazdy/traktory/50/traktory-50.pdf
 alt: "Edukacyjna kolorowanka traktory do wydruku"
 tags:
+- trudnosc-4
 - pojazdy
 - traktory
 ---

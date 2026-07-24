@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/16/myszki-16.svg
 pdf: /zwierzeta/myszki/16/myszki-16.pdf
 alt: "Kolorowanka myszki – format A4 PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - myszki
 ---

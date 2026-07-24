@@ -7,6 +7,7 @@ image: /kosmos/2/kosmos-2.svg
 pdf: /kosmos/2/kosmos-2.pdf
 alt: "Kolorowanki kosmos"
 tags:
+- trudnosc-10
 - kosmos
 - kosmos
 ---

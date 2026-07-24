@@ -7,6 +7,7 @@ image: /pory-roku/zima/36/zima-36.svg
 pdf: /pory-roku/zima/36/zima-36.pdf
 alt: "kolorowanka do druku zima PDF"
 tags:
+- trudnosc-10
 - pory-roku
 - zima
 ---

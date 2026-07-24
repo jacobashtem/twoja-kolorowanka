@@ -7,6 +7,7 @@ image: /pojazdy/traktory/45/traktory-45.svg
 pdf: /pojazdy/traktory/45/traktory-45.pdf
 alt: "traktory – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-10
 - pojazdy
 - traktory
 ---

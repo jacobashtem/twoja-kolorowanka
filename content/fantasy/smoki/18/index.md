@@ -7,6 +7,7 @@ image: /fantasy/smoki/18/smoki-18.svg
 pdf: /fantasy/smoki/18/smoki-18.pdf
 alt: "Pokoloruj smoki – darmowy szablon PDF - wariant 18"
 tags:
+- trudnosc-1
 - fantasy
 - smoki
 ---

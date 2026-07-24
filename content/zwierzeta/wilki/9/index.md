@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/9/wilki-9.svg
 pdf: /zwierzeta/wilki/9/wilki-9.pdf
 alt: "wilki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - zwierzeta
 - wilki
 ---

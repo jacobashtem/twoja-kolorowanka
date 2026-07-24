@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/75/jednorozce-75.svg
 pdf: /fantasy/jednorozce/75/jednorozce-75.pdf
 alt: "jednorozce kolorowanka dla dzieci - wariant 75"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

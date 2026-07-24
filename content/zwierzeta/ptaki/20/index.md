@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/20/ptaki-20.svg
 pdf: /zwierzeta/ptaki/20/ptaki-20.pdf
 alt: "Kolorowanki ptaki"
 tags:
+- trudnosc-7
 - zwierzeta
 - ptaki
 ---

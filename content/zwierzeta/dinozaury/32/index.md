@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/32/dinozaury-32.svg
 pdf: /zwierzeta/dinozaury/32/dinozaury-32.pdf
 alt: "Edukacyjna kolorowanka dinozaury do wydruku"
 tags:
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

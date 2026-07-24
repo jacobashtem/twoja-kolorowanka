@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/20/flamingi-20.svg
 pdf: /zwierzeta/flamingi/20/flamingi-20.pdf
 alt: "Kolorowanki flamingi"
 tags:
+- trudnosc-10
 - zwierzeta
 - flamingi
 ---

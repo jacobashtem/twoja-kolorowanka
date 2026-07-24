@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/56/pieski-56.svg
 pdf: /pieski/56/pieski-56.pdf
 tags:
+- trudnosc-1
 - zwierzeta
 - pieski
 alt: "Edukacyjna kolorowanka pieski do wydruku - wariant 56"

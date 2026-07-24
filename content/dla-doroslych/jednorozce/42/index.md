@@ -7,6 +7,7 @@ image: /dla-doroslych/jednorozce/42/jednorozce-42.svg
 pdf: /dla-doroslych/jednorozce/42/jednorozce-42.pdf
 alt: "Kolorowanki do druku jednorozce"
 tags:
+- trudnosc-9
 - dla-doroslych
 - jednorozce
 ---

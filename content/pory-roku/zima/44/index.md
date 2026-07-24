@@ -7,6 +7,7 @@ image: /pory-roku/zima/44/zima-44.svg
 pdf: /pory-roku/zima/44/zima-44.pdf
 alt: "Kolorowanki zima"
 tags:
+- trudnosc-10
 - pory-roku
 - zima
 ---

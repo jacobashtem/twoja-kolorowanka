@@ -7,6 +7,7 @@ image: /rosliny/dynie/17/dynie-17.svg
 pdf: /rosliny/dynie/17/dynie-17.pdf
 alt: "Prosta kolorowanka dynie do kolorowania"
 tags:
+- trudnosc-9
 - rosliny
 - dynie
 ---

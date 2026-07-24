@@ -7,6 +7,7 @@ image: /fantasy/wrozki/40/wrozki-40.svg
 pdf: /fantasy/wrozki/40/wrozki-40.pdf
 alt: "wrozki kolorowanki dla dzieci - wariant 40"
 tags:
+- trudnosc-9
 - fantasy
 - wrozki
 ---

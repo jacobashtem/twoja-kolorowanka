@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/5/myszki-5.svg
 pdf: /zwierzeta/myszki/5/myszki-5.pdf
 alt: "Kolorowanka do druku myszki"
 tags:
+- trudnosc-3
 - zwierzeta
 - myszki
 ---

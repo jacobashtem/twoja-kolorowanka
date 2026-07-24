@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/69/jednorozce-69.svg
 pdf: /fantasy/jednorozce/69/jednorozce-69.pdf
 alt: "jednorozce kolorowanka dla dzieci - wariant 69"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

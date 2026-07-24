@@ -7,6 +7,7 @@ image: /zwierzeta/mis/38/mis-38.svg
 pdf: /zwierzeta/mis/38/mis-38.pdf
 alt: "Kolorowanki mis"
 tags:
+- trudnosc-5
 - zwierzeta
 - mis
 ---

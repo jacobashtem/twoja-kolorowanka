@@ -7,6 +7,7 @@ image: /fantasy/elfy/28/elfy-28.svg
 pdf: /fantasy/elfy/28/elfy-28.pdf
 alt: "Kolorowanka z elfy do pobrania"
 tags:
+- trudnosc-2
 - fantasy
 - elfy
 ---

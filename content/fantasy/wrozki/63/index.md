@@ -7,6 +7,7 @@ image: /fantasy/wrozki/63/wrozki-63.svg
 pdf: /fantasy/wrozki/63/wrozki-63.pdf
 alt: "wrozki – pobierz i wydrukuj kolorowankę - wariant 63"
 tags:
+- trudnosc-7
 - fantasy
 - wrozki
 ---

@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/43/jednorozce-43.svg
 pdf: /fantasy/jednorozce/43/jednorozce-43.pdf
 alt: "jednorozce do druku i pokolorowania - wariant 43"
 tags:
+- trudnosc-5
 - fantasy
 - jednorozce
 ---

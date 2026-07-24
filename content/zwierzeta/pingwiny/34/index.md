@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/34/pingwiny-34.svg
 pdf: /zwierzeta/pingwiny/34/pingwiny-34.pdf
 alt: "Kolorowanka pingwiny – format A4 PDF"
 tags:
+- trudnosc-7
 - zwierzeta
 - pingwiny
 ---

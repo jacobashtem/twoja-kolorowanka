@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/26/myszki-26.svg
 pdf: /zwierzeta/myszki/26/myszki-26.pdf
 alt: "Darmowa kolorowanka myszki do druku PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - myszki
 ---

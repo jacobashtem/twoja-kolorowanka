@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/17/czolgi-17.svg
 pdf: /pojazdy/czolgi/17/czolgi-17.pdf
 alt: "Prosta kolorowanka czolgi do kolorowania"
 tags:
+- trudnosc-3
 - pojazdy
 - czolgi
 ---

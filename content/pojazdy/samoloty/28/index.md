@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/28/samoloty-28.svg
 pdf: /pojazdy/samoloty/28/samoloty-28.pdf
 alt: "Kolorowanka z samoloty do pobrania"
 tags:
+- trudnosc-5
 - pojazdy
 - samoloty
 ---

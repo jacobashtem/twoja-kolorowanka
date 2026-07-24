@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/45/andrzejki-45.svg
 pdf: /okolicznosciowe/andrzejki/45/andrzejki-45.pdf
 alt: "andrzejki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - okolicznosciowe
 - andrzejki
 ---

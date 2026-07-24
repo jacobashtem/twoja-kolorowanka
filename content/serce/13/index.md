@@ -7,6 +7,7 @@ image: /serce/13/serce-13.svg
 pdf: /serce/13/serce-13.pdf
 alt: "Łatwa kolorowanka serce dla przedszkolaka"
 tags:
+- trudnosc-10
 - serce
 - serce
 ---

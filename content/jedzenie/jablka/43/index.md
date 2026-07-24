@@ -7,6 +7,7 @@ image: /jedzenie/jablka/43/jablka-43.svg
 pdf: /jedzenie/jablka/43/jablka-43.pdf
 alt: "jablka do druku i pokolorowania"
 tags:
+- trudnosc-1
 - jedzenie
 - jablka
 ---

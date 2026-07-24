@@ -7,6 +7,7 @@ image: /serce/47/serce-47.svg
 pdf: /serce/47/serce-47.pdf
 alt: "Malowanka serce do druku A4"
 tags:
+- trudnosc-2
 - serce
 - serce
 ---

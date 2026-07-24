@@ -7,6 +7,7 @@ image: /telefon/42/telefon-42.svg
 pdf: /telefon/42/telefon-42.pdf
 alt: "Kolorowanki do druku telefon"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

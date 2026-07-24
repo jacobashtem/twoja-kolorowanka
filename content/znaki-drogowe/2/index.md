@@ -7,6 +7,7 @@ image: /znaki-drogowe/2/znaki-drogowe-2.svg
 pdf: /znaki-drogowe/2/znaki-drogowe-2.pdf
 alt: "Kolorowanki znaki-drogowe"
 tags:
+- trudnosc-5
 - znaki-drogowe
 - znaki-drogowe
 ---

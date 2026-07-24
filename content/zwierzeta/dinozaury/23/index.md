@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/23/dinozaury-23.svg
 pdf: /zwierzeta/dinozaury/23/dinozaury-23.pdf
 alt: "Kolorowanka do druku dinozaury"
 tags:
+- trudnosc-7
 - zwierzeta
 - dinozaury
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/koparki/37/koparki-37.svg
 pdf: /pojazdy/koparki/37/koparki-37.pdf
 alt: "Kolorowanka koparki"
 tags:
+- trudnosc-4
 - pojazdy
 - koparki
 ---

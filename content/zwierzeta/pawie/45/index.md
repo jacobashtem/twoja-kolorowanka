@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/45/pawie-45.svg
 pdf: /zwierzeta/pawie/45/pawie-45.pdf
 alt: "pawie – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - zwierzeta
 - pawie
 ---

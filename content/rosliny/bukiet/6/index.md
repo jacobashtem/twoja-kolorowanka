@@ -7,6 +7,7 @@ image: /rosliny/bukiet/6/bukiet-6.svg
 pdf: /rosliny/bukiet/6/bukiet-6.pdf
 alt: "Kolorowanki do druku bukiet"
 tags:
+- trudnosc-5
 - rosliny
 - bukiet
 ---

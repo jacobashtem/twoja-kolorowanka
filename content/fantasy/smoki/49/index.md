@@ -7,6 +7,7 @@ image: /fantasy/smoki/49/smoki-49.svg
 pdf: /fantasy/smoki/49/smoki-49.pdf
 alt: "Łatwa kolorowanka smoki dla przedszkolaka - wariant 49"
 tags:
+- trudnosc-10
 - fantasy
 - smoki
 ---

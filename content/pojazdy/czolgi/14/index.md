@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/14/czolgi-14.svg
 pdf: /pojazdy/czolgi/14/czolgi-14.pdf
 alt: "Edukacyjna kolorowanka czolgi do wydruku"
 tags:
+- trudnosc-9
 - pojazdy
 - czolgi
 ---

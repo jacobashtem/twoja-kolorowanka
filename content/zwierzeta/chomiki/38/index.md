@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/38/chomiki-38.svg
 pdf: /zwierzeta/chomiki/38/chomiki-38.pdf
 alt: "Kolorowanki chomiki"
 tags:
+- trudnosc-1
 - zwierzeta
 - chomiki
 ---

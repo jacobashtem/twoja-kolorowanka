@@ -7,6 +7,7 @@ image: /fantasy/wrozki/12/wrozki-12.svg
 pdf: /fantasy/wrozki/12/wrozki-12.pdf
 alt: "kolorowanka do druku wrozki PDF - wariant 12"
 tags:
+- trudnosc-4
 - fantasy
 - wrozki
 ---

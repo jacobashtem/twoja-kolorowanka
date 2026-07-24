@@ -7,6 +7,7 @@ image: /fantasy/smoki/82/smoki-82.svg
 pdf: /fantasy/smoki/82/smoki-82.pdf
 alt: "Kolorowanka z smoki do pobrania - wariant 82"
 tags:
+- trudnosc-9
 - fantasy
 - smoki
 ---

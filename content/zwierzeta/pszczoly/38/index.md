@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/38/pszczoly-38.svg
 pdf: /zwierzeta/pszczoly/38/pszczoly-38.pdf
 alt: "Kolorowanki pszczoly"
 tags:
+- trudnosc-2
 - zwierzeta
 - pszczoly
 ---

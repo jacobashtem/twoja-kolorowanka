@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/27/antystresowe-27.svg
 pdf: /dla-doroslych/antystresowe/27/antystresowe-27.pdf
 alt: "antystresowe – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - dla-doroslych
 - antystresowe
 ---

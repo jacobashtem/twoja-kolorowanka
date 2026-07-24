@@ -7,6 +7,7 @@ image: /pojazdy/bmw/14/bmw-14.svg
 pdf: /pojazdy/bmw/14/bmw-14.pdf
 alt: "Edukacyjna kolorowanka bmw do wydruku"
 tags:
+- trudnosc-6
 - pojazdy
 - bmw
 ---

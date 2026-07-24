@@ -7,6 +7,7 @@ image: /rosliny/grzyby/22/grzyby-22.svg
 pdf: /rosliny/grzyby/22/grzyby-22.pdf
 alt: "grzyby kolorowanki dla dzieci"
 tags:
+- trudnosc-1
 - rosliny
 - grzyby
 ---

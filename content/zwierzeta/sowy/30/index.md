@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/30/sowy-30.svg
 pdf: /zwierzeta/sowy/30/sowy-30.pdf
 alt: "kolorowanka do druku sowy PDF"
 tags:
+- trudnosc-10
 - zwierzeta
 - sowy
 ---

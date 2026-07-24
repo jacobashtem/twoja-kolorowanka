@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/18/flamingi-18.svg
 pdf: /zwierzeta/flamingi/18/flamingi-18.pdf
 alt: "Pokoloruj flamingi – darmowy szablon PDF"
 tags:
+- trudnosc-7
 - zwierzeta
 - flamingi
 ---

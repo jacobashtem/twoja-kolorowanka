@@ -7,6 +7,7 @@ image: /jedzenie/jablka/46/jablka-46.svg
 pdf: /jedzenie/jablka/46/jablka-46.pdf
 alt: "Kolorowanka z jablka do pobrania"
 tags:
+- trudnosc-1
 - jedzenie
 - jablka
 ---

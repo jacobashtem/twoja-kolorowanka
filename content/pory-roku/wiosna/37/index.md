@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/37/wiosna-37.svg
 pdf: /pory-roku/wiosna/37/wiosna-37.pdf
 alt: "Kolorowanka wiosna"
 tags:
+- trudnosc-3
 - pory-roku
 - wiosna
 ---

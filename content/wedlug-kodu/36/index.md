@@ -7,6 +7,7 @@ image: /wedlug-kodu/36/wedlug-kodu-36.svg
 pdf: /wedlug-kodu/36/wedlug-kodu-36.pdf
 alt: "Pokoloruj wedlug-kodu – darmowy szablon PDF"
 tags:
+- trudnosc-10
 - wedlug-kodu
 - wedlug-kodu
 ---

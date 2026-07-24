@@ -7,6 +7,7 @@ image: /jedzenie/lody/11/lody-11.svg
 pdf: /jedzenie/lody/11/lody-11.pdf
 alt: "Malowanka lody do druku A4"
 tags:
+- trudnosc-1
 - jedzenie
 - lody
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/kombajny/16/kombajny-16.svg
 pdf: /pojazdy/kombajny/16/kombajny-16.pdf
 alt: "Kolorowanka kombajny – format A4 PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - kombajny
 ---

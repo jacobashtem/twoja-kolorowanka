@@ -7,6 +7,7 @@ image: /telefon/4/telefon-4.svg
 pdf: /telefon/4/telefon-4.pdf
 alt: "telefon kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - telefon
 - telefon
 ---

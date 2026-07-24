@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/75/motyle-75.svg
 pdf: /zwierzeta/motyle/75/motyle-75.pdf
 alt: "motyle kolorowanka dla dzieci"
 tags:
+- trudnosc-5
 - zwierzeta
 - motyle
 ---

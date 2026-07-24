@@ -7,6 +7,7 @@ image: /fantasy/smoki/85/smoki-85.svg
 pdf: /fantasy/smoki/85/smoki-85.pdf
 alt: "Łatwa kolorowanka smoki dla przedszkolaka - wariant 85"
 tags:
+- trudnosc-3
 - fantasy
 - smoki
 ---

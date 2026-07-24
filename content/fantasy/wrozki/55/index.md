@@ -7,6 +7,7 @@ image: /fantasy/wrozki/55/wrozki-55.svg
 pdf: /fantasy/wrozki/55/wrozki-55.pdf
 alt: "Kolorowanka wrozki - wariant 55"
 tags:
+- trudnosc-10
 - fantasy
 - wrozki
 ---

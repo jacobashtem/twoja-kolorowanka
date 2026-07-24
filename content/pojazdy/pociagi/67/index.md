@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/67/pociagi-67.svg
 pdf: /pojazdy/pociagi/67/pociagi-67.pdf
 alt: "Łatwa kolorowanka pociagi dla przedszkolaka"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

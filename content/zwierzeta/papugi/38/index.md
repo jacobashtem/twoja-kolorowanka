@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/38/papugi-38.svg
 pdf: /zwierzeta/papugi/38/papugi-38.pdf
 alt: "Edukacyjna kolorowanka papugi do wydruku"
 tags:
+- trudnosc-5
 - zwierzeta
 - papugi
 ---

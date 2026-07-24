@@ -7,6 +7,7 @@ image: /jedzenie/jablka/35/jablka-35.svg
 pdf: /jedzenie/jablka/35/jablka-35.pdf
 alt: "Prosta kolorowanka jablka do kolorowania"
 tags:
+- trudnosc-2
 - jedzenie
 - jablka
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/koparki/38/koparki-38.svg
 pdf: /pojazdy/koparki/38/koparki-38.pdf
 alt: "Kolorowanki koparki"
 tags:
+- trudnosc-8
 - pojazdy
 - koparki
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/12/lamborghini-12.svg
 pdf: /pojazdy/lamborghini/12/lamborghini-12.pdf
 alt: "kolorowanka do druku lamborghini PDF"
 tags:
+- trudnosc-10
 - pojazdy
 - lamborghini
 ---

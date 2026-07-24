@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/48/wilki-48.svg
 pdf: /zwierzeta/wilki/48/wilki-48.pdf
 alt: "kolorowanka do druku wilki PDF"
 tags:
+- trudnosc-6
 - zwierzeta
 - wilki
 ---

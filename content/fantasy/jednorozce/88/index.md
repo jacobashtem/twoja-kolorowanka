@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/88/jednorozce-88.svg
 pdf: /fantasy/jednorozce/88/jednorozce-88.pdf
 alt: "Kolorowanka jednorozce – format A4 PDF - wariant 88"
 tags:
+- trudnosc-3
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /znaki-drogowe/43/znaki-drogowe-43.svg
 pdf: /znaki-drogowe/43/znaki-drogowe-43.pdf
 alt: "znaki-drogowe do druku i pokolorowania"
 tags:
+- trudnosc-2
 - znaki-drogowe
 - znaki-drogowe
 ---

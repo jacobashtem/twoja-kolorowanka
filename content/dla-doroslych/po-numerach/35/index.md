@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/35/po-numerach-35.svg
 pdf: /dla-doroslych/po-numerach/35/po-numerach-35.pdf
 alt: "Prosta kolorowanka po-numerach do kolorowania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

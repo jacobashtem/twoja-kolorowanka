@@ -7,6 +7,7 @@ image: /wedlug-kodu/10/wedlug-kodu-10.svg
 pdf: /wedlug-kodu/10/wedlug-kodu-10.pdf
 alt: "Kolorowanka z wedlug-kodu do pobrania"
 tags:
+- trudnosc-7
 - wedlug-kodu
 - wedlug-kodu
 ---

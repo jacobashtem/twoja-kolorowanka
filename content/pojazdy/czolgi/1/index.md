@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/1/czolgi-1.svg
 pdf: /pojazdy/czolgi/1/czolgi-1.pdf
 alt: "Kolorowanka czolgi"
 tags:
+- trudnosc-2
 - pojazdy
 - czolgi
 ---

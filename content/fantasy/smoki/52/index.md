@@ -7,6 +7,7 @@ image: /fantasy/smoki/52/smoki-52.svg
 pdf: /fantasy/smoki/52/smoki-52.pdf
 alt: "Kolorowanka smoki – format A4 PDF - wariant 52"
 tags:
+- trudnosc-1
 - fantasy
 - smoki
 ---

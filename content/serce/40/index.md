@@ -7,6 +7,7 @@ image: /serce/40/serce-40.svg
 pdf: /serce/40/serce-40.pdf
 alt: "serce kolorowanki dla dzieci"
 tags:
+- trudnosc-7
 - serce
 - serce
 ---

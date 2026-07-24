@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/55/wiosna-55.svg
 pdf: /pory-roku/wiosna/55/wiosna-55.pdf
 alt: "Kolorowanka wiosna"
 tags:
+- trudnosc-5
 - pory-roku
 - wiosna
 ---

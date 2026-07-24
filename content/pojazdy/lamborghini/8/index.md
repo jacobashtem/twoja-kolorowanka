@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/8/lamborghini-8.svg
 pdf: /pojazdy/lamborghini/8/lamborghini-8.pdf
 alt: "Darmowa kolorowanka lamborghini do druku PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - lamborghini
 ---

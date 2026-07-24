@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/9/pandy-9.svg
 pdf: /zwierzeta/pandy/9/pandy-9.pdf
 alt: "pandy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - zwierzeta
 - pandy
 ---

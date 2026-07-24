@@ -7,6 +7,7 @@ image: /pojazdy/traktory/53/traktory-53.svg
 pdf: /pojazdy/traktory/53/traktory-53.pdf
 alt: "Prosta kolorowanka traktory do kolorowania"
 tags:
+- trudnosc-8
 - pojazdy
 - traktory
 ---

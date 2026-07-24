@@ -7,6 +7,7 @@ image: /pojazdy/tiry/36/tir-36.svg
 pdf: /pojazdy/tiry/36/tir-36.pdf
 alt: "Pokoloruj tir – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - tir
 ---

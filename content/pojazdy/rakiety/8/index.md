@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/8/rakiety-8.svg
 pdf: /pojazdy/rakiety/8/rakiety-8.pdf
 alt: "Darmowa kolorowanka rakiety do druku PDF"
 tags:
+- trudnosc-1
 - pojazdy
 - rakiety
 ---

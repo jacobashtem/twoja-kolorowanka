@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/45/wiosna-45.svg
 pdf: /pory-roku/wiosna/45/wiosna-45.pdf
 alt: "wiosna – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - pory-roku
 - wiosna
 ---

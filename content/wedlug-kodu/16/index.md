@@ -7,6 +7,7 @@ image: /wedlug-kodu/16/wedlug-kodu-16.svg
 pdf: /wedlug-kodu/16/wedlug-kodu-16.pdf
 alt: "Kolorowanka wedlug-kodu – format A4 PDF"
 tags:
+- trudnosc-3
 - wedlug-kodu
 - wedlug-kodu
 ---

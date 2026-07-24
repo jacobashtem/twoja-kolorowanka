@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/47/myszki-47.svg
 pdf: /zwierzeta/myszki/47/myszki-47.pdf
 alt: "Malowanka myszki do druku A4"
 tags:
+- trudnosc-8
 - zwierzeta
 - myszki
 ---

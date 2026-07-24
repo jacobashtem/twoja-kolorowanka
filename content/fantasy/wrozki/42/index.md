@@ -7,6 +7,7 @@ image: /fantasy/wrozki/42/wrozki-42.svg
 pdf: /fantasy/wrozki/42/wrozki-42.pdf
 alt: "Kolorowanki do druku wrozki - wariant 42"
 tags:
+- trudnosc-9
 - fantasy
 - wrozki
 ---

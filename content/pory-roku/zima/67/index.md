@@ -7,6 +7,7 @@ image: /pory-roku/zima/67/zima-67.svg
 pdf: /pory-roku/zima/67/zima-67.pdf
 alt: "zima do druku i pokolorowania"
 tags:
+- trudnosc-9
 - pory-roku
 - zima
 ---

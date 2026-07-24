@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/9/lisy-9.svg
 pdf: /zwierzeta/lisy/9/lisy-9.pdf
 alt: "lisy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - zwierzeta
 - lisy
 ---

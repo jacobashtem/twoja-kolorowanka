@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/31/ciagniki-31.svg
 pdf: /pojazdy/ciagniki/31/ciagniki-31.pdf
 alt: "Łatwa kolorowanka ciagniki dla przedszkolaka"
 tags:
+- trudnosc-5
 - pojazdy
 - ciagniki
 ---

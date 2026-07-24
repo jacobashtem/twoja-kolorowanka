@@ -7,6 +7,7 @@ image: /telefon/46/telefon-46.svg
 pdf: /telefon/46/telefon-46.pdf
 alt: "Kolorowanka z telefon do pobrania"
 tags:
+- trudnosc-3
 - telefon
 - telefon
 ---

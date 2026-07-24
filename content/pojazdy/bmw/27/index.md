@@ -7,6 +7,7 @@ image: /pojazdy/bmw/27/bmw-27.svg
 pdf: /pojazdy/bmw/27/bmw-27.pdf
 alt: "bmw – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - pojazdy
 - bmw
 ---

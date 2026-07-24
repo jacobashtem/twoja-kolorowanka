@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/18/papugi-18.svg
 pdf: /zwierzeta/papugi/18/papugi-18.pdf
 alt: "Pokoloruj papugi – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - papugi
 ---

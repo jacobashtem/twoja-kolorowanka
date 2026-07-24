@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/37/chomiki-37.svg
 pdf: /zwierzeta/chomiki/37/chomiki-37.pdf
 alt: "Kolorowanka chomiki"
 tags:
+- trudnosc-9
 - zwierzeta
 - chomiki
 ---

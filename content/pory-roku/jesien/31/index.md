@@ -7,6 +7,7 @@ image: /pory-roku/jesien/31/jesien-31.svg
 pdf: /pory-roku/jesien/31/jesien-31.pdf
 alt: "Łatwa kolorowanka jesien dla przedszkolaka"
 tags:
+- trudnosc-7
 - pory-roku
 - jesien
 ---

@@ -7,6 +7,7 @@ image: /rosliny/kwiat/39/kwiat-39.svg
 pdf: /rosliny/kwiat/39/kwiat-39.pdf
 alt: "kwiat kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - rosliny
 - kwiat
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/40/lwy-40.svg
 pdf: /zwierzeta/lwy/40/lwy-40.pdf
 alt: "lwy kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - zwierzeta
 - lwy
 ---

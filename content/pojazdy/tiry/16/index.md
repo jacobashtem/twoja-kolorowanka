@@ -7,6 +7,7 @@ image: /pojazdy/tiry/16/tir-16.svg
 pdf: /pojazdy/tiry/16/tir-16.pdf
 alt: "Kolorowanka tir – format A4 PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - tir
 ---

@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/3/jednorozce-3.svg
 pdf: /fantasy/jednorozce/3/jednorozce-3.pdf
 alt: "jednorozce kolorowanka dla dzieci - wariant 3"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

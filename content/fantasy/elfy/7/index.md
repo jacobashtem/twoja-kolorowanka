@@ -7,6 +7,7 @@ image: /fantasy/elfy/7/elfy-7.svg
 pdf: /fantasy/elfy/7/elfy-7.pdf
 alt: "elfy do druku i pokolorowania"
 tags:
+- trudnosc-7
 - fantasy
 - elfy
 ---

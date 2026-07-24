@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/13/andrzejki-13.svg
 pdf: /okolicznosciowe/andrzejki/13/andrzejki-13.pdf
 alt: "Łatwa kolorowanka andrzejki dla przedszkolaka"
 tags:
+- trudnosc-4
 - okolicznosciowe
 - andrzejki
 ---

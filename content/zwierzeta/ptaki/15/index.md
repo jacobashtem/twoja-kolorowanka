@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/15/ptaki-15.svg
 pdf: /zwierzeta/ptaki/15/ptaki-15.pdf
 alt: "ptaki kolorowanka dla dzieci"
 tags:
+- trudnosc-2
 - zwierzeta
 - ptaki
 ---

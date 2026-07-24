@@ -7,6 +7,7 @@ image: /pojazdy/tiry/10/tir-10.svg
 pdf: /pojazdy/tiry/10/tir-10.pdf
 alt: "Kolorowanka z tir do pobrania"
 tags:
+- trudnosc-6
 - pojazdy
 - tir
 ---

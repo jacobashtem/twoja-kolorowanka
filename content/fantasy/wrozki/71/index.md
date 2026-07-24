@@ -7,6 +7,7 @@ image: /fantasy/wrozki/71/wrozki-71.svg
 pdf: /fantasy/wrozki/71/wrozki-71.pdf
 alt: "Prosta kolorowanka wrozki do kolorowania - wariant 71"
 tags:
+- trudnosc-7
 - fantasy
 - wrozki
 ---

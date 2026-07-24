@@ -7,6 +7,7 @@ image: /pory-roku/lato/88/lato-88.svg
 pdf: /pory-roku/lato/88/lato-88.pdf
 alt: "Kolorowanka lato – format A4 PDF"
 tags:
+- trudnosc-2
 - pory-roku
 - lato
 ---

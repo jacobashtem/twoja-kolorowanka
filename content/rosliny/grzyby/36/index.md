@@ -7,6 +7,7 @@ image: /rosliny/grzyby/36/grzyby-36.svg
 pdf: /rosliny/grzyby/36/grzyby-36.pdf
 alt: "Pokoloruj grzyby – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - rosliny
 - grzyby
 ---

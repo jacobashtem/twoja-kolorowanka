@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/32/lisy-32.svg
 pdf: /zwierzeta/lisy/32/lisy-32.pdf
 alt: "Edukacyjna kolorowanka lisy do wydruku"
 tags:
+- trudnosc-6
 - zwierzeta
 - lisy
 ---

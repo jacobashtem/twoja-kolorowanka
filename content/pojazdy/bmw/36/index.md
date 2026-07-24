@@ -7,6 +7,7 @@ image: /pojazdy/bmw/36/bmw-36.svg
 pdf: /pojazdy/bmw/36/bmw-36.pdf
 alt: "Pokoloruj bmw – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - pojazdy
 - bmw
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/53/dinozaury-53.svg
 pdf: /zwierzeta/dinozaury/53/dinozaury-53.pdf
 alt: "Prosta kolorowanka dinozaury do kolorowania"
 tags:
+- trudnosc-3
 - zwierzeta
 - dinozaury
 ---

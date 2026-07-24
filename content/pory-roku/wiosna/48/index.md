@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/48/wiosna-48.svg
 pdf: /pory-roku/wiosna/48/wiosna-48.pdf
 alt: "kolorowanka do druku wiosna PDF"
 tags:
+- trudnosc-9
 - pory-roku
 - wiosna
 ---

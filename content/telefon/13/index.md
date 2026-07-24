@@ -7,6 +7,7 @@ image: /telefon/13/telefon-13.svg
 pdf: /telefon/13/telefon-13.pdf
 alt: "Łatwa kolorowanka telefon dla przedszkolaka"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

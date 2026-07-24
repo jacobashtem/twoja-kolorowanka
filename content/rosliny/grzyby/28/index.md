@@ -7,6 +7,7 @@ image: /rosliny/grzyby/28/grzyby-28.svg
 pdf: /rosliny/grzyby/28/grzyby-28.pdf
 alt: "Kolorowanka z grzyby do pobrania"
 tags:
+- trudnosc-5
 - rosliny
 - grzyby
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/traktory/12/traktory-12.svg
 pdf: /pojazdy/traktory/12/traktory-12.pdf
 alt: "kolorowanka do druku traktory PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - traktory
 ---

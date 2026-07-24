@@ -7,6 +7,7 @@ image: /fantasy/smoki/38/smoki-38.svg
 pdf: /fantasy/smoki/38/smoki-38.pdf
 alt: "Kolorowanki smoki - wariant 38"
 tags:
+- trudnosc-1
 - fantasy
 - smoki
 ---

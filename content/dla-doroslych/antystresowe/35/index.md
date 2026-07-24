@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/35/antystresowe-35.svg
 pdf: /dla-doroslych/antystresowe/35/antystresowe-35.pdf
 alt: "Prosta kolorowanka antystresowe do kolorowania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - antystresowe
 ---

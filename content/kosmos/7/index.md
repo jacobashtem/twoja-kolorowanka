@@ -7,6 +7,7 @@ image: /kosmos/7/kosmos-7.svg
 pdf: /kosmos/7/kosmos-7.pdf
 alt: "kosmos do druku i pokolorowania"
 tags:
+- trudnosc-5
 - kosmos
 - kosmos
 ---

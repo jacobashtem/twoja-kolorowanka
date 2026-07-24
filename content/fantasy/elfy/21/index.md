@@ -7,6 +7,7 @@ image: /fantasy/elfy/21/elfy-21.svg
 pdf: /fantasy/elfy/21/elfy-21.pdf
 alt: "elfy kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - fantasy
 - elfy
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/26/dinozaury-26.svg
 pdf: /zwierzeta/dinozaury/26/dinozaury-26.pdf
 alt: "Darmowa kolorowanka dinozaury do druku PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - dinozaury
 ---

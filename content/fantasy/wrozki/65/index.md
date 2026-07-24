@@ -7,6 +7,7 @@ image: /fantasy/wrozki/65/wrozki-65.svg
 pdf: /fantasy/wrozki/65/wrozki-65.pdf
 alt: "Malowanka wrozki do druku A4 - wariant 65"
 tags:
+- trudnosc-6
 - fantasy
 - wrozki
 ---

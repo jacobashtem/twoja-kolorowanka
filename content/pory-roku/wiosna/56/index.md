@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/56/wiosna-56.svg
 pdf: /pory-roku/wiosna/56/wiosna-56.pdf
 alt: "Kolorowanki wiosna"
 tags:
+- trudnosc-8
 - pory-roku
 - wiosna
 ---

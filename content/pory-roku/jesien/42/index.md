@@ -7,6 +7,7 @@ image: /pory-roku/jesien/42/jesien-42.svg
 pdf: /pory-roku/jesien/42/jesien-42.pdf
 alt: "Kolorowanki do druku jesien"
 tags:
+- trudnosc-9
 - pory-roku
 - jesien
 ---

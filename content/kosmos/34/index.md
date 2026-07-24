@@ -7,6 +7,7 @@ image: /kosmos/34/kosmos-34.svg
 pdf: /kosmos/34/kosmos-34.pdf
 alt: "Kolorowanka kosmos – format A4 PDF"
 tags:
+- trudnosc-6
 - kosmos
 - kosmos
 ---

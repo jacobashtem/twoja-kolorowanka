@@ -7,6 +7,7 @@ image: /pojazdy/tiry/12/tir-12.svg
 pdf: /pojazdy/tiry/12/tir-12.pdf
 alt: "kolorowanka do druku tir PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - tir
 ---

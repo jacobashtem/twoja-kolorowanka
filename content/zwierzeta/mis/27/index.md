@@ -7,6 +7,7 @@ image: /zwierzeta/mis/27/mis-27.svg
 pdf: /zwierzeta/mis/27/mis-27.pdf
 alt: "mis – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - zwierzeta
 - mis
 ---

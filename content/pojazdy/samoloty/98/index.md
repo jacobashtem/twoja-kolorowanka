@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/98/samoloty-98.svg
 pdf: /pojazdy/samoloty/98/samoloty-98.pdf
 alt: "Darmowa kolorowanka samoloty do druku PDF"
 tags:
+- trudnosc-1
 - pojazdy
 - samoloty
 ---

@@ -7,6 +7,7 @@ image: /ksiezniczki/16/ksiezniczki-16.svg
 pdf: /ksiezniczki/16/ksiezniczki-16.pdf
 alt: "Kolorowanka ksiezniczki – format A4 PDF"
 tags:
+- trudnosc-7
 - ksiezniczki
 - ksiezniczki
 ---

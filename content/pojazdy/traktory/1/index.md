@@ -7,6 +7,7 @@ image: /pojazdy/traktory/1/traktory-1.svg
 pdf: /pojazdy/traktory/1/traktory-1.pdf
 alt: "Kolorowanka traktory"
 tags:
+- trudnosc-10
 - pojazdy
 - traktory
 ---

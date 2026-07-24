@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/8/sowy-8.svg
 pdf: /zwierzeta/sowy/8/sowy-8.pdf
 alt: "Darmowa kolorowanka sowy do druku PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - sowy
 ---

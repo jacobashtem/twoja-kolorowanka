@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/17/urodziny-17.svg
 pdf: /okolicznosciowe/urodziny/17/urodziny-17.pdf
 alt: "Kolorowanka urodziny – format A4 PDF"
 tags:
+- trudnosc-6
 - okolicznosciowe
 - urodziny
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/lato/59/lato-59.svg
 pdf: /pory-roku/lato/59/lato-59.pdf
 alt: "Kolorowanka do druku lato"
 tags:
+- trudnosc-1
 - pory-roku
 - lato
 ---

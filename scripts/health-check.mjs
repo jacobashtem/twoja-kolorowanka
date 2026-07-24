@@ -78,6 +78,13 @@ for (const file of mdFiles) {
         const preview = asset.replace(/\.svg$/, suffix)
         if (!existsSync(preview)) errors.push(`${where}: brak podgladu ${rel(preview)} (uruchom scripts/generate-thumbnails.mjs)`)
       }
+      // pusty SVG = biala kolorowanka na produkcji (male pliki bez <path> i ksztaltow)
+      if (statSync(asset).size < 2048) {
+        const src = readFileSync(asset, 'utf8')
+        if (!/<(path|rect|circle|ellipse|polygon|polyline|line)[\s>]/.test(src)) {
+          errors.push(`${where}: SVG jest pusty (brak elementow rysunku): ${val}`)
+        }
+      }
     }
   }
 

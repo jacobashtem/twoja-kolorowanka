@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/92/dinozaury-92.svg
 pdf: /zwierzeta/dinozaury/92/dinozaury-92.pdf
 alt: "Kolorowanki dinozaury"
 tags:
+- trudnosc-4
 - zwierzeta
 - dinozaury
 ---

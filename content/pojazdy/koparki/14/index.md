@@ -7,6 +7,7 @@ image: /pojazdy/koparki/14/koparki-14.svg
 pdf: /pojazdy/koparki/14/koparki-14.pdf
 alt: "Edukacyjna kolorowanka koparki do wydruku"
 tags:
+- trudnosc-3
 - pojazdy
 - koparki
 ---

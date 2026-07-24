@@ -7,6 +7,7 @@ image: /pojazdy/koparki/19/koparki-19.svg
 pdf: /pojazdy/koparki/19/koparki-19.pdf
 alt: "Kolorowanka koparki"
 tags:
+- trudnosc-3
 - pojazdy
 - koparki
 ---

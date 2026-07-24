@@ -7,6 +7,7 @@ image: /pory-roku/zima/64/zima-64.svg
 pdf: /pory-roku/zima/64/zima-64.pdf
 alt: "zima kolorowanki dla dzieci"
 tags:
+- trudnosc-10
 - pory-roku
 - zima
 ---

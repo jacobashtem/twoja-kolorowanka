@@ -7,6 +7,7 @@ image: /wedlug-kodu/41/wedlug-kodu-41.svg
 pdf: /wedlug-kodu/41/wedlug-kodu-41.pdf
 alt: "Kolorowanka do druku wedlug-kodu"
 tags:
+- trudnosc-10
 - wedlug-kodu
 - wedlug-kodu
 ---

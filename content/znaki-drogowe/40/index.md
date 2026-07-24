@@ -7,6 +7,7 @@ image: /znaki-drogowe/40/znaki-drogowe-40.svg
 pdf: /znaki-drogowe/40/znaki-drogowe-40.pdf
 alt: "znaki-drogowe kolorowanki dla dzieci"
 tags:
+- trudnosc-4
 - znaki-drogowe
 - znaki-drogowe
 ---

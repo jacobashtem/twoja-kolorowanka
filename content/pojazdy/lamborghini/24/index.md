@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/24/lamborghini-24.svg
 pdf: /pojazdy/lamborghini/24/lamborghini-24.pdf
 alt: "Kolorowanki do druku lamborghini"
 tags:
+- trudnosc-3
 - pojazdy
 - lamborghini
 ---

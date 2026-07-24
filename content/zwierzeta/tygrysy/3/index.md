@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/3/tygrysy-3.svg
 pdf: /zwierzeta/tygrysy/3/tygrysy-3.pdf
 alt: "tygrysy kolorowanka dla dzieci"
 tags:
+- trudnosc-5
 - zwierzeta
 - tygrysy
 ---

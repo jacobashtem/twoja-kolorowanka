@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/32/ciagniki-32.svg
 pdf: /pojazdy/ciagniki/32/ciagniki-32.pdf
 alt: "Edukacyjna kolorowanka ciagniki do wydruku"
 tags:
+- trudnosc-4
 - pojazdy
 - ciagniki
 ---

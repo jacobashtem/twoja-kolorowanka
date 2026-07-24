@@ -7,6 +7,7 @@ image: /jedzenie/torty/53/torty-53.svg
 pdf: /jedzenie/torty/53/torty-53.pdf
 alt: "Prosta kolorowanka torty do kolorowania"
 tags:
+- trudnosc-9
 - jedzenie
 - torty
 ---

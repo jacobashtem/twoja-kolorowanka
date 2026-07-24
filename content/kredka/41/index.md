@@ -7,6 +7,7 @@ image: /kredka/41/kredka-41.svg
 pdf: /kredka/41/kredka-41.pdf
 alt: "Kolorowanka do druku kredka"
 tags:
+- trudnosc-1
 - kredka
 - kredka
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/koparki/43/koparki-43.svg
 pdf: /pojazdy/koparki/43/koparki-43.pdf
 alt: "koparki do druku i pokolorowania"
 tags:
+- trudnosc-3
 - pojazdy
 - koparki
 ---

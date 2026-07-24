@@ -7,6 +7,7 @@ image: /dla-doroslych/jednorozce/5/jednorozce-5.svg
 pdf: /dla-doroslych/jednorozce/5/jednorozce-5.pdf
 alt: "Kolorowanka do druku jednorozce"
 tags:
+- trudnosc-6
 - dla-doroslych
 - jednorozce
 ---

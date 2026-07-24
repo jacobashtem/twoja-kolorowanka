@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/54/ryby-54.svg
 pdf: /zwierzeta/ryby/54/ryby-54.pdf
 alt: "ryby – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - zwierzeta
 - ryby
 ---

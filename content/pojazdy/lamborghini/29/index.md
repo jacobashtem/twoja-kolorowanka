@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/29/lamborghini-29.svg
 pdf: /pojazdy/lamborghini/29/lamborghini-29.pdf
 alt: "Malowanka lamborghini do druku A4"
 tags:
+- trudnosc-9
 - pojazdy
 - lamborghini
 ---

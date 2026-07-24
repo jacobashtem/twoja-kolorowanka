@@ -7,6 +7,7 @@ image: /fantasy/smoki/15/smoki-15.svg
 pdf: /fantasy/smoki/15/smoki-15.pdf
 alt: "smoki kolorowanka dla dzieci - wariant 15"
 tags:
+- trudnosc-4
 - fantasy
 - smoki
 ---

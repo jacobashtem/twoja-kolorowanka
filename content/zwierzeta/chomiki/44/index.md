@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/44/chomiki-44.svg
 pdf: /zwierzeta/chomiki/44/chomiki-44.pdf
 alt: "Darmowa kolorowanka chomiki do druku PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - chomiki
 ---

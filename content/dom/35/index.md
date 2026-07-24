@@ -7,6 +7,7 @@ image: /dom/35/dom-35.svg
 pdf: /dom/35/dom-35.pdf
 alt: "Prosta kolorowanka dom do kolorowania"
 tags:
+- trudnosc-4
 - dom
 - dom
 ---

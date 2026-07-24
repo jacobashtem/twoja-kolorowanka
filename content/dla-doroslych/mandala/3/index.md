@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/3/mandala-3.svg
 pdf: /dla-doroslych/mandala/3/mandala-3.pdf
 alt: "mandala kolorowanka dla dzieci"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

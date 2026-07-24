@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/28/swinki-28.svg
 pdf: /zwierzeta/swinki/28/swinki-28.pdf
 alt: "Kolorowanka z swinki do pobrania"
 tags:
+- trudnosc-3
 - zwierzeta
 - swinki
 ---

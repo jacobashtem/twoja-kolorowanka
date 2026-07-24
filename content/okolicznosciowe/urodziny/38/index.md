@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/38/urodziny-38.svg
 pdf: /okolicznosciowe/urodziny/38/urodziny-38.pdf
 alt: "Kolorowanka urodziny"
 tags:
+- trudnosc-2
 - okolicznosciowe
 - urodziny
 ---

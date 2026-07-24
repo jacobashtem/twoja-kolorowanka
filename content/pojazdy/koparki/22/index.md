@@ -7,6 +7,7 @@ image: /pojazdy/koparki/22/koparki-22.svg
 pdf: /pojazdy/koparki/22/koparki-22.pdf
 alt: "koparki kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - pojazdy
 - koparki
 ---

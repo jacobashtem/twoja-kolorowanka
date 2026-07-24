@@ -7,6 +7,7 @@ image: /pory-roku/jesien/45/jesien-45.svg
 pdf: /pory-roku/jesien/45/jesien-45.pdf
 alt: "jesien – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-10
 - pory-roku
 - jesien
 ---

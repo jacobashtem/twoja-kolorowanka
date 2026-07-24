@@ -7,6 +7,7 @@ image: /pory-roku/lato/48/lato-48.svg
 pdf: /pory-roku/lato/48/lato-48.pdf
 alt: "kolorowanka do druku lato PDF"
 tags:
+- trudnosc-3
 - pory-roku
 - lato
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samochody/5/samochody-5.svg
 pdf: /pojazdy/samochody/5/samochody-5.pdf
 alt: "Kolorowanka do druku samochody"
 tags:
+- trudnosc-8
 - pojazdy
 - samochody
 ---

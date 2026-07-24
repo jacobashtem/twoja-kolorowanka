@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/46/jednorozce-46.svg
 pdf: /fantasy/jednorozce/46/jednorozce-46.pdf
 alt: "Kolorowanka z jednorozce do pobrania - wariant 46"
 tags:
+- trudnosc-2
 - fantasy
 - jednorozce
 ---

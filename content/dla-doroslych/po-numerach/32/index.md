@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/32/po-numerach-32.svg
 pdf: /dla-doroslych/po-numerach/32/po-numerach-32.pdf
 alt: "Edukacyjna kolorowanka po-numerach do wydruku"
 tags:
+- trudnosc-5
 - dla-doroslych
 - po-numerach
 ---

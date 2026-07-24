@@ -7,6 +7,7 @@ image: /telefon/19/telefon-19.svg
 pdf: /telefon/19/telefon-19.pdf
 alt: "Kolorowanka telefon"
 tags:
+- trudnosc-6
 - telefon
 - telefon
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/traktory/25/traktory-25.svg
 pdf: /pojazdy/traktory/25/traktory-25.pdf
 alt: "traktory do druku i pokolorowania"
 tags:
+- trudnosc-2
 - pojazdy
 - traktory
 ---

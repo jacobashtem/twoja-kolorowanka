@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/33/urodziny-33.svg
 pdf: /okolicznosciowe/urodziny/33/urodziny-33.pdf
 alt: "Edukacyjna kolorowanka urodziny do wydruku"
 tags:
+- trudnosc-7
 - okolicznosciowe
 - urodziny
 ---

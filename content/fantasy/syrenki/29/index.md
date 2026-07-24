@@ -7,6 +7,7 @@ image: /fantasy/syrenki/29/syrenki-29.svg
 pdf: /fantasy/syrenki/29/syrenki-29.pdf
 alt: "Malowanka syrenki do druku A4"
 tags:
+- trudnosc-8
 - fantasy
 - syrenki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/32/ptaki-32.svg
 pdf: /zwierzeta/ptaki/32/ptaki-32.pdf
 alt: "Edukacyjna kolorowanka ptaki do wydruku"
 tags:
+- trudnosc-10
 - zwierzeta
 - ptaki
 ---

@@ -7,6 +7,7 @@ image: /kredka/9/kredka-9.svg
 pdf: /kredka/9/kredka-9.pdf
 alt: "kredka – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - kredka
 - kredka
 ---

@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/52/jednorozce-52.svg
 pdf: /fantasy/jednorozce/52/jednorozce-52.pdf
 alt: "Kolorowanka jednorozce – format A4 PDF - wariant 52"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

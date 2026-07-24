@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/83/dinozaury-83.svg
 pdf: /zwierzeta/dinozaury/83/dinozaury-83.pdf
 alt: "Malowanka dinozaury do druku A4"
 tags:
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---

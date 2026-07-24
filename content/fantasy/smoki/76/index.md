@@ -7,6 +7,7 @@ image: /fantasy/smoki/76/smoki-76.svg
 pdf: /fantasy/smoki/76/smoki-76.pdf
 alt: "smoki kolorowanki dla dzieci - wariant 76"
 tags:
+- trudnosc-5
 - fantasy
 - smoki
 ---

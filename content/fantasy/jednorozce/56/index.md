@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/56/jednorozce-56.svg
 pdf: /fantasy/jednorozce/56/jednorozce-56.pdf
 alt: "Kolorowanki jednorozce - wariant 56"
 tags:
+- trudnosc-2
 - fantasy
 - jednorozce
 ---

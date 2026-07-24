@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/21/sowy-21.svg
 pdf: /zwierzeta/sowy/21/sowy-21.pdf
 alt: "sowy kolorowanka dla dzieci"
 tags:
+- trudnosc-7
 - zwierzeta
 - sowy
 ---

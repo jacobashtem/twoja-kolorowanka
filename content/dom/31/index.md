@@ -7,6 +7,7 @@ image: /dom/31/dom-31.svg
 pdf: /dom/31/dom-31.pdf
 alt: "Łatwa kolorowanka dom dla przedszkolaka"
 tags:
+- trudnosc-8
 - dom
 - dom
 ---

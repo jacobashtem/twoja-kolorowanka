@@ -7,6 +7,7 @@ image: /pojazdy/tiry/35/tir-35.svg
 pdf: /pojazdy/tiry/35/tir-35.pdf
 alt: "Prosta kolorowanka tir do kolorowania"
 tags:
+- trudnosc-8
 - pojazdy
 - tir
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/40/t-rex-40.svg
 pdf: /zwierzeta/t-rex/40/t-rex-40.pdf
 alt: "Kolorowanka t-rex"
 tags:
+- trudnosc-2
 - zwierzeta
 - t-rex
 ---

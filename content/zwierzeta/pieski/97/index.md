@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/97/pieski-97.svg
 pdf: /pieski/97/pieski-97.pdf
 tags:
+- trudnosc-3
 - zwierzeta
 - pieski
 alt: "Kolorowanki pieski - wariant 97"

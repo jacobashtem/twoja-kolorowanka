@@ -7,6 +7,7 @@ image: /fantasy/wrozki/30/wrozki-30.svg
 pdf: /fantasy/wrozki/30/wrozki-30.pdf
 alt: "kolorowanka do druku wrozki PDF - wariant 30"
 tags:
+- trudnosc-10
 - fantasy
 - wrozki
 ---

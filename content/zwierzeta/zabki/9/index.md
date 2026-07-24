@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/9/zabki-9.svg
 pdf: /zwierzeta/zabki/9/zabki-9.pdf
 alt: "zabka – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - zwierzeta
 - zabki
 ---

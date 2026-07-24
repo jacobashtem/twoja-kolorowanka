@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/7/antystresowe-7.svg
 pdf: /dla-doroslych/antystresowe/7/antystresowe-7.pdf
 alt: "antystresowe do druku i pokolorowania"
 tags:
+- trudnosc-9
 - dla-doroslych
 - antystresowe
 ---

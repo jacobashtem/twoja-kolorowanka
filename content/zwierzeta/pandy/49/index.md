@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/49/pandy-49.svg
 pdf: /zwierzeta/pandy/49/pandy-49.pdf
 alt: "Łatwa kolorowanka pandy dla przedszkolaka"
 tags:
+- trudnosc-5
 - zwierzeta
 - pandy
 ---

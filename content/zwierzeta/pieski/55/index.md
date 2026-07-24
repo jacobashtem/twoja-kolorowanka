@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/55/pieski-55.svg
 pdf: /pieski/55/pieski-55.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - pieski
 alt: "Łatwa kolorowanka pieski dla przedszkolaka - wariant 55"

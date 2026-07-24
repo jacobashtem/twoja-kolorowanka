@@ -7,6 +7,7 @@ image: /pojazdy/traktory/31/traktory-31.svg
 pdf: /pojazdy/traktory/31/traktory-31.pdf
 alt: "Łatwa kolorowanka traktory dla przedszkolaka"
 tags:
+- trudnosc-5
 - pojazdy
 - traktory
 ---

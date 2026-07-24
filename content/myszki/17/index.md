@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/17/myszki-17.svg
 pdf: /zwierzeta/myszki/17/myszki-17.pdf
 alt: "Prosta kolorowanka myszki do kolorowania"
 tags:
+- trudnosc-7
 - zwierzeta
 - myszki
 ---

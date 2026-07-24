@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/38/rakiety-38.svg
 pdf: /pojazdy/rakiety/38/rakiety-38.pdf
 alt: "Kolorowanki rakiety"
 tags:
+- trudnosc-4
 - pojazdy
 - rakiety
 ---

@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/20/kroliczki-20.svg
 pdf: /kroliczki/20/kroliczki-20.pdf
 tags:
+- trudnosc-3
 - zwierzeta
 - kroliczki
 alt: "kroliczki do druku i pokolorowania - wariant 20"

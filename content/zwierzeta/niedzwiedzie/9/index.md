@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/9/niedzwiedzie-9.svg
 pdf: /zwierzeta/niedzwiedzie/9/niedzwiedzie-9.pdf
 alt: "niedzwiedzie – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - zwierzeta
 - niedzwiedzie
 ---

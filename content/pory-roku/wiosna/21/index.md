@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/21/wiosna-21.svg
 pdf: /pory-roku/wiosna/21/wiosna-21.pdf
 alt: "wiosna kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - pory-roku
 - wiosna
 ---

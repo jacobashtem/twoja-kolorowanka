@@ -5,6 +5,7 @@ description: Kolorowanka Koniki – wariant 23
 image: /koniki/23/koniki-23.svg
 pdf:   /koniki/23/koniki-23.pdf
 tags:
+- trudnosc-1
  - zwierzeta
  - koniki
 alt: "Kolorowanka koniki – format A4 PDF - wariant 23"

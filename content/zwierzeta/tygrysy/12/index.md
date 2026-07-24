@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/12/tygrysy-12.svg
 pdf: /zwierzeta/tygrysy/12/tygrysy-12.pdf
 alt: "kolorowanka do druku tygrysy PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - tygrysy
 ---

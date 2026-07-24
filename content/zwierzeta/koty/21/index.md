@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/21/koty-21.svg
 pdf: /koty/21/koty-21.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Edukacyjna kolorowanka koty do wydruku - wariant 21"

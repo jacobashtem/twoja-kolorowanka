@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/18/pociagi-18.svg
 pdf: /pojazdy/pociagi/18/pociagi-18.pdf
 alt: "Pokoloruj pociagi – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - pociagi
 ---

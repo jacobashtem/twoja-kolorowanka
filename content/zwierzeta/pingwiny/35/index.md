@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/35/pingwiny-35.svg
 pdf: /zwierzeta/pingwiny/35/pingwiny-35.pdf
 alt: "Prosta kolorowanka pingwiny do kolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - pingwiny
 ---

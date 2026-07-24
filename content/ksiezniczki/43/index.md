@@ -7,6 +7,7 @@ image: /ksiezniczki/43/ksiezniczki-43.svg
 pdf: /ksiezniczki/43/ksiezniczki-43.pdf
 alt: "ksiezniczki do druku i pokolorowania"
 tags:
+- trudnosc-1
 - ksiezniczki
 - ksiezniczki
 ---

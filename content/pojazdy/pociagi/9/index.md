@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/9/pociagi-9.svg
 pdf: /pojazdy/pociagi/9/pociagi-9.pdf
 alt: "pociagi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - pojazdy
 - pociagi
 ---

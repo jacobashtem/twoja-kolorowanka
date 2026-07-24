@@ -7,6 +7,7 @@ image: /pory-roku/lato/20/lato-20.svg
 pdf: /pory-roku/lato/20/lato-20.pdf
 alt: "Kolorowanki lato"
 tags:
+- trudnosc-9
 - pory-roku
 - lato
 ---

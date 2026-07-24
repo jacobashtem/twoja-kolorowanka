@@ -7,6 +7,7 @@ image: /jedzenie/lody/44/lody-44.svg
 pdf: /jedzenie/lody/44/lody-44.pdf
 alt: "Kolorowanki do druku lody"
 tags:
+- trudnosc-4
 - jedzenie
 - lody
 ---

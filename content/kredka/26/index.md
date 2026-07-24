@@ -7,6 +7,7 @@ image: /kredka/26/kredka-26.svg
 pdf: /kredka/26/kredka-26.pdf
 alt: "Darmowa kolorowanka kredka do druku PDF"
 tags:
+- trudnosc-1
 - kredka
 - kredka
 ---

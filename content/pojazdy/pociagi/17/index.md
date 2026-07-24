@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/17/pociagi-17.svg
 pdf: /pojazdy/pociagi/17/pociagi-17.pdf
 alt: "Prosta kolorowanka pociagi do kolorowania"
 tags:
+- trudnosc-4
 - pojazdy
 - pociagi
 ---

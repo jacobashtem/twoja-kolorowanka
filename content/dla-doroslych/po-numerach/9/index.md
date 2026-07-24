@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/9/po-numerach-9.svg
 pdf: /dla-doroslych/po-numerach/9/po-numerach-9.pdf
 alt: "po-numerach – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - dla-doroslych
 - po-numerach
 ---

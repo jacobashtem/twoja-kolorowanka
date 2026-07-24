@@ -7,6 +7,7 @@ image: /rosliny/kwiat/8/kwiat-8.svg
 pdf: /rosliny/kwiat/8/kwiat-8.pdf
 alt: "Darmowa kolorowanka kwiat do druku PDF"
 tags:
+- trudnosc-10
 - rosliny
 - kwiat
 ---

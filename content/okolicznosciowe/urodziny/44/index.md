@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/44/urodziny-44.svg
 pdf: /okolicznosciowe/urodziny/44/urodziny-44.pdf
 alt: "urodziny do druku i pokolorowania"
 tags:
+- trudnosc-1
 - okolicznosciowe
 - urodziny
 ---

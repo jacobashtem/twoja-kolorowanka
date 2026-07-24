@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/68/mandala-68.svg
 pdf: /dla-doroslych/mandala/68/mandala-68.pdf
 alt: "Edukacyjna kolorowanka mandala do wydruku"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

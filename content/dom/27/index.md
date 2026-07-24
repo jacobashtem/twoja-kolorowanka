@@ -7,6 +7,7 @@ image: /dom/27/dom-27.svg
 pdf: /dom/27/dom-27.pdf
 alt: "dom – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - dom
 - dom
 ---

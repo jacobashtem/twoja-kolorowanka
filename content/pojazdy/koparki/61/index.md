@@ -7,6 +7,7 @@ image: /pojazdy/koparki/61/koparki-61.svg
 pdf: /pojazdy/koparki/61/koparki-61.pdf
 alt: "koparki do druku i pokolorowania"
 tags:
+- trudnosc-1
 - pojazdy
 - koparki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/42/lwy-42.svg
 pdf: /zwierzeta/lwy/42/lwy-42.pdf
 alt: "Kolorowanki do druku lwy"
 tags:
+- trudnosc-2
 - zwierzeta
 - lwy
 ---

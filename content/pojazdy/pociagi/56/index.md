@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/56/pociagi-56.svg
 pdf: /pojazdy/pociagi/56/pociagi-56.pdf
 alt: "Kolorowanki pociagi"
 tags:
+- trudnosc-9
 - pojazdy
 - pociagi
 ---

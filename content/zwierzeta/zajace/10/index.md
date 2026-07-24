@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/10/zajace-10.svg
 pdf: /zwierzeta/zajace/10/zajace-10.pdf
 alt: "Kolorowanka z zajace do pobrania"
 tags:
+- trudnosc-10
 - zwierzeta
 - zajace
 ---

@@ -7,6 +7,7 @@ image: /wedlug-kodu/24/wedlug-kodu-24.svg
 pdf: /wedlug-kodu/24/wedlug-kodu-24.pdf
 alt: "Kolorowanki do druku wedlug-kodu"
 tags:
+- trudnosc-6
 - wedlug-kodu
 - wedlug-kodu
 ---

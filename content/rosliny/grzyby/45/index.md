@@ -7,6 +7,7 @@ image: /rosliny/grzyby/45/grzyby-45.svg
 pdf: /rosliny/grzyby/45/grzyby-45.pdf
 alt: "grzyby – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - rosliny
 - grzyby
 ---

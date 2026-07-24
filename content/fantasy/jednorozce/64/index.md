@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/64/jednorozce-64.svg
 pdf: /fantasy/jednorozce/64/jednorozce-64.pdf
 alt: "Kolorowanka z jednorozce do pobrania - wariant 64"
 tags:
+- trudnosc-5
 - fantasy
 - jednorozce
 ---

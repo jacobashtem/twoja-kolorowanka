@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/61/jednorozce-61.svg
 pdf: /fantasy/jednorozce/61/jednorozce-61.pdf
 alt: "jednorozce do druku i pokolorowania - wariant 61"
 tags:
+- trudnosc-5
 - fantasy
 - jednorozce
 ---

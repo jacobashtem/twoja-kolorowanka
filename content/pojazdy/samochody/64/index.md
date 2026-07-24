@@ -7,6 +7,7 @@ image: /pojazdy/samochody/64/samochody-64.svg
 pdf: /pojazdy/samochody/64/samochody-64.pdf
 alt: "Kolorowanka z samochody do pobrania"
 tags:
+- trudnosc-4
 - pojazdy
 - samochody
 ---

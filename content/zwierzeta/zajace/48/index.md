@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/48/zajace-48.svg
 pdf: /zwierzeta/zajace/48/zajace-48.pdf
 alt: "kolorowanka do druku zajace PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - zajace
 ---

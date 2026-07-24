@@ -7,6 +7,7 @@ image: /pory-roku/zima/52/zima-52.svg
 pdf: /pory-roku/zima/52/zima-52.pdf
 alt: "Kolorowanka z zima do pobrania"
 tags:
+- trudnosc-6
 - pory-roku
 - zima
 ---

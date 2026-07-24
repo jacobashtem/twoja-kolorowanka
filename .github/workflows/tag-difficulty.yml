@@ -1,0 +1,28 @@
+# Comiesieczne tagowanie trudnosci nowych kolorowanek (trudnosc-1..10 z analizy SVG).
+# Idempotentne - stare leafy bez zmian, nowe dostaja tag; commit tylko gdy jest roznica.
+name: tag-difficulty
+on:
+  schedule:
+    - cron: '0 5 1 * *'   # 1. dzien miesiaca, 05:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Otaguj trudnosc
+        run: node scripts/tag-difficulty.mjs --write
+      - name: Commit zmian
+        run: |
+          git config user.name "difficulty-bot"
+          git config user.email "actions@github.com"
+          git add content/
+          git diff --cached --quiet || git commit -m "tagi trudnosci dla nowych kolorowanek [skip ci]"
+          git push

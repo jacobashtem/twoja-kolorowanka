@@ -7,6 +7,7 @@ image: /jedzenie/lody/40/lody-40.svg
 pdf: /jedzenie/lody/40/lody-40.pdf
 alt: "Kolorowanki lody"
 tags:
+- trudnosc-8
 - jedzenie
 - lody
 ---

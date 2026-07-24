@@ -7,6 +7,7 @@ image: /pojazdy/tiry/31/tir-31.svg
 pdf: /pojazdy/tiry/31/tir-31.pdf
 alt: "Łatwa kolorowanka tir dla przedszkolaka"
 tags:
+- trudnosc-3
 - pojazdy
 - tir
 ---

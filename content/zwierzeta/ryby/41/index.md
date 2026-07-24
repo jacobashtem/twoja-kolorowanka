@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/41/ryby-41.svg
 pdf: /zwierzeta/ryby/41/ryby-41.pdf
 alt: "Edukacyjna kolorowanka ryby do wydruku"
 tags:
+- trudnosc-4
 - zwierzeta
 - ryby
 ---

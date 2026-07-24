@@ -7,6 +7,7 @@ image: /pojazdy/bmw/49/bmw-49.svg
 pdf: /pojazdy/bmw/49/bmw-49.pdf
 alt: "Łatwa kolorowanka bmw dla przedszkolaka"
 tags:
+- trudnosc-4
 - pojazdy
 - bmw
 ---

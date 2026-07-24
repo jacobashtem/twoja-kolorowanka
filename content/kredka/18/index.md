@@ -7,6 +7,7 @@ image: /kredka/18/kredka-18.svg
 pdf: /kredka/18/kredka-18.pdf
 alt: "Pokoloruj kredka – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - kredka
 - kredka
 ---

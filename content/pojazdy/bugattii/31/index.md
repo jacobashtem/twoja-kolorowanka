@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/31/bugattii-31.svg
 pdf: /pojazdy/bugattii/31/bugattii-31.pdf
 alt: "Łatwa kolorowanka bugattii dla przedszkolaka"
 tags:
+- trudnosc-2
 - pojazdy
 - bugattii
 ---

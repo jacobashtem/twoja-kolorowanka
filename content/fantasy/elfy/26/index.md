@@ -7,6 +7,7 @@ image: /fantasy/elfy/26/elfy-26.svg
 pdf: /fantasy/elfy/26/elfy-26.pdf
 alt: "Darmowa kolorowanka elfy do druku PDF"
 tags:
+- trudnosc-2
 - fantasy
 - elfy
 ---

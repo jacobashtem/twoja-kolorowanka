@@ -7,6 +7,7 @@ image: /pojazdy/bmw/44/bmw-44.svg
 pdf: /pojazdy/bmw/44/bmw-44.pdf
 alt: "Darmowa kolorowanka bmw do druku PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - bmw
 ---

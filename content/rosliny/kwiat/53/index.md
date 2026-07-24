@@ -7,6 +7,7 @@ image: /rosliny/kwiat/53/kwiat-53.svg
 pdf: /rosliny/kwiat/53/kwiat-53.pdf
 alt: "kwiat do druku i pokolorowania"
 tags:
+- trudnosc-10
 - rosliny
 - kwiat
 ---

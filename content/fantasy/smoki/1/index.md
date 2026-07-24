@@ -7,6 +7,7 @@ image: /fantasy/smoki/1/smoki-1.svg
 pdf: /fantasy/smoki/1/smoki-1.pdf
 alt: "Kolorowanka smoki - wariant 1"
 tags:
+- trudnosc-10
 - fantasy
 - smoki
 ---

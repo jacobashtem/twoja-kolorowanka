@@ -7,6 +7,7 @@ image: /rosliny/grzyby/34/grzyby-34.svg
 pdf: /rosliny/grzyby/34/grzyby-34.pdf
 alt: "Kolorowanka grzyby – format A4 PDF"
 tags:
+- trudnosc-5
 - rosliny
 - grzyby
 ---

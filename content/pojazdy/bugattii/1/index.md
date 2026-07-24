@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/1/bugattii-1.svg
 pdf: /pojazdy/bugattii/1/bugattii-1.pdf
 alt: "Kolorowanka bugattii"
 tags:
+- trudnosc-8
 - pojazdy
 - bugattii
 ---

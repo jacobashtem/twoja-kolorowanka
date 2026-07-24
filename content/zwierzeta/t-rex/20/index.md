@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/20/t-rex-20.svg
 pdf: /zwierzeta/t-rex/20/t-rex-20.pdf
 alt: "Kolorowanki t-rex"
 tags:
+- trudnosc-8
 - zwierzeta
 - t-rex
 ---

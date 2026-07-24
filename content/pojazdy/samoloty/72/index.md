@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/72/samoloty-72.svg
 pdf: /pojazdy/samoloty/72/samoloty-72.pdf
 alt: "Pokoloruj samoloty – darmowy szablon PDF"
 tags:
+- trudnosc-9
 - pojazdy
 - samoloty
 ---

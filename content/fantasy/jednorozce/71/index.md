@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/71/jednorozce-71.svg
 pdf: /fantasy/jednorozce/71/jednorozce-71.pdf
 alt: "Prosta kolorowanka jednorozce do kolorowania - wariant 71"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

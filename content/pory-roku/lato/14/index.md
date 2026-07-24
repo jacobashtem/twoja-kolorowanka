@@ -7,6 +7,7 @@ image: /pory-roku/lato/14/lato-14.svg
 pdf: /pory-roku/lato/14/lato-14.pdf
 alt: "Edukacyjna kolorowanka lato do wydruku"
 tags:
+- trudnosc-10
 - pory-roku
 - lato
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/lato/53/lato-53.svg
 pdf: /pory-roku/lato/53/lato-53.pdf
 alt: "Prosta kolorowanka lato do kolorowania"
 tags:
+- trudnosc-2
 - pory-roku
 - lato
 ---

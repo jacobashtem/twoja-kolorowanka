@@ -7,6 +7,7 @@ image: /jedzenie/torty/34/torty-34.svg
 pdf: /jedzenie/torty/34/torty-34.pdf
 alt: "Kolorowanka torty – format A4 PDF"
 tags:
+- trudnosc-5
 - jedzenie
 - torty
 ---

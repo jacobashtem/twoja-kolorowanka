@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/53/jednorozce-53.svg
 pdf: /fantasy/jednorozce/53/jednorozce-53.pdf
 alt: "Prosta kolorowanka jednorozce do kolorowania - wariant 53"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

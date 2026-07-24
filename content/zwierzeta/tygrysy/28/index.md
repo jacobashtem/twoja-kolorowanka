@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/28/tygrysy-28.svg
 pdf: /zwierzeta/tygrysy/28/tygrysy-28.pdf
 alt: "Kolorowanka z tygrysy do pobrania"
 tags:
+- trudnosc-7
 - zwierzeta
 - tygrysy
 ---

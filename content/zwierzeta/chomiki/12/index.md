@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/12/chomiki-12.svg
 pdf: /zwierzeta/chomiki/12/chomiki-12.pdf
 alt: "kolorowanka do druku chomiki PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - chomiki
 ---

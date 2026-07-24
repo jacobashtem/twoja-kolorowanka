@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/33/papugi-33.svg
 pdf: /zwierzeta/papugi/33/papugi-33.pdf
 alt: "papugi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - zwierzeta
 - papugi
 ---

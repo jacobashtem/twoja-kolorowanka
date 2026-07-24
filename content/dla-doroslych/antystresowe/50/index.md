@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/50/antystresowe-50.svg
 pdf: /dla-doroslych/antystresowe/50/antystresowe-50.pdf
 alt: "Edukacyjna kolorowanka antystresowe do wydruku"
 tags:
+- trudnosc-9
 - dla-doroslych
 - antystresowe
 ---

@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/28/andrzejki-28.svg
 pdf: /okolicznosciowe/andrzejki/28/andrzejki-28.pdf
 alt: "Kolorowanka z andrzejki do pobrania"
 tags:
+- trudnosc-7
 - okolicznosciowe
 - andrzejki
 ---

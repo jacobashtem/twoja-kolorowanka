@@ -7,6 +7,7 @@ image: /pojazdy/traktory/38/traktory-38.svg
 pdf: /pojazdy/traktory/38/traktory-38.pdf
 alt: "Kolorowanki traktory"
 tags:
+- trudnosc-4
 - pojazdy
 - traktory
 ---

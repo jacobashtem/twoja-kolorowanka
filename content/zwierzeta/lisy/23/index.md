@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/23/lisy-23.svg
 pdf: /zwierzeta/lisy/23/lisy-23.pdf
 alt: "Kolorowanka do druku lisy"
 tags:
+- trudnosc-7
 - zwierzeta
 - lisy
 ---

@@ -7,6 +7,7 @@ image: /jedzenie/lody/41/lody-41.svg
 pdf: /jedzenie/lody/41/lody-41.pdf
 alt: "lody kolorowanka dla dzieci"
 tags:
+- trudnosc-7
 - jedzenie
 - lody
 ---

@@ -7,6 +7,7 @@ image: /kosmos/32/kosmos-32.svg
 pdf: /kosmos/32/kosmos-32.pdf
 alt: "Edukacyjna kolorowanka kosmos do wydruku"
 tags:
+- trudnosc-4
 - kosmos
 - kosmos
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/25/ptaki-25.svg
 pdf: /zwierzeta/ptaki/25/ptaki-25.pdf
 alt: "ptaki do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - ptaki
 ---

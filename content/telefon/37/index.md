@@ -7,6 +7,7 @@ image: /telefon/37/telefon-37.svg
 pdf: /telefon/37/telefon-37.pdf
 alt: "Kolorowanka telefon"
 tags:
+- trudnosc-6
 - telefon
 - telefon
 ---

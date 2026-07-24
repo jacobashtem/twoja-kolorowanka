@@ -7,6 +7,7 @@ image: /pory-roku/lato/44/lato-44.svg
 pdf: /pory-roku/lato/44/lato-44.pdf
 alt: "Darmowa kolorowanka lato do druku PDF"
 tags:
+- trudnosc-6
 - pory-roku
 - lato
 ---

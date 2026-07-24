@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/43/wiosna-43.svg
 pdf: /pory-roku/wiosna/43/wiosna-43.pdf
 alt: "wiosna do druku i pokolorowania"
 tags:
+- trudnosc-8
 - pory-roku
 - wiosna
 ---

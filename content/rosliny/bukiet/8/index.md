@@ -7,6 +7,7 @@ image: /rosliny/bukiet/8/bukiet-8.svg
 pdf: /rosliny/bukiet/8/bukiet-8.pdf
 alt: "Darmowa kolorowanka bukiet do druku PDF"
 tags:
+- trudnosc-5
 - rosliny
 - bukiet
 ---

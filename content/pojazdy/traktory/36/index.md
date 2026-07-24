@@ -7,6 +7,7 @@ image: /pojazdy/traktory/36/traktory-36.svg
 pdf: /pojazdy/traktory/36/traktory-36.pdf
 alt: "Pokoloruj traktory – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - traktory
 ---

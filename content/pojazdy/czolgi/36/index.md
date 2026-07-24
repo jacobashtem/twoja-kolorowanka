@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/36/czolgi-36.svg
 pdf: /pojazdy/czolgi/36/czolgi-36.pdf
 alt: "Pokoloruj czolgi – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - pojazdy
 - czolgi
 ---

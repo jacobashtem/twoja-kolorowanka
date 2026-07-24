@@ -7,6 +7,7 @@ image: /dom/20/dom-20.svg
 pdf: /dom/20/dom-20.pdf
 alt: "Kolorowanki dom"
 tags:
+- trudnosc-2
 - dom
 - dom
 ---

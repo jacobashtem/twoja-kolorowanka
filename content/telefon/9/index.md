@@ -7,6 +7,7 @@ image: /telefon/9/telefon-9.svg
 pdf: /telefon/9/telefon-9.pdf
 alt: "telefon – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

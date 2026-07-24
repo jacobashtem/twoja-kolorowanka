@@ -7,6 +7,7 @@ image: /fantasy/elfy/23/elfy-23.svg
 pdf: /fantasy/elfy/23/elfy-23.pdf
 alt: "Kolorowanka do druku elfy"
 tags:
+- trudnosc-7
 - fantasy
 - elfy
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/16/dinozaury-16.svg
 pdf: /zwierzeta/dinozaury/16/dinozaury-16.pdf
 alt: "Kolorowanka dinozaury – format A4 PDF"
 tags:
+- trudnosc-10
 - zwierzeta
 - dinozaury
 ---

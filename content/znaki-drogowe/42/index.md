@@ -7,6 +7,7 @@ image: /znaki-drogowe/42/znaki-drogowe-42.svg
 pdf: /znaki-drogowe/42/znaki-drogowe-42.pdf
 alt: "Kolorowanki do druku znaki-drogowe"
 tags:
+- trudnosc-4
 - znaki-drogowe
 - znaki-drogowe
 ---

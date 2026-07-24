@@ -7,6 +7,7 @@ image: /pojazdy/traktory/29/traktory-29.svg
 pdf: /pojazdy/traktory/29/traktory-29.pdf
 alt: "Malowanka traktory do druku A4"
 tags:
+- trudnosc-6
 - pojazdy
 - traktory
 ---

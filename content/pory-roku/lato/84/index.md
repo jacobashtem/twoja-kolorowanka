@@ -7,6 +7,7 @@ image: /pory-roku/lato/84/lato-84.svg
 pdf: /pory-roku/lato/84/lato-84.pdf
 alt: "kolorowanka do druku lato PDF"
 tags:
+- trudnosc-4
 - pory-roku
 - lato
 ---

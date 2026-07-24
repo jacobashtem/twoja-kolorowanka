@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/31/mandala-31.svg
 pdf: /dla-doroslych/mandala/31/mandala-31.pdf
 alt: "Łatwa kolorowanka mandala dla przedszkolaka"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

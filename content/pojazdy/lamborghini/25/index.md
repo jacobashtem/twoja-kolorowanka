@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/25/lamborghini-25.svg
 pdf: /pojazdy/lamborghini/25/lamborghini-25.pdf
 alt: "lamborghini do druku i pokolorowania"
 tags:
+- trudnosc-5
 - pojazdy
 - lamborghini
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/5/lwy-5.svg
 pdf: /zwierzeta/lwy/5/lwy-5.pdf
 alt: "Kolorowanka do druku lwy"
 tags:
+- trudnosc-1
 - zwierzeta
 - lwy
 ---

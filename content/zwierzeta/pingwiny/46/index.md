@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/46/pingwiny-46.svg
 pdf: /zwierzeta/pingwiny/46/pingwiny-46.pdf
 alt: "Kolorowanka z pingwiny do pobrania"
 tags:
+- trudnosc-6
 - zwierzeta
 - pingwiny
 ---

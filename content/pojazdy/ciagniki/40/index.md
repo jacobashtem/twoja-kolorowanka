@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/40/ciagniki-40.svg
 pdf: /pojazdy/ciagniki/40/ciagniki-40.pdf
 alt: "ciagniki kolorowanki dla dzieci"
 tags:
+- trudnosc-3
 - pojazdy
 - ciagniki
 ---

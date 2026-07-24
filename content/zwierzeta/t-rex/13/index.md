@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/13/t-rex-13.svg
 pdf: /zwierzeta/t-rex/13/t-rex-13.pdf
 alt: "Łatwa kolorowanka t-rex dla przedszkolaka"
 tags:
+- trudnosc-9
 - zwierzeta
 - t-rex
 ---

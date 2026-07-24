@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/20/dinozaury-20.svg
 pdf: /zwierzeta/dinozaury/20/dinozaury-20.pdf
 alt: "Kolorowanki dinozaury"
 tags:
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/lato/36/lato-36.svg
 pdf: /pory-roku/lato/36/lato-36.pdf
 alt: "Pokoloruj lato – darmowy szablon PDF"
 tags:
+- trudnosc-10
 - pory-roku
 - lato
 ---

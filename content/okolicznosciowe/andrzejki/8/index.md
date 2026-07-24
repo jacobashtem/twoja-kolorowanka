@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/8/andrzejki-8.svg
 pdf: /okolicznosciowe/andrzejki/8/andrzejki-8.pdf
 alt: "Darmowa kolorowanka andrzejki do druku PDF"
 tags:
+- trudnosc-8
 - okolicznosciowe
 - andrzejki
 ---

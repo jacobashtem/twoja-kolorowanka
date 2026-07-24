@@ -5,6 +5,7 @@ description: Kolorowanka Koniki – wariant 83
 image: /koniki/83/koniki-83.svg
 pdf:   /koniki/83/koniki-83.pdf
 tags:
+- trudnosc-9
  - zwierzeta
  - koniki
 alt: "Kolorowanki do druku koniki - wariant 83"

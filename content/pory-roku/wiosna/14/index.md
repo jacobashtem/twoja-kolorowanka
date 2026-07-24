@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/14/wiosna-14.svg
 pdf: /pory-roku/wiosna/14/wiosna-14.pdf
 alt: "Edukacyjna kolorowanka wiosna do wydruku"
 tags:
+- trudnosc-4
 - pory-roku
 - wiosna
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/17/pszczoly-17.svg
 pdf: /zwierzeta/pszczoly/17/pszczoly-17.pdf
 alt: "Prosta kolorowanka pszczoly do kolorowania"
 tags:
+- trudnosc-10
 - zwierzeta
 - pszczoly
 ---

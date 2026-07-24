@@ -7,6 +7,7 @@ image: /fantasy/smoki/55/smoki-55.svg
 pdf: /fantasy/smoki/55/smoki-55.pdf
 alt: "Kolorowanka smoki - wariant 55"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

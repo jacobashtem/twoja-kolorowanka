@@ -7,6 +7,7 @@ image: /pory-roku/zima/33/zima-33.svg
 pdf: /pory-roku/zima/33/zima-33.pdf
 alt: "zima – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-7
 - pory-roku
 - zima
 ---

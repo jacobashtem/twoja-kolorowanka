@@ -7,6 +7,7 @@ image: /pojazdy/koparki/35/koparki-35.svg
 pdf: /pojazdy/koparki/35/koparki-35.pdf
 alt: "Prosta kolorowanka koparki do kolorowania"
 tags:
+- trudnosc-4
 - pojazdy
 - koparki
 ---

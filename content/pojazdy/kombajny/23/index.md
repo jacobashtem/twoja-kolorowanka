@@ -7,6 +7,7 @@ image: /pojazdy/kombajny/23/kombajny-23.svg
 pdf: /pojazdy/kombajny/23/kombajny-23.pdf
 alt: "Kolorowanka do druku kombajny"
 tags:
+- trudnosc-4
 - pojazdy
 - kombajny
 ---

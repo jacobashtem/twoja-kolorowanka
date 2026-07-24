@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/26/rekiny-26.svg
 pdf: /zwierzeta/rekiny/26/rekiny-26.pdf
 alt: "Darmowa kolorowanka rekiny do druku PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - rekiny
 ---

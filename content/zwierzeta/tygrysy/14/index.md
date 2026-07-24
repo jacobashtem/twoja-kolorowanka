@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/14/tygrysy-14.svg
 pdf: /zwierzeta/tygrysy/14/tygrysy-14.pdf
 alt: "Edukacyjna kolorowanka tygrysy do wydruku"
 tags:
+- trudnosc-2
 - zwierzeta
 - tygrysy
 ---

@@ -7,6 +7,7 @@ image: /fantasy/syrenki/20/syrenki-20.svg
 pdf: /fantasy/syrenki/20/syrenki-20.pdf
 alt: "Kolorowanki syrenki"
 tags:
+- trudnosc-8
 - fantasy
 - syrenki
 ---

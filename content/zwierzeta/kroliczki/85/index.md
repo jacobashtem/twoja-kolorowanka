@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/85/kroliczki-85.svg
 pdf: /kroliczki/85/kroliczki-85.pdf
 tags:
+- trudnosc-8
 - zwierzeta
 - kroliczki
 alt: "Kolorowanki kroliczki - wariant 85"

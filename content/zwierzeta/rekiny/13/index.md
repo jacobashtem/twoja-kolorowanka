@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/13/rekiny-13.svg
 pdf: /zwierzeta/rekiny/13/rekiny-13.pdf
 alt: "Łatwa kolorowanka rekiny dla przedszkolaka"
 tags:
+- trudnosc-1
 - zwierzeta
 - rekiny
 ---

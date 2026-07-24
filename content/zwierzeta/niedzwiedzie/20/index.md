@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/20/niedzwiedzie-20.svg
 pdf: /zwierzeta/niedzwiedzie/20/niedzwiedzie-20.pdf
 alt: "Kolorowanki niedzwiedzie"
 tags:
+- trudnosc-8
 - zwierzeta
 - niedzwiedzie
 ---

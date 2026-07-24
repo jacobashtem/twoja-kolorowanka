@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/11/po-numerach-11.svg
 pdf: /dla-doroslych/po-numerach/11/po-numerach-11.pdf
 alt: "Malowanka po-numerach do druku A4"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

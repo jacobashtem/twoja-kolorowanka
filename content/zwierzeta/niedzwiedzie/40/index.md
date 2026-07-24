@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/40/niedzwiedzie-40.svg
 pdf: /zwierzeta/niedzwiedzie/40/niedzwiedzie-40.pdf
 alt: "niedzwiedzie kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - zwierzeta
 - niedzwiedzie
 ---

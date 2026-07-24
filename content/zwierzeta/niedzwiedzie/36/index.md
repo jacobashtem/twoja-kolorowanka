@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/36/niedzwiedzie-36.svg
 pdf: /zwierzeta/niedzwiedzie/36/niedzwiedzie-36.pdf
 alt: "Pokoloruj niedzwiedzie – darmowy szablon PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - niedzwiedzie
 ---

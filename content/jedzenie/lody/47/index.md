@@ -7,6 +7,7 @@ image: /jedzenie/lody/47/lody-47.svg
 pdf: /jedzenie/lody/47/lody-47.pdf
 alt: "lody – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - jedzenie
 - lody
 ---

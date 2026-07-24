@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/25/myszki-25.svg
 pdf: /zwierzeta/myszki/25/myszki-25.pdf
 alt: "myszki do druku i pokolorowania"
 tags:
+- trudnosc-5
 - zwierzeta
 - myszki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/mis/43/mis-43.svg
 pdf: /zwierzeta/mis/43/mis-43.pdf
 alt: "mis do druku i pokolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - mis
 ---

@@ -7,6 +7,7 @@ image: /fantasy/smoki/57/smoki-57.svg
 pdf: /fantasy/smoki/57/smoki-57.pdf
 alt: "smoki kolorowanka dla dzieci - wariant 57"
 tags:
+- trudnosc-2
 - fantasy
 - smoki
 ---

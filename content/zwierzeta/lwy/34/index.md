@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/34/lwy-34.svg
 pdf: /zwierzeta/lwy/34/lwy-34.pdf
 alt: "Kolorowanka lwy – format A4 PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - lwy
 ---

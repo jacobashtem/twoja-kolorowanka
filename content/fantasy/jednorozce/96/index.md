@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/96/jednorozce-96.svg
 pdf: /fantasy/jednorozce/96/jednorozce-96.pdf
 alt: "Kolorowanki do druku jednorozce - wariant 96"
 tags:
+- trudnosc-3
 - fantasy
 - jednorozce
 ---

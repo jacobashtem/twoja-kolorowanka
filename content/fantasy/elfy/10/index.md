@@ -7,6 +7,7 @@ image: /fantasy/elfy/10/elfy-10.svg
 pdf: /fantasy/elfy/10/elfy-10.pdf
 alt: "Kolorowanka z elfy do pobrania"
 tags:
+- trudnosc-9
 - fantasy
 - elfy
 ---

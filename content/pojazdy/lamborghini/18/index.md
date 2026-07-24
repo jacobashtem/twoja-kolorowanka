@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/18/lamborghini-18.svg
 pdf: /pojazdy/lamborghini/18/lamborghini-18.pdf
 alt: "Pokoloruj lamborghini – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - lamborghini
 ---

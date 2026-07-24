@@ -7,6 +7,7 @@ image: /pory-roku/jesien/7/jesien-7.svg
 pdf: /pory-roku/jesien/7/jesien-7.pdf
 alt: "jesien do druku i pokolorowania"
 tags:
+- trudnosc-10
 - pory-roku
 - jesien
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/26/wilki-26.svg
 pdf: /zwierzeta/wilki/26/wilki-26.pdf
 alt: "Darmowa kolorowanka wilki do druku PDF"
 tags:
+- trudnosc-9
 - zwierzeta
 - wilki
 ---

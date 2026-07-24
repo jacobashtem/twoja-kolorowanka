@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/8/pandy-8.svg
 pdf: /zwierzeta/pandy/8/pandy-8.pdf
 alt: "Darmowa kolorowanka pandy do druku PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - pandy
 ---

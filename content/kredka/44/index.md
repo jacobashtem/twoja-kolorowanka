@@ -7,6 +7,7 @@ image: /kredka/44/kredka-44.svg
 pdf: /kredka/44/kredka-44.pdf
 alt: "Darmowa kolorowanka kredka do druku PDF"
 tags:
+- trudnosc-8
 - kredka
 - kredka
 ---

@@ -7,6 +7,7 @@ image: /znaki-drogowe/13/znaki-drogowe-13.svg
 pdf: /znaki-drogowe/13/znaki-drogowe-13.pdf
 alt: "Łatwa kolorowanka znaki-drogowe dla przedszkolaka"
 tags:
+- trudnosc-1
 - znaki-drogowe
 - znaki-drogowe
 ---

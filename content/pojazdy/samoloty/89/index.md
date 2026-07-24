@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/89/samoloty-89.svg
 pdf: /pojazdy/samoloty/89/samoloty-89.pdf
 alt: "Prosta kolorowanka samoloty do kolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - samoloty
 ---

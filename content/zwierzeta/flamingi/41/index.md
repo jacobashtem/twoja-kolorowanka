@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/41/flamingi-41.svg
 pdf: /zwierzeta/flamingi/41/flamingi-41.pdf
 alt: "Darmowa kolorowanka flamingi do druku PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - flamingi
 ---

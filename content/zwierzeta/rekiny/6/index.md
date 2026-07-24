@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/6/rekiny-6.svg
 pdf: /zwierzeta/rekiny/6/rekiny-6.pdf
 alt: "Kolorowanki do druku rekiny"
 tags:
+- trudnosc-1
 - zwierzeta
 - rekiny
 ---

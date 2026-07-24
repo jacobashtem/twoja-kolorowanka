@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/14/urodziny-14.svg
 pdf: /okolicznosciowe/urodziny/14/urodziny-14.pdf
 alt: "Łatwa kolorowanka urodziny dla przedszkolaka"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - urodziny
 ---

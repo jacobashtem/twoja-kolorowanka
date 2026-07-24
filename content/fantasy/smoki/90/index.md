@@ -7,6 +7,7 @@ image: /fantasy/smoki/90/smoki-90.svg
 pdf: /fantasy/smoki/90/smoki-90.pdf
 alt: "Pokoloruj smoki – darmowy szablon PDF - wariant 90"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

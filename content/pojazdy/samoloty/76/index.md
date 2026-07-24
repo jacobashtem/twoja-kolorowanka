@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/76/samoloty-76.svg
 pdf: /pojazdy/samoloty/76/samoloty-76.pdf
 alt: "samoloty kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - pojazdy
 - samoloty
 ---

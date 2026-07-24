@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/16/zabki-16.svg
 pdf: /zwierzeta/zabki/16/zabki-16.pdf
 alt: "Kolorowanka Zabki – format A4 PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - zabki
 ---

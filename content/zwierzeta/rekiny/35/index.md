@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/35/rekiny-35.svg
 pdf: /zwierzeta/rekiny/35/rekiny-35.pdf
 alt: "Prosta kolorowanka rekiny do kolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - rekiny
 ---

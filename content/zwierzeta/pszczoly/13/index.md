@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/13/pszczoly-13.svg
 pdf: /zwierzeta/pszczoly/13/pszczoly-13.pdf
 alt: "Łatwa kolorowanka pszczoly dla przedszkolaka"
 tags:
+- trudnosc-3
 - zwierzeta
 - pszczoly
 ---

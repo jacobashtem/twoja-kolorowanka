@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/15/wiosna-15.svg
 pdf: /pory-roku/wiosna/15/wiosna-15.pdf
 alt: "wiosna kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - pory-roku
 - wiosna
 ---

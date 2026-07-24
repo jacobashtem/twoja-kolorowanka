@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/17/sowy-17.svg
 pdf: /zwierzeta/sowy/17/sowy-17.pdf
 alt: "Prosta kolorowanka sowy do kolorowania"
 tags:
+- trudnosc-2
 - zwierzeta
 - sowy
 ---

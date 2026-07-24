@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/25/lisy-25.svg
 pdf: /zwierzeta/lisy/25/lisy-25.pdf
 alt: "lisy do druku i pokolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - lisy
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samochody/11/samochody-11.svg
 pdf: /pojazdy/samochody/11/samochody-11.pdf
 alt: "Malowanka samochody do druku A4"
 tags:
+- trudnosc-4
 - pojazdy
 - samochody
 ---

@@ -7,6 +7,7 @@ image: /kredka/35/kredka-35.svg
 pdf: /kredka/35/kredka-35.pdf
 alt: "Prosta kolorowanka kredka do kolorowania"
 tags:
+- trudnosc-6
 - kredka
 - kredka
 ---

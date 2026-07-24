@@ -7,6 +7,7 @@ image: /pory-roku/zima/8/zima-8.svg
 pdf: /pory-roku/zima/8/zima-8.pdf
 alt: "Darmowa kolorowanka zima do druku PDF"
 tags:
+- trudnosc-4
 - pory-roku
 - zima
 ---

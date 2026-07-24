@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/95/jednorozce-95.svg
 pdf: /fantasy/jednorozce/95/jednorozce-95.pdf
 alt: "Kolorowanka do druku jednorozce - wariant 95"
 tags:
+- trudnosc-1
 - fantasy
 - jednorozce
 ---

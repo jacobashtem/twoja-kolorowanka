@@ -7,6 +7,7 @@ image: /pojazdy/bmw/19/bmw-19.svg
 pdf: /pojazdy/bmw/19/bmw-19.pdf
 alt: "Kolorowanka bmw"
 tags:
+- trudnosc-5
 - pojazdy
 - bmw
 ---

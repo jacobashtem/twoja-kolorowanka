@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/42/flamingi-42.svg
 pdf: /zwierzeta/flamingi/42/flamingi-42.pdf
 alt: "flamingi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - zwierzeta
 - flamingi
 ---

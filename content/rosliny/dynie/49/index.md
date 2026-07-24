@@ -7,6 +7,7 @@ image: /rosliny/dynie/49/dynie-49.svg
 pdf: /rosliny/dynie/49/dynie-49.pdf
 alt: "Łatwa kolorowanka dynie dla przedszkolaka"
 tags:
+- trudnosc-5
 - rosliny
 - dynie
 ---

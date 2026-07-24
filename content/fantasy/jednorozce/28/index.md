@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/28/jednorozce-28.svg
 pdf: /fantasy/jednorozce/28/jednorozce-28.pdf
 alt: "Kolorowanka z jednorozce do pobrania - wariant 28"
 tags:
+- trudnosc-3
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/46/ryby-46.svg
 pdf: /zwierzeta/ryby/46/ryby-46.pdf
 alt: "Kolorowanka ryby"
 tags:
+- trudnosc-8
 - zwierzeta
 - ryby
 ---

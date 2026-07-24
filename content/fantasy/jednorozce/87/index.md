@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/87/jednorozce-87.svg
 pdf: /fantasy/jednorozce/87/jednorozce-87.pdf
 alt: "jednorozce kolorowanka dla dzieci - wariant 87"
 tags:
+- trudnosc-9
 - fantasy
 - jednorozce
 ---

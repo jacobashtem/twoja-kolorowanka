@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/18/pawie-18.svg
 pdf: /zwierzeta/pawie/18/pawie-18.pdf
 alt: "Pokoloruj pawie – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - pawie
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/62/pociagi-62.svg
 pdf: /pojazdy/pociagi/62/pociagi-62.pdf
 alt: "Darmowa kolorowanka pociagi do druku PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - pociagi
 ---

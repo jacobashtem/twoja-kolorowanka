@@ -7,6 +7,7 @@ image: /pojazdy/tiry/42/tir-42.svg
 pdf: /pojazdy/tiry/42/tir-42.pdf
 alt: "Kolorowanki do druku tir"
 tags:
+- trudnosc-9
 - pojazdy
 - tir
 ---

@@ -7,6 +7,7 @@ image: /fantasy/smoki/45/smoki-45.svg
 pdf: /fantasy/smoki/45/smoki-45.pdf
 alt: "smoki – pobierz i wydrukuj kolorowankę - wariant 45"
 tags:
+- trudnosc-5
 - fantasy
 - smoki
 ---

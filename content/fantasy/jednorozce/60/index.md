@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/60/jednorozce-60.svg
 pdf: /fantasy/jednorozce/60/jednorozce-60.pdf
 alt: "Kolorowanki do druku jednorozce - wariant 60"
 tags:
+- trudnosc-5
 - fantasy
 - jednorozce
 ---

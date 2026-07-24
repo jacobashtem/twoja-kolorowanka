@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/1/tygrysy-1.svg
 pdf: /zwierzeta/tygrysy/1/tygrysy-1.pdf
 alt: "Kolorowanka tygrysy"
 tags:
+- trudnosc-2
 - zwierzeta
 - tygrysy
 ---

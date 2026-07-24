@@ -7,6 +7,7 @@ image: /jedzenie/jablka/18/jablka-18.svg
 pdf: /jedzenie/jablka/18/jablka-18.pdf
 alt: "Pokoloruj jablka – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - jedzenie
 - jablka
 ---

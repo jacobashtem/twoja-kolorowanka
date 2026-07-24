@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/39/pingwiny-39.svg
 pdf: /zwierzeta/pingwiny/39/pingwiny-39.pdf
 alt: "pingwiny kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - zwierzeta
 - pingwiny
 ---

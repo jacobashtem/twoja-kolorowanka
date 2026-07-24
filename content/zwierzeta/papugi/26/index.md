@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/26/papugi-26.svg
 pdf: /zwierzeta/papugi/26/papugi-26.pdf
 alt: "Kolorowanki papugi"
 tags:
+- trudnosc-1
 - zwierzeta
 - papugi
 ---

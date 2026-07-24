@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/42/ciagniki-42.svg
 pdf: /pojazdy/ciagniki/42/ciagniki-42.pdf
 alt: "Kolorowanki do druku ciagniki"
 tags:
+- trudnosc-3
 - pojazdy
 - ciagniki
 ---

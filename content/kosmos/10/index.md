@@ -7,6 +7,7 @@ image: /kosmos/10/kosmos-10.svg
 pdf: /kosmos/10/kosmos-10.pdf
 alt: "Kolorowanka z kosmos do pobrania"
 tags:
+- trudnosc-3
 - kosmos
 - kosmos
 ---

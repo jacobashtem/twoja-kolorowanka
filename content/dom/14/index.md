@@ -7,6 +7,7 @@ image: /dom/14/dom-14.svg
 pdf: /dom/14/dom-14.pdf
 alt: "Edukacyjna kolorowanka dom do wydruku"
 tags:
+- trudnosc-1
 - dom
 - dom
 ---

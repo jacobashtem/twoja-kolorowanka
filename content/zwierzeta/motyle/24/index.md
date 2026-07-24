@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/24/motyle-24.svg
 pdf: /zwierzeta/motyle/24/motyle-24.pdf
 alt: "Kolorowanki do druku motyle"
 tags:
+- trudnosc-8
 - zwierzeta
 - motyle
 ---

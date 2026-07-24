@@ -7,6 +7,7 @@ image: /jedzenie/jablka/23/jablka-23.svg
 pdf: /jedzenie/jablka/23/jablka-23.pdf
 alt: "Kolorowanka do druku jablka"
 tags:
+- trudnosc-7
 - jedzenie
 - jablka
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/lato/22/lato-22.svg
 pdf: /pory-roku/lato/22/lato-22.pdf
 alt: "lato kolorowanki dla dzieci"
 tags:
+- trudnosc-7
 - pory-roku
 - lato
 ---

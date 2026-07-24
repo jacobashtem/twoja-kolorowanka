@@ -7,6 +7,7 @@ image: /pojazdy/samochody/34/samochody-34.svg
 pdf: /pojazdy/samochody/34/samochody-34.pdf
 alt: "Kolorowanka samochody – format A4 PDF"
 tags:
+- trudnosc-10
 - pojazdy
 - samochody
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/7/bugattii-7.svg
 pdf: /pojazdy/bugattii/7/bugattii-7.pdf
 alt: "bugattii do druku i pokolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - bugattii
 ---

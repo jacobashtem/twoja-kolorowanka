@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/37/wilki-37.svg
 pdf: /zwierzeta/wilki/37/wilki-37.pdf
 alt: "Kolorowanka wilki"
 tags:
+- trudnosc-7
 - zwierzeta
 - wilki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/mis/47/mis-47.svg
 pdf: /zwierzeta/mis/47/mis-47.pdf
 alt: "Malowanka mis do druku A4"
 tags:
+- trudnosc-2
 - zwierzeta
 - mis
 ---

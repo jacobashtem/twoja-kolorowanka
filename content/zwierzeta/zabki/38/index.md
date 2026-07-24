@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/38/zabki-38.svg
 pdf: /zwierzeta/zabki/38/zabki-38.pdf
 alt: "Kolorowanki zabka"
 tags:
+- trudnosc-3
 - zwierzeta
 - zabki
 ---

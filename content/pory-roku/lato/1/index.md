@@ -7,6 +7,7 @@ image: /pory-roku/lato/1/lato-1.svg
 pdf: /pory-roku/lato/1/lato-1.pdf
 alt: "Kolorowanka lato"
 tags:
+- trudnosc-10
 - pory-roku
 - lato
 ---

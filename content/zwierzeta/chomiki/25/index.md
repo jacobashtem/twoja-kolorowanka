@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/25/chomiki-25.svg
 pdf: /zwierzeta/chomiki/25/chomiki-25.pdf
 alt: "chomiki do druku i pokolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - chomiki
 ---

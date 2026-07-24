@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/47/wilki-47.svg
 pdf: /zwierzeta/wilki/47/wilki-47.pdf
 alt: "Malowanka wilki do druku A4"
 tags:
+- trudnosc-10
 - zwierzeta
 - wilki
 ---

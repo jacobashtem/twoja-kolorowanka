@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/36/andrzejki-36.svg
 pdf: /okolicznosciowe/andrzejki/36/andrzejki-36.pdf
 alt: "Pokoloruj andrzejki – darmowy szablon PDF"
 tags:
+- trudnosc-7
 - okolicznosciowe
 - andrzejki
 ---

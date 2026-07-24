@@ -7,6 +7,7 @@ image: /wedlug-kodu/20/wedlug-kodu-20.svg
 pdf: /wedlug-kodu/20/wedlug-kodu-20.pdf
 alt: "Kolorowanki wedlug-kodu"
 tags:
+- trudnosc-10
 - wedlug-kodu
 - wedlug-kodu
 ---

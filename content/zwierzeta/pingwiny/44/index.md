@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/44/pingwiny-44.svg
 pdf: /zwierzeta/pingwiny/44/pingwiny-44.pdf
 alt: "Darmowa kolorowanka pingwiny do druku PDF"
 tags:
+- trudnosc-9
 - zwierzeta
 - pingwiny
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/20/sowy-20.svg
 pdf: /zwierzeta/sowy/20/sowy-20.pdf
 alt: "Kolorowanki sowy"
 tags:
+- trudnosc-3
 - zwierzeta
 - sowy
 ---

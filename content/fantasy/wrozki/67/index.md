@@ -7,6 +7,7 @@ image: /fantasy/wrozki/67/wrozki-67.svg
 pdf: /fantasy/wrozki/67/wrozki-67.pdf
 alt: "Łatwa kolorowanka wrozki dla przedszkolaka - wariant 67"
 tags:
+- trudnosc-4
 - fantasy
 - wrozki
 ---

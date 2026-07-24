@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/64/kroliczki-64.svg
 pdf: /kroliczki/64/kroliczki-64.pdf
 tags:
+- trudnosc-6
 - zwierzeta
 - kroliczki
 alt: "Prosta kolorowanka kroliczki do kolorowania - wariant 64"

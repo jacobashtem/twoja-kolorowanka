@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/48/jednorozce-48.svg
 pdf: /fantasy/jednorozce/48/jednorozce-48.pdf
 alt: "kolorowanka do druku jednorozce PDF - wariant 48"
 tags:
+- trudnosc-4
 - fantasy
 - jednorozce
 ---

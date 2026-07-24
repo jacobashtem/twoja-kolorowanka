@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/43/ciagniki-43.svg
 pdf: /pojazdy/ciagniki/43/ciagniki-43.pdf
 alt: "ciagniki do druku i pokolorowania"
 tags:
+- trudnosc-1
 - pojazdy
 - ciagniki
 ---

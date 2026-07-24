@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/9/zajace-9.svg
 pdf: /zwierzeta/zajace/9/zajace-9.pdf
 alt: "zajace – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - zwierzeta
 - zajace
 ---

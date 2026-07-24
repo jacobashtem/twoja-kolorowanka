@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/83/motyle-83.svg
 pdf: /zwierzeta/motyle/83/motyle-83.pdf
 alt: "Malowanka motyle do druku A4"
 tags:
+- trudnosc-7
 - zwierzeta
 - motyle
 ---

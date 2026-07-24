@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/28/pandy-28.svg
 pdf: /zwierzeta/pandy/28/pandy-28.pdf
 alt: "Kolorowanka z pandy do pobrania"
 tags:
+- trudnosc-8
 - zwierzeta
 - pandy
 ---

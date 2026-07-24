@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/45/ryby-45.svg
 pdf: /zwierzeta/ryby/45/ryby-45.pdf
 alt: "Pokoloruj ryby – darmowy szablon PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - ryby
 ---

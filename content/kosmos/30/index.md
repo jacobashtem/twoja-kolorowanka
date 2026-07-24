@@ -7,6 +7,7 @@ image: /kosmos/30/kosmos-30.svg
 pdf: /kosmos/30/kosmos-30.pdf
 alt: "kolorowanka do druku kosmos PDF"
 tags:
+- trudnosc-2
 - kosmos
 - kosmos
 ---

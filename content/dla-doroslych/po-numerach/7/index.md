@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/7/po-numerach-7.svg
 pdf: /dla-doroslych/po-numerach/7/po-numerach-7.pdf
 alt: "po-numerach do druku i pokolorowania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

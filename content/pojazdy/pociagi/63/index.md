@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/63/pociagi-63.svg
 pdf: /pojazdy/pociagi/63/pociagi-63.pdf
 alt: "pociagi – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/37/urodziny-37.svg
 pdf: /okolicznosciowe/urodziny/37/urodziny-37.pdf
 alt: "Pokoloruj urodziny – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - okolicznosciowe
 - urodziny
 ---

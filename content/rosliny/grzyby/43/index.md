@@ -7,6 +7,7 @@ image: /rosliny/grzyby/43/grzyby-43.svg
 pdf: /rosliny/grzyby/43/grzyby-43.pdf
 alt: "grzyby do druku i pokolorowania"
 tags:
+- trudnosc-6
 - rosliny
 - grzyby
 ---

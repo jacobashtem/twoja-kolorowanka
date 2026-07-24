@@ -7,6 +7,7 @@ image: /telefon/38/telefon-38.svg
 pdf: /telefon/38/telefon-38.pdf
 alt: "Kolorowanki telefon"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

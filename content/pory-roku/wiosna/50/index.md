@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/50/wiosna-50.svg
 pdf: /pory-roku/wiosna/50/wiosna-50.pdf
 alt: "Edukacyjna kolorowanka wiosna do wydruku"
 tags:
+- trudnosc-10
 - pory-roku
 - wiosna
 ---

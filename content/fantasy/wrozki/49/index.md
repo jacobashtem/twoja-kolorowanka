@@ -7,6 +7,7 @@ image: /fantasy/wrozki/49/wrozki-49.svg
 pdf: /fantasy/wrozki/49/wrozki-49.pdf
 alt: "Łatwa kolorowanka wrozki dla przedszkolaka - wariant 49"
 tags:
+- trudnosc-9
 - fantasy
 - wrozki
 ---

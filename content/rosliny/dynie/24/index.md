@@ -7,6 +7,7 @@ image: /rosliny/dynie/24/dynie-24.svg
 pdf: /rosliny/dynie/24/dynie-24.pdf
 alt: "Kolorowanki do druku dynie"
 tags:
+- trudnosc-4
 - rosliny
 - dynie
 ---

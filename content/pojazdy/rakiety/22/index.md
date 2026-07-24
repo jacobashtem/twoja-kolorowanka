@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/22/rakiety-22.svg
 pdf: /pojazdy/rakiety/22/rakiety-22.pdf
 alt: "rakiety kolorowanki dla dzieci"
 tags:
+- trudnosc-8
 - pojazdy
 - rakiety
 ---

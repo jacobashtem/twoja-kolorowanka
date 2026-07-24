@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/32/jednorozce-32.svg
 pdf: /fantasy/jednorozce/32/jednorozce-32.pdf
 alt: "Edukacyjna kolorowanka jednorozce do wydruku - wariant 32"
 tags:
+- trudnosc-6
 - fantasy
 - jednorozce
 ---

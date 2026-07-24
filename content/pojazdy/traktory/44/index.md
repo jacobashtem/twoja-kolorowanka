@@ -7,6 +7,7 @@ image: /pojazdy/traktory/44/traktory-44.svg
 pdf: /pojazdy/traktory/44/traktory-44.pdf
 alt: "Darmowa kolorowanka traktory do druku PDF"
 tags:
+- trudnosc-6
 - pojazdy
 - traktory
 ---

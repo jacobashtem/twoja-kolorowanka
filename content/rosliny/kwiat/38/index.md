@@ -7,6 +7,7 @@ image: /rosliny/kwiat/38/kwiat-38.svg
 pdf: /rosliny/kwiat/38/kwiat-38.pdf
 alt: "Kolorowanki kwiat"
 tags:
+- trudnosc-10
 - rosliny
 - kwiat
 ---

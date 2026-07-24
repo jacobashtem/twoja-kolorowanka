@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/35/pawie-35.svg
 pdf: /zwierzeta/pawie/35/pawie-35.pdf
 alt: "Prosta kolorowanka pawie do kolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - pawie
 ---

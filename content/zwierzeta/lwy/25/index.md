@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/25/lwy-25.svg
 pdf: /zwierzeta/lwy/25/lwy-25.pdf
 alt: "lwy do druku i pokolorowania"
 tags:
+- trudnosc-10
 - zwierzeta
 - lwy
 ---

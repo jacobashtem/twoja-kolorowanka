@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/17/niedzwiedzie-17.svg
 pdf: /zwierzeta/niedzwiedzie/17/niedzwiedzie-17.pdf
 alt: "Prosta kolorowanka niedzwiedzie do kolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - niedzwiedzie
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/25/dinozaury-25.svg
 pdf: /zwierzeta/dinozaury/25/dinozaury-25.pdf
 alt: "dinozaury do druku i pokolorowania"
 tags:
+- trudnosc-8
 - zwierzeta
 - dinozaury
 ---

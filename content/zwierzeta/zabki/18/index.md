@@ -7,6 +7,7 @@ image: /zwierzeta/zabki/18/zabki-18.svg
 pdf: /zwierzeta/zabki/18/zabki-18.pdf
 alt: "Pokoloruj zabka – darmowy szablon PDF"
 tags:
+- trudnosc-6
 - zwierzeta
 - zabki
 ---

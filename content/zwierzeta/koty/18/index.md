@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/18/koty-18.svg
 pdf: /koty/18/koty-18.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Kolorowanka z koty do pobrania - wariant 18"

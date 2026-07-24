@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/36/wilki-36.svg
 pdf: /zwierzeta/wilki/36/wilki-36.pdf
 alt: "Pokoloruj wilki – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - wilki
 ---

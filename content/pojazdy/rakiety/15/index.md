@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/15/rakiety-15.svg
 pdf: /pojazdy/rakiety/15/rakiety-15.pdf
 alt: "rakiety kolorowanka dla dzieci"
 tags:
+- trudnosc-1
 - pojazdy
 - rakiety
 ---

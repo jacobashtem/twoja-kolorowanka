@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/90/jednorozce-90.svg
 pdf: /fantasy/jednorozce/90/jednorozce-90.pdf
 alt: "Pokoloruj jednorozce – darmowy szablon PDF - wariant 90"
 tags:
+- trudnosc-3
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/46/wilki-46.svg
 pdf: /zwierzeta/wilki/46/wilki-46.pdf
 alt: "Kolorowanka z wilki do pobrania"
 tags:
+- trudnosc-1
 - zwierzeta
 - wilki
 ---

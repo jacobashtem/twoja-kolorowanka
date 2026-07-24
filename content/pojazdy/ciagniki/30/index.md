@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/30/ciagniki-30.svg
 pdf: /pojazdy/ciagniki/30/ciagniki-30.pdf
 alt: "kolorowanka do druku ciagniki PDF"
 tags:
+- trudnosc-10
 - pojazdy
 - ciagniki
 ---

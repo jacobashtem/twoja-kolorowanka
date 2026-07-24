@@ -7,6 +7,7 @@ image: /pojazdy/tiry/9/tir-9.svg
 pdf: /pojazdy/tiry/9/tir-9.pdf
 alt: "tir – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - pojazdy
 - tir
 ---

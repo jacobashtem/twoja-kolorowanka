@@ -7,6 +7,7 @@ image: /kredka/49/kredka-49.svg
 pdf: /kredka/49/kredka-49.pdf
 alt: "Łatwa kolorowanka kredka dla przedszkolaka"
 tags:
+- trudnosc-2
 - kredka
 - kredka
 ---

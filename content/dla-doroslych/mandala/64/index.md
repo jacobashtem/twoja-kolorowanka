@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/64/mandala-64.svg
 pdf: /dla-doroslych/mandala/64/mandala-64.pdf
 alt: "Kolorowanka z mandala do pobrania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/32/pingwiny-32.svg
 pdf: /zwierzeta/pingwiny/32/pingwiny-32.pdf
 alt: "Edukacyjna kolorowanka pingwiny do wydruku"
 tags:
+- trudnosc-1
 - zwierzeta
 - pingwiny
 ---

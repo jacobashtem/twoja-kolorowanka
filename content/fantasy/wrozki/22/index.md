@@ -7,6 +7,7 @@ image: /fantasy/wrozki/22/wrozki-22.svg
 pdf: /fantasy/wrozki/22/wrozki-22.pdf
 alt: "wrozki kolorowanki dla dzieci - wariant 22"
 tags:
+- trudnosc-8
 - fantasy
 - wrozki
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/7/ciagniki-7.svg
 pdf: /pojazdy/ciagniki/7/ciagniki-7.pdf
 alt: "ciagniki do druku i pokolorowania"
 tags:
+- trudnosc-2
 - pojazdy
 - ciagniki
 ---

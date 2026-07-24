@@ -7,6 +7,7 @@ image: /pory-roku/lato/42/lato-42.svg
 pdf: /pory-roku/lato/42/lato-42.pdf
 alt: "Kolorowanki do druku lato"
 tags:
+- trudnosc-3
 - pory-roku
 - lato
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/31/zajace-31.svg
 pdf: /zwierzeta/zajace/31/zajace-31.pdf
 alt: "Łatwa kolorowanka zajace dla przedszkolaka"
 tags:
+- trudnosc-8
 - zwierzeta
 - zajace
 ---

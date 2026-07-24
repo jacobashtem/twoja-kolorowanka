@@ -7,6 +7,7 @@ image: /kredka/32/kredka-32.svg
 pdf: /kredka/32/kredka-32.pdf
 alt: "Edukacyjna kolorowanka kredka do wydruku"
 tags:
+- trudnosc-1
 - kredka
 - kredka
 ---

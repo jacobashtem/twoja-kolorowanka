@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/19/pszczoly-19.svg
 pdf: /zwierzeta/pszczoly/19/pszczoly-19.pdf
 alt: "Kolorowanka pszczoly"
 tags:
+- trudnosc-9
 - zwierzeta
 - pszczoly
 ---

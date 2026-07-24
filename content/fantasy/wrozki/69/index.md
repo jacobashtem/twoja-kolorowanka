@@ -7,6 +7,7 @@ image: /fantasy/wrozki/69/wrozki-69.svg
 pdf: /fantasy/wrozki/69/wrozki-69.pdf
 alt: "wrozki kolorowanka dla dzieci - wariant 69"
 tags:
+- trudnosc-9
 - fantasy
 - wrozki
 ---

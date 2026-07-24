@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/17/po-numerach-17.svg
 pdf: /dla-doroslych/po-numerach/17/po-numerach-17.pdf
 alt: "Prosta kolorowanka po-numerach do kolorowania"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

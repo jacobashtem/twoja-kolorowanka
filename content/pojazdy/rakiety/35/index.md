@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/35/rakiety-35.svg
 pdf: /pojazdy/rakiety/35/rakiety-35.pdf
 alt: "Prosta kolorowanka rakiety do kolorowania"
 tags:
+- trudnosc-9
 - pojazdy
 - rakiety
 ---

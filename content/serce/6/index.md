@@ -7,6 +7,7 @@ image: /serce/6/serce-6.svg
 pdf: /serce/6/serce-6.pdf
 alt: "Kolorowanki do druku serce"
 tags:
+- trudnosc-1
 - serce
 - serce
 ---

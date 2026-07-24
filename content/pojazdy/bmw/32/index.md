@@ -7,6 +7,7 @@ image: /pojazdy/bmw/32/bmw-32.svg
 pdf: /pojazdy/bmw/32/bmw-32.pdf
 alt: "Edukacyjna kolorowanka bmw do wydruku"
 tags:
+- trudnosc-2
 - pojazdy
 - bmw
 ---

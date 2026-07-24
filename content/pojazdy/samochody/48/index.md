@@ -7,6 +7,7 @@ image: /pojazdy/samochody/48/samochody-48.svg
 pdf: /pojazdy/samochody/48/samochody-48.pdf
 alt: "kolorowanka do druku samochody PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - samochody
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/mis/49/mis-49.svg
 pdf: /zwierzeta/mis/49/mis-49.pdf
 alt: "Łatwa kolorowanka mis dla przedszkolaka"
 tags:
+- trudnosc-1
 - zwierzeta
 - mis
 ---

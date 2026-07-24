@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/28/wiosna-28.svg
 pdf: /pory-roku/wiosna/28/wiosna-28.pdf
 alt: "Kolorowanka z wiosna do pobrania"
 tags:
+- trudnosc-9
 - pory-roku
 - wiosna
 ---

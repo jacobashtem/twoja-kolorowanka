@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/18/lwy-18.svg
 pdf: /zwierzeta/lwy/18/lwy-18.pdf
 alt: "Pokoloruj lwy – darmowy szablon PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - lwy
 ---

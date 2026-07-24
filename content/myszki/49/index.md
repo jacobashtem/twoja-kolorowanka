@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/49/myszki-49.svg
 pdf: /zwierzeta/myszki/49/myszki-49.pdf
 alt: "Łatwa kolorowanka myszki dla przedszkolaka"
 tags:
+- trudnosc-4
 - zwierzeta
 - myszki
 ---

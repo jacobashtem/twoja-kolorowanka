@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/18/sowy-18.svg
 pdf: /zwierzeta/sowy/18/sowy-18.pdf
 alt: "Pokoloruj sowy – darmowy szablon PDF"
 tags:
+- trudnosc-7
 - zwierzeta
 - sowy
 ---

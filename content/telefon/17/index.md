@@ -7,6 +7,7 @@ image: /telefon/17/telefon-17.svg
 pdf: /telefon/17/telefon-17.pdf
 alt: "Prosta kolorowanka telefon do kolorowania"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

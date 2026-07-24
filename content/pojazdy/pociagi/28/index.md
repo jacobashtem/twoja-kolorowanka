@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/28/pociagi-28.svg
 pdf: /pojazdy/pociagi/28/pociagi-28.pdf
 alt: "Kolorowanka z pociagi do pobrania"
 tags:
+- trudnosc-9
 - pojazdy
 - pociagi
 ---

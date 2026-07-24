@@ -7,6 +7,7 @@ image: /zwierzeta/pszczoly/8/pszczoly-8.svg
 pdf: /zwierzeta/pszczoly/8/pszczoly-8.pdf
 alt: "Darmowa kolorowanka pszczoly do druku PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - pszczoly
 ---

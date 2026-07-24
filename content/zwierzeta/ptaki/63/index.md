@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/63/ptaki-63.svg
 pdf: /zwierzeta/ptaki/63/ptaki-63.pdf
 alt: "ptaki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - zwierzeta
 - ptaki
 ---

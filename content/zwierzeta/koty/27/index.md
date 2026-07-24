@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/27/koty-27.svg
 pdf: /koty/27/koty-27.pdf
 tags:
+- trudnosc-1
 - zwierzeta
 - koty
 alt: "Kolorowanka koty - wariant 27"

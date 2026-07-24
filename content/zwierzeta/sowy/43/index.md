@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/43/sowy-43.svg
 pdf: /zwierzeta/sowy/43/sowy-43.pdf
 alt: "sowy do druku i pokolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - sowy
 ---

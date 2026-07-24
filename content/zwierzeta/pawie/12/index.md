@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/12/pawie-12.svg
 pdf: /zwierzeta/pawie/12/pawie-12.pdf
 alt: "kolorowanka do druku pawie PDF"
 tags:
+- trudnosc-6
 - zwierzeta
 - pawie
 ---

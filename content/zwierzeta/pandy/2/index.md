@@ -7,6 +7,7 @@ image: /zwierzeta/pandy/2/pandy-2.svg
 pdf: /zwierzeta/pandy/2/pandy-2.pdf
 alt: "Kolorowanki pandy"
 tags:
+- trudnosc-6
 - zwierzeta
 - pandy
 ---

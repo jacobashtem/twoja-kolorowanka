@@ -7,6 +7,7 @@ image: /rosliny/kwiat/64/kwiat-64.svg
 pdf: /rosliny/kwiat/64/kwiat-64.pdf
 alt: "Pokoloruj kwiat – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - rosliny
 - kwiat
 ---

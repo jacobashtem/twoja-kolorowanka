@@ -7,6 +7,7 @@ image: /pory-roku/lato/63/lato-63.svg
 pdf: /pory-roku/lato/63/lato-63.pdf
 alt: "lato – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-4
 - pory-roku
 - lato
 ---

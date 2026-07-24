@@ -7,6 +7,7 @@ image: /fantasy/wrozki/2/wrozki-2.svg
 pdf: /fantasy/wrozki/2/wrozki-2.pdf
 alt: "Kolorowanki wrozki - wariant 2"
 tags:
+- trudnosc-5
 - fantasy
 - wrozki
 ---

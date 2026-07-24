@@ -7,6 +7,7 @@ image: /pory-roku/zima/61/zima-61.svg
 pdf: /pory-roku/zima/61/zima-61.pdf
 alt: "Kolorowanka zima"
 tags:
+- trudnosc-3
 - pory-roku
 - zima
 ---

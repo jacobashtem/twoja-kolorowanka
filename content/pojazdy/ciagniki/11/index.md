@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/11/ciagniki-11.svg
 pdf: /pojazdy/ciagniki/11/ciagniki-11.pdf
 alt: "Malowanka ciagniki do druku A4"
 tags:
+- trudnosc-6
 - pojazdy
 - ciagniki
 ---

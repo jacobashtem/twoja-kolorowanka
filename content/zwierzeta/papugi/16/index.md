@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/16/papugi-16.svg
 pdf: /zwierzeta/papugi/16/papugi-16.pdf
 alt: "Kolorowanka papugi – format A4 PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - papugi
 ---

@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/22/koty-22.svg
 pdf: /koty/22/koty-22.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "koty kolorowanka dla dzieci - wariant 22"

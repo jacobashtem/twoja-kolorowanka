@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/43/ptaki-43.svg
 pdf: /zwierzeta/ptaki/43/ptaki-43.pdf
 alt: "ptaki do druku i pokolorowania"
 tags:
+- trudnosc-3
 - zwierzeta
 - ptaki
 ---

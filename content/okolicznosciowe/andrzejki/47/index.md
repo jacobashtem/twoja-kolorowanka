@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/47/andrzejki-47.svg
 pdf: /okolicznosciowe/andrzejki/47/andrzejki-47.pdf
 alt: "Malowanka andrzejki do druku A4"
 tags:
+- trudnosc-10
 - okolicznosciowe
 - andrzejki
 ---

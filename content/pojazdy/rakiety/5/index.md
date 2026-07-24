@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/5/rakiety-5.svg
 pdf: /pojazdy/rakiety/5/rakiety-5.pdf
 alt: "Kolorowanka do druku rakiety"
 tags:
+- trudnosc-8
 - pojazdy
 - rakiety
 ---

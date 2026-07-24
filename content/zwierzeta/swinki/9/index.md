@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/9/swinki-9.svg
 pdf: /zwierzeta/swinki/9/swinki-9.pdf
 alt: "swinki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-2
 - zwierzeta
 - swinki
 ---

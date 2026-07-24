@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/19/zajace-19.svg
 pdf: /zwierzeta/zajace/19/zajace-19.pdf
 alt: "Kolorowanka zajace"
 tags:
+- trudnosc-1
 - zwierzeta
 - zajace
 ---

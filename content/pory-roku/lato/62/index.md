@@ -7,6 +7,7 @@ image: /pory-roku/lato/62/lato-62.svg
 pdf: /pory-roku/lato/62/lato-62.pdf
 alt: "Darmowa kolorowanka lato do druku PDF"
 tags:
+- trudnosc-3
 - pory-roku
 - lato
 ---

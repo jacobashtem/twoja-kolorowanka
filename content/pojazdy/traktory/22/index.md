@@ -7,6 +7,7 @@ image: /pojazdy/traktory/22/traktory-22.svg
 pdf: /pojazdy/traktory/22/traktory-22.pdf
 alt: "traktory kolorowanki dla dzieci"
 tags:
+- trudnosc-4
 - pojazdy
 - traktory
 ---

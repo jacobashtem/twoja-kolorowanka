@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/70/mandala-70.svg
 pdf: /dla-doroslych/mandala/70/mandala-70.pdf
 alt: "Kolorowanka mandala – format A4 PDF"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

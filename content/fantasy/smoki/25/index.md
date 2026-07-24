@@ -7,6 +7,7 @@ image: /fantasy/smoki/25/smoki-25.svg
 pdf: /fantasy/smoki/25/smoki-25.pdf
 alt: "smoki do druku i pokolorowania - wariant 25"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

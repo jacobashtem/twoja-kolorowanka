@@ -7,6 +7,7 @@ image: /telefon/23/telefon-23.svg
 pdf: /telefon/23/telefon-23.pdf
 alt: "Kolorowanka do druku telefon"
 tags:
+- trudnosc-2
 - telefon
 - telefon
 ---

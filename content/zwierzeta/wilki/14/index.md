@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/14/wilki-14.svg
 pdf: /zwierzeta/wilki/14/wilki-14.pdf
 alt: "Edukacyjna kolorowanka wilki do wydruku"
 tags:
+- trudnosc-7
 - zwierzeta
 - wilki
 ---

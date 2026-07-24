@@ -7,6 +7,7 @@ image: /pory-roku/zima/42/zima-42.svg
 pdf: /pory-roku/zima/42/zima-42.pdf
 alt: "Pokoloruj zima – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - pory-roku
 - zima
 ---

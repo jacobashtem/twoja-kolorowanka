@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/44/sowy-44.svg
 pdf: /zwierzeta/sowy/44/sowy-44.pdf
 alt: "Darmowa kolorowanka sowy do druku PDF"
 tags:
+- trudnosc-9
 - zwierzeta
 - sowy
 ---

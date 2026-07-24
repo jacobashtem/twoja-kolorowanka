@@ -7,6 +7,7 @@ image: /pojazdy/tiry/27/tir-27.svg
 pdf: /pojazdy/tiry/27/tir-27.pdf
 alt: "tir – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-5
 - pojazdy
 - tir
 ---

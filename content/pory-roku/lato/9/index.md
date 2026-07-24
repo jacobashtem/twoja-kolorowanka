@@ -7,6 +7,7 @@ image: /pory-roku/lato/9/lato-9.svg
 pdf: /pory-roku/lato/9/lato-9.pdf
 alt: "lato – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - pory-roku
 - lato
 ---

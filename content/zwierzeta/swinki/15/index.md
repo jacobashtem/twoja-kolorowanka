@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/15/swinki-15.svg
 pdf: /zwierzeta/swinki/15/swinki-15.pdf
 alt: "swinki kolorowanka dla dzieci"
 tags:
+- trudnosc-4
 - zwierzeta
 - swinki
 ---

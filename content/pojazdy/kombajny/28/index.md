@@ -7,6 +7,7 @@ image: /pojazdy/kombajny/28/kombajny-28.svg
 pdf: /pojazdy/kombajny/28/kombajny-28.pdf
 alt: "Kolorowanka z kombajny do pobrania"
 tags:
+- trudnosc-10
 - pojazdy
 - kombajny
 ---

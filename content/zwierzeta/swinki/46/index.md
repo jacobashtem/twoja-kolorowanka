@@ -7,6 +7,7 @@ image: /zwierzeta/swinki/46/swinki-46.svg
 pdf: /zwierzeta/swinki/46/swinki-46.pdf
 alt: "Kolorowanka z swinki do pobrania"
 tags:
+- trudnosc-5
 - zwierzeta
 - swinki
 ---

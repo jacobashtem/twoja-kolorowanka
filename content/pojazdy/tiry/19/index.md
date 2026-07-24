@@ -7,6 +7,7 @@ image: /pojazdy/tiry/19/tir-19.svg
 pdf: /pojazdy/tiry/19/tir-19.pdf
 alt: "Kolorowanka tir"
 tags:
+- trudnosc-2
 - pojazdy
 - tir
 ---

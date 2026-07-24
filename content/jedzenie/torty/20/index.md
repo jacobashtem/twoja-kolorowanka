@@ -7,6 +7,7 @@ image: /jedzenie/torty/20/torty-20.svg
 pdf: /jedzenie/torty/20/torty-20.pdf
 alt: "Kolorowanki torty"
 tags:
+- trudnosc-3
 - jedzenie
 - torty
 ---

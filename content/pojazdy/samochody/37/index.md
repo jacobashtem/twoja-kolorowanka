@@ -7,6 +7,7 @@ image: /pojazdy/samochody/37/samochody-37.svg
 pdf: /pojazdy/samochody/37/samochody-37.pdf
 alt: "Kolorowanka samochody"
 tags:
+- trudnosc-5
 - pojazdy
 - samochody
 ---

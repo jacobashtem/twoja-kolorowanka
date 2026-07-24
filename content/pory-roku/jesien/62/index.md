@@ -7,6 +7,7 @@ image: /pory-roku/jesien/62/jesien-62.svg
 pdf: /pory-roku/jesien/62/jesien-62.pdf
 alt: "Darmowa kolorowanka jesien do druku PDF"
 tags:
+- trudnosc-7
 - pory-roku
 - jesien
 ---

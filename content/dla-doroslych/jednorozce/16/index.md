@@ -7,6 +7,7 @@ image: /dla-doroslych/jednorozce/16/jednorozce-16.svg
 pdf: /dla-doroslych/jednorozce/16/jednorozce-16.pdf
 alt: "Kolorowanka jednorozce – format A4 PDF"
 tags:
+- trudnosc-7
 - dla-doroslych
 - jednorozce
 ---

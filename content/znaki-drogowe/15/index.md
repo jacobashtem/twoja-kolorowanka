@@ -7,6 +7,7 @@ image: /znaki-drogowe/15/znaki-drogowe-15.svg
 pdf: /znaki-drogowe/15/znaki-drogowe-15.pdf
 alt: "znaki-drogowe kolorowanka dla dzieci"
 tags:
+- trudnosc-2
 - znaki-drogowe
 - znaki-drogowe
 ---

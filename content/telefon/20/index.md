@@ -7,6 +7,7 @@ image: /telefon/20/telefon-20.svg
 pdf: /telefon/20/telefon-20.pdf
 alt: "Kolorowanki telefon"
 tags:
+- trudnosc-2
 - telefon
 - telefon
 ---

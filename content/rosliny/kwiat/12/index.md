@@ -7,6 +7,7 @@ image: /rosliny/kwiat/12/kwiat-12.svg
 pdf: /rosliny/kwiat/12/kwiat-12.pdf
 alt: "kolorowanka do druku kwiat PDF"
 tags:
+- trudnosc-8
 - rosliny
 - kwiat
 ---

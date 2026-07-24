@@ -7,6 +7,7 @@ image: /dom/32/dom-32.svg
 pdf: /dom/32/dom-32.pdf
 alt: "Edukacyjna kolorowanka dom do wydruku"
 tags:
+- trudnosc-4
 - dom
 - dom
 ---

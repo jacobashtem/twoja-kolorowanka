@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/82/jednorozce-82.svg
 pdf: /fantasy/jednorozce/82/jednorozce-82.pdf
 alt: "Kolorowanka z jednorozce do pobrania - wariant 82"
 tags:
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

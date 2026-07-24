@@ -7,6 +7,7 @@ image: /fantasy/smoki/80/smoki-80.svg
 pdf: /fantasy/smoki/80/smoki-80.pdf
 alt: "Darmowa kolorowanka smoki do druku PDF - wariant 80"
 tags:
+- trudnosc-5
 - fantasy
 - smoki
 ---

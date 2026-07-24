@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/38/wilki-38.svg
 pdf: /zwierzeta/wilki/38/wilki-38.pdf
 alt: "Kolorowanki wilki"
 tags:
+- trudnosc-8
 - zwierzeta
 - wilki
 ---

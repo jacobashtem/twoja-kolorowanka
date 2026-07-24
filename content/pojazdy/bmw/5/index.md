@@ -7,6 +7,7 @@ image: /pojazdy/bmw/5/bmw-5.svg
 pdf: /pojazdy/bmw/5/bmw-5.pdf
 alt: "Kolorowanka do druku bmw"
 tags:
+- trudnosc-6
 - pojazdy
 - bmw
 ---

@@ -7,6 +7,7 @@ image: /rosliny/grzyby/11/grzyby-11.svg
 pdf: /rosliny/grzyby/11/grzyby-11.pdf
 alt: "Malowanka grzyby do druku A4"
 tags:
+- trudnosc-2
 - rosliny
 - grzyby
 ---

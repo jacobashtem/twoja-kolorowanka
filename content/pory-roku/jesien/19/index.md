@@ -7,6 +7,7 @@ image: /pory-roku/jesien/19/jesien-19.svg
 pdf: /pory-roku/jesien/19/jesien-19.pdf
 alt: "Kolorowanka jesien"
 tags:
+- trudnosc-6
 - pory-roku
 - jesien
 ---

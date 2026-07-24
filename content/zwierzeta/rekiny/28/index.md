@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/28/rekiny-28.svg
 pdf: /zwierzeta/rekiny/28/rekiny-28.pdf
 alt: "Kolorowanka z rekiny do pobrania"
 tags:
+- trudnosc-9
 - zwierzeta
 - rekiny
 ---

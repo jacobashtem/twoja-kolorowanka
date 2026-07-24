@@ -7,6 +7,7 @@ image: /wedlug-kodu/35/wedlug-kodu-35.svg
 pdf: /wedlug-kodu/35/wedlug-kodu-35.pdf
 alt: "Prosta kolorowanka wedlug-kodu do kolorowania"
 tags:
+- trudnosc-8
 - wedlug-kodu
 - wedlug-kodu
 ---

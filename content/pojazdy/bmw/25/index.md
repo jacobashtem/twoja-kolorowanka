@@ -7,6 +7,7 @@ image: /pojazdy/bmw/25/bmw-25.svg
 pdf: /pojazdy/bmw/25/bmw-25.pdf
 alt: "bmw do druku i pokolorowania"
 tags:
+- trudnosc-5
 - pojazdy
 - bmw
 ---

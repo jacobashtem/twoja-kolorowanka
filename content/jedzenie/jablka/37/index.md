@@ -7,6 +7,7 @@ image: /jedzenie/jablka/37/jablka-37.svg
 pdf: /jedzenie/jablka/37/jablka-37.pdf
 alt: "Kolorowanka jablka"
 tags:
+- trudnosc-2
 - jedzenie
 - jablka
 ---

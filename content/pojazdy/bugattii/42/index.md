@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/42/bugattii-42.svg
 pdf: /pojazdy/bugattii/42/bugattii-42.pdf
 alt: "Kolorowanki do druku bugattii"
 tags:
+- trudnosc-4
 - pojazdy
 - bugattii
 ---

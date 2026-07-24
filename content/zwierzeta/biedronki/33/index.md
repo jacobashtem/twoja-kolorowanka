@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/33/biedronki-33.svg
 pdf: /zwierzeta/biedronki/33/biedronki-33.pdf
 alt: "biedronki kolorowanka dla dzieci"
 tags:
+- trudnosc-4
 - zwierzeta
 - biedronki
 ---

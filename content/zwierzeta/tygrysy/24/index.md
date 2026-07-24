@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/24/tygrysy-24.svg
 pdf: /zwierzeta/tygrysy/24/tygrysy-24.pdf
 alt: "Kolorowanki do druku tygrysy"
 tags:
+- trudnosc-9
 - zwierzeta
 - tygrysy
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/wilki/42/wilki-42.svg
 pdf: /zwierzeta/wilki/42/wilki-42.pdf
 alt: "Kolorowanki do druku wilki"
 tags:
+- trudnosc-2
 - zwierzeta
 - wilki
 ---

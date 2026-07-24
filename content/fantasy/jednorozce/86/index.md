@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/86/jednorozce-86.svg
 pdf: /fantasy/jednorozce/86/jednorozce-86.pdf
 alt: "Edukacyjna kolorowanka jednorozce do wydruku - wariant 86"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

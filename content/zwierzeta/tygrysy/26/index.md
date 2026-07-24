@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/26/tygrysy-26.svg
 pdf: /zwierzeta/tygrysy/26/tygrysy-26.pdf
 alt: "Darmowa kolorowanka tygrysy do druku PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - tygrysy
 ---

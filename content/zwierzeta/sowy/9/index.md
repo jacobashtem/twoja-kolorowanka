@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/9/sowy-9.svg
 pdf: /zwierzeta/sowy/9/sowy-9.pdf
 alt: "sowy – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-8
 - zwierzeta
 - sowy
 ---

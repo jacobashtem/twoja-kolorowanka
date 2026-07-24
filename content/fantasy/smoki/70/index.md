@@ -7,6 +7,7 @@ image: /fantasy/smoki/70/smoki-70.svg
 pdf: /fantasy/smoki/70/smoki-70.pdf
 alt: "Kolorowanka smoki – format A4 PDF - wariant 70"
 tags:
+- trudnosc-5
 - fantasy
 - smoki
 ---

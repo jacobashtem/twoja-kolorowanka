@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/13/jednorozce-13.svg
 pdf: /fantasy/jednorozce/13/jednorozce-13.pdf
 alt: "Łatwa kolorowanka jednorozce dla przedszkolaka - wariant 13"
 tags:
+- trudnosc-3
 - fantasy
 - jednorozce
 ---

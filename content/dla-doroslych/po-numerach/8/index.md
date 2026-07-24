@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/8/po-numerach-8.svg
 pdf: /dla-doroslych/po-numerach/8/po-numerach-8.pdf
 alt: "Darmowa kolorowanka po-numerach do druku PDF"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

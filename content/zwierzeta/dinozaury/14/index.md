@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/14/dinozaury-14.svg
 pdf: /zwierzeta/dinozaury/14/dinozaury-14.pdf
 alt: "Edukacyjna kolorowanka dinozaury do wydruku"
 tags:
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---

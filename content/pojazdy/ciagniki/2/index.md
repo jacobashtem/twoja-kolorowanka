@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/2/ciagniki-2.svg
 pdf: /pojazdy/ciagniki/2/ciagniki-2.pdf
 alt: "Kolorowanki ciagniki"
 tags:
+- trudnosc-5
 - pojazdy
 - ciagniki
 ---

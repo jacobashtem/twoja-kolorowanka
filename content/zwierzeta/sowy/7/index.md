@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/7/sowy-7.svg
 pdf: /zwierzeta/sowy/7/sowy-7.pdf
 alt: "sowy do druku i pokolorowania"
 tags:
+- trudnosc-9
 - zwierzeta
 - sowy
 ---

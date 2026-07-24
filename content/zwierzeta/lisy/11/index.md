@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/11/lisy-11.svg
 pdf: /zwierzeta/lisy/11/lisy-11.pdf
 alt: "Malowanka lisy do druku A4"
 tags:
+- trudnosc-1
 - zwierzeta
 - lisy
 ---

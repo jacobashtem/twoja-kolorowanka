@@ -7,6 +7,7 @@ image: /rosliny/kwiat/11/kwiat-11.svg
 pdf: /rosliny/kwiat/11/kwiat-11.pdf
 alt: "Malowanka kwiat do druku A4"
 tags:
+- trudnosc-8
 - rosliny
 - kwiat
 ---

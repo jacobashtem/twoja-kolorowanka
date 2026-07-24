@@ -7,6 +7,7 @@ image: /znaki-drogowe/17/znaki-drogowe-17.svg
 pdf: /znaki-drogowe/17/znaki-drogowe-17.pdf
 alt: "Prosta kolorowanka znaki-drogowe do kolorowania"
 tags:
+- trudnosc-8
 - znaki-drogowe
 - znaki-drogowe
 ---

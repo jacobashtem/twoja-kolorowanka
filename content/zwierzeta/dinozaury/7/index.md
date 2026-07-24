@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/7/dinozaury-7.svg
 pdf: /zwierzeta/dinozaury/7/dinozaury-7.pdf
 alt: "dinozaury do druku i pokolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - dinozaury
 ---

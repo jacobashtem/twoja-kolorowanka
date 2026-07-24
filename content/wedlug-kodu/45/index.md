@@ -7,6 +7,7 @@ image: /wedlug-kodu/45/wedlug-kodu-45.svg
 pdf: /wedlug-kodu/45/wedlug-kodu-45.pdf
 alt: "wedlug-kodu – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - wedlug-kodu
 - wedlug-kodu
 ---

@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/11/mandala-11.svg
 pdf: /dla-doroslych/mandala/11/mandala-11.pdf
 alt: "Malowanka mandala do druku A4"
 tags:
+- trudnosc-10
 - dla-doroslych
 - mandala
 ---

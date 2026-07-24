@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/14/lamborghini-14.svg
 pdf: /pojazdy/lamborghini/14/lamborghini-14.pdf
 alt: "Edukacyjna kolorowanka lamborghini do wydruku"
 tags:
+- trudnosc-9
 - pojazdy
 - lamborghini
 ---

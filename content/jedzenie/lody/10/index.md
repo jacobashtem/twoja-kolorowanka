@@ -7,6 +7,7 @@ image: /jedzenie/lody/10/lody-10.svg
 pdf: /jedzenie/lody/10/lody-10.pdf
 alt: "Kolorowanka z lody do pobrania"
 tags:
+- trudnosc-7
 - jedzenie
 - lody
 ---

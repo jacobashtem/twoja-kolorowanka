@@ -7,6 +7,7 @@ image: /zwierzeta/pawie/30/pawie-30.svg
 pdf: /zwierzeta/pawie/30/pawie-30.pdf
 alt: "kolorowanka do druku pawie PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - pawie
 ---

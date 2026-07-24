@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/45/zajace-45.svg
 pdf: /zwierzeta/zajace/45/zajace-45.pdf
 alt: "zajace – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - zwierzeta
 - zajace
 ---

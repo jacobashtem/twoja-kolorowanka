@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/35/ptaki-35.svg
 pdf: /zwierzeta/ptaki/35/ptaki-35.pdf
 alt: "Prosta kolorowanka ptaki do kolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - ptaki
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/11/rekiny-11.svg
 pdf: /zwierzeta/rekiny/11/rekiny-11.pdf
 alt: "Malowanka rekiny do druku A4"
 tags:
+- trudnosc-1
 - zwierzeta
 - rekiny
 ---

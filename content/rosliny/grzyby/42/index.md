@@ -7,6 +7,7 @@ image: /rosliny/grzyby/42/grzyby-42.svg
 pdf: /rosliny/grzyby/42/grzyby-42.pdf
 alt: "Kolorowanki do druku grzyby"
 tags:
+- trudnosc-7
 - rosliny
 - grzyby
 ---

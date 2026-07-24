@@ -7,6 +7,7 @@ image: /kosmos/36/kosmos-36.svg
 pdf: /kosmos/36/kosmos-36.pdf
 alt: "Pokoloruj kosmos – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - kosmos
 - kosmos
 ---

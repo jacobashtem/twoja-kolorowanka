@@ -7,6 +7,7 @@ image: /fantasy/wrozki/9/wrozki-9.svg
 pdf: /fantasy/wrozki/9/wrozki-9.pdf
 alt: "wrozki – pobierz i wydrukuj kolorowankę - wariant 9"
 tags:
+- trudnosc-8
 - fantasy
 - wrozki
 ---

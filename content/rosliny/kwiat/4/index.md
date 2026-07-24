@@ -7,6 +7,7 @@ image: /rosliny/kwiat/4/kwiat-4.svg
 pdf: /rosliny/kwiat/4/kwiat-4.pdf
 alt: "kwiat kolorowanki dla dzieci"
 tags:
+- trudnosc-6
 - rosliny
 - kwiat
 ---

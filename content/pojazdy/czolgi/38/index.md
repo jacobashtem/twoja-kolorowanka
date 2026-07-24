@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/38/czolgi-38.svg
 pdf: /pojazdy/czolgi/38/czolgi-38.pdf
 alt: "Kolorowanki czolgi"
 tags:
+- trudnosc-10
 - pojazdy
 - czolgi
 ---

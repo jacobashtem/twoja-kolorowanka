@@ -7,6 +7,7 @@ image: /pojazdy/bmw/31/bmw-31.svg
 pdf: /pojazdy/bmw/31/bmw-31.pdf
 alt: "Łatwa kolorowanka bmw dla przedszkolaka"
 tags:
+- trudnosc-3
 - pojazdy
 - bmw
 ---

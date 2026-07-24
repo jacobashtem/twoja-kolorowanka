@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/25/tygrysy-25.svg
 pdf: /zwierzeta/tygrysy/25/tygrysy-25.pdf
 alt: "tygrysy do druku i pokolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - tygrysy
 ---

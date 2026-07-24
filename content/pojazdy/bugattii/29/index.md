@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/29/bugattii-29.svg
 pdf: /pojazdy/bugattii/29/bugattii-29.pdf
 alt: "Malowanka bugattii do druku A4"
 tags:
+- trudnosc-2
 - pojazdy
 - bugattii
 ---

@@ -7,6 +7,7 @@ image: /ksiezniczki/24/ksiezniczki-24.svg
 pdf: /ksiezniczki/24/ksiezniczki-24.pdf
 alt: "Kolorowanki do druku ksiezniczki"
 tags:
+- trudnosc-9
 - ksiezniczki
 - ksiezniczki
 ---

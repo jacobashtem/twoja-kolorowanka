@@ -7,6 +7,7 @@ image: /pojazdy/traktory/56/traktory-56.svg
 pdf: /pojazdy/traktory/56/traktory-56.pdf
 alt: "Kolorowanki traktory"
 tags:
+- trudnosc-5
 - pojazdy
 - traktory
 ---

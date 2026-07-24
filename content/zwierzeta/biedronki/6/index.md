@@ -7,6 +7,7 @@ image: /zwierzeta/biedronki/6/biedronki-6.svg
 pdf: /zwierzeta/biedronki/6/biedronki-6.pdf
 alt: "Kolorowanki do druku biedronki"
 tags:
+- trudnosc-1
 - zwierzeta
 - biedronki
 ---

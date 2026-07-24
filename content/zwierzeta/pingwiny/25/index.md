@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/25/pingwiny-25.svg
 pdf: /zwierzeta/pingwiny/25/pingwiny-25.pdf
 alt: "pingwiny do druku i pokolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - pingwiny
 ---

@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/19/jednorozce-19.svg
 pdf: /fantasy/jednorozce/19/jednorozce-19.pdf
 alt: "Kolorowanka jednorozce - wariant 19"
 tags:
+- trudnosc-2
 - fantasy
 - jednorozce
 ---

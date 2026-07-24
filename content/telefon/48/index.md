@@ -7,6 +7,7 @@ image: /telefon/48/telefon-48.svg
 pdf: /telefon/48/telefon-48.pdf
 alt: "kolorowanka do druku telefon PDF"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

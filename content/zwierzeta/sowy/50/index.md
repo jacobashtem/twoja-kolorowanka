@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/50/sowy-50.svg
 pdf: /zwierzeta/sowy/50/sowy-50.pdf
 alt: "Edukacyjna kolorowanka sowy do wydruku"
 tags:
+- trudnosc-10
 - zwierzeta
 - sowy
 ---

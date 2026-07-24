@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/64/motyle-64.svg
 pdf: /zwierzeta/motyle/64/motyle-64.pdf
 alt: "Kolorowanka z motyle do pobrania"
 tags:
+- trudnosc-2
 - zwierzeta
 - motyle
 ---

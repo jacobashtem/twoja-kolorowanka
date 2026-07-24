@@ -7,6 +7,7 @@ image: /pojazdy/bmw/33/bmw-33.svg
 pdf: /pojazdy/bmw/33/bmw-33.pdf
 alt: "bmw kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - pojazdy
 - bmw
 ---

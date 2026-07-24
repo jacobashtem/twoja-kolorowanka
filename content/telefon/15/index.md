@@ -7,6 +7,7 @@ image: /telefon/15/telefon-15.svg
 pdf: /telefon/15/telefon-15.pdf
 alt: "telefon kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - telefon
 - telefon
 ---

@@ -7,6 +7,7 @@ image: /dla-doroslych/antystresowe/29/antystresowe-29.svg
 pdf: /dla-doroslych/antystresowe/29/antystresowe-29.pdf
 alt: "Malowanka antystresowe do druku A4"
 tags:
+- trudnosc-10
 - dla-doroslych
 - antystresowe
 ---

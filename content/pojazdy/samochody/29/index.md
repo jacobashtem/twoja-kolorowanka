@@ -7,6 +7,7 @@ image: /pojazdy/samochody/29/samochody-29.svg
 pdf: /pojazdy/samochody/29/samochody-29.pdf
 alt: "Malowanka samochody do druku A4"
 tags:
+- trudnosc-7
 - pojazdy
 - samochody
 ---

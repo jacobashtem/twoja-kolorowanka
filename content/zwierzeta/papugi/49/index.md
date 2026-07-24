@@ -7,6 +7,7 @@ image: /zwierzeta/papugi/49/papugi-49.svg
 pdf: /zwierzeta/papugi/49/papugi-49.pdf
 alt: "papugi do druku i pokolorowania"
 tags:
+- trudnosc-1
 - zwierzeta
 - papugi
 ---

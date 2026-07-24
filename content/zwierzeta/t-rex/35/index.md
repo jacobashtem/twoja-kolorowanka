@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/35/t-rex-35.svg
 pdf: /zwierzeta/t-rex/35/t-rex-35.pdf
 alt: "Prosta kolorowanka t-rex do kolorowania"
 tags:
+- trudnosc-4
 - zwierzeta
 - t-rex
 ---

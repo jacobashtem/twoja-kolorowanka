@@ -7,6 +7,7 @@ image: /jedzenie/lody/43/lody-43.svg
 pdf: /jedzenie/lody/43/lody-43.pdf
 alt: "Kolorowanka do druku lody"
 tags:
+- trudnosc-2
 - jedzenie
 - lody
 ---

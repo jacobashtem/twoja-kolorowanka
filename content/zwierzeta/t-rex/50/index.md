@@ -7,6 +7,7 @@ image: /zwierzeta/t-rex/50/t-rex-50.svg
 pdf: /zwierzeta/t-rex/50/t-rex-50.pdf
 alt: "Malowanka t-rex do druku A4"
 tags:
+- trudnosc-5
 - zwierzeta
 - t-rex
 ---

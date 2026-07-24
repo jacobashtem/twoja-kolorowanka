@@ -7,6 +7,7 @@ image: /telefon/18/telefon-18.svg
 pdf: /telefon/18/telefon-18.pdf
 alt: "Pokoloruj telefon – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - telefon
 - telefon
 ---

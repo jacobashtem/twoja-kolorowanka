@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/45/rekiny-45.svg
 pdf: /zwierzeta/rekiny/45/rekiny-45.pdf
 alt: "rekiny – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - zwierzeta
 - rekiny
 ---

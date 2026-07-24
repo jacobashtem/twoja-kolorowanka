@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/34/czolgi-34.svg
 pdf: /pojazdy/czolgi/34/czolgi-34.pdf
 alt: "Kolorowanka czolgi – format A4 PDF"
 tags:
+- trudnosc-6
 - pojazdy
 - czolgi
 ---

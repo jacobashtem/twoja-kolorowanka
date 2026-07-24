@@ -7,6 +7,7 @@ image: /pojazdy/rakiety/10/rakiety-10.svg
 pdf: /pojazdy/rakiety/10/rakiety-10.pdf
 alt: "Kolorowanka z rakiety do pobrania"
 tags:
+- trudnosc-4
 - pojazdy
 - rakiety
 ---

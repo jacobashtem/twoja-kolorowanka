@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/21/lisy-21.svg
 pdf: /zwierzeta/lisy/21/lisy-21.pdf
 alt: "lisy kolorowanka dla dzieci"
 tags:
+- trudnosc-9
 - zwierzeta
 - lisy
 ---

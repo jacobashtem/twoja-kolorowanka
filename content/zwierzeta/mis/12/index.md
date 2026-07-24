@@ -7,6 +7,7 @@ image: /zwierzeta/mis/12/mis-12.svg
 pdf: /zwierzeta/mis/12/mis-12.pdf
 alt: "kolorowanka do druku mis PDF"
 tags:
+- trudnosc-1
 - zwierzeta
 - mis
 ---

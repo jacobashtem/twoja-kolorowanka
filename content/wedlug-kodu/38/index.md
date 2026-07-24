@@ -7,6 +7,7 @@ image: /wedlug-kodu/38/wedlug-kodu-38.svg
 pdf: /wedlug-kodu/38/wedlug-kodu-38.pdf
 alt: "Kolorowanki wedlug-kodu"
 tags:
+- trudnosc-5
 - wedlug-kodu
 - wedlug-kodu
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/20/pingwiny-20.svg
 pdf: /zwierzeta/pingwiny/20/pingwiny-20.pdf
 alt: "Kolorowanki pingwiny"
 tags:
+- trudnosc-1
 - zwierzeta
 - pingwiny
 ---

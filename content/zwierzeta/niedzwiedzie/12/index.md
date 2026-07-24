@@ -7,6 +7,7 @@ image: /zwierzeta/niedzwiedzie/12/niedzwiedzie-12.svg
 pdf: /zwierzeta/niedzwiedzie/12/niedzwiedzie-12.pdf
 alt: "kolorowanka do druku niedzwiedzie PDF"
 tags:
+- trudnosc-5
 - zwierzeta
 - niedzwiedzie
 ---

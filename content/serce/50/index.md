@@ -7,6 +7,7 @@ image: /serce/50/serce-50.svg
 pdf: /serce/50/serce-50.pdf
 alt: "Edukacyjna kolorowanka serce do wydruku"
 tags:
+- trudnosc-5
 - serce
 - serce
 ---

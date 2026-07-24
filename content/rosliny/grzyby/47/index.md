@@ -7,6 +7,7 @@ image: /rosliny/grzyby/47/grzyby-47.svg
 pdf: /rosliny/grzyby/47/grzyby-47.pdf
 alt: "Malowanka grzyby do druku A4"
 tags:
+- trudnosc-9
 - rosliny
 - grzyby
 ---

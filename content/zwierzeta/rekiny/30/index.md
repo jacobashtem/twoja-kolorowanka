@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/30/rekiny-30.svg
 pdf: /zwierzeta/rekiny/30/rekiny-30.pdf
 alt: "kolorowanka do druku rekiny PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - rekiny
 ---

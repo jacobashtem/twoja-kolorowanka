@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/89/kroliczki-89.svg
 pdf: /kroliczki/89/kroliczki-89.pdf
 tags:
+- trudnosc-4
 - zwierzeta
 - kroliczki
 alt: "Kolorowanki do druku kroliczki - wariant 89"

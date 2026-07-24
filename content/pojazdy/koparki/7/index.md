@@ -7,6 +7,7 @@ image: /pojazdy/koparki/7/koparki-7.svg
 pdf: /pojazdy/koparki/7/koparki-7.pdf
 alt: "koparki do druku i pokolorowania"
 tags:
+- trudnosc-7
 - pojazdy
 - koparki
 ---

@@ -7,6 +7,7 @@ image: /pory-roku/zima/59/zima-59.svg
 pdf: /pory-roku/zima/59/zima-59.pdf
 alt: "Prosta kolorowanka zima do kolorowania"
 tags:
+- trudnosc-10
 - pory-roku
 - zima
 ---

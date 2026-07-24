@@ -7,6 +7,7 @@ image: /pory-roku/jesien/68/jesien-68.svg
 pdf: /pory-roku/jesien/68/jesien-68.pdf
 alt: "Kolorowanka jesien"
 tags:
+- trudnosc-9
 - pory-roku
 - jesien
 ---

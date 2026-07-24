@@ -7,6 +7,7 @@ image: /pory-roku/wiosna/39/wiosna-39.svg
 pdf: /pory-roku/wiosna/39/wiosna-39.pdf
 alt: "wiosna kolorowanka dla dzieci"
 tags:
+- trudnosc-3
 - pory-roku
 - wiosna
 ---

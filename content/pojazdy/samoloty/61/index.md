@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/61/samoloty-61.svg
 pdf: /pojazdy/samoloty/61/samoloty-61.pdf
 alt: "samoloty do druku i pokolorowania"
 tags:
+- trudnosc-8
 - pojazdy
 - samoloty
 ---

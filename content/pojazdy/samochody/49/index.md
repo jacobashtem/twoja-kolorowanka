@@ -7,6 +7,7 @@ image: /pojazdy/samochody/49/samochody-49.svg
 pdf: /pojazdy/samochody/49/samochody-49.pdf
 alt: "Łatwa kolorowanka samochody dla przedszkolaka"
 tags:
+- trudnosc-2
 - pojazdy
 - samochody
 ---

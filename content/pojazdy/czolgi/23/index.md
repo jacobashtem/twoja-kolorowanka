@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/23/czolgi-23.svg
 pdf: /pojazdy/czolgi/23/czolgi-23.pdf
 alt: "Kolorowanka do druku czolgi"
 tags:
+- trudnosc-6
 - pojazdy
 - czolgi
 ---

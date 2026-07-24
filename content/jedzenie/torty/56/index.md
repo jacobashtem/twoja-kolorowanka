@@ -7,6 +7,7 @@ image: /jedzenie/torty/56/torty-56.svg
 pdf: /jedzenie/torty/56/torty-56.pdf
 alt: "Kolorowanki torty"
 tags:
+- trudnosc-8
 - jedzenie
 - torty
 ---

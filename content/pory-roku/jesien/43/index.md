@@ -7,6 +7,7 @@ image: /pory-roku/jesien/43/jesien-43.svg
 pdf: /pory-roku/jesien/43/jesien-43.pdf
 alt: "jesien do druku i pokolorowania"
 tags:
+- trudnosc-9
 - pory-roku
 - jesien
 ---

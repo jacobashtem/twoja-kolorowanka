@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/36/ciagniki-36.svg
 pdf: /pojazdy/ciagniki/36/ciagniki-36.pdf
 alt: "Pokoloruj ciagniki – darmowy szablon PDF"
 tags:
+- trudnosc-6
 - pojazdy
 - ciagniki
 ---

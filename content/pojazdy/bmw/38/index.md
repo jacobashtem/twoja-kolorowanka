@@ -7,6 +7,7 @@ image: /pojazdy/bmw/38/bmw-38.svg
 pdf: /pojazdy/bmw/38/bmw-38.pdf
 alt: "Kolorowanki bmw"
 tags:
+- trudnosc-3
 - pojazdy
 - bmw
 ---

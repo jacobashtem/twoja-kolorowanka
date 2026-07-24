@@ -7,6 +7,7 @@ image: /pory-roku/lato/61/lato-61.svg
 pdf: /pory-roku/lato/61/lato-61.pdf
 alt: "lato do druku i pokolorowania"
 tags:
+- trudnosc-5
 - pory-roku
 - lato
 ---

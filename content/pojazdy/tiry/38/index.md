@@ -7,6 +7,7 @@ image: /pojazdy/tiry/38/tir-38.svg
 pdf: /pojazdy/tiry/38/tir-38.pdf
 alt: "Kolorowanki tir"
 tags:
+- trudnosc-6
 - pojazdy
 - tir
 ---

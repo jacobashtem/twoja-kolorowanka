@@ -7,6 +7,7 @@ image: /jedzenie/torty/57/torty-57.svg
 pdf: /jedzenie/torty/57/torty-57.pdf
 alt: "torty kolorowanka dla dzieci"
 tags:
+- trudnosc-8
 - jedzenie
 - torty
 ---

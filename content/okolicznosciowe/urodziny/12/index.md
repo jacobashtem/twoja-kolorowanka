@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/12/urodziny-12.svg
 pdf: /okolicznosciowe/urodziny/12/urodziny-12.pdf
 alt: "Malowanka urodziny do druku A4"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - urodziny
 ---

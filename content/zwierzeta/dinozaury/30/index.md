@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/30/dinozaury-30.svg
 pdf: /zwierzeta/dinozaury/30/dinozaury-30.pdf
 alt: "kolorowanka do druku dinozaury PDF"
 tags:
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---

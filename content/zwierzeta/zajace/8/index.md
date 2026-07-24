@@ -7,6 +7,7 @@ image: /zwierzeta/zajace/8/zajace-8.svg
 pdf: /zwierzeta/zajace/8/zajace-8.pdf
 alt: "Darmowa kolorowanka zajace do druku PDF"
 tags:
+- trudnosc-2
 - zwierzeta
 - zajace
 ---

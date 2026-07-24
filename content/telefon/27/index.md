@@ -7,6 +7,7 @@ image: /telefon/27/telefon-27.svg
 pdf: /telefon/27/telefon-27.pdf
 alt: "telefon – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-1
 - telefon
 - telefon
 ---

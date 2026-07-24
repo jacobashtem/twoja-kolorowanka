@@ -7,6 +7,7 @@ image: /pojazdy/ciagniki/25/ciagniki-25.svg
 pdf: /pojazdy/ciagniki/25/ciagniki-25.pdf
 alt: "ciagniki do druku i pokolorowania"
 tags:
+- trudnosc-6
 - pojazdy
 - ciagniki
 ---

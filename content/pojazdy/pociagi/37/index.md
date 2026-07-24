@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/37/pociagi-37.svg
 pdf: /pojazdy/pociagi/37/pociagi-37.pdf
 alt: "Kolorowanka pociagi"
 tags:
+- trudnosc-7
 - pojazdy
 - pociagi
 ---

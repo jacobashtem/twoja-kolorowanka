@@ -7,6 +7,7 @@ image: /pojazdy/samochody/66/samochody-66.svg
 pdf: /pojazdy/samochody/66/samochody-66.pdf
 alt: "kolorowanka do druku samochody PDF"
 tags:
+- trudnosc-8
 - pojazdy
 - samochody
 ---

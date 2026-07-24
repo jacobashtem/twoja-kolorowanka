@@ -7,6 +7,7 @@ image: /ksiezniczki/17/ksiezniczki-17.svg
 pdf: /ksiezniczki/17/ksiezniczki-17.pdf
 alt: "Prosta kolorowanka ksiezniczki do kolorowania"
 tags:
+- trudnosc-7
 - ksiezniczki
 - ksiezniczki
 ---

@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/97/jednorozce-97.svg
 pdf: /fantasy/jednorozce/97/jednorozce-97.pdf
 alt: "jednorozce do druku i pokolorowania - wariant 97"
 tags:
+- trudnosc-6
 - fantasy
 - jednorozce
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/29/pociagi-29.svg
 pdf: /pojazdy/pociagi/29/pociagi-29.pdf
 alt: "Malowanka pociagi do druku A4"
 tags:
+- trudnosc-3
 - pojazdy
 - pociagi
 ---

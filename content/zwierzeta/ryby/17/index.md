@@ -7,6 +7,7 @@ image: /zwierzeta/ryby/17/ryby-17.svg
 pdf: /zwierzeta/ryby/17/ryby-17.pdf
 alt: "Darmowa kolorowanka ryby do druku PDF"
 tags:
+- trudnosc-7
 - zwierzeta
 - ryby
 ---

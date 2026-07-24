@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/38/pingwiny-38.svg
 pdf: /zwierzeta/pingwiny/38/pingwiny-38.pdf
 alt: "Kolorowanki pingwiny"
 tags:
+- trudnosc-3
 - zwierzeta
 - pingwiny
 ---

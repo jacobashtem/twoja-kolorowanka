@@ -7,6 +7,7 @@ image: /pory-roku/jesien/37/jesien-37.svg
 pdf: /pory-roku/jesien/37/jesien-37.pdf
 alt: "Kolorowanka jesien"
 tags:
+- trudnosc-9
 - pory-roku
 - jesien
 ---

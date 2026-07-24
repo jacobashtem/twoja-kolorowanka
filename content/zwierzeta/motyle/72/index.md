@@ -7,6 +7,7 @@ image: /zwierzeta/motyle/72/motyle-72.svg
 pdf: /zwierzeta/motyle/72/motyle-72.pdf
 alt: "Pokoloruj motyle – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - motyle
 ---

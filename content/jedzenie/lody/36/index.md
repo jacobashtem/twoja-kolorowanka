@@ -7,6 +7,7 @@ image: /jedzenie/lody/36/lody-36.svg
 pdf: /jedzenie/lody/36/lody-36.pdf
 alt: "Pokoloruj lody – darmowy szablon PDF"
 tags:
+- trudnosc-8
 - jedzenie
 - lody
 ---

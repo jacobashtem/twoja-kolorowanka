@@ -6,6 +6,7 @@ variant_of: koty
 image: /koty/62/koty-62.svg
 pdf: /koty/62/koty-62.pdf
 tags:
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "Kolorowanki koty - wariant 62"

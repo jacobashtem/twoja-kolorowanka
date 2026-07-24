@@ -7,6 +7,7 @@ image: /rosliny/dynie/32/dynie-32.svg
 pdf: /rosliny/dynie/32/dynie-32.pdf
 alt: "Edukacyjna kolorowanka dynie do wydruku"
 tags:
+- trudnosc-7
 - rosliny
 - dynie
 ---

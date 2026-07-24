@@ -7,6 +7,7 @@ image: /zwierzeta/mis/35/mis-35.svg
 pdf: /zwierzeta/mis/35/mis-35.pdf
 alt: "Prosta kolorowanka mis do kolorowania"
 tags:
+- trudnosc-9
 - zwierzeta
 - mis
 ---

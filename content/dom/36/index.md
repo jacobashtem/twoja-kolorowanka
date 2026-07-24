@@ -7,6 +7,7 @@ image: /dom/36/dom-36.svg
 pdf: /dom/36/dom-36.pdf
 alt: "Pokoloruj dom – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - dom
 - dom
 ---

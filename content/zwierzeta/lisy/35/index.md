@@ -7,6 +7,7 @@ image: /zwierzeta/lisy/35/lisy-35.svg
 pdf: /zwierzeta/lisy/35/lisy-35.pdf
 alt: "Prosta kolorowanka lisy do kolorowania"
 tags:
+- trudnosc-6
 - zwierzeta
 - lisy
 ---

@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/39/urodziny-39.svg
 pdf: /okolicznosciowe/urodziny/39/urodziny-39.pdf
 alt: "Kolorowanki urodziny"
 tags:
+- trudnosc-3
 - okolicznosciowe
 - urodziny
 ---

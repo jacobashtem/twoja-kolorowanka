@@ -7,6 +7,7 @@ image: /kosmos/24/kosmos-24.svg
 pdf: /kosmos/24/kosmos-24.pdf
 alt: "Kolorowanki do druku kosmos"
 tags:
+- trudnosc-8
 - kosmos
 - kosmos
 ---

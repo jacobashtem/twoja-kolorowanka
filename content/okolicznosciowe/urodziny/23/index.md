@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/23/urodziny-23.svg
 pdf: /okolicznosciowe/urodziny/23/urodziny-23.pdf
 alt: "urodziny kolorowanki dla dzieci"
 tags:
+- trudnosc-9
 - okolicznosciowe
 - urodziny
 ---

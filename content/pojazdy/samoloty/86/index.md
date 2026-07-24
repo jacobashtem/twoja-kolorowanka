@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/86/samoloty-86.svg
 pdf: /pojazdy/samoloty/86/samoloty-86.pdf
 alt: "Edukacyjna kolorowanka samoloty do wydruku"
 tags:
+- trudnosc-9
 - pojazdy
 - samoloty
 ---

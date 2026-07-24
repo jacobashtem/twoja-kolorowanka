@@ -7,6 +7,7 @@ image: /zwierzeta/ptaki/29/ptaki-29.svg
 pdf: /zwierzeta/ptaki/29/ptaki-29.pdf
 alt: "Malowanka ptaki do druku A4"
 tags:
+- trudnosc-1
 - zwierzeta
 - ptaki
 ---

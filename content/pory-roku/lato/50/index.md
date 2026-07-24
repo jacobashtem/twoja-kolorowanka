@@ -7,6 +7,7 @@ image: /pory-roku/lato/50/lato-50.svg
 pdf: /pory-roku/lato/50/lato-50.pdf
 alt: "Edukacyjna kolorowanka lato do wydruku"
 tags:
+- trudnosc-6
 - pory-roku
 - lato
 ---

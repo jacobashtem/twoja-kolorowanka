@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/23/chomiki-23.svg
 pdf: /zwierzeta/chomiki/23/chomiki-23.pdf
 alt: "Kolorowanka do druku chomiki"
 tags:
+- trudnosc-4
 - zwierzeta
 - chomiki
 ---

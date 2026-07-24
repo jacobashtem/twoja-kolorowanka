@@ -7,6 +7,7 @@ image: /jedzenie/lody/19/lody-19.svg
 pdf: /jedzenie/lody/19/lody-19.pdf
 alt: "Kolorowanka lody"
 tags:
+- trudnosc-3
 - jedzenie
 - lody
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/tygrysy/44/tygrysy-44.svg
 pdf: /zwierzeta/tygrysy/44/tygrysy-44.pdf
 alt: "Darmowa kolorowanka tygrysy do druku PDF"
 tags:
+- trudnosc-8
 - zwierzeta
 - tygrysy
 ---

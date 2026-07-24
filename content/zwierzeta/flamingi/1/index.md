@@ -7,6 +7,7 @@ image: /zwierzeta/flamingi/1/flamingi-1.svg
 pdf: /zwierzeta/flamingi/1/flamingi-1.pdf
 alt: "Kolorowanka flamingi"
 tags:
+- trudnosc-7
 - zwierzeta
 - flamingi
 ---

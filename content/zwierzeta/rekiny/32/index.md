@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/32/rekiny-32.svg
 pdf: /zwierzeta/rekiny/32/rekiny-32.pdf
 alt: "Edukacyjna kolorowanka rekiny do wydruku"
 tags:
+- trudnosc-4
 - zwierzeta
 - rekiny
 ---

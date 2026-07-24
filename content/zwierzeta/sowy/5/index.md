@@ -7,6 +7,7 @@ image: /zwierzeta/sowy/5/sowy-5.svg
 pdf: /zwierzeta/sowy/5/sowy-5.pdf
 alt: "Kolorowanka do druku sowy"
 tags:
+- trudnosc-2
 - zwierzeta
 - sowy
 ---

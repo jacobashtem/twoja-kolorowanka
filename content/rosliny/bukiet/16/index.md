@@ -7,6 +7,7 @@ image: /rosliny/bukiet/16/bukiet-16.svg
 pdf: /rosliny/bukiet/16/bukiet-16.pdf
 alt: "Kolorowanka bukiet – format A4 PDF"
 tags:
+- trudnosc-6
 - rosliny
 - bukiet
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/samochody/70/samochody-70.svg
 pdf: /pojazdy/samochody/70/samochody-70.pdf
 alt: "Kolorowanka samochody – format A4 PDF"
 tags:
+- trudnosc-3
 - pojazdy
 - samochody
 ---

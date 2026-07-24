@@ -7,6 +7,7 @@ image: /pojazdy/czolgi/24/czolgi-24.svg
 pdf: /pojazdy/czolgi/24/czolgi-24.pdf
 alt: "Kolorowanki do druku czolgi"
 tags:
+- trudnosc-5
 - pojazdy
 - czolgi
 ---

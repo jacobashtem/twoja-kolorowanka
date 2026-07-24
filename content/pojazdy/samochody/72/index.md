@@ -7,6 +7,7 @@ image: /pojazdy/samochody/72/samochody-72.svg
 pdf: /pojazdy/samochody/72/samochody-72.pdf
 alt: "Pokoloruj samochody – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - pojazdy
 - samochody
 ---

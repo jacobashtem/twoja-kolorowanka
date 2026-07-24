@@ -7,6 +7,7 @@ image: /dla-doroslych/po-numerach/15/po-numerach-15.svg
 pdf: /dla-doroslych/po-numerach/15/po-numerach-15.pdf
 alt: "po-numerach kolorowanka dla dzieci"
 tags:
+- trudnosc-10
 - dla-doroslych
 - po-numerach
 ---

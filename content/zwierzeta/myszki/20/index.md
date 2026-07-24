@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/20/myszki-20.svg
 pdf: /zwierzeta/myszki/20/myszki-20.pdf
 alt: "Kolorowanki myszki"
 tags:
+- trudnosc-4
 - zwierzeta
 - myszki
 ---

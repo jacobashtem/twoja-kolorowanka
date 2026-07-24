@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/38/pociagi-38.svg
 pdf: /pojazdy/pociagi/38/pociagi-38.pdf
 alt: "Kolorowanki pociagi"
 tags:
+- trudnosc-4
 - pojazdy
 - pociagi
 ---

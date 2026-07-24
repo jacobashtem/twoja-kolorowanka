@@ -7,6 +7,7 @@ image: /pojazdy/samoloty/20/samoloty-20.svg
 pdf: /pojazdy/samoloty/20/samoloty-20.pdf
 alt: "Kolorowanki samoloty"
 tags:
+- trudnosc-3
 - pojazdy
 - samoloty
 ---

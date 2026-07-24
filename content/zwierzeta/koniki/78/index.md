@@ -5,6 +5,7 @@ description: Kolorowanka Koniki – wariant 78
 image: /koniki/78/koniki-78.svg
 pdf:   /koniki/78/koniki-78.pdf
 tags:
+- trudnosc-2
  - zwierzeta
  - koniki
 alt: "Pokoloruj koniki – darmowy szablon PDF - wariant 78"

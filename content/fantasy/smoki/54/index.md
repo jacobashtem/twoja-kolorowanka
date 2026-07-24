@@ -7,6 +7,7 @@ image: /fantasy/smoki/54/smoki-54.svg
 pdf: /fantasy/smoki/54/smoki-54.pdf
 alt: "Pokoloruj smoki – darmowy szablon PDF - wariant 54"
 tags:
+- trudnosc-8
 - fantasy
 - smoki
 ---

@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/99/jednorozce-99.svg
 pdf: /fantasy/jednorozce/99/jednorozce-99.pdf
 alt: "jednorozce – pobierz i wydrukuj kolorowankę - wariant 99"
 tags:
+- trudnosc-9
 - fantasy
 - jednorozce
 ---

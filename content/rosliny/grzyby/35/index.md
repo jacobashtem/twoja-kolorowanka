@@ -7,6 +7,7 @@ image: /rosliny/grzyby/35/grzyby-35.svg
 pdf: /rosliny/grzyby/35/grzyby-35.pdf
 alt: "Prosta kolorowanka grzyby do kolorowania"
 tags:
+- trudnosc-5
 - rosliny
 - grzyby
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/33/rekiny-33.svg
 pdf: /zwierzeta/rekiny/33/rekiny-33.pdf
 alt: "rekiny kolorowanka dla dzieci"
 tags:
+- trudnosc-1
 - zwierzeta
 - rekiny
 ---

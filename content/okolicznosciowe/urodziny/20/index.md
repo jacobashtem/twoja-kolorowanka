@@ -7,6 +7,7 @@ image: /okolicznosciowe/urodziny/20/urodziny-20.svg
 pdf: /okolicznosciowe/urodziny/20/urodziny-20.pdf
 alt: "Kolorowanka urodziny"
 tags:
+- trudnosc-4
 - okolicznosciowe
 - urodziny
 ---

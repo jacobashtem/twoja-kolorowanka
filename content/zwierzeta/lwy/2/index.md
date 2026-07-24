@@ -7,6 +7,7 @@ image: /zwierzeta/lwy/2/lwy-2.svg
 pdf: /zwierzeta/lwy/2/lwy-2.pdf
 alt: "Kolorowanki lwy"
 tags:
+- trudnosc-9
 - zwierzeta
 - lwy
 ---

@@ -7,6 +7,7 @@ image: /dla-doroslych/mandala/63/mandala-63.svg
 pdf: /dla-doroslych/mandala/63/mandala-63.pdf
 alt: "mandala – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-9
 - dla-doroslych
 - mandala
 ---

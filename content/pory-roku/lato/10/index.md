@@ -7,6 +7,7 @@ image: /pory-roku/lato/10/lato-10.svg
 pdf: /pory-roku/lato/10/lato-10.pdf
 alt: "Kolorowanka z lato do pobrania"
 tags:
+- trudnosc-3
 - pory-roku
 - lato
 ---

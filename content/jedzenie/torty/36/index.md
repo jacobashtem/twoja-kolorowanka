@@ -7,6 +7,7 @@ image: /jedzenie/torty/36/torty-36.svg
 pdf: /jedzenie/torty/36/torty-36.pdf
 alt: "Pokoloruj torty – darmowy szablon PDF"
 tags:
+- trudnosc-4
 - jedzenie
 - torty
 ---

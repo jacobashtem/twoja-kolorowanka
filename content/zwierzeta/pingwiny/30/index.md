@@ -7,6 +7,7 @@ image: /zwierzeta/pingwiny/30/pingwiny-30.svg
 pdf: /zwierzeta/pingwiny/30/pingwiny-30.pdf
 alt: "kolorowanka do druku pingwiny PDF"
 tags:
+- trudnosc-4
 - zwierzeta
 - pingwiny
 ---

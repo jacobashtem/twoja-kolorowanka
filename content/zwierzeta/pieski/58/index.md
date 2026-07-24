@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/58/pieski-58.svg
 pdf: /pieski/58/pieski-58.pdf
 tags:
+- trudnosc-3
 - zwierzeta
 - pieski
 alt: "Kolorowanka pieski – format A4 PDF - wariant 58"

@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/36/lamborghini-36.svg
 pdf: /pojazdy/lamborghini/36/lamborghini-36.pdf
 alt: "Pokoloruj lamborghini – darmowy szablon PDF"
 tags:
+- trudnosc-5
 - pojazdy
 - lamborghini
 ---

@@ -7,6 +7,7 @@ image: /zwierzeta/rekiny/18/rekiny-18.svg
 pdf: /zwierzeta/rekiny/18/rekiny-18.pdf
 alt: "Pokoloruj rekiny – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - rekiny
 ---

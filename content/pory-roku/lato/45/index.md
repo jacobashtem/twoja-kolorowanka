@@ -7,6 +7,7 @@ image: /pory-roku/lato/45/lato-45.svg
 pdf: /pory-roku/lato/45/lato-45.pdf
 alt: "lato – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-3
 - pory-roku
 - lato
 ---

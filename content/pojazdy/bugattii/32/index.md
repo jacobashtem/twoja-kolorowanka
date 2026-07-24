@@ -7,6 +7,7 @@ image: /pojazdy/bugattii/32/bugattii-32.svg
 pdf: /pojazdy/bugattii/32/bugattii-32.pdf
 alt: "Edukacyjna kolorowanka bugattii do wydruku"
 tags:
+- trudnosc-1
 - pojazdy
 - bugattii
 ---

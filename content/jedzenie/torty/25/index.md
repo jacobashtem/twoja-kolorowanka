@@ -7,6 +7,7 @@ image: /jedzenie/torty/25/torty-25.svg
 pdf: /jedzenie/torty/25/torty-25.pdf
 alt: "torty do druku i pokolorowania"
 tags:
+- trudnosc-6
 - jedzenie
 - torty
 ---

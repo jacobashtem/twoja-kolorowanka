@@ -7,6 +7,7 @@ image: /pojazdy/lamborghini/22/lamborghini-22.svg
 pdf: /pojazdy/lamborghini/22/lamborghini-22.pdf
 alt: "lamborghini kolorowanki dla dzieci"
 tags:
+- trudnosc-2
 - pojazdy
 - lamborghini
 ---

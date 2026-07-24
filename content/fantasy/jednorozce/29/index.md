@@ -7,6 +7,7 @@ image: /fantasy/jednorozce/29/jednorozce-29.svg
 pdf: /fantasy/jednorozce/29/jednorozce-29.pdf
 alt: "Malowanka jednorozce do druku A4 - wariant 29"
 tags:
+- trudnosc-7
 - fantasy
 - jednorozce
 ---

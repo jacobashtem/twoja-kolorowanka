@@ -7,6 +7,7 @@ image: /okolicznosciowe/andrzejki/35/andrzejki-35.svg
 pdf: /okolicznosciowe/andrzejki/35/andrzejki-35.pdf
 alt: "Prosta kolorowanka andrzejki do kolorowania"
 tags:
+- trudnosc-6
 - okolicznosciowe
 - andrzejki
 ---

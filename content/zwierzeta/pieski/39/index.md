@@ -6,6 +6,7 @@ variant_of: pieski
 image: /pieski/39/pieski-39.svg
 pdf: /pieski/39/pieski-39.pdf
 tags:
+- trudnosc-5
 - zwierzeta
 - pieski
 alt: "Edukacyjna kolorowanka pieski do wydruku - wariant 39"

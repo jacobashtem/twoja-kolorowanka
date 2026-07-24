@@ -7,6 +7,7 @@ image: /zwierzeta/chomiki/36/chomiki-36.svg
 pdf: /zwierzeta/chomiki/36/chomiki-36.pdf
 alt: "Pokoloruj chomiki – darmowy szablon PDF"
 tags:
+- trudnosc-3
 - zwierzeta
 - chomiki
 ---

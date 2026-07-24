@@ -7,6 +7,7 @@ image: /fantasy/smoki/87/smoki-87.svg
 pdf: /fantasy/smoki/87/smoki-87.pdf
 alt: "smoki kolorowanka dla dzieci - wariant 87"
 tags:
+- trudnosc-6
 - fantasy
 - smoki
 ---

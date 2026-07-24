@@ -7,6 +7,7 @@ image: /jedzenie/torty/44/torty-44.svg
 pdf: /jedzenie/torty/44/torty-44.pdf
 alt: "Darmowa kolorowanka torty do druku PDF"
 tags:
+- trudnosc-5
 - jedzenie
 - torty
 ---

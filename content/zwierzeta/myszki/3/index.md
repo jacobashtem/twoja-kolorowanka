@@ -7,6 +7,7 @@ image: /zwierzeta/myszki/3/myszki-3.svg
 pdf: /zwierzeta/myszki/3/myszki-3.pdf
 alt: "myszki kolorowanka dla dzieci"
 tags:
+- trudnosc-6
 - zwierzeta
 - myszki
 ---

@@ -7,6 +7,7 @@ image: /pojazdy/pociagi/47/pociagi-47.svg
 pdf: /pojazdy/pociagi/47/pociagi-47.pdf
 alt: "Malowanka pociagi do druku A4"
 tags:
+- trudnosc-6
 - pojazdy
 - pociagi
 ---

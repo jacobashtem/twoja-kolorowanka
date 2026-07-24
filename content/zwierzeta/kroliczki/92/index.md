@@ -6,6 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/92/kroliczki-92.svg
 pdf: /kroliczki/92/kroliczki-92.pdf
 tags:
+- trudnosc-2
 - zwierzeta
 - kroliczki
 alt: "Kolorowanka z kroliczki do pobrania - wariant 92"

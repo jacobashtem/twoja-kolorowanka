@@ -7,6 +7,7 @@ image: /pory-roku/jesien/27/jesien-27.svg
 pdf: /pory-roku/jesien/27/jesien-27.pdf
 alt: "jesien – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - pory-roku
 - jesien
 ---

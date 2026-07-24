@@ -7,6 +7,7 @@ image: /pojazdy/bmw/29/bmw-29.svg
 pdf: /pojazdy/bmw/29/bmw-29.pdf
 alt: "Malowanka bmw do druku A4"
 tags:
+- trudnosc-4
 - pojazdy
 - bmw
 ---

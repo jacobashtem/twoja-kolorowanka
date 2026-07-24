@@ -7,6 +7,7 @@ image: /pory-roku/zima/30/zima-30.svg
 pdf: /pory-roku/zima/30/zima-30.pdf
 alt: "Kolorowanki do druku zima"
 tags:
+- trudnosc-7
 - pory-roku
 - zima
 ---

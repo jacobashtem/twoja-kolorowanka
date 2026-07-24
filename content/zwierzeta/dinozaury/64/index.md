@@ -7,6 +7,7 @@ image: /zwierzeta/dinozaury/64/dinozaury-64.svg
 pdf: /zwierzeta/dinozaury/64/dinozaury-64.pdf
 alt: "Kolorowanka z dinozaury do pobrania"
 tags:
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---

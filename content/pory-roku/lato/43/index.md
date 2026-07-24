@@ -7,6 +7,7 @@ image: /pory-roku/lato/43/lato-43.svg
 pdf: /pory-roku/lato/43/lato-43.pdf
 alt: "lato do druku i pokolorowania"
 tags:
+- trudnosc-2
 - pory-roku
 - lato
 ---
