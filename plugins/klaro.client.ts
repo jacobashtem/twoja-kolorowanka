@@ -9,6 +9,28 @@ export default defineNuxtPlugin(() => {
     consents.value = { ...consents.value, [name]: value }
   }
 
+  // Google Consent Mode v2. Musi pushowac obiekt `arguments` (nie tablice) —
+  // tego formatu oczekuje gtag/GTM przy komendach consent.
+  function gtag(..._args: unknown[]) {
+    window.dataLayer = window.dataLayer || []
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer.push(arguments)
+  }
+
+  // Stan domyslny: wszystko denied, zanim cokolwiek od Google sie zaladuje.
+  // Wymog reklam w EOG (Consent Mode v2): ad_storage, ad_user_data, ad_personalization.
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'denied',
+    personalization_storage: 'denied',
+    security_storage: 'granted',
+    wait_for_update: 500,
+  })
+  gtag('set', 'ads_data_redaction', true)
+
   // Inject GTM script manually on consent
   function injectGTM() {
     if (document.getElementById('klaro-gtm-script')) return
@@ -66,12 +88,19 @@ export default defineNuxtPlugin(() => {
             title: 'Społecznościowe',
             description: 'Społecznościowe pliki cookie pozwalają m.in. na komentowanie artykułów i łatwą interakcję z innymi użytkownikami.',
           },
+          marketing: {
+            title: 'Reklamowe',
+            description: 'Reklamowe pliki cookie pozwalają wyświetlać reklamy dopasowane do Twoich zainteresowań. Bez zgody reklamy mogą być nadal wyświetlane, ale nie będą personalizowane.',
+          },
         },
         'klaro-cookie': {
           description: 'Zapisuje Twój wybór dotyczący zgody na pliki cookie. Maksymalny czas przechowywania: 1 rok.',
         },
         gtm: {
           description: 'Narzędzie Google Analytics zbiera anonimowe statystyki, które pomagają nam ulepszać stronę. Ciasteczka: _ga (2 lata), _gid (24 godziny), _gat (1 minuta).',
+        },
+        adsense: {
+          description: 'Google AdSense wyświetla reklamy, dzięki którym serwis pozostaje bezpłatny. Zgoda pozwala na personalizację reklam (Consent Mode v2).',
         },
         disqus: {
           description: 'System Disqus umożliwia dodawanie komentarzy pod materiałami. Ciasteczka: disqus_unique (1 rok).',
@@ -102,11 +131,36 @@ export default defineNuxtPlugin(() => {
         ],
         callback: function (consent: boolean) {
           updateConsent('gtm', consent)
+          gtag('consent', 'update', {
+            analytics_storage: consent ? 'granted' : 'denied',
+          })
           if (consent) injectGTM()
         },
         required: false,
         optOut: false,
         onlyOnce: true,
+      },
+      {
+        name: 'adsense',
+        title: 'Google AdSense (reklamy)',
+        purposes: ['marketing'],
+        cookies: [
+          [/^__gads/, '/', '.twoja-kolorowanka.pl'],
+          [/^__gpi/, '/', '.twoja-kolorowanka.pl'],
+          [/^_gcl_au/, '/', '.twoja-kolorowanka.pl'],
+        ],
+        callback: function (consent: boolean) {
+          updateConsent('adsense', consent)
+          const state = consent ? 'granted' : 'denied'
+          gtag('consent', 'update', {
+            ad_storage: state,
+            ad_user_data: state,
+            ad_personalization: state,
+          })
+        },
+        required: false,
+        optOut: false,
+        onlyOnce: false,
       },
       {
         name: 'disqus',
