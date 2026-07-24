@@ -1,4 +1,12 @@
 <script setup>
+const footerZestawy = [
+  { name: 'Łatwe kolorowanki', url: '/kolorowanki/latwe-kolorowanki/' },
+  { name: 'Dla 3-latka', url: '/kolorowanki/kolorowanki-dla-3-latka/' },
+  { name: 'Dla 5-latka', url: '/kolorowanki/kolorowanki-dla-5-latka/' },
+  { name: 'Do wydruku A4', url: '/kolorowanki/kolorowanki-do-wydruku-a4/' },
+  { name: 'Pierwszy dzień szkoły', url: '/kolorowanki/pierwszy-dzien-szkoly/' },
+]
+
 const footerCategories = [
   { name: 'Zwierzęta', url: '/zwierzeta/' },
   { name: 'Pojazdy', url: '/pojazdy/' },
@@ -26,6 +34,12 @@ const footerCategories = [
             <ul class="flex flex-wrap gap-x-4 gap-y-1 justify-center md:justify-start text-base font-light">
                 <li v-for="cat in footerCategories" :key="cat.url">
                     <NuxtLink class="hover:text-coolGray-200 transition-all" :to="cat.url">{{ cat.name }}</NuxtLink>
+                </li>
+            </ul>
+            <p class="font-semibold mb-2 mt-4 text-center md:text-left">Zestawy tematyczne:</p>
+            <ul class="flex flex-wrap gap-x-4 gap-y-1 justify-center md:justify-start text-base font-light">
+                <li v-for="z in footerZestawy" :key="z.url">
+                    <NuxtLink class="hover:text-coolGray-200 transition-all" :to="z.url">{{ z.name }}</NuxtLink>
                 </li>
             </ul>
         </nav>
