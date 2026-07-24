@@ -7,6 +7,7 @@ image: /zabawki/lalki/6/lalki-6.svg
 pdf: /zabawki/lalki/6/lalki-6.pdf
 alt: "Kolorowanki do druku lalki"
 tags:
+- trudnosc-10
 - zabawki
 - lalki
 ---

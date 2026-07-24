@@ -7,6 +7,7 @@ image: /zabawki/lalki/32/lalki-32.svg
 pdf: /zabawki/lalki/32/lalki-32.pdf
 alt: "Edukacyjna kolorowanka lalki do wydruku"
 tags:
+- trudnosc-10
 - zabawki
 - lalki
 ---

@@ -7,6 +7,7 @@ image: /zabawki/prezenty/43/prezenty-43.svg
 pdf: /zabawki/prezenty/43/prezenty-43.pdf
 alt: "prezenty do druku i pokolorowania"
 tags:
+- trudnosc-1
 - zabawki
 - prezenty
 ---

@@ -7,6 +7,7 @@ image: /zabawki/prezenty/22/prezenty-22.svg
 pdf: /zabawki/prezenty/22/prezenty-22.pdf
 alt: "prezenty kolorowanki dla dzieci"
 tags:
+- trudnosc-4
 - zabawki
 - prezenty
 ---

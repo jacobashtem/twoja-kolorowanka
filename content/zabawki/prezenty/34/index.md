@@ -7,6 +7,7 @@ image: /zabawki/prezenty/34/prezenty-34.svg
 pdf: /zabawki/prezenty/34/prezenty-34.pdf
 alt: "Kolorowanka prezenty – format A4 PDF"
 tags:
+- trudnosc-7
 - zabawki
 - prezenty
 ---

@@ -7,6 +7,7 @@ image: /zabawki/lalki/27/lalki-27.svg
 pdf: /zabawki/lalki/27/lalki-27.pdf
 alt: "lalki – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - zabawki
 - lalki
 ---

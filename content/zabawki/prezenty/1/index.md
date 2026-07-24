@@ -7,6 +7,7 @@ image: /zabawki/prezenty/1/prezenty-1.svg
 pdf: /zabawki/prezenty/1/prezenty-1.pdf
 alt: "Kolorowanka prezenty"
 tags:
+- trudnosc-7
 - zabawki
 - prezenty
 ---

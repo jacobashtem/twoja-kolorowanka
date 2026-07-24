@@ -7,6 +7,7 @@ image: /zabawki/prezenty/27/prezenty-27.svg
 pdf: /zabawki/prezenty/27/prezenty-27.pdf
 alt: "prezenty – pobierz i wydrukuj kolorowankę"
 tags:
+- trudnosc-6
 - zabawki
 - prezenty
 ---

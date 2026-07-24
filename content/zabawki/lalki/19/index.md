@@ -7,6 +7,7 @@ image: /zabawki/lalki/19/lalki-19.svg
 pdf: /zabawki/lalki/19/lalki-19.pdf
 alt: "Kolorowanka lalki"
 tags:
+- trudnosc-9
 - zabawki
 - lalki
 ---

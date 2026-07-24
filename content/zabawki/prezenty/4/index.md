@@ -7,6 +7,7 @@ image: /zabawki/prezenty/4/prezenty-4.svg
 pdf: /zabawki/prezenty/4/prezenty-4.pdf
 alt: "prezenty kolorowanki dla dzieci"
 tags:
+- trudnosc-10
 - zabawki
 - prezenty
 ---

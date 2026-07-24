@@ -7,6 +7,7 @@ image: /zabawki/prezenty/49/prezenty-49.svg
 pdf: /zabawki/prezenty/49/prezenty-49.pdf
 alt: "Łatwa kolorowanka prezenty dla przedszkolaka"
 tags:
+- trudnosc-3
 - zabawki
 - prezenty
 ---

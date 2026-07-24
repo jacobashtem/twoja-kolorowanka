@@ -7,6 +7,7 @@ image: /zabawki/lalki/30/lalki-30.svg
 pdf: /zabawki/lalki/30/lalki-30.pdf
 alt: "kolorowanka do druku lalki PDF"
 tags:
+- trudnosc-5
 - zabawki
 - lalki
 ---

@@ -7,6 +7,7 @@ image: /zabawki/lalki/37/lalki-37.svg
 pdf: /zabawki/lalki/37/lalki-37.pdf
 alt: "Kolorowanka lalki"
 tags:
+- trudnosc-5
 - zabawki
 - lalki
 ---

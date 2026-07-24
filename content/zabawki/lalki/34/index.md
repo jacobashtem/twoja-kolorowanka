@@ -7,6 +7,7 @@ image: /zabawki/lalki/34/lalki-34.svg
 pdf: /zabawki/lalki/34/lalki-34.pdf
 alt: "Kolorowanka lalki – format A4 PDF"
 tags:
+- trudnosc-10
 - zabawki
 - lalki
 ---

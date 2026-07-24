@@ -7,6 +7,7 @@ image: /zabawki/lalki/36/lalki-36.svg
 pdf: /zabawki/lalki/36/lalki-36.pdf
 alt: "Pokoloruj lalki – darmowy szablon PDF"
 tags:
+- trudnosc-2
 - zabawki
 - lalki
 ---

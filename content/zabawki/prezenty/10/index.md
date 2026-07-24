@@ -7,6 +7,7 @@ image: /zabawki/prezenty/10/prezenty-10.svg
 pdf: /zabawki/prezenty/10/prezenty-10.pdf
 alt: "Kolorowanka z prezenty do pobrania"
 tags:
+- trudnosc-5
 - zabawki
 - prezenty
 ---

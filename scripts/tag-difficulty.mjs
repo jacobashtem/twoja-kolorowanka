@@ -54,7 +54,7 @@ for (const dir of leafs) {
   const tag = `trudnosc-${difficulty(score)}`
   const rel = dir.slice(CONTENT.length).replace(/\\/g, '/')
   let src = readFileSync(file, 'utf8')
-  if (src.includes(`- ${tag}\n`) || src.match(new RegExp(`tags:\\s*\\[[^\\]]*\\b${tag}\\b`))) { unchanged++; continue }
+  if (new RegExp(`^- ${tag}\\r?$`, 'm').test(src) || src.match(new RegExp(`tags:\\s*\\[[^\\]]*\\b${tag}\\b`))) { unchanged++; continue }
 
   // usun stary tag trudnosc-* (obie notacje YAML)
   let out = src.replace(/^- trudnosc-\d+\r?\n/gm, '')

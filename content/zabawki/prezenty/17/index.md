@@ -7,6 +7,7 @@ image: /zabawki/prezenty/17/prezenty-17.svg
 pdf: /zabawki/prezenty/17/prezenty-17.pdf
 alt: "Prosta kolorowanka prezenty do kolorowania"
 tags:
+- trudnosc-5
 - zabawki
 - prezenty
 ---
