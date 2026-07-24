@@ -79,9 +79,10 @@ Zasada: pełny SVG pobiera się TYLKO w `/koloruj/` (edytor). Wszędzie indziej 
 
 To jest silnik wzrostu na rynku PL: skalujemy to, co już działa (79 landingów → +15–30 nowych).
 
-- [ ] Architektura: `/kolorowanki/{przekroj}/` — prerenderowane, W SITEMAPIE, z pełnym copy jak kategorie (FAQ, opisy). Źródło: pola `tags[]` z frontmatter + ręczna kuracja listy wariantów.
-- [ ] Pierwsza fala przekrojów (do weryfikacji wolumenów w SEMrush): „kolorowanki dla 3-latka" (i 2/4/5-latka), „łatwe kolorowanki", „kolorowanki do wydruku A4", „kolorowanki mandale proste", sezonowe braki: Dzień Dziecka, Dzień Taty, Mikołajki, komunia, ferie, pierwszy dzień szkoły.
-- [ ] Linkowanie: kafle na stronie głównej, sekcja w stopce (footer dziś nie linkuje żadnej kategorii), linki kontekstowe z landingów kategorii.
+- [x] Architektura: `/kolorowanki/{przekroj}/` — prerenderowane, W SITEMAPIE, z pełnym copy jak kategorie (FAQ, opisy). Wykorzystany istniejący mechanizm `tagsFilter` z `pages/[...slug].vue` (galeria leafów po tagach) — nowy przekrój = jeden plik `content/kolorowanki/<slug>/index.md`, zero zmian w kodzie. Hub: `/kolorowanki/`. (PR #141, 2026-07-24)
+- [x] Pierwsza fala przekrojów (5 landingów, PR #141, 2026-07-24): „łatwe kolorowanki", „dla 3-latka", „dla 5-latka", „do wydruku A4", „pierwszy dzień szkoły" (sezon wrześniowy — publikacja zgodnie z zasadą 2 mies. przed pikiem). Wolumeny fraz do weryfikacji w SEMrush przy okazji (URL-e generyczne; zmiana = redirect 301).
+- [ ] Druga fala (po danych GSC/SEMrush): „dla 2-latka"/„dla 4-latka", „mandale proste", sezonowe: Mikołajki (publikacja wrzesień/październik!), Dzień Dziecka, Dzień Taty, komunia, ferie.
+- [ ] Linkowanie: sekcja w stopce ✓ („Zestawy tematyczne", PR #141); ZOSTAJE: kafle na stronie głównej + linki kontekstowe z landingów kategorii.
 - [ ] Sezonowe publikować 2–3 mies. przed pikiem (Mikołajki → wrzesień/październik).
 
 ## Etap 5 — Pinterest (drugi kanał ruchu)
