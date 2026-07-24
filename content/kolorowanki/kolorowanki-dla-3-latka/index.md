@@ -4,7 +4,7 @@ description:    "Kolorowanki dla 3-latka: duże kontury, znajome kształty i zer
 categoryName:   "Kolorowanki dla 3-latka"
 canonical:      "/kolorowanki/kolorowanki-dla-3-latka/"
 tags:           [ kolorowanki, dla-3-latka, maluchy, pdf ]
-tagsFilter:     [ trudnosc-1 ]
+tagsFilter:     [ trudnosc-1, trudnosc-2 ]
 alt: 'kolorowanki dla 3-latka'
 h1First: Kolorowanki
 h1Sec:  dla 3-latka
