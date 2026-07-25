@@ -21,12 +21,24 @@ faqs:
 
   - question: "Ile czasu zajmuje jeden rysunek?"
     answer: "Zwykle 30–60 minut – to już projekty na całe popołudnie, do których można wracać. Efekt nadaje się do oprawienia w ramkę."
+  - question: "Ile detali to za dużo?"
+    answer: "Granicę wyznacza frustracja: jeśli praca leży niedokończona trzeci dzień i nie kusi, wzór był o poziom za trudny. Wtedy warto zejść oczko niżej – nasz podział na poziomy trudności właśnie temu służy."
+
+  - question: "Ramka czy segregator na gotowe prace?"
+    answer: "Jedno i drugie: bieżące prace do segregatora z koszulkami, a raz w miesiącu wspólny wybór najlepszej do ramki. Rotująca galeria na ścianie motywuje lepiej niż rosnący stos kartek."
+
 ---
 ## Kolorowanki dla dziewczynek 10 lat – projekty, nie obrazki
 W wieku dziesięciu lat kolorowanka przestaje być zabawą na kwadrans, a staje się projektem: misterna syrenka, jednorożec z bogatą grzywą, kompozycja kwiatowa jak z zeszytu botanika. Ten zestaw zbiera dziewczęce motywy z wysokich poziomów trudności (7–8), przy których naprawdę można się wykazać.
 
 ## Prawie jak antystresowe – ale wciąż bajkowe
 To pomost między dziecięcym kolorowaniem a wzorami dla dorosłych: detali jest dużo, ale tematyka pozostaje pełna magii. Idealne na spokojne wieczory i deszczowe weekendy.
+
+## Projekty na całe popołudnie
+Dziesięciolatka nie potrzebuje już zajęcia na kwadrans – potrzebuje projektu. Misterna syrenka czy kompozycja kwiatowa z tego zestawu to praca na godzinę lub dwie, z planowaniem palety, kolejnością warstw i przerwą na ocenę efektu. Takie projekty uczą czegoś, czego nie da szkoła: doprowadzania długiej, samodzielnie wybranej pracy do końca.
+
+## Alternatywa dla ekranu, która naprawdę działa
+W wieku dziesięciu lat zaczyna się era telefonu – i rodzicielskie poszukiwania zajęć, które z nim wygrają. Kolorowanie ma tu nieoczywistą przewagę: daje ten sam efekt szybkiej gratyfikacji co scrollowanie (pole po polu, kolor po kolorze), ale kończy się realnym, namacalnym efektem. Godzina z kolorowanką to godzina, po której coś zostaje.
 
 ## 10 ciekawostek o syrenkach i podwodnym świecie
 <ul class="grid grid-cols-1 mb-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-3 text-center text-base md:text-lg font-light max-w-5xl mx-auto"> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-orange-500">Legendy o syrenach opowiadano już w starożytnej Asyrii – prawie 3000 lat temu.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-tertiary-400">Syreni ogon najładniej koloruje się łuska po łusce – to niemal medytacja.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-yellow-500">W polskiej tradycji syrenka to symbol Warszawy – z tarczą i mieczem.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-sec-500">Hans Christian Andersen napisał „Małą Syrenkę" w 1837 roku.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-main-500">Żeglarze brali kiedyś za syreny manaty – spokojne ssaki morskie.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-coolGray-500">Efekt wodnego tła zrobisz rozmytymi błękitami i fioletami.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-orange-500">Perłowe akcenty dodasz białą kredką na pokolorowanym tle.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-tertiary-400">Syreny z różnych kultur mają różne charaktery – od groźnych po opiekuńcze.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-yellow-500">Trzy kwadranse kolorowania dziennie realnie obniżają poziom stresu.</li> <li class="bg-none text-black p-2 flex items-center justify-center font-medium rounded border-4 border-dotted border-sec-500">Podwodne kompozycje uczą pracy z zimną paletą barw.</li> </ul>
