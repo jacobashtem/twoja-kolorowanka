@@ -24,7 +24,7 @@ faqs:
     answer: "Przeciwnie – to aktywna regeneracja. Po dniu pełnym liter i cyfr mózg potrzebuje zajęcia, które angażuje ręce i wycisza głowę, a kolorowanie robi to bez ekranu. Precyzja ręki dalej się przy tym rozwija, więc czas pracuje podwójnie."
 
   - question: "Jak wykorzystać kolorowanki do nauki?"
-    answer: "Najprościej przez rozmowę przy pracy: liczenie pól, nazywanie kolorów po angielsku, układanie historyjek o bohaterze rysunku. Kolorowanie według kodu z naszego serwisu to z kolei gotowe cwiczenie z rozpoznawania cyfr i czytania instrukcji."
+    answer: "Najprościej przez rozmowę przy pracy: liczenie pól, nazywanie kolorów po angielsku, układanie historyjek o bohaterze rysunku. Kolorowanie według kodu z naszego serwisu to z kolei gotowe ćwiczenie z rozpoznawania cyfr i czytania instrukcji."
 
 ---
 ## Kolorowanki dla 7-latka – detale dla wprawnego oka
