@@ -24,3 +24,9 @@ logs
 !.env.example
 pins-output/
 .pinterest-token.json
+
+# Materiał roboczy wymiany grafik (surowe generacje, arkusze przeglądowe)
+lineart-work/
+
+# Certyfikaty licencyjne Magnific/Freepik — zawierają dane osobowe
+license-*.pdf

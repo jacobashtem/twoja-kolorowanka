@@ -4,8 +4,10 @@ import heroDesktop   from '~/public/twoja-kolorowanka-hero.png'
 import heroMobileImg from '~/public/twoja-kolorowanka-hero-mobile.png'
 import { extractH2Blocks } from '@/utils/extractH2Blocks'
 
-const FIRST_BATCH = 56
-const STEP        = 8
+// Ile kolorowanek leci pod każdą sekcją H2. Siatka ma 4 kolumny na desktopie,
+// więc 4 = jeden pełny rząd, 8 = dwa. Wartości pośrednie zostawiają poszarpany rząd.
+const KAFLI_NA_SEKCJE = 4
+const STEP            = 8
 
 const route = useRoute()
 const slug  = Array.isArray(route.params.slug)
@@ -21,6 +23,20 @@ const basePath = computed(() =>
 
 const byNum = (a, b) =>
   +(a._path.match(/\/(\d+)\/?$/)?.[1] || 0) - +(b._path.match(/\/(\d+)\/?$/)?.[1] || 0)
+
+// Kolejność galerii: od najprostszych do najbardziej złożonych.
+// Tag `trudnosc-N` (N = 1..10) nadaje scripts/tag-difficulty.mjs, mierząc liczbę komend
+// rysowania w SVG — jest więc obiektywny i porównywalny między kategoriami.
+// Dzięki temu przewijanie strony w dół prowadzi od kolorowanek dla malucha do tych dla
+// starszego dziecka, zamiast układać je przypadkową kolejnością numerów w URL-u.
+// Kolorowanki bez tagu (nowe, jeszcze nieotagowane) lądują na końcu, żeby nie udawały
+// najłatwiejszych. Przy remisie decyduje numer — kolejność musi być stabilna,
+// inaczej SSR i klient mogłyby wyrenderować różne układy.
+const trudnoscZ = (v) => {
+  const t = (Array.isArray(v.tags) ? v.tags : []).find(x => /^trudnosc-\d+$/.test(x))
+  return t ? +t.split('-')[1] : Infinity
+}
+const byTrudnosc = (a, b) => (trudnoscZ(a) - trudnoscZ(b)) || byNum(a, b)
 
 const { width } = useWindowSize()
 const isMobile  = computed(() => width.value < 768)
@@ -50,7 +66,7 @@ const childrenCategories = computed(() =>
   !isLeaf.value ? siblings.value.filter(i => !/^[0-9]+$/.test(last(i._path))) : [])
 
 const variantsDirect = computed(() =>
-  siblings.value.filter(i => /^[0-9]+$/.test(last(i._path))).sort(byNum))
+  siblings.value.filter(i => /^[0-9]+$/.test(last(i._path))).sort(byTrudnosc))
 
 // Dopasowujemy regex zależnie od tego, czy kategoria ma podkategorie, czy od razu liście
 const levelRegex = computed(() =>
@@ -62,9 +78,11 @@ const levelRegex = computed(() =>
 const { data: rawGrand } = await useAsyncData(`grand:${currentPath}`,
   () => queryContent()
         .where({ _path: { $regex: levelRegex.value } })
-        .only(['_path','image','title', 'alt'])
+        // `tags` dociągamy, bo bez nich nie da się posortować po trudności —
+        // wcześniej zapytanie ich nie pobierało i lista wracała bez tej informacji.
+        .only(['_path','image','title', 'alt', 'tags'])
         .find())
-const variantsGrand = computed(() => (rawGrand.value || []).sort(byNum))
+const variantsGrand = computed(() => [...(rawGrand.value || [])].sort(byTrudnosc))
 
 const childrenVariants = computed(() =>
   isLeaf.value ? variantsDirect.value : variantsGrand.value)
@@ -125,7 +143,7 @@ const galleryByTag = computed(() =>
   (tagRaw.value || [])
     .filter(v => !tagsFilterAnd.value.length ||
       (Array.isArray(v.tags) && v.tags.some(t => tagsFilterAnd.value.includes(t))))
-    .sort(byNum).map(v => ({
+    .sort(byTrudnosc).map(v => ({
       img: fixImageUrl(v.image),
       url: v._path,
       title: v.title,
@@ -148,13 +166,27 @@ const galleryVariants = computed(() => {
 
 const similarGalleryVariants = computed(() =>
   galleryVariants.value.filter(v => v.url !== currentPath).slice(0, 8))
+// Ile kolorowanek zużywają galerie wplecione w sekcje H2. Liczymy to z FAKTYCZNEJ
+// liczby sekcji danej kategorii, bo wcześniej stała była wpisana na sztywno (56)
+// i zgadzała się tylko przy dokładnie 7 sekcjach. Kategorie z 6 sekcjami gubiły
+// 8 kolorowanek (nikt ich nie widział), a z 9 pokazywały 16 dwa razy.
+// Skrajny przypadek: /myszki/ nie ma ani jednej sekcji H2 i nie wyświetlało NICZEGO.
+const wpleceione = computed(() => h2Blocks.value.length * KAFLI_NA_SEKCJE)
+
+// Kategoria bez sekcji H2 nie ma przeplotu, więc bez tego ładowałaby się z pustą galerią.
+// Dotyczy m.in. /myszki/, gdzie 49 kolorowanek było niewidocznych.
+const BEZ_SEKCJI_START = 24
+const poczatkowoWidoczne = computed(() =>
+  wpleceione.value > 0 ? wpleceione.value : BEZ_SEKCJI_START)
+
 const visibleCount = ref(0)
 watchEffect(() => {
-  visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
+  visibleCount.value = Math.min(poczatkowoWidoczne.value, galleryVariants.value.length)
 })
 
+// Ogon zaczyna się dokładnie tam, gdzie skończył się przeplot — bez luk i bez dubli.
 const visibleGalleryVariants = computed(() =>
-  galleryVariants.value.slice(FIRST_BATCH, visibleCount.value))
+  galleryVariants.value.slice(wpleceione.value, visibleCount.value))
 
 function loadMore () {
   visibleCount.value = Math.min(
@@ -164,7 +196,7 @@ function loadMore () {
 }
 
 watch(() => currentPath, () => {
-  visibleCount.value = Math.min(FIRST_BATCH, galleryVariants.value.length)
+  visibleCount.value = Math.min(poczatkowoWidoczne.value, galleryVariants.value.length)
 })
 
 const currentIndex = computed(() => {
@@ -362,7 +394,7 @@ useHead(() => {
   />
 <ContentRendererMarkdown :value="{ type: 'root', children: block.nodes }" class="prose mb-12 text-base sm:text-xl  font-light sm:text-center mx-auto px-4 lg:px-8 max-w-full" />
 
-  <VariantsGallery :items="galleryVariants.slice(i * 8, (i + 1) * 8)" />
+  <VariantsGallery :items="galleryVariants.slice(i * KAFLI_NA_SEKCJE, (i + 1) * KAFLI_NA_SEKCJE)" />
 </template>
         <ClientOnly>
           <VariantsGallery :items="visibleGalleryVariants" class="mt-6"/>
