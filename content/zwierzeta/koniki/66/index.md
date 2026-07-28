@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 66
 image: /koniki/66/koniki-66.svg
 pdf:   /koniki/66/koniki-66.pdf
 tags:
-- trudnosc-5
+- trudnosc-7
  - zwierzeta
  - koniki
 alt: "Kolorowanki do druku koniki - wariant 66"

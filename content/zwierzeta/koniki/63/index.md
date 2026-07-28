@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 63
 image: /koniki/63/koniki-63.svg
 pdf:   /koniki/63/koniki-63.pdf
 tags:
-- trudnosc-8
+- trudnosc-5
  - zwierzeta
  - koniki
 alt: "koniki kolorowanka dla dzieci - wariant 63"

@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 62
 image: /koniki/62/koniki-62.svg
 pdf:   /koniki/62/koniki-62.pdf
 tags:
-- trudnosc-9
+- trudnosc-5
  - zwierzeta
  - koniki
 alt: "Kolorowanki koniki - wariant 62"

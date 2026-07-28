@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 37
 image: /koniki/37/koniki-37.svg
 pdf:   /koniki/37/koniki-37.pdf
 tags:
-- trudnosc-1
+- trudnosc-3
  - zwierzeta
  - koniki
 alt: "kolorowanka do druku koniki PDF - wariant 37"

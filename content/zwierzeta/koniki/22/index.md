@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 22
 image: /koniki/22/koniki-22.svg
 pdf:   /koniki/22/koniki-22.pdf
 tags:
-- trudnosc-2
+- trudnosc-1
  - zwierzeta
  - koniki
 alt: "koniki kolorowanka dla dzieci - wariant 22"

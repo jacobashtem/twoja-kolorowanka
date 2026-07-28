@@ -5,6 +5,7 @@ description: Kolorowanka Koniki – wariant 32
 image: /koniki/32/koniki-32.svg
 pdf:   /koniki/32/koniki-32.pdf
 tags:
+- trudnosc-2
  - zwierzeta
  - koniki
 alt: "koniki do druku i pokolorowania - wariant 32"

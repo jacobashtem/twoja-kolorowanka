@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 1
 image: /koniki/1/koniki-1.svg
 pdf:   /koniki/1/koniki-1.pdf
 tags:
-- trudnosc-2
+- trudnosc-1
  - zwierzeta
  - koniki
 alt: "Kolorowanka koniki - wariant 1"

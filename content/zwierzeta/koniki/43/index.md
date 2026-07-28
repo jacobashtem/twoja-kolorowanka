@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 43
 image: /koniki/43/koniki-43.svg
 pdf:   /koniki/43/koniki-43.pdf
 tags:
-- trudnosc-7
+- trudnosc-3
  - zwierzeta
  - koniki
 alt: "Pokoloruj koniki – darmowy szablon PDF - wariant 43"
