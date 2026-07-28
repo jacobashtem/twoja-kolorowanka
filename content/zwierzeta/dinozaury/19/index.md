@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/19/dinozaury-19.svg
 pdf: /zwierzeta/dinozaury/19/dinozaury-19.pdf
 alt: "Kolorowanka dinozaury"
 tags:
-- trudnosc-10
+- trudnosc-6
 - zwierzeta
 - dinozaury
 ---

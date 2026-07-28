@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/29/dinozaury-29.svg
 pdf: /zwierzeta/dinozaury/29/dinozaury-29.pdf
 alt: "Malowanka dinozaury do druku A4"
 tags:
-- trudnosc-5
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---

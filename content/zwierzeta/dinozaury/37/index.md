@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/37/dinozaury-37.svg
 pdf: /zwierzeta/dinozaury/37/dinozaury-37.pdf
 alt: "Kolorowanka dinozaury"
 tags:
-- trudnosc-5
+- trudnosc-10
 - zwierzeta
 - dinozaury
 ---

@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/28/dinozaury-28.svg
 pdf: /zwierzeta/dinozaury/28/dinozaury-28.pdf
 alt: "Kolorowanka z dinozaury do pobrania"
 tags:
-- trudnosc-7
+- trudnosc-9
 - zwierzeta
 - dinozaury
 ---
