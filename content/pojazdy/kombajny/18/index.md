@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/18/kombajny-18.svg
 pdf: /pojazdy/kombajny/18/kombajny-18.pdf
 alt: "Pokoloruj kombajny – darmowy szablon PDF"
 tags:
-- trudnosc-4
+- trudnosc-5
 - pojazdy
 - kombajny
 ---

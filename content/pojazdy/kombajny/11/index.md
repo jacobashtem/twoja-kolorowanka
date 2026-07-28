@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/11/kombajny-11.svg
 pdf: /pojazdy/kombajny/11/kombajny-11.pdf
 alt: "Malowanka kombajny do druku A4"
 tags:
-- trudnosc-6
+- trudnosc-4
 - pojazdy
 - kombajny
 ---

@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/26/kombajny-26.svg
 pdf: /pojazdy/kombajny/26/kombajny-26.pdf
 alt: "Darmowa kolorowanka kombajny do druku PDF"
 tags:
-- trudnosc-1
+- trudnosc-6
 - pojazdy
 - kombajny
 ---

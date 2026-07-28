@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/14/kombajny-14.svg
 pdf: /pojazdy/kombajny/14/kombajny-14.pdf
 alt: "Edukacyjna kolorowanka kombajny do wydruku"
 tags:
-- trudnosc-5
+- trudnosc-4
 - pojazdy
 - kombajny
 ---

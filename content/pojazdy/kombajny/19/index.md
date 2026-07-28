@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/19/kombajny-19.svg
 pdf: /pojazdy/kombajny/19/kombajny-19.pdf
 alt: "Kolorowanka kombajny"
 tags:
-- trudnosc-4
+- trudnosc-5
 - pojazdy
 - kombajny
 ---

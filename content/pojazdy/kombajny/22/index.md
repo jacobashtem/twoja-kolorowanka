@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/22/kombajny-22.svg
 pdf: /pojazdy/kombajny/22/kombajny-22.pdf
 alt: "kombajny kolorowanki dla dzieci"
 tags:
-- trudnosc-8
+- trudnosc-5
 - pojazdy
 - kombajny
 ---
