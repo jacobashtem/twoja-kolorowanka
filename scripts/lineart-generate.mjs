@@ -17,7 +17,7 @@
 //
 // Generuj ZAWSZE z zapasem — część sztuk odpadnie na walidacji i na przeglądzie.
 import { mkdirSync, writeFileSync, existsSync, readFileSync, unlinkSync } from 'node:fs'
-import { join } from 'node:path'
+import { join, dirname } from 'node:path'
 import { KATEGORIE } from '../prompty/kategorie.mjs'
 
 // Wczytuje klucze z pliku .env w katalogu projektu (jest w .gitignore).
@@ -506,7 +506,10 @@ function stanPozycji (nazwa) {
 
 async function jeden (i) {
   const seed = SEED0 + i
-  const nazwa = `${kategoria}-${String(i + 1).padStart(3, '0')}-s${seed}`
+  // Prefiks musi być PŁASKI (`koty`), nie surowym argumentem CLI (`zwierzeta/koty`) —
+  // ukośnik w kluczu robił z nazwy pliku podkatalog, którego nikt nie tworzył, więc
+  // cała seria pobierała się i padała na ENOENT już PO naliczeniu kredytów.
+  const nazwa = `${katalogRoboczy}-${String(i + 1).padStart(3, '0')}-s${seed}`
   const baza = join(OUT, nazwa)
 
   const stan = stanPozycji(nazwa)
@@ -524,6 +527,9 @@ async function jeden (i) {
     if (!plik.ok) throw new Error(`pobranie pliku: HTTP ${plik.status}`)
     const buf = Buffer.from(await plik.arrayBuffer())
     const format = rozpoznajFormat(buf)
+    // Kredyty są już naliczone, więc zapis NIE MOŻE polec na brakującym katalogu.
+    // Kosztowało to kiedyś całą serię 36 kotów ($1.44) wyrzuconą w błoto.
+    mkdirSync(dirname(baza), { recursive: true })
     writeFileSync(`${baza}.${format}`, buf)
 
     // STRAŻNIK NIEZGODNOŚCI MODELU. Gdy prosimy o model wektorowy, a wraca raster,
