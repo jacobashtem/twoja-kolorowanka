@@ -39,5 +39,14 @@ lineart-work/**
 !lineart-work/*/*/ok/
 !lineart-work/*/*/ok/*.svg
 
+# Katalogi `out-*` to wynik wektoryzacji, a nie ręcznej selekcji — bywają kopiowane
+# pod ścieżki kończące się na `ok/` i wtedy wpadały pod wyjątek wyżej, dublując pliki
+# już będące w repo. Trzymamy je poza gitem; to, co wybrane, i tak ląduje w public/.
+lineart-work/*/out-*/
+
+# `_wybor.txt` to czysta decyzja człowieka: kilkanaście kilobajtów, których nie da się
+# odtworzyć ani wygenerować ponownie. Najcenniejszy plik w całym katalogu roboczym.
+!lineart-work/*/_wybor.txt
+
 # Certyfikaty licencyjne Magnific/Freepik — zawierają dane osobowe
 license-*.pdf
