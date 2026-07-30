@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/14/koty-14.svg
 pdf: /koty/14/koty-14.pdf
 tags:
-- trudnosc-1
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Kolorowanki do druku koty - wariant 14"

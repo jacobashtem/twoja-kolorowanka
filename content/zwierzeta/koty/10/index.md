@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/10/koty-10.svg
 pdf: /koty/10/koty-10.pdf
 tags:
-- trudnosc-7
+- trudnosc-1
 - zwierzeta
 - koty
 alt: "Kolorowanki koty - wariant 10"

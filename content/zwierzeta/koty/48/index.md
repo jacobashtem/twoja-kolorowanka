@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/48/koty-48.svg
 pdf: /koty/48/koty-48.pdf
 tags:
-- trudnosc-2
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "Kolorowanka do druku koty - wariant 48"

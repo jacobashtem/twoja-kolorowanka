@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/8/koty-8.svg
 pdf: /koty/8/koty-8.pdf
 tags:
-- trudnosc-3
+- trudnosc-1
 - zwierzeta
 - koty
 alt: "koty do druku i pokolorowania - wariant 8"

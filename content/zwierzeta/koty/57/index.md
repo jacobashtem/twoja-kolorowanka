@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/57/koty-57.svg
 pdf: /koty/57/koty-57.pdf
 tags:
-- trudnosc-5
+- trudnosc-4
 - zwierzeta
 - koty
 alt: "koty kolorowanka dla dzieci - wariant 57"

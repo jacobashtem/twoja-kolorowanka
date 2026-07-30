@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/39/koty-39.svg
 pdf: /koty/39/koty-39.pdf
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "Edukacyjna kolorowanka koty do wydruku - wariant 39"

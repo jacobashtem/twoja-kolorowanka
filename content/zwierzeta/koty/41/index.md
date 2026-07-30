@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/41/koty-41.svg
 pdf: /koty/41/koty-41.pdf
 tags:
-- trudnosc-2
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "Prosta kolorowanka koty do kolorowania - wariant 41"

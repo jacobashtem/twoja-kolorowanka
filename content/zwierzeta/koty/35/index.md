@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/35/koty-35.svg
 pdf: /koty/35/koty-35.pdf
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "Kolorowanka z koty do pobrania - wariant 35"
