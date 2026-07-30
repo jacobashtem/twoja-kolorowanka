@@ -32,21 +32,32 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
-# Assety kolorowanek sie nie zmieniaja - agresywny cache przegladarki/CDN zbija transfer
+# UWAGA: tu bylo max-age=31536000 + immutable, z zalozeniem "assety kolorowanek sie
+# nie zmieniaja". Zalozenie przestalo byc prawdziwe wraz z wymiana biblioteki na wlasne
+# grafiki: podmieniamy pliki pod TYMI SAMYMI URL-ami (public/<kategoria>/<n>/...).
+# "immutable" kaze przegladarce nigdy nie rewalidowac, wiec powracajacy uzytkownik
+# widzial stara grafike nawet rok po podmianie - i mieszanke starych z nowymi w jednej
+# galerii, bo nowe liscie (dodane ponad dotychczasowa liczbe) nie byly w cache'u.
+#
+# 1h + must-revalidate: po godzinie przegladarka pyta warunkowo i dostaje 304 (ok. 200 B),
+# wiec oszczednosc transferu zostaje prawie cala, a najgorsza staloscia jest godzina.
+# CDN Netlify i tak czysci swoj cache przy kazdym deployu.
+# Po zakonczeniu migracji (75 kategorii) mozna wrocic do agresywnego cache'u - albo
+# lepiej: dodac hasz tresci do URL-i i wtedy "immutable" znowu bedzie prawda.
 [[headers]]
   for = "/*.svg"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/*.pdf"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/*.webp"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/*"
