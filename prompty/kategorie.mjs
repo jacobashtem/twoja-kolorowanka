@@ -416,9 +416,14 @@ export const KATEGORIE = {
   'dla-doroslych/po-numerach': { warianty: [], sceny: UKLADY, grubosc: DLA_DOROSLEGO, format: 'pion' },
   'wedlug-kodu':               { warianty: [], sceny: UKLADY, grubosc: DLA_DZIECKA,   format: 'pion' },
 
-  // ══ KATEGORIA TESTOWA ══════════════════════════════════════════════════════
-  // Nie ma jej w serwisie — to wzorzec, na którym kalibrujemy zmiany w pipelinie.
-  jaszczurki: {
+  // ══ JASZCZURKI ═════════════════════════════════════════════════════════════
+  // Była kategorią testową (wzorzec do kalibracji pipeline'u) i przy okazji dorobiła się
+  // dość materiału, żeby wejść do serwisu — od 2026-07-30 jest pełnoprawną kategorią
+  // pod /zwierzeta/jaszczurki/. Klucz musi być pełną ścieżką contentu jak reszta rejestru,
+  // inaczej stat-kategorie raportuje ją jako sierotę „w księdze, ale nie ma w content".
+  // Warianty zostają bez zmian: każdy opisuje inną SYLWETKĘ, co jest warunkiem
+  // rozróżnialności przy stylach „zabawkowych" pokroju Whimsy Playland.
+  'zwierzeta/jaszczurki': {
     warianty: [
       'a chameleon with a curled spiral tail and bulging eyes',
       'a gecko with wide round toe pads',
