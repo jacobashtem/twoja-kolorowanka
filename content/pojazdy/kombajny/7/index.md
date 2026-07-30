@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/7/kombajny-7.svg
 pdf: /pojazdy/kombajny/7/kombajny-7.pdf
 alt: "kombajny do druku i pokolorowania"
 tags:
-- trudnosc-10
+- trudnosc-4
 - pojazdy
 - kombajny
 ---

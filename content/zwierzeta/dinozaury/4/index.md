@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/4/dinozaury-4.svg
 pdf: /zwierzeta/dinozaury/4/dinozaury-4.pdf
 alt: "dinozaury kolorowanki dla dzieci"
 tags:
-- trudnosc-6
+- trudnosc-3
 - zwierzeta
 - dinozaury
 ---

@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 30
 image: /koniki/30/koniki-30.svg
 pdf:   /koniki/30/koniki-30.pdf
 tags:
-- trudnosc-1
+- trudnosc-2
  - zwierzeta
  - koniki
 alt: "Kolorowanka do druku koniki - wariant 30"

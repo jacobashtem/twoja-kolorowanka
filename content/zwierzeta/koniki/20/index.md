@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 20
 image: /koniki/20/koniki-20.svg
 pdf:   /koniki/20/koniki-20.pdf
 tags:
-- trudnosc-2
+- trudnosc-1
  - zwierzeta
  - koniki
 alt: "Łatwa kolorowanka koniki dla przedszkolaka - wariant 20"

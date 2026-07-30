@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/10/dinozaury-10.svg
 pdf: /zwierzeta/dinozaury/10/dinozaury-10.pdf
 alt: "Kolorowanka z dinozaury do pobrania"
 tags:
-- trudnosc-10
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

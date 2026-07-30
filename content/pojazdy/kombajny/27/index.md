@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/27/kombajny-27.svg
 pdf: /pojazdy/kombajny/27/kombajny-27.pdf
 alt: "kombajny – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-9
+- trudnosc-6
 - pojazdy
 - kombajny
 ---

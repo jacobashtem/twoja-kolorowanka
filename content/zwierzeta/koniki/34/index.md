@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 34
 image: /koniki/34/koniki-34.svg
 pdf:   /koniki/34/koniki-34.pdf
 tags:
-- trudnosc-7
+- trudnosc-2
  - zwierzeta
  - koniki
 alt: "koniki – pobierz i wydrukuj kolorowankę - wariant 34"

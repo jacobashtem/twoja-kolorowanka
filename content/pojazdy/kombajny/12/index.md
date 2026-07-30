@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/12/kombajny-12.svg
 pdf: /pojazdy/kombajny/12/kombajny-12.pdf
 alt: "kolorowanka do druku kombajny PDF"
 tags:
-- trudnosc-7
+- trudnosc-4
 - pojazdy
 - kombajny
 ---

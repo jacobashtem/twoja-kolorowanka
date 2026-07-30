@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/13/kombajny-13.svg
 pdf: /pojazdy/kombajny/13/kombajny-13.pdf
 alt: "Łatwa kolorowanka kombajny dla przedszkolaka"
 tags:
-- trudnosc-9
+- trudnosc-4
 - pojazdy
 - kombajny
 ---

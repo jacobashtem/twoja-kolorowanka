@@ -18,21 +18,9 @@ import { CONTENT, PUBLIC, walkLeafs, frontmatter } from './pinterest/lib.mjs'
 const MODE = process.argv.includes('--write') ? 'write'
   : process.argv.includes('--calibrate') ? 'calibrate' : 'dry'
 
-// Progi score -> trudnosc 1..10 (gorna granica przedzialu; ostatni = Infinity).
-// Wygenerowane przez --calibrate na 4307 SVG (2026-07-24); NIE zmieniac bez rekalibracji korpusu.
-const THRESHOLDS = [572, 915, 1249, 1680, 2325, 3278, 4637, 6638, 11840, Infinity]
-
-function svgScore (svgPath) {
-  const src = readFileSync(svgPath, 'utf8')
-  let commands = 0
-  for (const m of src.matchAll(/\sd="([^"]*)"/g)) {
-    commands += (m[1].match(/[A-Za-z]/g) || []).length
-  }
-  const shapes = (src.match(/<(rect|circle|ellipse|line|polyline|polygon)[\s>]/g) || []).length
-  return commands + shapes * 8
-}
-
-const difficulty = score => THRESHOLDS.findIndex(t => score <= t) + 1
+// Miara i progi mieszkaja w scripts/lib/trudnosc.mjs — dzieli je z galeria.mjs,
+// zeby sortowanie w przegladzie odpowiadalo tagom `trudnosc-N` na stronie.
+import { THRESHOLDS, svgScore, difficulty } from './lib/trudnosc.mjs'
 
 const leafs = walkLeafs()
 const scores = []

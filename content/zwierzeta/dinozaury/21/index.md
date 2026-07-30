@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/21/dinozaury-21.svg
 pdf: /zwierzeta/dinozaury/21/dinozaury-21.pdf
 alt: "dinozaury kolorowanka dla dzieci"
 tags:
-- trudnosc-2
+- trudnosc-7
 - zwierzeta
 - dinozaury
 ---

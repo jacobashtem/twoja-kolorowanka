@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 58
 image: /koniki/58/koniki-58.svg
 pdf:   /koniki/58/koniki-58.pdf
 tags:
-- trudnosc-7
+- trudnosc-5
  - zwierzeta
  - koniki
 alt: "Kolorowanka koniki – format A4 PDF - wariant 58"

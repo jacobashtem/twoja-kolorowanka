@@ -5,7 +5,7 @@ description: Kolorowanka Koniki – wariant 75
 image: /koniki/75/koniki-75.svg
 pdf:   /koniki/75/koniki-75.pdf
 tags:
-- trudnosc-2
+- trudnosc-8
  - zwierzeta
  - koniki
 alt: "Kolorowanka koniki – format A4 PDF - wariant 75"

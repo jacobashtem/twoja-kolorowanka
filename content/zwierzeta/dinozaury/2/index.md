@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/2/dinozaury-2.svg
 pdf: /zwierzeta/dinozaury/2/dinozaury-2.pdf
 alt: "Kolorowanki dinozaury"
 tags:
-- trudnosc-10
+- trudnosc-3
 - zwierzeta
 - dinozaury
 ---

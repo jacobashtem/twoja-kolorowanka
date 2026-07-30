@@ -7,7 +7,7 @@ image: /zwierzeta/dinozaury/12/dinozaury-12.svg
 pdf: /zwierzeta/dinozaury/12/dinozaury-12.pdf
 alt: "kolorowanka do druku dinozaury PDF"
 tags:
-- trudnosc-9
+- trudnosc-5
 - zwierzeta
 - dinozaury
 ---

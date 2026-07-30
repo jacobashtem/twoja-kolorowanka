@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/8/kombajny-8.svg
 pdf: /pojazdy/kombajny/8/kombajny-8.pdf
 alt: "Darmowa kolorowanka kombajny do druku PDF"
 tags:
-- trudnosc-10
+- trudnosc-4
 - pojazdy
 - kombajny
 ---

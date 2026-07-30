@@ -7,7 +7,7 @@ image: /pojazdy/kombajny/17/kombajny-17.svg
 pdf: /pojazdy/kombajny/17/kombajny-17.pdf
 alt: "Prosta kolorowanka kombajny do kolorowania"
 tags:
-- trudnosc-4
+- trudnosc-5
 - pojazdy
 - kombajny
 ---
