@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/37/koty-37.svg
 pdf: /koty/37/koty-37.pdf
 tags:
-- trudnosc-4
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "kolorowanka do druku koty PDF - wariant 37"

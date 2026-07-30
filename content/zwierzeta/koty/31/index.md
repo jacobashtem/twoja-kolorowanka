@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/31/koty-31.svg
 pdf: /koty/31/koty-31.pdf
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "Kolorowanki do druku koty - wariant 31"

@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/19/koty-19.svg
 pdf: /koty/19/koty-19.pdf
 tags:
-- trudnosc-1
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Malowanka koty do druku A4 - wariant 19"

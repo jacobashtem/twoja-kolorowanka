@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/23/koty-23.svg
 pdf: /koty/23/koty-23.pdf
 tags:
-- trudnosc-8
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Kolorowanka koty – format A4 PDF - wariant 23"

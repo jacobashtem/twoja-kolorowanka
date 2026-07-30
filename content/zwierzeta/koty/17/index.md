@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/17/koty-17.svg
 pdf: /koty/17/koty-17.pdf
 tags:
-- trudnosc-6
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "koty – pobierz i wydrukuj kolorowankę - wariant 17"

@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/34/koty-34.svg
 pdf: /koty/34/koty-34.pdf
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "koty – pobierz i wydrukuj kolorowankę - wariant 34"

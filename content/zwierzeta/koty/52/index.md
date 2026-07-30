@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/52/koty-52.svg
 pdf: /koty/52/koty-52.pdf
 tags:
-- trudnosc-9
+- trudnosc-4
 - zwierzeta
 - koty
 alt: "Kolorowanka z koty do pobrania - wariant 52"

@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/53/koty-53.svg
 pdf: /koty/53/koty-53.pdf
 tags:
-- trudnosc-5
+- trudnosc-4
 - zwierzeta
 - koty
 alt: "Malowanka koty do druku A4 - wariant 53"

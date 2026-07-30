@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/26/koty-26.svg
 pdf: /koty/26/koty-26.pdf
 tags:
-- trudnosc-5
+- trudnosc-2
 - zwierzeta
 - koty
 alt: "Pokoloruj koty – darmowy szablon PDF - wariant 26"

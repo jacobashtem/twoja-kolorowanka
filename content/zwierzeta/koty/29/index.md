@@ -6,7 +6,7 @@ variant_of: koty
 image: /koty/29/koty-29.svg
 pdf: /koty/29/koty-29.pdf
 tags:
-- trudnosc-2
+- trudnosc-3
 - zwierzeta
 - koty
 alt: "koty kolorowanka dla dzieci - wariant 29"
