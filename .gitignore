@@ -25,8 +25,19 @@ logs
 pins-output/
 .pinterest-token.json
 
-# Materiał roboczy wymiany grafik (surowe generacje, arkusze przeglądowe)
-lineart-work/
+# Materiał roboczy wymiany grafik (surowe generacje, arkusze przeglądowe).
+# Wyjątek: katalogi `ok/` z wyselekcjonowanymi ręcznie SVG trzymamy w repo — to jedyny
+# etap pipeline'u, którego nie da się odtworzyć bez ponownego generowania i ponownej
+# selekcji na oko. Odrzuty, arkusze kontaktowe PNG i katalogi testowe zostają lokalnie.
+#
+# Wzorzec musi być `lineart-work/**`, a nie `lineart-work/`: git nie wchodzi do katalogu
+# wykluczonego jako całość, więc przy `lineart-work/` żaden `!` w środku by nie zadziałał.
+# Kolejne `!` na katalogach są potrzebne tylko po to, żeby git zszedł na czwarty poziom.
+lineart-work/**
+!lineart-work/*/
+!lineart-work/*/*/
+!lineart-work/*/*/ok/
+!lineart-work/*/*/ok/*.svg
 
 # Certyfikaty licencyjne Magnific/Freepik — zawierają dane osobowe
 license-*.pdf
