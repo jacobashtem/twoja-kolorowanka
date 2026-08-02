@@ -65,14 +65,40 @@ w Fazę 3. Koszt: ok. $0,08/szt. generowania + $0,01/szt. wektoryzacji.
 
 | # | kategoria | liści | dlaczego teraz |
 |---|---|---|---|
-| 1 | `dla-doroslych/mandala` | 75 | **82 wejścia** — najpopularniejsza kategoria wciąż na Freepiku, a prompty gotowe |
+| ~~1~~ | ~~`dla-doroslych/mandala`~~ | 75 | **ODPADA — patrz niżej.** Dyfuzja nie robi mandal |
 | 2 | `pojazdy/samochody` | 84 | największa pozycja w `pojazdy` (6% pokrycia); podnosi `/dla-chlopcow/` |
-| 3 | `zwierzeta/motyle` | 91 | największa gotowa; podnosi `/dla-dziewczynek/` |
+| 3 | ✅ `zwierzeta/motyle` | 91 | **zrobione 2026-08-02**, 53 własne |
 | 4 | `pojazdy/koparki` | 68 | dalej dobija `pojazdy` |
 | 5 | `zwierzeta/ryby` | 56 | |
 | 6 | `zwierzeta/lisy` | 55 | |
 
-Razem 429 liści. Po tej turze `pojazdy` skacze z 6% na ~26%, `zwierzeta` z 23% na ~35%.
+Po motylach `zwierzeta` idzie z 23% na ~26%. Kolejna w kolejce: `pojazdy/samochody`.
+
+### Mandale: pipeline dyfuzyjny ich NIE ZROBI (ustalone 2026-08-02, kosztowało $2.40)
+
+Werdykt Jakuba po obejrzeniu 67 sztuk: „brudne, niedokładne, mają artefakty". Zgadza się
+z materiałem — i **nie jest to wina promptu**. Przetestowane zostały trzy style (wbudowany
+„Line art" na wektorze, Heroic, Nautical), dwie osie promptu przepisane od zera, dodana
+fraza na kadrowanie. Objawy zostały te same:
+
+- **symetria się chyboce** — ramiona nie są identyczne, bo model dyfuzyjny nie umie powtórzyć
+  tego samego elementu dwanaście razy dokładnie; to właściwość modelu, nie promptu
+- **zabłąkane elementy** — łuk przecinający kompozycję, kwadratowa ramka bez związku ze wzorem
+- **ucięte krawędzie** — fraza „the whole mandala inside the frame with a white margin"
+  poprawiła statystykę, ale nie rozwiązała sprawy
+- wbudowany „Line art" dodatkowo **zamalowywał segmenty na czarno** (prawdziwa sztuka
+  mandalowa tak wygląda) i był o połowę za rzadki: 36–59 obszarów wobec 114–253 u Heroic
+
+**Właściwa droga to GENERATOR PROGRAMOWY, nie model.** Mandala jest ornamentem regułowym —
+nie trzeba modelu, który „wie, jak wygląda motyl", tylko dokładnej geometrii. Skrypt budujący
+SVG wprost daje wszystko, czego dyfuzja nie potrafi: symetrię co do piksela, zamknięte ścieżki
+(czyli działający flood fill w `/koloruj/`, dziś słaby punkt grafik z AI), kontrolę marginesu
+i wielkości pól, sterowaną trudność zamiast losowanej — a do tego **kosztuje zero za sztukę**.
+Dotyczy też `dla-doroslych/antystresowe` (57 liści) i częściowo `wedlug-kodu` (50).
+
+Prompty mandal zostają w księdze (są lepsze niż to, co było) — gdyby kiedyś wrócić do modelu.
+
+Do decyzji Jakuba: budujemy generator czy mandale czekają.
 
 ### Tura 2 — ruch jest, prompty do napisania
 
