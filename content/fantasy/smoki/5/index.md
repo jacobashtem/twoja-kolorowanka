@@ -7,7 +7,7 @@ image: /fantasy/smoki/5/smoki-5.svg
 pdf: /fantasy/smoki/5/smoki-5.pdf
 alt: "Kolorowanka do druku smoki - wariant 5"
 tags:
-- trudnosc-2
+- trudnosc-4
 - fantasy
 - smoki
 ---

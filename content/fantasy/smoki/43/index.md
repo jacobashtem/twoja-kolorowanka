@@ -7,7 +7,7 @@ image: /fantasy/smoki/43/smoki-43.svg
 pdf: /fantasy/smoki/43/smoki-43.pdf
 alt: "smoki do druku i pokolorowania - wariant 43"
 tags:
-- trudnosc-3
+- trudnosc-10
 - fantasy
 - smoki
 ---

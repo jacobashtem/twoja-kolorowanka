@@ -7,7 +7,7 @@ image: /fantasy/smoki/19/smoki-19.svg
 pdf: /fantasy/smoki/19/smoki-19.pdf
 alt: "Kolorowanka smoki - wariant 19"
 tags:
-- trudnosc-8
+- trudnosc-5
 - fantasy
 - smoki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/smoki/41/smoki-41.svg
 pdf: /fantasy/smoki/41/smoki-41.pdf
 alt: "Kolorowanka do druku smoki - wariant 41"
 tags:
-- trudnosc-1
+- trudnosc-10
 - fantasy
 - smoki
 ---

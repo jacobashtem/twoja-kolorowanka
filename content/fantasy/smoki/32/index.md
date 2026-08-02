@@ -7,7 +7,7 @@ image: /fantasy/smoki/32/smoki-32.svg
 pdf: /fantasy/smoki/32/smoki-32.pdf
 alt: "Edukacyjna kolorowanka smoki do wydruku - wariant 32"
 tags:
-- trudnosc-9
+- trudnosc-7
 - fantasy
 - smoki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/smoki/17/smoki-17.svg
 pdf: /fantasy/smoki/17/smoki-17.pdf
 alt: "Prosta kolorowanka smoki do kolorowania - wariant 17"
 tags:
-- trudnosc-3
+- trudnosc-4
 - fantasy
 - smoki
 ---
