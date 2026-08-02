@@ -11,7 +11,7 @@
 // zamiast wyprodukować śmieci. To celowe: pusta kategoria ma boleć na wejściu, a nie
 // po wydaniu kredytów.
 
-import { SCENY, UKLADY } from './sceny.mjs'
+import { SCENY, UKLADY, STRUKTURY } from './sceny.mjs'
 
 // Domyślne grubości kreski wg odbiorcy — nie powtarzać ich w opisie wariantu.
 const DLA_MALUCHA = 'very thick outlines, simple shapes, few details'
@@ -248,22 +248,38 @@ export const KATEGORIE = {
   'zwierzeta/zabki':  { warianty: [], sceny: SCENY.woda, grubosc: DLA_MALUCHA, format: 'pion' },
 
   // ══ OWADY ══════════════════════════════════════════════════════════════════
+  // Motyle: oś wariantu to KSZTAŁT SKRZYDŁA, nie deseń na nim. Style zabawkowe gubią wszystko
+  // poniżej poziomu sylwetki (jaszczurki: „fringed eyebrows" i „smooth glossy" dały tego samego
+  // generycznego gadzika), a deseń jest właśnie tam. Zaokrąglone, jaskółczy ogon, wąskie
+  // szpiczaste, ząbkowane, złożone pionowo, malutkie przy grubym odwłoku — to sześć różnych
+  // obrysów. Gąsienica, poczwarka i para motyli dokładają trzy kolejne.
+  //
+  // Trzy warianty przepisane 2026-08-02, każdy z innego powodu:
+  //  1 i 4 — WYLECIAŁY dopiski „patterned in thin outlines" i „drawn as outlines". To resztki
+  //    po walce z czernią wbudowanego stylu „Line art". Przy stylach panelowych ta pułapka NIE
+  //    wraca (koty na whimsy: pręgi i łaty rysowane konturem, nie zamalowywane), a zasada brzmi
+  //    „walka z czernią = walka z jakością" — te słowa nie robią już nic poza zjadaniem promptu.
+  //  8 — „a lacy see-through wing pattern" to deseń, czyli dokładnie ta oś, której whimsy nie
+  //    utrzyma. Zastąpione PODZIAŁEM skrzydła grubymi żyłkami: to struktura widoczna w obrysie,
+  //    a przy okazji duże zamknięte pola, czyli lepszy materiał i do kredki, i do flood filla.
   'zwierzeta/motyle': {
     warianty: [
-      'a butterfly with broad rounded wings patterned in thin outlines',
+      'a butterfly with very broad rounded wings and a small narrow body',
       'a butterfly with long trailing swallowtail points',
       'a butterfly with narrow pointed wings and long antennae',
-      'a butterfly with round eyespots drawn as outlines on each wing',
+      'a butterfly with one large round eyespot on each wing',
       'a butterfly with scalloped wing edges',
       'a moth with feathery comb-like antennae',
       'a butterfly with its wings folded upright together',
-      'a butterfly with a lacy see-through wing pattern',
+      'a butterfly with wings divided into large open panes by thick veins',
       'a butterfly with tiny wings and a plump body',
       'a caterpillar with a segmented ringed body',
       'a butterfly emerging beside an open chrysalis',
       'two butterflies with wings overlapping'
     ],
-    sceny: SCENY.ogrod, grubosc: DEKORACYJNE, format: 'pion'
+    // `laka`, nie `ogrod`: sześć scen ogrodu na serię 48 sztuk dałoby osiem powtórzeń każdej,
+    // a `ogrod` ma w dodatku ul, który przy motylu przywołuje pszczołę.
+    sceny: SCENY.laka, grubosc: DEKORACYJNE, format: 'pion'
   },
 
   'zwierzeta/pszczoly':   { warianty: [], sceny: SCENY.ogrod, grubosc: DLA_MALUCHA, format: 'pion' },
@@ -526,22 +542,75 @@ export const KATEGORIE = {
 
   // ══ WZORY (nie obiekty) ════════════════════════════════════════════════════
   // Druga oś to UKŁAD, nie scena — ornament nigdzie nie stoi.
+  // Mandala: JEDYNA dotąd kategoria bez bohatera. Nie ma sylwetki do trzymania ani sceny,
+  // w której coś stoi, więc obie osie znaczą tu co innego niż wszędzie indziej:
+  // oś pierwsza to SŁOWNIK ORNAMENTU (z czego zbudowany jest wzór), druga to STRUKTURA
+  // (jak gęsto rozłożona jest materia) — patrz `STRUKTURY` w sceny.mjs.
+  //
+  // GŁÓWNE RYZYKO TEJ KATEGORII TO CZERŃ, i jest inne niż przy zwierzętach. Tam czerń brała
+  // się z tła albo z umaszczenia; tutaj bierze się z tego, że PRAWDZIWA sztuka mandalowa ma
+  // co drugi segment zamalowany na czarno. Model poproszony o mandalę ma pełne prawo narysować
+  // ozdobną grafikę zamiast niepokolorowanej kolorowanki. Dlatego z pilota wykluczone są style,
+  // które lite plamy dawały już na zwierzętach (elegant-contemporary 13–15%, rustic-elegance).
+  //
+  // Motywy dobrane pod POLE DO ZAMALOWANIA, nie pod urodę na ekranie. Wypadły trzy z poprzedniej
+  // wersji: „concentric beaded rings" (koraliki to pola wielkości ziarna, a do tego to struktura,
+  // nie motyw — należała do drugiej osi), „small stars" (to samo, stąd teraz gwiazdy ośmioramienne)
+  // oraz jeden z dwóch bliźniaczych opisów łezek — „lotus petals and teardrops" bił się z „paisley
+  // teardrop motifs", a lotos ma własną, mocniejszą cechę: warstwy.
+  // Doszły witraże: gruby ołów między szybkami to najlepszy możliwy materiał na kolorowankę,
+  // bo daje duże, jednoznacznie zamknięte pola.
   'dla-doroslych/mandala': {
     warianty: [
       'a mandala of layered flower petals',
-      'a mandala of interlocking geometric shapes',
+      'a mandala of interlocking triangles and diamonds',
       'a mandala of pointed star rays',
       'a mandala of curling leaves and vines',
-      'a mandala of lotus petals and teardrops',
+      'a mandala of lotus petals opening in tiers',
       'a mandala of lace-like scalloped arches',
       'a mandala of feathers fanning outward',
       'a mandala of paisley teardrop motifs',
-      'a mandala of scales and fan shapes',
-      'a mandala of knotwork loops',
-      'a mandala of crescent moons and small stars',
-      'a mandala of concentric beaded rings'
+      'a mandala of fish scales and folding fans',
+      'a mandala of celtic knotwork loops',
+      'a mandala of crescent moons and eight-pointed stars',
+      'a mandala of stained-glass panes divided by thick leading'
     ],
-    sceny: UKLADY, grubosc: DLA_DOROSLEGO, format: 'kwadrat'
+    sceny: STRUKTURY, grubosc: DLA_DOROSLEGO, format: 'kwadrat',
+
+    // ── Drugi zestaw: --zestaw=tematyczne ─────────────────────────────────────
+    // Dwunastka wyżej jest czysto ornamentalna i to ona odpowiada frazie „mandala".
+    // Ten zestaw stoi obok niej, nie zamiast, i jest ZAKŁADEM, nie pewniakiem.
+    //
+    // Powód biznesowy: w kolorowankach dla dorosłych najlepiej sprzedają się mandale
+    // TEMATYCZNE — rozpoznawalny motyw zbudowany z ornamentu (sowa, drzewo życia, słońce
+    // i księżyc). Mają własne frazy w wyszukiwarce, których sam ornament nie złapie.
+    //
+    // Powód ostrożności: to zadanie DWUKROTNIE trudniejsze od zwykłej mandali, bo obraz musi
+    // być naraz rozpoznawalnym obiektem i symetrycznym wzorem. Model ma dwa sposoby, żeby to
+    // spartaczyć: narysować zwykłe zwierzę z ornamentem w tle albo utopić temat w koronce.
+    // Dlatego każdy wariant nazywa wprost, że sylwetka ma być ZBUDOWANA z ornamentu.
+    //
+    // Sowa i motyl są tu świadomie, mimo że serwis ma `zwierzeta/motyle` — mandala z motyla
+    // to inny produkt i inna fraza niż kolorowanka z motylem, a symetria dwuosiowa motyla
+    // jest dla tego zadania idealna.
+    zestawy: {
+      tematyczne: {
+        warianty: [
+          'a mandala shaped like an owl, its body built from ornamental rings',
+          'a mandala shaped like a butterfly, its wings built from ornamental panels',
+          'a mandala shaped like a tree of life, its branches curving into a circle',
+          'a mandala of a sun and a crescent moon sharing one round frame',
+          'a mandala shaped like an elephant head, its ears built from ornamental panels',
+          'a mandala of ocean waves, shells and starfish in ornamental rings',
+          'a mandala shaped like a rose seen from directly above, petal on petal',
+          'a mandala of a horse head built from ornamental scrollwork',
+          'a mandala of snowflake arms meeting at a six-sided hub',
+          'a mandala shaped like a peacock tail fanned into a full circle',
+          'a mandala of hot air balloons and clouds in ornamental rings',
+          'a mandala shaped like a cat face, its fur built from ornamental scrolls'
+        ]
+      }
+    }
   },
 
   'dla-doroslych/antystresowe': { warianty: [], sceny: UKLADY, grubosc: DLA_DOROSLEGO, format: 'kwadrat' },

@@ -7,7 +7,7 @@ image: /zwierzeta/motyle/42/motyle-42.svg
 pdf: /zwierzeta/motyle/42/motyle-42.pdf
 alt: "Kolorowanki do druku motyle"
 tags:
-- trudnosc-3
+- trudnosc-6
 - zwierzeta
 - motyle
 ---

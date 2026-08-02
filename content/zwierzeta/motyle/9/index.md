@@ -7,7 +7,7 @@ image: /zwierzeta/motyle/9/motyle-9.svg
 pdf: /zwierzeta/motyle/9/motyle-9.pdf
 alt: "motyle – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-8
+- trudnosc-4
 - zwierzeta
 - motyle
 ---
