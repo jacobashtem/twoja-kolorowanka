@@ -20,6 +20,10 @@
 
 ## NAJBLIŻSZE KROKI — kolejka do zrobienia (stan po quick winach 2026-07-23)
 
+> **Wymiana biblioteki grafik ma własną kolejkę:** `docs/kolejnosc-migracji.md` — priorytety
+> ustawione po ruchu z ostatniego tygodnia (decyzja Jakuba 2026-08-02), nie po wielkości
+> kategorii. Tam też termin na kategorie sezonowe i osobny problem z „po numerach".
+
 Wykonawcze (Claude):
 - [x] Commit + PR quick winów: https://github.com/jacobashtem/twoja-kolorowanka/pull/124 (branch `feature/quick-wins-seo-thumbs`; 633 zmodyfikowane pliki + 8341 nowych). (2026-07-23)
 - [x] Stopka (`AppFooter.vue`): 15 linków do najważniejszych kategorii. (2026-07-23)
