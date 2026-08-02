@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/16/jednorozce-16.svg
 pdf: /fantasy/jednorozce/16/jednorozce-16.pdf
 alt: "Kolorowanka jednorozce – format A4 PDF - wariant 16"
 tags:
-- trudnosc-2
+- trudnosc-4
 - fantasy
 - jednorozce
 ---
