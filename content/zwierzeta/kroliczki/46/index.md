@@ -6,7 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/46/kroliczki-46.svg
 pdf: /kroliczki/46/kroliczki-46.pdf
 tags:
-- trudnosc-2
+- trudnosc-5
 - zwierzeta
 - kroliczki
 alt: "Kolorowanka kroliczki – format A4 PDF - wariant 46"

@@ -6,7 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/42/kroliczki-42.svg
 pdf: /kroliczki/42/kroliczki-42.pdf
 tags:
-- trudnosc-6
+- trudnosc-5
 - zwierzeta
 - kroliczki
 alt: "kolorowanka do druku kroliczki PDF - wariant 42"
