@@ -7,7 +7,7 @@ image: /fantasy/wrozki/1/wrozki-1.svg
 pdf: /fantasy/wrozki/1/wrozki-1.pdf
 alt: "Kolorowanka wrozki - wariant 1"
 tags:
-- trudnosc-8
+- trudnosc-3
 - fantasy
 - wrozki
 ---

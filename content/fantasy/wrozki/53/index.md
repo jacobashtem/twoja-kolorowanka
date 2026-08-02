@@ -7,7 +7,7 @@ image: /fantasy/wrozki/53/wrozki-53.svg
 pdf: /fantasy/wrozki/53/wrozki-53.pdf
 alt: "Prosta kolorowanka wrozki do kolorowania - wariant 53"
 tags:
-- trudnosc-2
+- trudnosc-10
 - fantasy
 - wrozki
 ---

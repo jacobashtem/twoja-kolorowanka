@@ -7,7 +7,7 @@ image: /fantasy/wrozki/41/wrozki-41.svg
 pdf: /fantasy/wrozki/41/wrozki-41.pdf
 alt: "Kolorowanka do druku wrozki - wariant 41"
 tags:
-- trudnosc-10
+- trudnosc-7
 - fantasy
 - wrozki
 ---

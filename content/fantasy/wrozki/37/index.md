@@ -7,7 +7,7 @@ image: /fantasy/wrozki/37/wrozki-37.svg
 pdf: /fantasy/wrozki/37/wrozki-37.pdf
 alt: "Kolorowanka wrozki - wariant 37"
 tags:
-- trudnosc-10
+- trudnosc-5
 - fantasy
 - wrozki
 ---

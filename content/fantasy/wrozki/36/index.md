@@ -7,7 +7,7 @@ image: /fantasy/wrozki/36/wrozki-36.svg
 pdf: /fantasy/wrozki/36/wrozki-36.pdf
 alt: "Pokoloruj wrozki – darmowy szablon PDF - wariant 36"
 tags:
-- trudnosc-10
+- trudnosc-5
 - fantasy
 - wrozki
 ---

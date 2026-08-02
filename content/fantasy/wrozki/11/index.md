@@ -7,7 +7,7 @@ image: /fantasy/wrozki/11/wrozki-11.svg
 pdf: /fantasy/wrozki/11/wrozki-11.pdf
 alt: "Malowanka wrozki do druku A4 - wariant 11"
 tags:
-- trudnosc-9
+- trudnosc-4
 - fantasy
 - wrozki
 ---

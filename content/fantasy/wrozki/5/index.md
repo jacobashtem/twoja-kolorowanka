@@ -7,7 +7,7 @@ image: /fantasy/wrozki/5/wrozki-5.svg
 pdf: /fantasy/wrozki/5/wrozki-5.pdf
 alt: "Kolorowanka do druku wrozki - wariant 5"
 tags:
-- trudnosc-6
+- trudnosc-3
 - fantasy
 - wrozki
 ---

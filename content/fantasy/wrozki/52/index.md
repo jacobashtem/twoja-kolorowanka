@@ -7,7 +7,7 @@ image: /fantasy/wrozki/52/wrozki-52.svg
 pdf: /fantasy/wrozki/52/wrozki-52.pdf
 alt: "Kolorowanka wrozki – format A4 PDF - wariant 52"
 tags:
-- trudnosc-8
+- trudnosc-9
 - fantasy
 - wrozki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/wrozki/15/wrozki-15.svg
 pdf: /fantasy/wrozki/15/wrozki-15.pdf
 alt: "wrozki kolorowanka dla dzieci - wariant 15"
 tags:
-- trudnosc-5
+- trudnosc-4
 - fantasy
 - wrozki
 ---
