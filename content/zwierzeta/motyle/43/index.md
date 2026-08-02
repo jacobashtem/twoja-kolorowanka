@@ -7,7 +7,7 @@ image: /zwierzeta/motyle/43/motyle-43.svg
 pdf: /zwierzeta/motyle/43/motyle-43.pdf
 alt: "motyle do druku i pokolorowania"
 tags:
-- trudnosc-9
+- trudnosc-6
 - zwierzeta
 - motyle
 ---

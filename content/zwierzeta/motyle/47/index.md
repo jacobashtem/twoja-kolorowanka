@@ -7,7 +7,7 @@ image: /zwierzeta/motyle/47/motyle-47.svg
 pdf: /zwierzeta/motyle/47/motyle-47.pdf
 alt: "Malowanka motyle do druku A4"
 tags:
-- trudnosc-10
+- trudnosc-7
 - zwierzeta
 - motyle
 ---

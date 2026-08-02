@@ -7,7 +7,7 @@ image: /zwierzeta/motyle/50/motyle-50.svg
 pdf: /zwierzeta/motyle/50/motyle-50.pdf
 alt: "Edukacyjna kolorowanka motyle do wydruku"
 tags:
-- trudnosc-6
+- trudnosc-8
 - zwierzeta
 - motyle
 ---
