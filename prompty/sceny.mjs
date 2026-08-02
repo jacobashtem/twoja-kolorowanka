@@ -139,6 +139,38 @@ export const SCENY = {
     'circling a small beehive under a branch'
   ],
 
+  // ── Łąka: pula DEDYKOWANA motylom ─────────────────────────────────────────
+  // Piąta pula pisana pod jedną kategorię, z tego samego powodu co `zagroda` i `podworko`:
+  // motyle to 91 liści, a `ogrod` ma sześć scen. Przy serii na 48 sztuk każda scena wypadłaby
+  // osiem razy — dokładnie tak zepsuły się koty, gdzie z 35 sztuk kilkanaście to „kot
+  // w koszyku" albo „kot przy oknie".
+  //
+  // Sceny są LOKATYWNE, bez czasowników. `ogrod` ma „hovering over" i „circling", a wśród
+  // wariantów motyli są takie, które NIE latają: gąsienica, poczwarka i motyl ze złożonymi
+  // skrzydłami. Czasownik lotu biłby się z nimi wprost.
+  //
+  // Świadomie NIE ma tu ULA — pszczoły to osobna kategoria serwisu i dzielą z motylami
+  // pulę `ogrod`; ul w kadrze przyciąga pszczołę zamiast motyla. Nie ma też nocy ani gęstej
+  // trawy: pierwsza wychodzi czarną plamą, druga równoległym sztrychem, który w druku daje
+  // szarą płachtę (tak poległa kora drzewa przy jaszczurkach w stylu nautical).
+  //
+  // Kwiaty są dobrane pod KOLOROWANKĘ, nie pod botanikę: stokrotka, słonecznik i lawenda mają
+  // duże, wyraźne płatki, czyli gotowe obszary do zamalowania.
+  laka: [
+    'in a meadow of tall daisies with round open centres',
+    'on a spike of lavender leaning over a stone path',
+    'beside a sunflower head ringed with broad petals',
+    'among clover and dandelion clocks in short grass',
+    'on a branch of apple blossom with a few open buds',
+    'beside a stone birdbath with a rim of round pebbles',
+    'among the pots and seed trays of a small greenhouse',
+    'at the edge of a pond with flat lily pads and one reed',
+    'on a wooden trellis with climbing roses',
+    'beside a hanging basket spilling round flowers',
+    'among ripe berries on a low bush by a picket fence',
+    'on a curling green stem with fat buds about to open'
+  ],
+
   prehistoria: [
     // "passing", nie "stomping" — w tej puli jest też pteranodon, a on nie tupie.
     'passing a steaming volcano in the distance',
@@ -412,4 +444,48 @@ export const UKLADY = [
   'woven into an interlacing lattice',
   'spiralling outward from the centre',
   'mirrored along four axes'
+]
+
+// ── Struktury: druga oś DEDYKOWANA mandalom ─────────────────────────────────
+// `UKLADY` się do nich nie nadaje, mimo że powstało właśnie dla wzorów. Cztery z sześciu
+// pozycji — koncentryczne kręgi, rozeta w środku, spirala od środka, lustro w czterech
+// osiach — to po prostu DEFINICJA mandali. Oś, która sześć razy mówi „okrągłe i symetryczne",
+// nie różnicuje niczego, a piąta pozycja (kwadratowa ramka) mandali wprost przeczy.
+//
+// Prawdziwą różnicą między dwiema mandalami dla osoby z kredką jest GĘSTOŚĆ I STRUKTURA:
+// ile pierścieni, czy środek jest otwarty, czy pola są na tyle szerokie, żeby dało się je
+// zamalować. Stąd ta pula opisuje rozkład materii, nie kształt ogólny.
+//
+// Prawie każda pozycja niesie słowo trzymające SKALĘ POLA: wide, broad, plain, open, thick,
+// simple. To jest tu robota najważniejsza — model puszczony luzem robi jednolitą koronkę,
+// czyli obrazek ładny na ekranie i bezużyteczny na papierze.
+//
+// Pozycja 10 to odpowiedź na pomysł Jakuba z fraktalami. Fraktal wprost jest zły: dzieli
+// detal w nieskończoność, więc pola schodzą poniżej grubości kredki, w druku wychodzi szara
+// płachta, a mierzona trudność każdej sztuki utknęłaby na T10 i kategoria straciłaby gradient,
+// po którym sortuje się galeria. Kontrolowana rekurencja — ten sam motyw w trzech rozmiarach —
+// daje to samo wrażenie, a pola zostają.
+//
+// Pozycja 12 istnieje, bo model i tak nie zrobi symetrii dokładnej; nazwanie jej wprost
+// przynajmniej pcha go w tę stronę.
+// KAŻDA pozycja kończy się „the whole mandala inside the frame with a white margin".
+// Dopisane po pilocie (15 szt., 2026-08-02) i z tego samego powodu, dla którego wróżki
+// dostały „full body fills the frame": model kadruje kompozycję tak, że wzór wychodzi poza
+// kartkę. Na pilocie mandala-001 w stylu heroic była ucięta ze wszystkich czterech stron —
+// dla kolorowanki do druku to defekt, bo płatki przy krawędzi są niedomknięte i nie ma ich
+// jak zamalować. Fraza siedzi w TEJ osi, nie w wariantach, bo obie dwunastki motywów
+// (ornamentalna i tematyczna) dzielą tę pulę — jedna poprawka zamiast dwudziestu czterech.
+export const STRUKTURY = [
+  'with a large open centre and detail only in the outer rings, the whole mandala inside the frame with a white margin',
+  'with a big central medallion and three wide plain bands around it, the whole mandala inside the frame with a white margin',
+  'with six rings of the same motif shrinking toward the edge, the whole mandala inside the frame with a white margin',
+  'with a heavy scalloped border framing a lighter interior, the whole mandala inside the frame with a white margin',
+  'with eight broad wedge segments divided by thick lines, the whole mandala inside the frame with a white margin',
+  'with alternating wide plain rings and narrow patterned rings, the whole mandala inside the frame with a white margin',
+  'with a dense centre opening into simple wide shapes at the edge, the whole mandala inside the frame with a white margin',
+  'set inside a square frame with the corners filled in, the whole mandala inside the frame with a white margin',
+  'with twelve narrow petal segments meeting at a small hub, the whole mandala inside the frame with a white margin',
+  'with the same motif repeated at three sizes, largest in the middle, the whole mandala inside the frame with a white margin',
+  'with a thick unbroken outer ring holding the pattern in, the whole mandala inside the frame with a white margin',
+  'with four quarters mirroring each other across two axes, the whole mandala inside the frame with a white margin'
 ]
