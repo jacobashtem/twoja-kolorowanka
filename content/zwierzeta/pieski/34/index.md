@@ -6,7 +6,7 @@ variant_of: pieski
 image: /pieski/34/pieski-34.svg
 pdf: /pieski/34/pieski-34.pdf
 tags:
-- trudnosc-3
+- trudnosc-4
 - zwierzeta
 - pieski
 alt: "pieski – pobierz i wydrukuj kolorowankę - wariant 34"

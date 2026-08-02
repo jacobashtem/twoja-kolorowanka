@@ -6,7 +6,7 @@ variant_of: pieski
 image: /pieski/52/pieski-52.svg
 pdf: /pieski/52/pieski-52.pdf
 tags:
-- trudnosc-3
+- trudnosc-4
 - zwierzeta
 - pieski
 alt: "Kolorowanka z pieski do pobrania - wariant 52"

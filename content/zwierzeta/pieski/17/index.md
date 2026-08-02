@@ -6,7 +6,7 @@ variant_of: pieski
 image: /pieski/17/pieski-17.svg
 pdf: /pieski/17/pieski-17.pdf
 tags:
-- trudnosc-7
+- trudnosc-3
 - zwierzeta
 - pieski
 alt: "pieski – pobierz i wydrukuj kolorowankę - wariant 17"
