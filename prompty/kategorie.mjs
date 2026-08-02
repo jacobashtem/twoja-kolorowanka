@@ -44,42 +44,111 @@ export const KATEGORIE = {
     sceny: SCENY.dom, grubosc: DLA_DZIECKA, format: 'pion'
   },
 
+  // Psy: dwanaście SYLWETEK, każda rozpoznawalna z samego obrysu. Rasa wchodzi tylko wtedy,
+  // gdy zmienia kształt — jamnik kontra buldog tak, labrador kontra golden nie.
+  // ŚWIADOMIE NIE MA ras definiowanych umaszczeniem: dalmatyńczyk, doberman, rottweiler
+  // i border collie to „biały pies w czarne łaty", a łaty model zamalowuje (tak poległy
+  // koty w pierwszym podejściu).
+  // Odrzucone jako zbyt subtelne dla whimsy — styl gubi cechy poniżej poziomu sylwetki
+  // (jaszczurki: „fringed eyebrows" i „smooth glossy" dały tego samego gadzika):
+  // jedno ucho w górę drugie w dół, chusta na szyi, „pies z długim pyskiem".
+  // Husky ODPADŁ z innego powodu — to pułapka sąsiedniego obiektu, model rysuje wilka.
+  // Szpic zostaje, bo ogon zwinięty na grzbiecie jest kotwicą, której wilk nie ma.
   'zwierzeta/pieski': {
     warianty: [
-      'a long-bodied dachshund with very short legs',
-      'a fluffy puppy with floppy ears and a round belly',
-      'a tall slender greyhound with a narrow waist',
-      'a wrinkly-faced bulldog with a wide stance',
-      'a curly-coated poodle with pompom tufts',
-      'a shaggy sheepdog with hair over its eyes',
-      'a pointy-eared spitz with a curled tail',
-      'a dog with very long silky ears touching the ground',
-      'a small dog wearing a knitted sweater',
-      'a dog with a bandana tied round its neck',
-      'a dog sitting with one ear up and one ear down',
-      'a mother dog with a puppy tucked beside her'
+      'a long-bodied dachshund with very short legs and a narrow pointed snout',
+      'a round fluffy puppy with floppy ears and a soft heavy belly',
+      'a tall slender greyhound with a deep chest and a narrow tucked waist',
+      'a wrinkly-faced bulldog with a broad head and a wide low stance',
+      'a curly-coated poodle with pompom tufts on its legs and the tip of its tail',
+      'a shaggy sheepdog with long hair falling right over its eyes',
+      'a pointy-eared spitz with a thick tail curled up over its back',
+      'a hound with very long silky ears hanging all the way down to the ground',
+      // „domed round head" WYLECIAŁO (wersja z 2026-07-31): kopulasta głowa plus wielkie
+      // uszy to opis myszy i królika, nie chihuahuy — wszystkie 3 sprawdzone sztuki zgubiły
+      // gatunek (dwa króliczki i mysz). Kotwicą psią jest SPICZASTY PYSK, którego nie ma
+      // ani królik, ani mysz.
+      'a tiny dog with huge upright ears, a sharply pointed muzzle and a thin tail curving upward',
+      'a scruffy wire-haired terrier with a square beard and bushy eyebrows',
+      'a dog wearing a knitted sweater with a rolled collar',
+      'a mother dog with a puppy tucked in beside her'
     ],
     biale: 'white paws, white chest, white tail tip',
-    sceny: SCENY.dom, grubosc: DLA_DZIECKA, format: 'pion'
+    sceny: SCENY.podworko, grubosc: DLA_DZIECKA, format: 'pion'
   },
 
+  // Króliki: cztery RASY, dwie pozy, trzy rekwizyty, trzy sylwetki wieku/rodziny.
+  // Rasa wchodzi wyłącznie wtedy, gdy widać ją w obrysie: angora (chmura futra),
+  // baran (uszy w dół), lionhead (kryza wokół głowy), karzełek (krótkie uszy, wielka
+  // głowa). ŚWIADOMIE NIE MA ras definiowanych umaszczeniem — holenderski, kalifornijski,
+  // himalajski i angielski srokacz to „biały królik w czarne łaty", a łaty model
+  // zamalowuje (tak poległy koty w pierwszym podejściu).
+  // Odrzucone jako zbyt subtelne dla stylu whimsy: długie wąsy, jedno ucho złożone,
+  // „okrągły puchaty" (to opis każdego królika, nie wariantu).
+  // Ławka rezerwowych, gdyby któryś wariant nie chwycił: olbrzym belgijski (długie
+  // ciężkie ciało) i baran angielski (uszy wleczone po ziemi).
   'zwierzeta/kroliczki': {
     warianty: [
-      'a rabbit with very long upright ears',
-      'a lop-eared rabbit with ears hanging to the ground',
-      'a round fluffy rabbit with a puff of a tail',
-      'a baby bunny with oversized feet',
-      'a rabbit with a ribbon tied in a bow on one ear',
-      'a rabbit standing up on its hind legs, ears alert',
-      'a rabbit with long whiskers and a twitching nose',
-      'a rabbit wearing a flower crown',
-      'a rabbit with one ear folded down',
-      'a mother rabbit with a tiny bunny beside her',
+      'a rabbit with very long ears standing straight up',
+      'a lop-eared rabbit with both ears hanging past its cheeks',
+      'an angora rabbit shaped like a cloud of long shaggy fur, face hidden in the fluff',
+      'a lionhead rabbit with a thick mane of fur ringing its head',
+      'a dwarf rabbit with a tiny round body, short ears and an oversized head',
+      'a baby bunny with oversized hind feet',
+      'a mother rabbit with a tiny bunny tucked beside her',
       'a rabbit mid-hop with both ears streaming back',
-      'a rabbit with a small basket held in its paws'
+      'a rabbit sitting up on its hind legs with front paws tucked, ears alert',
+      'a rabbit with a wide ribbon tied in a bow on one ear',
+      'a rabbit wearing a crown of daisies',
+      'a rabbit holding a wicker basket in its paws'
     ],
     biale: 'white ears, white paws, white tail',
-    sceny: SCENY.dom, grubosc: DLA_DZIECKA, format: 'pion'
+    sceny: SCENY.zagroda, grubosc: DLA_DZIECKA, format: 'pion',
+
+    // ── Drugi zestaw wariantów: --zestaw=natura ───────────────────────────────
+    // Bajkowa dwunastka wyżej ZOSTAJE bez zmian. Ten zestaw stoi obok niej, nie zamiast.
+    //
+    // Skąd się wziął: w serii `heroic` dwie sztuki (007 i 008) wyszły jako prawdziwe
+    // króliki, a nie maskotki. Obie miały wariant opisany POZĄ ze zwierzęcego repertuaru
+    // („mid-hop with ears streaming back", „sitting up on hind legs, ears alert") i obie
+    // trafiły na scenę przyrodniczą (nora, klatka ze słomą). Kontrdowód z tego samego
+    // przebiegu: whimsy-008 dostało ten SAM wariant „mid-hop", ale ze sceną herbatki —
+    // i wyszło pełne kawaii. Czyli realizmu nie psuje styl, tylko dwie rzeczy w promptcie:
+    // zdrobnienia (oversized, tiny, baby) i rekwizyt w łapkach.
+    //
+    // Stąd zasady tego zestawu: zero zdrobnień, zero wstążek i koszyków, każdy wariant to
+    // poza, którą królik naprawdę przyjmuje. Jedyny „rekwizyt" to liść pod łapami — to
+    // zachowanie zwierzęcia, nie antropomorfizm.
+    //
+    // Warianty różnicuje WYŁĄCZNIE sylwetka, bo whimsy gubi cechy subtelne (jaszczurki:
+    // „fringed eyebrows" i „smooth glossy" dały tego samego generycznego gadzika). Bochenek,
+    // flop, sploot, słupek i binky mają pięć zupełnie różnych obrysów i to je ratuje.
+    //
+    // Trzy pozy leżące mają dopisane „body filling the width of the picture", bo whimsy
+    // potrafi zrobić zwierzę małe wobec sceny, a w kadrze pionowym rozwalony królik jest
+    // na to najbardziej narażony. Pozy pionowe tego nie potrzebują i nie dostają.
+    zestawy: {
+      natura: {
+        warianty: [
+          'a rabbit settled into a rounded loaf shape with its feet tucked out of sight',
+          'a rabbit flopped over on its side with both hind legs stretched straight out, its body filling the width of the picture',
+          'a rabbit lying belly-down with its hind legs splayed out behind it, its body filling the width of the picture',
+          'a rabbit sitting back on its haunches with its front paws on the ground and both ears upright',
+          'a rabbit stretched out at full length with its front legs reaching forward and its back long and low, its body filling the width of the picture',
+          'a rabbit grooming itself with one ear pulled down between its front paws',
+          'a rabbit mid-hop with its hind feet off the ground and its ears swept back',
+          'a rabbit crouched low with its ears laid flat along its back',
+          'a rabbit curled asleep with its nose tucked in against its flank',
+          'a rabbit nibbling a leaf held down under both front paws, head lowered',
+          'a rabbit standing tall on its hind legs with its nose lifted and its whiskers fanned wide',
+          'a rabbit twisting in mid-air with its body kinked and all four feet off the ground'
+        ],
+        // Z puli `zagroda` wypadają dwie sceny: herbatka i sznurek z praniem. To one
+        // najmocniej ciągną do antropomorfizmu — na herbatce poległ nawet wariant,
+        // który w innej scenie dał realistycznego królika. Reszta puli zostaje.
+        sceny: SCENY.zagroda.filter(s => !/tea party|laundry line/.test(s))
+      }
+    }
   },
 
   // Koniki mają WŁASNĄ pulę scen, nie `las` ani `dom` — stajnia, płot i pastwisko
@@ -234,44 +303,112 @@ export const KATEGORIE = {
   // PRZEPISANE. Ekosystem tematu wchodzi SCENĄ (tęcza, gwiazdy, zamek), a nie
   // doklejaniem "with stars around" do każdego wariantu — inaczej gwiazdy byłyby
   // na wszystkich dwunastu i przestałyby cokolwiek różnicować.
+  // Jednorożce: KAŻDY z dwunastu wariantów wymienia SPIRALNY RÓG. To nie jest powtórka
+  // przez nieuwagę, tylko ta sama kotwica, którą przy kombajnach był heder (6/6 poprawnych
+  // maszyn po poprawce). Sąsiadem jednorożca jest koń, a koniki to osobna kategoria tego
+  // samego serwisu — wariant bez rogu w opisie da po prostu konia. Stara wersja tej listy
+  // wymieniała róg tylko w jednej pozycji na dwanaście.
+  // Druga oś to `SCENY.tecza`, gdzie każda scena też niesie rekwizyt spoza stajni.
+  //
+  // Odrzucone jako zbyt subtelne dla stylów zabawkowych — te gubią wszystko poniżej
+  // poziomu sylwetki (jaszczurki: „fringed eyebrows" dało generycznego gadzika):
+  // gwiazdka na czole (to w dodatku umaszczenie, a plamy model zamalowuje) i „delikatna
+  // korona między uszami".
   'fantasy/jednorozce': {
     warianty: [
-      'a unicorn with a long spiral horn and flowing mane',
-      'a chubby baby unicorn with stubby legs',
-      'a unicorn with feathered wings folded at its sides',
-      'a unicorn with a braided mane threaded with ribbons',
-      'a unicorn with a garland of flowers round its neck',
-      'a unicorn rearing on its hind legs, mane streaming',
-      'a unicorn with a very long tail sweeping the ground',
-      'a unicorn with a star-shaped mark on its forehead',
-      'a unicorn with a tiny foal beside it',
-      'a unicorn wearing a delicate crown between its ears',
-      'a unicorn with a short curly mane and round cheeks',
-      'a unicorn lying down with its legs tucked under'
+      'a unicorn with a long spiral horn and a mane flowing in waves down its neck',
+      'a chubby baby unicorn with stubby legs, an oversized head and a short blunt horn',
+      'a unicorn with a spiral horn and big feathered wings spread wide',
+      'a unicorn with a spiral horn and its mane braided into one thick plait with ribbons',
+      'a unicorn with a spiral horn rearing up on its hind legs, mane streaming back',
+      'a unicorn with a spiral horn and a very long tail sweeping along the ground',
+      'a unicorn with a spiral horn lying down with its legs folded under it',
+      'a unicorn with a spiral horn and a mane falling in broad rainbow stripes',
+      'a unicorn with a spiral horn and a thick garland of flowers round its neck',
+      'a unicorn with a spiral horn and a tiny foal with a bud horn beside it',
+      'a unicorn with a spiral horn and a short curly mane in tight ringlets',
+      'a unicorn with a spiral horn mid-leap with all four hooves off the ground'
     ],
     biale: 'white mane, white tail, white hooves',
-    sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion'
+    sceny: SCENY.tecza, grubosc: DEKORACYJNE, format: 'pion'
   },
 
+  // Smoki: KAŻDY wariant wymienia ROGI. Ta sama kotwica co heder przy kombajnach i róg
+  // przy jednorożcach, ale tu sąsiad jest najgroźniejszy z dotychczasowych, bo są to DWIE
+  // istniejące kategorie serwisu: `zwierzeta/dinozaury` i `zwierzeta/jaszczurki`.
+  //
+  // Stara lista zderzała się z dinozaurami w czterech miejscach na dwanaście:
+  //   „a row of ridged spines down its back"  → stegozaur ma podwójny rząd płyt
+  //   „wide bat-like wings spread out"        → pteranodon ma błoniaste skrzydła
+  //   „a fan-shaped crest behind its head"    → dilofozaur i parazaurolof mają grzebienie
+  //   „a horned dragon"                       → triceratops ma trzy rogi
+  // Sama cecha nie wystarczała, bo każdą z nich dinozaur też ma. Dopiero POŁĄCZENIE
+  // rogów ze skrzydłami błoniastymi jest wyłącznie smocze — żaden dinozaur nie jest
+  // skrzydlatym czworonogiem. Wariant 2 nie ma skrzydeł, więc niesie drugą wyłączność:
+  // wąsy i rogi jak poroże, czyli smok wschodni, którego z gadem nie da się pomylić.
+  //
+  // Warianty różnicuje wyłącznie SYLWETKA — style zabawkowe gubią wszystko poniżej niej.
   'fantasy/smoki': {
     warianty: [
-      'a plump baby dragon with oversized wings',
-      'a long serpentine dragon with a whiskered snout',
-      'a dragon with a row of ridged spines down its back',
-      'a dragon with wide bat-like wings spread out',
-      'a horned dragon with a curled tail wrapped round itself',
-      'a dragon hatchling climbing out of a cracked egg',
-      'a dragon with a fan-shaped crest behind its head',
-      'a four-legged dragon with stubby wings and a round belly',
-      'a dragon with a long tail ending in an arrow tip',
-      'a dragon curled asleep in a spiral',
-      'a dragon with feathered wings and a slender neck',
-      'a dragon perched on its hind legs with wings raised'
+      'a plump baby dragon with a big round head, tiny horn buds and oversized membrane wings',
+      'a long serpentine dragon with no wings, a whiskered snout and antler-like horns',
+      'a four-legged dragon with curled ram-like horns and wide membrane wings spread out',
+      'a dragon with swept-back horns and a very long neck held in a high curve',
+      'a dragon hatchling with soft nubbin horns climbing out of a cracked egg',
+      'a horned dragon curled into a tight spiral with its tail resting over its snout',
+      'a dragon with two curved horns and a wide fan of skin framing its head',
+      'a stocky dragon with short horns, a round belly and stubby wings too small to fly',
+      'a dragon with tall straight horns and a long tail ending in an arrow-shaped tip',
+      'a dragon with two slim horns, a slender neck and broad feathered wings',
+      'a dragon with horns lowered, rearing on its hind legs with membrane wings raised high',
+      'a two-headed dragon with a pair of horns on each head and one set of membrane wings'
     ],
-    sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion'
+    sceny: SCENY.smocze, grubosc: DEKORACYJNE, format: 'pion'
   },
 
-  'fantasy/wrozki':          { warianty: [], sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion' },
+  // Wróżki: PIERWSZA kategoria z postacią ludzką. Dwie rzeczy działają tu inaczej niż
+  // przy zwierzętach i maszynach.
+  //
+  // 1. WŁOSY TO NOWE CZARNE ŁATY. Długa rozpuszczona fryzura to dla modelu jedna wielka
+  //    ciemna plama — ten sam mechanizm, przez który poległy koty w pierwszym podejściu.
+  //    Dlatego dziesięć z dwunastu wariantów ma włosy zamknięte w OKREŚLONYM KSZTAŁCIE:
+  //    bob, warkocz, kucyki, upięte loki, krótkie, pod czapką albo kapturem. To nie jest
+  //    ubóstwo pomysłu, tylko ta sama zasada co „white mane" przy koniach — dać modelowi
+  //    kontur do narysowania zamiast masy do wypełnienia.
+  //
+  // 2. SĄSIADEM JEST MOTYL, nie inna wróżka. `zwierzeta/motyle` ma 91 liści w serwisie,
+  //    a same skrzydła to opis motyla. Wyłączna jest dopiero POSTAĆ ze skrzydłami, dlatego
+  //    każdy wariant zaczyna się od „a tiny fairy" — i słowo „tiny" niesie drugą robotę:
+  //    trzyma skalę, bez której wyjdzie zwykła dziewczynka z doczepionymi skrzydłami.
+  //
+  // Oś sylwetki to KSZTAŁT SKRZYDEŁ (ważka, ćma, płatki, liść, wachlarz) plus jeden
+  // element ubioru. Wariant 10 to chłopiec — kategoria nie ma być wyłącznie dziewczęca.
+  //
+  // 3. `full body fills the frame` W KAŻDYM WARIANCIE — dopisane po pilocie (12 szt.).
+  //    Diagnoza z materiału: im mniejsza postać w kadrze, tym gorsza twarz. Przy dużej
+  //    figurze oczy wychodziły ze źrenicami i rzęsami, przy małej jako puste owale,
+  //    a ramiona kończyły się bez dłoni. To nie jest instrukcja dla operatora kamery,
+  //    tylko fraza, której generator używa od zawsze w stałej KONTUR — tu musi stać
+  //    w wariancie, bo `--goly` nie wysyła KONTUR w ogóle.
+  //    UWAGA na napięcie z „tiny": „tiny" opisuje skalę W ŚWIECIE, „fills the frame"
+  //    kadrowanie. Skalę trzymają dodatkowo sceny, gdzie rekwizyt jest większy od postaci.
+  'fantasy/wrozki': {
+    warianty: [
+      'a tiny fairy with four long narrow dragonfly wings and short bobbed hair, full body fills the frame',
+      'a tiny fairy with two broad rounded wings and a dress made of flower petals, full body fills the frame',
+      'a tiny fairy with leaf-shaped wings and one long thick braid down her back, full body fills the frame',
+      'a tiny fairy with soft rounded moth wings and a fluffy collar round her neck, full body fills the frame',
+      'a tiny fairy with pointed leaf wings, a pointed hood and curled-toe shoes, full body fills the frame',
+      'a tiny fairy with wings like a fanned-out flower and a very long trailing skirt, full body fills the frame',
+      'a tiny fairy with small round wings, a round face and pigtails standing out sideways, full body fills the frame',
+      'a tiny fairy with tall narrow wings held upright and a wand with a star on the tip, full body fills the frame',
+      'a tiny fairy with wings and curly hair piled high, sitting with her knees drawn up, full body fills the frame',
+      'a tiny fairy boy with pointed wings, cropped hair and a belted tunic, full body fills the frame',
+      'a tiny fairy with wings and a hat made from an upturned flower, full body fills the frame',
+      'a tiny fairy with wings and a hooded cloak, carrying a small round lantern, full body fills the frame'
+    ],
+    sceny: SCENY.wrozkowe, grubosc: DEKORACYJNE, format: 'pion'
+  },
   'fantasy/syrenki':         { warianty: [], sceny: SCENY.woda,  grubosc: DEKORACYJNE, format: 'pion' },
   'fantasy/elfy':            { warianty: [], sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion' },
   'ksiezniczki':             { warianty: [], sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion' },
