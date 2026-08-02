@@ -6,7 +6,7 @@ variant_of: pieski
 image: /pieski/15/pieski-15.svg
 pdf: /pieski/15/pieski-15.pdf
 tags:
-- trudnosc-5
+- trudnosc-3
 - zwierzeta
 - pieski
 alt: "pieski do druku i pokolorowania - wariant 15"

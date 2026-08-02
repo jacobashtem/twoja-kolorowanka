@@ -7,7 +7,7 @@ image: /fantasy/smoki/26/smoki-26.svg
 pdf: /fantasy/smoki/26/smoki-26.pdf
 alt: "Darmowa kolorowanka smoki do druku PDF - wariant 26"
 tags:
-- trudnosc-8
+- trudnosc-5
 - fantasy
 - smoki
 ---

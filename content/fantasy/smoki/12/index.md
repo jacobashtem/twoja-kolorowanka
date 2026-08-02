@@ -7,7 +7,7 @@ image: /fantasy/smoki/12/smoki-12.svg
 pdf: /fantasy/smoki/12/smoki-12.pdf
 alt: "kolorowanka do druku smoki PDF - wariant 12"
 tags:
-- trudnosc-6
+- trudnosc-4
 - fantasy
 - smoki
 ---

@@ -6,7 +6,7 @@ variant_of: pieski
 image: /pieski/53/pieski-53.svg
 pdf: /pieski/53/pieski-53.pdf
 tags:
-- trudnosc-3
+- trudnosc-4
 - zwierzeta
 - pieski
 alt: "Malowanka pieski do druku A4 - wariant 53"

@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/27/jednorozce-27.svg
 pdf: /fantasy/jednorozce/27/jednorozce-27.pdf
 alt: "jednorozce – pobierz i wydrukuj kolorowankę - wariant 27"
 tags:
-- trudnosc-7
+- trudnosc-5
 - fantasy
 - jednorozce
 ---

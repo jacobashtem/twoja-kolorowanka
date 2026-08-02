@@ -6,7 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/52/kroliczki-52.svg
 pdf: /kroliczki/52/kroliczki-52.pdf
 tags:
-- trudnosc-5
+- trudnosc-6
 - zwierzeta
 - kroliczki
 alt: "kroliczki kolorowanki dla dzieci - wariant 52"

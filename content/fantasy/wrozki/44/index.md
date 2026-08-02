@@ -7,7 +7,7 @@ image: /fantasy/wrozki/44/wrozki-44.svg
 pdf: /fantasy/wrozki/44/wrozki-44.pdf
 alt: "Darmowa kolorowanka wrozki do druku PDF - wariant 44"
 tags:
-- trudnosc-8
+- trudnosc-7
 - fantasy
 - wrozki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/smoki/40/smoki-40.svg
 pdf: /fantasy/smoki/40/smoki-40.pdf
 alt: "smoki kolorowanki dla dzieci - wariant 40"
 tags:
-- trudnosc-7
+- trudnosc-9
 - fantasy
 - smoki
 ---

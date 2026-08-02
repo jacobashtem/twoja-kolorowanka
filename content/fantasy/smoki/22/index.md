@@ -7,7 +7,7 @@ image: /fantasy/smoki/22/smoki-22.svg
 pdf: /fantasy/smoki/22/smoki-22.pdf
 alt: "smoki kolorowanki dla dzieci - wariant 22"
 tags:
-- trudnosc-9
+- trudnosc-5
 - fantasy
 - smoki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/14/jednorozce-14.svg
 pdf: /fantasy/jednorozce/14/jednorozce-14.pdf
 alt: "Edukacyjna kolorowanka jednorozce do wydruku - wariant 14"
 tags:
-- trudnosc-8
+- trudnosc-4
 - fantasy
 - jednorozce
 ---

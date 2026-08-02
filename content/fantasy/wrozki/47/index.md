@@ -7,7 +7,7 @@ image: /fantasy/wrozki/47/wrozki-47.svg
 pdf: /fantasy/wrozki/47/wrozki-47.pdf
 alt: "Malowanka wrozki do druku A4 - wariant 47"
 tags:
-- trudnosc-7
+- trudnosc-8
 - fantasy
 - wrozki
 ---

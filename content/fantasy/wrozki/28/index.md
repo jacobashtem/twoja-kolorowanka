@@ -7,7 +7,7 @@ image: /fantasy/wrozki/28/wrozki-28.svg
 pdf: /fantasy/wrozki/28/wrozki-28.pdf
 alt: "Kolorowanka z wrozki do pobrania - wariant 28"
 tags:
-- trudnosc-7
+- trudnosc-5
 - fantasy
 - wrozki
 ---

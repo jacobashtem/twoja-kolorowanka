@@ -7,7 +7,7 @@ image: /fantasy/smoki/35/smoki-35.svg
 pdf: /fantasy/smoki/35/smoki-35.pdf
 alt: "Prosta kolorowanka smoki do kolorowania - wariant 35"
 tags:
-- trudnosc-3
+- trudnosc-7
 - fantasy
 - smoki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/1/jednorozce-1.svg
 pdf: /fantasy/jednorozce/1/jednorozce-1.pdf
 alt: "Kolorowanka jednorozce - wariant 1"
 tags:
-- trudnosc-8
+- trudnosc-2
 - fantasy
 - jednorozce
 ---

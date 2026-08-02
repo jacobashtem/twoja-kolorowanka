@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/17/jednorozce-17.svg
 pdf: /fantasy/jednorozce/17/jednorozce-17.pdf
 alt: "Prosta kolorowanka jednorozce do kolorowania - wariant 17"
 tags:
-- trudnosc-7
+- trudnosc-4
 - fantasy
 - jednorozce
 ---

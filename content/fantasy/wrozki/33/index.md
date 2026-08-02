@@ -7,7 +7,7 @@ image: /fantasy/wrozki/33/wrozki-33.svg
 pdf: /fantasy/wrozki/33/wrozki-33.pdf
 alt: "wrozki kolorowanka dla dzieci - wariant 33"
 tags:
-- trudnosc-9
+- trudnosc-5
 - fantasy
 - wrozki
 ---

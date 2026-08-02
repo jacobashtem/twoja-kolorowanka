@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/40/jednorozce-40.svg
 pdf: /fantasy/jednorozce/40/jednorozce-40.pdf
 alt: "jednorozce kolorowanki dla dzieci - wariant 40"
 tags:
-- trudnosc-2
+- trudnosc-8
 - fantasy
 - jednorozce
 ---

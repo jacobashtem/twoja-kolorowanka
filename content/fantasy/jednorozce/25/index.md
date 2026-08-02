@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/25/jednorozce-25.svg
 pdf: /fantasy/jednorozce/25/jednorozce-25.pdf
 alt: "jednorozce do druku i pokolorowania - wariant 25"
 tags:
-- trudnosc-8
+- trudnosc-5
 - fantasy
 - jednorozce
 ---

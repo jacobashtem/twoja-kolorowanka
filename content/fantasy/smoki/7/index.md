@@ -7,7 +7,7 @@ image: /fantasy/smoki/7/smoki-7.svg
 pdf: /fantasy/smoki/7/smoki-7.pdf
 alt: "smoki do druku i pokolorowania - wariant 7"
 tags:
-- trudnosc-10
+- trudnosc-4
 - fantasy
 - smoki
 ---

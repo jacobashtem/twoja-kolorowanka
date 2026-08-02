@@ -7,7 +7,7 @@ image: /fantasy/smoki/28/smoki-28.svg
 pdf: /fantasy/smoki/28/smoki-28.pdf
 alt: "Kolorowanka z smoki do pobrania - wariant 28"
 tags:
-- trudnosc-8
+- trudnosc-5
 - fantasy
 - smoki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/wrozki/27/wrozki-27.svg
 pdf: /fantasy/wrozki/27/wrozki-27.pdf
 alt: "wrozki – pobierz i wydrukuj kolorowankę - wariant 27"
 tags:
-- trudnosc-8
+- trudnosc-4
 - fantasy
 - wrozki
 ---

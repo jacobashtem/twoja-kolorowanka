@@ -7,7 +7,7 @@ image: /fantasy/smoki/42/smoki-42.svg
 pdf: /fantasy/smoki/42/smoki-42.pdf
 alt: "Kolorowanki do druku smoki - wariant 42"
 tags:
-- trudnosc-9
+- trudnosc-10
 - fantasy
 - smoki
 ---

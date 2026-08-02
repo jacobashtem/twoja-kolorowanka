@@ -6,7 +6,7 @@ variant_of: kroliczki
 image: /kroliczki/55/kroliczki-55.svg
 pdf: /kroliczki/55/kroliczki-55.pdf
 tags:
-- trudnosc-9
+- trudnosc-8
 - zwierzeta
 - kroliczki
 alt: "kroliczki do druku i pokolorowania - wariant 55"

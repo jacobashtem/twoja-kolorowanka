@@ -7,7 +7,7 @@ image: /fantasy/wrozki/26/wrozki-26.svg
 pdf: /fantasy/wrozki/26/wrozki-26.pdf
 alt: "Darmowa kolorowanka wrozki do druku PDF - wariant 26"
 tags:
-- trudnosc-7
+- trudnosc-4
 - fantasy
 - wrozki
 ---

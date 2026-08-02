@@ -7,7 +7,7 @@ image: /fantasy/smoki/3/smoki-3.svg
 pdf: /fantasy/smoki/3/smoki-3.pdf
 alt: "smoki kolorowanka dla dzieci - wariant 3"
 tags:
-- trudnosc-6
+- trudnosc-3
 - fantasy
 - smoki
 ---

@@ -222,6 +222,13 @@ const KROK = Number((argv.find(a => a.startsWith('--krok=')) ?? '').split('=')[1
 // i dzięki temu własny zestaw koni i scenerii, zamiast trzeciej kopii tego samego pomysłu.
 const OD = Number((argv.find(a => a.startsWith('--od=')) ?? '').split('=')[1]) || 0
 
+// --zestaw=nazwa bierze warianty (i ewentualnie własną pulę scen) z pola `zestawy`
+// kategorii zamiast z głównych. Powstało dla królików: bajkowa dwunastka zostaje na
+// swoim miejscu, a obok niej stoi druga, naturalistyczna. Zestawów NIE mieszamy w jednym
+// przebiegu — „oversized head" obok „loaf shape" dałoby serię bez wspólnego charakteru.
+// Nazwa trafia też do katalogu wyjściowego, żeby serie się nie nadpisały.
+const ZESTAW = (argv.find(a => a.startsWith('--zestaw=')) ?? '').split('=')[1] || ''
+
 // --prompt="..." omija obie osie i wysyła podany tekst dosłownie, dla wszystkich sztuk serii
 // (różnicuje je tylko seed). Furtka do testów w rodzaju "czy pięć słów nie wypada lepiej
 // niż nasz rozbudowany opis" — przy jaszczurkach wygrał prompt minimalny, więc pytanie
@@ -245,13 +252,26 @@ if (!klucz && kategoria) {
   }
 }
 
-const cfg = KATEGORIE[klucz]
-if (!cfg) {
+const cfgBazowe = KATEGORIE[klucz]
+if (!cfgBazowe) {
   console.error(`Nieznana kategoria: ${kategoria ?? '(brak)'}`)
   console.error(`Dostępne: ${klucze.join(', ')}`)
   console.error('Nową dopisz w prompty/kategorie.mjs.')
   process.exit(2)
 }
+
+// Zestaw nadpisuje tylko te pola, które sam podaje. Format, grubość i `biale` zostają
+// od kategorii, bo to wciąż ta sama kategoria — zmienia się pomysł na warianty, nie temat.
+const zestaw = ZESTAW ? cfgBazowe.zestawy?.[ZESTAW] : null
+if (ZESTAW && !zestaw) {
+  const dostepne = Object.keys(cfgBazowe.zestawy ?? {})
+  console.error(`Kategoria "${klucz}" nie ma zestawu "${ZESTAW}".`)
+  console.error(dostepne.length
+    ? `Dostępne zestawy: ${dostepne.join(', ')}`
+    : 'Ta kategoria nie ma żadnych zestawów — pomiń --zestaw.')
+  process.exit(2)
+}
+const cfg = { ...cfgBazowe, ...(zestaw ?? {}) }
 if (!PROMPT && !cfg.warianty?.length) {
   console.error(`Kategoria "${klucz}" jest zarejestrowana, ale nie ma jeszcze wariantów.`)
   console.error('Uzupełnij pole `warianty` w prompty/kategorie.mjs (12 pozycji, każda musi zmieniać KONTUR).')
@@ -299,7 +319,8 @@ const STYL_SLUG = STYL_ETYKIETA
       : '')
 
 const WARIANT = (PROVIDER === 'flux' ? 'flux' : MODEL_KEY) +
-                (ART !== null ? `-art${ART}` : '') + (GOLY ? '-goly' : '') + STYL_SLUG
+                (ART !== null ? `-art${ART}` : '') + (GOLY ? '-goly' : '') + STYL_SLUG +
+                (ZESTAW ? `-${ZESTAW}` : '')
 const OUT = join('lineart-work', katalogRoboczy, `raw-${WARIANT}`)
 mkdirSync(OUT, { recursive: true })
 
@@ -495,7 +516,10 @@ let zrobione = 0, bledy = 0, ponowione = 0, ostrzezono = false
 //   generuj → waliduj --segreguj → generuj ponownie
 // dobija kategorię do kompletu, nie płacąc powtórnie za sztuki, które przeszły.
 function stanPozycji (nazwa) {
-  for (const ext of ['svg', 'png']) {
+  // `webp` MUSI tu być: style panelowe (rastrowe) zapisują właśnie webp, więc bez tego
+  // rozszerzenia pętla uzupełniania nie rozpoznawała ani jednej gotowej pozycji i seria
+  // przerwana w połowie naliczała się od nowa w całości.
+  for (const ext of ['svg', 'png', 'webp']) {
     if (existsSync(join(OUT, `${nazwa}.${ext}`)))        return { gotowa: true }
     if (existsSync(join(OUT, 'ok', `${nazwa}.${ext}`)))  return { gotowa: true }
     const odrzut = join(OUT, 'odrzut', `${nazwa}.${ext}`)

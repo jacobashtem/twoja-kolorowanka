@@ -7,7 +7,7 @@ image: /fantasy/wrozki/21/wrozki-21.svg
 pdf: /fantasy/wrozki/21/wrozki-21.pdf
 alt: "wrozki kolorowanka dla dzieci - wariant 21"
 tags:
-- trudnosc-7
+- trudnosc-4
 - fantasy
 - wrozki
 ---

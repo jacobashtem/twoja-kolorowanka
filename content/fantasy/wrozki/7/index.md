@@ -7,7 +7,7 @@ image: /fantasy/wrozki/7/wrozki-7.svg
 pdf: /fantasy/wrozki/7/wrozki-7.pdf
 alt: "wrozki do druku i pokolorowania - wariant 7"
 tags:
-- trudnosc-7
+- trudnosc-4
 - fantasy
 - wrozki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/jednorozce/12/jednorozce-12.svg
 pdf: /fantasy/jednorozce/12/jednorozce-12.pdf
 alt: "kolorowanka do druku jednorozce PDF - wariant 12"
 tags:
-- trudnosc-9
+- trudnosc-3
 - fantasy
 - jednorozce
 ---

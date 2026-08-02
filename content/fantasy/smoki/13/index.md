@@ -7,7 +7,7 @@ image: /fantasy/smoki/13/smoki-13.svg
 pdf: /fantasy/smoki/13/smoki-13.pdf
 alt: "Łatwa kolorowanka smoki dla przedszkolaka - wariant 13"
 tags:
-- trudnosc-6
+- trudnosc-4
 - fantasy
 - smoki
 ---
