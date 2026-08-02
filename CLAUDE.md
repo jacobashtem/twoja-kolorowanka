@@ -36,7 +36,14 @@ pnpm dev                        # serwer deweloperski
 pnpm build                      # trasy + brakujące miniatury + generate + kontrola builda
 node scripts/health-check.mjs   # spójność content ↔ public, puste SVG, brakujące pliki
 node scripts/stat-kategorie.mjs # ile kategorii, ile liści, postęp migracji, koszty
+start.cmd                       # panel selekcji: co czeka na wybór, galerie, sprzątanie
 ```
+
+`start.cmd` (podwójne kliknięcie) podnosi **panel selekcji** na `localhost:4321`: lista
+kategorii z katalogu roboczego ze statusem (do selekcji → wybrane → podmieniona → na
+produkcji), wejście w galerię każdej z nich i **zapis wyboru prosto do `_wybor.txt`**.
+Materiał roboczy kategorii, które są już na `origin/main`, kasuje się przy starcie panelu —
+`_wybor.txt` zostaje zawsze, bo to jedyny plik, którego nie da się odtworzyć.
 
 ## Wymiana biblioteki grafik
 

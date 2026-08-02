@@ -6,8 +6,9 @@ description: Pelny pipeline wymiany kategorii kolorowanek na wlasne, generowane 
 # Kategoria kolorowanek: od promptu do podmiany
 
 Migracja biblioteki z licencjonowanego stocka na własne grafiki z Recrafta.
-75 kategorii, ~4400 kolorowanek. Pipeline przeszedł pełny cykl na `zwierzeta/dinozaury`
-(39 sztuk, 2026-07-28) — kolejne kategorie idą tą samą ścieżką.
+76 kategorii, ~4200 kolorowanek. Pełny cykl przeszło dotąd dziesięć kategorii: dinozaury,
+kombajny, koniki, koty, jaszczurki (do 2026-07-30) oraz kroliczki, pieski, jednorożce, smoki
+i wróżki (2026-08-02) — kolejne idą tą samą ścieżką.
 
 **Zasady niepodlegające negocjacji:**
 
@@ -75,8 +76,20 @@ node scripts/lineart-generate.mjs <kategoria> --model=v3 --model-id=recraftv3 \
 
 ```
 node scripts/validate-lineart.mjs lineart-work/<kategoria>
-node scripts/galeria.mjs lineart-work/<kategoria> --wybor --sort=trudnosc --kolumny=5
+node scripts/galeria.mjs lineart-work/<kategoria> --wybor --sort=trudnosc --kolumny=5 --serwer
 ```
+
+**`--serwer` jest ważne.** Bez niego strona idzie z `file://`, czyli NIE MOŻE nic zapisać —
+listę trzeba przeklejać ze schowka. Z nim galeria stoi na `localhost:4321` i zaznaczenia
+lądują same w `lineart-work/<kategoria>/_wybor.txt`, sekundę po ostatnim kliknięciu.
+Wcześniejszy `_wybor.txt` wraca jako stan początkowy, więc selekcję można przerwać
+i dokończyć innego dnia.
+
+Do przejścia wielu kategorii naraz jest **panel**: `start.cmd` w katalogu głównym
+(albo `node scripts/panel-selekcji.mjs`). Pokazuje wszystkie kategorie z katalogu roboczego
+ze statusem — do selekcji → wybrane → podmieniona → na produkcji — i wchodzi w galerię
+każdej z nich pod tym samym adresem. Materiał kategorii, które są już na `origin/main`,
+kasuje przy starcie; `_wybor.txt` zostaje zawsze.
 
 Walidator daje trzy niezależne profile: **druk** (podstawa biblioteki), **online** (flood fill,
 u nas dodatek), **maluchy** (gruba kreska). Zapisuje `_walidacja.json`, a galeria pokazuje
@@ -118,14 +131,28 @@ node scripts/health-check.mjs
 Strona sortuje galerię kategorii po tagu `trudnosc-N` (`byTrudnosc` w `pages/[...slug].vue`),
 więc bez przetagowania kolejność będzie kłamać.
 
-Jeśli usuwasz stare liście — usuń je z `content/` **i** z `public/` (4 pliki na liść),
-potem `pnpm build` odtworzy `prerender-routes.json`. Wszystko jest w gicie, więc odwracalne.
+Wybór jest zwykle mniejszy niż stara kategoria, więc nadmiar liści zostaje z grafikami
+z Freepika — `podmien-kategorie.mjs` celowo ich nie rusza, tylko o nich mówi. Do usunięcia
+jest osobny skrypt (dry-run domyślnie, `--zapisz` wykonuje):
+
+```
+node scripts/usun-nadmiarowe-liscie.mjs <sciezka/kategorii> --lista=lineart-work/<kategoria>/_wybor.txt --zapisz
+```
+
+Kasuje z `content/` **i** z `public/` naraz (4 pliki na liść, razem z miniaturami, których
+nie ma we frontmatterze) i odmawia, gdyby kategoria zeszła poniżej progu `sekcje H2 × 4`.
+Potem `pnpm build` odtworzy `prerender-routes.json`. Wszystko jest w gicie, więc odwracalne.
 
 ## Rzeczy, które łatwo zrobić źle
 
 - **Ścieżek w `public/` nie da się zgadnąć z nazwy kategorii.** Cztery kategorie (koty, koniki,
   kroliczki, pieski) leżą w `public/` bez `zwierzeta/`. Zawsze czytaj pole `image:` z index.md
   danego liścia — zgadywanie wyprodukowało kiedyś fałszywy alarm o 304 martwych liściach.
+- **Nazwa katalogu roboczego NIE jest unikalna.** `lineart-work/<nazwa>` to ostatni segment
+  klucza z księgi promptów, a dwie pary kluczy kończą się tak samo: `fantasy/jednorozce`
+  z `dla-doroslych/jednorozce` oraz `zwierzeta/myszki` z `myszki`. Mapowanie „segment →
+  kategoria" pokazało kiedyś stan zupełnie innej kategorii. Do skryptów podawaj PEŁNĄ ścieżkę
+  kategorii, a przy wyprowadzaniu jej z nazwy katalogu sprawdź, czy kandydat jest jeden.
 - **Waga SVG >500 KB** to sygnał, że to styl cieniowany, a nie kolorowanka. Wydajnościowo
   prawie nie boli (strona serwuje webp; pełny SVG idzie tylko do edytora `/koloruj/`), ale
   boli rozmiar repo i szybkość flood filla.
