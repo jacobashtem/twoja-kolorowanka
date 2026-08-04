@@ -7,7 +7,7 @@ image: /fantasy/syrenki/45/syrenki-45.svg
 pdf: /fantasy/syrenki/45/syrenki-45.pdf
 alt: "syrenki kolorowanka dla dzieci"
 tags:
-- trudnosc-10
+- trudnosc-9
 - fantasy
 - syrenki
 ---

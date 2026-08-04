@@ -298,6 +298,45 @@ export const SCENY = {
     'beside a snail shell on a bed of moss dotted with tiny flowers'
   ],
 
+  // ── Morskie: pula DEDYKOWANA syrenkom ─────────────────────────────────────
+  // Szósta pula pod jedną kategorię, druga pod postać LUDZKĄ (po `wrozkowe`).
+  //
+  // Dlaczego NIE `woda`, mimo że syrenka pływa. `woda` to pula RYB — `zwierzeta/ryby`
+  // bierze ją wprost, a jej sześć scen to czasowniki rybie w rybim świecie: wodorosty,
+  // kamyki, koral, bańki. Syrenka wpuszczona w tę scenerię dostaje otoczenie, w którym
+  // wyłącznością jest ryba, czyli własny SĄSIEDNI OBIEKT (patrz komentarz przy kategorii).
+  // Do tego sześć scen to za mało na 40+ sztuk. Rekwizyty poniżej należą do świata
+  // syrenki, nie ryby: wrak, skrzynia, pałac z muszli, perła, kotwica.
+  //
+  // Sceny są BEZ ZAIMKÓW — wśród wariantów jest chłopiec (wariant 5), więc „with her tail"
+  // wyklułoby się w sprzeczność przy krzyżowaniu. Ta sama zasada co w `wrozkowe`.
+  //
+  // Wszystkie sceny są PRZYIMKOWE („beside", „among", „at"), bez czasownika pozy. Połowa
+  // wariantów niesie już własne ułożenie ogona (spirala, łuk, zwinięty czubek), a scena
+  // z własnym czasownikiem („diving", „leaping") biłaby się z nim przy krzyżowaniu.
+  //
+  // Świadomie NIE ma tu GŁĘBIN ANI NOCY — ciemna toń to gotowa czarna płachta, ta sama
+  // porażka co nocne niebo w `magia`. Nie ma też gęstych łanów wodorostów ani ukwiałów:
+  // pasma i macki wychodzą równoległym sztrychem, który w druku daje szarość (tak poległa
+  // kora drzewa przy jaszczurkach w stylu nautical).
+  //
+  // Nie ma ŻADNEJ LINY ani drabinki sznurowej, mimo że wrak sam się o nie prosi — przy
+  // pieskach `a rope swing` wyszło jako stryczek. Wrak występuje wyłącznie jako kadłub.
+  morskie: [
+    'beside a small sunken sailing ship with round portholes',
+    'on a smooth round rock with foam curling round its base',
+    'beside an open chest spilling round coins and strings of pearls',
+    'at the gate of a palace of shells with tall spiral towers',
+    'beside a giant open clam with one big round pearl inside',
+    'among round jellyfish trailing long ribbon tentacles',
+    'alongside a friendly dolphin curving through the water',
+    'in a tide pool ringed with starfish and round pebbles',
+    'beside a big anchor half buried in the sand',
+    'on a sandbank at the water edge with a scattered line of shells',
+    'beside a seahorse curled around a stem of coral',
+    'under a cloud of round bubbles rising toward the bright surface'
+  ],
+
   // ── Pojazdy ────────────────────────────────────────────────────────────────
   pole: [
     'cutting a wide stripe through a field of tall wheat',

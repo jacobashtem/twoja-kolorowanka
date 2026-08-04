@@ -7,7 +7,7 @@ image: /fantasy/syrenki/30/syrenki-30.svg
 pdf: /fantasy/syrenki/30/syrenki-30.pdf
 alt: "kolorowanka do druku syrenki PDF"
 tags:
-- trudnosc-2
+- trudnosc-5
 - fantasy
 - syrenki
 ---

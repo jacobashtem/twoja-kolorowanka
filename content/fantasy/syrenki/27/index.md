@@ -7,7 +7,7 @@ image: /fantasy/syrenki/27/syrenki-27.svg
 pdf: /fantasy/syrenki/27/syrenki-27.pdf
 alt: "syrenki – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-9
+- trudnosc-5
 - fantasy
 - syrenki
 ---

@@ -7,7 +7,7 @@ image: /fantasy/syrenki/31/syrenki-31.svg
 pdf: /fantasy/syrenki/31/syrenki-31.pdf
 alt: "Łatwa kolorowanka syrenki dla przedszkolaka"
 tags:
-- trudnosc-8
+- trudnosc-5
 - fantasy
 - syrenki
 ---

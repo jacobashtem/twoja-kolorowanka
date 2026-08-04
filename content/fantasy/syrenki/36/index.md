@@ -7,7 +7,7 @@ image: /fantasy/syrenki/36/syrenki-36.svg
 pdf: /fantasy/syrenki/36/syrenki-36.pdf
 alt: "Pokoloruj syrenki – darmowy szablon PDF"
 tags:
-- trudnosc-8
+- trudnosc-6
 - fantasy
 - syrenki
 ---

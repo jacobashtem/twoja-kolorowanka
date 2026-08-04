@@ -425,7 +425,83 @@ export const KATEGORIE = {
     ],
     sceny: SCENY.wrozkowe, grubosc: DEKORACYJNE, format: 'pion'
   },
-  'fantasy/syrenki':         { warianty: [], sceny: SCENY.woda,  grubosc: DEKORACYJNE, format: 'pion' },
+  // Syrenki: druga kategoria z postacią LUDZKĄ, więc obowiązują obie lekcje z wróżek —
+  // włosy zamknięte w kształcie i `full body fills the frame` w każdym wariancie.
+  //
+  // SĄSIAD JEST TU POTRÓJNY i wszyscy trzej istnieją w serwisie albo czekają w rejestrze:
+  //   `zwierzeta/ryby`   — sam ogon z płetwą to opis ryby
+  //   `fantasy/wrozki`   — drobna postać z ozdobami; słowo „wings" przywołałoby ją wprost
+  //   `ksiezniczki`      — dziewczynka w stroju; „gown", „crown" i „shoes" należą do niej
+  // Kotwicą jest samo słowo `mermaid` i NIC PONADTO. Pierwsza wersja tej listy powtarzała
+  // `fish tail` we wszystkich dwunastu wariantach, przez analogię do hedera przy kombajnach.
+  // Jakub to zakwestionował i miał rację — analogia nie trzyma w obie strony:
+  //   • heder był potrzebny, bo słowo „kombajn" NIE wystarczało, model i tak dawał traktory.
+  //     Tymczasem „mermaid" to jedno z najlepiej wyuczonych pojęć w modelach graficznych,
+  //     a rybi ogon należy do DEFINICJI tego słowa, nie jest jego detalem.
+  //   • „fish" to słowo należące do SĄSIADA. Odganialiśmy rybę, wstawiając token „ryba"
+  //     do każdego promptu — dokładnie ten mechanizm, przed którym ostrzega rozdział 4.
+  // Ogon jest nadal opisany w każdym wariancie, ale wyłącznie jako KSZTAŁT (oś sylwetki),
+  // nigdy jako gatunek. Z tego samego powodu wypadł „seahorse tip" — konik morski jest
+  // wariantem w `zwierzeta/ryby`, więc przywoływałby tamtą kategorię.
+  //
+  // Korony nie ma nigdzie: syrenka w koronie to księżniczka z ogonem, a to osobna
+  // kategoria. Zamiast niej opaska z muszli, spinka i sznur pereł.
+  //
+  // Oś sylwetki to KSZTAŁT OGONA (wachlarz, welon, spirala, widelec, czubek jak u konika
+  // morskiego, krótki dziecięcy) plus fryzura o określonym obrysie. Whimsy gubi wszystko
+  // poniżej poziomu sylwetki — przy jaszczurkach „fringed eyebrows" dało generycznego gadzika
+  // — więc żaden wariant nie różnicuje się fakturą łusek ani wzorem na płetwie.
+  //
+  // POZY LEŻĄCE ODPADŁY ŚWIADOMIE. Przy króliczkach flop i sploot wyszły jako zwierzę do góry
+  // nogami albo od tyłu; whimsy ich nie zna. Ogon układa się więc w spiralę i w łuk (warianty
+  // 4 i 12), czyli pionowo, bo takie pozy przechodziły.
+  //
+  // Wariant 5 to chłopiec, tak samo jak dziesiąty u wróżek — kategoria nie ma być wyłącznie
+  // dziewczęca. Stąd też sceny w `morskie` są bez zaimków.
+  //
+  // ── WNIOSKI Z SELEKCJI 48/72 (2026-08-04) — do przepisania przed następną serią ──
+  //
+  // 1. MASA CIAŁA NIE JEST OSIĄ SYLWETKI PRZY POSTACI LUDZKIEJ. Wariant 9 („a plump
+  //    mermaid… a round face") i 2 („a chubby little mermaid child") wzięły się stąd,
+  //    że u jednorożców i smoków tusza świetnie różnicuje obrys — „a chubby baby unicorn",
+  //    „a stocky dragon with a round belly". Przeniesione na człowieka czyta się zupełnie
+  //    inaczej i Jakub zgłosił to sam. Przy dziecku (wariant 2) jeszcze uchodzi, bo to
+  //    trop bobasa; przy dorosłej postaci nie. Whimsy dodatkowo zaokrągla wszystko,
+  //    czego nie musi. Różnicować włosami, kształtem ogona, strojem i rekwizytem.
+  //
+  // 2. RYBICH CECH NIE DOKLEJAĆ DO LUDZKIEJ POŁOWY. Najsłabszy wariant (11, 2/6) miał
+  //    „a tall ridged fin down her back", czyli płetwę grzbietową na ludzkich plecach.
+  //    Ogon jest miejscem na wariacje płetw — tors nie jest.
+  //
+  // 3. DRUGA POSTAĆ W KADRZE KOSZTUJE. Wariant 10 (syrenka z bobasem) i scena z delfinem
+  //    poszły po 50%, przy średniej 67%. Każda dodatkowa istota to druga twarz do
+  //    zepsucia, a twarze są tu najtrudniejsze — to ta sama lekcja co przy wróżkach.
+  //
+  // 4. Najlepszy wariant (4, 6/6) to ogon zwinięty w spiralę plus bob. Zwarta sylwetka
+  //    i włosy o zamkniętym kształcie — dokładnie to, co miało działać.
+  //
+  // `biale` wypełnione zgodnie z checklistą: włosy i łuski to dla modelu partie z natury
+  // ciemne, dokładnie jak grzywa u koni. Uwaga — `--goly` tego pola NIE wysyła, a przy kotach
+  // okazało się, że pod stylami panelowymi problem i tak nie wraca (to była właściwość
+  // wbudowanego „Line art"). Pole jest tu na wypadek serii bez `--goly`.
+  'fantasy/syrenki': {
+    warianty: [
+      'a mermaid with a long tail ending in a wide fan-shaped fluke, a shell top and one thick braid, full body fills the frame',
+      'a chubby little mermaid child with a short stubby tail, an oversized head and two bunches of hair, full body fills the frame',
+      'a mermaid with a long tail trailing veil-like fins, a shell top and hair in a high bun, full body fills the frame',
+      'a mermaid with a tail curled into a spiral, a shell top and short bobbed hair, full body fills the frame',
+      'a merman boy with a broad strong tail, cropped hair and a belt of shells, full body fills the frame',
+      'a mermaid with a tail edged with scalloped frills, a shell top and a wide shell headband, full body fills the frame',
+      'a mermaid with a long tail ending in a deeply forked fluke and two long braids, full body fills the frame',
+      'a mermaid with a slender tail tapering to a tightly curled tip and hair in a topknot, full body fills the frame',
+      'a plump mermaid with a short broad tail, a round face, short curly hair and a small round hand mirror, full body fills the frame',
+      'a mermaid with a long tail and a tiny merbaby with a stubby tail beside her, full body fills the frame',
+      'a mermaid with a tail and a tall ridged fin down her back, a shell top and a long plait bound with ribbon, full body fills the frame',
+      'a mermaid with a long tail curved in a high arc, a strand of pearls and a long ponytail, full body fills the frame'
+    ],
+    biale: 'white hair, white scales, white tail fin',
+    sceny: SCENY.morskie, grubosc: DEKORACYJNE, format: 'pion'
+  },
   'fantasy/elfy':            { warianty: [], sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion' },
   'ksiezniczki':             { warianty: [], sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion' },
   'dla-doroslych/jednorozce':{ warianty: [], sceny: SCENY.magia, grubosc: DLA_DOROSLEGO, format: 'pion' },

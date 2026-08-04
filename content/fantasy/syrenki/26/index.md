@@ -7,7 +7,7 @@ image: /fantasy/syrenki/26/syrenki-26.svg
 pdf: /fantasy/syrenki/26/syrenki-26.pdf
 alt: "Darmowa kolorowanka syrenki do druku PDF"
 tags:
-- trudnosc-6
+- trudnosc-5
 - fantasy
 - syrenki
 ---
