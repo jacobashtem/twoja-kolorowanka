@@ -7,7 +7,7 @@ image: /fantasy/syrenki/25/syrenki-25.svg
 pdf: /fantasy/syrenki/25/syrenki-25.pdf
 alt: "syrenki do druku i pokolorowania"
 tags:
-- trudnosc-6
+- trudnosc-5
 - fantasy
 - syrenki
 ---

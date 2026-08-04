@@ -7,7 +7,7 @@ image: /fantasy/syrenki/16/syrenki-16.svg
 pdf: /fantasy/syrenki/16/syrenki-16.pdf
 alt: "Kolorowanka syrenki – format A4 PDF"
 tags:
-- trudnosc-3
+- trudnosc-4
 - fantasy
 - syrenki
 ---

@@ -47,6 +47,23 @@ Przy kotach nauczyliśmy się tego kosztownie: warianty opisane rasami wciągnę
 w realizm, a stamtąd w umaszczenie — koty wychodziły łaciate i czarno-białe, bo takie są
 prawdziwe koty. Skuteczność spadła do 68%. Po przejściu na cechy sylwetki wróciła do 90%.
 
+### Wyjątek: postać ludzka ma węższą oś niż zwierzę
+
+Przy zwierzętach i stworach **masa ciała jest świetnym różnicowaniem obrysu** i używamy jej
+bez wahania: „a chubby baby unicorn", „a plump baby dragon", „a stocky dragon with a round
+belly". Przy **postaci ludzkiej ten sam chwyt czyta się zupełnie inaczej** — na syrenkach
+dwa warianty z „plump" i „chubby" dały 17% serii, którą Jakub skomentował sam z siebie.
+
+Dziecko jeszcze uchodzi, bo działa trop bobasa. Dorosła postać nie. Zostają: **włosy
+o zamkniętym kształcie, strój, rekwizyt, kształt ogona lub skrzydeł, poza**.
+
+Druga rzecz specyficzna dla postaci: **nie doklejaj cech zwierzęcych do ludzkiej połowy.**
+Najsłabszy wariant syrenek (2/6) miał płetwę grzbietową na ludzkich plecach. Ogon jest
+miejscem na wariacje płetw, tors nie jest.
+
+Trzecia: **każda druga istota w kadrze to druga twarz do zepsucia.** Wariant z bobasem
+i scena z delfinem poszły po 50% przy średniej 67%.
+
 **Kiedy gatunek ma naturalnie ciemne partie** (grzywa konia, uszy kota, kopyta), nie zakazuj
 ich w negatywie — to nie działa (test na koniach: 3,7% → 4,0% czerni, czyli zero zmiany).
 Użyj pola `biale` z twierdzeniem: `white mane, white tail, white hooves`. Model dostaje wtedy
