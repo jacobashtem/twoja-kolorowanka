@@ -2,6 +2,6 @@
   <main>
     <slot />
   </main>
-  <!-- <NewsletterSection /> -->
+  <NewsletterSection />
   <AppFooter />
 </template>

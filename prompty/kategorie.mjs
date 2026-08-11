@@ -502,8 +502,195 @@ export const KATEGORIE = {
     biale: 'white hair, white scales, white tail fin',
     sceny: SCENY.morskie, grubosc: DEKORACYJNE, format: 'pion'
   },
-  'fantasy/elfy':            { warianty: [], sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion' },
-  'ksiezniczki':             { warianty: [], sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion' },
+  // ── Trzy kategorie z postacią LUDZKĄ, rozpisane 2026-08-11 pod pakiet powitalny
+  // newslettera (nie pod migrację kategorii — materiał ma być EKSKLUZYWNY dla zapisanych,
+  // więc do serwisu nie trafia). Obowiązują obie lekcje z wróżek i syrenek: włosy
+  // o zamkniętym kształcie, `full body fills the frame` w każdym wariancie, jedna postać
+  // w kadrze, i ANI RAZU masa ciała jako oś sylwetki (rozdział 2, wyjątek dla postaci).
+  //
+  // KSIĘŻNICZKI — sąsiedzi są trzej i wszyscy istnieją w rejestrze:
+  //   `fantasy/wrozki`   — słowo „wings" przywołałoby ją wprost
+  //   `fantasy/syrenki`  — dlatego tam świadomie NIE ma korony; tu jest jej miejsce
+  //   `fantasy/elfy`     — „pointed ears" należą do nich
+  // Kotwicą jest `princess` + suknia + korona. Oś sylwetki to KSZTAŁT SUKNI (dzwon,
+  // tren, klosz, wąska prosta, falbany) plus fryzura o zamkniętym obrysie.
+  // Wariant 5 to chłopiec, tak samo jak u wróżek i syrenek.
+  'ksiezniczki': {
+    warianty: [
+      'a princess in a wide bell-shaped ball gown with a small pointed crown and hair in a high bun, full body fills the frame',
+      'a princess in a long gown with a trailing train and one thick braid over her shoulder, wearing a narrow tiara, full body fills the frame',
+      'a princess in a short flared dress with puffed sleeves and hair in two coiled buns, full body fills the frame',
+      'a princess in a straight narrow gown with a high collar, a beaded crown and a long ponytail, full body fills the frame',
+      'a prince in a belted tunic with a short cape and a slim circlet on cropped hair, full body fills the frame',
+      'a princess in a layered ruffled skirt holding a round hand fan, hair in a bob under a flower crown, full body fills the frame',
+      'a princess in a gown with a wide lace collar and hair in a crown braid wound around her head, full body fills the frame',
+      'a princess in a gown with a long buttoned bodice and a small crown, holding a round hand mirror, full body fills the frame',
+      'a princess in a gown with huge puffed sleeves and hair in a side bun tied with a ribbon, full body fills the frame',
+      'a princess in a hooded velvet cloak over a long gown, wearing a crown over the hood, full body fills the frame',
+      'a princess in a gown with a scalloped hem and hair in a low chignon, holding a small posy of flowers, full body fills the frame',
+      'a princess in a riding dress with a short cape and tall boots, hair in a tight bun under a small crown, full body fills the frame'
+    ],
+    biale: 'white hair, white gown, white crown',
+    sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion'
+  },
+  // ELFY — najtrudniejszy z trójki, bo sąsiedzi są dwaj i obaj groźni:
+  //   `fantasy/wrozki`   — drobna magiczna postać; stąd ZAKAZ słów „wings" i „tiny",
+  //                        które w tamtej kategorii są kotwicą
+  //   elf Mikołaja       — nie ma go w rejestrze, ale jest w modelu; odganiany przez
+  //                        `woodland` / `archer` i kontekst leśno-łuczniczy
+  // Kotwicą są `pointed ears` plus rekwizyt z tamtego świata (łuk, kołczan, laska).
+  'fantasy/elfy': {
+    warianty: [
+      'a woodland elf with long pointed ears and a hooded cloak, holding a curved bow, full body fills the frame',
+      'an elf archer with pointed ears and a quiver on the back, hair in a long single braid, full body fills the frame',
+      'an elf with pointed ears and a circlet of leaves, hair in a high ponytail, holding a wooden staff, full body fills the frame',
+      'an elf boy with pointed ears, cropped hair and a belted tunic with a rope belt, full body fills the frame',
+      'an elf with pointed ears and a long layered robe with wide sleeves, hands folded, full body fills the frame',
+      'an elf with pointed ears and hair in two braids, carrying a round woven basket, full body fills the frame',
+      'an elf with pointed ears and a fur-trimmed collar, hair in a short bob, holding a lantern on a chain, full body fills the frame',
+      'an elf with pointed ears in a long coat with a wide buckled belt, hair in a topknot, full body fills the frame',
+      'an elf with pointed ears and a cape fastened with a round brooch, hair in a crown braid, full body fills the frame',
+      'an elf girl with pointed ears in a tunic and leggings, hair in two buns, holding a small harp, full body fills the frame',
+      'an elf with pointed ears and a tall collared robe, both hands resting on a long wooden staff, full body fills the frame',
+      'an elf with pointed ears in a short cloak with the hood down, hair in a low ponytail, carrying a bundle of arrows, full body fills the frame'
+    ],
+    biale: 'white hair, white cloak, white tunic',
+    sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion'
+  },
+  // RYCERZE — kategorii o tej nazwie NIE MA w serwisie; klucz istnieje wyłącznie po to,
+  // by generator miał z czego wziąć warianty dla pakietu. Kotwicą jest `plate armour`
+  // + hełm, czyli cecha, której nie ma żaden sąsiad (wojownik, książę, wiking).
+  // Odrzucony świadomie hełm z rogami — przywołuje wikinga (rozdział 4).
+  // Konia nie ma ani w wariantach, ani w scenach: przejąłby sylwetkę i zrobiłby
+  // z tego `zwierzeta/koniki`. Wariant 5 to dziewczyna w zbroi.
+  // UWAGA na czerń: zbroja to duża powierzchnia metalu, czyli partia, którą model
+  // uznaje za z natury ciemną — dokładnie jak grzywa u koni. Stąd `biale`.
+  'rycerze': {
+    warianty: [
+      'a knight in plate armour with a tall plumed helmet, holding a triangular shield, full body fills the frame',
+      'a knight in plate armour with a visored helmet tucked under one arm, short cropped hair, full body fills the frame',
+      'a young knight in plate armour with a round shield and a short cloak, kneeling on one knee, full body fills the frame',
+      'a knight in plate armour with a wide-brimmed helmet and a long banner on a pole, full body fills the frame',
+      'a girl knight in plate armour with a long braid falling over the breastplate, holding a sword upright, full body fills the frame',
+      'a knight in plate armour with a helmet with a narrow eye slit and a kite-shaped shield, standing with hands on hips, full body fills the frame',
+      'a knight in plate armour with a rounded helmet and a long surcoat over the breastplate, full body fills the frame',
+      'a knight in plate armour with a crested helmet, holding a long spear upright, full body fills the frame',
+      'a knight in plate armour with a helmet under one arm and a heavy cloak over both shoulders, full body fills the frame',
+      'a knight in plate armour kneeling with a sword laid flat across both palms, full body fills the frame',
+      'a knight in plate armour with a rectangular tower shield planted on the ground, full body fills the frame',
+      'a knight in plate armour with a plumed helmet and one hand raised in greeting, full body fills the frame'
+    ],
+    biale: 'white armour, white plume, white shield',
+    sceny: SCENY.rycerskie, grubosc: DEKORACYJNE, format: 'pion'
+  },
+  // ZAWODY — pakiet powitalny newslettera, wersja druga (2026-08-11). Pierwsza próba
+  // (księżniczki + rycerze + elfy) została odrzucona z powodu PRODUKTOWEGO, nie jakościowego:
+  // rodzic drukuje paczkę dla JEDNEGO dziecka, więc zestaw mieszający zamki z sukniami
+  // oznacza, że połowa kartek idzie do kosza. „Kim chcę zostać" jest spójne tematycznie
+  // i działa na oba dziecięce światy naraz. Klucza nie ma w serwisie jako kategorii.
+  //
+  // ZASADA BEZ STEREOTYPU (wymóg Jakuba): płeć jest przypisana JAWNIE w każdym wariancie,
+  // bo opis neutralny („a child in a police uniform") oddaje decyzję modelowi, a ten
+  // sięga po stereotyp. Rozkład to 7 dziewczynek i 5 chłopców, przy czym odwrócone są
+  // wszystkie zawody tradycyjnie męskie (astronautka, strażaczka, policjantka, piłkarka,
+  // pilotka, naukowczyni, archeolożka) oraz jeden tradycyjnie żeński (tancerz baletowy).
+  //
+  // Obowiązują lekcje z wróżek i syrenek: `full body fills the frame` wszędzie, włosy
+  // o zamkniętym kształcie albo schowane pod nakryciem głowy, zero masy ciała jako osi.
+  // Wariant 11 (weterynarz z kotkiem) łamie świadomie zasadę „jedna postać w kadrze" —
+  // weterynarz bez zwierzęcia jest nieodróżnialny od lekarza. Spodziewam się tam
+  // niższej skuteczności, dlatego to jedyny taki przypadek w zestawie.
+  'zawody': {
+    warianty: [
+      'a girl astronaut in a padded space suit holding a round helmet under one arm, hair in a bun, full body fills the frame',
+      'a girl firefighter in a helmet and a jacket with reflective bands, holding a coiled hose, full body fills the frame',
+      'a girl police officer in a uniform with a peaked cap and a badge, hands behind her back, full body fills the frame',
+      'a girl footballer in a striped shirt and long socks, one foot resting on a ball, hair in a high ponytail, full body fills the frame',
+      'a girl pilot in a uniform jacket with a peaked cap and goggles pushed up on the brim, full body fills the frame',
+      'a girl scientist in a lab coat and round safety glasses holding a conical flask, hair in a short bob, full body fills the frame',
+      // POPRAWKA 2026-08-11: pierwsza wersja („a boy ballet dancer in a fitted top and
+      // tights") dała w 2 z 3 sztuk dziewczynkę w tutu — słowo „ballet" przywołuje
+      // baletnicę silniej, niż „boy" ją odgania. Dołożone `short cropped hair` (sygnał
+      // sylwetki, którego brakowało tylko w tym wariancie) oraz `full-length tights`,
+      // czyli strój męski opisany TWIERDZĄCO. Zakaz w promptcie pozytywnym („no skirt")
+      // działałby przeciw sobie, karmiąc model tokenem „skirt".
+      'a boy ballet dancer with short cropped hair in a fitted top and full-length tights, standing on tiptoe with both arms curved overhead, full body fills the frame',
+      'a boy doctor in a white coat with a stethoscope round his neck, holding a clipboard, short cropped hair, full body fills the frame',
+      'a boy chef in a tall pleated hat and a double-breasted jacket, holding a big ladle, full body fills the frame',
+      'a boy singer in a jacket with a wide collar, singing into a microphone on a stand, short cropped hair, full body fills the frame',
+      'a boy vet in a coat with rolled sleeves, holding a small kitten in both hands, short cropped hair, full body fills the frame',
+      'a girl archaeologist in a wide-brimmed hat and a vest with many pockets, holding a brush and a fossil, full body fills the frame'
+    ],
+    sceny: SCENY.zawodowe, grubosc: DEKORACYJNE, format: 'pion'
+  },
+  // ZAWODY, DRUGA DWUNASTKA (2026-08-11). Osobny klucz, a nie rozszerzenie `zawody`,
+  // z powodu czysto mechanicznego: przy 24 wariantach i kroku 13 generator zawinąłby się
+  // z powrotem na pierwszą dwunastkę już przy drugiej sztuce (25 % 24 = 1), więc nowych
+  // zawodów nie dałoby się wygenerować w izolacji.
+  //
+  // Powód powstania: pierwsza dwunastka wyszła 7 dziewczynek na 5 chłopców i ciążyła ku
+  // zawodom mundurowo-scenicznym. Tu proporcja jest odwrócona (8 chłopców, 4 dziewczynki),
+  // co domyka cały zestaw na 24 zawodach: 11 dziewczynek i 13 chłopców. Stereotypy nadal
+  // łamane, ale w drugą stronę — pszczelarka, twórczyni filmów, listonoszka i mechaniczka.
+  //
+  // DWA ZNANE RYZYKA, przyjęte świadomie:
+  //  • ciężarówka (3) i lokomotywa (10) to duże obiekty w kadrze — mogą zdominować postać
+  //    tak, jak zamek zdominował rycerza. Bez nich zawód jest jednak nierozpoznawalny.
+  //  • ksiądz (2) opisany jako dziecko w sutannie może wyjść jak ministrant. To najbliższy
+  //    sąsiad tego zawodu i nie da się go odgonić bez wyjścia poza konwencję „dziecko
+  //    w stroju zawodu", na której stoi cały zestaw.
+  'zawody-2': {
+    warianty: [
+      'a boy teacher in a shirt and a cardigan, holding an open book and pointing at a blackboard, short cropped hair, full body fills the frame',
+      'a boy priest in a long black cassock with a white collar, holding a small book in both hands, short cropped hair, full body fills the frame',
+      'a boy lorry driver in a checked shirt and a peaked cap, standing in front of the tall cab of a truck, full body fills the frame',
+      'a boy farmer in dungarees and a straw hat, holding a pitchfork, full body fills the frame',
+      'a boy rally driver in a padded racing suit holding a helmet with a visor under one arm, short cropped hair, full body fills the frame',
+      'a boy diver in a wetsuit with a mask pushed up on his forehead and a tank on his back, full body fills the frame',
+      'a girl beekeeper in a hooded suit with a mesh veil, holding a smoker beside a stacked hive, full body fills the frame',
+      'a boy magician in a tall top hat and a cape, one wand raised in his hand, short cropped hair, full body fills the frame',
+      'a girl video creator in a hoodie speaking to a camera on a tripod with a ring light behind, hair in a high bun, full body fills the frame',
+      'a boy train driver in overalls and a peaked cap, standing beside the front of a locomotive, full body fills the frame',
+      'a girl postal worker in a uniform with a shoulder bag full of letters, hair in a short bob, full body fills the frame',
+      'a girl mechanic in overalls with rolled sleeves, holding a large spanner, hair in two braids, full body fills the frame',
+      // Strażak W AKCJI. W pierwszej dwunastce strażaczka tylko trzyma zwinięty wąż —
+      // brakowało pożaru, czyli tego, co dziecko rysuje sobie pod słowem „strażak".
+      // Płomienie to ryzyko czerni (model lubi wypełniać ogień), ale w line arcie
+      // wychodzą jako kontur; jeśli poczernieją, widać to od razu w galerii.
+      'a boy firefighter in a helmet and a coat with reflective bands, aiming a hose at flames coming out of a window, full body fills the frame',
+      'a boy actor holding a clapperboard, with a large film camera on a tripod beside him and a tall studio light, short cropped hair, full body fills the frame'
+    ],
+    sceny: SCENY.zawodowe, grubosc: DEKORACYJNE, format: 'pion'
+  },
+  // MAGICZNE KRAINY — jedyny temat w pakiecie BEZ postaci, i stąd jego wartość:
+  // daje dziecku duże, spokojne obszary do zamalowania zamiast twarzy i dłoni, które
+  // są najtrudniejsze do narysowania i najczęściej psują sztukę. Klucz istnieje
+  // wyłącznie pod pakiet powitalny, kategorii o tej nazwie NIE MA w serwisie.
+  //
+  // ODWRÓCONA RELACJA OSI. Wszędzie indziej wariant to podmiot, a scena to miejsce.
+  // Tutaj wariant JEST miejscem, więc scena może być już tylko tłem i pogodą —
+  // po to powstała pula `krainy` (patrz komentarz przy niej w sceny.mjs).
+  //
+  // Sąsiadem jest tu POSTAĆ, nie inna budowla: model chętnie dostawia ludzika przed
+  // zamkiem, a wtedy kadr przestaje różnić się od rycerzy i księżniczek. Warianty
+  // opisują więc wyłącznie architekturę i teren, bez czasowników należących do ludzi.
+  'magiczne-krainy': {
+    warianty: [
+      'a castle with tall pointed towers on a rocky hilltop, a winding path leading up to the gate',
+      'a village of round mushroom houses with doors and windows cut into their stems',
+      'a treehouse village linked by rope bridges high in the branches',
+      'a stone tower with a spiral stair winding up the outside wall',
+      'a floating island with a small cottage and a waterfall spilling off its edge',
+      'an ice palace with faceted towers and long icicles hanging along the roofs',
+      'a walled garden with an arched gate and clipped topiary shapes',
+      'a windmill on a hill with a fenced garden and a cobbled path',
+      'a harbour of small sailing boats with a lighthouse out on the point',
+      'a bridge of tall arches crossing a river towards a distant town',
+      'a cave mouth framed by hanging vines with a lantern hung at the entrance',
+      'a hot air balloon tethered beside a hilltop cottage'
+    ],
+    sceny: SCENY.krainy, grubosc: DEKORACYJNE, format: 'pion'
+  },
   'dla-doroslych/jednorozce':{ warianty: [], sceny: SCENY.magia, grubosc: DLA_DOROSLEGO, format: 'pion' },
 
   // ══ POJAZDY ROLNICZE ═══════════════════════════════════════════════════════

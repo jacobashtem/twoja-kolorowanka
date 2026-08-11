@@ -194,6 +194,27 @@ export const SCENY = {
     'among floating soap bubbles and swirling ribbons'
   ],
 
+  // ── Rycerskie: pula pisana pod rycerzy ─────────────────────────────────────
+  // `magia` im NIE pasuje, mimo że rycerz jest postacią fantasy. Podstaw rycerza
+  // pod jej sześć scen zgodnie z rozdziałem 3 księgi: „rycerz wśród baniek mydlanych"
+  // i „rycerz w kręgu muchomorów z świetlikami" brzmią śmiesznie, a tęcza i wodospad
+  // ciągną kadr w stronę bajki dla najmłodszych, czyli dokładnie tam, gdzie zbroja
+  // przestaje być czytelna. Jedyna scena wspólna z `magia` to brama zamku — została
+  // powtórzona świadomie, bo dla rycerza jest naturalna.
+  //
+  // Rekwizyty dobrane tak, by dawały DUŻE obszary do malowania (namioty w pasy,
+  // proporce, banery), a nie mgliste tło, które model wypełnia czernią dla kontrastu.
+  // Żadna scena nie wprowadza do kadru konia — koń przejąłby sylwetkę i zrobiłby
+  // z tego `zwierzeta/koniki`.
+  rycerskie: [
+    'at the gate of a castle with pointed towers behind',
+    'on a stone bridge over a moat with water below',
+    'in a tournament field with striped tents and fluttering pennants',
+    'beside a campfire with a round shield propped against a rock',
+    'in a courtyard with long banners hanging down the walls',
+    'on a rocky path winding up to a hilltop castle'
+  ],
+
   // ── Tęcza: pula DEDYKOWANA jednorożcom ────────────────────────────────────
   // Trzecia pula pisana pod jedno stworzenie, po `zagroda` i `podworko`. Powody dwa.
   //
@@ -454,6 +475,36 @@ export const SCENY = {
 
   // Neutralny krajobraz — dla kategorii, w których TEMATEM jest pora roku albo nastrój,
   // a nie obiekt. Scena nie może wtedy narzucać własnego bohatera.
+  // ── Zawodowe: DOPEŁNIENIE kadru, nie miejsce pracy ─────────────────────────
+  // Kusi, żeby dać tu warsztat, szpital i boisko — ale scena krzyżuje się z KAŻDYM
+  // wariantem, a miejsce pracy jest przypisane do jednego zawodu. Astronauta w kuchni
+  // i kucharz w kokpicie to gotowy odrzut. Miejsce siedzi więc w rekwizycie wariantu,
+  // a te sześć pozycji to neutralne otoczenie, które pasuje do każdego zawodu
+  // i daje dziecku dodatkowe duże kształty do zamalowania.
+  zawodowe: [
+    'under a sky with round fluffy clouds',
+    'with a big smiling sun up in the corner',
+    'with a garland of small stars strung overhead',
+    'with a wide rainbow arching behind',
+    'with simple rooftops along the horizon',
+    'with a border of small flowers across the bottom'
+  ],
+
+  // ── Krainy: DOPEŁNIENIE kadru, nie scena ───────────────────────────────────
+  // Pula wyjątkowa, bo w `magiczne-krainy` to WARIANT jest już pełną sceną (zamek,
+  // wioska, port). Gdyby dołożyć do niego zwykłą scenę z `krajobraz`, kadr dostałby
+  // dwa konkurujące miejsca naraz („zamek na wzgórzu, przy stawie z trzcinami").
+  // Dlatego te sześć pozycji opisuje wyłącznie TŁO I POGODĘ wokół gotowego miejsca —
+  // każda zaczyna się od przyimka i daje się dokleić do dowolnego wariantu.
+  krainy: [
+    'under a sky of big drifting clouds',
+    'with rolling hills stretching away behind',
+    'surrounded by tall pine trees',
+    'with a river winding across the foreground',
+    'under a crescent moon and scattered stars',
+    'with a wide rainbow arching overhead'
+  ],
+
   krajobraz: [
     'on a path winding between trees',
     'beside a pond ringed with reeds',
