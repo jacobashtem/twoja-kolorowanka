@@ -36,88 +36,98 @@ async function subscribe() {
 </script>
 
 <template>
-  <section class="bg-tertiary-50 py-12 sm:py-16 mt-8">
-    <UContainer>
-      <div class="max-w-2xl mx-auto text-center">
-        <!-- Heading -->
-        <div class="flex flex-row flex-nowrap items-center mb-4 leading-tight tracking-tight">
-          <span class="flex-grow border-t border-tertiary-300" aria-hidden="true"></span>
-          <h2 class="px-4 py-2.5 rounded leading-none font-semibold text-xl sm:text-3xl bg-tertiary-500 text-white">
-            Nie przegap nowych kolorowanek!
-          </h2>
-          <span class="flex-grow border-t border-tertiary-300" aria-hidden="true"></span>
-        </div>
+  <UContainer class="mb-12">
+    <!-- Nagłówek w tym samym wzorcu, co pozostałe sekcje strony -->
+    <Heading
+      text="Odbierz 10 kolorowanek w prezencie"
+      as="h2"
+      backgroundColor="bg-sec-500"
+      fontSize="text-xl sm:text-3xl"
+      textColor="text-white"
+    />
 
-        <p class="text-base sm:text-lg font-light text-coolGray-700 mt-4 mb-8 px-4">
-          Zapisz się do newslettera i otrzymuj co tydzień świeże, darmowe kolorowanki
-          prosto na swoją skrzynkę. Żadnego spamu – tylko kreatywna zabawa dla Twojego dziecka!
-        </p>
+    <div class="rounded-2xl border border-sec-200 bg-sec-50 px-4 py-8 sm:px-10 sm:py-10">
+      <div class="grid gap-8 md:grid-cols-[auto_1fr] md:items-center md:gap-12">
 
-        <!-- Success -->
+        <!-- Stos kartek – pokazuje, co dostaje zapisujący się -->
         <div
-          v-if="status === 'success'"
-          class="bg-white rounded-xl p-8 shadow-sm border border-sec-200"
+          class="relative mx-auto h-40 w-32 shrink-0 sm:h-52 sm:w-40"
+          aria-hidden="true"
         >
-          <div class="text-sec-500 text-5xl mb-4">&#9989;</div>
-          <p class="text-xl font-semibold text-sec-600 mb-2">Dziękujemy za zapis!</p>
-          <p class="text-coolGray-600 font-light">
-            Sprawdź swoją skrzynkę e-mail — wysłaliśmy wiadomość z potwierdzeniem.
-            Nie zapomnij zajrzeć do folderu spam!
-          </p>
+          <div class="absolute inset-0 -rotate-[8deg] rounded-xl border border-coolGray-200 bg-white shadow-sm"></div>
+          <div class="absolute inset-0 -rotate-[4deg] rounded-xl border border-coolGray-200 bg-white shadow-sm"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center rounded-xl border border-coolGray-200 bg-white shadow-md">
+            <span class="text-4xl font-bold leading-none text-main-500 sm:text-5xl">10</span>
+            <span class="mt-2 text-xs font-semibold uppercase tracking-wider text-coolGray-600">kolorowanek</span>
+            <span class="mt-0.5 text-xs font-light text-coolGray-400">PDF do druku</span>
+          </div>
         </div>
 
-        <!-- Form -->
-        <form
-          v-else
-          class="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-tertiary-200"
-          @submit.prevent="subscribe"
-        >
-          <div class="flex flex-col sm:flex-row gap-3 mb-4">
-            <input
-              v-model="email"
-              type="email"
-              placeholder="Twój adres e-mail"
-              autocomplete="email"
-              required
-              class="flex-1 px-4 py-3 rounded-lg border border-coolGray-300 focus:border-tertiary-500 focus:ring-2 focus:ring-tertiary-200 outline-none transition-all text-base"
-              :disabled="status === 'loading'"
-            />
-            <button
-              type="submit"
-              :disabled="status === 'loading'"
-              class="px-6 py-3 bg-main-500 hover:bg-main-600 text-white font-semibold rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-            >
-              {{ status === 'loading' ? 'Zapisuję...' : 'Zapisz się za darmo' }}
-            </button>
+        <div class="min-w-0">
+          <!-- Sukces -->
+          <div v-if="status === 'success'" class="text-center md:text-left">
+            <p class="mb-2 text-xl font-semibold text-sec-700">Jeszcze jeden krok!</p>
+            <p class="font-light text-coolGray-700">
+              Wysłaliśmy Ci wiadomość z linkiem potwierdzającym. Kliknij go,
+              a paczka 10 kolorowanek trafi prosto na Twoją skrzynkę.
+              Zajrzyj też do folderu spam – czasem tam się chowa.
+            </p>
           </div>
 
-          <label class="flex items-start gap-2 text-left cursor-pointer">
-            <input
-              v-model="agreed"
-              type="checkbox"
-              class="mt-1 shrink-0 rounded border-coolGray-300 text-tertiary-500 focus:ring-tertiary-300"
-              :disabled="status === 'loading'"
-            />
-            <span class="text-xs text-coolGray-500">
-              Wyrażam zgodę na otrzymywanie newslettera z informacjami o nowych kolorowankach.
-              Administratorem danych jest Twoja Kolorowanka.
-              Możesz zrezygnować w dowolnym momencie klikając link w wiadomości.
-            </span>
-          </label>
+          <!-- Formularz -->
+          <template v-else>
+            <p class="mb-6 text-base font-light text-coolGray-700 sm:text-lg">
+              Zapisz się, a od razu wyślemy Ci paczkę 10 gotowych do druku kolorowanek w PDF.
+              Potem odezwiemy się tylko wtedy, gdy pojawi się coś nowego – żadnego spamu.
+            </p>
 
-          <p
-            v-if="status === 'error'"
-            class="text-main-500 text-sm mt-3 font-medium"
-          >
-            {{ errorMessage }}
-          </p>
-        </form>
+            <form @submit.prevent="subscribe">
+              <div class="mb-4 flex flex-col gap-3 sm:flex-row">
+                <input
+                  v-model="email"
+                  type="email"
+                  placeholder="Twój adres e-mail"
+                  autocomplete="email"
+                  required
+                  :disabled="status === 'loading'"
+                  class="min-w-0 flex-1 rounded-lg border border-coolGray-300 bg-white px-4 py-3 text-base outline-none transition-all focus:border-sec-500 focus:ring-2 focus:ring-sec-200"
+                />
+                <button
+                  type="submit"
+                  :disabled="status === 'loading'"
+                  class="whitespace-nowrap rounded-lg bg-main-500 px-6 py-3 font-semibold text-white transition-all hover:bg-main-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main-600 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {{ status === 'loading' ? 'Zapisuję...' : 'Odbierz paczkę' }}
+                </button>
+              </div>
 
-        <p class="text-coolGray-400 text-xs mt-4 px-4">
-          Twój e-mail jest bezpieczny. Nie udostępniamy go nikomu.
-          Wysyłamy max. 1 wiadomość tygodniowo.
-        </p>
+              <label class="flex cursor-pointer items-start gap-2 text-left">
+                <input
+                  v-model="agreed"
+                  type="checkbox"
+                  :disabled="status === 'loading'"
+                  class="mt-1 shrink-0 rounded border-coolGray-300 text-sec-500 focus:ring-sec-300"
+                />
+                <span class="text-xs text-coolGray-500">
+                  Wyrażam zgodę na otrzymywanie newslettera z informacjami o nowych kolorowankach.
+                  Informacje o administratorze danych i Twoich prawach znajdziesz w
+                  <NuxtLink to="/polityka-prywatnosci" class="underline" @click.stop>polityce prywatności</NuxtLink>.
+                  Możesz zrezygnować w dowolnym momencie, klikając link w wiadomości.
+                </span>
+              </label>
+
+              <p v-if="status === 'error'" class="mt-3 text-sm font-medium text-main-600">
+                {{ errorMessage }}
+              </p>
+
+              <p class="mt-4 text-xs font-light text-coolGray-400">
+                Twój e-mail jest bezpieczny. Nie udostępniamy go nikomu. Wypisujesz się jednym kliknięciem.
+              </p>
+            </form>
+          </template>
+        </div>
+
       </div>
-    </UContainer>
-  </section>
+    </div>
+  </UContainer>
 </template>

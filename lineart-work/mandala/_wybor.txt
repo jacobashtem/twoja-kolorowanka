@@ -1,0 +1,2 @@
+out-v3-goly-nautical/mandala-001-s1.svg
+raw-v3-goly-nautical/mandala-003-s3.png

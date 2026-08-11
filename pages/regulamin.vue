@@ -159,6 +159,26 @@
                 </ul>
             </li>
             <li>
+                <p><span>Pakiet powitalny:</span></p>
+                <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
+                <li>
+                    <p><span>Po potwierdzeniu adresu e-mail Usługobiorca otrzymuje jednorazowo nieodpłatny pakiet powitalny – zestaw kolorowanek w formacie PDF, udostępniany w postaci linku do pobrania.</span></p>
+                </li>
+                <li>
+                    <p><span>Otrzymanie pakietu nie wiąże się z żadną opłatą ani innym świadczeniem ze strony Usługobiorcy poza podaniem adresu e-mail i wyrażeniem zgody na otrzymywanie Newslettera.</span></p>
+                </li>
+                <li>
+                    <p><span>Materiały z pakietu objęte są zasadami korzystania określonymi w rozdziale dotyczącym praw autorskich – dozwolony jest wyłącznie użytek własny, domowy i edukacyjny, bez prawa do odsprzedaży, redystrybucji ani publikowania ich jako własnych.</span></p>
+                </li>
+                <li>
+                    <p><span>Usługodawca zastrzega sobie prawo do zmiany zawartości pakietu powitalnego oraz do zaprzestania jego udostępniania w dowolnym momencie, co nie ma wpływu na pakiety już przesłane Usługobiorcom.</span></p>
+                </li>
+                <li>
+                    <p><span>Rezygnacja z Newslettera po otrzymaniu pakietu nie powoduje obowiązku zwrotu ani usunięcia pobranych wcześniej materiałów.</span></p>
+                </li>
+                </ul>
+            </li>
+            <li>
                 <p><span>Wypisanie się z Newslettera:</span></p>
                 <ul style="list-style: lower-alpha;" class="text-lg py-2 pl-16">
                 <li>

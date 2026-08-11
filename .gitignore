@@ -50,3 +50,6 @@ lineart-work/*/out-*/
 
 # Certyfikaty licencyjne Magnific/Freepik — zawierają dane osobowe
 license-*.pdf
+
+# Local Netlify folder
+.netlify

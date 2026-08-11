@@ -482,7 +482,7 @@ const galleryVariantsList = computed(() => [
          </div>
   </UContainer> 
     <!-- Newsletter -->
-    <!-- <NewsletterSection /> -->
+    <NewsletterSection />
 
     <!-- FAQ na dole strony -->
     <FaqList :faqs="faqs" />

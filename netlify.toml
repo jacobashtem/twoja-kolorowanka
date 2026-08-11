@@ -6,6 +6,20 @@
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 
+# Netlify serwuje produkcyjny build rowniez pod wlasna subdomena projektu i nigdy nie
+# przekierowuje jej na domene glowna - ustawienie "primary domain" obejmuje tylko aliasy
+# domeny wlasnej (www), nie *.netlify.app. Bez tej reguly twojakolorowanka.netlify.app
+# zwraca 200 z ta sama trescia co twoja-kolorowanka.pl, czyli pelny duplikat serwisu bez
+# noindex. Musi byc PIERWSZA (reguly ida po kolei) i z force, bo inaczej przegrywa
+# z istniejacym plikiem statycznym.
+# Permalinki pojedynczych deployow (<id>--twojakolorowanka.netlify.app) to inny host,
+# wiec ich nie dotyczy - i nie trzeba, bo Netlify sam wysyla im X-Robots-Tag: noindex.
+[[redirects]]
+  from = "https://twojakolorowanka.netlify.app/*"
+  to = "https://twoja-kolorowanka.pl/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/:path.:ext"
   to = "/:path.:ext"
@@ -29,6 +43,20 @@
 
 [[headers]]
   for = "/koloruj/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Pakiet powitalny newslettera. Plik ma byc dostepny WYLACZNIE z linku w mailu -
+# gdyby Google go zaindeksowal, paczka bylaby do pobrania bez zapisu na liste
+# i lead magnet stracilby sens.
+#
+# NIE dodawac tej sciezki do robots.txt jako Disallow. To klasyczna pulapka:
+# Disallow blokuje CRAWL, wiec robot nigdy nie przeczyta naglowka ponizej,
+# a URL zalinkowany z zewnatrz i tak moze trafic do indeksu - tyle ze wtedy
+# bez mozliwosci powiedzenia "noindex". Trzeba pozwolic zajrzec i odmowic
+# indeksowania, a nie zabronic zagladania.
+[[headers]]
+  for = "/pakiet/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
