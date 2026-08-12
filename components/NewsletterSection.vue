@@ -39,7 +39,7 @@ async function subscribe() {
   <UContainer class="mb-12">
     <!-- Nagłówek w tym samym wzorcu, co pozostałe sekcje strony -->
     <Heading
-      text="Odbierz 10 kolorowanek w prezencie"
+      text="Odbierz 50 kolorowanek w prezencie"
       as="h2"
       backgroundColor="bg-sec-500"
       fontSize="text-xl sm:text-3xl"
@@ -57,7 +57,7 @@ async function subscribe() {
           <div class="absolute inset-0 -rotate-[8deg] rounded-xl border border-coolGray-200 bg-white shadow-sm"></div>
           <div class="absolute inset-0 -rotate-[4deg] rounded-xl border border-coolGray-200 bg-white shadow-sm"></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center rounded-xl border border-coolGray-200 bg-white shadow-md">
-            <span class="text-4xl font-bold leading-none text-main-500 sm:text-5xl">10</span>
+            <span class="text-4xl font-bold leading-none text-main-500 sm:text-5xl">50</span>
             <span class="mt-2 text-xs font-semibold uppercase tracking-wider text-coolGray-600">kolorowanek</span>
             <span class="mt-0.5 text-xs font-light text-coolGray-400">PDF do druku</span>
           </div>
@@ -69,7 +69,7 @@ async function subscribe() {
             <p class="mb-2 text-xl font-semibold text-sec-700">Jeszcze jeden krok!</p>
             <p class="font-light text-coolGray-700">
               Wysłaliśmy Ci wiadomość z linkiem potwierdzającym. Kliknij go,
-              a paczka 10 kolorowanek trafi prosto na Twoją skrzynkę.
+              a paczka 50 kolorowanek trafi prosto na Twoją skrzynkę.
               Zajrzyj też do folderu spam – czasem tam się chowa.
             </p>
           </div>
@@ -77,8 +77,9 @@ async function subscribe() {
           <!-- Formularz -->
           <template v-else>
             <p class="mb-6 text-base font-light text-coolGray-700 sm:text-lg">
-              Zapisz się, a od razu wyślemy Ci paczkę 10 gotowych do druku kolorowanek w PDF.
-              Potem odezwiemy się tylko wtedy, gdy pojawi się coś nowego – żadnego spamu.
+              Zapisz się, a wyślemy Ci pakiet „Kim chcę zostać?" – 50 kolorowanek o zawodach,
+              gotowych do druku w jednym pliku PDF. Potem odezwiemy się tylko wtedy,
+              gdy pojawi się coś nowego – żadnego spamu.
             </p>
 
             <form @submit.prevent="subscribe">
