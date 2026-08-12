@@ -7,5 +7,6 @@
         <slot />
     </main>
     <AppFooter />
+    <NewsletterPopup />
     <!-- <UNotifications /> -->
 </template>
