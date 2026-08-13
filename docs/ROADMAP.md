@@ -2,10 +2,18 @@
 
 > Utworzona 2026-07-23 na bazie audytu technicznego i biznesowego.
 > Wykonawca: Claude (krok po kroku, etapami). Decyzje strategiczne: Jakub.
+>
+> **Warstwa strategiczna: `docs/strategia-ekspansji.md`** (2026-08-13) — zmierzony baseline,
+> wybór rynków, realia sieci reklamowych, architektura wielorynkowa, kanały poza serwisem
+> (Etsy, KDP) i bramki decyzyjne. Ten plik jest kolejką wykonawczą; tamten mówi dlaczego.
 
 ## Stan wyjściowy (audyt 2026-07-23)
 
-- ~23k ruchu organicznego/mies. wg SEMrush (szacunek wizyt), realne liczby do zmierzenia w Etapie 0.
+- ~~~23k ruchu organicznego/mies. wg SEMrush~~ — **KOREKTA (2026-08-13): zmierzone ~8,4k wizyt
+  i ~20k odsłon/mies.** (Cloudflare, 21 dni). SEMrush zawyża ~2,7×, bo modeluje ruch z pozycji ×
+  rynkowy CTR, a nasz realny CTR to 1,53% przy pozycji 6,8. **Zasada: ufać zmianom w SEMrushu
+  (+48% ruchu, +8,7% fraz to sygnał realny), nie wartościom bezwzględnym.** Pełne dane
+  w `strategia-ekspansji.md` §1.
 - 79 landingów kategorii/podkategorii (jednostka SEO), 4116 podstron kolorowanek (leaf), 4173 SVG + 4168 PDF w `public/` (~1,2 GB).
 - Hosting: Netlify (transfer na wykupionym wyższym pakiecie — koszt do zbicia).
 - GSC podpięte, GTM (GTM-PMTV7XJ8) za zgodą Klaro. Brak reklam, brak przychodów.
@@ -31,12 +39,17 @@ Wykonawcze (Claude):
 - [x] Odporność builda na awarię WordPressa: `routes-from-content.js` przy padzie WP przepisuje trasy bloga z poprzedniego `prerender-routes.json` (przetestowane symulacją), a nowy `scripts/check-build.mjs` (wpięty w `pnpm build`) wywala deploy przy pustym blogu/kategorii/leafie — koniec cichych pustych deployów mimo `failOnError:false`. (2026-07-23)
 - [x] Cloudflare Web Analytics wpięte w `nuxt.config.ts` przez env `CF_ANALYTICS_TOKEN` (bez tokena w repo). **AKTYWOWANE i zweryfikowane** — beacon na produkcji, dane spływają do panelu CF. Poza Klaro celowo (pomiar bez cookies = bez zgody, 100% ruchu); wpis w polityce prywatności + klauzula transferu poza EOG w PR #127. Etap 0 (baseline 2–4 tyg.) tym samym wystartował. (2026-07-23)
 - [ ] Po deployu: tydzień obserwacji transferu Netlify → jeśli spadł zgodnie z planem (80–95%), rozważyć powrót na tańszy pakiet.
+- [x] **Grafika Google — trzy naprawy w PR #162 (2026-08-13).** GSC pokazał, że **Grafika to połowa widoczności serwisu** (603 tys. wyświetleń wobec 610 tys. w Sieci), ale przy średniej pozycji **33** i CTR 0,59%. Przyczyny i naprawy: (1) galerie serwowały tylko miniatury 400 px, a 93% wyświetleń w Grafice przypada na kategorie → `srcset` 400/800 px; (2) w HTML-u kategorii było tylko `sekcje H2 × 4` kafelków, reszta za przyciskiem „załaduj więcej", którego crawler nie klika — kategoria z 84 kolorowankami pokazywała 28 → pełne renderowanie, `loadMore` usunięte (**koszt zmierzony: +1,8 kB po gzipie**, obrazki bez zmian dzięki `loading="lazy"`); (3) brak sitemapy obrazów → `scripts/sitemap-images.mjs`, 76 kategorii / 4165 obrazków, wpięta w `pnpm build` i `robots.txt`. Szacowany zapas: **2,5–3× ruchu bez nowych stron** — potwierdzony niezależnie rozjazdem SEMrush ↔ GSC.
+- [ ] **Zgłosić `sitemap-images.xml` w GSC → Sitemapy.** Wpis w `robots.txt` wystarczy do odkrycia, ale jawne zgłoszenie daje osobny raport pokrycia — to jest metryka, na której ocenimy efekt PR #162. **Odczyt ~15 września 2026.**
+- [ ] **Aplikować do Journey by Mediavine** — próg to **1 000 sesji**, mamy ~8 400. Nawet odmowa jest wartościowa: powie, jak sieci reklamowe traktują ruch spoza Tier 1, zanim zbudujemy 7 domen wokół założenia o RPM.
+- [ ] **Wystawić pakiet „Kim chcę zostać?" na Etsy** — najtańszy test jedynego nieprzetestowanego założenia całego modelu (czy ktokolwiek kupi). Etsy jest deemed supplier dla unijnego VAT-u przy produktach cyfrowych, więc OSS odpada z pierwszego podejścia. Odpowiedź w miesiąc.
+- [ ] Drobiazg z builda: **`/polityka-prywatnosci/regulamin` zwraca 404**, linkowane z `/polityka-prywatnosci/`. Zepsuty względny link na stronie prawnej; `failOnError: false` przepuszcza to po cichu.
 - [ ] **Newsletter + lead magnet „paczka 10 kolorowanek za maila" — wyciągnięte z Etapu 7 na teraz (decyzja Jakuba 2026-08-11).** Uzasadnienie: lista mailowa to jedyny kanał dotarcia niezależny od algorytmu Google i Pinteresta. Kroki: konfiguracja MailerLite (darmowy próg), formularz zapisu na leafach i po pobraniu PDF, automat powitalny wysyłający paczkę. **Warunek licencyjny — paczkę składać wyłącznie z grafik własnych (Recraft), nigdy z Freepika:** spakowanie 10 plików do pobrania to redystrybucja „as is", której standardowa licencja Freepika zabrania (zob. decyzja strategiczna nr 2 i nierozstrzygnięty punkt weryfikacji licencji wyżej). Nadają się tylko kategorie już podmienione w ramach migracji. Poczta domenowa gotowa: MX + DKIM działają, `include:_spf.mlsend.com` siedzi w SPF.
   - [x] **Integracja techniczna przetestowana end-to-end (2026-08-11).** Konto MailerLite (założone 26.02) miało już wszystko: `MAILERLITE_API_KEY` i `MAILERLITE_GROUP_ID` w Netlify, grupa „Newsletter Kolorowanki" (id 180499754188277517), domena zweryfikowana z DKIM `litesrv._domainkey`. Włączony **Double opt-in for API and integrations** (osobny przełącznik od formularzowego — bez niego zapisy przez API omijają potwierdzenie) i **Default sender** `team@twoja-kolorowanka.pl` (Account settings → Default settings; bez niego mail potwierdzający w ogóle nie wychodzi). Test przez `netlify functions:serve`: HTTP 200, subskrybent jako `unconfirmed`, mail potwierdzający dostarczony i podpisany DKIM-em domeny. Copy `NewsletterSection.vue` przepisane pod paczkę, komponent odkomentowany w `pages/index.vue` i `layouts/blog.vue`.
   - [x] **Paczka gotowa i na produkcji (2026-08-12).** Pakiet „Kim chcę zostać?" — 50 kolorowanek o zawodach z 26 zawodów, wygenerowanych Recraftem (whimsy, $0.04/szt.) i zwektoryzowanych ($0.01/szt.). Plik: `public/pakiet/kim-chce-zostac-k7m2x9.pdf` (51 stron z okładką, 1,05 MB), składany przez `scripts/zloz-pakiet.mjs`. Na produkcji odpowiada 200 z nagłówkiem `X-Robots-Tag: noindex, nofollow`. Materiał źródłowy i `_wybor.txt` w `lineart-work/pakiet-zawody/`.
   - [ ] **Dostarczalność przed pierwszą większą wysyłką:** test na mail-tester.com (punktacja 0–10 + lista zarzutów), rejestracja domeny w Google Postmaster Tools (reputacja nadawcy na danych z Gmaila), sprawdzenie czy MailerLite generuje niepustą wersję plain text. Unikać słowa „darmowy" w TEMACIE (w treści strony bezpieczne). Po miesiącu raportów DMARC podnieść `p=none` → `p=quarantine`. Rozważyć podmianę linku w mailu z bezpośredniego `.pdf` na stronę `/pakiet/` z przyciskiem — lepsza reputacja linku, kontrola nad zawartością bez ruszania maila, ruch wraca na serwis.
   - [x] **Popup/modal z pakietem — wdrożony 2026-08-12** (`components/NewsletterPopup.vue`, wpięty w `layouts/default.vue`). Desktop = modal z przyciemnieniem, mobile = dolny arkusz do 45vh **bez przyciemnienia** — zasłonięcie treści na telefonie to sygnał natrętnego interstitiala, za który Google obniża pozycje, a serwis żyje z organika. **Nie zamieniać na fullscreen.** Wyzwalacz: 30 s albo 50% scrolla. `localStorage` (`tk_newsletter_popup`) rozróżnia zamknięcie (cisza 30 dni) od zapisu (cisza na zawsze). Wykluczone: `/koloruj/` i cztery strony prawne. Nie ma go na blogu — ma osobny layout i własną sekcję newslettera nad stopką.
-  - [ ] **Zostaje automatyzacja w MailerLite** („gdy subskrybent dołącza do grupy Newsletter Kolorowanki" → mail z linkiem do paczki). Dopóki jej nie ma, formularz obiecuje coś, czego nikt nie dostanie. Automations są w darmowym planie.
+  - [x] **Automatyzacja w MailerLite działa (2026-08-12)** — „gdy subskrybent dołącza do grupy Newsletter Kolorowanki" → mail z linkiem do paczki. Przetestowane na produkcji w obie strony, pierwszy prawdziwy zapis przeszedł całą ścieżkę. **Lead magnet jest tym samym kompletny i działa end-to-end: formularz → double opt-in → paczka.**
   - [ ] Do regulaminu (sekcja V): punkt o paczce za zapis i zasadach korzystania z plików — dziś regulamin opisuje newsletter jako usługę bez świadczenia rzeczowego.
   - [ ] Dług: treść *Confirmation email* i *Confirmation thank you page* jest po angielsku — edycja wymaga płatnego planu. Double opt-in **nie jest wymogiem prawnym w PL**, narzuca go własny regulamin (sekcja V pkt 4b), więc alternatywą dla opłaty jest przeredagowanie tego punktu.
 
@@ -82,6 +95,14 @@ Zasada: pełny SVG pobiera się TYLKO w `/koloruj/` (edytor). Wszędzie indziej 
 
 ## Etap 3 — Start monetyzacji
 
+> **KOREKTA KOLEJNOŚCI (2026-08-13).** Baseline z Etapu 0 jest zebrany i mówi, że **Etap 3 stoi
+> w tym pliku za wcześnie**. Przy ~20 tys. odsłon AdSense to 40–120 zł/mies., a nie 100–350 jak
+> szacowano. Serwis jest przed monetyzacją, nie w niej. Dźwignie wg zwrotu:
+> **(1) odsłony na sesję** — 2,38 to dno przedziału, ekran po pobraniu podnosi każdy przyszły
+> strumień naraz; **(2) Etap 4** — każdy landing wart ~60 wizyt/mies., materiał już jest;
+> **(3) Etap 6** — polski RPM ustawia niski sufit niezależnie od ruchu.
+> Reklamy włączać po tych trzech, nie przed. Uzasadnienie: `strategia-ekspansji.md` §7.
+
 - [ ] Klaro: dodać Google Consent Mode v2 (wymóg reklam w EOG). **Zaimplementowane w PR #129 — czeka na review Jakuba** (domyślnie wszystko denied, zgody sterują sygnałami; kategoria Reklamowe + usługa AdSense w banerze gotowe na Etap 3). (2026-07-23)
 - [ ] Wniosek do **AdSense** (po czystce brandów z Etapu 1) — start i punkt odniesienia. Alternatywa/test B: Ezoic (brak progu, zwykle wyższy RPM). **DECYZJA (2026-07-23): odroczony do zebrania baseline'u** — przy szacowanych 40–60k odsłon/mies. i RPM 2–6 zł (PL, nisza dziecięca, made-for-kids, część ruchu bez zgody) wyszłoby ~100–350 zł/mies. Ocena po ~miesiącu danych z Cloudflare; wtedy też planowanie placementów na realnych top stronach. Pamiętać: review AdSense trwa 2–4 tyg., doliczyć do timeline'u.
 - [ ] Placement: strony kategorii (in-content między sekcjami galerii) + leafy (pod przyciskami, nad „Podobnymi"). NIGDY w `/koloruj/` (UX dzieci + i tak noindex).
@@ -103,10 +124,22 @@ W niszy printables Pinterest bywa większy niż Google. Mechanika: pin = pionowa
 
 - [ ] Konto firmowe Pinterest + weryfikacja domeny + włączenie Rich Pins (czytają OG tagi — już je mamy). **W TOKU (2026-07-23): Jakub zakłada konto**; weryfikacja metodą „Add HTML tag" — tag wkleja Claude'owi, trafia do `nuxt.config.ts`. Decyzja: startujemy teraz, żeby konto wygrzało się przed pikiem Q4 (publikacja sezonowa od września).
 - [x] Skrypt `scripts/generate-pins.mjs`: miniatura kolorowanki → grafika pinu 2:3 (1000×1500, biała ramka, pasek z tytułem i domeną) — masowo z istniejących WebP. Flagi `--limit`/`--only`, wyjście do `pins-output/` (gitignore). Masowe uruchomienie po założeniu konta. (PR #131, 2026-07-23)
-- [ ] Automatyzacja publikacji: **Pinterest API v5** (oficjalne, darmowe) — skrypt planujący 3–5 pinów/dzień z kolejki; boardy per kategoria + boardy sezonowe. Alternatywa bez kodu: Buffer/Tailwind (płatne).
+- [x] Automatyzacja publikacji: **Pinterest API v5 — kod gotowy.** `scripts/pinterest/publish.mjs` (kolejka ze wszystkich leafów minus `data/pinterest-state.json`, wybór round-robin po kategoriach dla dziennej różnorodności, boardy z `data/pinterest-boards.json` z automatycznym tworzeniem brakujących, grafika komponowana in-memory przez `image_base64` — zero hostingu), `auth.mjs` do tokenu, `lib.mjs` wspólne z `generate-pins.mjs`. Obsługuje `--count`, `--dry-run` i env `PINTEREST_APP_ID/SECRET/REFRESH_TOKEN` pod CI.
+- [ ] **Zostaje uruchomienie:** konto firmowe + token + wpięcie w cron GitHub Actions. Nic do napisania.
 - [ ] Start: 5 boardów (zwierzęta, mandale/antystres, sezonowe, edukacyjne, pojazdy), potem rozbudowa wg statystyk.
 
 ## Etap 6 — Ekspansja językowa (największa dźwignia przychodu)
+
+> **AKTUALIZACJA 2026-08-13 — decyzje podjęte, szczegóły w `strategia-ekspansji.md` §4–5.**
+> Kolejność rynków: **NL → DE → IT (produktowo) → SE**, dopiero potem EN. NL pierwszy, bo
+> CPC $3,59 przy KD 20 (DE: $2,24 przy KD 50) — przy Authority Score 12 tam można zdominować
+> rynek, w DE tylko powalczyć. **FR i ES to pułapki objętościowe** (FR: KD 63 i CPC $0,49;
+> ES: CPC $0,19, wolumen głównie LatAm). **Architektura: osobne domeny ccTLD** — argument za
+> pulą upadł, bo Raptive jest zamknięty geograficznie (wymaga 40–50% ruchu Tier 1) niezależnie
+> od skali. Mediavine przeszedł na próg przychodowy ($5 tys./rok) i jest osiągalny.
+> **Dla rynków europejskich produkty biją reklamy** — na nowym rynku najpierw sklep.
+> Warstwa lokalna (Sinterklaas, Lucia, 17. mai) to najtańsza przewaga i zarazem ochrona przed
+> oceną „skalowane treści".
 
 SVG/PDF są językowo neutralne — koszt wejścia to tłumaczenie ~79 landingów + szablonowe meta leafów. Wysokie RPM-y sieci premium (Journey/Raptive $13–40+) dotyczą ruchu EN/US — polska strona ich nie zobaczy; wersja EN tak.
 
@@ -142,7 +175,8 @@ Frazy do weryfikacji wolumenów (SEMrush, baza per kraj):
 - [ ] **Pomysły Jakuba na produkty tematyczne (2026-07-23):** poczet królów Polski (podstawa programowa kl. 4–5 → kupują też nauczyciele, popyt cykliczny), księżniczki z historii Polski, mity słowiańskie (nisza bez konkurencji, wersja EN „Slavic mythology" = rynek globalny). Tematyczność broni ceny 29–49 zł vs 19 zł za generyk. Piki sprzedażowe: wrzesień (rok szkolny), 11 XI, Dzień Flagi — publikacja 2 mies. wcześniej. Do weryfikacji w SEMrush: „kolorowanki historia polski", „kolorowanki mity słowiańskie", „poczet królów dla dzieci". Realistyczny model konwersji: 0,1–0,5% ruchu → przy dzisiejszym ruchu 500–1500 zł/mies., po roku 2–7 tys., dojrzale 7–18 tys. zł/mies. (produkty + osobno reklamy).
 - [ ] Generator kolorowanek z imieniem dziecka (sekcje `generator-cta` już istnieją w contencie) — produkt premium.
 - [ ] Afiliacja: recenzje kredek/markerów na blogu + webePartners/Awin (Empik, Allegro).
-- [ ] **WhitePress** (artykuły sponsorowane na blogu): rejestracja portalu, wycena startowa ~300–800 zł/artykuł. Zasady bezpieczeństwa: max 2–4 artykuły/mies., oznaczanie „artykuł sponsorowany" (wymóg UOKiK), tematyka zbliżona do niszy (dzieci/rodzina/edukacja), nie pozwolić żeby sponsorowane zdominowały blog — nadmiar płatnych linków dofollow to ryzyko kary od Google.
+- [ ] **Amazon KDP** — druk bez inwentarza z tej samej kolekcji co paczka cyfrowa. Przewaga: SVG daje dowolny format bez straty, a `scripts/zloz-pakiet.mjs` (pdfkit + svg-to-pdfkit) już istnieje — wariant pod specyfikację KDP (spady, margines na oprawę zależny od liczby stron, 300 DPI) to modyfikacja, nie nowy projekt. Mocniejszy argument: **gra wielorynkowa bez budowania stron** — amazon.de/.fr/.it/.es/.nl/.se/.pl istnieją, a kolorowanka jest produktem prawie bezjęzykowym (tłumaczy się tytuł, opis, słowa kluczowe). Ruch przynosi Amazon. Jednostkowo ~€2,50–2,80/egz. przy €7,99 i ~55 stronach; problem jest w odkrywalności, nie w marży — rynek przeorany, mediana tytułu sprzedaje się blisko zera, to biznes portfelowy. **Obowiązek: KDP wymaga ujawnienia treści generowanych AI** (obowiązkowe pole, obejmuje wprost kolorowanki; nie jest pokazywane klientom, ale nieujawnienie grozi blokadą konta). Kolejność: **po teście na Etsy**, bo oba kanały testują to samo założenie, a Etsy odpowiada szybciej i bez okładki, formatowania i reklam.
+- [ ] **WhitePress** (artykuły sponsorowane na blogu): rejestracja portalu. **KOREKTA WYCENY (2026-08-13):** startowe ~300–800 zł/artykuł było optymistyczne — przy **Authority Score 12 i 154 domenach odsyłających** kupujący wyceniają nisko, a nisza jest wąska tematycznie. Realnie **500–1500 zł/mies. przy 2–4 publikacjach**, czyli dodatek, nie filar. Dodatkowo **blog ma 49 postów i 431 wyświetleń w GSC za 3 miesiące** — nie ma własnego autorytetu organicznego, jest czystym nośnikiem linków, a to profil, który się wyłapuje. Zasady bezpieczeństwa: max 2–4 artykuły/mies., **`rel="sponsored"` na wszystkich linkach wychodzących** (roadmapa wspominała o ryzyku dofollow, ale nie nazywała mechaniki — tak, cena wtedy spada i to jest ta cena), oznaczanie „artykuł sponsorowany" (wymóg UOKiK), wyłącznie tematyka dziecięco-rodzicielsko-edukacyjna bez wycieczek w finanse i suplementy. **Model wolumenowy (20–30 art./mies. po 50 zł) jest tu wykluczony** — działa na portalach, gdzie portal JEST produktem; tutaj kara od Google zabija AdSense, sprzedaż paczek i ekspansję naraz, żeby uratować najmniejszy strumień.
 
 ## Etap 8 — Własne narzędzia monitorujące (mini-stack zamiast SEMrusha)
 
