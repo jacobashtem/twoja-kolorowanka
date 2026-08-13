@@ -51,5 +51,10 @@ lineart-work/*/out-*/
 # Certyfikaty licencyjne Magnific/Freepik — zawierają dane osobowe
 license-*.pdf
 
+# Sitemapa obrazów — w całości wyliczana z content/ przez scripts/sitemap-images.mjs,
+# odpalana w `pnpm build` przed `nuxt generate`. Pół megabajta generowanego XML-a
+# w historii repo nie wnosi nic, czego nie da się odtworzyć jedną komendą.
+public/sitemap-images.xml
+
 # Local Netlify folder
 .netlify
