@@ -19,9 +19,17 @@ const props = defineProps({
 })
 
 const displaySrc = ref(svgPreview(props.src))
-watch(() => props.src, s => { displaySrc.value = svgPreview(s) })
+const displaySrcset = ref(svgPreviewSrcset(props.src))
+watch(() => props.src, s => {
+  displaySrc.value = svgPreview(s)
+  displaySrcset.value = svgPreviewSrcset(s)
+})
 const onImgError = () => {
-  if (displaySrc.value !== props.src) displaySrc.value = props.src
+  if (displaySrc.value !== props.src) {
+    displaySrc.value = props.src
+    // Bez wyzerowania srcset przeglądarka dalej brałaby brakujące WebP zamiast fallbacku na SVG.
+    displaySrcset.value = null
+  }
 }
 </script>
 
@@ -32,6 +40,8 @@ const onImgError = () => {
   >
     <img
       :src="displaySrc"
+      :srcset="displaySrcset"
+      sizes="(min-width: 768px) 25vw, 100vw"
       :alt="alt || title"
       loading="lazy"
       @error="onImgError"

@@ -15,6 +15,8 @@
         loading="lazy"
         class="max-w-full object-contain rounded-3xl bg-white min-w-64 min-h-64 max-h-64"
         :src="displaySrc"
+        :srcset="displaySrcset"
+        sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
         :alt="item.alt || item.title"
         @error="onImgError"
       />
@@ -35,8 +37,16 @@ const props = defineProps({
 })
 
 const displaySrc = ref(svgPreview(props.item.img))
-watch(() => props.item.img, s => { displaySrc.value = svgPreview(s) })
+const displaySrcset = ref(svgPreviewSrcset(props.item.img))
+watch(() => props.item.img, s => {
+  displaySrc.value = svgPreview(s)
+  displaySrcset.value = svgPreviewSrcset(s)
+})
 const onImgError = () => {
-  if (displaySrc.value !== props.item.img) displaySrc.value = props.item.img
+  if (displaySrc.value !== props.item.img) {
+    displaySrc.value = props.item.img
+    // Bez wyzerowania srcset przeglądarka dalej brałaby brakujące WebP zamiast fallbacku na SVG.
+    displaySrcset.value = null
+  }
 }
 </script>

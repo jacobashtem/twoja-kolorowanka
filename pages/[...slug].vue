@@ -7,7 +7,6 @@ import { extractH2Blocks } from '@/utils/extractH2Blocks'
 // Ile kolorowanek leci pod każdą sekcją H2. Siatka ma 4 kolumny na desktopie,
 // więc 4 = jeden pełny rząd, 8 = dwa. Wartości pośrednie zostawiają poszarpany rząd.
 const KAFLI_NA_SEKCJE = 4
-const STEP            = 8
 
 const route = useRoute()
 const slug  = Array.isArray(route.params.slug)
@@ -173,31 +172,17 @@ const similarGalleryVariants = computed(() =>
 // Skrajny przypadek: /myszki/ nie ma ani jednej sekcji H2 i nie wyświetlało NICZEGO.
 const wpleceione = computed(() => h2Blocks.value.length * KAFLI_NA_SEKCJE)
 
-// Kategoria bez sekcji H2 nie ma przeplotu, więc bez tego ładowałaby się z pustą galerią.
-// Dotyczy m.in. /myszki/, gdzie 49 kolorowanek było niewidocznych.
-const BEZ_SEKCJI_START = 24
-const poczatkowoWidoczne = computed(() =>
-  wpleceione.value > 0 ? wpleceione.value : BEZ_SEKCJI_START)
-
-const visibleCount = ref(0)
-watchEffect(() => {
-  visibleCount.value = Math.min(poczatkowoWidoczne.value, galleryVariants.value.length)
-})
-
 // Ogon zaczyna się dokładnie tam, gdzie skończył się przeplot — bez luk i bez dubli.
+// Renderujemy CAŁĄ resztę, bez doładowywania na klik. Powód: doładowywanie powstało, gdy
+// każdy kafelek ciągnął pełny SVG (do 9,6 MB) — po przejściu na WebP + `loading="lazy"`
+// przeglądarka i tak nie pobiera nic spoza ekranu, więc jedynym kosztem został HTML.
+// Zmierzone na /zwierzeta/koty/ (28 → 84 kafelki): +53 kB surowego HTML-a, ale
+// +1,8 kB po gzipie, bo markup kafelków jest skrajnie powtarzalny.
+// Zysk: Grafika Google widziała wcześniej tylko `liczba sekcji × 4` kolorowanek z kategorii
+// (crawler nie klika „załaduj więcej"), czyli w kategorii z 84 sztukami — 28.
+// Kategoria bez sekcji H2 ma `wpleceione === 0`, więc `slice(0)` renderuje jej całą galerię.
 const visibleGalleryVariants = computed(() =>
-  galleryVariants.value.slice(wpleceione.value, visibleCount.value))
-
-function loadMore () {
-  visibleCount.value = Math.min(
-    visibleCount.value + STEP,
-    galleryVariants.value.length
-  )
-}
-
-watch(() => currentPath, () => {
-  visibleCount.value = Math.min(poczatkowoWidoczne.value, galleryVariants.value.length)
-})
+  galleryVariants.value.slice(wpleceione.value))
 
 const currentIndex = computed(() => {
   if (!isLeaf.value) return null
@@ -396,18 +381,7 @@ useHead(() => {
 
   <VariantsGallery :items="galleryVariants.slice(i * KAFLI_NA_SEKCJE, (i + 1) * KAFLI_NA_SEKCJE)" />
 </template>
-        <ClientOnly>
-          <VariantsGallery :items="visibleGalleryVariants" class="mt-6"/>
-          <div class="flex flex-col items-center">
-            <button
-              v-if="visibleCount < galleryVariants.length"
-              @click="loadMore"
-              class="my-4 rounded-sm p-3 grow border text-center border-main-500 text-main-500 font-bold uppercase text-sm tracking-widest hover:bg-main-500 hover:text-white transition"
-            >
-              Załaduj więcej kolorowanek
-            </button>
-          </div>
-        </ClientOnly>
+        <VariantsGallery :items="visibleGalleryVariants" class="mt-6"/>
       </UContainer>
     </template>
 
