@@ -24,12 +24,41 @@ try {
 const BAZA = 'https://api.dataforseo.com/v3'
 
 // Polska. Kody lokalizacji DataForSEO pokrywaja sie z kodami Google Ads.
+// `szablony` i `koncowki` sluza trybowi „warianty": z jednego slowa buduja wszystkie
+// sensowne sposoby, na jakie ludzie moga o to zapytac, zeby dalo sie zmierzyc, ktory
+// z nich naprawde niesie ruch. Przy polskim to najwazniejsze, bo odmiana potrafi
+// przeniesc caly wolumen na inna forme — „kolorowanka panda" ma 745, a „kolorowanki
+// pandy" dokladnie zero.
 export const RYNKI = {
-  pl: { location_code: 2616, language_code: 'pl', nazwa: 'Polska' },
-  nl: { location_code: 2528, language_code: 'nl', nazwa: 'Holandia' },
-  de: { location_code: 2276, language_code: 'de', nazwa: 'Niemcy' },
-  it: { location_code: 2380, language_code: 'it', nazwa: 'Wlochy' },
-  se: { location_code: 2752, language_code: 'sv', nazwa: 'Szwecja' }
+  pl: {
+    location_code: 2616, language_code: 'pl', nazwa: 'Polska',
+    szablony: ['kolorowanki {w}', 'kolorowanka {w}', '{w} kolorowanki', '{w} kolorowanka',
+      'kolorowanki {w} do druku', '{w} kolorowanka do druku', '{w} do kolorowania'],
+    koncowki: ['', 'a', 'y', 'i', 'e', 'ę', 'ow', 'ów', 'ami', 'ach', 'ka', 'ki']
+  },
+  nl: {
+    location_code: 2528, language_code: 'nl', nazwa: 'Holandia',
+    szablony: ['kleurplaat {w}', 'kleurplaten {w}', '{w} kleurplaat', '{w} kleurplaten',
+      'kleurplaat {w} printen'],
+    koncowki: ['', 's', 'en', 'je', 'jes']
+  },
+  de: {
+    location_code: 2276, language_code: 'de', nazwa: 'Niemcy',
+    szablony: ['ausmalbilder {w}', 'malvorlagen {w}', '{w} ausmalbilder', '{w} malvorlage',
+      'ausmalbilder {w} kostenlos'],
+    koncowki: ['', 'n', 'en', 'e', 'er', 's']
+  },
+  it: {
+    location_code: 2380, language_code: 'it', nazwa: 'Wlochy',
+    szablony: ['disegni da colorare {w}', '{w} da colorare', 'disegni {w} da colorare',
+      'immagini da colorare {w}'],
+    koncowki: ['', 'i', 'e', 'o', 'a']
+  },
+  se: {
+    location_code: 2752, language_code: 'sv', nazwa: 'Szwecja',
+    szablony: ['målarbilder {w}', '{w} målarbild', 'målarbild {w}', 'målarbilder {w} gratis'],
+    koncowki: ['', 'r', 'ar', 'or', 'en']
+  }
 }
 
 function naglowekAuth () {
