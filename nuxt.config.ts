@@ -28,7 +28,17 @@ export default defineNuxtConfig({
   ],
   content: { documentDriven: false },
   site: { url: 'https://twoja-kolorowanka.pl', name: 'twoja-kolorowanka.pl', trailingSlash: true },
-  sitemap: { exclude: [/\/\d+\/?$/, '/koloruj/**'] },
+  // Sitemapa = jednostka SEO: huby, kategorie, przekroje i blog. Wykluczenia po kolei:
+  //   /\d+\/?$/  liscie — maja canonical na kategorie, wiec do sitemapy nie naleza
+  //   /koloruj/  edytor — i tak noindex przez naglowek w netlify.toml
+  //   /search/   wyniki wyszukiwania wewnetrznego. Google wprost odradza indeksowanie
+  //              takich stron i konsekwentnie raportowal ja jako "adres nieznany".
+  //   /myszki/   pelny duplikat /zwierzeta/myszki/ (49 lisci 1:1, zero wyswietlen przez
+  //              3 miesiace). Byl w sitemapie MIMO canonicala na /zwierzeta/myszki/,
+  //              czyli sitemapa mowila "indeksuj mnie", a canonical "indeksuj tamta" —
+  //              Google rozstrzygnal to po swojemu i nie zaindeksowal zadnej.
+  //              Caly podkatalog jest teraz przekierowany 301 w netlify.toml.
+  sitemap: { exclude: [/\/\d+\/?$/, '/koloruj/**', /^\/search(\/|$)/, /^\/myszki(\/|$)/] },
   modules: ['@nuxtjs/sitemap','@nuxt/content','@nuxt/ui','@nuxtjs/tailwindcss','@vueuse/nuxt','@nuxtjs/google-fonts','@zadigetvoltaire/nuxt-gtm','nuxt-disqus'],
   disqus: {
     shortname: process.env.DISQUS_SHORTNAME || '',
