@@ -38,6 +38,7 @@ for (let i = 0; i < argv.length; i++) {
     case '--csv':          a.csv = nast(); break
     case '--magazyn':      a.magazyn = nast(); break
     case '--na-sucho':     a.naSucho = true; break
+    case '--surowe':       a.surowe = true; break
   }
 }
 
@@ -177,6 +178,16 @@ async function main () {
 
   console.log(`Zwrocono ${pozycje.length} fraz (tryb: ${a.tryb}).`)
 
+  // --surowe: zrzuca cala pozycje tak, jak przyszla z API. Sluzy do sprawdzenia, jakie
+  // pola sa naprawde dostepne, zanim zaczniemy je czytac — zgadywanie nazw pol konczy sie
+  // kolumnami pelnymi „undefined".
+  if (a.surowe) {
+    console.log('\n=== surowa pierwsza pozycja ===')
+    console.log(JSON.stringify(pozycje[0], null, 2))
+    podsumujKoszt()
+    return
+  }
+
   // Kilka zarodkow potrafi zwrocic te sama fraze — odsiewamy, zanim policzymy cokolwiek.
   const unikalne = [...new Map(pozycje.filter(p => p?.keyword).map(p => [p.keyword, p])).values()]
   if (unikalne.length !== pozycje.length) {
@@ -186,11 +197,35 @@ async function main () {
   const wiersze = unikalne.map(p => {
     const info = p.keyword_info ?? {}
     const wlas = p.keyword_properties ?? {}
+    const linki = p.avg_backlinks_info ?? {}
     const nasza = mamyToJuz(p.keyword, slugi)
+
+    // Sezonowosc. Przy kolorowankach to jedna z ciekawszych informacji w calej odpowiedzi:
+    // „wielkanocne" i „na Dzien Matki" maja ostry szczyt, wiec generowanie warto zaczac
+    // z wyprzedzeniem, a nie w tygodniu, w ktorym popyt juz opada.
+    const miesiace = Array.isArray(info.monthly_searches) ? info.monthly_searches : []
+    const szczyt = miesiace.reduce((n, m) => (m.search_volume > (n?.search_volume ?? -1) ? m : n), null)
+    const sredniMies = miesiace.length
+      ? miesiace.reduce((s, m) => s + (m.search_volume || 0), 0) / miesiace.length
+      : 0
+
     return {
       fraza: p.keyword,
       wolumen: info.search_volume ?? 0,
       trudnoscSeo: wlas.keyword_difficulty ?? null,
+      slow: wlas.words_count ?? null,
+      // Ile domen linkuje srednio do pierwszej dziesiatki. Uzupelnia trudnosc SEO:
+      // wartosc bliska zera znaczy, ze czolowka nie ma zaplecza linkowego i da sie ja
+      // wyprzedzic sama trescia.
+      domenyTop10: linki.referring_domains ?? null,
+      silaTop10: linki.main_domain_rank ?? null,
+      intencja: p.search_intent_info?.main_intent ?? null,
+      trendRoczny: info.search_volume_trend?.yearly ?? null,
+      szczytMiesiac: szczyt?.month ?? null,
+      szczytWolumen: szczyt?.search_volume ?? null,
+      // Stosunek szczytu do sredniej — powyzej ok. 1,6 fraza jest wyraznie sezonowa.
+      sezonowosc: sredniMies ? Number(((szczyt?.search_volume ?? 0) / sredniMies).toFixed(2)) : null,
+      miesiace: miesiace.map(m => m.search_volume ?? 0),
       konkurencjaReklamowa: info.competition ?? null,
       poziomReklamowy: info.competition_level ?? null,
       cpc: info.cpc ?? null,
@@ -200,12 +235,16 @@ async function main () {
 
   // --- CSV na dysk
   const sciezkaCsv = a.csv || `frazy-${a.rynek}-${a.zestaw}.csv`
-  const naglowek = ['fraza', 'wolumen', 'trudnosc SEO', 'konkurencja reklamowa', 'poziom reklamowy', 'CPC', 'mamy kategorie']
+  const naglowek = ['fraza', 'wolumen', 'trudnosc SEO', 'domeny do top10', 'sila top10',
+    'intencja', 'trend r/r %', 'szczyt (miesiac)', 'szczyt (wolumen)', 'sezonowosc',
+    'slow', 'konkurencja reklamowa', 'poziom reklamowy', 'CPC', 'mamy kategorie']
   const csv = [
     naglowek.join(';'),
     ...wiersze.map(w => [
-      w.fraza, w.wolumen, w.trudnoscSeo ?? '', w.konkurencjaReklamowa ?? '',
-      w.poziomReklamowy ?? '', w.cpc ?? '', w.mamyKategorie ?? ''
+      w.fraza, w.wolumen, w.trudnoscSeo ?? '', w.domenyTop10 ?? '', w.silaTop10 ?? '',
+      w.intencja ?? '', w.trendRoczny ?? '', w.szczytMiesiac ?? '', w.szczytWolumen ?? '',
+      w.sezonowosc ?? '', w.slow ?? '', w.konkurencjaReklamowa ?? '',
+      w.poziomReklamowy ?? '', w.cpc ?? '', w.mamyKategorie ?? 'biala plama'
     ].map(csvPole).join(';'))
   ].join('\r\n')
   // Srednik jako separator i BOM na poczatku — inaczej Excel w polskiej lokalizacji

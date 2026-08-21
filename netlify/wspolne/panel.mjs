@@ -245,7 +245,11 @@ export const STYL = `
     text-transform: uppercase; color: var(--grafit);
     padding: 0 10px 10px 0; border-bottom: 2px solid var(--tusz); white-space: nowrap;
   }
-  table.frazy th.num { text-align: right; }
+  table.frazy th[data-sort] { cursor: pointer; user-select: none; }
+  table.frazy th[data-sort]:hover { color: var(--tusz); }
+  table.frazy th[data-sort]:focus-visible { outline: 2px solid var(--tusz); outline-offset: 2px; }
+  table.frazy th[aria-sort]:not([aria-sort="none"]) { color: var(--tusz); }
+  .strzalka { font-size: 10px; }
   table.frazy td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--kreska); vertical-align: middle; }
   table.frazy tr.ukryty { display: none; }
   .fraza { font-weight: 500; }
