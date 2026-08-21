@@ -4,9 +4,13 @@
 // kopaniach (patrz `netlify/functions/dfs-store.mjs`). Wahania wolumenu miedzy pomiarami
 // nie niosa informacji, wiec ich nie trzymamy — pomiar robimy raz, powtarzamy na zadanie.
 //
-// Zamysl wizualny spina sie z zakladka indeksu: wypelniony kwadracik przy frazie znaczy
-// „mamy juz pod to kategorie", sam kontur znaczy „biala plama". Ten sam idiom co pola
-// na planszy indeksu, tylko odpowiada na inne pytanie.
+// NARZEDZIE NIE WYROKUJE. Pierwsza wersja miala kafel „slodki punkt" z progami wpisanymi
+// na sztywno (min. 500 wyszukan, trudnosc do 30) i to bylo zle z dwoch powodow. Po pierwsze,
+// przy strategii dlugiego ogona fraza o 80 wyszukaniach jest warta tyle samo co czesc setki
+// takich — sto niszowych fraz to dziesiec tysiecy uzytkownikow. Po drugie, serwis rankuje
+// juz dzis na frazach duzo trudniejszych niz 30, wiec taki prog odcinalby rzeczy osiagalne.
+// Dlatego kafle licza to, co operator ma aktualnie w widoku: to on filtrem definiuje, czego
+// szuka, a panel tylko podsumowuje jego wybor.
 
 import { getStore } from '@netlify/blobs'
 import { sprawdzDostep, szkielet, komunikat, esc, data, liczba, NAGLOWKI_HTML } from '../wspolne/panel.mjs'
@@ -21,18 +25,20 @@ const RYNKI = [
   { kod: 'se', flaga: '🇸🇪', nazwa: 'Szwecja' }
 ]
 
-// Prog „slodkiego punktu": fraza warta zachodu to taka, ktorej jeszcze nie pokrywamy,
-// ma sensowny popyt i nie wymaga walki z calym internetem. Progi sa celowo wypisane
-// jako stale, a nie wpisane w warunek — beda do przestawienia, gdy zobaczymy realne dane
-// z kilku rynkow i okaze sie, gdzie naprawde lezy granica oplacalnosci.
-const OKAZJA_MIN_WOLUMEN = 500
-const OKAZJA_MAX_TRUDNOSC = 30
+const MIESIACE = ['', 'sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru']
+
+// Powyzej tego stosunku szczytu do sredniej fraza ma wyrazny sezon. Ponizej krzywa jest
+// plaska i wskazywanie „szczytu" byloby czytaniem szumu.
+const PROG_SEZONOWOSCI = 1.6
+
+const SKROT_INTENCJI = {
+  informational: 'info',
+  commercial: 'komerc.',
+  transactional: 'trans.',
+  navigational: 'nawig.'
+}
 
 const jestPlama = w => !w.mamyKategorie
-const jestOkazja = w =>
-  jestPlama(w) &&
-  (w.wolumen || 0) >= OKAZJA_MIN_WOLUMEN &&
-  w.trudnoscSeo !== null && w.trudnoscSeo <= OKAZJA_MAX_TRUDNOSC
 
 /** Piec stopni nacisku olowka. Liczba i tak jest zawsze widoczna obok. */
 function stopienTrudnosci (t) {
@@ -46,10 +52,10 @@ function stopienTrudnosci (t) {
 
 async function wczytajRynki (store) {
   const { blobs } = await store.list({ prefix: 'frazy/' })
-  const kody = new Set(blobs.map(b => b.key.replace('frazy/', '')))
   const dokumenty = {}
-  for (const kod of kody) {
-    dokumenty[kod] = await store.get(`frazy/${kod}`, { type: 'json' })
+  for (const b of blobs) {
+    const kod = b.key.replace('frazy/', '')
+    dokumenty[kod] = await store.get(b.key, { type: 'json' })
   }
   return dokumenty
 }
@@ -82,22 +88,53 @@ function tabela (wiersze) {
     const szer = Math.max(2, Math.round((w.wolumen || 0) / maxWolumen * 100))
     const st = stopienTrudnosci(w.trudnoscSeo)
 
-    return `<tr data-f="${esc((w.fraza || '').toLowerCase())}" data-w="${w.wolumen || 0}" data-t="${w.trudnoscSeo ?? -1}" data-p="${plama ? 1 : 0}">
+    // Szczyt pokazujemy tylko dla fraz faktycznie sezonowych — przy plaskiej krzywej
+    // „najwyzszy miesiac" to przypadkowe wahniecie, nie informacja.
+    const sezonowa = w.sezonowosc !== null && w.sezonowosc >= PROG_SEZONOWOSCI && w.szczytMiesiac
+    const szczyt = sezonowa
+      ? `<span title="szczyt ${liczba(w.szczytWolumen)} wyszukań, ${w.sezonowosc}× średnia">${MIESIACE[w.szczytMiesiac]}</span>`
+      : '<span style="color:var(--kreska)">—</span>'
+
+    // Kierunek niesie strzalka, nie kolor — czytelne takze dla daltonisty i w druku.
+    const tr = w.trendRoczny
+    const trend = (tr === null || tr === undefined)
+      ? '<span style="color:var(--kreska)">—</span>'
+      : `${tr > 0 ? '▲' : tr < 0 ? '▼' : '·'} ${tr > 0 ? '+' : ''}${tr}%`
+
+    const dom = w.domenyTop10
+    const domeny = (dom === null || dom === undefined)
+      ? '<span style="color:var(--kreska)">—</span>'
+      : (dom < 1 ? dom.toFixed(1) : liczba(Math.round(dom)))
+
+    return `<tr data-f="${esc((w.fraza || '').toLowerCase())}" data-w="${w.wolumen || 0}"
+      data-t="${w.trudnoscSeo ?? -1}" data-d="${dom ?? -1}" data-p="${plama ? 1 : 0}"
+      data-tr="${tr ?? -9999}" data-s="${w.sezonowosc ?? 0}">
       <td class="fraza"><span class="fraza__pokrycie${klasaPokrycia}" title="${esc(tytul)}"></span>${esc(w.fraza)}</td>
       <td><div class="wolumen"><span class="wolumen__liczba">${liczba(w.wolumen)}</span><span class="wolumen__pasek"><i style="width:${szer}%"></i></span></div></td>
       <td style="text-align:center"><span class="trud trud--${st}">${w.trudnoscSeo ?? '—'}</span></td>
+      <td style="text-align:right;font-variant-numeric:tabular-nums">${domeny}</td>
+      <td style="text-align:center">${szczyt}</td>
+      <td style="text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap">${trend}</td>
+      <td style="color:var(--grafit);font-size:13px">${esc(SKROT_INTENCJI[w.intencja] || '—')}</td>
       <td style="color:var(--grafit);font-size:13px;white-space:nowrap">${ogolna ? 'ogólna' : (plama ? 'biała plama' : esc(w.mamyKategorie))}</td>
     </tr>`
   }).join('')
 
+  const th = (etykieta, klucz, tytul, styl = '') =>
+    `<th data-sort="${klucz}" title="${esc(tytul)}" tabindex="0" role="button"${styl ? ` style="${styl}"` : ''}>${etykieta}<span class="strzalka"></span></th>`
+
   return `<div class="przewijak"><table class="frazy">
     <thead><tr>
-      <th>Fraza</th>
-      <th class="num" style="text-align:right">Wolumen / mies.</th>
-      <th style="text-align:center">Trudność SEO</th>
-      <th>Pokrycie</th>
+      ${th('Fraza', 'f', 'Kliknij, żeby posortować alfabetycznie')}
+      ${th('Wolumen / mies.', 'w', 'Średnia liczba wyszukań miesięcznie', 'text-align:right')}
+      ${th('Trudność', 't', 'Trudność SEO 0–100: jak trudno wejść na pierwszą stronę wyników organicznych', 'text-align:center')}
+      ${th('Domeny top-10', 'd', 'Ile domen linkuje średnio do pierwszej dziesiątki. Wartość bliska zera znaczy, że czołówka nie ma zaplecza linkowego', 'text-align:right')}
+      ${th('Szczyt', 's', 'Miesiąc największego popytu — pokazany tylko dla fraz wyraźnie sezonowych', 'text-align:center')}
+      ${th('Trend r/r', 'tr', 'Zmiana liczby wyszukań rok do roku', 'text-align:right')}
+      <th>Intencja</th>
+      ${th('Pokrycie', 'p', 'Czy macie już kategorię pod tę frazę')}
     </tr></thead>
-    <tbody id="ciało">${rzedy}</tbody>
+    <tbody id="cialo">${rzedy}</tbody>
   </table></div>`
 }
 
@@ -120,9 +157,6 @@ function widok (dokumenty, aktywny) {
   }
 
   const wiersze = dok.wiersze
-  const plamy = wiersze.filter(jestPlama)
-  const okazje = wiersze.filter(jestOkazja)
-  const wolumenPlam = plamy.reduce((s, w) => s + (w.wolumen || 0), 0)
   const zestawy = Object.keys(dok.zestawy || {})
 
   const tresc = `
@@ -131,27 +165,18 @@ function widok (dokumenty, aktywny) {
     <p class="brew">Frazy<span class="brew__kropka">/</span>${esc(rynek?.nazwa || aktywny)}<span class="brew__kropka">/</span>zaktualizowano ${esc(data(dok.zaktualizowano))}</p>
 
     <div class="kafle">
-      <div class="kafel">
-        <div class="kafel__liczba">${liczba(wiersze.length)}</div>
-        <div class="kafel__opis">fraz w zbiorze, z ${zestawy.length} ${zestawy.length === 1 ? 'kopania' : 'kopań'}</div>
-      </div>
-      <div class="kafel">
-        <div class="kafel__liczba">${liczba(wolumenPlam)}</div>
-        <div class="kafel__opis">wyszukań miesięcznie na frazach, których nie pokrywacie</div>
-      </div>
-      <div class="kafel kafel--okazja">
-        <div class="kafel__liczba">${liczba(okazje.length)}</div>
-        <div class="kafel__opis">fraz w słodkim punkcie: biała plama, min. ${liczba(OKAZJA_MIN_WOLUMEN)} wyszukań, trudność do ${OKAZJA_MAX_TRUDNOSC}</div>
-      </div>
+      <div class="kafel"><div class="kafel__liczba" id="kafelFraz">—</div><div class="kafel__opis">fraz w widoku, z ${liczba(wiersze.length)} w zbiorze</div></div>
+      <div class="kafel"><div class="kafel__liczba" id="kafelWolumen">—</div><div class="kafel__opis">wyszukań miesięcznie łącznie w tym, co widzisz</div></div>
+      <div class="kafel kafel--okazja"><div class="kafel__liczba" id="kafelPlam">—</div><div class="kafel__opis">z tego białych plam — bez własnej kategorii</div></div>
     </div>
 
     <div class="filtry">
       <input type="search" id="szukaj" placeholder="Szukaj we frazach…" aria-label="Szukaj we frazach">
-      <input type="number" id="minW" placeholder="min. wol." aria-label="Minimalny wolumen" min="0" step="100">
-      <input type="number" id="maxT" placeholder="maks. trud." aria-label="Maksymalna trudność" min="0" max="100" step="5">
+      <input type="number" id="minW" placeholder="min. wol." aria-label="Minimalny wolumen" min="0" step="10">
+      <input type="number" id="maxT" placeholder="maks. trud." aria-label="Maksymalna trudność SEO" min="0" max="100" step="5">
+      <input type="number" id="maxD" placeholder="maks. domen" aria-label="Maksymalnie domen linkujących do top 10" min="0" step="1">
       <label class="przelacznik"><input type="checkbox" id="tylkoPlamy"> tylko białe plamy</label>
       <a class="zglos" href="/panel-delash/frazy.csv?rynek=${esc(aktywny)}">Pobierz CSV</a>
-      <span class="licznik-wynikow" id="licznik"></span>
     </div>
 
     ${tabela(wiersze)}
@@ -159,47 +184,87 @@ function widok (dokumenty, aktywny) {
 
     <p class="stopka">
       <strong>Trudność SEO</strong> (0–100) mówi, jak trudno wejść na pierwszą stronę wyników organicznych.
-      To nie to samo, co konkurencja reklamowa z Google Ads, która mówi tylko, ilu reklamodawców licytuje o frazę —
-      tę drugą znajdziesz w CSV, tutaj by tylko myliła.<br>
-      Zbiór rośnie przy każdym kopaniu i nic z niego nie znika. Pomiary z ${esc(zestawy.join(', ') || '—')}.
+      <strong>Domeny top-10</strong> to jej uzupełnienie od drugiej strony: ile domen linkuje średnio do obecnej
+      czołówki. Wartość bliska zera znaczy, że nikt tam nie ma zaplecza linkowego i da się ją wyprzedzić samą treścią.<br>
+      <strong>Szczyt</strong> pojawia się tylko przy frazach wyraźnie sezonowych — przy płaskiej krzywej najwyższy
+      miesiąc to przypadkowe wahnięcie, nie informacja.<br>
+      Konkurencja reklamowa z Google Ads i CPC są w CSV; tutaj by myliły, bo mówią o licytacji reklamodawców, a nie o pozycjonowaniu.
+      Zbiór rośnie przy każdym kopaniu i nic z niego nie znika. Pomiary z: ${esc(zestawy.join(', ') || '—')}.
     </p>
 
     <script>
-      const wiersze = [...document.querySelectorAll('#ciało tr')]
+      const cialo = document.getElementById('cialo')
+      const wiersze = [...cialo.querySelectorAll('tr')]
       const pola = {
         szukaj: document.getElementById('szukaj'),
         minW: document.getElementById('minW'),
         maxT: document.getElementById('maxT'),
+        maxD: document.getElementById('maxD'),
         plamy: document.getElementById('tylkoPlamy')
       }
-      const licznik = document.getElementById('licznik')
+      const kafle = {
+        fraz: document.getElementById('kafelFraz'),
+        wolumen: document.getElementById('kafelWolumen'),
+        plam: document.getElementById('kafelPlam')
+      }
       const pusto = document.getElementById('pusto')
+      const fmt = n => n.toLocaleString('pl-PL')
 
       function filtruj () {
         const q = pola.szukaj.value.trim().toLowerCase()
         const minW = Number(pola.minW.value) || 0
-        const maxT = pola.maxT.value === '' ? 100 : Number(pola.maxT.value)
+        const maxT = pola.maxT.value === '' ? Infinity : Number(pola.maxT.value)
+        const maxD = pola.maxD.value === '' ? Infinity : Number(pola.maxD.value)
         const tylkoPlamy = pola.plamy.checked
-        let widocznych = 0
+        let ile = 0, suma = 0, plam = 0
 
         for (const tr of wiersze) {
           const t = Number(tr.dataset.t)
+          const d = Number(tr.dataset.d)
+          // Brak pomiaru (-1) przepuszczamy zawsze: „nie zmierzono" to nie to samo co
+          // „duzo", a ciche ukrywanie takich wierszy gubiloby dane bez sladu.
           const ok = (!q || tr.dataset.f.includes(q))
             && Number(tr.dataset.w) >= minW
-            // Frazy bez zmierzonej trudnosci (-1) przepuszczamy — brak pomiaru to nie to
-            // samo co trudnosc wysoka, a ukrycie ich po cichu gubiloby dane.
             && (t < 0 || t <= maxT)
+            && (d < 0 || d <= maxD)
             && (!tylkoPlamy || tr.dataset.p === '1')
           tr.classList.toggle('ukryty', !ok)
-          if (ok) widocznych++
+          if (ok) { ile++; suma += Number(tr.dataset.w); if (tr.dataset.p === '1') plam++ }
         }
 
-        licznik.textContent = widocznych === wiersze.length
-          ? wiersze.length + ' fraz'
-          : widocznych + ' z ' + wiersze.length
-        pusto.hidden = widocznych > 0
+        kafle.fraz.textContent = fmt(ile)
+        kafle.wolumen.textContent = fmt(suma)
+        kafle.plam.textContent = fmt(plam)
+        pusto.hidden = ile > 0
       }
 
+      // Sortowanie. Kierunek przelacza sie przy powtornym kliknieciu w te sama kolumne;
+      // kolumny liczbowe startuja malejaco, bo tak sie ich szuka.
+      let sortKlucz = null, malejaco = true
+      function sortuj (klucz) {
+        if (sortKlucz === klucz) malejaco = !malejaco
+        else { sortKlucz = klucz; malejaco = klucz !== 'f' }
+
+        const tekstowa = klucz === 'f' || klucz === 'p'
+        wiersze.sort((a, b) => {
+          const x = tekstowa ? a.dataset[klucz] : Number(a.dataset[klucz])
+          const y = tekstowa ? b.dataset[klucz] : Number(b.dataset[klucz])
+          const r = tekstowa ? String(x).localeCompare(String(y), 'pl') : x - y
+          return malejaco ? -r : r
+        })
+        for (const tr of wiersze) cialo.appendChild(tr)
+
+        for (const th of document.querySelectorAll('th[data-sort]')) {
+          const czy = th.dataset.sort === klucz
+          th.setAttribute('aria-sort', czy ? (malejaco ? 'descending' : 'ascending') : 'none')
+          th.querySelector('.strzalka').textContent = czy ? (malejaco ? ' ▼' : ' ▲') : ''
+        }
+      }
+
+      for (const th of document.querySelectorAll('th[data-sort]')) {
+        th.addEventListener('click', () => sortuj(th.dataset.sort))
+        th.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sortuj(th.dataset.sort) } })
+      }
       for (const p of Object.values(pola)) p.addEventListener('input', filtruj)
       filtruj()
     </script>`
@@ -214,10 +279,14 @@ function csv (dok) {
     const s = String(w ?? '')
     return /[",;\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s
   }
-  const naglowek = ['fraza', 'wolumen', 'trudnosc SEO', 'konkurencja reklamowa', 'poziom reklamowy', 'CPC', 'pokrycie', 'zestaw']
+  const naglowek = ['fraza', 'wolumen', 'trudnosc SEO', 'domeny do top10', 'sila top10',
+    'intencja', 'trend r/r %', 'szczyt (miesiac)', 'szczyt (wolumen)', 'sezonowosc', 'slow',
+    'konkurencja reklamowa', 'poziom reklamowy', 'CPC', 'pokrycie', 'zestaw']
   const linie = dok.wiersze.map(w => [
-    w.fraza, w.wolumen, w.trudnoscSeo ?? '', w.konkurencjaReklamowa ?? '',
-    w.poziomReklamowy ?? '', w.cpc ?? '', w.mamyKategorie ?? 'biala plama', w.zestaw ?? ''
+    w.fraza, w.wolumen, w.trudnoscSeo ?? '', w.domenyTop10 ?? '', w.silaTop10 ?? '',
+    w.intencja ?? '', w.trendRoczny ?? '', w.szczytMiesiac ?? '', w.szczytWolumen ?? '',
+    w.sezonowosc ?? '', w.slow ?? '', w.konkurencjaReklamowa ?? '', w.poziomReklamowy ?? '',
+    w.cpc ?? '', w.mamyKategorie ?? 'biala plama', w.zestaw ?? ''
   ].map(pole).join(';'))
   // Srednik i BOM — bez nich Excel w polskiej lokalizacji wrzuca wiersz do jednej komorki
   // i lamie ogonki.
