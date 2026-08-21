@@ -20,7 +20,12 @@ import { timingSafeEqual } from 'node:crypto'
 // `/panel-gsc` -> `/.netlify/functions/panel-gsc` bylo ignorowane i zadanie spadalo na
 // regule `/*` -> 404, mimo ze inne reguly z tego pliku dzialaja. Funkcje v2 maja na to
 // wlasny mechanizm i on jest wiazacy.
-export const config = { path: '/panel-gsc' }
+//
+// `/panel-delash/indeks` to adres docelowy — panel ma z czasem miec wiecej zakladek niz
+// jedna (warsztat do fraz z DataForSEO). `/panel-delash` prowadzi na razie tutaj, bo przy
+// jednej zakladce rozdzielacz nie mialby czego rozdzielac. `/panel-gsc` zostaje, zeby nie
+// zepsuc zakladki w przegladarce — kosztuje jedna linijke.
+export const config = { path: ['/panel-delash', '/panel-delash/indeks', '/panel-gsc'] }
 
 // ------------------------------------------------------------------ dostep
 

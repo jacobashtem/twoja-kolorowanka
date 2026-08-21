@@ -48,7 +48,7 @@
 # Panelu monitoringu NIE ma tutaj celowo. Przepisanie `/panel-gsc` na sciezke funkcji
 # bylo ignorowane — zadanie spadalo az na regule `/*` -> 404, mimo ze pozostale reguly
 # z tego pliku dzialaja normalnie. Funkcje v2 deklaruja swoj adres same, przez
-# `export const config = { path: ... }`, i tak to jest zrobione w netlify/functions/panel-gsc.mjs.
+# `export const config = { path: ... }`, i tak to jest zrobione w netlify/functions/panel-delash.mjs.
 # Haslo sprawdza sama funkcja, nie Edge Function przed nia: Edge Functions nie da sie
 # przypiac do /.netlify/functions/*, wiec straznik na ladnym adresie zostawialby otwarte
 # drugie wejscie pod wlasnym adresem funkcji.
