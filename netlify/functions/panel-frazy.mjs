@@ -37,6 +37,12 @@ const MIESIACE = ['', 'sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'w
 // plaska i wskazywanie „szczytu" byloby czytaniem szumu.
 const PROG_SEZONOWOSCI = 1.6
 
+// Przy frazach o znikomym wolumenie miesieczna krzywa z clickstreamu to szum, a nie sezon:
+// przy „mikołaj do kolorowania" z wolumenem zero wychodzil szczyt 3,46× w lipcu. Ponizej
+// tego progu nie pokazujemy szczytu wcale, bo falszywy sezon jest gorszy niz jego brak —
+// na jego podstawie ktos zaplanowalby produkcje na zly miesiac.
+const MIN_WOLUMEN_DLA_SEZONU = 100
+
 const SKROT_INTENCJI = {
   informational: 'info',
   commercial: 'komerc.',
@@ -111,7 +117,8 @@ function tabela (wiersze) {
 
     // Szczyt pokazujemy tylko dla fraz faktycznie sezonowych — przy plaskiej krzywej
     // „najwyzszy miesiac" to przypadkowe wahniecie, nie informacja.
-    const sezonowa = w.sezonowosc !== null && w.sezonowosc >= PROG_SEZONOWOSCI && w.szczytMiesiac
+    const sezonowa = w.sezonowosc !== null && w.sezonowosc >= PROG_SEZONOWOSCI
+      && w.szczytMiesiac && (w.wolumen || 0) >= MIN_WOLUMEN_DLA_SEZONU
     const szczyt = sezonowa
       ? `<span title="szczyt ${liczba(w.szczytWolumen)} wyszukań, ${w.sezonowosc}× średnia">${MIESIACE[w.szczytMiesiac]}</span>`
       : '<span style="color:var(--kreska)">—</span>'
@@ -432,7 +439,7 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
             ? 'Praktycznie zero. Strony w czołówce nie mają linków z innych witryn — to jest fraza do wzięcia.'
             : 'Tyle różnych witryn linkuje średnio do stron, które są dziś w pierwszej dziesiątce. Im mniej, tym łatwiej je wyprzedzić.'
 
-        const sez = (w.sezonowosc >= 1.6 && w.szczytMiesiac)
+        const sez = (w.sezonowosc >= 1.6 && w.szczytMiesiac && (w.wolumen || 0) >= 100)
           ? wiersz('Szczyt sezonu', MIES[w.szczytMiesiac] + ' (' + fmtl(w.szczytWolumen) + ')',
               'Popyt skacze ' + w.sezonowosc + '× ponad średnią. Materiał warto mieć gotowy z miesięcznym wyprzedzeniem.')
           : wiersz('Sezonowość', 'brak wyraźnego szczytu', 'Popyt rozłożony równo przez rok.')
