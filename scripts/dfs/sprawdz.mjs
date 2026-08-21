@@ -52,11 +52,19 @@ async function main () {
     const konto = await stanKonta()
     console.log('=== KONTO ===')
     console.log(`Saldo:  $${konto?.money?.balance ?? '?'}`)
-    console.log(`Limit dzienny: ${konto?.rates?.limits?.day ?? '?'}   minutowy: ${konto?.rates?.limits?.minute ?? '?'}`)
+    // `limits` to obiekt z podzialem na rodzaje zapytan, nie pojedyncza liczba —
+    // wypisujemy w calosci, zeby nie zgadywac, ktore pole jest tym wlasciwym.
+    if (konto?.rates?.limits) console.log(`Limity: ${JSON.stringify(konto.rates.limits)}`)
     if (tylkoSaldo) return
     console.log('')
   }
 
+  // UWAGA NA KOSZT: `live/advanced` z `depth: 100` kosztuje okolo $0,0185 za fraze,
+  // a nie $0,002 z cennika. Cennik podaje cene za JEDEN SERP, czyli 10 wynikow —
+  // depth 100 to dziesiec SERP-ow, wiec dziesieciokrotnosc. Do sprawdzania „czy jestesmy
+  // w setce" ta glebokosc jest potrzebna; do sprawdzania czolowki wystarczy depth 20
+  // i wtedy jest piec razy taniej. Kolejka standardowa zamiast `live` tnie koszt jeszcze
+  // okolo trzykrotnie, kosztem czekania na wynik.
   const rynek = RYNKI.pl
   console.log(`=== POROWNANIE Z SEARCH CONSOLE (${rynek.nazwa}) ===`)
   console.log('GSC podaje srednia wazona z 3 miesiecy, DataForSEO pomiar z dzisiaj —')
