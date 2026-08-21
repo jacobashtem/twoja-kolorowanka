@@ -108,17 +108,40 @@ function mamyToJuz (fraza, czesciSlugow) {
   if (!slowa.length) return 'ogolna'
 
   for (const slowo of slowa) {
+    const rdzenSlowa = rdzen(slowo)
     for (const [czesc, slug] of czesciSlugow) {
-      // Dlugosc porownywanego przedrostka rosnie z dlugoscia krotszego ze slow, do pieciu
-      // znakow. Staly przedrostek czteroznakowy dawal falszywe trafienia na wspolnych
-      // poczatkach: „dzieci" i „dzien" zaczynaja sie tak samo, wiec „kolorowanki dla dzieci"
-      // ladowalo w kategorii „pierwszy-dzien-szkoly". Piec znakow te pare rozdziela,
-      // a krotkie slugi w rodzaju „koty" nadal daja sie dopasowac.
-      const n = Math.min(5, slowo.length, czesc.length)
-      if (n >= 4 && slowo.slice(0, n) === czesc.slice(0, n)) return slug
+      if (rdzenSlowa && rdzenSlowa === rdzen(czesc)) return slug
     }
   }
   return null
+}
+
+// Koncowki odmiany, od najdluzszych. Liczenie wspolnych znakow sie nie sprawdzilo:
+// czterema znakami „dzieci" zlewalo sie z „dzien", a pięcioma „panda" przestawala pasowac
+// do kategorii „pandy" — i tabela mowila, ze nie macie strony o pandach, choc macie.
+// Odcinanie koncowek rozstrzyga oba przypadki poprawnie, bo dziala na morfologii,
+// a nie na dlugosci wspolnego poczatku.
+// Celowo BEZ „ki" i „ka": to koncowki zdrobnien, nie przypadkow, i zjadaly litere rdzenia
+// („smoki" -> „smo" zamiast „smok"). Ich brak oznacza, ze zdrobnienia sie nie dopasuja
+// — i tak ma byc, bo „kotek" to co innego niz „koty" i lepiej pokazac je jako osobna
+// okazje, niz po cichu schowac pod istniejaca kategoria.
+const KONCOWKI = ['ami', 'ach', 'ych', 'ich', 'ow', 'om', 'em', 'ie',
+  'y', 'i', 'a', 'e', 'u', 'o']
+
+/**
+ * Zgrubny rdzen slowa. Nie jest to poprawny stemmer polszczyzny i nie musi byc — ma tylko
+ * sprowadzic do wspolnej postaci warianty tej samej nazwy kategorii.
+ *
+ *   panda, pandy        -> pand
+ *   ryb, ryby, ryba     -> ryb
+ *   doroslych           -> dorosl
+ *   dzieci vs dzien     -> dziec vs dzien   (slusznie rozne)
+ */
+function rdzen (slowo) {
+  for (const k of KONCOWKI) {
+    if (slowo.length - k.length >= 3 && slowo.endsWith(k)) return slowo.slice(0, -k.length)
+  }
+  return slowo
 }
 
 /** Polska odmiana i ogonki psuja porownanie doslowne — sprowadzamy wszystko do ascii. */
@@ -148,6 +171,10 @@ async function main () {
   //                    nie tematem. Sprawdzone na „kolorowanki do druku": zwrocilo pogode,
   //                    darmowe gry i tlumacza polsko-angielskiego. Zostawione, bo bywa
   //                    przydatne do szukania sasiednich nisz, ale nie jako domyslne.
+  //   warianty         bierze JEDNO slowo i sam buduje z niego wszystkie odmiany oraz
+  //                    szyki, po czym mierzy je naraz. Odpowiedz na pytanie „ktory zapis
+  //                    tej frazy naprawde niesie ruch" — przy polskim kluczowe, bo odmiana
+  //                    potrafi przeniesc caly wolumen gdzie indziej.
   //   dokladny         keyword_overview — pelne dane dla DOKLADNIE podanych fraz, bez
   //                    dosypywania wariantow. Odpowiednik „Keyword Overview" z Semrusha:
   //                    wpisujesz fraze, ktora Cie interesuje, i dostajesz jej liczby.
@@ -179,7 +206,29 @@ async function main () {
   }
 
   const pozycje = []
-  if (a.tryb === 'dokladny') {
+  if (a.tryb === 'warianty') {
+    // Z jednego slowa budujemy wszystkie sensowne sposoby, na jakie mozna o to zapytac,
+    // i mierzymy je naraz. Czesc kombinacji to bedzie belkot — nic nie szkodzi, API zwroci
+    // dla nich zero, a jedno zapytanie kosztuje tyle samo niezaleznie od tego, ile fraz
+    // w nim wyslemy. Lepiej zapytac o pietnascie za duzo niz przegapic ta jedna, ktora niesie
+    // caly ruch.
+    const baza = bezOgonkow(a.seedy[0]).split(/\s+/).pop()
+    const rdz = rdzen(baza)
+    const formy = [...new Set([baza, ...rynek.koncowki.map(k => rdz + k)])].filter(f => f.length >= 3)
+    const kandydaci = [...new Set(
+      formy.flatMap(f => rynek.szablony.map(s => s.replace('{w}', f)))
+    )]
+
+    console.log(`Formy slowa "${baza}": ${formy.join(', ')}`)
+    console.log(`Do zmierzenia: ${kandydaci.length} kombinacji w jednym zapytaniu.`)
+    console.log('')
+
+    const { order_by, filters, limit, ...bezSortowania } = wspolne
+    const wynik = await wywolaj('dataforseo_labs/google/keyword_overview/live',
+      [{ keywords: kandydaci, ...bezSortowania }], { naSucho: a.naSucho })
+    if (a.naSucho) return
+    pozycje.push(...(wynik?.[0]?.items ?? []))
+  } else if (a.tryb === 'dokladny') {
     // Tryb dokladny nie sortuje ani nie filtruje — pytamy o konkretne frazy i chcemy
     // dostac je wszystkie, takze te o zerowym wolumenie. Zerowy wynik to tez odpowiedz.
     const { order_by, filters, limit, ...bezSortowania } = wspolne
