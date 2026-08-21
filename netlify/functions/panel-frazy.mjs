@@ -129,13 +129,14 @@ function tabela (wiersze) {
 
     return `<tr data-f="${esc((w.fraza || '').toLowerCase())}" data-w="${w.wolumen || 0}"
       data-t="${w.trudnoscSeo ?? -1}" data-d="${dom ?? -1}" data-p="${plama ? 1 : 0}"
-      data-tr="${tr ?? -9999}" data-s="${w.sezonowosc ?? 0}" data-o="${w.ocena ?? 0}" data-z="${w.zrobione ? 1 : 0}">
+      data-tr="${tr ?? -9999}" data-s="${w.sezonowosc ?? 0}" data-o="${w.ocena ?? 0}" data-z="${w.zrobione ? 1 : 0}"
+      data-cs="${w.zrodloWolumenu === 'clickstream' ? 1 : 0}">
       <td class="fraza"><span class="fraza__pokrycie${klasaPokrycia}" title="${esc(tytul)}"></span>${esc(w.fraza)}</td>
-      <td><div class="wolumen"><span class="wolumen__liczba">${liczba(w.wolumen)}${
+      <td><div class="wolumen"><span class="wolumen__liczba${w.zrodloWolumenu === 'ads' ? ' wolumen__liczba--koszyk' : ''}"${
         w.zrodloWolumenu === 'ads'
-          ? `<abbr class="koszyk" title="Brak danych ze strumienia kliknięć — to wartość z koszyka Google Ads, która zawyża pojedynczą frazę o wielkość całej grupy wariantów. Traktuj jako górną granicę.">~</abbr>`
-          : ''
-      }</span><span class="wolumen__pasek"><i style="width:${szer}%"></i></span></div></td>
+          ? ' title="Górna granica, nie pomiar. Brak danych ze strumienia kliknięć, więc pokazujemy koszyk Google Ads — sumę całej grupy bliskich wariantów. Nie porównuj tej liczby z liczbami zmierzonymi."'
+          : ' title="Zmierzone na strumieniu rzeczywistych kliknięć — dotyczy dokładnie tej frazy."'
+      }>${w.zrodloWolumenu === 'ads' ? '≤' : ''}${liczba(w.wolumen)}</span><span class="wolumen__pasek"><i style="width:${szer}%"></i></span></div></td>
       <td style="text-align:center"><span class="trud trud--${st}">${w.trudnoscSeo ?? '—'}</span></td>
       <td style="text-align:right;font-variant-numeric:tabular-nums">${domeny}</td>
       <td style="text-align:center">${szczyt}</td>
@@ -247,6 +248,7 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
       <input type="number" id="maxT" placeholder="maks. trud." aria-label="Maksymalna trudność SEO" min="0" max="100" step="5">
       <input type="number" id="maxD" placeholder="maks. domen" aria-label="Maksymalnie domen linkujących do top 10" min="0" step="1">
       <label class="przelacznik"><input type="checkbox" id="tylkoPlamy"> tylko bez naszej kategorii</label>
+      <label class="przelacznik" title="Ukryj wiersze, dla których mamy tylko koszyk Google Ads. Dopiero wtedy sortowanie po wolumenie porównuje liczby tego samego rodzaju."><input type="checkbox" id="tylkoZmierzone"> tylko zmierzone</label>
       <a class="zglos" href="/panel-delash/frazy.csv?rynek=${esc(aktywny)}">Pobierz CSV</a>
     </div>
 
@@ -278,7 +280,8 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
         minW: document.getElementById('minW'),
         maxT: document.getElementById('maxT'),
         maxD: document.getElementById('maxD'),
-        plamy: document.getElementById('tylkoPlamy')
+        plamy: document.getElementById('tylkoPlamy'),
+        zmierzone: document.getElementById('tylkoZmierzone')
       }
       const kafle = {
         fraz: document.getElementById('kafelFraz'),
@@ -306,6 +309,7 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
             && (t < 0 || t <= maxT)
             && (d < 0 || d <= maxD)
             && (!tylkoPlamy || tr.dataset.p === '1')
+            && (!pola.zmierzone.checked || tr.dataset.cs === '1')
           tr.classList.toggle('ukryty', !ok)
           const szcz = tr.nextElementSibling
           if (szcz && szcz.classList.contains('szczegoly') && !ok) szcz.hidden = true
