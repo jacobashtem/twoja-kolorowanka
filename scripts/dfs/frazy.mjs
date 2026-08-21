@@ -71,10 +71,10 @@ function naszeKategorie () {
   // Slug „dla-doroslych" nie dopasuje sie do slowa „doroslych", dopoki nie rozbijemy go
   // po mysliku. Budujemy mape przedrostek -> pelny slug, zeby porownanie bylo jednym
   // odczytem zamiast petli po wszystkich slugach dla kazdego slowa.
-  const czesci = new Map()
+  const czesci = []
   for (const slug of slugi) {
     for (const czesc of bezOgonkow(slug).split('-')) {
-      if (czesc.length >= 4 && !SLOWA_PUSTE.has(czesc)) czesci.set(czesc.slice(0, 4), slug)
+      if (czesc.length >= 4 && !SLOWA_PUSTE.has(czesc)) czesci.push([czesc, slug])
     }
   }
   return czesci
@@ -106,8 +106,14 @@ function mamyToJuz (fraza, czesciSlugow) {
   if (!slowa.length) return 'ogolna'
 
   for (const slowo of slowa) {
-    for (const [przedrostek, slug] of czesciSlugow) {
-      if (slowo.slice(0, 4) === przedrostek) return slug
+    for (const [czesc, slug] of czesciSlugow) {
+      // Dlugosc porownywanego przedrostka rosnie z dlugoscia krotszego ze slow, do pieciu
+      // znakow. Staly przedrostek czteroznakowy dawal falszywe trafienia na wspolnych
+      // poczatkach: „dzieci" i „dzien" zaczynaja sie tak samo, wiec „kolorowanki dla dzieci"
+      // ladowalo w kategorii „pierwszy-dzien-szkoly". Piec znakow te pare rozdziela,
+      // a krotkie slugi w rodzaju „koty" nadal daja sie dopasowac.
+      const n = Math.min(5, slowo.length, czesc.length)
+      if (n >= 4 && slowo.slice(0, n) === czesc.slice(0, n)) return slug
     }
   }
   return null
@@ -129,7 +135,7 @@ async function main () {
   const slugi = naszeKategorie()
   console.log(`Rynek: ${rynek.nazwa} (${a.rynek})   zestaw: ${a.zestaw}`)
   console.log(`Zarodki: ${a.seedy.map(s => `"${s}"`).join(', ')}`)
-  console.log(`Znam ${slugi.size} naszych kategorii do oznaczenia bialych plam.`)
+  console.log(`Znam ${slugi.length} czesci nazw kategorii do oznaczenia bialych plam.`)
   console.log('')
 
   // Dwa tryby, bo dwa endpointy odpowiadaja na zupelnie inne pytania:
