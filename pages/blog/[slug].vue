@@ -29,6 +29,15 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
+// Canonical i robots. `useSeoMeta` nie umie canonicala — to <link>, nie <meta> — wiec
+// wpisy szly bez niego i Search Console raportowal "Duplikat, uzytkownik nie oznaczyl
+// strony kanonicznej". Ta sama tresc stoi rowniez na tk.delash.pl, wiec bez tego tagu
+// to Google decydowal, ktora kopia jest oryginalem.
+useHead({
+  link: [{ rel: 'canonical', href: `https://twoja-kolorowanka.pl/blog/${slug}/` }],
+  meta: [{ name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+})
+
 // Structured data
 useHead({
   script: computed(() => {

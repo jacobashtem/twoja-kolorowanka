@@ -14,6 +14,15 @@ useSeoMeta({
   ogType: 'website',
 })
 
+// Canonical i robots. `useSeoMeta` nie umie canonicala — to <link>, nie <meta> — wiec
+// blog dlugo szedl bez niego i Search Console raportowal "uzytkownik nie oznaczyl strony
+// kanonicznej". Ta sama tresc stoi rowniez na tk.delash.pl, wiec bez tego tagu to Google
+// decydowal, ktora kopia jest oryginalem.
+useHead({
+  link: [{ rel: 'canonical', href: 'https://twoja-kolorowanka.pl/blog/' }],
+  meta: [{ name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+})
+
 const { getPosts, getHomepagePosts } = useBlog()
 
 // 1. Pobierz najnowszy post (hero)

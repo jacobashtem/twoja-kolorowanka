@@ -20,6 +20,26 @@
   status = 301
   force = true
 
+# /myszki/ to pelny duplikat /zwierzeta/myszki/ — 49 lisci jeden do jednego, zero
+# wyswietlen przez trzy miesiace, podczas gdy oryginal ma 136 klikniec i pozycje 3,25.
+# Sam canonical nie wystarczal: liscie duplikatu wskazywaly na /myszki/, a /myszki/
+# dopiero na /zwierzeta/myszki/, czyli powstawal lancuch canonicali — a te Google
+# potrafi zignorowac. 301 zamyka sprawe jednoznacznie i zachowuje ewentualne linki
+# przychodzace.
+#
+# Bezpieczne dla plikow, bo `public/myszki/` NIE ISTNIEJE — wszystkie SVG, PDF i WebP
+# tej kategorii leza pod `public/zwierzeta/myszki/`, a liscie duplikatu i tak wskazywaly
+# na nie polem `image:`. To rzadki przypadek, w ktorym pulapka ze sciezkami w public/
+# opisana w CLAUDE.md dziala na nasza korzysc.
+#
+# `force` jest konieczne: bez niego regula przegrywa z prerenderowanym plikiem
+# statycznym, ktory nadal powstaje, dopoki `content/myszki/` jest w repo.
+[[redirects]]
+  from = "/myszki/*"
+  to = "/zwierzeta/myszki/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/:path.:ext"
   to = "/:path.:ext"

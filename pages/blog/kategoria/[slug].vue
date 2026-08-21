@@ -61,6 +61,19 @@ useSeoMeta({
   ogType: 'website',
 })
 
+// Canonical i robots. `useSeoMeta` nie umie canonicala — to <link>, nie <meta> — wiec
+// kategorie bloga szly bez niego i Search Console raportowal je jako "zeskanowana, ale
+// niezindeksowana" z pustym userCanonical.
+//
+// Canonical celowo BEZ `?strona=N`. Serwis jest statyczny, wiec pod `?strona=2` serwowany
+// jest ten sam prerenderowany HTML co pod adresem bazowym (dociagniecie kolejnej strony
+// dzieje sie dopiero w przegladarce). Self-canonical z parametrem oznaczalby wiec kilka
+// roznych adresow kanonicznych o identycznej tresci — konsolidujemy na pierwsza strone.
+useHead({
+  link: [{ rel: 'canonical', href: `https://twoja-kolorowanka.pl/blog/kategoria/${slug}/` }],
+  meta: [{ name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }],
+})
+
 const heroBgStyle = computed(() => {
   const color = catConfig?.color || '#9B72CF'
   const bgColor = catConfig?.bgColor || '#F5F0FF'
