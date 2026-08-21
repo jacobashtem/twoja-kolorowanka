@@ -8,7 +8,7 @@
 # Nieudany przebieg = mail z GitHuba i to jest caly mechanizm alertu. Skrypt konczy sie
 # bledem TYLKO gdy strona wypadla z indeksu, pojawil sie rozjazd canonicali albo posypala
 # sie polowa zapytan. Samo „cos jest poza indeksem" nie alarmuje — to widac w panelu
-# pod /panel-gsc i nie ma sensu przypominac o tym co tydzien.
+# pod /panel-delash/indeks i nie ma sensu przypominac o tym co tydzien.
 name: gsc-index-check
 on:
   schedule:
