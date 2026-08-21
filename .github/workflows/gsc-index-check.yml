@@ -1,0 +1,53 @@
+# Kontrola indeksacji stron z sitemapy (huby, kategorie, przekroje, blog).
+# Wymaga sekretu repo: GSC_SERVICE_ACCOUNT_JSON (cala tresc klucza konta uslugi Google).
+# Bez sekretu workflow konczy sie od razu, bez bledu — tak samo jak pinterest-daily.yml.
+#
+# Na razie tylko reczne uruchomienie. Harmonogram i porownanie z poprzednim przebiegiem
+# dojda, gdy ustalimy, gdzie trzymamy historie — repo jest publiczne, wiec nie tutaj.
+name: gsc-index-check
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Ile adresow sprawdzic (puste = wszystkie z sitemapy)'
+        required: false
+        default: ''
+
+jobs:
+  sprawdz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pomin gdy brak sekretu
+        id: gate
+        run: |
+          if [ -z "${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Brak GSC_SERVICE_ACCOUNT_JSON - pomijam."
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.skip != 'true'
+        with:
+          node-version: 20
+
+      - name: Inspekcja adresow z sitemapy
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          node scripts/gsc-index-check.mjs \
+            --out snapshot.json \
+            ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
+
+      # Zrzut wisi 30 dni jako artefakt przebiegu — do obejrzenia, zanim zdecydujemy
+      # o docelowym miejscu na historie.
+      - name: Zachowaj zrzut
+        if: steps.gate.outputs.skip != 'true' && always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-snapshot
+          path: snapshot.json
+          retention-days: 30
+          if-no-files-found: warn
