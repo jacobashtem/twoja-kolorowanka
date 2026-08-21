@@ -45,14 +45,13 @@
   to = "/:path.:ext"
   status = 200
 
-# Panel monitoringu indeksacji. Przepisanie (200), nie przekierowanie — adres w pasku ma
-# zostac ladny. Samo haslo sprawdza funkcja w srodku, a nie Edge Function przed nia:
-# Edge Functions nie da sie przypiac do /.netlify/functions/*, wiec straznik postawiony
-# tylko tutaj zostawialby otwarte drugie wejscie pod wlasnym adresem funkcji.
-[[redirects]]
-  from = "/panel-gsc"
-  to = "/.netlify/functions/panel-gsc"
-  status = 200
+# Panelu monitoringu NIE ma tutaj celowo. Przepisanie `/panel-gsc` na sciezke funkcji
+# bylo ignorowane — zadanie spadalo az na regule `/*` -> 404, mimo ze pozostale reguly
+# z tego pliku dzialaja normalnie. Funkcje v2 deklaruja swoj adres same, przez
+# `export const config = { path: ... }`, i tak to jest zrobione w netlify/functions/panel-gsc.mjs.
+# Haslo sprawdza sama funkcja, nie Edge Function przed nia: Edge Functions nie da sie
+# przypiac do /.netlify/functions/*, wiec straznik na ladnym adresie zostawialby otwarte
+# drugie wejscie pod wlasnym adresem funkcji.
 
 [[redirects]]
   from = "/koloruj"
