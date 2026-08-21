@@ -13,6 +13,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@netlify/blobs": "^8.2.0",
     "@nuxt/content": "2.13.4",
     "@nuxt/ui": "2.20.0",
     "@nuxtjs/google-fonts": "3.2.0",

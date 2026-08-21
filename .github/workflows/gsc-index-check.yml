@@ -1,11 +1,18 @@
 # Kontrola indeksacji stron z sitemapy (huby, kategorie, przekroje, blog).
-# Wymaga sekretu repo: GSC_SERVICE_ACCOUNT_JSON (cala tresc klucza konta uslugi Google).
-# Bez sekretu workflow konczy sie od razu, bez bledu — tak samo jak pinterest-daily.yml.
 #
-# Na razie tylko reczne uruchomienie. Harmonogram i porownanie z poprzednim przebiegiem
-# dojda, gdy ustalimy, gdzie trzymamy historie — repo jest publiczne, wiec nie tutaj.
+# Wymagane sekrety repo:
+#   GSC_SERVICE_ACCOUNT_JSON  cala tresc klucza konta uslugi Google
+#   GSC_INGEST_TOKEN          wspolny sekret do funkcji `gsc-store` na Netlify
+# Bez ktoregokolwiek workflow konczy sie od razu, bez bledu — tak samo jak pinterest-daily.yml.
+#
+# Nieudany przebieg = mail z GitHuba i to jest caly mechanizm alertu. Skrypt konczy sie
+# bledem TYLKO gdy strona wypadla z indeksu, pojawil sie rozjazd canonicali albo posypala
+# sie polowa zapytan. Samo „cos jest poza indeksem" nie alarmuje — to widac w panelu
+# pod /panel-gsc i nie ma sensu przypominac o tym co tydzien.
 name: gsc-index-check
 on:
+  schedule:
+    - cron: '0 7 * * 1'   # poniedzialek 07:00 UTC = 09:00 PL (lato)
   workflow_dispatch:
     inputs:
       limit:
@@ -19,12 +26,12 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Pomin gdy brak sekretu
+      - name: Pomin gdy brak sekretow
         id: gate
         run: |
-          if [ -z "${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}" ]; then
+          if [ -z "${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}" ] || [ -z "${{ secrets.GSC_INGEST_TOKEN }}" ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
-            echo "Brak GSC_SERVICE_ACCOUNT_JSON - pomijam."
+            echo "Brak GSC_SERVICE_ACCOUNT_JSON lub GSC_INGEST_TOKEN - pomijam."
           fi
 
       - uses: actions/setup-node@v7
@@ -36,13 +43,15 @@ jobs:
         if: steps.gate.outputs.skip != 'true'
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_INGEST_TOKEN: ${{ secrets.GSC_INGEST_TOKEN }}
         run: |
           node scripts/gsc-index-check.mjs \
+            --magazyn https://twoja-kolorowanka.pl/.netlify/functions/gsc-store \
             --out snapshot.json \
             ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
 
-      # Zrzut wisi 30 dni jako artefakt przebiegu — do obejrzenia, zanim zdecydujemy
-      # o docelowym miejscu na historie.
+      # Historia mieszka w Netlify Blobs. Artefakt jest tylko po to, zeby po nieudanym
+      # przebiegu dalo sie obejrzec surowe dane bez wchodzenia do panelu.
       - name: Zachowaj zrzut
         if: steps.gate.outputs.skip != 'true' && always()
         uses: actions/upload-artifact@v7

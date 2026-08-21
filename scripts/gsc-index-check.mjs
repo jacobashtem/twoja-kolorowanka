@@ -52,6 +52,7 @@ function parsujArgumenty (argv) {
       case '--key':         a.key         = nastepna(); break
       case '--out':         a.out         = nastepna(); break
       case '--prev':        a.prev        = nastepna(); break
+      case '--magazyn':     a.magazyn     = nastepna(); break
       case '--limit':       a.limit       = Number(nastepna()); break
       case '--concurrency': a.concurrency = Number(nastepna()); break
     }
@@ -246,6 +247,43 @@ function znajdzRegresje (teraz, poprzednio) {
   return regresje
 }
 
+// ---------------------------------------------------------------- magazyn
+
+/**
+ * Historia mieszka w Netlify Blobs, za funkcja `gsc-store`. Nie w repo, bo repozytorium
+ * jest publiczne, i nie w artefaktach przebiegow, bo te w publicznym repo tez sa jawne.
+ */
+async function pobierzZMagazynu (url) {
+  const token = process.env.GSC_INGEST_TOKEN
+  if (!token) throw new Error('Brak GSC_INGEST_TOKEN — magazyn wymaga tokenu.')
+
+  const odp = await fetch(url, { headers: { authorization: `Bearer ${token}` } })
+  if (odp.status === 404) {
+    console.log('Magazyn nie ma jeszcze zadnego zrzutu — to pierwszy przebieg.')
+    return null
+  }
+  if (!odp.ok) {
+    console.log(`Nie udalo sie odczytac magazynu (HTTP ${odp.status}) — porownanie pominiete.`)
+    return null
+  }
+  const zrzut = await odp.json()
+  console.log(`Poprzedni zrzut z magazynu: ${zrzut.pobrano}`)
+  return zrzut
+}
+
+async function zapiszWMagazynie (url, zrzut) {
+  const token = process.env.GSC_INGEST_TOKEN
+  const odp = await fetch(url, {
+    method: 'POST',
+    headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+    body: JSON.stringify(zrzut)
+  })
+  if (!odp.ok) {
+    throw new Error(`Nie udalo sie zapisac w magazynie: HTTP ${odp.status} ${await odp.text()}`)
+  }
+  console.log('Zrzut zapisany w magazynie.')
+}
+
 // ---------------------------------------------------------------- raport
 
 function wypiszRaport (wyniki, regresje) {
@@ -320,32 +358,47 @@ async function main () {
   if (a.prev) {
     poprzednio = await readFile(a.prev, 'utf8').then(JSON.parse).catch(() => null)
     if (!poprzednio) console.log(`(brak poprzedniego zrzutu pod ${a.prev} — porownanie pominiete)`)
+  } else if (a.magazyn) {
+    poprzednio = await pobierzZMagazynu(a.magazyn)
   }
   const regresje = znajdzRegresje(wyniki, poprzednio)
 
   wypiszRaport(wyniki, regresje)
 
+  const bledy = wyniki.filter(w => w.blad).length
+  const zrzut = {
+    pobrano: new Date().toISOString(),
+    site: a.site,
+    sitemap: a.sitemap,
+    podsumowanie: {
+      sprawdzono:   wyniki.length,
+      wIndeksie:    wyniki.filter(w => w.verdict === 'PASS').length,
+      pozaIndeksem: wyniki.filter(w => !w.blad && w.verdict !== 'PASS').length,
+      bledyApi:     bledy
+    },
+    regresje,
+    wyniki
+  }
+
   if (a.out) {
-    const zrzut = {
-      pobrano: new Date().toISOString(),
-      site: a.site,
-      sitemap: a.sitemap,
-      podsumowanie: {
-        sprawdzono: wyniki.length,
-        wIndeksie:  wyniki.filter(w => w.verdict === 'PASS').length,
-        pozaIndeksem: wyniki.filter(w => !w.blad && w.verdict !== 'PASS').length,
-        bledyApi:   wyniki.filter(w => w.blad).length
-      },
-      regresje,
-      wyniki
-    }
     await mkdir(dirname(a.out), { recursive: true })
     await writeFile(a.out, JSON.stringify(zrzut, null, 2))
     console.log(`Zrzut zapisany: ${a.out}`)
   }
+  if (a.magazyn) await zapiszWMagazynie(a.magazyn, zrzut)
 
-  // Blad API to tez powod do alertu — cichy brak danych jest gorszy niz halas.
-  if (regresje.length || wyniki.some(w => w.blad)) process.exit(1)
+  // Kod wyjscia 1 = mail z GitHuba. Celowo waski prog: alarmuje wypadniecie z indeksu
+  // i rozjazd canonicali, a nie samo „cos jest poza indeksem" — te 12 adresow widac
+  // w panelu i nie ma sensu przypominac o nich co tydzien.
+  //
+  // Pojedyncze bledy API nie alarmuja (zdarzaja sie i wracaja same), ale przebieg,
+  // w ktorym posypala sie polowa zapytan, nie jest wiarygodnym pomiarem i o tym warto
+  // wiedziec — inaczej „brak regresji" znaczylby tylko tyle, ze nie bylo czego porownac.
+  const posypalSie = bledy > wyniki.length / 2
+  if (regresje.length || posypalSie) {
+    if (posypalSie) console.error(`\nBLAD: ${bledy} z ${wyniki.length} zapytan nie przeszlo — pomiar niewiarygodny.`)
+    process.exit(1)
+  }
 }
 
 main().catch(err => {
