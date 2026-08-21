@@ -16,6 +16,12 @@
 import { getStore } from '@netlify/blobs'
 import { timingSafeEqual } from 'node:crypto'
 
+// Adres deklarowany przez sama funkcje, a nie przepisaniem w netlify.toml. Przepisanie
+// `/panel-gsc` -> `/.netlify/functions/panel-gsc` bylo ignorowane i zadanie spadalo na
+// regule `/*` -> 404, mimo ze inne reguly z tego pliku dzialaja. Funkcje v2 maja na to
+// wlasny mechanizm i on jest wiazacy.
+export const config = { path: '/panel-gsc' }
+
 // ------------------------------------------------------------------ dostep
 
 const ODMOWA = powod => new Response(powod, {
