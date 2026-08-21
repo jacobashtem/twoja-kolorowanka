@@ -206,20 +206,34 @@ async function main () {
   }
 
   const pozycje = []
-  if (a.tryb === 'warianty') {
+  // Tryb pelny to warianty ORAZ dlugi ogon w jednym przebiegu. Do pisania artykulu to
+  // wlasciwa para: warianty mowia, jak nazwac rzecz w tytule, a dlugi ogon podsuwa frazy
+  // na srodtytuly i akapity.
+  const robWarianty = a.tryb === 'warianty' || a.tryb === 'pelny'
+  const robOgon = a.tryb === 'ogon' || a.tryb === 'pelny'
+
+  if (robWarianty) {
     // Z jednego slowa budujemy wszystkie sensowne sposoby, na jakie mozna o to zapytac,
     // i mierzymy je naraz. Czesc kombinacji to bedzie belkot — nic nie szkodzi, API zwroci
     // dla nich zero, a jedno zapytanie kosztuje tyle samo niezaleznie od tego, ile fraz
     // w nim wyslemy. Lepiej zapytac o pietnascie za duzo niz przegapic ta jedna, ktora niesie
     // caly ruch.
-    const baza = bezOgonkow(a.seedy[0]).split(/\s+/).pop()
-    const rdz = rdzen(baza)
-    const formy = [...new Set([baza, ...rynek.koncowki.map(k => rdz + k)])].filter(f => f.length >= 3)
+    // Formy budujemy z ogonkami I bez nich. To nie jest nadgorliwosc: w danych „kolorowanki
+    // dla dorosłych" i „kolorowanki dla doroslych" wystepuja jako dwie osobne frazy, obie
+    // z realnym wolumenem. Gdybysmy pytali tylko o wersje bez ogonkow, przy „mikołaju"
+    // przegapilibysmy dokladnie to, czego ludzie szukaja.
+    const bazaOrg = a.seedy[0].toLowerCase().split(/\s+/).pop()
+    const bazaAscii = bezOgonkow(bazaOrg)
+    const formy = [...new Set([
+      bazaOrg, bazaAscii,
+      ...rynek.koncowki.map(k => rdzen(bazaOrg) + k),
+      ...rynek.koncowki.map(k => rdzen(bazaAscii) + k)
+    ])].filter(f => f.length >= 3)
     const kandydaci = [...new Set(
       formy.flatMap(f => rynek.szablony.map(s => s.replace('{w}', f)))
     )]
 
-    console.log(`Formy slowa "${baza}": ${formy.join(', ')}`)
+    console.log(`Formy slowa "${bazaOrg}": ${formy.join(', ')}`)
     console.log(`Do zmierzenia: ${kandydaci.length} kombinacji w jednym zapytaniu.`)
     console.log('')
 
@@ -228,7 +242,9 @@ async function main () {
       [{ keywords: kandydaci, ...bezSortowania }], { naSucho: a.naSucho })
     if (a.naSucho) return
     pozycje.push(...(wynik?.[0]?.items ?? []))
-  } else if (a.tryb === 'dokladny') {
+  }
+
+  if (a.tryb === 'dokladny') {
     // Tryb dokladny nie sortuje ani nie filtruje — pytamy o konkretne frazy i chcemy
     // dostac je wszystkie, takze te o zerowym wolumenie. Zerowy wynik to tez odpowiedz.
     const { order_by, filters, limit, ...bezSortowania } = wspolne
@@ -239,17 +255,18 @@ async function main () {
     const wynik = await wywolaj(endpoint, [{ keywords: a.seedy, ...wspolne }], { naSucho: a.naSucho })
     if (a.naSucho) return
     pozycje.push(...(wynik?.[0]?.items ?? []))
-  } else {
+  } else if (robOgon) {
     // keyword_suggestions przyjmuje jeden zarodek na zapytanie, wiec petla po seedach.
     for (const seed of a.seedy) {
-      const wynik = await wywolaj(endpoint, [{ keyword: seed, ...wspolne }], { naSucho: a.naSucho })
+      const wynik = await wywolaj('dataforseo_labs/google/keyword_suggestions/live',
+        [{ keyword: seed, ...wspolne }], { naSucho: a.naSucho })
       if (a.naSucho) continue
       const ile = wynik?.[0]?.items?.length ?? 0
-      console.log(`  "${seed}" -> ${ile} fraz`)
+      console.log(`  dlugi ogon "${seed}" -> ${ile} fraz`)
       pozycje.push(...(wynik?.[0]?.items ?? []))
     }
-    if (a.naSucho) return
   }
+  if (a.naSucho) return
 
   console.log(`Zwrocono ${pozycje.length} fraz (tryb: ${a.tryb}).`)
 
