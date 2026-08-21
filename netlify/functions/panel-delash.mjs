@@ -14,7 +14,7 @@
 // Cel, czyli komplet sitemapy w indeksie, wyglada wtedy jak domalowany do konca obrazek.
 
 import { getStore } from '@netlify/blobs'
-import { timingSafeEqual } from 'node:crypto'
+import { sprawdzDostep, szkielet, komunikat, esc, data, NAGLOWKI_HTML } from '../wspolne/panel.mjs'
 
 // Adres deklarowany przez sama funkcje, a nie przepisaniem w netlify.toml. Przepisanie
 // `/panel-gsc` -> `/.netlify/functions/panel-gsc` bylo ignorowane i zadanie spadalo na
@@ -27,49 +27,9 @@ import { timingSafeEqual } from 'node:crypto'
 // zepsuc zakladki w przegladarce — kosztuje jedna linijke.
 export const config = { path: ['/panel-delash', '/panel-delash/indeks', '/panel-gsc'] }
 
-// ------------------------------------------------------------------ dostep
-
-const ODMOWA = powod => new Response(powod, {
-  status: 401,
-  headers: {
-    'www-authenticate': 'Basic realm="Panel monitoringu", charset="UTF-8"',
-    'content-type': 'text/plain; charset=utf-8',
-    'x-robots-tag': 'noindex, nofollow'
-  }
-})
-
-/** Porownanie o stalym czasie — zwykle === wycieka dlugosc wspolnego prefiksu. */
-function rowne (a, b) {
-  if (typeof a !== 'string' || typeof b !== 'string') return false
-  const x = Buffer.from(a)
-  const y = Buffer.from(b)
-  if (x.length !== y.length) return false
-  return timingSafeEqual(x, y)
-}
-
-/** Zwraca null gdy wpuszczamy, albo gotowa odpowiedz 401 gdy nie. */
-function sprawdzDostep (request) {
-  const uzytkownik = process.env.PANEL_USER
-  const haslo = process.env.PANEL_PASS
-  if (!uzytkownik || !haslo) return ODMOWA('Panel nie ma ustawionego loginu i hasla.')
-
-  const naglowek = request.headers.get('authorization') || ''
-  if (!naglowek.toLowerCase().startsWith('basic ')) return ODMOWA('Wymagane logowanie.')
-
-  let podane
-  try {
-    podane = Buffer.from(naglowek.slice(6), 'base64').toString('utf8')
-  } catch {
-    return ODMOWA('Nieczytelny naglowek logowania.')
-  }
-
-  const i = podane.indexOf(':')
-  if (i < 0) return ODMOWA('Nieczytelny naglowek logowania.')
-
-  // Oba porownania wykonuja sie zawsze, bez skrotu na pierwszym niepowodzeniu.
-  const ok = rowne(podane.slice(0, i), uzytkownik) & rowne(podane.slice(i + 1), haslo)
-  return ok ? null : ODMOWA('Zly login lub haslo.')
-}
+// Dostep, style i szkielet strony z zakladkami mieszkaja w `netlify/wspolne/panel.mjs` —
+// wspolne z zakladka fraz. Trzymanie tego osobno w kazdej funkcji skonczyloby sie tym, ze
+// przy pierwszej zmianie stylu zakladki zaczelyby wygladac inaczej.
 
 // ------------------------------------------------------------------ dane
 
@@ -106,19 +66,6 @@ function zmiany (teraz, wczesniej) {
     if (bylo !== 'indeks' && jest === 'indeks') zyskane.push({ w, bylo, jest })
   }
   return { stracone, zyskane, data: wczesniej.pobrano }
-}
-
-const esc = s => String(s ?? '').replace(/[&<>"']/g, z => (
-  { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[z]
-))
-
-/** „21 sierpnia 2026, 17:39" — bez bibliotek, w strefie warszawskiej. */
-function data (iso) {
-  if (!iso) return '—'
-  return new Intl.DateTimeFormat('pl-PL', {
-    day: 'numeric', month: 'long', year: 'numeric',
-    hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Warsaw'
-  }).format(new Date(iso))
 }
 
 const sciezka = adres => {
@@ -188,149 +135,10 @@ function stronaHtml (zrzut, roznice) {
     </section>`
   }
 
-  return `<!doctype html>
-<html lang="pl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Stan indeksu — twoja-kolorowanka.pl</title>
-<style>
-  :root {
-    --papier: #ffffff;
-    --papier-cien: #f3f5f8;
-    --tusz: #14161a;
-    --grafit: #6b7280;
-    --kreska: #d5dae1;
-    --zielony: #1f9d55;
-    --bursztyn: #e39a1c;
-    --czerwony: #d6453d;
-    --promien: 10px 8px 11px 9px;   /* lekko nierowny, jak rysowany reka */
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --papier: #14161a;
-      --papier-cien: #1c1f25;
-      --tusz: #e8eaed;
-      --grafit: #9aa3af;
-      --kreska: #333941;
-      --zielony: #34c77b;
-      --bursztyn: #f0b13f;
-      --czerwony: #f0655c;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--papier);
-    color: var(--tusz);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
-    font-size: 16px;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
-  .strona { max-width: 860px; margin: 0 auto; padding: 40px 24px 96px; }
-
-  .brew {
-    font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-    color: var(--grafit); margin: 0 0 28px;
-  }
-  .brew__kropka { color: var(--kreska); margin: 0 8px; }
-
-  /* Wynik jako ulamek — licznik niesie informacje, mianownik jest tlem. */
-  .wynik { display: flex; align-items: baseline; gap: 6px; margin: 0; }
-  .wynik__licznik {
-    font-size: clamp(72px, 16vw, 132px); font-weight: 800; letter-spacing: -.045em;
-    line-height: .85; font-variant-numeric: tabular-nums;
-  }
-  .wynik__kreska { font-size: clamp(40px, 8vw, 64px); font-weight: 300; color: var(--kreska); line-height: 1; }
-  .wynik__mianownik {
-    font-size: clamp(30px, 6vw, 48px); font-weight: 500; color: var(--grafit);
-    font-variant-numeric: tabular-nums; line-height: 1;
-  }
-  .zdanie { font-size: 19px; color: var(--tusz); margin: 14px 0 0; max-width: 44ch; }
-  .zdanie--komplet { color: var(--zielony); font-weight: 600; }
-
-  /* Kolorowanka: jedno pole na adres. */
-  .plansza {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(26px, 1fr));
-    gap: 7px; margin: 40px 0 18px;
-  }
-  .komorka { display: block; text-decoration: none; }
-  .pole {
-    display: block; aspect-ratio: 1; width: 100%;
-    border: 2px solid var(--tusz); border-radius: var(--promien);
-    background: transparent;
-    transition: transform .12s ease;
-  }
-  .komorka:hover .pole, .komorka:focus-visible .pole { transform: scale(1.18); }
-  .komorka:focus-visible { outline: 2px solid var(--tusz); outline-offset: 3px; border-radius: var(--promien); }
-
-  .pole--indeks { background: var(--zielony); border-color: var(--zielony); }
-  /* Polowa wypelnienia = zeskanowany, ale jeszcze niezaindeksowany. */
-  .pole--zeskanowany { background: linear-gradient(to top, var(--bursztyn) 50%, transparent 50%); }
-  .pole--wykryty { background: transparent; }
-  .pole--blad { border-style: dashed; border-color: var(--grafit); }
-  .pole--rozjazd { box-shadow: inset 0 0 0 2px var(--czerwony); border-color: var(--czerwony); }
-  .pole--duze { width: 18px; flex: 0 0 18px; border-width: 2px; margin-top: 4px; }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .pole { animation: wypelnij .5s ease both; animation-delay: calc(var(--i, 0) * 6ms); }
-    @keyframes wypelnij { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: scale(1); } }
-  }
-
-  .legenda { display: flex; flex-wrap: wrap; gap: 18px; padding: 0; margin: 0 0 56px; list-style: none; font-size: 13px; color: var(--grafit); }
-  .legenda li { display: flex; align-items: center; gap: 8px; }
-  .legenda .pole { width: 14px; flex: 0 0 14px; border-width: 2px; animation: none; }
-
-  .sekcja { margin: 0 0 52px; }
-  .naglowek {
-    font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-    color: var(--tusz); margin: 0 0 4px; padding-bottom: 12px; border-bottom: 2px solid var(--tusz);
-  }
-  .naglowek__meta { float: right; font-weight: 500; letter-spacing: .02em; text-transform: none; color: var(--grafit); }
-
-  .lista { list-style: none; margin: 0; padding: 0; }
-  .wiersz {
-    display: flex; gap: 14px; align-items: flex-start;
-    padding: 16px 0; border-bottom: 1px solid var(--kreska);
-  }
-  .wiersz--zwiezly { padding: 8px 0; align-items: center; }
-  .wiersz--zwiezly .pole { width: 12px; flex: 0 0 12px; animation: none; }
-  .wiersz__tresc { flex: 1; min-width: 0; }
-  .wiersz__adres {
-    display: block; font-family: ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
-    font-size: 14px; word-break: break-all;
-  }
-  .wiersz__stan { display: block; font-size: 13px; color: var(--grafit); margin-top: 3px; }
-  .wiersz__ostrzezenie { display: block; font-size: 13px; color: var(--czerwony); margin-top: 3px; }
-  .zglos {
-    flex: 0 0 auto; align-self: center; font-size: 13px; font-weight: 600;
-    color: var(--tusz); text-decoration: none;
-    border: 2px solid var(--tusz); border-radius: var(--promien); padding: 7px 13px;
-    white-space: nowrap; transition: background .12s ease, color .12s ease;
-  }
-  .zglos:hover, .zglos:focus-visible { background: var(--tusz); color: var(--papier); }
-
-  .zmiana { font-size: 15px; margin: 20px 0 6px; }
-  .zmiana--strata strong { color: var(--czerwony); }
-  .zmiana--zysk strong { color: var(--zielony); }
-  .spokoj { color: var(--grafit); margin: 16px 0 0; }
-
-  .stopka { font-size: 13px; color: var(--grafit); border-top: 1px solid var(--kreska); padding-top: 20px; }
-  .stopka code { font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; font-size: 12px; }
-
-  @media (max-width: 560px) {
-    .strona { padding: 28px 18px 72px; }
-    .plansza { grid-template-columns: repeat(auto-fill, minmax(22px, 1fr)); gap: 6px; }
-    .wiersz { flex-wrap: wrap; }
-    .zglos { align-self: flex-start; margin-left: 32px; }
-    .naglowek__meta { float: none; display: block; margin-top: 4px; }
-  }
-</style>
-</head>
-<body>
-<main class="strona">
+  return szkielet({
+    tytul: 'Stan indeksu — twoja-kolorowanka.pl',
+    aktywna: 'indeks',
+    tresc: `
 
   <p class="brew">Stan indeksu<span class="brew__kropka">/</span>${esc(zrzut.site.replace('sc-domain:', ''))}<span class="brew__kropka">/</span>sprawdzono ${esc(data(zrzut.pobrano))}</p>
 
@@ -368,9 +176,8 @@ function stronaHtml (zrzut, roznice) {
     udostepnia na to API dla zwyklych stron.
   </p>
 
-</main>
-</body>
-</html>`
+`
+  })
 }
 
 // ------------------------------------------------------------------ handler
@@ -379,21 +186,19 @@ export default async (request) => {
   const odmowa = sprawdzDostep(request)
   if (odmowa) return odmowa
 
-  const naglowki = { 'content-type': 'text/html; charset=utf-8', 'x-robots-tag': 'noindex, nofollow' }
-
   try {
     const store = getStore('gsc')
     const zrzut = await store.get('ostatni', { type: 'json' })
 
     if (!zrzut) {
       return new Response(
-        `<!doctype html><html lang="pl"><head><meta charset="utf-8"><title>Stan indeksu</title></head>
-         <body style="font-family:system-ui;max-width:52ch;margin:15vh auto;padding:0 24px;line-height:1.6">
-         <h1 style="font-size:22px">Nie ma jeszcze zadnego sprawdzenia</h1>
-         <p>Monitoring nie zapisal dotad ani jednego zrzutu. Uruchom workflow
-         <code>gsc-index-check</code> w GitHub Actions — po jego zakonczeniu ta strona pokaze wynik.</p>
-         </body></html>`,
-        { status: 200, headers: naglowki }
+        komunikat({
+          tytul: 'Stan indeksu — panel',
+          aktywna: 'indeks',
+          naglowek: 'Nie ma jeszcze żadnego sprawdzenia',
+          tresc: 'Monitoring nie zapisał dotąd ani jednego zrzutu. Uruchom workflow <code>gsc-index-check</code> w GitHub Actions — po jego zakończeniu ta strona pokaże wynik.'
+        }),
+        { status: 200, headers: NAGLOWKI_HTML }
       )
     }
 
@@ -409,15 +214,17 @@ export default async (request) => {
       console.error('Nie udalo sie odczytac historii:', e)
     }
 
-    return new Response(stronaHtml(zrzut, zmiany(zrzut, poprzedni)), { status: 200, headers: naglowki })
+    return new Response(stronaHtml(zrzut, zmiany(zrzut, poprzedni)), { status: 200, headers: NAGLOWKI_HTML })
   } catch (e) {
     console.error('Panel:', e)
     return new Response(
-      `<!doctype html><html lang="pl"><head><meta charset="utf-8"></head><body
-       style="font-family:system-ui;max-width:52ch;margin:15vh auto;padding:0 24px;line-height:1.6">
-       <h1 style="font-size:22px">Panel nie odczytal danych</h1>
-       <p>Szczegoly sa w logach funkcji w panelu Netlify.</p></body></html>`,
-      { status: 500, headers: naglowki }
+      komunikat({
+        tytul: 'Stan indeksu — panel',
+        aktywna: 'indeks',
+        naglowek: 'Panel nie odczytał danych',
+        tresc: 'Szczegóły są w logach funkcji w panelu Netlify.'
+      }),
+      { status: 500, headers: NAGLOWKI_HTML }
     )
   }
 }
