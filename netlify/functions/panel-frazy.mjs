@@ -15,7 +15,13 @@
 import { getStore } from '@netlify/blobs'
 import { sprawdzDostep, szkielet, komunikat, esc, data, liczba, NAGLOWKI_HTML } from '../wspolne/panel.mjs'
 
-export const config = { path: ['/panel-delash/frazy', '/panel-delash/frazy.csv'] }
+export const config = { path: ['/panel-delash/frazy', '/panel-delash/frazy.csv', '/panel-delash/frazy/ocena'] }
+
+// Oceny operatora leza w OSOBNYM dokumencie (`oceny/<rynek>`), nie w wierszach fraz.
+// Powod jest prosty i kosztowalby nas dane: ponowne kopanie tej samej kategorii nadpisuje
+// wiersze w calosci, wiec ocena wpisana w wiersz zniknelaby po cichu. Sklejamy je dopiero
+// przy wyswietlaniu.
+const kluczOcen = rynek => `oceny/${rynek}`
 
 const RYNKI = [
   { kod: 'pl', flaga: '🇵🇱', nazwa: 'Polska' },
@@ -48,6 +54,21 @@ function stopienTrudnosci (t) {
   if (t <= 45) return '2'
   if (t <= 65) return '3'
   return '4'
+}
+
+async function wczytajOceny (store, rynek) {
+  return await store.get(kluczOcen(rynek), { type: 'json' }) ?? {}
+}
+
+async function zapiszOcene (store, rynek, fraza, zmiana) {
+  const oceny = await wczytajOceny(store, rynek)
+  const wpis = { ...(oceny[fraza] || {}), ...zmiana, zaktualizowano: new Date().toISOString() }
+  // Ocena 0 i „niezrobione" to brak wpisu, a nie wpis z zerem — inaczej dokument puchlby
+  // od pustych rekordow po kazdym przypadkowym kliknieciu.
+  if (!wpis.ocena && !wpis.zrobione) delete oceny[fraza]
+  else oceny[fraza] = wpis
+  await store.setJSON(kluczOcen(rynek), oceny)
+  return oceny[fraza] ?? null
 }
 
 async function wczytajRynki (store) {
@@ -108,15 +129,28 @@ function tabela (wiersze) {
 
     return `<tr data-f="${esc((w.fraza || '').toLowerCase())}" data-w="${w.wolumen || 0}"
       data-t="${w.trudnoscSeo ?? -1}" data-d="${dom ?? -1}" data-p="${plama ? 1 : 0}"
-      data-tr="${tr ?? -9999}" data-s="${w.sezonowosc ?? 0}">
+      data-tr="${tr ?? -9999}" data-s="${w.sezonowosc ?? 0}" data-o="${w.ocena ?? 0}" data-z="${w.zrobione ? 1 : 0}">
       <td class="fraza"><span class="fraza__pokrycie${klasaPokrycia}" title="${esc(tytul)}"></span>${esc(w.fraza)}</td>
-      <td><div class="wolumen"><span class="wolumen__liczba">${liczba(w.wolumen)}</span><span class="wolumen__pasek"><i style="width:${szer}%"></i></span></div></td>
+      <td><div class="wolumen"><span class="wolumen__liczba">${liczba(w.wolumen)}${
+        w.zrodloWolumenu === 'ads'
+          ? `<abbr class="koszyk" title="Brak danych ze strumienia kliknięć — to wartość z koszyka Google Ads, która zawyża pojedynczą frazę o wielkość całej grupy wariantów. Traktuj jako górną granicę.">~</abbr>`
+          : ''
+      }</span><span class="wolumen__pasek"><i style="width:${szer}%"></i></span></div></td>
       <td style="text-align:center"><span class="trud trud--${st}">${w.trudnoscSeo ?? '—'}</span></td>
       <td style="text-align:right;font-variant-numeric:tabular-nums">${domeny}</td>
       <td style="text-align:center">${szczyt}</td>
       <td style="text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap">${trend}</td>
       <td style="color:var(--grafit);font-size:13px">${esc(SKROT_INTENCJI[w.intencja] || '—')}</td>
       <td style="color:var(--grafit);font-size:13px;white-space:nowrap">${ogolna ? 'ogólna' : (plama ? 'biała plama' : esc(w.mamyKategorie))}</td>
+      <td class="ocena-kom">
+        <select class="ocena" data-fraza="${esc(w.fraza)}" aria-label="Potencjał frazy ${esc(w.fraza)} w skali 1–10">
+          <option value="">—</option>
+          ${[1,2,3,4,5,6,7,8,9,10].map(n => `<option value="${n}"${w.ocena === n ? ' selected' : ''}>${n}</option>`).join('')}
+        </select>
+        <label class="zrobione-etyk" title="Zrobione — znika z planu">
+          <input type="checkbox" class="zrobione" data-fraza="${esc(w.fraza)}"${w.zrobione ? ' checked' : ''}>
+        </label>
+      </td>
     </tr>`
   }).join('')
 
@@ -133,14 +167,20 @@ function tabela (wiersze) {
       ${th('Trend r/r', 'tr', 'Zmiana liczby wyszukań rok do roku', 'text-align:right')}
       <th>Intencja</th>
       ${th('Pokrycie', 'p', 'Czy macie już kategorię pod tę frazę')}
+      ${th('Potencjał', 'o', 'Twoja ocena 1–10. Zapisuje się od razu i przeżywa kolejne kopania. Kolejność w Planie idzie po tej liczbie')}
     </tr></thead>
     <tbody id="cialo">${rzedy}</tbody>
   </table></div>`
 }
 
-function widok (dokumenty, aktywny) {
+function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
   const dok = dokumenty[aktywny]
   const rynek = RYNKI.find(r => r.kod === aktywny)
+  // Sklejenie ocen z wierszami dzieje sie tutaj, przy wyswietlaniu — w magazynie te dwie
+  // rzeczy zyja osobno, zeby kopanie nie kasowalo pracy operatora.
+  if (dok?.wiersze) {
+    dok.wiersze = dok.wiersze.map(w => ({ ...w, ...(oceny[w.fraza] || {}) }))
+  }
 
   if (!dok?.wiersze?.length) {
     return szkielet({
@@ -156,11 +196,34 @@ function widok (dokumenty, aktywny) {
     })
   }
 
-  const wiersze = dok.wiersze
   const zestawy = Object.keys(dok.zestawy || {})
+  const wPlanie = dok.wiersze.filter(w => w.ocena >= 1 && !w.zrobione)
+
+  // Plan to ta sama tabela, tylko zawezona do tego, co operator sam oznaczyl, i ulozona
+  // po jego ocenie. Zadnego osobnego widoku ani innych regul — kolejnosc robienia wynika
+  // wprost z liczb, ktore wpisal.
+  const wiersze = tryb === 'plan'
+    ? [...wPlanie].sort((a, b) => (b.ocena || 0) - (a.ocena || 0) || (b.wolumen || 0) - (a.wolumen || 0))
+    : dok.wiersze
+
+  const przelacznikWidoku = `<div class="widoki">
+    <a class="widok-btn" href="/panel-delash/frazy?rynek=${esc(aktywny)}"${tryb !== 'plan' ? ' aria-current="page"' : ''}>Wykopaliska</a>
+    <a class="widok-btn" href="/panel-delash/frazy?rynek=${esc(aktywny)}&widok=plan"${tryb === 'plan' ? ' aria-current="page"' : ''}>Plan${wPlanie.length ? ` (${wPlanie.length})` : ''}</a>
+  </div>`
+
+  if (tryb === 'plan' && !wiersze.length) {
+    return szkielet({
+      tytul: `Plan ${rynek?.nazwa || aktywny} — panel`,
+      aktywna: 'frazy',
+      tresc: `${mapaRynkow(dokumenty, aktywny)}${przelacznikWidoku}
+        <h1 style="font-size:22px;margin:8px 0 12px">Plan jest pusty</h1>
+        <p class="spokoj" style="max-width:60ch">Wróć do Wykopalisk i wpisz w kolumnie <strong>Potencjał</strong> ocenę od 1 do 10 przy frazach, które chcesz zrobić. Pojawią się tutaj, ułożone od najwyższej oceny.</p>`
+    })
+  }
 
   const tresc = `
     ${mapaRynkow(dokumenty, aktywny)}
+    ${przelacznikWidoku}
 
     <p class="brew">Frazy<span class="brew__kropka">/</span>${esc(rynek?.nazwa || aktywny)}<span class="brew__kropka">/</span>zaktualizowano ${esc(data(dok.zaktualizowano))}</p>
 
@@ -267,6 +330,51 @@ function widok (dokumenty, aktywny) {
       }
       for (const p of Object.values(pola)) p.addEventListener('input', filtruj)
       filtruj()
+
+      // --- zapis ocen ---
+      // Zadanie idzie na ten sam adres, wiec przegladarka dokłada naglowek Basic Auth sama
+      // i nie trzeba zadnego drugiego sekretu. Zapis jest natychmiastowy, bez przycisku
+      // „zapisz" — dlatego kazdy udany zapis musi byc widoczny, inaczej nie wiadomo,
+      // czy klikniecie w ogole doszlo.
+      const RYNEK = ${JSON.stringify(aktywny)}
+
+      async function zapisz (tr, zmiana) {
+        const fraza = tr.querySelector('.ocena').dataset.fraza
+        try {
+          const odp = await fetch('/panel-delash/frazy/ocena', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ rynek: RYNEK, fraza, ...zmiana })
+          })
+          if (!odp.ok) throw new Error('HTTP ' + odp.status)
+          tr.classList.add('zapisano')
+          setTimeout(() => tr.classList.remove('zapisano'), 900)
+        } catch (e) {
+          tr.classList.add('blad')
+          alert('Nie udało się zapisać oceny frazy „' + fraza + '". ' + e.message)
+        }
+      }
+
+      for (const sel of document.querySelectorAll('select.ocena')) {
+        sel.addEventListener('change', () => {
+          const tr = sel.closest('tr')
+          const ocena = sel.value === '' ? 0 : Number(sel.value)
+          tr.dataset.o = ocena
+          tr.classList.toggle('oceniona', ocena >= 1)
+          zapisz(tr, { ocena })
+        })
+        if (Number(sel.closest('tr').dataset.o) >= 1) sel.closest('tr').classList.add('oceniona')
+      }
+
+      for (const box of document.querySelectorAll('input.zrobione')) {
+        box.addEventListener('change', () => {
+          const tr = box.closest('tr')
+          tr.dataset.z = box.checked ? 1 : 0
+          tr.classList.toggle('zrobiona', box.checked)
+          zapisz(tr, { zrobione: box.checked })
+        })
+        if (box.checked) box.closest('tr').classList.add('zrobiona')
+      }
     </script>`
 
   return szkielet({ tytul: `Frazy ${rynek?.nazwa || aktywny} — panel`, aktywna: 'frazy', tresc })
@@ -279,14 +387,18 @@ function csv (dok) {
     const s = String(w ?? '')
     return /[",;\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s
   }
-  const naglowek = ['fraza', 'wolumen', 'trudnosc SEO', 'domeny do top10', 'sila top10',
+  const naglowek = ['fraza', 'wolumen', 'zrodlo wolumenu', 'wolumen Google Ads (koszyk)',
+    'trudnosc SEO', 'domeny do top10', 'sila top10',
     'intencja', 'trend r/r %', 'szczyt (miesiac)', 'szczyt (wolumen)', 'sezonowosc', 'slow',
-    'konkurencja reklamowa', 'poziom reklamowy', 'CPC', 'pokrycie', 'zestaw']
+    'konkurencja reklamowa', 'poziom reklamowy', 'CPC', 'pokrycie', 'zestaw',
+    'potencjal (ocena)', 'zrobione']
   const linie = dok.wiersze.map(w => [
-    w.fraza, w.wolumen, w.trudnoscSeo ?? '', w.domenyTop10 ?? '', w.silaTop10 ?? '',
+    w.fraza, w.wolumen, w.zrodloWolumenu ?? '', w.wolumenAds ?? '',
+    w.trudnoscSeo ?? '', w.domenyTop10 ?? '', w.silaTop10 ?? '',
     w.intencja ?? '', w.trendRoczny ?? '', w.szczytMiesiac ?? '', w.szczytWolumen ?? '',
     w.sezonowosc ?? '', w.slow ?? '', w.konkurencjaReklamowa ?? '', w.poziomReklamowy ?? '',
-    w.cpc ?? '', w.mamyKategorie ?? 'biala plama', w.zestaw ?? ''
+    w.cpc ?? '', w.mamyKategorie ?? 'biala plama', w.zestaw ?? '',
+    w.ocena ?? '', w.zrobione ? 'tak' : ''
   ].map(pole).join(';'))
   // Srednik i BOM — bez nich Excel w polskiej lokalizacji wrzuca wiersz do jednej komorki
   // i lamie ogonki.
@@ -301,15 +413,41 @@ export default async (request) => {
 
   const url = new URL(request.url)
   const aktywny = url.searchParams.get('rynek') || 'pl'
+  const tryb = url.searchParams.get('widok') === 'plan' ? 'plan' : 'wykopaliska'
 
   try {
     const store = getStore('dfs')
+
+    if (url.pathname.endsWith('/ocena')) {
+      if (request.method !== 'POST') return new Response('Tylko POST.', { status: 405 })
+      let dane
+      try { dane = await request.json() } catch { return new Response('Zły JSON.', { status: 400 }) }
+      if (!dane?.rynek || !dane?.fraza) return new Response('Wymagane: rynek, fraza.', { status: 400 })
+
+      const zmiana = {}
+      if ('ocena' in dane) {
+        const o = Number(dane.ocena)
+        if (!Number.isInteger(o) || o < 0 || o > 10) return new Response('Ocena musi być liczbą 0–10.', { status: 400 })
+        zmiana.ocena = o || undefined
+      }
+      if ('zrobione' in dane) zmiana.zrobione = Boolean(dane.zrobione) || undefined
+
+      const wpis = await zapiszOcene(store, dane.rynek, dane.fraza, zmiana)
+      return new Response(JSON.stringify({ zapisano: true, wpis }), {
+        status: 200, headers: { 'content-type': 'application/json; charset=utf-8' }
+      })
+    }
+
     const dokumenty = await wczytajRynki(store)
+    const oceny = await wczytajOceny(store, aktywny)
 
     if (url.pathname.endsWith('.csv')) {
       const dok = dokumenty[aktywny]
       if (!dok?.wiersze?.length) return new Response('Brak danych dla tego rynku.', { status: 404 })
-      return new Response(csv(dok), {
+      // Oceny doklejamy takze do eksportu — bez nich CSV byloby uboższe niz ekran,
+      // a to wlasnie w arkuszu Jakub uklada kolejnosc.
+      const zOcenami = { ...dok, wiersze: dok.wiersze.map(w => ({ ...w, ...(oceny[w.fraza] || {}) })) }
+      return new Response(csv(zOcenami), {
         status: 200,
         headers: {
           'content-type': 'text/csv; charset=utf-8',
@@ -319,7 +457,7 @@ export default async (request) => {
       })
     }
 
-    return new Response(widok(dokumenty, aktywny), { status: 200, headers: NAGLOWKI_HTML })
+    return new Response(widok(dokumenty, aktywny, oceny, tryb), { status: 200, headers: NAGLOWKI_HTML })
   } catch (e) {
     console.error('Panel fraz:', e)
     return new Response(

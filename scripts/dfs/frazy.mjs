@@ -39,6 +39,7 @@ for (let i = 0; i < argv.length; i++) {
     case '--magazyn':      a.magazyn = nast(); break
     case '--na-sucho':     a.naSucho = true; break
     case '--surowe':       a.surowe = true; break
+    case '--bez-clickstream': a.bezClickstream = true; break
   }
 }
 
@@ -151,12 +152,24 @@ async function main () {
     ? 'dataforseo_labs/google/keyword_ideas/live'
     : 'dataforseo_labs/google/keyword_suggestions/live'
 
+  // Wolumeny z Google Ads to KOSZYKI, nie pomiary: Google zlepia bliskie warianty w jedna
+  // grupe i kazdemu czlonkowi przypisuje sume grupy, zaokraglona do drabinki progow
+  // (…2900, 3600, 4400, 5400, 6600, 8100, 9900, 12100, 14800…). Kazda liczba w naszych
+  // danych lezy dokladnie na tej drabince — stad „kapibara kolorowanki" jako 8100, podczas
+  // gdy pojedyncza fraza ma realnie rzad wielkosci mniej.
+  //
+  // `include_clickstream_data` dokłada dane ze strumieni klikniec, ktore rozbijaja koszyk
+  // z powrotem na pojedyncze frazy. WLACZONE DOMYSLNIE, bo bez tego liczby sa nie do uzytku:
+  // zmierzone na „kapibara kolorowanki" — koszyk Google Ads 8100, clickstream 223,
+  // Semrush 110. Trzydziestosześciokrotne zawyżenie. Kosztuje mniej wiecej dwa razy tyle
+  // ($0,14 zamiast $0,07 przy 500 frazach) i jest tego warte.
   const wspolne = {
     location_code: rynek.location_code,
     language_code: rynek.language_code,
     limit: a.limit,
     order_by: ['keyword_info.search_volume,desc'],
-    filters: [['keyword_info.search_volume', '>', a.minWolumen]]
+    filters: [['keyword_info.search_volume', '>', a.minWolumen]],
+    ...(a.bezClickstream ? {} : { include_clickstream_data: true })
   }
 
   const pozycje = []
@@ -200,10 +213,24 @@ async function main () {
     const linki = p.avg_backlinks_info ?? {}
     const nasza = mamyToJuz(p.keyword, slugi)
 
+    // Wolumen wiodacy to clickstream, bo koszyk Google Ads zawyza pojedyncza fraze
+    // o wielkosc calej grupy bliskich wariantow. Ads zostaje obok jako punkt odniesienia
+    // i zeby bylo widac, kiedy clickstreamu po prostu brakuje.
+    const cs = p.clickstream_keyword_info ?? {}
+    const wolumenAds = info.search_volume ?? 0
+    const wolumenCs = cs.search_volume ?? null
+    const maCs = wolumenCs !== null && wolumenCs !== undefined
+
     // Sezonowosc. Przy kolorowankach to jedna z ciekawszych informacji w calej odpowiedzi:
     // „wielkanocne" i „na Dzien Matki" maja ostry szczyt, wiec generowanie warto zaczac
     // z wyprzedzeniem, a nie w tygodniu, w ktorym popyt juz opada.
-    const miesiace = Array.isArray(info.monthly_searches) ? info.monthly_searches : []
+    //
+    // Krzywa tez bierzemy z clickstreamu, gdy jest — miesieczne wartosci z Google Ads
+    // dziedzicza splaszczenie koszyka (widac to golym okiem: szesc miesiecy z rzedu po
+    // dokladnie 8100), wiec sezon liczony z nich bylby liczony z zaokraglen.
+    const miesiace = (maCs && Array.isArray(cs.monthly_searches) && cs.monthly_searches.length)
+      ? cs.monthly_searches
+      : (Array.isArray(info.monthly_searches) ? info.monthly_searches : [])
     const szczyt = miesiace.reduce((n, m) => (m.search_volume > (n?.search_volume ?? -1) ? m : n), null)
     const sredniMies = miesiace.length
       ? miesiace.reduce((s, m) => s + (m.search_volume || 0), 0) / miesiace.length
@@ -211,7 +238,10 @@ async function main () {
 
     return {
       fraza: p.keyword,
-      wolumen: info.search_volume ?? 0,
+      wolumen: maCs ? wolumenCs : wolumenAds,
+      wolumenAds,
+      wolumenClickstream: maCs ? wolumenCs : null,
+      zrodloWolumenu: maCs ? 'clickstream' : 'ads',
       trudnoscSeo: wlas.keyword_difficulty ?? null,
       slow: wlas.words_count ?? null,
       // Ile domen linkuje srednio do pierwszej dziesiatki. Uzupelnia trudnosc SEO:
@@ -235,13 +265,13 @@ async function main () {
 
   // --- CSV na dysk
   const sciezkaCsv = a.csv || `frazy-${a.rynek}-${a.zestaw}.csv`
-  const naglowek = ['fraza', 'wolumen', 'trudnosc SEO', 'domeny do top10', 'sila top10',
+  const naglowek = ['fraza', 'wolumen', 'zrodlo wolumenu', 'wolumen Google Ads (koszyk)', 'trudnosc SEO', 'domeny do top10', 'sila top10',
     'intencja', 'trend r/r %', 'szczyt (miesiac)', 'szczyt (wolumen)', 'sezonowosc',
     'slow', 'konkurencja reklamowa', 'poziom reklamowy', 'CPC', 'mamy kategorie']
   const csv = [
     naglowek.join(';'),
     ...wiersze.map(w => [
-      w.fraza, w.wolumen, w.trudnoscSeo ?? '', w.domenyTop10 ?? '', w.silaTop10 ?? '',
+      w.fraza, w.wolumen, w.zrodloWolumenu ?? '', w.wolumenAds ?? '', w.trudnoscSeo ?? '', w.domenyTop10 ?? '', w.silaTop10 ?? '',
       w.intencja ?? '', w.trendRoczny ?? '', w.szczytMiesiac ?? '', w.szczytWolumen ?? '',
       w.sezonowosc ?? '', w.slow ?? '', w.konkurencjaReklamowa ?? '',
       w.poziomReklamowy ?? '', w.cpc ?? '', w.mamyKategorie ?? 'biala plama'

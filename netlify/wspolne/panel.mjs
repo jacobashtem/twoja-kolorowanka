@@ -250,6 +250,25 @@ export const STYL = `
   table.frazy th[data-sort]:focus-visible { outline: 2px solid var(--tusz); outline-offset: 2px; }
   table.frazy th[aria-sort]:not([aria-sort="none"]) { color: var(--tusz); }
   .strzalka { font-size: 10px; }
+  .koszyk { color: var(--grafit); text-decoration: none; cursor: help; margin-left: 3px; font-size: 12px; }
+
+  /* Ocena operatora — zapisuje sie od razu, wiec potrzebuje widocznego potwierdzenia. */
+  .ocena-kom { white-space: nowrap; }
+  select.ocena {
+    font: inherit; font-size: 13px; padding: 3px 5px; color: var(--tusz);
+    background: var(--papier); border: 2px solid var(--kreska); border-radius: 7px 6px 8px 6px;
+  }
+  select.ocena:focus-visible { outline: none; border-color: var(--tusz); }
+  tr.oceniona select.ocena { border-color: var(--tusz); font-weight: 700; }
+  tr.zapisano td { background: color-mix(in oklab, var(--zielony) 12%, transparent); transition: background .6s ease; }
+  tr.zrobiona .fraza { text-decoration: line-through; color: var(--grafit); }
+  .zrobione-etyk { margin-left: 6px; }
+  .widoki { display: flex; gap: 6px; margin: 0 0 18px; }
+  .widok-btn {
+    font-size: 13px; font-weight: 600; text-decoration: none; color: var(--grafit);
+    border: 2px solid var(--kreska); border-radius: var(--promien); padding: 6px 13px;
+  }
+  .widok-btn[aria-current] { color: var(--tusz); border-color: var(--tusz); }
   table.frazy td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--kreska); vertical-align: middle; }
   table.frazy tr.ukryty { display: none; }
   .fraza { font-weight: 500; }
