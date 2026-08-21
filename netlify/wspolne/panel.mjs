@@ -269,6 +269,24 @@ export const STYL = `
     border: 2px solid var(--kreska); border-radius: var(--promien); padding: 6px 13px;
   }
   .widok-btn[aria-current] { color: var(--tusz); border-color: var(--tusz); }
+
+  /* Obsluzona fraza — caly wiersz na zielono, zeby bylo widac jednym rzutem oka. */
+  tr.zrobiona td { background: color-mix(in oklab, var(--zielony) 14%, transparent); }
+  tr.zrobiona .fraza { color: var(--grafit); }
+
+  .szczegoly-btn {
+    font: inherit; font-size: 15px; line-height: 1; margin-left: 6px; padding: 2px 7px;
+    color: var(--grafit); background: transparent; cursor: pointer;
+    border: 2px solid var(--kreska); border-radius: 7px 6px 8px 6px;
+  }
+  .szczegoly-btn:hover, .szczegoly-btn:focus-visible { color: var(--tusz); border-color: var(--tusz); }
+  tr.szczegoly td { background: var(--papier-cien); padding: 0; border-bottom: 2px solid var(--tusz); }
+  .szczegoly__tresc { padding: 18px 20px; }
+  dl.szcz { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px 28px; }
+  .szcz-poz dt { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--grafit); }
+  .szcz-poz dd { margin: 2px 0 0; font-size: 14px; }
+  .szcz-poz dd strong { font-size: 17px; font-variant-numeric: tabular-nums; }
+  .szcz-poz dd span { display: block; color: var(--grafit); font-size: 13px; line-height: 1.45; margin-top: 3px; }
   table.frazy td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--kreska); vertical-align: middle; }
   table.frazy tr.ukryty { display: none; }
   .fraza { font-weight: 500; }

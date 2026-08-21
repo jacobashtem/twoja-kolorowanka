@@ -104,8 +104,8 @@ function tabela (wiersze) {
     const plama = jestPlama(w)
     const ogolna = w.mamyKategorie === 'ogolna'
     const klasaPokrycia = ogolna ? ' fraza__pokrycie--ogolna' : (plama ? '' : ' fraza__pokrycie--mamy')
-    const tytul = ogolna ? 'fraza ogólna, celuje w stronę główną'
-      : (plama ? 'biała plama — nie mamy pod to kategorii' : `mamy kategorię: ${w.mamyKategorie}`)
+    const tytul = ogolna ? 'fraza ogólna — celuje w stronę główną, nie w kategorię'
+      : (plama ? 'nie macie kategorii pod tę frazę' : `macie kategorię: ${w.mamyKategorie}`)
     const szer = Math.max(2, Math.round((w.wolumen || 0) / maxWolumen * 100))
     const st = stopienTrudnosci(w.trudnoscSeo)
 
@@ -141,17 +141,25 @@ function tabela (wiersze) {
       <td style="text-align:center">${szczyt}</td>
       <td style="text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap">${trend}</td>
       <td style="color:var(--grafit);font-size:13px">${esc(SKROT_INTENCJI[w.intencja] || '—')}</td>
-      <td style="color:var(--grafit);font-size:13px;white-space:nowrap">${ogolna ? 'ogólna' : (plama ? 'biała plama' : esc(w.mamyKategorie))}</td>
+      <td style="font-size:13px;white-space:nowrap">${
+        ogolna
+          ? '<span style="color:var(--grafit)">strona główna</span>'
+          : (plama
+              ? '<strong style="color:var(--zielony)">brak — do wzięcia</strong>'
+              : `<span style="color:var(--grafit)">${esc(w.mamyKategorie)}</span>`)
+      }</td>
       <td class="ocena-kom">
         <select class="ocena" data-fraza="${esc(w.fraza)}" aria-label="Potencjał frazy ${esc(w.fraza)} w skali 1–10">
           <option value="">—</option>
           ${[1,2,3,4,5,6,7,8,9,10].map(n => `<option value="${n}"${w.ocena === n ? ' selected' : ''}>${n}</option>`).join('')}
         </select>
-        <label class="zrobione-etyk" title="Zrobione — znika z planu">
+        <label class="zrobione-etyk" title="Obsłużone — wiersz robi się zielony i znika z Planu">
           <input type="checkbox" class="zrobione" data-fraza="${esc(w.fraza)}"${w.zrobione ? ' checked' : ''}>
         </label>
+        <button type="button" class="szczegoly-btn" data-fraza="${esc(w.fraza)}" title="Pokaż wszystko, co API wie o tej frazie" aria-label="Szczegóły frazy ${esc(w.fraza)}">⋯</button>
       </td>
-    </tr>`
+    </tr>
+    <tr class="szczegoly" hidden><td colspan="9"><div class="szczegoly__tresc"></div></td></tr>`
   }).join('')
 
   const th = (etykieta, klucz, tytul, styl = '') =>
@@ -166,7 +174,7 @@ function tabela (wiersze) {
       ${th('Szczyt', 's', 'Miesiąc największego popytu — pokazany tylko dla fraz wyraźnie sezonowych', 'text-align:center')}
       ${th('Trend r/r', 'tr', 'Zmiana liczby wyszukań rok do roku', 'text-align:right')}
       <th>Intencja</th>
-      ${th('Pokrycie', 'p', 'Czy macie już kategorię pod tę frazę')}
+      ${th('Nasza kategoria', 'p', 'Czy macie już na stronie kategorię, która celuje w tę frazę. „brak" znaczy, że nikt u was tego nie obsługuje')}
       ${th('Potencjał', 'o', 'Twoja ocena 1–10. Zapisuje się od razu i przeżywa kolejne kopania. Kolejność w Planie idzie po tej liczbie')}
     </tr></thead>
     <tbody id="cialo">${rzedy}</tbody>
@@ -230,7 +238,7 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
     <div class="kafle">
       <div class="kafel"><div class="kafel__liczba" id="kafelFraz">—</div><div class="kafel__opis">fraz w widoku, z ${liczba(wiersze.length)} w zbiorze</div></div>
       <div class="kafel"><div class="kafel__liczba" id="kafelWolumen">—</div><div class="kafel__opis">wyszukań miesięcznie łącznie w tym, co widzisz</div></div>
-      <div class="kafel kafel--okazja"><div class="kafel__liczba" id="kafelPlam">—</div><div class="kafel__opis">z tego białych plam — bez własnej kategorii</div></div>
+      <div class="kafel kafel--okazja"><div class="kafel__liczba" id="kafelPlam">—</div><div class="kafel__opis">z tego bez waszej kategorii — do wzięcia</div></div>
     </div>
 
     <div class="filtry">
@@ -238,12 +246,16 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
       <input type="number" id="minW" placeholder="min. wol." aria-label="Minimalny wolumen" min="0" step="10">
       <input type="number" id="maxT" placeholder="maks. trud." aria-label="Maksymalna trudność SEO" min="0" max="100" step="5">
       <input type="number" id="maxD" placeholder="maks. domen" aria-label="Maksymalnie domen linkujących do top 10" min="0" step="1">
-      <label class="przelacznik"><input type="checkbox" id="tylkoPlamy"> tylko białe plamy</label>
+      <label class="przelacznik"><input type="checkbox" id="tylkoPlamy"> tylko bez naszej kategorii</label>
       <a class="zglos" href="/panel-delash/frazy.csv?rynek=${esc(aktywny)}">Pobierz CSV</a>
     </div>
 
     ${tabela(wiersze)}
     <p class="pusto" id="pusto" hidden>Żadna fraza nie spełnia tych warunków.</p>
+
+    <script type="application/json" id="dane">${
+      JSON.stringify(Object.fromEntries(wiersze.map(w => [w.fraza, w]))).replace(/</g, '\\u003c')
+    }</script>
 
     <p class="stopka">
       <strong>Trudność SEO</strong> (0–100) mówi, jak trudno wejść na pierwszą stronę wyników organicznych.
@@ -257,7 +269,10 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
 
     <script>
       const cialo = document.getElementById('cialo')
-      const wiersze = [...cialo.querySelectorAll('tr')]
+      // Kazdej frazie towarzyszy ukryty wiersz szczegolow — do filtrowania i sortowania
+      // bierzemy tylko wiersze glowne, a szczegoly wedruja za swoim rodzicem.
+      const wiersze = [...cialo.querySelectorAll('tr:not(.szczegoly)')]
+      const dane = JSON.parse(document.getElementById('dane').textContent)
       const pola = {
         szukaj: document.getElementById('szukaj'),
         minW: document.getElementById('minW'),
@@ -292,6 +307,8 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
             && (d < 0 || d <= maxD)
             && (!tylkoPlamy || tr.dataset.p === '1')
           tr.classList.toggle('ukryty', !ok)
+          const szcz = tr.nextElementSibling
+          if (szcz && szcz.classList.contains('szczegoly') && !ok) szcz.hidden = true
           if (ok) { ile++; suma += Number(tr.dataset.w); if (tr.dataset.p === '1') plam++ }
         }
 
@@ -315,7 +332,11 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
           const r = tekstowa ? String(x).localeCompare(String(y), 'pl') : x - y
           return malejaco ? -r : r
         })
-        for (const tr of wiersze) cialo.appendChild(tr)
+        for (const tr of wiersze) {
+          const szcz = tr.nextElementSibling
+          cialo.appendChild(tr)
+          if (szcz && szcz.classList.contains('szczegoly')) cialo.appendChild(szcz)
+        }
 
         for (const th of document.querySelectorAll('th[data-sort]')) {
           const czy = th.dataset.sort === klucz
@@ -374,6 +395,82 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
           zapisz(tr, { zrobione: box.checked })
         })
         if (box.checked) box.closest('tr').classList.add('zrobiona')
+      }
+
+      // --- szczegoly frazy ---
+      // Kazda liczba dostaje tu zdanie wyjasnienia. Surowe nazwy pol z API sa bezuzyteczne,
+      // jesli trzeba pamietac, ktore z nich mowi o reklamach, a ktore o pozycjonowaniu.
+      const MIES = ['','styczeń','luty','marzec','kwiecień','maj','czerwiec','lipiec','sierpień','wrzesień','październik','listopad','grudzień']
+      const INTENCJE = {
+        informational: 'informacyjna — ktoś szuka wiedzy albo materiału do pobrania. Dla was najlepsza.',
+        commercial: 'komercyjna — ktoś porównuje przed zakupem.',
+        transactional: 'transakcyjna — ktoś chce coś kupić albo pobrać tu i teraz.',
+        navigational: 'nawigacyjna — ktoś szuka konkretnej marki lub strony.'
+      }
+      const fmtl = n => (n === null || n === undefined) ? '—' : Number(n).toLocaleString('pl-PL')
+
+      function opisz (w) {
+        const wiersz = (etykieta, wartosc, wyjasnienie) =>
+          '<div class="szcz-poz"><dt>' + etykieta + '</dt><dd><strong>' + wartosc + '</strong>' +
+          (wyjasnienie ? '<span>' + wyjasnienie + '</span>' : '') + '</dd></div>'
+
+        const trudn = w.trudnoscSeo
+        const opisTrudn = trudn === null || trudn === undefined ? ''
+          : trudn === 0
+            ? 'Zero nie znaczy „brak danych". Trudność liczy się z profilu linków stron, które są dziś w pierwszej dziesiątce. Zero znaczy, że one praktycznie nie mają linków z zewnątrz — czyli da się je wyprzedzić samą treścią, bez zdobywania linków.'
+            : trudn <= 25 ? 'Nisko. Wejście na pierwszą stronę jest realne bez budowania linków.'
+            : trudn <= 45 ? 'Średnio. Do zdobycia, ale czołówka ma już jakieś zaplecze.'
+            : 'Wysoko. Konkurencja ma mocne zaplecze linkowe.'
+
+        const dom = w.domenyTop10
+        const opisDom = (dom === null || dom === undefined) ? ''
+          : dom < 1
+            ? 'Praktycznie zero. Strony w czołówce nie mają linków z innych witryn — to jest fraza do wzięcia.'
+            : 'Tyle różnych witryn linkuje średnio do stron, które są dziś w pierwszej dziesiątce. Im mniej, tym łatwiej je wyprzedzić.'
+
+        const sez = (w.sezonowosc >= 1.6 && w.szczytMiesiac)
+          ? wiersz('Szczyt sezonu', MIES[w.szczytMiesiac] + ' (' + fmtl(w.szczytWolumen) + ')',
+              'Popyt skacze ' + w.sezonowosc + '× ponad średnią. Materiał warto mieć gotowy z miesięcznym wyprzedzeniem.')
+          : wiersz('Sezonowość', 'brak wyraźnego szczytu', 'Popyt rozłożony równo przez rok.')
+
+        const trend = (w.trendRoczny === null || w.trendRoczny === undefined) ? '—'
+          : (w.trendRoczny > 0 ? '+' : '') + w.trendRoczny + '%'
+
+        return '<dl class="szcz">' +
+          wiersz('Wolumen miesięczny', fmtl(w.wolumen),
+            w.zrodloWolumenu === 'clickstream'
+              ? 'Ze strumienia rzeczywistych kliknięć — liczba dotyczy dokładnie tej frazy.'
+              : 'Brak danych ze strumienia kliknięć, to wartość z koszyka Google Ads. Google zlepia bliskie warianty i podaje sumę całej grupy, więc traktuj to jako górną granicę, nie pomiar. Dla porównania koszyk: ' + fmtl(w.wolumenAds) + '.') +
+          (w.zrodloWolumenu === 'clickstream' ? wiersz('Koszyk Google Ads', fmtl(w.wolumenAds), 'Tyle pokazałby Keyword Planner — razem z wszystkimi wariantami frazy.') : '') +
+          wiersz('Trudność SEO', trudn ?? '—', opisTrudn) +
+          wiersz('Domeny linkujące do top 10', dom === null || dom === undefined ? '—' : (dom < 1 ? dom.toFixed(1) : fmtl(Math.round(dom))), opisDom) +
+          wiersz('Siła domen w top 10', fmtl(w.silaTop10), 'Uśredniona moc witryn, z którymi trzeba konkurować.') +
+          wiersz('Intencja', w.intencja || '—', INTENCJE[w.intencja] || '') +
+          wiersz('Trend rok do roku', trend, w.trendRoczny < -20 ? 'Wyraźny spadek — moda może wygasać.' : (w.trendRoczny > 20 ? 'Wyraźny wzrost — warto zdążyć.' : '')) +
+          sez +
+          wiersz('Słów we frazie', w.slow ?? '—', (w.slow >= 4 ? 'Długi ogon — mały wolumen, ale zwykle łatwo o pozycję.' : '')) +
+          wiersz('Konkurencja reklamowa', w.poziomReklamowy || '—', 'Ilu reklamodawców licytuje o tę frazę w Google Ads. Z pozycjonowaniem nie ma wspólnego nic — mówi tylko, czy fraza jest komercyjna.') +
+          wiersz('Stawka za kliknięcie', w.cpc ? w.cpc + ' USD' : '—', 'Ile płacą reklamodawcy. Też wyłącznie o reklamach.') +
+          wiersz('Nasza kategoria', w.mamyKategorie === 'ogolna' ? 'fraza ogólna' : (w.mamyKategorie || 'brak'),
+            w.mamyKategorie ? '' : 'Nikt u was tego nie obsługuje — to jest kandydat na nową kategorię.') +
+          wiersz('Skąd ta fraza', w.zestaw || '—', 'Nazwa kopania, w którym się pojawiła.') +
+        '</dl>'
+      }
+
+      for (const btn of document.querySelectorAll('.szczegoly-btn')) {
+        btn.addEventListener('click', () => {
+          const tr = btn.closest('tr')
+          const szcz = tr.nextElementSibling
+          if (!szcz || !szcz.classList.contains('szczegoly')) return
+          if (szcz.hidden) {
+            szcz.querySelector('.szczegoly__tresc').innerHTML = opisz(dane[btn.dataset.fraza] || {})
+            szcz.hidden = false
+            btn.textContent = '×'
+          } else {
+            szcz.hidden = true
+            btn.textContent = '⋯'
+          }
+        })
       }
     </script>`
 
