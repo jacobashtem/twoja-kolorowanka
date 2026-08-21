@@ -297,7 +297,10 @@ export const STYL = `
 
   /* Wolumen: dlugosc paska jest calym kodowaniem, kolor nic nie dodaje. */
   .wolumen { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
-  .wolumen__liczba { font-variant-numeric: tabular-nums; min-width: 66px; text-align: right; }
+  .wolumen__liczba { font-variant-numeric: tabular-nums; min-width: 72px; text-align: right; cursor: help; }
+  /* Wartosc z koszyka Google Ads to gorna granica, nie pomiar — musi sie roznic wygladem,
+     inaczej sortowanie po wolumenie porownuje dwie nieporownywalne rzeczy. */
+  .wolumen__liczba--koszyk { color: var(--grafit); font-style: italic; }
   .wolumen__pasek { width: 96px; height: 8px; background: var(--papier-cien); border-radius: 4px; overflow: hidden; }
   .wolumen__pasek i { display: block; height: 100%; background: var(--tusz); opacity: .55; border-radius: 4px; }
 
