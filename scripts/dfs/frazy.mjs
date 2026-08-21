@@ -21,7 +21,7 @@
  */
 
 import { writeFileSync, readdirSync, existsSync } from 'node:fs'
-import { wywolaj, podsumujKoszt, RYNKI, licznik } from './klient.mjs'
+import { wywolaj, podsumujKoszt, RYNKI, licznik, czesciZeSlugow, mamyToJuz, budujWarianty, mapujWiersz } from './klient.mjs'
 
 const a = { rynek: 'pl', limit: 500, minWolumen: 10, seedy: [], tryb: 'ogon' }
 const argv = process.argv.slice(2)
@@ -58,98 +58,25 @@ if (!a.zestaw || !a.seedy.length) {
  * czy jest pod nia strona, czy nie. Bez tego kazdy eksport trzeba by recznie
  * przeklikiwac przez serwis.
  */
+/**
+ * Slugi kategorii z katalogu content/. Panel bierze te sama liste z sitemapy produkcji —
+ * caly mechanizm porownywania mieszka we wspolnym module, zeby obie drogi dawaly ten sam
+ * wynik.
+ */
 function naszeKategorie () {
   const slugi = new Set()
   const chodz = (dir, poziom = 0) => {
     if (poziom > 2 || !existsSync(dir)) return
     for (const e of readdirSync(dir, { withFileTypes: true })) {
-      if (!e.isDirectory() || /^\d+$/.test(e.name)) continue
+      if (!e.isDirectory() || /^[0-9]+$/.test(e.name)) continue
       slugi.add(e.name.toLowerCase())
       chodz(`${dir}/${e.name}`, poziom + 1)
     }
   }
   chodz('content')
-
-  // Slug „dla-doroslych" nie dopasuje sie do slowa „doroslych", dopoki nie rozbijemy go
-  // po mysliku. Budujemy mape przedrostek -> pelny slug, zeby porownanie bylo jednym
-  // odczytem zamiast petli po wszystkich slugach dla kazdego slowa.
-  const czesci = []
-  for (const slug of slugi) {
-    for (const czesc of bezOgonkow(slug).split('-')) {
-      if (czesc.length >= 4 && !SLOWA_PUSTE.has(czesc)) czesci.push([czesc, slug])
-    }
-  }
-  return czesci
+  return czesciZeSlugow([...slugi])
 }
 
-// Slowa, ktore wystepuja niemal w kazdej frazie i same z siebie nic nie znacza. Bez tej
-// listy kazda fraza dostawala etykiete „mamy: kolorowanki", bo „kolorowanki" jest slugiem
-// huba — czyli mechanizm rozpoznawania nie znajdowal ani jednej niepokrytej frazy.
-const SLOWA_PUSTE = new Set([
-  'kolorowanki', 'kolorowanka', 'kolorowanek', 'kolorowanke', 'kolorowanki-do-druku',
-  'do', 'druku', 'dla', 'za', 'darmo', 'darmowe', 'online', 'pdf', 'druk', 'wydruku',
-  'kleurplaten', 'kleurplaat', 'ausmalbilder', 'malvorlagen'
-])
-
-/**
- * Czy fraza trafia w ktoras z naszych kategorii. Dopasowanie po czteroznakowym przedrostku,
- * bo polska odmiana psuje porownanie doslowne („traktory" kontra „traktorow").
- *
- * Celowo zachowawcze: wolimy oznaczyc jako niepokryte cos, co juz mamy, niz odwrotnie.
- * Falszywe „mamy to" ukrywa okazje i nigdy sie o niej nie dowiesz; falszywe „nie mamy”
- * kosztuje tylko chwile Twojego czasu przy przegladaniu.
- */
-function mamyToJuz (fraza, czesciSlugow) {
-  const slowa = bezOgonkow(fraza).split(/[\s\-_]+/)
-    .filter(s => s.length >= 4 && !SLOWA_PUSTE.has(s))
-
-  // Zostaly same slowa puste — to fraza ogolna w rodzaju „kolorowanki do druku",
-  // celujaca w strone glowna, a nie w kategorie. To nie jest brak kategorii.
-  if (!slowa.length) return 'ogolna'
-
-  for (const slowo of slowa) {
-    const rdzenSlowa = rdzen(slowo)
-    for (const [czesc, slug] of czesciSlugow) {
-      if (rdzenSlowa && rdzenSlowa === rdzen(czesc)) return slug
-    }
-  }
-  return null
-}
-
-// Koncowki odmiany, od najdluzszych. Liczenie wspolnych znakow sie nie sprawdzilo:
-// czterema znakami „dzieci" zlewalo sie z „dzien", a pięcioma „panda" przestawala pasowac
-// do kategorii „pandy" — i tabela mowila, ze nie macie strony o pandach, choc macie.
-// Odcinanie koncowek rozstrzyga oba przypadki poprawnie, bo dziala na morfologii,
-// a nie na dlugosci wspolnego poczatku.
-// Celowo BEZ „ki" i „ka": to koncowki zdrobnien, nie przypadkow, i zjadaly litere rdzenia
-// („smoki" -> „smo" zamiast „smok"). Ich brak oznacza, ze zdrobnienia sie nie dopasuja
-// — i tak ma byc, bo „kotek" to co innego niz „koty" i lepiej pokazac je jako osobna
-// okazje, niz po cichu schowac pod istniejaca kategoria.
-const KONCOWKI = ['ami', 'ach', 'ych', 'ich', 'ow', 'om', 'em', 'ie',
-  'y', 'i', 'a', 'e', 'u', 'o']
-
-/**
- * Zgrubny rdzen slowa. Nie jest to poprawny stemmer polszczyzny i nie musi byc — ma tylko
- * sprowadzic do wspolnej postaci warianty tej samej nazwy kategorii.
- *
- *   panda, pandy        -> pand
- *   ryb, ryby, ryba     -> ryb
- *   doroslych           -> dorosl
- *   dzieci vs dzien     -> dziec vs dzien   (slusznie rozne)
- */
-function rdzen (slowo) {
-  for (const k of KONCOWKI) {
-    if (slowo.length - k.length >= 3 && slowo.endsWith(k)) return slowo.slice(0, -k.length)
-  }
-  return slowo
-}
-
-/** Polska odmiana i ogonki psuja porownanie doslowne — sprowadzamy wszystko do ascii. */
-function bezOgonkow (s) {
-  return s.toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/ł/g, 'l')   // jedyna litera, ktorej NFD nie rozklada
-}
 
 const csvPole = w => {
   const s = String(w ?? '')
@@ -218,22 +145,9 @@ async function main () {
     // dla nich zero, a jedno zapytanie kosztuje tyle samo niezaleznie od tego, ile fraz
     // w nim wyslemy. Lepiej zapytac o pietnascie za duzo niz przegapic ta jedna, ktora niesie
     // caly ruch.
-    // Formy budujemy z ogonkami I bez nich. To nie jest nadgorliwosc: w danych „kolorowanki
-    // dla dorosłych" i „kolorowanki dla doroslych" wystepuja jako dwie osobne frazy, obie
-    // z realnym wolumenem. Gdybysmy pytali tylko o wersje bez ogonkow, przy „mikołaju"
-    // przegapilibysmy dokladnie to, czego ludzie szukaja.
-    const bazaOrg = a.seedy[0].toLowerCase().split(/\s+/).pop()
-    const bazaAscii = bezOgonkow(bazaOrg)
-    const formy = [...new Set([
-      bazaOrg, bazaAscii,
-      ...rynek.koncowki.map(k => rdzen(bazaOrg) + k),
-      ...rynek.koncowki.map(k => rdzen(bazaAscii) + k)
-    ])].filter(f => f.length >= 3)
-    const kandydaci = [...new Set(
-      formy.flatMap(f => rynek.szablony.map(s => s.replace('{w}', f)))
-    )]
+    const { formy, kandydaci } = budujWarianty(a.seedy[0], rynek)
 
-    console.log(`Formy slowa "${bazaOrg}": ${formy.join(', ')}`)
+    console.log(`Formy slowa "${a.seedy[0].split(/\s+/).pop()}": ${formy.join(', ')}`)
     console.log(`Do zmierzenia: ${kandydaci.length} kombinacji w jednym zapytaniu.`)
     console.log('')
 
@@ -286,61 +200,7 @@ async function main () {
     console.log(`Po odsianiu powtorzen: ${unikalne.length} fraz.`)
   }
 
-  const wiersze = unikalne.map(p => {
-    const info = p.keyword_info ?? {}
-    const wlas = p.keyword_properties ?? {}
-    const linki = p.avg_backlinks_info ?? {}
-    const nasza = mamyToJuz(p.keyword, slugi)
-
-    // Wolumen wiodacy to clickstream, bo koszyk Google Ads zawyza pojedyncza fraze
-    // o wielkosc calej grupy bliskich wariantow. Ads zostaje obok jako punkt odniesienia
-    // i zeby bylo widac, kiedy clickstreamu po prostu brakuje.
-    const cs = p.clickstream_keyword_info ?? {}
-    const wolumenAds = info.search_volume ?? 0
-    const wolumenCs = cs.search_volume ?? null
-    const maCs = wolumenCs !== null && wolumenCs !== undefined
-
-    // Sezonowosc. Przy kolorowankach to jedna z ciekawszych informacji w calej odpowiedzi:
-    // „wielkanocne" i „na Dzien Matki" maja ostry szczyt, wiec generowanie warto zaczac
-    // z wyprzedzeniem, a nie w tygodniu, w ktorym popyt juz opada.
-    //
-    // Krzywa tez bierzemy z clickstreamu, gdy jest — miesieczne wartosci z Google Ads
-    // dziedzicza splaszczenie koszyka (widac to golym okiem: szesc miesiecy z rzedu po
-    // dokladnie 8100), wiec sezon liczony z nich bylby liczony z zaokraglen.
-    const miesiace = (maCs && Array.isArray(cs.monthly_searches) && cs.monthly_searches.length)
-      ? cs.monthly_searches
-      : (Array.isArray(info.monthly_searches) ? info.monthly_searches : [])
-    const szczyt = miesiace.reduce((n, m) => (m.search_volume > (n?.search_volume ?? -1) ? m : n), null)
-    const sredniMies = miesiace.length
-      ? miesiace.reduce((s, m) => s + (m.search_volume || 0), 0) / miesiace.length
-      : 0
-
-    return {
-      fraza: p.keyword,
-      wolumen: maCs ? wolumenCs : wolumenAds,
-      wolumenAds,
-      wolumenClickstream: maCs ? wolumenCs : null,
-      zrodloWolumenu: maCs ? 'clickstream' : 'ads',
-      trudnoscSeo: wlas.keyword_difficulty ?? null,
-      slow: wlas.words_count ?? null,
-      // Ile domen linkuje srednio do pierwszej dziesiatki. Uzupelnia trudnosc SEO:
-      // wartosc bliska zera znaczy, ze czolowka nie ma zaplecza linkowego i da sie ja
-      // wyprzedzic sama trescia.
-      domenyTop10: linki.referring_domains ?? null,
-      silaTop10: linki.main_domain_rank ?? null,
-      intencja: p.search_intent_info?.main_intent ?? null,
-      trendRoczny: info.search_volume_trend?.yearly ?? null,
-      szczytMiesiac: szczyt?.month ?? null,
-      szczytWolumen: szczyt?.search_volume ?? null,
-      // Stosunek szczytu do sredniej — powyzej ok. 1,6 fraza jest wyraznie sezonowa.
-      sezonowosc: sredniMies ? Number(((szczyt?.search_volume ?? 0) / sredniMies).toFixed(2)) : null,
-      miesiace: miesiace.map(m => m.search_volume ?? 0),
-      konkurencjaReklamowa: info.competition ?? null,
-      poziomReklamowy: info.competition_level ?? null,
-      cpc: info.cpc ?? null,
-      mamyKategorie: nasza
-    }
-  }).sort((x, y) => y.wolumen - x.wolumen)
+  const wiersze = unikalne.map(p => mapujWiersz(p, slugi)).sort((x, y) => y.wolumen - x.wolumen)
 
   // --- CSV na dysk
   const sciezkaCsv = a.csv || `frazy-${a.rynek}-${a.zestaw}.csv`

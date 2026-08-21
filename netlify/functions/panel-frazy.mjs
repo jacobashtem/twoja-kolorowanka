@@ -14,8 +14,18 @@
 
 import { getStore } from '@netlify/blobs'
 import { sprawdzDostep, szkielet, komunikat, esc, data, liczba, NAGLOWKI_HTML } from '../wspolne/panel.mjs'
+import {
+  RYNKI as RYNKI_DFS, TRYBY, budujWarianty, czesciZeSlugow, mapujWiersz,
+  wywolajDfs, slugiZSitemapy, scalWiersze
+} from '../wspolne/frazy-logika.mjs'
 
-export const config = { path: ['/panel-delash/frazy', '/panel-delash/frazy.csv', '/panel-delash/frazy/ocena'] }
+export const config = { path: ['/panel-delash/frazy', '/panel-delash/frazy.csv', '/panel-delash/frazy/ocena', '/panel-delash/frazy/kop'] }
+
+// Twardy sufit na jedno klikniecie. Kopanie wydaje prawdziwe pieniadze, a formularz jest
+// w przegladarce — bez tego jedna pomylka w polu „ile" moglaby zjesc caly depozyt.
+// Przy 300 frazach jedno zapytanie kosztuje okolo szesciu centow.
+const MAX_LIMIT = 300
+const MAX_ZARODKOW = 40
 
 // Oceny operatora leza w OSOBNYM dokumencie (`oceny/<rynek>`), nie w wierszach fraz.
 // Powod jest prosty i kosztowalby nas dane: ponowne kopanie tej samej kategorii nadpisuje
@@ -23,13 +33,9 @@ export const config = { path: ['/panel-delash/frazy', '/panel-delash/frazy.csv',
 // przy wyswietlaniu.
 const kluczOcen = rynek => `oceny/${rynek}`
 
-const RYNKI = [
-  { kod: 'pl', flaga: '🇵🇱', nazwa: 'Polska' },
-  { kod: 'nl', flaga: '🇳🇱', nazwa: 'Holandia' },
-  { kod: 'de', flaga: '🇩🇪', nazwa: 'Niemcy' },
-  { kod: 'it', flaga: '🇮🇹', nazwa: 'Włochy' },
-  { kod: 'se', flaga: '🇸🇪', nazwa: 'Szwecja' }
-]
+// Wyprowadzone z jednej definicji we wspolnym module — inaczej lista rynkow zylaby
+// w dwoch miejscach i przy dodaniu szostego kraju panel pokazalby piec.
+const RYNKI = Object.entries(RYNKI_DFS).map(([kod, r]) => ({ kod, flaga: r.flaga, nazwa: r.nazwa }))
 
 const MIESIACE = ['', 'sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru']
 
@@ -77,6 +83,68 @@ async function zapiszOcene (store, rynek, fraza, zmiana) {
   return oceny[fraza] ?? null
 }
 
+/**
+ * Kopanie uruchomione z panelu. Ta sama logika co w skrypcie — importowana ze wspolnego
+ * modulu, zeby fraza oznaczona jako pokryta w terminalu byla tak samo oznaczona tutaj.
+ *
+ * Slugi kategorii bierzemy z sitemapy produkcji, bo funkcja nie ma dostepu do `content/`.
+ */
+async function kop (store, { rynek, tryb, zarodki, limit }) {
+  const login = process.env.DATAFORSEO_LOGIN
+  const haslo = process.env.DATAFORSEO_PASSWORD
+  if (!login || !haslo) throw new Error('Brak poświadczeń DataForSEO w zmiennych Netlify.')
+
+  const r = RYNKI_DFS[rynek]
+  if (!r) throw new Error(`Nieznany rynek: ${rynek}`)
+  if (!TRYBY[tryb]) throw new Error(`Nieznany tryb: ${tryb}`)
+  if (!zarodki.length) throw new Error('Podaj co najmniej jedną frazę.')
+
+  const lim = Math.min(Math.max(Number(limit) || 100, 1), MAX_LIMIT)
+  const czesci = czesciZeSlugow(await slugiZSitemapy())
+
+  const wspolne = {
+    location_code: r.location_code,
+    language_code: r.language_code,
+    include_clickstream_data: true
+  }
+  const zSortowaniem = {
+    ...wspolne, limit: lim,
+    order_by: ['keyword_info.search_volume,desc'],
+    filters: [['keyword_info.search_volume', '>', 0]]
+  }
+
+  const surowe = []
+  let koszt = 0
+  const dodaj = ({ wynik, koszt: k }) => { koszt += k; surowe.push(...(wynik?.[0]?.items ?? [])) }
+
+  if (tryb === 'warianty' || tryb === 'pelny') {
+    const { kandydaci } = budujWarianty(zarodki[0], r)
+    dodaj(await wywolajDfs('dataforseo_labs/google/keyword_overview/live',
+      [{ keywords: kandydaci, ...wspolne }], { login, haslo }))
+  }
+  if (tryb === 'dokladny') {
+    dodaj(await wywolajDfs('dataforseo_labs/google/keyword_overview/live',
+      [{ keywords: zarodki, ...wspolne }], { login, haslo }))
+  }
+  if (tryb === 'skojarzenia') {
+    dodaj(await wywolajDfs('dataforseo_labs/google/keyword_ideas/live',
+      [{ keywords: zarodki, ...zSortowaniem }], { login, haslo }))
+  }
+  if (tryb === 'ogon' || tryb === 'pelny') {
+    for (const z of zarodki) {
+      dodaj(await wywolajDfs('dataforseo_labs/google/keyword_suggestions/live',
+        [{ keyword: z, ...zSortowaniem }], { login, haslo }))
+    }
+  }
+
+  // Kilka zarodkow potrafi zwrocic te sama fraze — odsiewamy przed policzeniem czegokolwiek.
+  const unikalne = [...new Map(surowe.filter(p => p?.keyword).map(p => [p.keyword, p])).values()]
+  const wiersze = unikalne.map(p => mapujWiersz(p, czesci))
+    .sort((x, y) => (y.wolumen || 0) - (x.wolumen || 0))
+
+  return { wiersze, koszt, rynek: r, zarodki }
+}
+
 async function wczytajRynki (store) {
   const { blobs } = await store.list({ prefix: 'frazy/' })
   const dokumenty = {}
@@ -101,6 +169,97 @@ function mapaRynkow (dokumenty, aktywny) {
       <span class="rynek__ile">${pusty ? 'brak danych' : liczba(ile) + ' fraz'}</span>
     </a></li>`
   }).join('')}</ul>`
+}
+
+/**
+ * Formularz kopania. Legenda trybow jest jego czescia, a nie osobna sekcja pomocy —
+ * opis stoi przy przycisku wyboru, wiec czyta sie go w momencie decyzji, a nie wtedy,
+ * gdy trzeba go szukac.
+ */
+function formularzKopania (aktywny) {
+  const rynki = RYNKI.map(r =>
+    `<option value="${r.kod}"${r.kod === aktywny ? ' selected' : ''}>${r.flaga} ${esc(r.nazwa)}</option>`
+  ).join('')
+
+  const tryby = Object.entries(TRYBY).map(([klucz, t], i) => `
+    <label class="tryb">
+      <input type="radio" name="tryb" value="${klucz}"${i === 0 ? ' checked' : ''}>
+      <span class="tryb__tresc">
+        <span class="tryb__nazwa">${esc(t.nazwa)}</span>
+        <span class="tryb__opis">${esc(t.opis)}</span>
+      </span>
+    </label>`).join('')
+
+  return `<details class="kopalnia">
+    <summary>Kop nowe frazy</summary>
+    <div class="kopalnia__srodek">
+      <div class="kopalnia__rzad">
+        <label>Rynek<br><select id="kopRynek">${rynki}</select></label>
+        <label>Nazwa zestawu<br><input type="text" id="kopZestaw" placeholder="np. mikolaj" maxlength="60"></label>
+        <label title="Dotyczy tylko trybów, które dosypują frazy. Sufit to ${MAX_LIMIT}.">Ile fraz<br><input type="number" id="kopLimit" value="100" min="1" max="${MAX_LIMIT}" step="10"></label>
+      </div>
+
+      <fieldset class="tryby">
+        <legend>Co chcesz zrobić</legend>
+        ${tryby}
+      </fieldset>
+
+      <label>Frazy — po jednej w linii<br>
+        <textarea id="kopZarodki" rows="4" placeholder="kolorowanki mikołaj"></textarea>
+      </label>
+
+      <p class="kopalnia__uwaga">
+        Zarodek musi zawierać słowo tematyczne. Samo „panda” wciągnie Fiata Pandę i Kung Fu Pandę —
+        sprawdzone, kosztowało $0,06. Kopanie wydaje prawdziwe pieniądze: jedno zapytanie to
+        mniej więcej trzy do ośmiu centów.
+      </p>
+
+      <button type="button" id="kopStart" class="zglos">Kop</button>
+      <span id="kopStan" class="kopalnia__stan"></span>
+    </div>
+  </details>`
+}
+
+/** Obsluga formularza kopania. Osobno, bo potrzebna takze na pustym rynku, gdzie tabeli nie ma. */
+function skryptKopania () {
+  return `<script>
+    (function () {
+      const btn = document.getElementById('kopStart')
+      if (!btn) return
+      const stan = document.getElementById('kopStan')
+
+      btn.addEventListener('click', async () => {
+        const zarodki = document.getElementById('kopZarodki').value
+        if (!zarodki.trim()) { stan.textContent = 'Wpisz przynajmniej jedną frazę.'; return }
+
+        const tryb = document.querySelector('input[name="tryb"]:checked').value
+        btn.disabled = true
+        stan.textContent = 'Kopię…'
+
+        try {
+          const odp = await fetch('/panel-delash/frazy/kop', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({
+              rynek: document.getElementById('kopRynek').value,
+              zestaw: document.getElementById('kopZestaw').value,
+              limit: document.getElementById('kopLimit').value,
+              tryb, zarodki
+            })
+          })
+          const w = await odp.json()
+          if (!w.ok) throw new Error(w.blad || 'HTTP ' + odp.status)
+
+          stan.textContent = 'Znaleziono ' + w.znaleziono + ' fraz (' + w.nowych + ' nowych), koszt $'
+            + w.koszt.toFixed(4) + '. Odświeżam…'
+          setTimeout(() => location.reload(), 1200)
+        } catch (e) {
+          stan.textContent = 'Nie udało się: ' + e.message
+          btn.disabled = false
+        }
+      })
+    })()
+  </script>`
 }
 
 function tabela (wiersze) {
@@ -205,10 +364,9 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
       tresc: `${mapaRynkow(dokumenty, aktywny)}
         <p class="brew">Frazy<span class="brew__kropka">/</span>${esc(rynek?.nazwa || aktywny)}</p>
         <h1 style="font-size:22px;margin:0 0 12px">Ten rynek jest jeszcze nietknięty</h1>
-        <p class="spokoj" style="max-width:60ch">Żeby go zapełnić, uruchom kopanie:</p>
-        <pre style="background:var(--papier-cien);padding:14px 16px;border-radius:var(--promien);overflow-x:auto;font-size:13px"><code>node scripts/dfs/frazy.mjs --rynek ${esc(aktywny)} --zestaw &lt;nazwa&gt; --seed "&lt;fraza&gt;" \\
-  --magazyn https://twoja-kolorowanka.pl/.netlify/functions/dfs-store</code></pre>
-        <p class="spokoj">Wyniki pojawią się tutaj na stałe. Kopanie nie chodzi z harmonogramu — uruchamiasz je, kiedy chcesz.</p>`
+        <p class="spokoj" style="max-width:62ch">Rozwiń „Kop nowe frazy”, wybierz co chcesz zrobić i wpisz frazę. Wyniki zostaną tu na stałe — kopanie nie chodzi z harmonogramu, uruchamiasz je, kiedy chcesz.</p>
+        ${formularzKopania(aktywny)}
+        ${skryptKopania()}`
     })
   }
 
@@ -240,6 +398,7 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
   const tresc = `
     ${mapaRynkow(dokumenty, aktywny)}
     ${przelacznikWidoku}
+    ${formularzKopania(aktywny)}
 
     <p class="brew">Frazy<span class="brew__kropka">/</span>${esc(rynek?.nazwa || aktywny)}<span class="brew__kropka">/</span>zaktualizowano ${esc(data(dok.zaktualizowano))}</p>
 
@@ -483,7 +642,8 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
           }
         })
       }
-    </script>`
+    </script>
+    ${skryptKopania()}`
 
   return szkielet({ tytul: `Frazy ${rynek?.nazwa || aktywny} — panel`, aktywna: 'frazy', tresc })
 }
@@ -525,6 +685,42 @@ export default async (request) => {
 
   try {
     const store = getStore('dfs')
+
+    if (url.pathname.endsWith('/kop')) {
+      if (request.method !== 'POST') return new Response('Tylko POST.', { status: 405 })
+      let dane
+      try { dane = await request.json() } catch { return new Response('Zły JSON.', { status: 400 }) }
+
+      const zarodki = String(dane.zarodki || '').split('\n')
+        .map(s => s.trim()).filter(Boolean).slice(0, MAX_ZARODKOW)
+      const zestaw = String(dane.zestaw || zarodki[0] || 'bez-nazwy').slice(0, 60)
+
+      try {
+        const wynik = await kop(store, {
+          rynek: dane.rynek, tryb: dane.tryb, zarodki, limit: dane.limit
+        })
+        const klucz = `frazy/${dane.rynek}`
+        const { dokument, nowych, odswiezonych } = scalWiersze(
+          await store.get(klucz, { type: 'json' }),
+          {
+            rynek: dane.rynek, nazwaRynku: wynik.rynek.nazwa, zestaw,
+            seedy: zarodki, pobrano: new Date().toISOString(),
+            koszt: wynik.koszt, wiersze: wynik.wiersze
+          }
+        )
+        await store.setJSON(klucz, dokument)
+
+        return new Response(JSON.stringify({
+          ok: true, znaleziono: wynik.wiersze.length, nowych, odswiezonych,
+          koszt: wynik.koszt, lacznie: dokument.wiersze.length
+        }), { status: 200, headers: { 'content-type': 'application/json; charset=utf-8' } })
+      } catch (e) {
+        console.error('Kopanie:', e)
+        return new Response(JSON.stringify({ ok: false, blad: e.message }), {
+          status: 400, headers: { 'content-type': 'application/json; charset=utf-8' }
+        })
+      }
+    }
 
     if (url.pathname.endsWith('/ocena')) {
       if (request.method !== 'POST') return new Response('Tylko POST.', { status: 405 })

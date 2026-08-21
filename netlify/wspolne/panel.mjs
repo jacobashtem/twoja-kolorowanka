@@ -287,6 +287,40 @@ export const STYL = `
   .szcz-poz dd { margin: 2px 0 0; font-size: 14px; }
   .szcz-poz dd strong { font-size: 17px; font-variant-numeric: tabular-nums; }
   .szcz-poz dd span { display: block; color: var(--grafit); font-size: 13px; line-height: 1.45; margin-top: 3px; }
+
+  /* Kopalnia — formularz uruchamiajacy nowe kopanie. */
+  .kopalnia { border: 2px solid var(--kreska); border-radius: var(--promien); margin: 0 0 24px; }
+  .kopalnia summary {
+    cursor: pointer; padding: 13px 18px; font-size: 14px; font-weight: 700;
+    letter-spacing: .04em; list-style: none;
+  }
+  .kopalnia summary::-webkit-details-marker { display: none; }
+  .kopalnia summary::before { content: '+ '; color: var(--grafit); }
+  .kopalnia[open] summary::before { content: '− '; }
+  .kopalnia[open] summary { border-bottom: 2px solid var(--kreska); }
+  .kopalnia__srodek { padding: 18px; display: grid; gap: 16px; }
+  .kopalnia__rzad { display: flex; flex-wrap: wrap; gap: 14px; }
+  .kopalnia label { font-size: 13px; color: var(--grafit); }
+  .kopalnia input[type="text"], .kopalnia input[type="number"], .kopalnia select, .kopalnia textarea {
+    font: inherit; font-size: 14px; color: var(--tusz); background: var(--papier);
+    border: 2px solid var(--kreska); border-radius: var(--promien); padding: 8px 12px; margin-top: 4px;
+  }
+  .kopalnia textarea { width: 100%; resize: vertical; font-family: inherit; }
+  .kopalnia input:focus-visible, .kopalnia select:focus-visible, .kopalnia textarea:focus-visible {
+    outline: none; border-color: var(--tusz);
+  }
+  .tryby { border: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  .tryby legend { font-size: 13px; color: var(--grafit); padding: 0; margin-bottom: 6px; }
+  .tryb { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px;
+    border: 2px solid var(--kreska); border-radius: var(--promien); cursor: pointer; }
+  .tryb:hover { border-color: var(--grafit); }
+  .tryb:has(input:checked) { border-color: var(--tusz); }
+  .tryb input { margin-top: 3px; flex: 0 0 auto; }
+  .tryb__nazwa { display: block; font-size: 14px; font-weight: 700; color: var(--tusz); }
+  .tryb__opis { display: block; font-size: 13px; color: var(--grafit); line-height: 1.45; margin-top: 2px; }
+  .kopalnia__uwaga { font-size: 13px; color: var(--grafit); margin: 0; max-width: 66ch; line-height: 1.5; }
+  .kopalnia__stan { font-size: 13px; color: var(--grafit); margin-left: 12px; }
+  .kopalnia button[disabled] { opacity: .5; cursor: wait; }
   table.frazy td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--kreska); vertical-align: middle; }
   table.frazy tr.ukryty { display: none; }
   .fraza { font-weight: 500; }
