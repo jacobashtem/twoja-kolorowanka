@@ -55,7 +55,7 @@ if (!a.zestaw || !a.seedy.length) {
 
 /**
  * Slugi kategorii, ktore juz macie — po to, zeby przy kazdej frazie od razu bylo widac,
- * czy jest pod nia strona, czy to biala plama. Bez tego kazdy eksport trzeba by recznie
+ * czy jest pod nia strona, czy nie. Bez tego kazdy eksport trzeba by recznie
  * przeklikiwac przez serwis.
  */
 function naszeKategorie () {
@@ -84,7 +84,7 @@ function naszeKategorie () {
 
 // Slowa, ktore wystepuja niemal w kazdej frazie i same z siebie nic nie znacza. Bez tej
 // listy kazda fraza dostawala etykiete „mamy: kolorowanki", bo „kolorowanki" jest slugiem
-// huba — czyli caly mechanizm wykrywania bialych plam pokazywal zero plam.
+// huba — czyli mechanizm rozpoznawania nie znajdowal ani jednej niepokrytej frazy.
 const SLOWA_PUSTE = new Set([
   'kolorowanki', 'kolorowanka', 'kolorowanek', 'kolorowanke', 'kolorowanki-do-druku',
   'do', 'druku', 'dla', 'za', 'darmo', 'darmowe', 'online', 'pdf', 'druk', 'wydruku',
@@ -95,8 +95,8 @@ const SLOWA_PUSTE = new Set([
  * Czy fraza trafia w ktoras z naszych kategorii. Dopasowanie po czteroznakowym przedrostku,
  * bo polska odmiana psuje porownanie doslowne („traktory" kontra „traktorow").
  *
- * Celowo zachowawcze: wolimy oznaczyc biala plama cos, co juz mamy, niz odwrotnie.
- * Falszywe „mamy to" ukrywa okazje i nigdy sie o niej nie dowiesz; falszywa biala plama
+ * Celowo zachowawcze: wolimy oznaczyc jako niepokryte cos, co juz mamy, niz odwrotnie.
+ * Falszywe „mamy to" ukrywa okazje i nigdy sie o niej nie dowiesz; falszywe „nie mamy”
  * kosztuje tylko chwile Twojego czasu przy przegladaniu.
  */
 function mamyToJuz (fraza, czesciSlugow) {
@@ -104,7 +104,7 @@ function mamyToJuz (fraza, czesciSlugow) {
     .filter(s => s.length >= 4 && !SLOWA_PUSTE.has(s))
 
   // Zostaly same slowa puste — to fraza ogolna w rodzaju „kolorowanki do druku",
-  // celujaca w strone glowna, a nie w kategorie. To nie jest biala plama.
+  // celujaca w strone glowna, a nie w kategorie. To nie jest brak kategorii.
   if (!slowa.length) return 'ogolna'
 
   for (const slowo of slowa) {
@@ -137,7 +137,7 @@ async function main () {
   const slugi = naszeKategorie()
   console.log(`Rynek: ${rynek.nazwa} (${a.rynek})   zestaw: ${a.zestaw}`)
   console.log(`Zarodki: ${a.seedy.map(s => `"${s}"`).join(', ')}`)
-  console.log(`Znam ${slugi.length} czesci nazw kategorii do oznaczenia bialych plam.`)
+  console.log(`Znam ${slugi.length} czesci nazw waszych kategorii — po nich rozpoznaje, co juz macie.`)
   console.log('')
 
   // Dwa tryby, bo dwa endpointy odpowiadaja na zupelnie inne pytania:
@@ -148,9 +148,15 @@ async function main () {
   //                    nie tematem. Sprawdzone na „kolorowanki do druku": zwrocilo pogode,
   //                    darmowe gry i tlumacza polsko-angielskiego. Zostawione, bo bywa
   //                    przydatne do szukania sasiednich nisz, ale nie jako domyslne.
+  //   dokladny         keyword_overview — pelne dane dla DOKLADNIE podanych fraz, bez
+  //                    dosypywania wariantow. Odpowiednik „Keyword Overview" z Semrusha:
+  //                    wpisujesz fraze, ktora Cie interesuje, i dostajesz jej liczby.
+  //                    Najtanszy tryb, bo nie placisz za setki wierszy, ktorych nie chcesz.
   const endpoint = a.tryb === 'skojarzenia'
     ? 'dataforseo_labs/google/keyword_ideas/live'
-    : 'dataforseo_labs/google/keyword_suggestions/live'
+    : a.tryb === 'dokladny'
+      ? 'dataforseo_labs/google/keyword_overview/live'
+      : 'dataforseo_labs/google/keyword_suggestions/live'
 
   // Wolumeny z Google Ads to KOSZYKI, nie pomiary: Google zlepia bliskie warianty w jedna
   // grupe i kazdemu czlonkowi przypisuje sume grupy, zaokraglona do drabinki progow
@@ -173,7 +179,14 @@ async function main () {
   }
 
   const pozycje = []
-  if (a.tryb === 'skojarzenia') {
+  if (a.tryb === 'dokladny') {
+    // Tryb dokladny nie sortuje ani nie filtruje — pytamy o konkretne frazy i chcemy
+    // dostac je wszystkie, takze te o zerowym wolumenie. Zerowy wynik to tez odpowiedz.
+    const { order_by, filters, limit, ...bezSortowania } = wspolne
+    const wynik = await wywolaj(endpoint, [{ keywords: a.seedy, ...bezSortowania }], { naSucho: a.naSucho })
+    if (a.naSucho) return
+    pozycje.push(...(wynik?.[0]?.items ?? []))
+  } else if (a.tryb === 'skojarzenia') {
     const wynik = await wywolaj(endpoint, [{ keywords: a.seedy, ...wspolne }], { naSucho: a.naSucho })
     if (a.naSucho) return
     pozycje.push(...(wynik?.[0]?.items ?? []))
@@ -274,7 +287,7 @@ async function main () {
       w.fraza, w.wolumen, w.zrodloWolumenu ?? '', w.wolumenAds ?? '', w.trudnoscSeo ?? '', w.domenyTop10 ?? '', w.silaTop10 ?? '',
       w.intencja ?? '', w.trendRoczny ?? '', w.szczytMiesiac ?? '', w.szczytWolumen ?? '',
       w.sezonowosc ?? '', w.slow ?? '', w.konkurencjaReklamowa ?? '',
-      w.poziomReklamowy ?? '', w.cpc ?? '', w.mamyKategorie ?? 'biala plama'
+      w.poziomReklamowy ?? '', w.cpc ?? '', w.mamyKategorie ?? 'brak kategorii'
     ].map(csvPole).join(';'))
   ].join('\r\n')
   // Srednik jako separator i BOM na poczatku — inaczej Excel w polskiej lokalizacji
@@ -287,14 +300,14 @@ async function main () {
   console.log('Pierwsza dziesiatka:')
   const szer = Math.min(52, Math.max(...wiersze.slice(0, 10).map(w => w.fraza.length)))
   for (const w of wiersze.slice(0, 10)) {
-    const znacznik = w.mamyKategorie ? `  [mamy: ${w.mamyKategorie}]` : '  [biala plama]'
+    const znacznik = w.mamyKategorie ? `  [nasza kategoria: ${w.mamyKategorie}]` : '  [brak kategorii]'
     console.log(`  ${w.fraza.slice(0, szer).padEnd(szer)}  ${String(w.wolumen).padStart(7)}  trud. ${String(w.trudnoscSeo ?? '?').padStart(3)}${znacznik}`)
   }
 
   const plamy = wiersze.filter(w => !w.mamyKategorie)
   const sumaPlam = plamy.reduce((s, w) => s + w.wolumen, 0)
   console.log('')
-  console.log(`Bialych plam: ${plamy.length} fraz, laczny wolumen ${sumaPlam.toLocaleString('pl-PL')}/mies.`)
+  console.log(`Bez naszej kategorii: ${plamy.length} fraz, laczny wolumen ${sumaPlam.toLocaleString('pl-PL')}/mies.`)
 
   // --- magazyn
   if (a.magazyn) {
