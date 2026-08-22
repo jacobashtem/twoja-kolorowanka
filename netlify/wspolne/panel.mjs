@@ -274,9 +274,18 @@ export const STYL = `
   }
   .widok-btn[aria-current] { color: var(--tusz); border-color: var(--tusz); }
 
-  /* Obsluzona fraza — caly wiersz na zielono, zeby bylo widac jednym rzutem oka. */
+  /* Dwa stany, dwa kolory. Bursztyn = oceniona, czyli jest w Planie i czeka na zrobienie.
+     Zielen = obslużona, czyli zamknieta. Zielen stoi nizej, wiec wygrywa nad bursztynem
+     u frazy, ktora jest i oceniona, i odhaczona. */
+  tr.oceniona td { background: color-mix(in oklab, var(--bursztyn) 13%, transparent); }
   tr.zrobiona td { background: color-mix(in oklab, var(--zielony) 14%, transparent); }
   tr.zrobiona .fraza { color: var(--grafit); }
+
+  /* Przewijanie w bok chwytem myszy. Przy siedmiu kolumnach pasek na dole bywa poza
+     ekranem, a lapanie go jest meczace — tu wystarczy zlapac tabele w dowolnym pustym
+     miejscu i pociagnac. */
+  .przewijak { cursor: grab; }
+  .przewijak.ciagniemy { cursor: grabbing; user-select: none; }
 
   .szczegoly-btn {
     font: inherit; font-size: 15px; line-height: 1; margin-left: 6px; padding: 2px 7px;

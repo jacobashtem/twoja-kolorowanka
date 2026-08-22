@@ -317,11 +317,6 @@ function tabela (wiersze) {
           : ' title="Zmierzone na strumieniu rzeczywistych kliknięć — dotyczy dokładnie tej frazy."'
       }>${w.zrodloWolumenu === 'ads' ? '≤' : ''}${liczba(w.wolumen)}</span><span class="wolumen__pasek"><i style="width:${szer}%"></i></span></div></td>
       <td style="text-align:center"><span class="trud trud--${st}">${w.trudnoscSeo ?? '—'}</span></td>
-      <td style="text-align:right;font-variant-numeric:tabular-nums">${domeny}</td>
-      <td style="text-align:center">${szczyt}</td>
-      <td style="text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap">${trend}</td>
-      <td style="color:var(--grafit);font-size:13px;white-space:nowrap">${esc(w.zestaw || '—')}</td>
-      <td style="color:var(--grafit);font-size:13px">${esc(SKROT_INTENCJI[w.intencja] || '—')}</td>
       <td style="font-size:13px;white-space:nowrap">${
         ogolna
           ? '<span style="color:var(--grafit)">strona główna</span>'
@@ -339,25 +334,33 @@ function tabela (wiersze) {
         </label>
         <button type="button" class="szczegoly-btn" data-fraza="${esc(w.fraza)}" title="Pokaż wszystko, co API wie o tej frazie" aria-label="Szczegóły frazy ${esc(w.fraza)}">⋯</button>
       </td>
+      <td style="text-align:center">${szczyt}</td>
+      <td style="text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap">${trend}</td>
+      <td style="color:var(--grafit);font-size:13px;white-space:nowrap">${esc(w.zestaw || '—')}</td>
     </tr>
-    <tr class="szczegoly" hidden><td colspan="10"><div class="szczegoly__tresc"></div></td></tr>`
+    <tr class="szczegoly" hidden><td colspan="8"><div class="szczegoly__tresc"></div></td></tr>`
   }).join('')
 
   const th = (etykieta, klucz, tytul, styl = '') =>
     `<th data-sort="${klucz}" title="${esc(tytul)}" tabindex="0" role="button"${styl ? ` style="${styl}"` : ''}>${etykieta}<span class="strzalka"></span></th>`
 
-  return `<div class="przewijak"><table class="frazy">
+  // Kolejnosc kolumn idzie za czestoscia uzycia, nie za bogactwem danych. Ocena i przyciski
+  // sa tuz przy frazie, bo to z nich korzysta sie przy kazdym wierszu; sezon, trend
+  // i wykopalisko schodza na prawo, bo oglada sie je rzadko.
+  //
+  // Intencja i „domeny top-10" wyleciały z tabeli — pierwsza prawie zawsze pokazywała to samo
+  // („informacyjna"), druga bywa pusta. Obie zostaja w szczegolach pod „⋯" i w CSV, wiec zadna
+  // dana nie ginie; znika tylko kolumna, ktora zabierala szerokosc i nic nie wnosila.
+  return `<div class="przewijak" id="przewijak"><table class="frazy">
     <thead><tr>
       ${th('Fraza', 'f', 'Kliknij, żeby posortować alfabetycznie')}
       ${th('Wolumen / mies.', 'w', 'Średnia liczba wyszukań miesięcznie', 'text-align:right')}
       ${th('Trudność', 't', 'Trudność SEO 0–100: jak trudno wejść na pierwszą stronę wyników organicznych', 'text-align:center')}
-      ${th('Domeny top-10', 'd', 'Ile domen linkuje średnio do pierwszej dziesiątki. Wartość bliska zera znaczy, że czołówka nie ma zaplecza linkowego', 'text-align:right')}
+      ${th('Nasza kategoria', 'p', 'Czy macie już na stronie kategorię, która celuje w tę frazę. „brak" znaczy, że nikt u was tego nie obsługuje')}
+      ${th('Potencjał', 'o', 'Twoja ocena 1–10. Zapisuje się od razu i przeżywa kolejne kopania. Kolejność w Planie idzie po tej liczbie')}
       ${th('Szczyt', 's', 'Miesiąc największego popytu — pokazany tylko dla fraz wyraźnie sezonowych', 'text-align:center')}
       ${th('Trend r/r', 'tr', 'Zmiana liczby wyszukań rok do roku', 'text-align:right')}
       ${th('Wykopalisko', 'kiedy', 'Z którego kopania pochodzi ta fraza. Sortowanie ustawia najświeższe na górze')}
-      <th>Intencja</th>
-      ${th('Nasza kategoria', 'p', 'Czy macie już na stronie kategorię, która celuje w tę frazę. „brak" znaczy, że nikt u was tego nie obsługuje')}
-      ${th('Potencjał', 'o', 'Twoja ocena 1–10. Zapisuje się od razu i przeżywa kolejne kopania. Kolejność w Planie idzie po tej liczbie')}
     </tr></thead>
     <tbody id="cialo">${rzedy}</tbody>
   </table></div>`
@@ -463,6 +466,7 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska', wybrane = 
       <input type="number" id="maxD" placeholder="maks. domen" aria-label="Maksymalnie domen linkujących do top 10" min="0" step="1">
       <label class="przelacznik"><input type="checkbox" id="tylkoPlamy"> tylko bez naszej kategorii</label>
       <label class="przelacznik" title="Ukryj wiersze, dla których mamy tylko koszyk Google Ads. Dopiero wtedy sortowanie po wolumenie porównuje liczby tego samego rodzaju."><input type="checkbox" id="tylkoZmierzone"> tylko zmierzone</label>
+      <label class="przelacznik" title="Chowa frazy, którym wpisałeś już potencjał albo odhaczyłeś jako obsłużone. Zostaje to, czego jeszcze nie przejrzałeś."><input type="checkbox" id="ukryjOcenione"> ukryj przejrzane</label>
       <a class="zglos" href="/panel-delash/frazy.csv?rynek=${esc(aktywny)}">Pobierz CSV</a>
     </div>
 
@@ -495,7 +499,8 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska', wybrane = 
         maxT: document.getElementById('maxT'),
         maxD: document.getElementById('maxD'),
         plamy: document.getElementById('tylkoPlamy'),
-        zmierzone: document.getElementById('tylkoZmierzone')
+        zmierzone: document.getElementById('tylkoZmierzone'),
+        ukryjOcenione: document.getElementById('ukryjOcenione')
       }
       const kafle = {
         fraz: document.getElementById('kafelFraz'),
@@ -524,6 +529,9 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska', wybrane = 
             && (d < 0 || d <= maxD)
             && (!tylkoPlamy || tr.dataset.p === '1')
             && (!pola.zmierzone.checked || tr.dataset.cs === '1')
+            // „Przejrzane" to i ocenione, i odhaczone — jedno i drugie znaczy, ze wiersz
+            // przeszedl juz przez Twoje rece i nie musi wracac na oczy.
+            && (!pola.ukryjOcenione.checked || (Number(tr.dataset.o) < 1 && tr.dataset.z !== '1'))
           tr.classList.toggle('ukryty', !ok)
           const szcz = tr.nextElementSibling
           if (szcz && szcz.classList.contains('szczegoly') && !ok) szcz.hidden = true
@@ -569,6 +577,37 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska', wybrane = 
       }
       for (const p of Object.values(pola)) p.addEventListener('input', filtruj)
       filtruj()
+
+      // --- przewijanie tabeli chwytem ---
+      // Nie zaczynamy ciagniecia na elementach interaktywnych, bo inaczej nie dalo by sie
+      // wybrac oceny ani kliknac naglowka. Klikniecie odrozniamy od ciagniecia po dystansie:
+      // ponizej pieciu pikseli to klikniecie i puszczamy je dalej.
+      const przewijak = document.getElementById('przewijak')
+      if (przewijak) {
+        let ciagnie = false, startX = 0, startScroll = 0, przesuniete = 0
+        const interaktywny = el => el.closest('select, input, button, a, th, label')
+
+        przewijak.addEventListener('mousedown', e => {
+          if (e.button !== 0 || interaktywny(e.target)) return
+          ciagnie = true; przesuniete = 0
+          startX = e.pageX; startScroll = przewijak.scrollLeft
+          przewijak.classList.add('ciagniemy')
+        })
+        window.addEventListener('mousemove', e => {
+          if (!ciagnie) return
+          const d = e.pageX - startX
+          przesuniete = Math.abs(d)
+          przewijak.scrollLeft = startScroll - d
+        })
+        window.addEventListener('mouseup', () => {
+          if (!ciagnie) return
+          ciagnie = false
+          przewijak.classList.remove('ciagniemy')
+        })
+        // Po realnym ciagnieciu blokujemy klikniecie, ktore przegladarka wysyla na koniec —
+        // bez tego kazde przewiniecie konczyloby sie rozwinieciem szczegolow pod kursorem.
+        przewijak.addEventListener('click', e => { if (przesuniete > 5) { e.stopPropagation(); e.preventDefault() } }, true)
+      }
 
       const wybor = document.getElementById('wybor-zestawu')
       if (wybor) wybor.addEventListener('change', () => {
