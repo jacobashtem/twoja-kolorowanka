@@ -72,7 +72,11 @@ export const liczba = n => Number(n || 0).toLocaleString('pl-PL')
 
 export const NAGLOWKI_HTML = {
   'content-type': 'text/html; charset=utf-8',
-  'x-robots-tag': 'noindex, nofollow'
+  'x-robots-tag': 'noindex, nofollow',
+  // Bez tego przegladarka cache'uje odpowiedz heurystycznie i po wdrozeniu zmian panel
+  // pokazuje stara wersje — co wyglada jak zepsuta funkcja, a jest tylko starym HTML-em.
+  // Panel to narzedzie robocze, wiec kazde wejscie ma pokazywac stan z tej chwili.
+  'cache-control': 'no-store, must-revalidate'
 }
 
 // ------------------------------------------------------------------ styl
@@ -349,6 +353,21 @@ export const STYL = `
     max-width: 100%;
   }
   .wykopaliska__opis { font-size: 13px; color: var(--grafit); flex: 1 1 260px; line-height: 1.45; }
+
+  /* Baner wykopaliska. Filtrowana tabela wygladala identycznie jak pelna lista, wiec po
+     kopaniu nie bylo widac, ze patrzy sie juz tylko na swiezy wynik. */
+  .wykop-baner {
+    border: 2px solid var(--tusz); border-radius: var(--promien);
+    padding: 14px 18px; margin: 0 0 18px;
+    background: color-mix(in oklab, var(--zielony) 8%, transparent);
+  }
+  .wykop-baner__glowa { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+  .wykop-baner__etykieta { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--grafit); }
+  .wykop-baner__nazwa { font-size: 20px; letter-spacing: -.02em; }
+  .wykop-baner__powrot { margin-left: auto; font-size: 13px; font-weight: 600; color: var(--tusz); text-decoration: none; border-bottom: 2px solid var(--kreska); }
+  .wykop-baner__powrot:hover { border-color: var(--tusz); }
+  .wykop-baner__opis { margin: 8px 0 0; font-size: 13px; color: var(--grafit); line-height: 1.5; }
+  .wykop-baner__opis strong { color: var(--tusz); }
   table.frazy td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--kreska); vertical-align: middle; }
   table.frazy tr.ukryty { display: none; }
   .fraza { font-weight: 500; }

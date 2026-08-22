@@ -423,8 +423,22 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska', wybrane = 
 
     <p class="brew">Frazy<span class="brew__kropka">/</span>${esc(rynek?.nazwa || aktywny)}<span class="brew__kropka">/</span>zaktualizowano ${esc(data(dok.zaktualizowano))}</p>
 
+    ${meta ? `<div class="wykop-baner">
+      <div class="wykop-baner__glowa">
+        <span class="wykop-baner__etykieta">Wykopalisko</span>
+        <strong class="wykop-baner__nazwa">${esc(wybrane)}</strong>
+        <a class="wykop-baner__powrot" href="/panel-delash/frazy?rynek=${esc(aktywny)}">← wszystkie frazy (${liczba(dok.wiersze.length)})</a>
+      </div>
+      <p class="wykop-baner__opis">
+        Widzisz <strong>wyłącznie ${liczba(wiersze.length)} fraz</strong>, które zwróciło to kopanie${
+        meta.tryb ? ` w trybie „${esc(TRYBY[meta.tryb]?.nazwa || meta.tryb)}”` : ''}${
+        meta.seedy?.length ? `, z „${esc(meta.seedy.join('”, „'))}”` : ''}.
+        ${esc(data(meta.pobrano))}${meta.koszt ? ` · koszt $${Number(meta.koszt).toFixed(4)}` : ''}.
+      </p>
+    </div>` : ''}
+
     ${zestawy.length ? `<div class="wykopaliska">
-      <label>Wykopalisko
+      <label>${meta ? 'Inne wykopalisko' : 'Pokaż jedno wykopalisko'}
         <select id="wybor-zestawu">
           <option value="">wszystkie (${liczba(dok.wiersze.length)} fraz)</option>
           ${Object.entries(dok.zestawy)
@@ -434,9 +448,6 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska', wybrane = 
               esc(data(z.pobrano))} · ${liczba(z.fraz || 0)} fraz</option>`).join('')}
         </select>
       </label>
-      ${meta ? `<span class="wykopaliska__opis">Dokładnie to, co zwróciło kopanie
-        <strong>${esc(wybrane)}</strong>${meta.seedy?.length ? ` z „${esc(meta.seedy.join('”, „'))}”` : ''}${
-        meta.koszt ? `, koszt $${Number(meta.koszt).toFixed(4)}` : ''}.</span>` : ''}
     </div>` : ''}
 
     <div class="kafle">
