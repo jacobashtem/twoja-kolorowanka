@@ -321,6 +321,34 @@ export const STYL = `
   .kopalnia__uwaga { font-size: 13px; color: var(--grafit); margin: 0; max-width: 66ch; line-height: 1.5; }
   .kopalnia__stan { font-size: 13px; color: var(--grafit); margin-left: 12px; }
   .kopalnia button[disabled] { opacity: .5; cursor: wait; }
+
+  /* Przyklad wejscia i wyjscia przy kazdym trybie. Sama nazwa trybu nie mowi nic komus,
+     kto nie zna tych narzedzi — a konkretny przyklad na tym samym slowie pozwala je
+     porownac zamiast czytac osobno. */
+  .tryb__przyklad {
+    display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; align-items: start;
+    margin-top: 8px; padding: 9px 11px; background: var(--papier-cien);
+    border-radius: 8px 7px 9px 7px; font-size: 13px;
+  }
+  .tryb__przyklad b { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--grafit); padding-top: 2px; }
+  .tryb__przyklad code {
+    font-family: ui-monospace, "Cascadia Mono", Menlo, monospace; font-size: 12.5px;
+    color: var(--tusz); white-space: pre-line; line-height: 1.5;
+  }
+  .tryb__przyklad span { color: var(--tusz); line-height: 1.45; }
+  .tryb__uwaga { display: block; font-size: 13px; color: var(--czerwony); line-height: 1.45; margin-top: 7px; }
+  .tryb__koszt { display: block; font-size: 12px; color: var(--grafit); margin-top: 6px; font-style: italic; }
+
+  /* Wybor wykopaliska — swiezo wykopane frazy musza byc widoczne od razu, a nie po
+     odszukaniu ich wsrod kilkuset istniejacych. */
+  .wykopaliska { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 0 0 20px; }
+  .wykopaliska label { font-size: 13px; color: var(--grafit); }
+  .wykopaliska select {
+    font: inherit; font-size: 14px; color: var(--tusz); background: var(--papier);
+    border: 2px solid var(--tusz); border-radius: var(--promien); padding: 8px 12px; margin-left: 8px;
+    max-width: 100%;
+  }
+  .wykopaliska__opis { font-size: 13px; color: var(--grafit); flex: 1 1 260px; line-height: 1.45; }
   table.frazy td { padding: 9px 10px 9px 0; border-bottom: 1px solid var(--kreska); vertical-align: middle; }
   table.frazy tr.ukryty { display: none; }
   .fraza { font-weight: 500; }

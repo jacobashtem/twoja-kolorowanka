@@ -47,30 +47,50 @@ export const RYNKI = {
 
 // ------------------------------------------------------------------ tryby
 
+// Kazdy tryb opisany przez to, CO WPISUJESZ i CO DOSTAJESZ, na jednym przykladzie
+// przewijajacym sie przez wszystkie — zeby dalo sie je porownac, a nie tylko przeczytac
+// osobno. Liczby w przykladach sa prawdziwe, zmierzone 21 sierpnia 2026.
 export const TRYBY = {
   dokladny: {
-    nazwa: 'Sprawdź dokładnie',
-    opis: 'Znasz frazy i chcesz ich liczby. Wpisz je po jednej na linię — dostaniesz dokładnie te, o które pytasz, także te z zerowym wolumenem. Najtańszy tryb.',
+    nazwa: 'Sprawdź konkretne frazy',
+    kiedy: 'Wiesz, o co pytasz, i chcesz liczby.',
+    wpisujesz: 'kolorowanka panda\nkolorowanki pandy',
+    dostajesz: 'Dokładnie te dwie frazy i nic więcej: 745 oraz 0. Frazy z zerem też zobaczysz — brak wyszukiwań to też odpowiedź.',
+    koszt: 'najtańszy, jedno zapytanie niezależnie od liczby fraz',
     endpoint: 'dataforseo_labs/google/keyword_overview/live'
   },
   warianty: {
     nazwa: 'Znajdź najlepszy zapis',
-    opis: 'Wiesz co, nie wiesz jak to nazwać. Podaj jedno słowo — narzędzie samo zbuduje wszystkie odmiany i szyki, zmierzy je naraz i pokaże, który zapis niesie ruch. Przy polskim to kluczowe: „kolorowanka panda" ma 745, a „kolorowanki pandy" zero.',
+    kiedy: 'Wiesz, o czym chcesz zrobić kategorię, ale nie wiesz, jak ludzie to nazywają.',
+    wpisujesz: 'pandy',
+    dostajesz: 'Około 80 odmian i szyków zmierzonych naraz: „kolorowanka panda” 745, „kolorowanki panda” 149, „kolorowanki pandy” 0. Odpowiedź, którego zapisu użyć w tytule.',
+    koszt: 'jedno zapytanie, około $0,03',
     endpoint: 'dataforseo_labs/google/keyword_overview/live'
   },
   ogon: {
     nazwa: 'Długi ogon',
-    opis: 'Szukasz fraz pod artykuł albo pod nową kategorię. Podaj zarodek — dostaniesz frazy, które go zawierają, od najpopularniejszych. Zarodek MUSI zawierać słowo tematyczne: samo „panda" wciągnie Fiata Pandę.',
+    kiedy: 'Szukasz fraz na śródtytuły artykułu albo na podstrony kategorii.',
+    wpisujesz: 'kolorowanki panda',
+    dostajesz: 'Frazy zawierające te słowa, od najpopularniejszych: „kolorowanki panda do druku”, „kolorowanki panda kung fu”. Im dłuższa fraza, tym mniejszy ruch, ale i mniejsza konkurencja.',
+    uwaga: 'Musisz podać słowo tematyczne. Samo „panda” wciągnie Fiata Pandę i Kung Fu Pandę — sprawdzone, kosztowało $0,06.',
+    koszt: 'jedno zapytanie na każdą wpisaną frazę',
     endpoint: 'dataforseo_labs/google/keyword_suggestions/live'
   },
   pelny: {
     nazwa: 'Pełne rozpoznanie',
-    opis: 'Warianty i długi ogon naraz. Do zakładania nowej kategorii albo pisania tekstu: warianty mówią, jak nazwać rzecz w tytule, a długi ogon podsuwa frazy na śródtytuły. Dwa zapytania, więc dwa razy drożej.',
+    kiedy: 'Zakładasz nową kategorię albo piszesz o czymś od zera.',
+    wpisujesz: 'kolorowanki panda',
+    dostajesz: 'Odmiany i długi ogon w jednym: jak nazwać rzecz w tytule ORAZ czym wypełnić śródtytuły. Na „kolorowanki mikołaj” dało 39 fraz z danymi.',
+    koszt: 'dwa zapytania, około $0,05',
     endpoint: null
   },
   skojarzenia: {
     nazwa: 'Sąsiednie tematy',
-    opis: 'Rzadko przydatny. Google łączy tu frazy po kategorii reklamowej, nie po temacie — na „kolorowanki do druku" zwrócił pogodę na 10 dni i darmowe gry. Zostawiony do szukania zupełnie nowych nisz.',
+    kiedy: 'Rzadko. Gdy szukasz zupełnie nowej niszy, nie wariantu tego, co masz.',
+    wpisujesz: 'kolorowanki panda',
+    dostajesz: 'Frazy z tej samej kategorii reklamowej Google Ads — a to nie to samo, co z tego samego tematu.',
+    uwaga: 'Na „kolorowanki do druku” zwrócił pogodę na 10 dni, darmowe gry i tłumacza polsko-angielskiego. Używaj świadomie.',
+    koszt: 'jedno zapytanie',
     endpoint: 'dataforseo_labs/google/keyword_ideas/live'
   }
 }
@@ -288,8 +308,13 @@ export function scalWiersze (istniejacy, paczka) {
       zestawy: {
         ...(stary.zestawy ?? {}),
         [paczka.zestaw]: {
-          seedy: paczka.seedy, pobrano: paczka.pobrano,
-          koszt: paczka.koszt, fraz: paczka.wiersze.length
+          seedy: paczka.seedy, pobrano: paczka.pobrano, tryb: paczka.tryb,
+          koszt: paczka.koszt, fraz: paczka.wiersze.length,
+          // Pelna lista fraz, ktore to kopanie zwrocilo. Bez niej nie da sie pokazac
+          // „co dokladnie wyszlo z tamtego przebiegu": znacznik `zestaw` w wierszu wskazuje
+          // tylko OSTATNIE kopanie, ktore te fraze dotknelo, wiec przy nakladajacych sie
+          // przebiegach wczesniejsze wykopalisko wygladaloby na mniejsze, niz bylo.
+          frazy: paczka.wiersze.map(w => w.fraza)
         }
       },
       wiersze: [...wgFrazy.values()].sort((a, b) => (b.wolumen || 0) - (a.wolumen || 0))
