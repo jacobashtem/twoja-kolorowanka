@@ -6,9 +6,23 @@ description: Pelny pipeline wymiany kategorii kolorowanek na wlasne, generowane 
 # Kategoria kolorowanek: od promptu do podmiany
 
 Migracja biblioteki z licencjonowanego stocka na własne grafiki z Recrafta.
-76 kategorii, ~4200 kolorowanek. Pełny cykl przeszło dotąd dziesięć kategorii: dinozaury,
-kombajny, koniki, koty, jaszczurki (do 2026-07-30) oraz kroliczki, pieski, jednorożce, smoki
-i wróżki (2026-08-02) — kolejne idą tą samą ścieżką.
+76 kategorii, ~4200 kolorowanek.
+
+**Pełny cykl przeszło dwanaście kategorii** (stan 2026-08-22): dinozaury, jaszczurki,
+jednorożce, kombajny, koniki, koty, króliczki, motyle, pieski, smoki, syrenki, wróżki —
+razem 662 liście. Sprawdzone plik po pliku, nie na słowo: w żadnym z nich nie ma grupy `<g>`,
+podczas gdy każdy plik ze stocka ma ich od kilkudziesięciu w górę. W całym `public/` zostały
+**cztery** pliki ze znacznikiem Freepika: `pory-roku/zima/44`, `pory-roku/zima/10`,
+`zwierzeta/mis/44`, `pojazdy/samochody/34`.
+
+**Jak sprawdzić pochodzenie pliku** (przydaje się przy pytaniu „czy ta kategoria jest już
+nasza"): grupy `<g>` znaczą stock, ich brak — nasz potrace albo wektoryzator Recrafta.
+Sam `<defs>` z gradientem NIE jest oznaką stocka; to podpis wektoryzatora Recrafta i łatwo
+się na tym pomylić.
+
+```
+grep -c '<g[ >]' public/<sciezka>/<n>/<plik>.svg     # 0 = nasze, >0 = ze stocka
+```
 
 **Zasady niepodlegające negocjacji:**
 
@@ -27,6 +41,34 @@ node scripts/stat-kategorie.mjs
 Daje: liczbę liści kategorii, wymagane minimum (sekcje H2 × 4 — poniżej tego ostatnie sekcje
 SEO mają nagłówek i **pustą galerię**), stan księgi promptów i koszt przy obu stawkach.
 Cel domyślny to **32 sztuki na kategorię**; sześć kategorii z 9 sekcjami H2 potrzebuje 36.
+
+## Faza 0 — jak nazwać kategorię (przy nowej, przed pisaniem tytułu)
+
+**Polska odmiana potrafi przenieść cały ruch na inną formę słowa i to nie jest drobiazg.**
+Zmierzone 2026-08-21 na trzech kategoriach z rzędu:
+
+| Tytuł kategorii celuje w | Zmierzony wolumen | Co naprawdę wygrywa | Wolumen |
+|---|---|---|---|
+| kolorowanki pandy | **0** | kolorowanka panda | **745** |
+| kolorowanki ryby | 149 | rybki kolorowanka | **670** |
+| kolorowanki koty | mniejszy koszyk | kotek / kotki | większy koszyk |
+
+Wzór jest ten sam: kategorie nazwano poprawną polszczyzną w liczbie mnogiej, a ludzie szukają
+w pojedynczej albo w zdrobnieniu. Przy pandach potwierdza to Search Console — „panda
+kolorowanka do druku" ma 34 kliknięcia, „kolorowanki pandy" siedem.
+
+Zanim napiszesz `title` i `H1` nowej kategorii, sprawdź, który zapis niesie ruch:
+
+```
+node scripts/dfs/frazy.mjs --tryb warianty --zestaw <kategoria> --seed "<slowo>"
+```
+
+Buduje wszystkie odmiany i szyki, mierzy je jednym zapytaniem (~$0,03) i pokazuje zwycięzcę.
+**Patrz na kolumnę źródła:** wartości z koszyka Google Ads są górną granicą całej grupy
+wariantów, a nie pomiarem jednej frazy — porównywalne są tylko te ze strumienia kliknięć.
+
+Adresu istniejącej kategorii NIE zmieniaj z tego powodu. Przy stronie z tysiącami wyświetleń
+tracisz historię adresu, a zyskujesz odmianę słowa, którą można dopisać do tytułu za darmo.
 
 ## Faza 1 — prompty
 
@@ -52,7 +94,9 @@ Zawsze `--dry-run` i przeczytanie promptów oczami przed wydaniem kredytów.
 
 ## Faza 2 — styl (tylko przy nowym typie tematu)
 
-Sprawdzone ID stylów i werdykty są w pamięci projektu. Jeśli temat jest nowego rodzaju,
+Sprawdzone ID stylów i werdykty są w pamięci projektu — plik `pipeline-generowania-kolorowanek`
+(model `recraftv3_vector` + styl „Line art", pułapka niezgodności modelu ze stylem, koszty).
+Reguła doboru serii: plik `seria-48-wszystkie-style`. Jeśli temat jest nowego rodzaju,
 puść pilota: 3 sztuki na styl, **te same prompty** (`--od=0 --krok=13`), potem
 `contact-sheet.mjs` i obejrzyj arkusze.
 
@@ -90,6 +134,14 @@ Do przejścia wielu kategorii naraz jest **panel**: `start.cmd` w katalogu głó
 ze statusem — do selekcji → wybrane → podmieniona → na produkcji — i wchodzi w galerię
 każdej z nich pod tym samym adresem. Materiał kategorii, które są już na `origin/main`,
 kasuje przy starcie; `_wybor.txt` zostaje zawsze.
+
+**Uwaga: samo zajrzenie do panelu kasuje materiał roboczy** kategorii będących na produkcji.
+Jeśli chcesz tylko sprawdzić stan, użyj wariantu, który niczego nie rusza i nie podnosi serwera:
+
+```
+node scripts/panel-selekcji.mjs --raport          # tekstowy stan wszystkich kategorii
+node scripts/panel-selekcji.mjs --bez-sprzatania  # panel, ale bez kasowania
+```
 
 Walidator daje trzy niezależne profile: **druk** (podstawa biblioteki), **online** (flood fill,
 u nas dodatek), **maluchy** (gruba kreska). Zapisuje `_walidacja.json`, a galeria pokazuje
