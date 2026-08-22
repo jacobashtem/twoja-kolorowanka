@@ -268,6 +268,41 @@ const MIME = {
 }
 
 let stany = zbierzStany()
+
+// ── Raport tekstowy ─────────────────────────────────────────────────────────
+// `--raport` wypisuje stan i konczy, BEZ sprzatania i bez podnoszenia serwera. Sluzy do
+// odpowiedzi na pytanie „co jeszcze zostalo do zrobienia" bez klikania i — co wazniejsze —
+// bez ryzyka, ze samo zajrzenie skasuje material roboczy, ktory chcialo sie wlasnie obejrzec.
+if (argv.includes('--raport')) {
+  const wgStatusu = new Map()
+  for (const s of stany) {
+    if (!wgStatusu.has(s.status)) wgStatusu.set(s.status, [])
+    wgStatusu.get(s.status).push(s)
+  }
+  const szer = Math.max(...stany.map(s => s.nazwa.length), 10)
+
+  for (const [status, lista] of [...wgStatusu].sort((a, b) => KOLEJNOSC[a[0]] - KOLEJNOSC[b[0]])) {
+    console.log('')
+    console.log(`${(ETYKIETY[status]?.tekst ?? status).toUpperCase()}  (${lista.length})`)
+    console.log('─'.repeat(szer + 34))
+    for (const s of lista) {
+      const czesci = []
+      if (s.wybranych) czesci.push(`wybranych ${s.wybranych}`)
+      if (s.plikow) czesci.push(`${s.plikow} plikow roboczych, ${mb(s.bajtow)} MB`)
+      if (s.serie?.length) czesci.push(`serie: ${s.serie.join(', ')}`)
+      console.log(`  ${s.nazwa.padEnd(szer)}  ${czesci.join('  ·  ') || '—'}`)
+    }
+  }
+
+  const doZrobienia = stany.filter(s => s.status === 'do-selekcji' || s.status === 'wybrane')
+  const miejsce = stany.filter(s => s.status === 'na-prodzie').reduce((n, s) => n + s.bajtow, 0)
+  console.log('')
+  console.log(`Razem kategorii roboczych: ${stany.length}.  Czeka na Ciebie: ${doZrobienia.length}.`)
+  if (miejsce) console.log(`Do posprzatania (kategorie juz na produkcji): ${mb(miejsce)} MB — zwolni je zwykly start panelu.`)
+  console.log('')
+  process.exit(0)
+}
+
 const posprzatane = BEZ_SPRZATANIA ? [] : posprzataj(stany)
 if (posprzatane.length) {
   for (const p of posprzatane) {
