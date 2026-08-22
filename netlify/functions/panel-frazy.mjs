@@ -186,7 +186,13 @@ function formularzKopania (aktywny) {
       <input type="radio" name="tryb" value="${klucz}"${i === 0 ? ' checked' : ''}>
       <span class="tryb__tresc">
         <span class="tryb__nazwa">${esc(t.nazwa)}</span>
-        <span class="tryb__opis">${esc(t.opis)}</span>
+        <span class="tryb__opis">${esc(t.kiedy)}</span>
+        <span class="tryb__przyklad">
+          <b>Wpisujesz</b><code>${esc(t.wpisujesz)}</code>
+          <b>Dostajesz</b><span>${esc(t.dostajesz)}</span>
+        </span>
+        ${t.uwaga ? `<span class="tryb__uwaga">${esc(t.uwaga)}</span>` : ''}
+        <span class="tryb__koszt">${esc(t.koszt)}</span>
       </span>
     </label>`).join('')
 
@@ -204,14 +210,14 @@ function formularzKopania (aktywny) {
         ${tryby}
       </fieldset>
 
-      <label>Frazy — po jednej w linii<br>
-        <textarea id="kopZarodki" rows="4" placeholder="kolorowanki mikołaj"></textarea>
+      <label>Od czego zaczynamy — po jednej frazie w linii<br>
+        <textarea id="kopZarodki" rows="4" placeholder="kolorowanki panda"></textarea>
       </label>
 
       <p class="kopalnia__uwaga">
-        Zarodek musi zawierać słowo tematyczne. Samo „panda” wciągnie Fiata Pandę i Kung Fu Pandę —
-        sprawdzone, kosztowało $0,06. Kopanie wydaje prawdziwe pieniądze: jedno zapytanie to
-        mniej więcej trzy do ośmiu centów.
+        Kopanie wydaje prawdziwe pieniądze — jedno zapytanie to mniej więcej trzy do ośmiu centów.
+        Wynik zostaje na stałe i dosypuje się do zbioru; powtórne kopanie tej samej rzeczy
+        odświeża liczby, a nie mnoży wierszy.
       </p>
 
       <button type="button" id="kopStart" class="zglos">Kop</button>
@@ -251,8 +257,14 @@ function skryptKopania () {
           if (!w.ok) throw new Error(w.blad || 'HTTP ' + odp.status)
 
           stan.textContent = 'Znaleziono ' + w.znaleziono + ' fraz (' + w.nowych + ' nowych), koszt $'
-            + w.koszt.toFixed(4) + '. Odświeżam…'
-          setTimeout(() => location.reload(), 1200)
+            + w.koszt.toFixed(4) + '. Pokazuję wynik…'
+          // Ladujemy PROSTO na to wykopalisko, a nie na pelna liste. Swiezo wykopane frazy
+          // wsiakalyby w kilkaset istniejacych i nie dalo by sie zobaczyc, co wlasnie wyszlo.
+          const r = document.getElementById('kopRynek').value
+          setTimeout(() => {
+            location.href = '/panel-delash/frazy?rynek=' + encodeURIComponent(r)
+              + '&zestaw=' + encodeURIComponent(w.zestaw)
+          }, 900)
         } catch (e) {
           stan.textContent = 'Nie udało się: ' + e.message
           btn.disabled = false
@@ -296,7 +308,8 @@ function tabela (wiersze) {
     return `<tr data-f="${esc((w.fraza || '').toLowerCase())}" data-w="${w.wolumen || 0}"
       data-t="${w.trudnoscSeo ?? -1}" data-d="${dom ?? -1}" data-p="${plama ? 1 : 0}"
       data-tr="${tr ?? -9999}" data-s="${w.sezonowosc ?? 0}" data-o="${w.ocena ?? 0}" data-z="${w.zrobione ? 1 : 0}"
-      data-cs="${w.zrodloWolumenu === 'clickstream' ? 1 : 0}">
+      data-cs="${w.zrodloWolumenu === 'clickstream' ? 1 : 0}"
+      data-zest="${esc(w.zestaw || '')}" data-kiedy="${w.zmierzono ? Date.parse(w.zmierzono) || 0 : 0}">
       <td class="fraza"><span class="fraza__pokrycie${klasaPokrycia}" title="${esc(tytul)}"></span>${esc(w.fraza)}</td>
       <td><div class="wolumen"><span class="wolumen__liczba${w.zrodloWolumenu === 'ads' ? ' wolumen__liczba--koszyk' : ''}"${
         w.zrodloWolumenu === 'ads'
@@ -307,6 +320,7 @@ function tabela (wiersze) {
       <td style="text-align:right;font-variant-numeric:tabular-nums">${domeny}</td>
       <td style="text-align:center">${szczyt}</td>
       <td style="text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap">${trend}</td>
+      <td style="color:var(--grafit);font-size:13px;white-space:nowrap">${esc(w.zestaw || '—')}</td>
       <td style="color:var(--grafit);font-size:13px">${esc(SKROT_INTENCJI[w.intencja] || '—')}</td>
       <td style="font-size:13px;white-space:nowrap">${
         ogolna
@@ -326,7 +340,7 @@ function tabela (wiersze) {
         <button type="button" class="szczegoly-btn" data-fraza="${esc(w.fraza)}" title="Pokaż wszystko, co API wie o tej frazie" aria-label="Szczegóły frazy ${esc(w.fraza)}">⋯</button>
       </td>
     </tr>
-    <tr class="szczegoly" hidden><td colspan="9"><div class="szczegoly__tresc"></div></td></tr>`
+    <tr class="szczegoly" hidden><td colspan="10"><div class="szczegoly__tresc"></div></td></tr>`
   }).join('')
 
   const th = (etykieta, klucz, tytul, styl = '') =>
@@ -340,6 +354,7 @@ function tabela (wiersze) {
       ${th('Domeny top-10', 'd', 'Ile domen linkuje średnio do pierwszej dziesiątki. Wartość bliska zera znaczy, że czołówka nie ma zaplecza linkowego', 'text-align:right')}
       ${th('Szczyt', 's', 'Miesiąc największego popytu — pokazany tylko dla fraz wyraźnie sezonowych', 'text-align:center')}
       ${th('Trend r/r', 'tr', 'Zmiana liczby wyszukań rok do roku', 'text-align:right')}
+      ${th('Wykopalisko', 'kiedy', 'Z którego kopania pochodzi ta fraza. Sortowanie ustawia najświeższe na górze')}
       <th>Intencja</th>
       ${th('Nasza kategoria', 'p', 'Czy macie już na stronie kategorię, która celuje w tę frazę. „brak" znaczy, że nikt u was tego nie obsługuje')}
       ${th('Potencjał', 'o', 'Twoja ocena 1–10. Zapisuje się od razu i przeżywa kolejne kopania. Kolejność w Planie idzie po tej liczbie')}
@@ -348,7 +363,7 @@ function tabela (wiersze) {
   </table></div>`
 }
 
-function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
+function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska', wybrane = null) {
   const dok = dokumenty[aktywny]
   const rynek = RYNKI.find(r => r.kod === aktywny)
   // Sklejenie ocen z wierszami dzieje sie tutaj, przy wyswietlaniu — w magazynie te dwie
@@ -373,12 +388,18 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
   const zestawy = Object.keys(dok.zestawy || {})
   const wPlanie = dok.wiersze.filter(w => w.ocena >= 1 && !w.zrobione)
 
+  // Podglad jednego wykopaliska. Lista fraz jest zapisana przy kopaniu, wiec pokazujemy
+  // DOKLADNIE to, co tamten przebieg zwrocil — nawet jesli pozniejsze kopanie odswiezylo
+  // czesc tych fraz i przepisalo im znacznik zestawu.
+  const meta = wybrane ? dok.zestawy?.[wybrane] : null
+  const zbiorWybranego = meta?.frazy ? new Set(meta.frazy) : null
+
   // Plan to ta sama tabela, tylko zawezona do tego, co operator sam oznaczyl, i ulozona
   // po jego ocenie. Zadnego osobnego widoku ani innych regul — kolejnosc robienia wynika
   // wprost z liczb, ktore wpisal.
   const wiersze = tryb === 'plan'
     ? [...wPlanie].sort((a, b) => (b.ocena || 0) - (a.ocena || 0) || (b.wolumen || 0) - (a.wolumen || 0))
-    : dok.wiersze
+    : (zbiorWybranego ? dok.wiersze.filter(w => zbiorWybranego.has(w.fraza)) : dok.wiersze)
 
   const przelacznikWidoku = `<div class="widoki">
     <a class="widok-btn" href="/panel-delash/frazy?rynek=${esc(aktywny)}"${tryb !== 'plan' ? ' aria-current="page"' : ''}>Wykopaliska</a>
@@ -401,6 +422,22 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
     ${formularzKopania(aktywny)}
 
     <p class="brew">Frazy<span class="brew__kropka">/</span>${esc(rynek?.nazwa || aktywny)}<span class="brew__kropka">/</span>zaktualizowano ${esc(data(dok.zaktualizowano))}</p>
+
+    ${zestawy.length ? `<div class="wykopaliska">
+      <label>Wykopalisko
+        <select id="wybor-zestawu">
+          <option value="">wszystkie (${liczba(dok.wiersze.length)} fraz)</option>
+          ${Object.entries(dok.zestawy)
+            .sort((a, b) => String(b[1].pobrano || '').localeCompare(String(a[1].pobrano || '')))
+            .map(([nazwa, z]) => `<option value="${esc(nazwa)}"${nazwa === wybrane ? ' selected' : ''}>${
+              esc(nazwa)} · ${esc(TRYBY[z.tryb]?.nazwa || z.tryb || 'kopanie')} · ${
+              esc(data(z.pobrano))} · ${liczba(z.fraz || 0)} fraz</option>`).join('')}
+        </select>
+      </label>
+      ${meta ? `<span class="wykopaliska__opis">Dokładnie to, co zwróciło kopanie
+        <strong>${esc(wybrane)}</strong>${meta.seedy?.length ? ` z „${esc(meta.seedy.join('”, „'))}”` : ''}${
+        meta.koszt ? `, koszt $${Number(meta.koszt).toFixed(4)}` : ''}.</span>` : ''}
+    </div>` : ''}
 
     <div class="kafle">
       <div class="kafel"><div class="kafel__liczba" id="kafelFraz">—</div><div class="kafel__opis">fraz w widoku, z ${liczba(wiersze.length)} w zbiorze</div></div>
@@ -521,6 +558,14 @@ function widok (dokumenty, aktywny, oceny = {}, tryb = 'wykopaliska') {
       }
       for (const p of Object.values(pola)) p.addEventListener('input', filtruj)
       filtruj()
+
+      const wybor = document.getElementById('wybor-zestawu')
+      if (wybor) wybor.addEventListener('change', () => {
+        const u = new URL(location.href)
+        if (wybor.value) u.searchParams.set('zestaw', wybor.value)
+        else u.searchParams.delete('zestaw')
+        location.href = u.toString()
+      })
 
       // --- zapis ocen ---
       // Zadanie idzie na ten sam adres, wiec przegladarka dokłada naglowek Basic Auth sama
@@ -703,7 +748,7 @@ export default async (request) => {
         const { dokument, nowych, odswiezonych } = scalWiersze(
           await store.get(klucz, { type: 'json' }),
           {
-            rynek: dane.rynek, nazwaRynku: wynik.rynek.nazwa, zestaw,
+            rynek: dane.rynek, nazwaRynku: wynik.rynek.nazwa, zestaw, tryb: dane.tryb,
             seedy: zarodki, pobrano: new Date().toISOString(),
             koszt: wynik.koszt, wiersze: wynik.wiersze
           }
@@ -712,7 +757,7 @@ export default async (request) => {
 
         return new Response(JSON.stringify({
           ok: true, znaleziono: wynik.wiersze.length, nowych, odswiezonych,
-          koszt: wynik.koszt, lacznie: dokument.wiersze.length
+          koszt: wynik.koszt, lacznie: dokument.wiersze.length, zestaw
         }), { status: 200, headers: { 'content-type': 'application/json; charset=utf-8' } })
       } catch (e) {
         console.error('Kopanie:', e)
@@ -761,7 +806,8 @@ export default async (request) => {
       })
     }
 
-    return new Response(widok(dokumenty, aktywny, oceny, tryb), { status: 200, headers: NAGLOWKI_HTML })
+    const wybrane = url.searchParams.get('zestaw') || null
+    return new Response(widok(dokumenty, aktywny, oceny, tryb, wybrane), { status: 200, headers: NAGLOWKI_HTML })
   } catch (e) {
     console.error('Panel fraz:', e)
     return new Response(
