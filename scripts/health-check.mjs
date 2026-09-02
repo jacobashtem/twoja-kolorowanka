@@ -11,6 +11,7 @@
 // Exit code 1 przy jakimkolwiek bledzie -> nadaje sie do crona (GitHub Actions) z alertem.
 import { readdirSync, statSync, existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { pobierzZPonowieniem } from './lib/fetch-z-ponowieniem.mjs'
 
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
 const CONTENT = join(ROOT, 'content')
@@ -120,19 +121,25 @@ async function checkRemote () {
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])
   console.log(`Sitemap: ${urls.length} adresow, sprawdzam...`)
   let done = 0
+  let ponowione = 0
   const queue = [...urls]
+  // Ponowienia i timeout sa tu kluczowe: bez nich runner GitHuba gubil co tydzien ~10
+  // losowych adresow z `fetch failed` i alarm byl szumem (patrz lib/fetch-z-ponowieniem.mjs).
   await Promise.all(Array.from({ length: 10 }, async () => {
     while (queue.length) {
       const url = queue.pop()
       try {
-        const r = await fetch(url, { method: 'HEAD', redirect: 'manual' })
-        if (r.status !== 200) errors.push(`sitemap: ${url} -> HTTP ${r.status}`)
+        const { status, proba } = await pobierzZPonowieniem(url)
+        if (proba > 1) ponowione++
+        if (status !== 200) errors.push(`sitemap: ${url} -> HTTP ${status}`)
       } catch (e) {
         errors.push(`sitemap: ${url} -> ${e.message}`)
       }
       if (++done % 25 === 0) console.log(`  ${done}/${urls.length}...`)
     }
   }))
+  // Informacja, nie blad: pokazuje, ile razy siec czknela, zanim doszlo do odpowiedzi.
+  if (ponowione) console.log(`  (${ponowione} adresow odpowiedzialo dopiero po ponowieniu)`)
 }
 
 if (REMOTE) await checkRemote()
