@@ -17,12 +17,22 @@ const description = computed(() =>
     : 'Coś poszło nie tak. Spróbuj odświeżyć stronę albo wrócić na stronę główną.'
 )
 
+// `noindex` TYLKO w prerenderze (import.meta.server). Strona bledu pojawia sie tez po
+// stronie klienta, gdy hydratacja POPRAWNEJ strony wywali sie na dowolnym bledzie JS —
+// Nuxt do konca hydratacji kieruje kazdy blad do handleVueError, ktory ustawia
+// payload.error i renderuje ten komponent. Renderer Google wykonuje JS i honoruje
+// podmieniony meta robots, wiec jeden nieudany chunk u Googlebota wyindeksowal
+// istniejaca kategorie (/pojazdy/czolgi/, 31.08.2026, GSC: „wykluczona przez noindex").
+// Prawdziwe 404 nic nie traca: 404.html powstaje w prerenderze, czyli po stronie serwera.
+const robots = import.meta.server
+  ? [{ name: 'robots', content: 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }]
+  : []
+
 useHead({
   title: title.value,
   meta: [
     { name: 'description', content: description.value },
-    // 404 i tak nie wejdzie do indeksu, ale noindex dodatkowo to komunikuje
-    { name: 'robots', content: 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+    ...robots,
     { property: 'og:type', content: 'website' },
     { property: 'og:title', content: title.value },
     { property: 'og:description', content: description.value },
