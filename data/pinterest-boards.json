@@ -1,5 +1,5 @@
 {
-  "_comment": "Mapowanie pierwszego segmentu sciezki content/ na nazwe boardu Pinterest. Brakujace boardy publikator tworzy sam. _default lapie wszystko bez wpisu.",
+  "_comment": "Mapowanie kategorii na nazwe boardu Pinterest. Klucz: pelna sciezka (zwierzeta/koty) ma pierwszenstwo przed pierwszym segmentem (zwierzeta); _default lapie reszte. Brakujace boardy publikator tworzy sam.",
   "zwierzeta": "Kolorowanki zwierzęta",
   "pojazdy": "Kolorowanki pojazdy",
   "dla-doroslych": "Mandale i antystresowe",
