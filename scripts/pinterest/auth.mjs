@@ -1,17 +1,18 @@
 // Jednorazowa autoryzacja OAuth z Pinterestem (API v5). Wymagania:
 //   1. Aplikacja na developers.pinterest.com (App ID + App secret)
 //   2. W ustawieniach aplikacji dodany Redirect URI: http://localhost:8085/
-// Uzycie: PINTEREST_APP_ID=... PINTEREST_APP_SECRET=... node scripts/pinterest/auth.mjs
+// Uzycie: node scripts/pinterest/auth.mjs   (klucze z .env: PINTEREST_APP_ID, PINTEREST_APP_SECRET)
 // Otwiera link do zgody; po kliknieciu "Allow" zapisuje tokeny do .pinterest-token.json (gitignore).
 import { createServer } from 'node:http'
 import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { ROOT } from './lib.mjs'
+import { ROOT, loadEnv } from './lib.mjs'
 
+loadEnv()
 const ID = process.env.PINTEREST_APP_ID
 const SECRET = process.env.PINTEREST_APP_SECRET
 if (!ID || !SECRET) {
-  console.error('Ustaw PINTEREST_APP_ID i PINTEREST_APP_SECRET w srodowisku.')
+  console.error('Ustaw PINTEREST_APP_ID i PINTEREST_APP_SECRET w .env (wzor w .env.example).')
   process.exit(1)
 }
 

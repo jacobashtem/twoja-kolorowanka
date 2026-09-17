@@ -1,4 +1,5 @@
-// Wspolna logika pinow Pinterest: chodzenie po leafach, frontmatter, kompozycja grafiki 1000x1500.
+// Wspolna logika pinow Pinterest: chodzenie po leafach, frontmatter, filtr kategorii wlasnych,
+// kompozycja grafiki 1000x1500.
 // Uzywana przez scripts/generate-pins.mjs (pliki na dysk) i scripts/pinterest/publish.mjs (API, in-memory).
 // sharp importowany leniwie w composePin - dzieki temu skrypty czysto-contentowe
 // (tag-difficulty w CI) dzialaja bez instalowania zaleznosci graficznych.
@@ -24,6 +25,42 @@ export function walkLeafs () {
     }
   })(CONTENT)
   return leafs.sort()
+}
+
+// Wczytuje klucze z .env w katalogu projektu (ten sam mechanizm co lineart-generate.mjs).
+// Zmienne juz ustawione w srodowisku (CI) maja pierwszenstwo; brak pliku to nie blad.
+export function loadEnv () {
+  try {
+    for (const line of readFileSync(join(ROOT, '.env'), 'utf8').split(/\r?\n/)) {
+      const m = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/)
+      if (!m || line.trimStart().startsWith('#')) continue
+      if (!process.env[m[1]]) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, '')
+    }
+  } catch { /* brak .env - klucze moga byc w zmiennych srodowiskowych */ }
+}
+
+// Sciezka kategorii liscia: content/zwierzeta/koty/12 -> zwierzeta/koty
+export function categoryOf (leafDir) {
+  return leafDir.slice(CONTENT.length).replace(/\\/g, '/').split('/').filter(Boolean).slice(0, -1).join('/')
+}
+
+// Kategorie w CALOSCI z wlasnych grafik (Recraft) - tylko do nich ida piny (decyzja 2026-09-17).
+// Regula ze skilla kategoria-kolorowanek: plik ze stocka ma grupy <g>, nasz ich nie ma.
+// Sprawdzana jest cala kategoria, nie pojedynczy plik: stock tez bywa plaski (bez <g>), wiec
+// pomiar 2026-09-17 pokazal po kilka takich plikow w ~50 kategoriach stockowych. Jeden plik
+// bez <g> niczego nie dowodzi, a kategoria z choc jednym stockowym nie jest jeszcze "po nowemu".
+export function ownCategories (leafs = walkLeafs()) {
+  const all = new Set()
+  const stock = new Set()
+  for (const dir of leafs) {
+    const cat = categoryOf(dir)
+    all.add(cat)
+    if (stock.has(cat)) continue
+    const fm = frontmatter(join(dir, 'index.md'))
+    const svg = fm.image && join(PUBLIC, ...fm.image.split('/').filter(Boolean))
+    if (!svg || !existsSync(svg) || /<g[ >]/.test(readFileSync(svg, 'utf8'))) stock.add(cat)
+  }
+  return new Set([...all].filter(c => !stock.has(c)))
 }
 
 export function frontmatter (file) {

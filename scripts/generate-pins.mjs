@@ -1,11 +1,12 @@
 // Generator grafik pinow Pinterest (Etap 5 roadmapy) - zapis plikow na dysk do recznej publikacji.
 // Publikacja automatyczna przez API: scripts/pinterest/publish.mjs (wspolna logika w scripts/pinterest/lib.mjs).
 //
-// Uzycie: node scripts/generate-pins.mjs [--limit N] [--only kategoria]
+// Uzycie: node scripts/generate-pins.mjs [--limit N] [--only kategoria] [--wszystkie]
+//   domyslnie tylko kategorie w calosci z wlasnych grafik (jak publish.mjs); --wszystkie wylacza filtr
 // Wyjscie: pins-output/<kategoria>-<wariant>.jpg + manifest.csv (poza public/, katalog w .gitignore).
 import { existsSync, writeFileSync, mkdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { ROOT, walkLeafs, pinMeta, composePin } from './pinterest/lib.mjs'
+import { ROOT, walkLeafs, pinMeta, composePin, categoryOf, ownCategories } from './pinterest/lib.mjs'
 
 const OUT = join(ROOT, 'pins-output')
 
@@ -15,7 +16,10 @@ const onlyArg = process.argv.indexOf('--only')
 const ONLY = onlyArg > -1 ? process.argv[onlyArg + 1] : null
 
 mkdirSync(OUT, { recursive: true })
-const leafs = walkLeafs()
+const wszystkie = walkLeafs()
+const own = process.argv.includes('--wszystkie') ? null : ownCategories(wszystkie)
+const leafs = own ? wszystkie.filter(dir => own.has(categoryOf(dir))) : wszystkie
+if (own) console.log(`Filtr kategorii wlasnych: ${own.size} kategorii, ${leafs.length} lisci (--wszystkie wylacza)`)
 
 let done = 0, skipped = 0
 const errors = []

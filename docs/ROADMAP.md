@@ -125,8 +125,10 @@ W niszy printables Pinterest bywa większy niż Google. Mechanika: pin = pionowa
 - [ ] Konto firmowe Pinterest + weryfikacja domeny + włączenie Rich Pins (czytają OG tagi — już je mamy). **W TOKU (2026-07-23): Jakub zakłada konto**; weryfikacja metodą „Add HTML tag" — tag wkleja Claude'owi, trafia do `nuxt.config.ts`. Decyzja: startujemy teraz, żeby konto wygrzało się przed pikiem Q4 (publikacja sezonowa od września).
 - [x] Skrypt `scripts/generate-pins.mjs`: miniatura kolorowanki → grafika pinu 2:3 (1000×1500, biała ramka, pasek z tytułem i domeną) — masowo z istniejących WebP. Flagi `--limit`/`--only`, wyjście do `pins-output/` (gitignore). Masowe uruchomienie po założeniu konta. (PR #131, 2026-07-23)
 - [x] Automatyzacja publikacji: **Pinterest API v5 — kod gotowy.** `scripts/pinterest/publish.mjs` (kolejka ze wszystkich leafów minus `data/pinterest-state.json`, wybór round-robin po kategoriach dla dziennej różnorodności, boardy z `data/pinterest-boards.json` z automatycznym tworzeniem brakujących, grafika komponowana in-memory przez `image_base64` — zero hostingu), `auth.mjs` do tokenu, `lib.mjs` wspólne z `generate-pins.mjs`. Obsługuje `--count`, `--dry-run` i env `PINTEREST_APP_ID/SECRET/REFRESH_TOKEN` pod CI.
-- [ ] **Zostaje uruchomienie:** konto firmowe + token + wpięcie w cron GitHub Actions. Nic do napisania.
-- [ ] Start: 5 boardów (zwierzęta, mandale/antystres, sezonowe, edukacyjne, pojazdy), potem rozbudowa wg statystyk.
+- [x] **Konto i aplikacja API zatwierdzone przez Pinterest (2026-09-17).** Domena zweryfikowana tagiem w `nuxt.config.ts`.
+- [x] **Zasada: piny tylko z kategorii w całości z własnych grafik** (decyzja Jakuba, 2026-09-17). Filtr jest mierzony po plikach (`ownCategories` w `scripts/pinterest/lib.mjs`: stock ma grupy `<g>`, Recraft nie), więc każda kolejna podmieniona kategoria wchodzi do kolejki sama. Stan na 2026-09-17: 12 kategorii, 662 liście w kolejce (po 4 dziennie to ~5,5 miesiąca); 3 503 liście ze stocka poza kolejką.
+- [ ] **Zostaje uruchomienie:** App ID + secret do `.env`, `node scripts/pinterest/auth.mjs`, trzy sekrety w GitHub Actions. Nic do napisania.
+- [ ] Boardy: na start w kolejce są tylko 3 z 5 planowanych (zwierzęta, bajkowe, pojazdy). Do rozważenia board per kategoria (`data/pinterest-boards.json` przyjmuje pełne ścieżki).
 
 ## Etap 6 — Ekspansja językowa (największa dźwignia przychodu)
 
