@@ -1,8 +1,11 @@
 // Automatyczna publikacja pinow przez Pinterest API v5 (Etap 5 roadmapy).
 //
-// Uzycie: node scripts/pinterest/publish.mjs [--count N] [--dry-run]
+// Uzycie: node scripts/pinterest/publish.mjs [--count N] [--dry-run] [--sandbox]
 //   --count N   ile pinow opublikowac (domyslnie 4)
 //   --dry-run   pokaz co by poszlo, bez wywolan API i bez zmiany stanu
+//   --sandbox   boardy i piny przez api-sandbox.pinterest.com (widoczne tylko dla wlasciciela konta);
+//               jedyne, co wolno aplikacji z dostepem Trial. Stan kolejki NIE jest zapisywany,
+//               bo to nie sa prawdziwe piny. Sluzy do nagrania wideo do wniosku o Standard access.
 //
 // Autoryzacja (jedno z dwoch):
 //   - lokalnie: .pinterest-token.json z scripts/pinterest/auth.mjs
@@ -19,7 +22,10 @@ import { ROOT, walkLeafs, pinMeta, composePin, loadEnv, categoryOf, ownCategorie
 
 loadEnv()
 
-const API = 'https://api.pinterest.com/v5'
+const SANDBOX = process.argv.includes('--sandbox')
+// Sandbox ma osobne tokeny (auth.mjs --sandbox) - produkcyjny access token dostaje tam 401.
+const API = SANDBOX ? 'https://api-sandbox.pinterest.com/v5' : 'https://api.pinterest.com/v5'
+const TOKEN_FILE = SANDBOX ? '.pinterest-token-sandbox.json' : '.pinterest-token.json'
 const COUNT = (() => { const i = process.argv.indexOf('--count'); return i > -1 ? Number(process.argv[i + 1]) || 4 : 4 })()
 const DRY = process.argv.includes('--dry-run')
 const STATE_FILE = join(ROOT, 'data', 'pinterest-state.json')
@@ -29,10 +35,10 @@ const BOARDS_FILE = join(ROOT, 'data', 'pinterest-boards.json')
 async function accessToken () {
   const id = process.env.PINTEREST_APP_ID
   const secret = process.env.PINTEREST_APP_SECRET
-  let refresh = process.env.PINTEREST_REFRESH_TOKEN
+  let refresh = SANDBOX ? null : process.env.PINTEREST_REFRESH_TOKEN
   if (!refresh) {
-    const f = join(ROOT, '.pinterest-token.json')
-    if (!existsSync(f)) throw new Error('Brak .pinterest-token.json i env PINTEREST_REFRESH_TOKEN - odpal scripts/pinterest/auth.mjs')
+    const f = join(ROOT, TOKEN_FILE)
+    if (!existsSync(f)) throw new Error(`Brak ${TOKEN_FILE}${SANDBOX ? '' : ' i env PINTEREST_REFRESH_TOKEN'} - odpal scripts/pinterest/auth.mjs${SANDBOX ? ' --sandbox' : ''}`)
     refresh = JSON.parse(readFileSync(f, 'utf8')).refresh_token
   }
   if (!id || !secret) throw new Error('Ustaw PINTEREST_APP_ID i PINTEREST_APP_SECRET')
@@ -91,7 +97,7 @@ for (let i = 0; picked.length < COUNT && pending.length; i++) {
 }
 
 if (!picked.length) { console.log('Kolejka pusta - wszystko opublikowane.'); process.exit(0) }
-console.log(`Do publikacji (${picked.length}):\n` + picked.map(p => '  ' + p.rel).join('\n'))
+console.log(`Do publikacji (${picked.length})${SANDBOX ? ' [SANDBOX]' : ''}:\n` + picked.map(p => '  ' + p.rel).join('\n'))
 if (DRY) { console.log('DRY RUN - koniec.'); process.exit(0) }
 
 // --- publikacja ---
@@ -144,6 +150,7 @@ for (const { dir, rel, cat } of picked) {
   }
 }
 
-writeFileSync(STATE_FILE, JSON.stringify(state, null, 2) + '\n')
+if (SANDBOX) console.log('SANDBOX: stan kolejki nie zapisany, te piny nie liczą się jako opublikowane.')
+else writeFileSync(STATE_FILE, JSON.stringify(state, null, 2) + '\n')
 console.log(`Opublikowano ${ok}/${picked.length}. W kolejce zostalo: ${pending.length - ok}.`)
 if (errors.length) { console.log('BLEDY:\n' + errors.join('\n')); process.exitCode = 1 }

@@ -24,6 +24,7 @@ logs
 !.env.example
 pins-output/
 .pinterest-token.json
+.pinterest-token-sandbox.json
 
 # Materiał roboczy wymiany grafik (surowe generacje, arkusze przeglądowe).
 # Wyjątek: katalogi `ok/` z wyselekcjonowanymi ręcznie SVG trzymamy w repo — to jedyny

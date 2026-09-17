@@ -1,14 +1,20 @@
 // Jednorazowa autoryzacja OAuth z Pinterestem (API v5). Wymagania:
 //   1. Aplikacja na developers.pinterest.com (App ID + App secret)
 //   2. W ustawieniach aplikacji dodany Redirect URI: http://localhost:8085/
-// Uzycie: node scripts/pinterest/auth.mjs   (klucze z .env: PINTEREST_APP_ID, PINTEREST_APP_SECRET)
+// Uzycie: node scripts/pinterest/auth.mjs [--sandbox]   (klucze z .env: PINTEREST_APP_ID, PINTEREST_APP_SECRET)
 // Otwiera link do zgody; po kliknieciu "Allow" zapisuje tokeny do .pinterest-token.json (gitignore).
+// --sandbox: kod zgody wymieniany na api-sandbox.pinterest.com -> osobny token w .pinterest-token-sandbox.json.
+//   Sandbox nie przyjmuje tokenow produkcyjnych (401), a to jedyne miejsce, gdzie aplikacja z dostepem
+//   Trial moze tworzyc piny. Potrzebne do nagrania wideo do wniosku o Standard access.
 import { createServer } from 'node:http'
 import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { ROOT, loadEnv } from './lib.mjs'
 
 loadEnv()
+const SANDBOX = process.argv.includes('--sandbox')
+const API = SANDBOX ? 'https://api-sandbox.pinterest.com/v5' : 'https://api.pinterest.com/v5'
+const TOKEN_FILE = SANDBOX ? '.pinterest-token-sandbox.json' : '.pinterest-token.json'
 const ID = process.env.PINTEREST_APP_ID
 const SECRET = process.env.PINTEREST_APP_SECRET
 if (!ID || !SECRET) {
@@ -20,13 +26,13 @@ const REDIRECT = 'http://localhost:8085/'
 const SCOPE = 'boards:read,boards:write,pins:read,pins:write'
 const authUrl = `https://www.pinterest.com/oauth/?client_id=${ID}&redirect_uri=${encodeURIComponent(REDIRECT)}&response_type=code&scope=${SCOPE}`
 
-console.log('\nOtworz w przegladarce i kliknij Allow:\n\n' + authUrl + '\n\nCzekam na przekierowanie...')
+console.log(`\n${SANDBOX ? '[SANDBOX] ' : ''}Otworz w przegladarce i kliknij Allow:\n\n` + authUrl + '\n\nCzekam na przekierowanie...')
 
 createServer(async (req, res) => {
   const code = new URL(req.url, REDIRECT).searchParams.get('code')
   if (!code) { res.end('Brak parametru code.'); return }
   try {
-    const r = await fetch('https://api.pinterest.com/v5/oauth/token', {
+    const r = await fetch(`${API}/oauth/token`, {
       method: 'POST',
       headers: {
         Authorization: 'Basic ' + Buffer.from(`${ID}:${SECRET}`).toString('base64'),
@@ -36,11 +42,13 @@ createServer(async (req, res) => {
     })
     const tok = await r.json()
     if (!tok.refresh_token) throw new Error(JSON.stringify(tok))
-    writeFileSync(join(ROOT, '.pinterest-token.json'), JSON.stringify(tok, null, 2))
+    writeFileSync(join(ROOT, TOKEN_FILE), JSON.stringify(tok, null, 2))
     res.end('Autoryzacja OK - mozesz zamknac te karte.')
-    console.log('\nZapisano .pinterest-token.json (refresh token wazny ~1 rok).')
-    console.log('Do GitHub Actions dodaj sekrety: PINTEREST_APP_ID, PINTEREST_APP_SECRET, PINTEREST_REFRESH_TOKEN:')
-    console.log('  PINTEREST_REFRESH_TOKEN = ' + tok.refresh_token)
+    console.log(`\nZapisano ${TOKEN_FILE} (refresh token wazny ~1 rok).`)
+    if (!SANDBOX) {
+      console.log('Do GitHub Actions dodaj sekrety: PINTEREST_APP_ID, PINTEREST_APP_SECRET, PINTEREST_REFRESH_TOKEN:')
+      console.log('  PINTEREST_REFRESH_TOKEN = ' + tok.refresh_token)
+    }
   } catch (e) {
     res.end('Blad wymiany tokena: ' + e.message)
     console.error(e)
