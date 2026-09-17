@@ -37,6 +37,10 @@ export function loadEnv () {
       if (!process.env[m[1]]) process.env[m[1]] = m[2].trim().replace(/^["']|["']$/g, '')
     }
   } catch { /* brak .env - klucze moga byc w zmiennych srodowiskowych */ }
+  // Aliasy: w .env klucze bywaja wpisane jako PIN_APP_ID / PIN_APP_SECRET / PIN_REFRESH_TOKEN
+  for (const k of ['APP_ID', 'APP_SECRET', 'REFRESH_TOKEN']) {
+    if (!process.env['PINTEREST_' + k] && process.env['PIN_' + k]) process.env['PINTEREST_' + k] = process.env['PIN_' + k]
+  }
 }
 
 // Sciezka kategorii liscia: content/zwierzeta/koty/12 -> zwierzeta/koty
