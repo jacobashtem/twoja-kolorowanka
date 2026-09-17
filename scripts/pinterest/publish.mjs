@@ -107,11 +107,17 @@ const token = await accessToken()
 // ("zwierzeta/koty"), potem pierwszy segment ("zwierzeta"), na koncu _default.
 const existing = new Map()
 let bookmark
-do {
-  const page = await api(token, 'GET', '/boards?page_size=100' + (bookmark ? `&bookmark=${bookmark}` : ''))
-  for (const b of page.items || []) existing.set(b.name.toLowerCase(), b.id)
-  bookmark = page.bookmark
-} while (bookmark)
+try {
+  do {
+    const page = await api(token, 'GET', '/boards?page_size=100' + (bookmark ? `&bookmark=${bookmark}` : ''))
+    for (const b of page.items || []) existing.set(b.name.toLowerCase(), b.id)
+    bookmark = page.bookmark
+  } while (bookmark)
+} catch (e) {
+  // Sandbox odmawia GET /boards (kod 6410 "pinner data") - tam boardy po prostu tworzymy na nowo.
+  if (!SANDBOX) throw e
+  console.log('SANDBOX: brak dostepu do listy boardow, tworze od zera. (' + e.message.slice(0, 80) + ')')
+}
 
 async function boardId (cat) {
   const name = boardsMap[cat] || boardsMap[cat.split('/')[0]] || boardsMap._default
