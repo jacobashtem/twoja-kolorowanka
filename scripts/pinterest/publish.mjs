@@ -111,7 +111,11 @@ async function boardId (cat) {
   const name = boardsMap[cat] || boardsMap[cat.split('/')[0]] || boardsMap._default
   const key = name.toLowerCase()
   if (!existing.has(key)) {
-    const b = await api(token, 'POST', '/boards', { name, description: 'Darmowe kolorowanki do druku PDF – twoja-kolorowanka.pl' })
+    const temat = name.replace(/^Kolorowanki\s+/i, '')
+    const b = await api(token, 'POST', '/boards', {
+      name,
+      description: `Darmowe kolorowanki ${temat} do druku (PDF) i do kolorowania online – twoja-kolorowanka.pl`,
+    })
     existing.set(key, b.id)
     console.log(`Utworzono board: ${name}`)
   }
