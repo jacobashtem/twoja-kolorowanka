@@ -158,15 +158,17 @@ const ROZMIARY = {
 // minimal visual drama" — czyli dokładnie to, czego chce kolorowanka. "Artystyczna
 // swoboda" droższych modeli jest tu wadą, nie zaletą. Zaczynaj od niego.
 //
-// KLUCZOWE (dokumentacja Recrafta): "Styles are not yet supported for V4 models".
-// Cała rodzina V4/V4.1 — łącznie z Utility — ignoruje parametr `style`. Sterowanie
-// stylem mają wyłącznie modele V3 i V2, i to przez CZYTELNE NAZWY ("Line art"),
-// a nie identyfikatory z podkreślnikami. Stary schemat style+substyle należy do V2/V3.
-//
-// Wniosek dla kolorowanek: żeby ŚWIADOMIE wymusić kreskę konturową, trzeba użyć
-// recraftv3_vector ze stylem "Line art". V4.1 Vector jest nowszy i ładniejszy,
-// ale bez sterowania stylem — dostaniesz jego styl domyślny, jaki by nie był.
-// Dlatego oba są w zestawieniu: sonda pokaże, który realnie wygląda jak kolorowanka.
+// HISTORIA STYLÓW NA V4 (ważne, bo stan zmieniał się trzy razy):
+//   • lipiec 2026: "Styles are not yet supported for V4 models" — V4/V4.1 ignorowały
+//     `style`, więc kreskę konturową dawał tylko recraftv3_vector + "Line art".
+//   • sierpień 2026: linia `recraftv4_styles*` — styl budujesz SAM z 1–10 własnych
+//     obrazków (`scripts/recraft-styl.mjs`), dostajesz `style_id`. Kuratorowane nazwy
+//     ("Line art") nadal należą tylko do V2/V3. Styl zapamiętuje model, z którym powstał,
+//     więc UUID-y panelowe (Whimsy itd., V3 raster) na V4 nie przejdą.
+//   • od tej pory `style_id` i referencje działają też na zwykłych V4/V4.1 (cena modelu
+//     bez zmian), a linia `*_styles*` BEZ stylu odrzuca żądanie.
+// `negative_prompt` wciąż tylko V2/V3; `controls` na V4 częściowo. `--goly` i tak ich
+// nie wysyła, więc formuła jaszczurek pasuje do każdego modelu.
 //
 // styl: '' = nie wysyłamy pola w ogóle (model użyje domyślnego)
 const MODELE = {
@@ -185,7 +187,12 @@ const MODELE = {
   'v41-utility-vector': { id: 'recraftv4_1_utility_vector',  cena: 0.08,  wektor: true,  styl: '', substyl: '' },
   'v4-vector':          { id: 'recraftv4_vector',            cena: 0.08,  wektor: true,  styl: '', substyl: '' },
   'v41-pro-vector':     { id: 'recraftv4_1_pro_vector',      cena: 0.30,  wektor: true,  styl: '', substyl: '' },
-  'utility':            { id: 'recraftv4_1_utility',         cena: 0.035, wektor: false, styl: '', substyl: '' }
+  'utility':            { id: 'recraftv4_1_utility',         cena: 0.035, wektor: false, styl: '', substyl: '' },
+  // V4 Styles — WYMAGAJĄ `--style-id=` własnego stylu (scripts/recraft-styl.mjs).
+  // Wektor natywny za $0.05 to tyle samo, co nasz łańcuch raster $0.04 + wektoryzacja
+  // $0.01, ale o jeden krok krócej. Pilot mandal (2026-09-11): 7/7 do druku i online.
+  'v4s-vector':         { id: 'recraftv4_styles_vector',     cena: 0.05,  wektor: true,  styl: '', substyl: '' },
+  'v4s':                { id: 'recraftv4_styles',            cena: 0.035, wektor: false, styl: '', substyl: '' }
 }
 const CENA_FLUX = 0.025 // orientacyjnie, fal.ai Flux.1 dev
 
@@ -300,6 +307,10 @@ if (PROVIDER === 'recraft' && !model) {
 // Dokumentacja: `style` i `style_id` wykluczają się wzajemnie, więc przy podanym ID
 // nie wysyłamy nazwy stylu w ogóle.
 const STYLE_ID = (argv.find(a => a.startsWith('--style-id=')) ?? '').split('=')[1] || ''
+// --style-match=precise|flexible (V4) nadpisuje wartość zapisaną w stylu. Potrzebne do A/B
+// na jednym stylu: `precise` trzyma też kompozycję referencji (przy mandalach zjadło temat),
+// `flexible` sam klimat. Trafia do nazwy katalogu, żeby oba tryby nie wpadły do jednego.
+const STYLE_MATCH = (argv.find(a => a.startsWith('--style-match=')) ?? '').split('=')[1] || ''
 
 const MODEL_ID = (argv.find(a => a.startsWith('--model-id=')) ?? `--model-id=${model?.id ?? ''}`).split('=')[1]
 // Nazwy stylów V3 są czytelne i mają spacje ("Line art") — w powłoce trzeba je cytować:
@@ -320,7 +331,7 @@ const STYL_SLUG = STYL_ETYKIETA
 
 const WARIANT = (PROVIDER === 'flux' ? 'flux' : MODEL_KEY) +
                 (ART !== null ? `-art${ART}` : '') + (GOLY ? '-goly' : '') + STYL_SLUG +
-                (ZESTAW ? `-${ZESTAW}` : '')
+                (STYLE_MATCH ? `-${STYLE_MATCH}` : '') + (ZESTAW ? `-${ZESTAW}` : '')
 const OUT = join('lineart-work', katalogRoboczy, `raw-${WARIANT}`)
 mkdirSync(OUT, { recursive: true })
 
@@ -337,15 +348,23 @@ function poziomDla (i) {
   return (rozklad.find(r => udzial < r.do) ?? rozklad[rozklad.length - 1]).poziom
 }
 
+// Krzyżowanie dwóch osi: wariant zmienia się co obrazek, scena dopiero po wyczerpaniu
+// wariantów. Dzięki temu pełny przebieg pokrywa wszystkie kombinacje bez powtórek.
+// Jedna oś dla WSZYSTKICH kategorii — stary tryb `motyw` + `warianty` zniknął, bo to
+// przez niego kombajny i koparki dostawały ujęcia kamery zamiast scen.
+function osie (i) {
+  const idx = OD + i * KROK
+  return {
+    wariant: idx % cfg.warianty.length,
+    scena: Math.floor(idx / cfg.warianty.length) % cfg.sceny.length
+  }
+}
+
 function budujPrompt (i) {
   if (PROMPT) return PROMPT
-  const idx = OD + i * KROK
-  // Krzyżowanie dwóch osi: wariant zmienia się co obrazek, scena dopiero po wyczerpaniu
-  // wariantów. Dzięki temu pełny przebieg pokrywa wszystkie kombinacje bez powtórek.
-  // Jedna oś dla WSZYSTKICH kategorii — stary tryb `motyw` + `warianty` zniknął, bo to
-  // przez niego kombajny i koparki dostawały ujęcia kamery zamiast scen.
-  const wariant = cfg.warianty[idx % cfg.warianty.length]
-  const scena   = cfg.sceny[Math.floor(idx / cfg.warianty.length) % cfg.sceny.length]
+  const os = osie(i)
+  const wariant = cfg.warianty[os.wariant]
+  const scena   = cfg.sceny[os.scena]
   const temat = `${wariant}, ${scena}`
   // Wzorzec: {temat} {poza}, {trudność} drawing, {białe partie}, {3 słowa stylu}
   //
@@ -373,6 +392,7 @@ function bodyRecraft (prompt, poziom) {
   // style i style_id wykluczają się wzajemnie — ID ma pierwszeństwo.
   if (STYLE_ID) body.style_id = STYLE_ID
   else if (STYLE) body.style = STYLE
+  if (STYLE_MATCH) body.style_match = STYLE_MATCH
   if (SUBSTYLE && !STYLE_ID) body.substyle = SUBSTYLE
   // negative_prompt i controls obsługują wyłącznie modele V2/V3 — przy V4 API by je odrzuciło
   // W trybie --goly nie wysyłamy ANI negatywu, ANI controls — tak jak przy jaszczurkach.
@@ -515,6 +535,23 @@ let zrobione = 0, bledy = 0, ponowione = 0, ostrzezono = false
 // i wygenerowana ponownie, już na poprawionych promptach. Dzięki temu cykl
 //   generuj → waliduj --segreguj → generuj ponownie
 // dobija kategorię do kompletu, nie płacąc powtórnie za sztuki, które przeszły.
+// MANIFEST plik → wariant i scena. Nazwa pliku niesie tylko numer i seed, a z samego
+// numeru nie da się odtworzyć wariantu bez znajomości `--od` i `--krok` z dnia generowania.
+// Potrzebują tego podpisy (lib/podpis.mjs: który święty jest na którym rysunku).
+// Zapis po KAŻDEJ sztuce, bo seria przerwana w połowie też ma mieć komplet wpisów.
+const MANIFEST = join(OUT, '_manifest.json')
+let manifest = null
+function dopiszDoManifestu (nazwa, i) {
+  if (PROMPT) return   // --prompt omija obie osie, nie ma czego zapisać
+  if (!manifest) {
+    try { manifest = JSON.parse(readFileSync(MANIFEST, 'utf8')) } catch { manifest = { pliki: {} } }
+    manifest.kategoria = klucz
+    manifest.zestaw = ZESTAW || null
+  }
+  manifest.pliki[nazwa] = osie(i)
+  writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2))
+}
+
 function stanPozycji (nazwa) {
   // `webp` MUSI tu być: style panelowe (rastrowe) zapisują właśnie webp, więc bez tego
   // rozszerzenia pętla uzupełniania nie rozpoznawała ani jednej gotowej pozycji i seria
@@ -555,6 +592,7 @@ async function jeden (i) {
     // Kosztowało to kiedyś całą serię 36 kotów ($1.44) wyrzuconą w błoto.
     mkdirSync(dirname(baza), { recursive: true })
     writeFileSync(`${baza}.${format}`, buf)
+    dopiszDoManifestu(nazwa, i)
 
     // STRAŻNIK NIEZGODNOŚCI MODELU. Gdy prosimy o model wektorowy, a wraca raster,
     // znaczy że użyty styl jest rastrowy i API po cichu zignorowało nasz model.

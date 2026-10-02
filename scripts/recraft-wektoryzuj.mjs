@@ -9,10 +9,10 @@
 // Użycie:
 //   node scripts/recraft-wektoryzuj.mjs lineart-work/koniki/raw-v3-goly-rustic-line-art
 //   node scripts/recraft-wektoryzuj.mjs <katalog> --bez-pdf
-import { readdirSync, statSync, mkdirSync, writeFileSync, readFileSync, createWriteStream } from 'node:fs'
+import { readdirSync, statSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs'
 import { join, basename, extname, dirname } from 'node:path'
-import PDFDocument from 'pdfkit'
-import SVGtoPDF from 'svg-to-pdfkit'
+import { doPdf } from './lib/pdf-a4.mjs'
+import { podpisDla, dodajPodpis } from './lib/podpis.mjs'
 
 // Klucz z .env (ten sam mechanizm co w pozostałych skryptach)
 try {
@@ -45,9 +45,6 @@ if (!wejscie && !LISTA) {
   console.error('          node scripts/recraft-wektoryzuj.mjs --lista=wybor.txt --baza=lineart-work/dinozaury')
   process.exit(2)
 }
-
-// A4 w punktach PDF (72 dpi) + margines na dziurkacz i chwyt dłoni
-const A4_W = 595.28, A4_H = 841.89, MARGIN = 36
 
 const RASTRY = new Set(['.png', '.jpg', '.jpeg', '.webp'])
 
@@ -96,28 +93,10 @@ async function saldo () {
   } catch { return null }
 }
 
-// Wektor trafia do PDF-a jako wektor, więc druk jest ostry niezależnie od skali.
-function doPdf (svg, sciezka) {
-  return new Promise((resolve, reject) => {
-    const doc = new PDFDocument({ size: 'A4', margin: 0 })
-    const ws = createWriteStream(sciezka)
-    doc.pipe(ws)
-    SVGtoPDF(doc, svg, MARGIN, MARGIN, {
-      width: A4_W - 2 * MARGIN,
-      height: A4_H - 2 * MARGIN,
-      preserveAspectRatio: 'xMidYMid meet',
-      assumePt: false
-    })
-    doc.end()
-    ws.on('finish', resolve)
-    ws.on('error', reject)
-  })
-}
-
 const przed = await saldo()
 if (przed !== null) console.log(`Saldo przed: ${przed} units ($${(przed / 1000).toFixed(2)})\n`)
 
-let ok = 0, wagaSvg = 0
+let ok = 0, wagaSvg = 0, podpisane = 0
 const bledy = []
 
 for (const plik of pliki) {
@@ -137,7 +116,11 @@ for (const plik of pliki) {
     const url = (await res.json())?.image?.url
     if (!url) throw new Error('brak URL w odpowiedzi')
 
-    const svg = Buffer.from(await (await fetch(url)).arrayBuffer())
+    let svg = Buffer.from(await (await fetch(url)).arrayBuffer())
+    // Podpis (np. imię świętego) wchodzi TU, przed zapisem: SVG, PDF, a potem miniatury
+    // i edytor dostają go z jednego źródła. Seria bez podpisów w rejestrze idzie bez zmian.
+    const podpis = podpisDla(plik)
+    if (podpis) { svg = Buffer.from(dodajPodpis(svg.toString('utf8'), podpis)); podpisane++ }
     const OUT = katalogWy(plik)
     mkdirSync(OUT, { recursive: true })
     writeFileSync(join(OUT, `${nazwa}.svg`), svg)
@@ -155,6 +138,7 @@ const po = await saldo()
 console.log(`\nGotowe. Zwektoryzowano: ${ok}/${pliki.length}, błędy: ${bledy.length}`)
 if (bledy.length) console.log(bledy.slice(0, 10).join('\n'))
 if (ok) console.log(`Średnia waga SVG: ${Math.round(wagaSvg / ok / 1024)} KB`)
+if (podpisane) console.log(`Z podpisem pod rysunkiem: ${podpisane}`)
 if (przed !== null && po !== null) {
   console.log(`Zużyto: ${przed - po} units = $${((przed - po) / 1000).toFixed(2)}   Zostało: ${po}`)
 }

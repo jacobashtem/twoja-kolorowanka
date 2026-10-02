@@ -97,6 +97,26 @@ export const STYLE = {
     uwaga: 'opt-in: bierz przy pojazdach i maszynach, nie przy postaciach'
   },
 
+  // ── WŁASNY STYL V4 STYLES — TRZECI KSZTAŁT REKORDU ─────────────────────────
+  // Ani panelowy (UUID, ale model to NIE raster V3), ani wbudowany (nie ma nazwy).
+  // Zbudowany z 6 referencji whimsy przez `scripts/recraft-styl.mjs` ($0.005), działa
+  // WYŁĄCZNIE z `recraftv4_styles_vector`, zwraca natywny SVG za $0.05 — tyle samo,
+  // co whimsy raster + wektoryzacja, ale o jeden krok krócej. Pole `model` mówi
+  // wrapperowi, który wpis MODELE generatora ma wziąć do ceny i etykiety; `natywnySvg`
+  // wyłącza go z rachunku wektoryzacji. `match` zapisany jako `precise`, nadpisywalny
+  // flagą `--style-match=flexible` (trafia do nazwy katalogu).
+  // Powstał 2026-10-01 pod pilota halloween — werdykt do wpisania po obejrzeniu galerii.
+  whimsyV4: {
+    id: '9d2df57e-690a-4ed8-b48e-e159ba6a0ac6',
+    nazwa: 'Whimsy V4 (własny, wektor)',
+    modelId: 'recraftv4_styles_vector',
+    model: 'v4s-vector',
+    cena: 0.05,
+    natywnySvg: true,
+    // referencje: pieski-001/004/010/016 (raw-v3-goly-whimsy), kroliczki-003/008
+    uwaga: 'nowy — pilot halloween 2026-10-01, bez werdyktu'
+  },
+
   // ── PRÓBKOWANE, ALE Z OSTRZEŻENIEM ────────────────────────────────────────
   // Te style wypadły słabo w testach na koniach, kotach i pieskach i NIE nadają się
   // na trzon kategorii. Zostają w miksie po trzy sztuki, bo pojedyncze rysunki z nich
