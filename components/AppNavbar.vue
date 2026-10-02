@@ -82,6 +82,8 @@ const categoryLinks = [
     slug: 'okolicznosciowe',
     children: [
       { name: 'Urodziny', slug: 'okolicznosciowe/urodziny' },
+      { name: 'Halloween', slug: 'okolicznosciowe/halloween' },
+      { name: 'Wszystkich Świętych', slug: 'okolicznosciowe/wszystkich-swietych' },
       { name: 'Andrzejki', slug: 'okolicznosciowe/andrzejki' }
     ]
   },

@@ -85,7 +85,7 @@ const plan = podzial.map(({ styl, ile }) => {
 // pokazuje zawsze cenę z `--model=`, więc przy stylach panelowych zawyża dwukrotnie.
 const koszt = plan.reduce((s, { ile, s: st }) => s + ile * (st.cena ?? 0.04), 0)
 console.log(`\nKoszt generacji: $${koszt.toFixed(2)} (~${(koszt * 4).toFixed(0)} zł)`)
-const doWektoryzacji = plan.filter(p => !p.s.wbudowany).reduce((s, p) => s + p.ile, 0)
+const doWektoryzacji = plan.filter(p => !p.s.wbudowany && !p.s.natywnySvg).reduce((s, p) => s + p.ile, 0)
 console.log(`Wektoryzacja doliczy się po selekcji ($0.01/szt.), ale tylko dla stylów rastrowych`)
 console.log(`— ${COUNT - doWektoryzacji} szt. wraca już jako natywny SVG.`)
 
@@ -99,9 +99,12 @@ for (const { styl, ile, od, s } of plan) {
   // „Line art" nie ma UUID-a — jego nazwę generator bierze sam z tablicy MODELE, gdy
   // podamy `--model=v3` albo `--model=v2`, więc nie wolno mu dokładać `--style-id`
   // ani `--model-id` (te dwa pola wykluczają się z `style` po stronie API).
+  // Trzeci kształt: własny styl V4 Styles ma UUID jak panelowy, ale jego model NIE jest
+  // rastrowym V3 — rekord podaje `model` (klucz z MODELE generatora), żeby cena i etykieta
+  // „wektor/raster" w raporcie były prawdziwe. `--model-id` i tak rozstrzyga, co leci do API.
   const styloweFlagi = s.wbudowany
     ? [`--model=${s.model}`]
-    : [`--style-id=${s.id}`, `--model-id=${s.modelId}`]
+    : [`--style-id=${s.id}`, `--model-id=${s.modelId}`, ...(s.model ? [`--model=${s.model}`] : [])]
   const args = [
     'scripts/lineart-generate.mjs', kategoria,
     `--count=${ile}`, `--krok=${KROK}`, `--od=${od}`,

@@ -14,8 +14,10 @@ export const THRESHOLDS = [572, 915, 1249, 1680, 2325, 3278, 4637, 6638, 11840, 
 
 // Miara: liczba komend rysowania w atrybutach d="" wszystkich <path> plus waga za
 // elementy proste (rect/circle/...). Proste serce ma ~30–100 komend, mandala 10k+.
+// Pasek z podpisem (`data-podpis`, patrz lib/podpis.mjs) nie liczy się do miary: litery
+// to kilkaset komend, a kolorowania nie utrudniają.
 export function svgScore (svgPath) {
-  const src = readFileSync(svgPath, 'utf8')
+  const src = readFileSync(svgPath, 'utf8').replace(/<(path|rect)\s+data-podpis[^>]*>/g, '')
   let commands = 0
   for (const m of src.matchAll(/\sd="([^"]*)"/g)) {
     commands += (m[1].match(/[A-Za-z]/g) || []).length

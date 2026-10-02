@@ -404,6 +404,76 @@ export const SCENY = {
     'docking beside a round space station'
   ],
 
+  // ── Halloween: DOPEŁNIENIE kadru, nie czynność ─────────────────────────────
+  // Kategoria miesza RZECZY (dynia-lampion) ze STWORAMI (duch, nietoperz) i POSTACIĄ
+  // (wiedźma, wampirek), więc scena nie może mieć czasownika — „walking through" każe
+  // dyni chodzić. Każda pozycja zaczyna się od przyimka i opisuje, CO STOI OBOK.
+  // Osiem zamiast sześciu, bo przy serii 48 sześć scen daje sztampę (koty w koszyku).
+  //
+  // Świadomie bez słów „dark", „night", „black", „shadow": to są tokeny czerni, a model
+  // i tak wie, że półksiężyc i latarnia znaczą wieczór. Pajęczyna jest jedna i narożna —
+  // rozpięta na całym kadrze wyszłaby gęstym sztrychem, którego walidator nie widzi.
+  // Kocioł stoi w SCENIE, nie w wariancie wiedźmy: inaczej byłby na co dwunastej sztuce
+  // zamiast co ósmej, a wiedźma i tak go przyciąga sama.
+  halloween: [
+    'beside a row of carved pumpkins on a wooden porch step',
+    'in front of a haunted house with a crooked tower and a round window',
+    'under a big crescent moon with a few small stars',
+    'among bare crooked trees with a picket fence and a signpost',
+    'next to a bubbling cauldron on three legs with a wooden spoon',
+    'with a cobweb strung in one corner and a bowl of wrapped candies',
+    'at a garden gate hung with triangular bunting and a round paper lantern',
+    'in a pumpkin patch with a wooden cart full of pumpkins'
+  ],
+
+  // ── Dzień Zmarłych (zestaw `muertos` w halloween): osobny świat ────────────
+  // Weranda z dyniami i nawiedzony dom nie pasują do cukrowej czaszki — ta tradycja
+  // ma własne rekwizyty: aksamitki (marigolds), wycinanki z papieru (papel picado),
+  // ołtarzyk ze świecami, brukowana uliczka. Tak samo przyimkowo, bez czasowników,
+  // bo wśród wariantów jest sama czaszka i stolik-ołtarz, które nigdzie nie idą.
+  // Wycinanki opisane jako „cut-paper banners", nie „lace" — koronka to gęsty sztrych.
+  muertos: [
+    'on a path scattered with round marigold petals',
+    'under strings of cut-paper banners hung between two poles',
+    'beside a table altar with tall candles and a vase of marigolds',
+    'in a cobbled street with a round arched doorway',
+    'under a crescent moon with a few small stars',
+    'next to a wrought-iron gate hung with paper flowers',
+    'with a scattering of small candles and marigold heads around',
+    'next to a wooden cart stacked with round sweet breads'
+  ],
+
+  // ── Wszystkich Świętych: dwie pule, bo kategoria ma dwa światy ─────────────
+  // `zaduszki` — polski 1 listopada widziany oczami dziecka: znicze, chryzantemy,
+  // kapliczka, alejka w liściach. Spokojnie, bez nagrobków z napisami (model generuje
+  // śmieciowe litery, patrz heroic mandala-019) i bez słowa „cemetery", które ciągnie
+  // w stronę straszenia — to sąsiad `halloween`, a tu ma być nastrój zadumy, nie grozy.
+  // Przyimkowo, bo wśród wariantów są znicz i chryzantema, które nigdzie nie idą.
+  zaduszki: [
+    'beside a row of glowing grave lanterns on a stone ledge',
+    'among pots of round chrysanthemum blooms',
+    'in front of a small chapel with a round window and a bell',
+    'on a path lined with tall bare trees and fallen leaves',
+    'under a sky with a crescent moon and a few small stars',
+    'beside a wooden cross with a garland of flowers wound around it',
+    'at a stone gate with an iron fence and small candles on the posts',
+    'with a procession of small lanterns carried on sticks in the distance'
+  ],
+
+  // `sakralne` — otoczenie dla ŚWIĘTYCH: witraż, łuk z kolumnami, promienie zza chmur.
+  // Celowo bez kościoła jako budynku (święty stoi W oknie witrażowym, nie przed
+  // kościołem) i bez zniczy — atrybut świętego ma być jedynym rekwizytem, który mówi,
+  // kim jest; drugi mocny rekwizyt w kadrze rozmywałby rozpoznawalność.
+  // Witraż to świetny materiał do kolorowania: dużo zamkniętych pól.
+  sakralne: [
+    'standing inside a tall arched stained-glass window with round panes',
+    'in a stone archway with carved pillars on both sides',
+    'under an arch of round clouds with straight rays of light behind',
+    'in a meadow with small flowers and a low wooden fence',
+    'under a sky with a crescent moon and a few small stars',
+    'with a border of lilies and curling vines across the bottom'
+  ],
+
   // ── Przedmioty i okazje ────────────────────────────────────────────────────
   swieto: [
     'on a table with ribbons and a folded party hat',

@@ -784,6 +784,251 @@ export const KATEGORIE = {
   // ══ OKAZJE I PRZEDMIOTY ════════════════════════════════════════════════════
   'okolicznosciowe/urodziny':  { warianty: [], sceny: SCENY.swieto, grubosc: DEKORACYJNE, format: 'pion' },
   'okolicznosciowe/andrzejki': { warianty: [], sceny: SCENY.swieto, grubosc: DEKORACYJNE, format: 'pion' },
+  // HALLOWEEN — nowa kategoria (2026-10-01), nie było jej w serwisie. Nietypowa, bo oś
+  // wariantu to nie dwanaście odmian JEDNEGO obiektu, tylko dwanaście RÓŻNYCH bohaterów
+  // święta — każdy z inną sylwetką z definicji, więc test konturu z rozdziału 2 przechodzi
+  // sam. Problemem jest co innego:
+  //   • CZERŃ Z DEFINICJI TEMATU. Czarny kot, nietoperz, noc, cień — Halloween to katalog
+  //     tokenów, którymi model uzasadnia zalewanie czernią. Dlatego nigdzie nie pada słowo
+  //     „black" ani „dark": kot jest „with an arched back and a bristled bushy tail",
+  //     nietoperz „with wide scalloped wings". Tożsamość niesie sylwetka i rekwizyt.
+  //   • SĄSIEDZI: `rosliny/dynie` (gładka dynia) — kotwicą jest WYCIĘTA BUŹKA i świeczka;
+  //     `fantasy/wrozki` — wiedźma nie ma skrzydeł ani słowa „tiny"; `fantasy/elfy` —
+  //     wampirek ma kołnierz i pelerynę, nie spiczaste uszy.
+  //   • POSTACIE LUDZKIE (wiedźma, wampirek, strach na wróble, potworek) dostają
+  //     `full body fills the frame` jak u wróżek — bez tego przy małej figurze oczy
+  //     wychodzą jako puste owale. Jedna istota w kadrze, bez bobasów i zwierząt obok.
+  //   • Pająk na nitce bez pajęczyny: miejsce siedzi w SCENIE, inaczej „pająk na pajęczynie
+  //     na schodku werandy" dałby dwa konkurujące miejsca naraz.
+  // `biale` tylko na wypadek serii bez `--goly` — pod stylami panelowymi problem
+  // umaszczenia nie wracał (koty), więc nie jest potrzebne na co dzień.
+  //
+  // PILOT 2026-10-01 (12 szt., V4 Styles precise/flexible + whimsy V3) — wnioski Jakuba:
+  //   • V4 `flexible` narysował kota CAŁEGO CZARNEGO mimo braku słowa „black" — prior
+  //     modelu na „halloweenowy kot" to czerń. Whimsy V3 dał kontur. Zostajemy na V3.
+  //   • „Mało różnorodnie" — sowa i strach na wróble wypadły (bardziej jesień niż
+  //     Halloween), weszły: stos dyń, dziecko w przebraniu i KOCIOŁ jako wariant (był tylko
+  //     w scenie). Mocniej w duszki, kościotrupy i pająki, czyli to, czego Jakub chciał.
+  //   • Drugi pomysł na warianty — Dzień Zmarłych w stylu meksykańskim (cukrowe czaszki,
+  //     szkielety z gitarą, aksamitki, alebrije) — siedzi w `zestawy.muertos` z WŁASNĄ
+  //     pulą scen, bo weranda z dyniami i nawiedzony dom to nie ten świat. Mechanizm
+  //     zestawów jak u króliczków: `--zestaw=muertos`, serii nie mieszamy w jednym przebiegu.
+  'okolicznosciowe/halloween': {
+    warianty: [
+      'a carved pumpkin lantern with a wide toothy grin, triangle eyes and a curly stem, a small candle glowing inside',
+      'a round friendly ghost with a wavy hem, two stubby arms raised and big round eyes',
+      'a little witch in a tall pointed hat with a wide brim, sitting on a broomstick, full body fills the frame',
+      'a cat with an arched back and a bristled bushy tail, wearing a tiny pointed hat',
+      'a bat with wide scalloped wings spread out, big round ears and a small smiling face',
+      'a smiling skeleton with a round skull and bony arms, dancing with its knees bent, full body fills the frame',
+      'a mummy wrapped in loose trailing bandages with one eye peeking out, arms stretched forward, full body fills the frame',
+      'a little vampire boy with a high stand-up collar, a flowing cape and two small fangs, full body fills the frame',
+      'a plump spider with eight bent legs and big round eyes, dangling from a single thread',
+      'a tall stack of three carved pumpkins each with a different face, the smallest one on top',
+      'a child in a ghost sheet costume with two eye holes, holding a pumpkin-shaped candy bucket, full body fills the frame',
+      'a little round monster with one big eye, two curly horns and a wide toothy grin, full body fills the frame'
+    ],
+    biale: 'white cat, white hat and cape, white sky',
+    sceny: SCENY.halloween, grubosc: DLA_DZIECKA, format: 'pion',
+    zestawy: {
+      // DZIEŃ ZMARŁYCH — świat radosny, nie straszny: kości są ozdobą, nie grozą.
+      // Każdy wariant to inna sylwetka (sama czaszka, czaszka w sombrero, szkielet
+      // z gitarą, w sukni, z trąbką, na rowerze), więc test konturu przechodzi.
+      // Bez nazw własnych i postaci z filmów — pies jest „thin hairless dog with tall ears",
+      // nie z imienia. Jedna postać w kadrze: para tańczących szkieletów odpadła, bo to
+      // dwie twarze do zepsucia (lekcja z syrenek). Motyl jest tu celowo — w tej tradycji
+      // to symbol powracających dusz — ale wzorzysty, żeby nie wpadł w `zwierzeta/motyle`.
+      muertos: {
+        warianty: [
+          'a sugar skull with flower petals drawn around the eyes and swirl patterns on the forehead',
+          'a sugar skull wearing a wide-brimmed sombrero decorated with a band of flowers',
+          'a smiling skeleton in a wide-brimmed sombrero strumming a guitar, full body fills the frame',
+          'a skeleton girl in a long ruffled dress with a crown of round marigold flowers, full body fills the frame',
+          'a skeleton boy in a vest and bow tie holding a tall candle, full body fills the frame',
+          'a skeleton mariachi with a wide sombrero playing a trumpet, full body fills the frame',
+          // Pierwsza wersja „thin hairless dog with tall ears" wyszła jak kot sfinks — ogon
+          // i słowo „dog" dwa razy, żeby sylwetka była psia.
+          'a slim dog with a long thin curled tail, a narrow dog snout and tall pointed ears, wearing a collar of flowers',
+          'a fantastical winged creature with a jaguar body, feathered wings and curled horns, covered in swirl and dot patterns',
+          'a skeleton riding a bicycle with a basket full of round marigold flowers, full body fills the frame',
+          'a skeleton child in a striped poncho holding a round sweet bread with a bone pattern on top, full body fills the frame',
+          'a butterfly with large wings patterned with small skulls and flower shapes',
+          'a tiered altar table draped in cloth with tall candles, a vase of marigolds and a framed picture'
+        ],
+        sceny: SCENY.muertos
+      },
+      // KLASYKA — prośba Jakuba po drugiej serii: „czarownice, kościotrupy, pająki, dynie".
+      // Cztery motywy po trzy odsłony, każda odsłona to inna sylwetka (czarownica przy
+      // kotle / z księgą / w locie; szkielet w cylindrze / z bębnem / na dyni; pająk
+      // w sieci / w cylindrze / tańczący; dynia w kapeluszu / stos / ze skrzydłami).
+      // Pajęczyna wchodzi tu świadomie jako wariant, ale „thick strands", bo cienka
+      // siatka to gęsty sztrych. Sceny wspólne z główną pulą `halloween`.
+      klasyka: {
+        warianty: [
+          'a witch in a tall pointed hat stirring a big round cauldron with a long wooden spoon, full body fills the frame',
+          'a witch in a tall pointed hat and striped stockings reading a big open spell book, full body fills the frame',
+          'a witch flying on a broomstick with a long cloak streaming behind her, full body fills the frame',
+          'a little wizard boy in a tall pointed hat holding a wand with a star on the tip, full body fills the frame',
+          'a skeleton in a top hat and bow tie tipping its hat with one bony hand, full body fills the frame',
+          'a skeleton playing a round drum with two drumsticks, full body fills the frame',
+          'a skeleton sitting on top of a big carved pumpkin with its bony legs dangling, full body fills the frame',
+          'a round spider with big eyes sitting in the centre of a large cobweb made of thick strands',
+          'a spider with eight long bent legs wearing a tiny top hat and holding a lollipop',
+          'a carved pumpkin lantern wearing a tall pointed hat, with a wide grin and a candle inside',
+          'a pile of round pumpkins of different sizes with one carved grinning face in the middle',
+          'a carved pumpkin lantern with scalloped bat wings and a curly stem, flying in the air'
+        ]
+      }
+    }
+  },
+  // WSZYSTKICH ŚWIĘTYCH — nowa kategoria (2026-10-01), sąsiadka halloween w czasie, ale
+  // ODWROTNA w nastroju: zaduma zamiast straszenia. Dlatego osobne pule scen i ani jednego
+  // wspólnego rekwizytu z `halloween` (bez dyń, pajęczyn, księżyca „nad nawiedzonym domem").
+  // Dwa światy, więc dwa zestawy:
+  //   • główny — SYMBOLE i ludzie 1 listopada: aniołki, znicze, chryzantemy, dziecko
+  //     z lampionem w procesji, gołąb, przebranie na Bal Wszystkich Świętych
+  //   • `zestawy.swieci` — dwunastu świętych, każdy rozpoznawalny po ATRYBUCIE widocznym
+  //     w konturze (ptak na dłoni, smok u stóp, wiadro, klucze, wieża, lilia). Aureola
+  //     to pierścień nad głową, nie „glowing" — słowo o świetle ciągnie w gradienty.
+  // Zasady z wróżek i syrenek: jedna postać, `full body fills the frame`, bez masy ciała.
+  // Wyjątki świadome: św. Franciszek ma ptaki (małe, bez twarzy), św. Hubert jelenia
+  // (to JEST jego atrybut), św. Krzysztof dziecko na ramieniu (druga twarz, ale bez
+  // niego nie da się go rozpoznać — jeśli wyjdzie źle, wypada przy dogrywce).
+  // Pominięci celowo: św. Mikołaj biskup (model narysuje Mikołaja z saniami), postacie
+  // z żywej pamięci (prawdziwy wizerunek to inna kategoria ryzyka), św. Antoni
+  // (Dzieciątko na ręku = druga twarz bez konieczności).
+  // Bez kolorów w promptach („brązowy habit", „czerwony płaszcz") — kolor nie istnieje
+  // w kolorowance, a „red" to token do zamalowania.
+  'okolicznosciowe/wszystkich-swietych': {
+    warianty: [
+      'a little angel with big rounded feathered wings and a halo ring, hands folded in prayer, full body fills the frame',
+      'a kneeling angel with tall narrow wings holding a lit candle in both hands, full body fills the frame',
+      'an angel child with small wings playing a long straight trumpet, full body fills the frame',
+      'a tall grave lantern with a glass dome, a lit candle inside and a decorative pointed lid',
+      'a round glass grave candle shaped like a cup with a flame inside, beside three smaller ones',
+      'a big round chrysanthemum bloom with layered curling petals growing in a clay pot',
+      'a bouquet of chrysanthemums with a few leaves tied together with a wide ribbon',
+      'a girl in a long coat and knitted hat holding a lit lantern on a stick, full body fills the frame',
+      'a boy in a coat and scarf carrying a pot of chrysanthemums with both hands, full body fills the frame',
+      'a dove with wings spread wide holding an olive twig in its beak',
+      'a child dressed as an angel for a saints parade, with cardboard wings and a tinsel halo, holding a paper star, full body fills the frame',
+      'a round wreath of chrysanthemums and autumn leaves with a wide ribbon bow at the bottom'
+    ],
+    biale: 'white robe, white wings, white halo',
+    sceny: SCENY.zaduszki, grubosc: DEKORACYJNE, format: 'pion',
+    zestawy: {
+      swieci: {
+        warianty: [
+          'a bearded saint in a hooded robe with a rope belt and a halo ring, a small bird perched on his outstretched hand, full body fills the frame',
+          'a knight saint in plate armour with a halo ring holding a long lance, a small dragon curled at his feet, full body fills the frame',
+          'a saint in a soldier cloak with a halo ring pouring water from a wooden bucket onto a small burning house, full body fills the frame',
+          'a saint with a halo ring sitting on a horse, cutting his wide cloak in half with a sword, full body fills the frame',
+          'a saint queen with a halo ring and a tall crown, holding a small model of a church in both hands, full body fills the frame',
+          'an archangel in armour with large wings and a halo ring, a raised sword and a round shield, full body fills the frame',
+          'a saint with a halo ring holding a tall lily, a carpenter saw and a wooden square at his feet, full body fills the frame',
+          'a saint with a halo ring and a short beard holding two large crossed keys, full body fills the frame',
+          'a saint woman with a halo ring and a long veil playing a small harp, full body fills the frame',
+          'a saint woman with a halo ring in a long robe holding a tall tower with three windows, full body fills the frame',
+          'a hunter saint with a halo ring kneeling before a deer with a cross standing between its antlers, full body fills the frame',
+          'a tall saint with a halo ring and a wooden staff wading through a river with a small child sitting on his shoulder, full body fills the frame'
+        ],
+        // PODPISY — lista równoległa do `warianty`, ta sama kolejność. Trafiają na biały
+        // pasek pod rysunkiem przy wektoryzacji (scripts/lib/podpis.mjs). Forma pełna,
+        // z przydomkiem („z Asyżu"), bo imię samo bywa wieloznaczne — decyzja Jakuba.
+        // „Królowa z kościołem" to ikonograficznie św. Jadwiga Śląska (model kościoła w dłoniach).
+        podpisy: [
+          'św. Franciszek z Asyżu',
+          'św. Jerzy',
+          'św. Florian',
+          'św. Marcin z Tours',
+          'św. Jadwiga Śląska',
+          'św. Michał Archanioł',
+          'św. Józef',
+          'św. Piotr Apostoł',
+          'św. Cecylia',
+          'św. Barbara',
+          'św. Hubert',
+          'św. Krzysztof'
+        ],
+        sceny: SCENY.sakralne
+      },
+      // Druga dwunastka świętych (prośba Jakuba o „kolejnych"). Ten sam filtr: atrybut
+      // w KONTURZE, nie w kolorze ani w napisie. Narzędzia męczeństwa wchodzą tylko tam,
+      // gdzie są ikonograficznym znakiem rozpoznawczym od wieków (koło św. Katarzyny,
+      // krzyż św. Andrzeja); ruszt św. Wawrzyńca odpadł jako zbyt dosłowny dla dziecka.
+      // Biskupi tylko z atrybutem, którego Mikołaj nie ma (wiosło św. Wojciecha) —
+      // sama mitra z pastorałem to dla modelu „bishop", a stamtąd krok do Santa Clausa.
+      // Róże są u dwóch (Elżbieta w fartuchu, Teresa z krzyżem) — różni je sylwetka:
+      // królowa w koronie kontra zakonnica w welonie.
+      swieci2: {
+        warianty: [
+          'a saint girl with a halo ring wearing a crown of lit candles on her head, holding a small oil lamp, full body fills the frame',
+          'a saint woman with a halo ring and a crown standing beside a large spoked wooden wheel, holding a palm branch, full body fills the frame',
+          'a saint in a rough fur tunic with a halo ring holding a tall staff topped with a cross, a small lamb at his feet, full body fills the frame',
+          'a bearded saint with a halo ring and a long robe holding a sword point down and a thick book, full body fills the frame',
+          'a bearded saint with a halo ring standing beside a large X-shaped wooden cross, full body fills the frame',
+          'a bishop saint with a tall pointed mitre and a halo ring holding a long wooden oar, full body fills the frame',
+          'a saint queen with a halo ring and a small crown holding up her apron full of roses, full body fills the frame',
+          'a young saint girl with a halo ring and long hair holding a small lamb in her arms, full body fills the frame',
+          'a pilgrim saint with a halo ring in a wide-brimmed hat with a scallop shell, holding a tall staff with a gourd, full body fills the frame',
+          'a monk saint with a halo ring in a hooded robe holding an open book, a raven perched on a stump beside him, full body fills the frame',
+          'a young nun saint with a halo ring in a long veil holding a crucifix with a bunch of roses, full body fills the frame',
+          'an archangel with large wings and a halo ring holding a tall lily and a long straight trumpet, full body fills the frame'
+        ],
+        podpisy: [
+          'św. Łucja',
+          'św. Katarzyna Aleksandryjska',
+          'św. Jan Chrzciciel',
+          'św. Paweł Apostoł',
+          'św. Andrzej Apostoł',
+          'św. Wojciech',
+          'św. Elżbieta Węgierska',
+          'św. Agnieszka',
+          'św. Jakub Apostoł',
+          'św. Benedykt z Nursji',
+          'św. Teresa z Lisieux',
+          'św. Gabriel Archanioł'
+        ],
+        sceny: SCENY.sakralne
+      },
+      // WYNIK PIERWSZEJ SERII (2026-10-01, whimsy 30 + nautical 8): 36/38 rozpoznawalnych.
+      // Atrybuty, które model zgubił i które trzeba przepisać PRZED dogrywką:
+      //   • św. Piotr: „two large crossed keys" → DWA KRZYŻE. Klucz trzeba opisać
+      //     kształtem: „a pair of big old-fashioned door keys with round bows, crossed in an X"
+      //   • św. Andrzej: „X-shaped cross" → zwykły krzyż łaciński. Opisać geometrią:
+      //     „two long wooden beams crossing diagonally like the letter X"
+      //   • św. Wojciech: „oar" → pastorał (bishop ciągnie crozier). „a long boat oar with
+      //     a wide flat blade, held like a staff" i mitra dopiero po wiośle
+      //   • św. Izydor: „plough" → wiadro. „a wooden plough with a curved iron blade and two handles"
+      //   • św. Łukasz: wół → baranek (model ma jedno „zwierzę u stóp świętego"). Dać
+      //     „a large ox with wide horns lying beside him"
+      // Działa bez poprawek: Franciszek, Jerzy (smok mały, ale jest), Marcin, królowa
+      // z kościołem, Michał, Cecylia, Hubert, Krzysztof, Łucja, Katarzyna, Jan Chrzciciel,
+      // Paweł, Elżbieta, Agnieszka, Benedykt, Teresa, Kazimierz, Magdalena, Marta, Jacek
+      // (monstrancja zasłania mu twarz — i dobrze, jedna twarz mniej do zepsucia).
+      // Sześciu dodatkowych — polscy i „zawodowi" patroni, o których pyta się w szkole.
+      // Sześć wariantów × sześć scen = 36 par, wystarczy na dogrywkę.
+      swieci3: {
+        warianty: [
+          'a young prince saint with a halo ring and a crown holding a tall lily, full body fills the frame',
+          'a farmer saint with a halo ring and a straw hat holding a simple wooden plough, full body fills the frame',
+          'a saint with a halo ring painting at a wooden easel, a small ox lying beside him, full body fills the frame',
+          'a saint woman with a halo ring and very long loose hair holding a round jar with a lid, full body fills the frame',
+          'a saint woman with a halo ring in an apron holding a ladle, a bunch of keys hanging at her belt, full body fills the frame',
+          'a monk saint with a halo ring in a hooded robe holding up a tall monstrance with straight rays, full body fills the frame'
+        ],
+        podpisy: [
+          'św. Kazimierz Królewicz',
+          'św. Izydor Oracz',
+          'św. Łukasz Ewangelista',
+          'św. Maria Magdalena',
+          'św. Marta z Betanii',
+          'św. Jacek Odrowąż'
+        ],
+        sceny: SCENY.sakralne
+      }
+    }
+  },
   'zabawki/prezenty':          { warianty: [], sceny: SCENY.swieto, grubosc: DLA_MALUCHA, format: 'pion' },
   'serce':                     { warianty: [], sceny: SCENY.swieto,   grubosc: DEKORACYJNE, format: 'pion' },
   // Dom to budynek — stoi w krajobrazie, nie rośnie w doniczce.
