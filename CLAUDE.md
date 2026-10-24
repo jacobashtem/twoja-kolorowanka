@@ -45,6 +45,11 @@ produkcji), wejście w galerię każdej z nich i **zapis wyboru prosto do `_wybo
 Materiał roboczy kategorii, które są już na `origin/main`, kasuje się przy starcie panelu —
 `_wybor.txt` zostaje zawsze, bo to jedyny plik, którego nie da się odtworzyć.
 
+Z panelu prowadzi link do `/migracja`: **wszystkie** kategorie serwisu z liczbą liści wciąż
+ze stocka, pogrupowane na „w robocie / gotowe do generowania / najpierw prompty / już nasze",
+z gotową komendą `generuj-miks.mjs` (miks stylów z `prompty/style.mjs`) do skopiowania.
+Tekstowo: `node scripts/panel-selekcji.mjs --migracja`.
+
 ## Wymiana biblioteki grafik
 
 Trwa migracja z licencjonowanego stocka na własne grafiki generowane przez Recrafta.
