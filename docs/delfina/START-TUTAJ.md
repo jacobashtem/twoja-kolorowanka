@@ -70,7 +70,14 @@ Sprawdzenie, czy wszystko działa:
 node scripts/stat-kategorie.mjs             # ile kategorii, ile liści, postęp migracji
 node scripts/panel-selekcji.mjs --raport    # stan katalogu roboczego, nic nie kasuje
 node scripts/health-check.mjs               # spójność content ↔ public
+node scripts/panel-selekcji.mjs --migracja  # co jeszcze jest ze stocka i od czego zacząć
 ```
+
+**Od czego zacząć dzień:** `start.cmd` → link „Co jeszcze jest ze stocka". Strona pokazuje
+każdą kategorię, która ma jeszcze grafiki ze stocka, w kolejności „co da się zrobić teraz",
+a przy kategoriach gotowych do generowania podaje komendę serii do skopiowania. Seria to
+zawsze ten sam miks stylów (trzon whimsy + po 3 sztuki z każdego pozostałego), liczony
+przez `scripts/generuj-miks.mjs` — nie trzeba go układać ręcznie.
 
 ## Stan na 2026-08-22
 

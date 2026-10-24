@@ -8,6 +8,10 @@
 //
 // Uruchamianie: `start.cmd` w katalogu głównym (podwójne kliknięcie) albo
 //   node scripts/panel-selekcji.mjs [--port=4321] [--bez-sprzatania]
+//   node scripts/panel-selekcji.mjs --migracja    # tekstowo: co jeszcze jest ze stocka
+//
+// Pod `/migracja` stoi druga strona: WSZYSTKIE kategorie serwisu, nie tylko te w robocie,
+// z liczbą liści, które wciąż są ze stocka, i gotową komendą serii dla każdej.
 //
 // SPRZĄTANIE: kategorie, które są już na produkcji, tracą materiał roboczy przy starcie
 // panelu — patrz komentarz przy `czyNaProdzie` niżej. `_wybor.txt` zostaje ZAWSZE.
@@ -17,6 +21,7 @@ import { createServer } from 'node:http'
 import { join, resolve, extname, dirname } from 'node:path'
 import { KATEGORIE } from '../prompty/kategorie.mjs'
 import { zbudujGalerie, zapiszWybor, wczytajWybor, esc } from './lib/galeria-html.mjs'
+import { stanMigracji, komendaMiksu } from './lib/migracja.mjs'
 
 const argv = process.argv.slice(2)
 const PORT = Number((argv.find(a => a.startsWith('--port=')) ?? '').split('=')[1]) || 4321
@@ -222,6 +227,7 @@ function stronaGlowna (stany, posprzatane) {
   header { padding:20px 24px; background:#10B981; color:#fff; box-shadow:0 2px 8px rgba(0,0,0,.2) }
   header h1 { margin:0 0 4px; font-size:20px }
   header p { margin:0; opacity:.9; font-size:14px }
+  header a { color:#fff; font-weight:600 }
   .sprzatanie { margin:16px 24px 0; padding:10px 14px; border-radius:10px; font-size:14px;
                 background:#e0e7ff; color:#3730a3 }
   @media (prefers-color-scheme: dark){ .sprzatanie{ background:#312e81; color:#c7d2fe } }
@@ -249,7 +255,8 @@ function stronaGlowna (stany, posprzatane) {
 </style></head><body>
 <header>
   <h1>Panel selekcji kolorowanek</h1>
-  <p>${stany.length} kategorii w katalogu roboczym · ${doZrobienia} czeka na Twój wybór</p>
+  <p>${stany.length} kategorii w katalogu roboczym · ${doZrobienia} czeka na Twój wybór
+     · <a href="/migracja">Co jeszcze jest ze stocka →</a></p>
 </header>
 ${posprzatane.length ? `<div class="sprzatanie">Posprzątano materiał roboczy kategorii, które są już na produkcji:
   ${posprzatane.map(p => `<b>${esc(p.nazwa)}</b> (${p.plikow} plików, ${mb(p.bajtow)} MB)`).join(', ')}.
@@ -258,6 +265,115 @@ ${posprzatane.length ? `<div class="sprzatanie">Posprzątano materiał roboczy k
     ? ` Pominięto katalogi z plikami w gicie: ${posprzatane.flatMap(p => p.pominiete.map(s => `${p.nazwa}/${s}`)).join(', ')}.`
     : ''}</div>` : ''}
 <div class="siatka">${karty}</div>
+</body></html>`
+}
+
+// ── Migracja: wszystkie kategorie serwisu ───────────────────────────────────
+// Liczenie przechodzi ~4300 SVG-ów (kilka sekund), więc robimy je dopiero przy pierwszym
+// wejściu na stronę i trzymamy do końca sesji panelu. Po podmianie kategorii wystarczy
+// panel zrestartować.
+let migracjaCache = null
+const migracja = () => (migracjaCache ??= stanMigracji())
+
+// Cztery grupy w kolejności „co mogę zrobić teraz": kategorie już w katalogu roboczym
+// (czekają na selekcję albo podmianę), gotowe do puszczenia serii, wymagające najpierw
+// promptów i zamknięte. W grupach najpierw większe — więcej liści ze stocka do wymiany.
+function grupyMigracji (stany) {
+  const wRobocie = new Map(stany.filter(s => s.sciezkaContent && s.status !== 'na-prodzie' && s.status !== 'pusta')
+    .map(s => [s.sciezkaContent, s]))
+  const poStocku = (a, b) => b.stock - a.stock || a.sciezka.localeCompare(b.sciezka, 'pl')
+  const doZrobienia = migracja().filter(k => k.stock > 0).sort(poStocku)
+  return {
+    wRobocie: doZrobienia.filter(k => wRobocie.has(k.sciezka)).map(k => ({ ...k, robota: wRobocie.get(k.sciezka) })),
+    gotowe: doZrobienia.filter(k => !wRobocie.has(k.sciezka) && k.maWarianty),
+    bezPromptow: doZrobienia.filter(k => !wRobocie.has(k.sciezka) && !k.maWarianty),
+    nasze: migracja().filter(k => k.stock === 0).sort((a, b) => a.sciezka.localeCompare(b.sciezka, 'pl'))
+  }
+}
+
+function stronaMigracji (stany) {
+  const wszystkie = migracja()
+  const g = grupyMigracji(stany)
+  const lisciStock = wszystkie.reduce((n, k) => n + k.stock, 0)
+  const lisciRazem = wszystkie.reduce((n, k) => n + k.liscie, 0)
+  const procent = Math.round(100 * (lisciRazem - lisciStock) / lisciRazem)
+
+  const liczby = (k) => `<span class="liczby">${k.stock} z ${k.liscie} liści ze stocka · min. ${k.minimum}</span>`
+  const wiersz = (k, dalej) => `<li><div class="kat"><b>${esc(k.sciezka)}</b>${liczby(k)}</div>${dalej}</li>`
+  const komenda = (k) => {
+    const cmd = komendaMiksu(k.sciezka)
+    return `<div class="cmd"><code>${esc(cmd)}</code><button data-cmd="${esc(cmd)}">kopiuj</button></div>`
+  }
+  const sekcja = (tytul, opis, lista, dalej) => lista.length ? `
+    <section><h2>${tytul} <span class="ile">${lista.length}</span></h2><p class="opis">${opis}</p>
+    <ul>${lista.map(k => wiersz(k, dalej(k))).join('')}</ul></section>` : ''
+
+  return `<!doctype html>
+<html lang="pl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Migracja (${g.wRobocie.length + g.gotowe.length + g.bezPromptow.length} kategorii ze stockiem)</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin:0; font:15px/1.5 system-ui,sans-serif; background:#f5f5f4; color:#1c1917 }
+  header { padding:20px 24px; background:#10B981; color:#fff; box-shadow:0 2px 8px rgba(0,0,0,.2) }
+  header h1 { margin:0 0 4px; font-size:20px }
+  header p { margin:0; opacity:.9; font-size:14px }
+  header a { color:#fff; font-weight:600 }
+  .pasek { height:8px; background:rgba(255,255,255,.3); border-radius:4px; margin-top:10px; max-width:480px }
+  .pasek div { height:100%; background:#fff; border-radius:4px }
+  main { padding:8px 24px 40px; max-width:1100px }
+  h2 { font-size:17px; margin:28px 0 2px }
+  .ile { font-size:13px; font-weight:400; padding:1px 8px; border-radius:999px; background:#e7e5e4; color:#57534e }
+  .opis { margin:0 0 10px; color:#78716c; font-size:14px }
+  ul { list-style:none; margin:0; padding:0; display:grid; gap:8px }
+  li { background:#fff; border:1px solid #e7e5e4; border-radius:10px; padding:10px 14px }
+  .kat { display:flex; gap:12px; flex-wrap:wrap; align-items:baseline }
+  .liczby { color:#78716c; font-size:13px }
+  .cmd { display:flex; gap:8px; align-items:center; margin-top:6px }
+  code { flex:1; min-width:0; overflow-x:auto; white-space:nowrap; font-size:12px; padding:4px 8px;
+         background:#f5f5f4; border-radius:6px }
+  button { font:inherit; font-size:12px; padding:3px 10px; border-radius:6px; border:1px solid #d6d3d1;
+           background:#fff; cursor:pointer; color:inherit }
+  .dalej { margin-top:4px; font-size:13px; color:#78716c }
+  .dalej a { color:#10B981; font-weight:600 }
+  .nasze { color:#78716c; font-size:14px }
+  @media (prefers-color-scheme: dark){
+    body{ background:#1c1917; color:#e7e5e4 }
+    li{ background:#292524; border-color:#44403c }
+    code{ background:#1c1917 }
+    button{ background:#292524; border-color:#57534e }
+    .ile{ background:#44403c; color:#d6d3d1 }
+  }
+</style></head><body>
+<header>
+  <h1>Migracja ze stocka na Recrafta</h1>
+  <p>${wszystkie.length - g.nasze.length} z ${wszystkie.length} kategorii ma jeszcze grafiki ze stocka
+     · ${lisciStock} z ${lisciRazem} liści do wymiany · <a href="/">← panel selekcji</a></p>
+  <div class="pasek" title="${procent}% liści już naszych"><div style="width:${procent}%"></div></div>
+</header>
+<main>
+${sekcja('W robocie', 'Materiał leży w <code>lineart-work/</code> — dokończ selekcję albo podmianę, zanim zaczniesz nową serię.',
+  g.wRobocie, k => `<div class="dalej">${esc(ETYKIETY[k.robota.status].tekst)}${k.robota.plikow
+    ? ` · <a href="/k/${encodeURIComponent(k.robota.nazwa)}/">otwórz galerię →</a>` : ''}</div>`)}
+${sekcja('Gotowe do generowania', 'Warianty są w księdze promptów. Komenda puszcza miks stylów z <code>prompty/style.mjs</code> '
+  + '(trzon whimsy + po 3 sztuki z każdego pozostałego stylu) — najpierw jako <code>--dry-run</code>: pokaże prompty i koszt, nic nie wyda. '
+  + 'Prawdziwą serię puszcza się tą samą komendą bez <code>--dry-run</code>.',
+  g.gotowe, komenda)}
+${sekcja('Najpierw prompty', 'Kategoria nie ma jeszcze wariantów w <code>prompty/kategorie.mjs</code>, więc generator odmówi startu. '
+  + 'Faza 1 skilla <code>kategoria-kolorowanek</code>: 12 wariantów i 6 scen, zasady w <code>docs/ksiega-promptow.md</code>.',
+  g.bezPromptow, () => '')}
+<section><h2>Już nasze <span class="ile">${g.nasze.length}</span></h2>
+<p class="nasze">${g.nasze.map(k => `${esc(k.sciezka)} (${k.liscie})`).join(' · ')}</p></section>
+</main>
+<script>
+  document.addEventListener('click', async (e) => {
+    const b = e.target.closest('button[data-cmd]')
+    if (!b) return
+    try { await navigator.clipboard.writeText(b.dataset.cmd); b.textContent = 'skopiowane' }
+    catch { b.textContent = 'zaznacz ręcznie' }
+    setTimeout(() => { b.textContent = 'kopiuj' }, 1500)
+  })
+</script>
 </body></html>`
 }
 
@@ -303,6 +419,21 @@ if (argv.includes('--raport')) {
   process.exit(0)
 }
 
+// `--migracja` — to samo co strona /migracja, tekstem i bez podnoszenia serwera.
+if (argv.includes('--migracja')) {
+  const g = grupyMigracji(stany)
+  const wiersz = (k) => `  ${k.sciezka.padEnd(34)} ${String(k.stock).padStart(3)} z ${String(k.liscie).padStart(3)} ze stocka   min. ${k.minimum}`
+  console.log('\nW ROBOCIE (dokończ przed nową serią)')
+  for (const k of g.wRobocie) console.log(`${wiersz(k)}   ${ETYKIETY[k.robota.status].tekst}`)
+  console.log('\nGOTOWE DO GENEROWANIA')
+  for (const k of g.gotowe) console.log(`${wiersz(k)}\n      ${komendaMiksu(k.sciezka)}`)
+  console.log('\nNAJPIERW PROMPTY (brak wariantów w prompty/kategorie.mjs)')
+  for (const k of g.bezPromptow) console.log(wiersz(k))
+  const stock = migracja().reduce((n, k) => n + k.stock, 0)
+  console.log(`\nJuż nasze: ${g.nasze.length} kategorii. Ze stocka zostało ${stock} liści w ${migracja().length - g.nasze.length} kategoriach.\n`)
+  process.exit(0)
+}
+
 const posprzatane = BEZ_SPRZATANIA ? [] : posprzataj(stany)
 if (posprzatane.length) {
   for (const p of posprzatane) {
@@ -333,6 +464,12 @@ createServer((req, res) => {
   if (url === '/' || url === '/index.html') {
     res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' })
     res.end(stronaGlowna(stany, posprzatane))
+    return
+  }
+
+  if (url === '/migracja') {
+    res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' })
+    res.end(stronaMigracji(stany))
     return
   }
 
