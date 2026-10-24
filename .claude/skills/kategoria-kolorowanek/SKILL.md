@@ -10,19 +10,24 @@ Migracja biblioteki z licencjonowanego stocka na własne grafiki z Recrafta.
 
 **Pełny cykl przeszło dwanaście kategorii** (stan 2026-08-22): dinozaury, jaszczurki,
 jednorożce, kombajny, koniki, koty, króliczki, motyle, pieski, smoki, syrenki, wróżki —
-razem 662 liście. Sprawdzone plik po pliku, nie na słowo: w żadnym z nich nie ma grupy `<g>`,
-podczas gdy każdy plik ze stocka ma ich od kilkudziesięciu w górę. W całym `public/` zostały
-**cztery** pliki ze znacznikiem Freepika: `pory-roku/zima/44`, `pory-roku/zima/10`,
-`zwierzeta/mis/44`, `pojazdy/samochody/34`.
+razem 662 liście. Od tego czasu doszły halloween i wszystkich-swietych — aktualny stan
+zawsze z `--migracja` niżej, nie z tego akapitu.
 
-**Jak sprawdzić pochodzenie pliku** (przydaje się przy pytaniu „czy ta kategoria jest już
-nasza"): grupy `<g>` znaczą stock, ich brak — nasz potrace albo wektoryzator Recrafta.
-Sam `<defs>` z gradientem NIE jest oznaką stocka; to podpis wektoryzatora Recrafta i łatwo
-się na tym pomylić.
+**Co jeszcze jest ze stocka — pełna lista z komendą serii dla każdej kategorii:**
 
 ```
-grep -c '<g[ >]' public/<sciezka>/<n>/<plik>.svg     # 0 = nasze, >0 = ze stocka
+node scripts/panel-selekcji.mjs --migracja    # tekstowo
+start.cmd → „Co jeszcze jest ze stocka"       # to samo w panelu, /migracja
 ```
+
+Pomiar 2026-10-24: **64 z 78 kategorii, 3503 z 4291 liści wciąż ze stocka.** Liczba „cztery
+pliki" sprzed tej daty dotyczyła znacznika Freepika w treści, nie pochodzenia pliku.
+
+**Jak rozpoznać pochodzenie pliku:** stock = komentarz `Adobe Illustrator` w nagłówku
+**albo** jakakolwiek grupa `<g>`. Każdy znak z osobna się myli: 219 plików ze stocka nie ma
+żadnej grupy, a flamingi (i 3 inne pliki) mają grupy bez znacznika Illustratora. Nasze pliki
+nie mają żadnego z nich. Sam `<defs>` z gradientem NIE jest oznaką stocka — to podpis
+wektoryzatora Recrafta. Logika siedzi w `scripts/lib/migracja.mjs`.
 
 **Zasady niepodlegające negocjacji:**
 
@@ -35,10 +40,11 @@ grep -c '<g[ >]' public/<sciezka>/<n>/<plik>.svg     # 0 = nasze, >0 = ze stocka
 ## Zanim zaczniesz
 
 ```
+node scripts/panel-selekcji.mjs --migracja   # która kategoria następna i jej komenda
 node scripts/stat-kategorie.mjs
 ```
 
-Daje: liczbę liści kategorii, wymagane minimum (sekcje H2 × 4 — poniżej tego ostatnie sekcje
+`stat-kategorie` daje: liczbę liści kategorii, wymagane minimum (sekcje H2 × 4 — poniżej tego ostatnie sekcje
 SEO mają nagłówek i **pustą galerię**), stan księgi promptów i koszt przy obu stawkach.
 Cel domyślny to **32 sztuki na kategorię**; sześć kategorii z 9 sekcjami H2 potrzebuje 36.
 
@@ -103,6 +109,23 @@ puść pilota: 3 sztuki na styl, **te same prompty** (`--od=0 --krok=13`), potem
 **Diagnostyka:** sztuka zła w jednym stylu = wina stylu. Zła w kilku naraz = **wina promptu**.
 
 ## Faza 3 — generowanie
+
+Seria kategorii to **miks stylów, nie jeden styl** — jedno polecenie:
+
+```
+node scripts/generuj-miks.mjs <kategoria> --count=48 --goly --dry-run   # prompty i koszt
+node scripts/generuj-miks.mjs <kategoria> --count=48 --goly             # seria
+```
+
+Podział liczy `prompty/style.mjs` (`podzialMiksu`): trzon whimsy + po 3 sztuki z każdego
+pozostałego stylu, czyli przy 10 stylach 21 + 9×3. Wrapper sam dobiera UUID, `--model-id`
+i `--od` każdej serii tak, żeby kombinacje wariant×scena się nie powtarzały. Przy pojazdach
+dołóż `lineart2` przez `--miks=` (gotową komendę podaje strona `/migracja` panelu).
+Reguła z pamięci `seria-48-wszystkie-style`: **generuje się szeroko, proporcje ustala
+selekcja** — nie ustawiaj udziałów stylów według wyboru z poprzedniej kategorii.
+Dogrywka do kategorii z istniejącą serią: `--od-start=<sztuk już zrobionych × 13>`.
+
+Pojedynczy styl (pilot, dogrywka jednego stylu) — generator bezpośrednio:
 
 ```
 node scripts/lineart-generate.mjs <kategoria> --model=v3 --model-id=recraftv3 \
