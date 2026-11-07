@@ -2,8 +2,9 @@
 // Uzycie: node scripts/fix-canonicals.mjs [--write]
 import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from 'node:fs'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
+const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const CONTENT = join(ROOT, 'content')
 const WRITE = process.argv.includes('--write')
 

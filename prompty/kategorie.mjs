@@ -765,7 +765,29 @@ export const KATEGORIE = {
   'pojazdy/pociagi':     { warianty: [], sceny: SCENY.tory,  grubosc: DLA_DZIECKA, format: 'poziom' },
 
   // ══ POWIETRZE I KOSMOS ═════════════════════════════════════════════════════
-  'pojazdy/samoloty': { warianty: [], sceny: SCENY.przestworza, grubosc: DLA_DZIECKA, format: 'poziom' },
+  // Kuzyni, których trzeba unikać: śmigłowiec (słowo „rotor", śmigło NA GÓRZE), rakieta
+  // („flames", „launching", pionowy start) i ptak („feathers"). Kotwica samolotu to
+  // SKRZYDŁA PO BOKACH KADŁUBA — każdy wariant różni się ich układem albo napędem.
+  // Strona obiecuje samoloty „wojskowe i pasażerskie", ale bez uzbrojenia: myśliwiec
+  // i transportowiec opisane wyłącznie kształtem, zero rakiet i bomb pod skrzydłami.
+  // Wodnosamolot na pasie startowym (scena 2) wygląda dziwnie, ale nie absurdalnie.
+  'pojazdy/samoloty': {
+    warianty: [
+      'a big passenger airliner with a long row of round windows and two jet engines under its wings',
+      'a jumbo jet with a humped upper deck and four engines under its wings',
+      'a small private jet with a slim body, two engines at the back and a T-shaped tail',
+      'a small propeller plane with one high wing on top of the cabin',
+      'a twin-propeller plane with an engine on each wing',
+      'a vintage biplane with two stacked wings and a pilot in goggles in the open cockpit',
+      'a seaplane with two long floats under its body instead of wheels',
+      'a sleek jet fighter with swept-back triangle wings and a pointed nose',
+      'a wide cargo plane with a fat belly and its rear ramp open',
+      'a glider with very long thin wings and no engine',
+      'a little stunt plane with a short round body and a big front propeller',
+      'a friendly cartoon airplane with a smiling face on its nose'
+    ],
+    sceny: SCENY.przestworza, grubosc: DLA_DZIECKA, format: 'poziom'
+  },
   'pojazdy/rakiety':  { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_MALUCHA, format: 'pion' },
   'kosmos':           { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_DZIECKA, format: 'poziom' },
 

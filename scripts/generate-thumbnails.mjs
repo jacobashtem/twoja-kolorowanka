@@ -6,11 +6,12 @@
 // gdzie świeży checkout gita nadaje wszystkim plikom zbliżone mtime i porównanie jest losowe.
 import { readdirSync, statSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
 const MISSING_ONLY = process.argv.includes('--missing-only')
 
-const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
+const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const PUBLIC = join(ROOT, 'public')
 const SIZES = [{ suffix: '-thumb', width: 400 }, { suffix: '-view', width: 800 }]
 const CONCURRENCY = 8

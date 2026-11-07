@@ -3,8 +3,9 @@
 // Uruchamiany po `nuxt generate` (patrz "build" w package.json).
 import { readFileSync, existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
+const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const OUT = join(ROOT, '.output', 'public')
 
 const problems = []
