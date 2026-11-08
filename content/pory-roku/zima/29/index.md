@@ -7,7 +7,7 @@ image: /pory-roku/zima/29/zima-29.svg
 pdf: /pory-roku/zima/29/zima-29.pdf
 alt: "Kolorowanka do druku zima"
 tags:
-- trudnosc-7
+- trudnosc-5
 - pory-roku
 - zima
 ---

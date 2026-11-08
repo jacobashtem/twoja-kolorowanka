@@ -7,7 +7,7 @@ image: /pory-roku/zima/25/zima-25.svg
 pdf: /pory-roku/zima/25/zima-25.pdf
 alt: "Kolorowanka zima"
 tags:
-- trudnosc-8
+- trudnosc-5
 - pory-roku
 - zima
 ---

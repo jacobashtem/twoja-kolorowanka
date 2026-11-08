@@ -7,7 +7,7 @@ image: /pory-roku/zima/20/zima-20.svg
 pdf: /pory-roku/zima/20/zima-20.pdf
 alt: "Kolorowanki zima"
 tags:
-- trudnosc-6
+- trudnosc-5
 - pory-roku
 - zima
 ---

@@ -1098,7 +1098,82 @@ export const KATEGORIE = {
   'pory-roku/wiosna': { warianty: [], sceny: SCENY.krajobraz, grubosc: DLA_DZIECKA, format: 'poziom' },
   'pory-roku/lato':   { warianty: [], sceny: SCENY.krajobraz, grubosc: DLA_DZIECKA, format: 'poziom' },
   'pory-roku/jesien': { warianty: [], sceny: SCENY.krajobraz, grubosc: DLA_DZIECKA, format: 'poziom' },
-  'pory-roku/zima':   { warianty: [], sceny: SCENY.krajobraz, grubosc: DLA_DZIECKA, format: 'poziom' },
+  // ZIMA (2026-11-08) — pierwsza z pór roku. Strona obiecuje bałwany, sanki, śnieżki,
+  // igloo, renifery, pingwiny, niedźwiedzie polarne i Mikołaja (serwis nie ma osobnej
+  // kategorii świątecznej, więc Mikołaj mieszka tutaj). Trzy światy, trzy zestawy:
+  //   • główny — zimowa przyroda i symbole (pula `zima`)
+  //   • `zabawy` — dziecko w ruchu na śniegu (pula `zima`)
+  //   • `swieta` — Mikołaj, choinka, pierniki (pula `gwiazdka`)
+  // Pułapki sąsiedniego obiektu:
+  //   • DANIEL → ŁOŚ. Łopatowate poroże to też cecha łosia, więc kotwicą jest DROBNOŚĆ:
+  //     wąska główka, cienkie nogi, długi ogon. Bez cętek — łaty model zaczernia.
+  //   • DANIEL ↔ RENIFER. Renifer zakotwiczony na kryzie z sierści pod szyją i szerokich
+  //     racicach, których daniel nie ma. Bez czerwonego nosa (cudza postać).
+  //   • ZAJĄC/LIS — lis polarny zamiast zająca bielaka, bo bielak bez czarnych końcówek
+  //     uszu to po prostu królik (`zwierzeta/kroliczki`).
+  'pory-roku/zima': {
+    warianty: [
+      'a snowman made of three stacked snowballs with a carrot nose, a top hat, a knitted scarf and twig arms',
+      'a short two-ball snowman wearing fluffy earmuffs and holding a straw broom in one twig arm',
+      'a reindeer with tall branching antlers, a thick shaggy ruff of fur under its neck and broad round hooves',
+      'a slender fallow deer stag with a small narrow head, thin long legs, a long tail and flat palm-shaped antlers edged with points',
+      'a snowy owl with big round eyes and fluffy feathered feet perched on a stump',
+      'an igloo built of rounded ice blocks with an arched tunnel entrance',
+      'a giant six-armed snowflake with branching crystal arms, each arm ending in a small star shape',
+      'a penguin in a knitted bobble hat gliding on ice skates with its flippers spread wide',
+      'a round polar bear cub sitting up on its hind legs and holding a snowball in its paws',
+      'a wooden bird feeder with a pitched roof on a pole, two small round birds pecking at seeds',
+      'a small log cabin with a thick layer of snow on the roof, long icicles along the eaves and a smoking chimney',
+      'an arctic fox curled up with its huge bushy tail wrapped around its nose'
+    ],
+    biale: 'white snow, white sky',
+    sceny: SCENY.zima, grubosc: DLA_DZIECKA, format: 'poziom',
+    zestawy: {
+      // ZABAWY — strona ma sekcję „śnieżne przygody". Jedno dziecko w kadrze (bitwa
+      // na śnieżki dwojga = dwie twarze do zepsucia, lekcja z syrenek), więc rzut
+      // śnieżką jest solo, a kulig to koń i sanie bez pasażerów.
+      // Morsowanie to niespodzianka — polski zimowy fenomen, którego stock nie ma.
+      // Ryzyko: przerębel kłóci się z częścią scen (wzgórze, uliczka); jeśli w pilocie
+      // wyjdzie bzdura, wariant wylatuje, scen nie ruszamy.
+      zabawy: {
+        warianty: [
+          'a child in a bobble hat and a puffy jacket sliding downhill on a wooden sled with curled runners, full body fills the frame',
+          'a child in mittens throwing a snowball with one arm raised high, a small pile of snowballs at its feet, full body fills the frame',
+          'a child on skis with two ski poles and goggles pushed up on a bobble hat, full body fills the frame',
+          'a girl ice skating with her arms spread out and a long striped scarf flying behind her, full body fills the frame',
+          'a child lying on its back in the snow making a snow angel with arms and legs spread wide',
+          'a child pushing a huge snowball that is taller than itself, full body fills the frame',
+          'a child on a snowboard jumping with knees bent and arms out for balance, full body fills the frame',
+          'a child in ice skates and a helmet holding a hockey stick and a puck, full body fills the frame',
+          'a snow castle with round towers, crenellated walls, an arched gate and a little flag on top',
+          'a wooden sleigh with curled runners pulled by a horse in a harness with round bells',
+          'a cheerful ice swimmer in a woolly bobble hat, waist-deep in a round hole cut in the ice, both arms raised',
+          'a child in a bobble hat and mittens catching snowflakes on its tongue, full body fills the frame'
+        ]
+      },
+      // ŚWIĘTA — strona obiecuje Mikołaja, choinki i szopki. Mikołaj generyczny (broda,
+      // czapka z pomponem, worek), bez renifera z czerwonym nosem. Szopka BEZ postaci
+      // ludzkich — stajenka, żłób i gwiazda wystarczą, a każda postać to twarz do zepsucia.
+      // Wieniec adwentowy zamiast czwartego renifera — polska tradycja, mocny obrys.
+      swieta: {
+        warianty: [
+          'Santa Claus with a long curly beard and a fur-trimmed hat carrying a big sack of presents over his shoulder, full body fills the frame',
+          'Santa Claus in a wooden sleigh piled with presents, pulled by one reindeer with tall branching antlers',
+          'a decorated Christmas tree with round baubles, a garland of beads and a big star on top, wrapped presents underneath',
+          'a gingerbread house with icing trim along the roof, a candy-cane door frame and round sweets on the walls',
+          'a gingerbread man cookie with icing buttons, wavy icing trim on its arms and legs and a bow tie',
+          'a little elf in a pointed hat with a bell and curly-toed shoes carrying a wrapped present, full body fills the frame',
+          'a little angel with round feathered wings, a halo ring and a long gown holding a star, full body fills the frame',
+          'three Christmas stockings with fluffy cuffs hanging in a row, each with a different pattern',
+          'a big round Christmas bauble with a ribbon bow on top, decorated with snowflake and star patterns',
+          'an Advent wreath of fir branches with four tall candles and ribbon bows',
+          'a small wooden nativity stable with a thatched roof and an empty manger full of straw, a big star shining above',
+          'a snow globe with a tiny snowman and a fir tree inside, standing on a round carved base'
+        ],
+        sceny: SCENY.gwiazdka
+      }
+    }
+  },
 
   // ══ WZORY (nie obiekty) ════════════════════════════════════════════════════
   // Druga oś to UKŁAD, nie scena — ornament nigdzie nie stoi.

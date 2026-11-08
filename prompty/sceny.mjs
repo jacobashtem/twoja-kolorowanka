@@ -575,6 +575,38 @@ export const SCENY = {
     'with a wide rainbow arching overhead'
   ],
 
+  // ── Zima: neutralne tło dla motywu sezonowego ──────────────────────────────
+  // Przyimkowo, bez czasowników, bo wśród wariantów są igloo, płatek śniegu i chatka,
+  // które nigdzie nie idą. Osiem, nie sześć — seria 48 (lekcja z halloween).
+  // Śnieg „a few big snowflakes", nigdy „falling snow" ani „blizzard": gęsta zamieć
+  // to setki kropek-pól mniejszych od kredki, czyli sztrych, którego walidator nie widzi.
+  // Bez „night" i „dark" (tokeny czerni) — księżyc sam mówi, że to wieczór.
+  // ŚWIADOMIE nie ma tu chatki, karmnika ani sanek: są wariantami, a jako rekwizyt
+  // sceny wychodziłyby podwójnie na jednej kartce.
+  zima: [
+    'on a snowy hill with a few big snowflakes drifting down',
+    'beside a frozen pond with reeds poking out of the snow',
+    'among snow-covered fir trees with a wooden fence half buried in snow',
+    'next to a wooden signpost capped with snow and a lantern on a post',
+    'under a crescent moon with a few small stars over snowy hills',
+    'in a snowy village lane with a street lamp and a low stone wall',
+    'at the foot of snow-capped mountains with a few rounded pine trees',
+    'in a snowy garden with a bench covered in snow and a rowan bush with berry clusters'
+  ],
+
+  // `gwiazdka` — świąteczny świat dla zestawu `swieta` w zimie. Bez kominka z ogniem
+  // (płomienie to lita czerń) i bez skarpet na gzymsie, bo skarpety są wariantem.
+  gwiazdka: [
+    'among wrapped presents with big ribbon bows',
+    'under a garland of fir branches with round baubles and bows',
+    'on a snowy roof with a brick chimney and a few big snowflakes',
+    'under a sky with one big shining star and a few small stars',
+    'next to a table with a plate of cookies and a glass of milk',
+    'in a snowy village square with a tall decorated tree in the distance',
+    'beside a frosted window with a candle on the sill',
+    'among snow-covered fir trees with a lantern hanging on a branch'
+  ],
+
   krajobraz: [
     'on a path winding between trees',
     'beside a pond ringed with reeds',
