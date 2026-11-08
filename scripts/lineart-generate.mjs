@@ -547,6 +547,8 @@ function dopiszDoManifestu (nazwa, i) {
     try { manifest = JSON.parse(readFileSync(MANIFEST, 'utf8')) } catch { manifest = { pliki: {} } }
     manifest.kategoria = klucz
     manifest.zestaw = ZESTAW || null
+    // Tagi zestawu (np. `dla-doroslych`) — podmien-kategorie dopisze je do liścia.
+    manifest.tagi = cfg.tagi ?? []
   }
   manifest.pliki[nazwa] = osie(i)
   writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2))

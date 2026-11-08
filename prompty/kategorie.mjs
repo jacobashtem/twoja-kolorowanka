@@ -765,7 +765,59 @@ export const KATEGORIE = {
   'pojazdy/pociagi':     { warianty: [], sceny: SCENY.tory,  grubosc: DLA_DZIECKA, format: 'poziom' },
 
   // ══ POWIETRZE I KOSMOS ═════════════════════════════════════════════════════
-  'pojazdy/samoloty': { warianty: [], sceny: SCENY.przestworza, grubosc: DLA_DZIECKA, format: 'poziom' },
+  // Kuzyni, których trzeba unikać: śmigłowiec (słowo „rotor", śmigło NA GÓRZE), rakieta
+  // („flames", „launching", pionowy start) i ptak („feathers"). Kotwica samolotu to
+  // SKRZYDŁA PO BOKACH KADŁUBA — każdy wariant różni się ich układem albo napędem.
+  // Strona obiecuje samoloty „wojskowe i pasażerskie", ale bez uzbrojenia: myśliwiec
+  // i transportowiec opisane wyłącznie kształtem, zero rakiet i bomb pod skrzydłami.
+  // Wodnosamolot na pasie startowym (scena 2) wygląda dziwnie, ale nie absurdalnie.
+  'pojazdy/samoloty': {
+    warianty: [
+      'a big passenger airliner with a long row of round windows and two jet engines under its wings',
+      'a jumbo jet with a humped upper deck and four engines under its wings',
+      'a small private jet with a slim body, two engines at the back and a T-shaped tail',
+      'a small propeller plane with one high wing on top of the cabin',
+      'a twin-propeller plane with an engine on each wing',
+      'a vintage biplane with two stacked wings and a pilot in goggles in the open cockpit',
+      'a seaplane with two long floats under its body instead of wheels',
+      'a sleek jet fighter with swept-back triangle wings and a pointed nose',
+      'a wide cargo plane with a fat belly and its rear ramp open',
+      'a glider with very long thin wings and no engine',
+      'a little stunt plane with a short round body and a big front propeller',
+      'a friendly cartoon airplane with a smiling face on its nose'
+    ],
+    sceny: SCENY.przestworza, grubosc: DLA_DZIECKA, format: 'poziom'
+    ,
+    zestawy: {
+      // DLA DOROSŁYCH (Delfina, 2026-11-07) — pilot pod styl `doroslyV4`. Pierwsza próba
+      // tego stylu na zwykłych promptach dała cienką kreskę, ale pusty, realistyczny
+      // rysunek: gęstość robi PROMPT, nie styl. W kolorowankach dla dorosłych ornament
+      // siedzi WEWNĄTRZ obiektu, a tło jest ozdobną ramą, więc tu odwrotnie niż przy
+      // dzieciach: wariant = sylwetka + rodzaj wzoru (każdy inny), scena = dekoracyjne tło.
+      dorosli: {
+        // `tagi` jadą przez _manifest.json aż do frontmattera liścia (podmien-kategorie),
+        // żeby strona z `tagsFilter: dla-doroslych` mogła później zebrać te kolorowanki
+        // ze wszystkich kategorii naraz.
+        tagi: ['dla-doroslych'],
+        warianty: [
+          'a vintage biplane with its wings and body covered in intricate paisley and floral patterns',
+          'a passenger airliner with its body filled with mandala rosettes and swirling ornaments',
+          'a seaplane on two floats decorated all over with zentangle patterns of scales, waves and dots',
+          'a propeller plane with art nouveau leaves and curling vines covering its wings',
+          'a jet fighter with swept-back wings covered in geometric patterns of triangles, diamonds and stripes',
+          'a sailplane glider with a cockpit canopy and very long wings decorated with feather patterns'
+        ],
+        sceny: [
+          'framed by an oval border of swirling clouds and tiny stars',
+          'among stylized spiral clouds filled with lace patterns',
+          'above a patchwork of fields, each field filled with a different ornamental pattern',
+          'in front of a large sun made of layered petals and rays',
+          'through a sky of decorative swirls, dots and tiny flowers',
+          'over a sea of stylized curling waves with ornamental crests'
+        ]
+      }
+    }
+  },
   'pojazdy/rakiety':  { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_MALUCHA, format: 'pion' },
   'kosmos':           { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_DZIECKA, format: 'poziom' },
 

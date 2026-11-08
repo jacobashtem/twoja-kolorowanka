@@ -118,7 +118,7 @@ node scripts/generuj-miks.mjs <kategoria> --count=48 --goly             # seria
 ```
 
 Podział liczy `prompty/style.mjs` (`podzialMiksu`): trzon whimsy + po 3 sztuki z każdego
-pozostałego stylu, czyli przy 10 stylach 21 + 9×3. Wrapper sam dobiera UUID, `--model-id`
+pozostałego stylu: trzon dzielony pół na pół whimsy/whimsyV4, czyli przy 48 sztukach 12 + 12 + 8×3. Styl `rugged` wycofany 2026-11-08 — nie dokładać go. Wrapper sam dobiera UUID, `--model-id`
 i `--od` każdej serii tak, żeby kombinacje wariant×scena się nie powtarzały. Przy pojazdach
 dołóż `lineart2` przez `--miks=` (gotową komendę podaje strona `/migracja` panelu).
 Reguła z pamięci `seria-48-wszystkie-style`: **generuje się szeroko, proporcje ustala

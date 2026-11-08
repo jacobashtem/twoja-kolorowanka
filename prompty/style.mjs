@@ -117,6 +117,34 @@ export const STYLE = {
     uwaga: 'nowy — pilot halloween 2026-10-01, bez werdyktu'
   },
 
+  // ── STYLE V4 POD ODBIORCĘ (Delfina, 2026-11-07) ────────────────────────────
+  // Referencje dobrane z NASZYCH liści na produkcji według zmierzonej trudności
+  // (tag trudnosc-N) i wagi SVG < 300 KB (bez cieniowania), potem okiem z arkusza.
+  // Tematy celowo różne — `precise` kopiuje też kompozycję. Poza domyślnym miksem,
+  // dopóki pilot nie da werdyktu.
+  starszeV4: {
+    id: 'ca0f0a6c-e901-4f7d-ae39-3fb775f31d02',
+    nazwa: 'Starsze dziecko V4 (własny, wektor)',
+    modelId: 'recraftv4_styles_vector',
+    model: 'v4s-vector',
+    cena: 0.05,
+    natywnySvg: true,
+    // referencje (T6–7, średnia wyraźna kreska, scenka, bez czerni): wrozki-41, syrenki-40,
+    // dinozaury-19, koniki-66, motyle-39, smoki-35, kombajny-29, halloween-52
+    uwaga: 'nowy — pilot 2026-11-07, bez werdyktu'
+  },
+  doroslyV4: {
+    id: '88c1461c-d381-4c3c-b54e-f294858fa65b',
+    nazwa: 'Dorosły V4 (własny, wektor)',
+    modelId: 'recraftv4_styles_vector',
+    model: 'v4s-vector',
+    cena: 0.05,
+    natywnySvg: true,
+    // referencje (T8–9, cienka kreska, ornament i wzór, bez sztrychu): halloween-73 (czaszka),
+    // motyle-49, koniki-74 (karuzela), syrenki-45, wrozki-49, smoki-38, halloween-75, wrozki-48
+    uwaga: 'nowy — pilot 2026-11-07, bez werdyktu'
+  },
+
   // ── PRÓBKOWANE, ALE Z OSTRZEŻENIEM ────────────────────────────────────────
   // Te style wypadły słabo w testach na koniach, kotach i pieskach i NIE nadają się
   // na trzon kategorii. Zostają w miksie po trzy sztuki, bo pojedyncze rysunki z nich
@@ -166,7 +194,10 @@ export const STYLE = {
     // To jest najlepszy dowód na regułę „próbkuj każdy styl": gdyby go nie było
     // w galerii, te trzy sztuki nigdy by nie powstały.
     // UWAGA: ciężkie pliki, więc sprawdzić wagę SVG po wektoryzacji przed podmianą.
-    uwaga: 'półtony i cieniowanie, ciężki (1943 KB) — ale 3/3 wybrane na syrenkach'
+    // WYCOFANY Z MIKSU (Delfina, 2026-11-08): nie generujemy go już w seriach.
+    // Wpis zostaje tylko po to, żeby było wiadomo, skąd pochodzą istniejące liście.
+    wycofany: true,
+    uwaga: 'WYCOFANY 2026-11-08 — półtony i cieniowanie, ciężki (1943 KB)'
   }
 }
 
@@ -196,23 +227,30 @@ export const STYLE = {
 //   • żaden styl nie może wypaść z galerii, bo dopiero zestawienie wszystkich naraz
 //     pokazuje, który złapał TEN temat; ranking stylów jest cechą stylu, ale trafienie
 //     w konkretną kategorię już nie
-// Przy jedenastu stylach i próbce 3 daje to 18 sztuk trzonu + 10×3 = równo 48.
+// Przy obecnym miksie (8 stylów pobocznych, próbka 3) daje to 24 sztuki trzonu + 8×3 = 48.
 export const SERIA_DOMYSLNA = 48
 
 export const TRZON = 'whimsy'
+// DRUGA POŁOWA TRZONU (Delfina, 2026-11-07): trzon dzielimy po połowie między whimsy V3
+// a whimsyV4 (ten sam wygląd, styl V4 zbudowany z referencji whimsy). Pilot halloween dał
+// 4/4 czystych przy `precise` i lepsze trzymanie promptu, ale tylko 4 sztuki — połowa
+// trzonu w każdej serii da porównanie na prawdziwym materiale. Gdy whimsyV4 nie ma
+// w `--miks=`, cały trzon wraca do whimsy.
+export const TRZON_V4 = 'whimsyV4'
 export const PROBKA_NA_STYL = 3
-// Dziesięć stylów. `lineart2` celowo poza domyślnym miksem — patrz komentarz przy nim.
-// Przy kategorii POJAZDOWEJ dołóż go jawnie:
-//   node scripts/generuj-miks.mjs pojazdy/koparki --miks=whimsy,nautical,heroic,lineart3,lineart2,rustic,office,minimalist,elegant,rusticElegance,rugged
+// Dziesięć stylów (whimsy i whimsyV4 dzielą trzon). `lineart2` celowo poza domyślnym
+// miksem — patrz komentarz przy nim. Przy kategorii POJAZDOWEJ dołóż go jawnie:
+//   node scripts/generuj-miks.mjs pojazdy/koparki --miks=whimsy,whimsyV4,nautical,heroic,lineart2,lineart3,rustic,office,minimalist,elegant,rusticElegance
+// `rugged` wycofany z miksu 2026-11-08 (Delfina) — nie dopisywać go z powrotem.
 export const MIKS = [
-  'whimsy', 'nautical', 'heroic', 'lineart3', 'rustic',
-  'office', 'minimalist', 'elegant', 'rusticElegance', 'rugged'
+  'whimsy', 'whimsyV4', 'nautical', 'heroic', 'lineart3', 'rustic',
+  'office', 'minimalist', 'elegant', 'rusticElegance'
 ]
 
-// Trzon bierze resztę po odjęciu próbek: przy dziesięciu stylach i serii 48 wychodzi
-// 48 − 9×3 = 21 sztuk whimsy. Kształt „12 whimsy + po 3" to `--count=39`.
+// Trzon bierze resztę po odjęciu próbek: przy ośmiu stylach pobocznych i serii 48
+// wychodzi 48 − 8×3 = 24 sztuki trzonu, czyli 12 whimsy + 12 whimsyV4.
 export function podzialMiksu (ile, klucze = MIKS, probka = PROBKA_NA_STYL) {
-  const poboczne = klucze.filter(k => k !== TRZON)
+  const poboczne = klucze.filter(k => k !== TRZON && k !== TRZON_V4)
   const maTrzon = klucze.includes(TRZON)
   if (!maTrzon) {
     // Sam dosyp stylów pobocznych (np. uzupełnienie galerii) — dzielimy po równo.
@@ -227,5 +265,8 @@ export function podzialMiksu (ile, klucze = MIKS, probka = PROBKA_NA_STYL) {
       `(trzon zostałby z ${naTrzon}). Podnieś --count albo zawęź --miks=.`
     )
   }
-  return [{ styl: TRZON, ile: naTrzon }, ...poboczne.map(k => ({ styl: k, ile: probka }))]
+  const trzon = klucze.includes(TRZON_V4)
+    ? [{ styl: TRZON, ile: Math.ceil(naTrzon / 2) }, { styl: TRZON_V4, ile: Math.floor(naTrzon / 2) }]
+    : [{ styl: TRZON, ile: naTrzon }]
+  return [...trzon, ...poboczne.map(k => ({ styl: k, ile: probka }))]
 }

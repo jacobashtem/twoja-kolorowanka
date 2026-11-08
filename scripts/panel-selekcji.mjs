@@ -22,6 +22,7 @@ import { join, resolve, extname, dirname } from 'node:path'
 import { KATEGORIE } from '../prompty/kategorie.mjs'
 import { zbudujGalerie, zapiszWybor, wczytajWybor, esc } from './lib/galeria-html.mjs'
 import { stanMigracji, komendaMiksu } from './lib/migracja.mjs'
+import { FAVICON } from './lib/favicon.mjs'
 
 const argv = process.argv.slice(2)
 const PORT = Number((argv.find(a => a.startsWith('--port=')) ?? '').split('=')[1]) || 4321
@@ -215,6 +216,7 @@ function stronaGlowna (stany, posprzatane) {
   return `<!doctype html>
 <html lang="pl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+${FAVICON}
 <title>Panel selekcji (${doZrobienia} do zrobienia)</title>
 <style>
   :root { color-scheme: light dark; }
@@ -311,6 +313,7 @@ function stronaMigracji (stany) {
   return `<!doctype html>
 <html lang="pl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+${FAVICON}
 <title>Migracja (${g.wRobocie.length + g.gotowe.length + g.bezPromptow.length} kategorii ze stockiem)</title>
 <style>
   :root { color-scheme: light dark; }
@@ -445,15 +448,32 @@ if (posprzatane.length) {
 
 // Galerie budujemy raz na kategorię i trzymamy — złożenie strony liczy trudność każdego
 // SVG, więc przy powrocie z podglądu nie ma powodu robić tego drugi raz.
+// Pamięć unieważnia się sama, gdy w katalogu przybędzie lub ubędzie plików — dogrywka
+// wygenerowana przy otwartej galerii pojawia się po F5 na samej galerii. Liczenie plików
+// to tylko readdir, w przeciwieństwie do budowy galerii, która parsuje każdy SVG.
 const galerie = new Map()
-function galeria (nazwa) {
-  if (!galerie.has(nazwa)) {
-    galerie.set(nazwa, zbudujGalerie(join(ROBOCZY, nazwa), {
-      kolumny: 5, sort: 'trudnosc', wybor: true, zapisNaSerwerze: true,
-      powrot: { url: '/', etykieta: 'wszystkie kategorie' }
-    }))
+function liczPliki (dir) {
+  let n = 0
+  for (const w of readdirSync(dir, { withFileTypes: true })) {
+    if (w.name.startsWith('_')) continue
+    n += w.isDirectory() ? liczPliki(join(dir, w.name)) : 1
   }
-  return galerie.get(nazwa)
+  return n
+}
+function galeria (nazwa) {
+  const katalog = join(ROBOCZY, nazwa)
+  const ile = liczPliki(katalog)
+  const zapis = galerie.get(nazwa)
+  if (!zapis || zapis.ile !== ile) {
+    galerie.set(nazwa, {
+      ile,
+      g: zbudujGalerie(katalog, {
+        kolumny: 5, sort: 'trudnosc', wybor: true, zapisNaSerwerze: true,
+        powrot: { url: '/', etykieta: 'wszystkie kategorie' }
+      })
+    })
+  }
+  return galerie.get(nazwa).g
 }
 
 createServer((req, res) => {
@@ -462,6 +482,12 @@ createServer((req, res) => {
   catch { res.writeHead(400); res.end('zly adres'); return }
 
   if (url === '/' || url === '/index.html') {
+    // Katalog roboczy czytamy od nowa przy każdym wejściu na stronę główną: seria
+    // wygenerowana przy działającym panelu ma się pojawić po F5, bez restartu.
+    // Galerie też budujemy od nowa (dogrywka dokłada pliki); wybór i tak wraca
+    // z `_wybor.txt`. Bez sprzątania — to robi tylko start panelu.
+    stany = zbierzStany()
+    galerie.clear()
     res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' })
     res.end(stronaGlowna(stany, posprzatane))
     return

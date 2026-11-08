@@ -5,8 +5,9 @@
 // (tag-difficulty w CI) dzialaja bez instalowania zaleznosci graficznych.
 import { readdirSync, statSync, existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-export const ROOT = new URL('../..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
+export const ROOT = fileURLToPath(new URL('../..', import.meta.url))
 export const CONTENT = join(ROOT, 'content')
 export const PUBLIC = join(ROOT, 'public')
 export const SITE = 'https://twoja-kolorowanka.pl'

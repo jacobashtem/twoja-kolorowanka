@@ -6,6 +6,7 @@
 import { readdirSync, statSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { join, extname, relative, basename } from 'node:path'
 import { svgScore, difficulty } from './trudnosc.mjs'
+import { FAVICON } from './favicon.mjs'
 
 const EXTS = new Set(['.svg', '.png', '.jpg', '.jpeg', '.webp'])
 
@@ -129,6 +130,7 @@ export function zbudujGalerie (katalog, {
   const html = `<!doctype html>
 <html lang="pl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+${FAVICON}
 <title>${S.tytul} — ${basename(katalog)} (${pliki.length})</title>
 <style>
   :root { color-scheme: light dark; }
