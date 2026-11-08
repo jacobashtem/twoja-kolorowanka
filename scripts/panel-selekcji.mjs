@@ -448,15 +448,32 @@ if (posprzatane.length) {
 
 // Galerie budujemy raz na kategorię i trzymamy — złożenie strony liczy trudność każdego
 // SVG, więc przy powrocie z podglądu nie ma powodu robić tego drugi raz.
+// Pamięć unieważnia się sama, gdy w katalogu przybędzie lub ubędzie plików — dogrywka
+// wygenerowana przy otwartej galerii pojawia się po F5 na samej galerii. Liczenie plików
+// to tylko readdir, w przeciwieństwie do budowy galerii, która parsuje każdy SVG.
 const galerie = new Map()
-function galeria (nazwa) {
-  if (!galerie.has(nazwa)) {
-    galerie.set(nazwa, zbudujGalerie(join(ROBOCZY, nazwa), {
-      kolumny: 5, sort: 'trudnosc', wybor: true, zapisNaSerwerze: true,
-      powrot: { url: '/', etykieta: 'wszystkie kategorie' }
-    }))
+function liczPliki (dir) {
+  let n = 0
+  for (const w of readdirSync(dir, { withFileTypes: true })) {
+    if (w.name.startsWith('_')) continue
+    n += w.isDirectory() ? liczPliki(join(dir, w.name)) : 1
   }
-  return galerie.get(nazwa)
+  return n
+}
+function galeria (nazwa) {
+  const katalog = join(ROBOCZY, nazwa)
+  const ile = liczPliki(katalog)
+  const zapis = galerie.get(nazwa)
+  if (!zapis || zapis.ile !== ile) {
+    galerie.set(nazwa, {
+      ile,
+      g: zbudujGalerie(katalog, {
+        kolumny: 5, sort: 'trudnosc', wybor: true, zapisNaSerwerze: true,
+        powrot: { url: '/', etykieta: 'wszystkie kategorie' }
+      })
+    })
+  }
+  return galerie.get(nazwa).g
 }
 
 createServer((req, res) => {

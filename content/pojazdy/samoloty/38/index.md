@@ -7,7 +7,7 @@ image: /pojazdy/samoloty/38/samoloty-38.svg
 pdf: /pojazdy/samoloty/38/samoloty-38.pdf
 alt: "Kolorowanki samoloty"
 tags:
-- trudnosc-3
+- trudnosc-5
 - pojazdy
 - samoloty
 ---

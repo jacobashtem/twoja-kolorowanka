@@ -16,6 +16,7 @@
 import { readFileSync, readdirSync, existsSync, copyFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join, dirname, basename, extname } from 'node:path'
 import { svgScore, difficulty } from './lib/trudnosc.mjs'
+import { KATEGORIE } from '../prompty/kategorie.mjs'
 
 const argv = process.argv.slice(2)
 const kategoria = argv.find(a => !a.startsWith('--'))
@@ -47,8 +48,34 @@ const zrodla = readFileSync(LISTA, 'utf8').split(/\r?\n/).map(s => s.trim()).fil
   .map(raw => {
     const kat = dirname(raw).replace(/(^|[\\/])raw-/, '$1out-')
     const nazwa = basename(raw, extname(raw))
-    return { svg: join(kat, `${nazwa}.svg`), pdf: join(kat, `${nazwa}.pdf`) }
+    return { svg: join(kat, `${nazwa}.svg`), pdf: join(kat, `${nazwa}.pdf`), tagi: tagiSerii(dirname(raw)) }
   })
+
+// Tagi zestawu (np. `dla-doroslych`) zapisane przez generator w _manifest.json serii.
+// Manifest leży w katalogu raw-*, czyli tam, skąd pochodzi wpis z listy wyboru.
+function tagiSerii (katalogRaw) {
+  try { return JSON.parse(readFileSync(join(katalogRaw, '_manifest.json'), 'utf8')).tagi ?? [] }
+  catch { return [] }
+}
+
+// Wszystkie tagi, jakie mogą nadawać zestawy — przy podmianie zdejmujemy je z liścia,
+// zanim dopiszemy tagi nowego rysunku. Bez tego ponowna podmiana (inna kolejność po
+// trudności) zostawiłaby `dla-doroslych` na rysunku, który wcale nie jest dla dorosłych.
+const TAGI_ZESTAWOW = new Set(Object.values(KATEGORIE)
+  .flatMap(k => Object.values(k.zestawy ?? {}))
+  .flatMap(z => z.tagi ?? []))
+
+function ustawTagiZestawu (index, tagi) {
+  let src = readFileSync(index, 'utf8')
+  for (const t of TAGI_ZESTAWOW) src = src.replace(new RegExp(`^- ${t}\\r?\\n`, 'gm'), '')
+  if (tagi.length) {
+    const linie = tagi.map(t => `- ${t}`).join('\n')
+    src = /^tags:\s*$/m.test(src)
+      ? src.replace(/^(tags:\s*)$/m, `$1\n${linie}`)
+      : src.replace(/\r?\n---/, `\ntags:\n${linie}\n---`)
+  }
+  writeFileSync(index, src, 'utf8')
+}
 
 const brakujace = zrodla.filter(z => !existsSync(z.svg))
 if (brakujace.length) {
@@ -138,6 +165,12 @@ if (nietkniete > 0) {
   console.log('Skrypt ich nie rusza — usunięcie kategorii z Freepika to osobna decyzja.')
 }
 
+const otagowane = plan.filter(p => p.zrodlo.tagi.length)
+if (otagowane.length) {
+  console.log('')
+  console.log(`Tagi zestawów (${otagowane.length} liści): ${otagowane.map(p => `${p.nr} [${p.zrodlo.tagi.join(', ')}]`).join(', ')}`)
+}
+
 if (!ZAPISZ) {
   console.log('\n(--dry-run domyślnie: nic nie zapisano. Dodaj --zapisz, żeby wykonać.)')
   process.exit(0)
@@ -150,6 +183,7 @@ for (const p of plan) {
   mkdirSync(dirname(p.docelowySvg), { recursive: true })
   copyFileSync(p.zrodlo.svg, p.docelowySvg)
   if (p.docelowyPdf && existsSync(p.zrodlo.pdf)) copyFileSync(p.zrodlo.pdf, p.docelowyPdf)
+  ustawTagiZestawu(join(KAT_CONTENT, p.nr, 'index.md'), p.zrodlo.tagi)
   ile++
 }
 console.log(`\nPodmieniono ${ile} kolorowanek.`)

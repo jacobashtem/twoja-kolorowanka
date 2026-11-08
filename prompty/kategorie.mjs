@@ -787,6 +787,36 @@ export const KATEGORIE = {
       'a friendly cartoon airplane with a smiling face on its nose'
     ],
     sceny: SCENY.przestworza, grubosc: DLA_DZIECKA, format: 'poziom'
+    ,
+    zestawy: {
+      // DLA DOROSŁYCH (Delfina, 2026-11-07) — pilot pod styl `doroslyV4`. Pierwsza próba
+      // tego stylu na zwykłych promptach dała cienką kreskę, ale pusty, realistyczny
+      // rysunek: gęstość robi PROMPT, nie styl. W kolorowankach dla dorosłych ornament
+      // siedzi WEWNĄTRZ obiektu, a tło jest ozdobną ramą, więc tu odwrotnie niż przy
+      // dzieciach: wariant = sylwetka + rodzaj wzoru (każdy inny), scena = dekoracyjne tło.
+      dorosli: {
+        // `tagi` jadą przez _manifest.json aż do frontmattera liścia (podmien-kategorie),
+        // żeby strona z `tagsFilter: dla-doroslych` mogła później zebrać te kolorowanki
+        // ze wszystkich kategorii naraz.
+        tagi: ['dla-doroslych'],
+        warianty: [
+          'a vintage biplane with its wings and body covered in intricate paisley and floral patterns',
+          'a passenger airliner with its body filled with mandala rosettes and swirling ornaments',
+          'a seaplane on two floats decorated all over with zentangle patterns of scales, waves and dots',
+          'a propeller plane with art nouveau leaves and curling vines covering its wings',
+          'a jet fighter with swept-back wings covered in geometric patterns of triangles, diamonds and stripes',
+          'a sailplane glider with a cockpit canopy and very long wings decorated with feather patterns'
+        ],
+        sceny: [
+          'framed by an oval border of swirling clouds and tiny stars',
+          'among stylized spiral clouds filled with lace patterns',
+          'above a patchwork of fields, each field filled with a different ornamental pattern',
+          'in front of a large sun made of layered petals and rays',
+          'through a sky of decorative swirls, dots and tiny flowers',
+          'over a sea of stylized curling waves with ornamental crests'
+        ]
+      }
+    }
   },
   'pojazdy/rakiety':  { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_MALUCHA, format: 'pion' },
   'kosmos':           { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_DZIECKA, format: 'poziom' },

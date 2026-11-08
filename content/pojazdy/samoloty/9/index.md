@@ -7,7 +7,7 @@ image: /pojazdy/samoloty/9/samoloty-9.svg
 pdf: /pojazdy/samoloty/9/samoloty-9.pdf
 alt: "samoloty – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-1
+- trudnosc-2
 - pojazdy
 - samoloty
 ---

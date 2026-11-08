@@ -7,7 +7,7 @@ image: /pojazdy/samoloty/19/samoloty-19.svg
 pdf: /pojazdy/samoloty/19/samoloty-19.pdf
 alt: "Kolorowanka samoloty"
 tags:
-- trudnosc-5
+- trudnosc-3
 - pojazdy
 - samoloty
 ---

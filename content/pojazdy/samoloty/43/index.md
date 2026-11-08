@@ -7,7 +7,7 @@ image: /pojazdy/samoloty/43/samoloty-43.svg
 pdf: /pojazdy/samoloty/43/samoloty-43.pdf
 alt: "samoloty do druku i pokolorowania"
 tags:
-- trudnosc-2
+- trudnosc-5
 - pojazdy
 - samoloty
 ---
