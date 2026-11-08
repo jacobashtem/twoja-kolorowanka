@@ -79,6 +79,30 @@ export function zbierzPliki (katalog, { filtr = [], sort = 'seria' } = {}) {
     }
   })(katalog)
 
+  // ── Duplikaty po wektoryzacji ─────────────────────────────────────────────
+  // `out-X/nazwa.svg` to TEN SAM rysunek co `raw-X/nazwa.webp` (albo `raw-X/ok/…`), tylko
+  // po wektoryzacji. Pokazany obok wyglądał jak nowa sztuka do wyboru — przy zimie
+  // (2026-11-08) zaznaczenia zdublowały się w `_wybor.txt`. Chowamy `out-…`, gdy istnieje
+  // jego surowy odpowiednik; `out-…` bez `raw-…` (np. surowe już posprzątane) zostaje.
+  const klucz = (p, przedrostek) => {
+    const [pierwszy, ...reszta] = p.sciezka.split('/')
+    if (!pierwszy.startsWith(przedrostek) || !reszta.length) return null
+    return pierwszy.slice(przedrostek.length) + '/' + p.nazwa.replace(/\.[^.]+$/, '')
+  }
+  const surowe = new Map()
+  for (const p of pliki) { const k = klucz(p, 'raw-'); if (k) surowe.set(k, p.sciezka) }
+  const duplikaty = new Map()   // ścieżka out-… → ścieżka raw-…
+  for (const p of pliki) {
+    const k = klucz(p, 'out-')
+    if (k && surowe.has(k)) duplikaty.set(p.sciezka, surowe.get(k))
+  }
+  if (duplikaty.size) {
+    const bez = pliki.filter(p => !duplikaty.has(p.sciezka))
+    pliki.length = 0
+    pliki.push(...bez)
+  }
+  pliki.duplikaty = duplikaty
+
   if (sort === 'trudnosc') {
     // Bez trudności (rastry) na koniec — inaczej wpadałyby w środek skali jako zera
     // i psuły odczyt narastania złożoności.
@@ -106,7 +130,10 @@ export function zbudujGalerie (katalog, {
 } = {}) {
   const pliki = zbierzPliki(katalog, { filtr, sort })
   const plikWyboru = plikWyboruDla(wybor)
-  const { sciezka: sciezkaWyboru, wpisy: wyborZDysku } = wczytajWybor(katalog, wybor)
+  const { sciezka: sciezkaWyboru, wpisy: wpisyZDysku } = wczytajWybor(katalog, wybor)
+  // Stare zaznaczenia schowanych duplikatów przepisujemy na ich surowy odpowiednik
+  // i usuwamy powtórki — inaczej wróciłyby do pliku przy pierwszym zapisie.
+  const wyborZDysku = [...new Set(wpisyZDysku.map(w => pliki.duplikaty.get(w) ?? w))]
 
   const S = wybor
     ? { tytul: 'Wybór', akcja: 'Kopiuj listę wybranych', podpowiedz: 'Kliknij kafelek, żeby go WYBRAĆ do wektoryzacji.' }
@@ -201,7 +228,7 @@ ${FAVICON}
   <span id="licznik"></span>
   <button id="czysc">Wyczyść zaznaczenia</button>
   <button id="kopiuj">${S.akcja}</button>
-  ${zapisNaSerwerze ? `<button id="zapisz">Zapisz do ${plikWyboru}</button><span id="stanZapisu"></span>` : ''}
+  ${zapisNaSerwerze ? `<button id="zapisz">${powrot ? `Zakończ wybór i wróć do panelu` : `Zapisz do ${plikWyboru}`}</button><span id="stanZapisu"></span>` : ''}
 </header>
 <div class="panel"><textarea id="lista" readonly placeholder="${S.podpowiedz}"></textarea></div>
 <div class="siatka">${kafelki}</div>
@@ -212,7 +239,10 @@ ${FAVICON}
   const WYBOR = ${wybor};
   const SERWER = ${zapisNaSerwerze};
   const Z_DYSKU = ${JSON.stringify(wyborZDysku)};
-  const skreslone = new Set(JSON.parse(localStorage.getItem(KLUCZ) || 'null') ?? Z_DYSKU);
+  // Z serwerem źródłem prawdy jest PLIK, nie localStorage. Stan z przeglądarki
+  // nadpisywał poprawiony z zewnątrz plik wyboru przy pierwszym kliknięciu (zima).
+  // localStorage zostaje tylko dla trybu file://, gdzie zapisu na dysk nie ma.
+  const skreslone = new Set(SERWER ? Z_DYSKU : (JSON.parse(localStorage.getItem(KLUCZ) || 'null') ?? Z_DYSKU));
   const kafle = [...document.querySelectorAll('.kafel')];
 
   function odswiez () {
@@ -284,7 +314,15 @@ ${FAVICON}
     navigator.clipboard.writeText([...skreslone].sort().join('\\n'));
   };
   if (SERWER) {
-    document.getElementById('zapisz').onclick = () => { clearTimeout(timerZapisu); ostatniStan = ''; zapisz(); };
+    // W panelu przycisk kończy selekcję: zapis, a po udanym zapisie powrót na główną,
+    // żeby nie zostawać w galerii, która mogłaby się jeszcze zmienić. Przy błędzie zostajemy
+    // na miejscu — komunikat „NIE ZAPISANO" musi być widoczny.
+    const POWROT = ${JSON.stringify(powrot?.url ?? null)};
+    document.getElementById('zapisz').onclick = async () => {
+      clearTimeout(timerZapisu); ostatniStan = null;
+      await zapisz();
+      if (POWROT && ostatniStan !== null) location.href = POWROT;
+    };
     // Zamknięcie karty w trakcie sekundy zwłoki nie może zjeść ostatniego kliknięcia.
     addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') zapisz(); });
   }

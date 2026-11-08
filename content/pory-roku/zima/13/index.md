@@ -7,7 +7,7 @@ image: /pory-roku/zima/13/zima-13.svg
 pdf: /pory-roku/zima/13/zima-13.pdf
 alt: "Łatwa kolorowanka zima dla przedszkolaka"
 tags:
-- trudnosc-8
+- trudnosc-4
 - pory-roku
 - zima
 ---
