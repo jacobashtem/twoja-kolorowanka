@@ -7,7 +7,7 @@ image: /zwierzeta/lisy/2/lisy-2.svg
 pdf: /zwierzeta/lisy/2/lisy-2.pdf
 alt: "Kolorowanki lisy"
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - lisy
 ---

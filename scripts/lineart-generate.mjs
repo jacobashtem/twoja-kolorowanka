@@ -236,6 +236,12 @@ const OD = Number((argv.find(a => a.startsWith('--od=')) ?? '').split('=')[1]) |
 // Nazwa trafia też do katalogu wyjściowego, żeby serie się nie nadpisały.
 const ZESTAW = (argv.find(a => a.startsWith('--zestaw=')) ?? '').split('=')[1] || ''
 
+// --dopisek="..." dokleja tekst na końcu KAŻDEGO promptu serii, także w trybie --goly.
+// Ustawia go wrapper `generuj-miks.mjs` z pola `dopisek` stylu (prompty/style.mjs) — to
+// poprawka przypisana do STYLU, nie do kategorii: Elegant Contemporary zalewa elementy
+// czernią i dostaje twierdzące „zostaw puste i białe". Ręcznie zwykle się go nie podaje.
+const DOPISEK = (argv.find(a => a.startsWith('--dopisek=')) ?? '').split('=').slice(1).join('=')
+
 // --prompt="..." omija obie osie i wysyła podany tekst dosłownie, dla wszystkich sztuk serii
 // (różnicuje je tylko seed). Furtka do testów w rodzaju "czy pięć słów nie wypada lepiej
 // niż nasz rozbudowany opis" — przy jaszczurkach wygrał prompt minimalny, więc pytanie
@@ -365,7 +371,7 @@ function budujPrompt (i) {
   const os = osie(i)
   const wariant = cfg.warianty[os.wariant]
   const scena   = cfg.sceny[os.scena]
-  const temat = `${wariant}, ${scena}`
+  const temat = `${wariant}, ${scena}` + (DOPISEK ? `, ${DOPISEK}` : '')
   // Wzorzec: {temat} {poza}, {trudność} drawing, {białe partie}, {3 słowa stylu}
   //
   // `biale` to jedyny wyjątek od zasady "zakazy tylko w negatywie" — i to wyjątek

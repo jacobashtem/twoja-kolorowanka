@@ -7,7 +7,7 @@ image: /zwierzeta/lisy/7/lisy-7.svg
 pdf: /zwierzeta/lisy/7/lisy-7.pdf
 alt: "lisy do druku i pokolorowania"
 tags:
-- trudnosc-8
+- trudnosc-3
 - zwierzeta
 - lisy
 ---
