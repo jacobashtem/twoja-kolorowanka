@@ -7,7 +7,7 @@ image: /zwierzeta/ryby/25/ryby-25.svg
 pdf: /zwierzeta/ryby/25/ryby-25.pdf
 alt: "Kolorowanka ryby – format A4 PDF"
 tags:
-- trudnosc-1
+- trudnosc-4
 - zwierzeta
 - ryby
 ---

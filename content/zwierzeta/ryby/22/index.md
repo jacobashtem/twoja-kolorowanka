@@ -7,7 +7,7 @@ image: /zwierzeta/ryby/22/ryby-22.svg
 pdf: /zwierzeta/ryby/22/ryby-22.pdf
 alt: "Łatwa kolorowanka ryby dla przedszkolaka"
 tags:
-- trudnosc-7
+- trudnosc-4
 - zwierzeta
 - ryby
 ---

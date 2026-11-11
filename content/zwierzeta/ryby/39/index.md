@@ -7,7 +7,7 @@ image: /zwierzeta/ryby/39/ryby-39.svg
 pdf: /zwierzeta/ryby/39/ryby-39.pdf
 alt: "kolorowanka do druku ryby PDF"
 tags:
-- trudnosc-3
+- trudnosc-6
 - zwierzeta
 - ryby
 ---

@@ -7,7 +7,7 @@ image: /zwierzeta/ryby/13/ryby-13.svg
 pdf: /zwierzeta/ryby/13/ryby-13.pdf
 alt: "ryby kolorowanki dla dzieci"
 tags:
-- trudnosc-2
+- trudnosc-4
 - zwierzeta
 - ryby
 ---
