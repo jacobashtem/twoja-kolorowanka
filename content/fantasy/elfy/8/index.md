@@ -7,7 +7,7 @@ image: /fantasy/elfy/8/elfy-8.svg
 pdf: /fantasy/elfy/8/elfy-8.pdf
 alt: "Darmowa kolorowanka elfy do druku PDF"
 tags:
-- trudnosc-8
+- trudnosc-3
 - fantasy
 - elfy
 ---

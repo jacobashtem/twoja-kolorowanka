@@ -7,7 +7,7 @@ image: /fantasy/elfy/25/elfy-25.svg
 pdf: /fantasy/elfy/25/elfy-25.pdf
 alt: "elfy do druku i pokolorowania"
 tags:
-- trudnosc-5
+- trudnosc-4
 - fantasy
 - elfy
 ---

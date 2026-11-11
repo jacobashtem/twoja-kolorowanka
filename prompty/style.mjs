@@ -185,10 +185,14 @@ export const STYLE = {
     // PUSTE. `dopisek` dokleja się do każdego promptu tej serii, także przy --goly.
     // Sformułowany TWIERDZĄCO, bo zakazy nie działają (księga promptów, rozdz. 2: test
     // na koniach, negatyw 3,7% → 4,0%) — model ma dostać coś do narysowania.
-    // NIESPRAWDZONY na serii — przy pierwszej kategorii po tej dacie porównać czerń
-    // z walidatora; jeśli plamy zostaną, styl jest do wycofania, nie do dalszego łatania.
+    // SPRAWDZONY TEGO SAMEGO DNIA NA ELFACH I NIE DZIAŁA: 3/3 sztuki z czernią mimo
+    // dopisku (czarne drzewa 14,8% kadru, czarne spodnie, czarne kamienie i podszewka).
+    // Styl tak rysuje i promptem się go nie oduczy.
+    // WYCOFANY Z MIKSU (Delfina, 2026-11-11: „wyrzuć całkiem, nie sprawdza się").
+    // Wpis i `dopisek` zostają jako ślad próby i pochodzenia istniejących liści.
+    wycofany: true,
     dopisek: 'drawn as clean outlines only, every shape left empty and white inside',
-    uwaga: 'lite plamy czerni 13–15% (465 KB) — od 2026-11-11 z dopiskiem „puste i białe", sprawdzić'
+    uwaga: 'WYCOFANY 2026-11-11 — lite plamy czerni 13–15%, dopisek „puste i białe" nie pomógł'
   },
   rusticElegance: {
     id: 'f2c36aba-4782-400d-aea3-140d2c80dd80',
@@ -241,7 +245,7 @@ export const STYLE = {
 //   • żaden styl nie może wypaść z galerii, bo dopiero zestawienie wszystkich naraz
 //     pokazuje, który złapał TEN temat; ranking stylów jest cechą stylu, ale trafienie
 //     w konkretną kategorię już nie
-// Przy obecnym miksie (6 stylów pobocznych, próbka 3) daje to 30 sztuk trzonu + 6×3 = 48.
+// Przy obecnym miksie (5 stylów pobocznych, próbka 3) daje to 33 sztuki trzonu + 5×3 = 48.
 export const SERIA_DOMYSLNA = 48
 
 export const TRZON = 'whimsy'
@@ -252,18 +256,18 @@ export const TRZON = 'whimsy'
 // w `--miks=`, cały trzon wraca do whimsy.
 export const TRZON_V4 = 'whimsyV4'
 export const PROBKA_NA_STYL = 3
-// Osiem stylów (whimsy i whimsyV4 dzielą trzon). `lineart2` celowo poza domyślnym
+// Siedem stylów (whimsy i whimsyV4 dzielą trzon). `lineart2` celowo poza domyślnym
 // miksem — patrz komentarz przy nim. Przy kategorii POJAZDOWEJ dołóż go jawnie:
-//   node scripts/generuj-miks.mjs pojazdy/koparki --miks=whimsy,whimsyV4,nautical,heroic,lineart2,lineart3,office,minimalist,elegant
-// `rugged` wycofany z miksu 2026-11-08, `rustic` i `rusticElegance` 2026-11-11 (Delfina,
-// „na zawsze") — nie dopisywać ich z powrotem, także przez `--miks=`.
+//   node scripts/generuj-miks.mjs pojazdy/koparki --miks=whimsy,whimsyV4,nautical,heroic,lineart2,lineart3,office,minimalist
+// `rugged` wycofany z miksu 2026-11-08, `rustic`, `rusticElegance` i `elegant` 2026-11-11
+// (Delfina, „na zawsze") — nie dopisywać ich z powrotem, także przez `--miks=`.
 export const MIKS = [
   'whimsy', 'whimsyV4', 'nautical', 'heroic', 'lineart3',
-  'office', 'minimalist', 'elegant'
+  'office', 'minimalist'
 ]
 
-// Trzon bierze resztę po odjęciu próbek: przy sześciu stylach pobocznych i serii 48
-// wychodzi 48 − 6×3 = 30 sztuk trzonu, czyli 15 whimsy + 15 whimsyV4.
+// Trzon bierze resztę po odjęciu próbek: przy pięciu stylach pobocznych i serii 48
+// wychodzi 48 − 5×3 = 33 sztuki trzonu, czyli 17 whimsy + 16 whimsyV4.
 export function podzialMiksu (ile, klucze = MIKS, probka = PROBKA_NA_STYL) {
   const poboczne = klucze.filter(k => k !== TRZON && k !== TRZON_V4)
   const maTrzon = klucze.includes(TRZON)

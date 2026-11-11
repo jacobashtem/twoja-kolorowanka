@@ -271,11 +271,21 @@ ${posprzatane.length ? `<div class="sprzatanie">Posprzątano materiał roboczy k
 }
 
 // ── Migracja: wszystkie kategorie serwisu ───────────────────────────────────
-// Liczenie przechodzi ~4300 SVG-ów (kilka sekund), więc robimy je dopiero przy pierwszym
-// wejściu na stronę i trzymamy do końca sesji panelu. Po podmianie kategorii wystarczy
-// panel zrestartować.
+// Liczenie przechodzi ~4300 SVG-ów (kilka sekund), więc robimy je dopiero przy wejściu
+// na stronę. Wynik żyje tylko PÓŁ MINUTY: jedno wyrenderowanie strony woła `migracja()`
+// kilka razy i ma dostać ten sam stan, ale odświeżenie strony po podmianie kategorii
+// musi pokazać prawdę. Do 2026-11-11 wynik trzymał się do końca sesji panelu i ryby
+// wisiały w „gotowe do generowania" godzinę po tym, jak trafiły na produkcję.
+const MIGRACJA_TTL_MS = 30_000
 let migracjaCache = null
-const migracja = () => (migracjaCache ??= stanMigracji())
+let migracjaKiedy = 0
+function migracja () {
+  if (!migracjaCache || Date.now() - migracjaKiedy > MIGRACJA_TTL_MS) {
+    migracjaCache = stanMigracji()
+    migracjaKiedy = Date.now()
+  }
+  return migracjaCache
+}
 
 // Cztery grupy w kolejności „co mogę zrobić teraz": kategorie już w katalogu roboczym
 // (czekają na selekcję albo podmianę), gotowe do puszczenia serii, wymagające najpierw
