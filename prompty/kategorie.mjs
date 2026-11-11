@@ -238,8 +238,15 @@ export const KATEGORIE = {
       'a fish with trailing whisker-like barbels',
       'a fish with a tall spiny dorsal fin',
       'a tiny fish with an oversized head',
-      'a fish with overlapping scales drawn as thin outlines',
-      'a pair of fish swimming nose to nose'
+      // Dwa ostatnie wymienione 2026-11-11 (Delfina, przegląd przed serią). Wypadły:
+      // „overlapping scales drawn as thin outlines" — łuska to deseń, nie obrys, więc whimsy
+      // dałby generyczną rybę, a gęsta łuska to setka drobnych pól; oraz „a pair of fish" —
+      // to poza, nie wariant, i druga twarz do zepsucia. Weszły dwie rzeczy, które strona
+      // obiecuje w opisie („rekiny, błazenki i bajkowe rybki"), a których w dwunastce nie
+      // było: złota rybka z bajki i mały rekin. Rekin celowo „small friendly" i bez zębów
+      // w opisie — pełne rekiny mają własną kategorię `zwierzeta/rekiny`.
+      'a fairytale goldfish with a tiny crown and a long flowing veil tail',
+      'a small friendly shark with a pointed dorsal fin and a crescent tail'
     ],
     sceny: SCENY.woda, grubosc: DLA_DZIECKA, format: 'poziom'
   },

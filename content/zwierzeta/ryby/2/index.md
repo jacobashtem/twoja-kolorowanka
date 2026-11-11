@@ -7,7 +7,7 @@ image: /zwierzeta/ryby/2/ryby-2.svg
 pdf: /zwierzeta/ryby/2/ryby-2.pdf
 alt: "Kolorowanki ryby"
 tags:
-- trudnosc-4
+- trudnosc-2
 - zwierzeta
 - ryby
 ---
