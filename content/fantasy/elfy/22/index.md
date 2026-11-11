@@ -7,7 +7,7 @@ image: /fantasy/elfy/22/elfy-22.svg
 pdf: /fantasy/elfy/22/elfy-22.pdf
 alt: "elfy kolorowanki dla dzieci"
 tags:
-- trudnosc-5
+- trudnosc-4
 - fantasy
 - elfy
 ---

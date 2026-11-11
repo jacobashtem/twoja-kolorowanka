@@ -571,7 +571,45 @@ export const KATEGORIE = {
       'an elf with pointed ears in a short cloak with the hood down, hair in a low ponytail, carrying a bundle of arrows, full body fills the frame'
     ],
     biale: 'white hair, white cloak, white tunic',
-    sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion'
+    sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion',
+    // ── Drugi zestaw: --zestaw=szczegolowe (Delfina, 2026-11-11) ──────────────
+    // Zamówienie wprost: prompty DŁUŻSZE i bardziej szczegółowe, z dokładnym opisem
+    // wyglądu elfa i elfickimi atrybutami. To świadome odejście od zasady „prompt
+    // minimalny" z księgi (rozdz. 1) — zakład do sprawdzenia w galerii, nie nowa reguła;
+    // dwunastka wyżej zostaje bez zmian.
+    // Każdy wariant to ROLA (łuczniczka, mag, królowa…) rozpisana na cztery warstwy:
+    // uszy + włosy, ozdoba głowy, strój z motywem liścia, rekwizyt w dłoniach.
+    // Zakazy z nagłówka kategorii obowiązują dalej: żadnych „wings" ani „tiny" (wróżka),
+    // żadnych czapek ze szpicem, dzwonków i pasiastych rajstop (elf Mikołaja), żadnej
+    // czapki z piórkiem (Robin Hood / Piotruś Pan). Bez masy ciała (postać ludzka) i bez
+    // drugiej istoty w kadrze. Sceny własne, leśno-elfickie; bez słów „night"/„moonlit",
+    // które model zamienia w czarne niebo.
+    zestawy: {
+      szczegolowe: {
+        warianty: [
+          'a graceful woodland elf archer with very long pointed ears and long straight hair down to the waist, wearing a leaf-shaped circlet on the forehead, a hooded cloak with the hood down fastened by a leaf brooch, a belted tunic with leaf embroidery along the hem and tall soft boots, drawing a long curved bow, a quiver of arrows on the back, full body fills the frame',
+          'an elf maiden with long pointed ears and wavy hair woven with small flowers and thin braids, wearing a slim tiara with a teardrop gem, a long flowing gown with wide bell sleeves and a belt of twisted vines, playing a small curved harp, full body fills the frame',
+          'a young elf prince with long pointed ears and shoulder-length hair tucked behind them, wearing a crown of woven branches and leaves, a long cape with a high collar clasped by a star brooch and an embroidered tunic with a wide belt, resting both hands on a slender sword pointing down, full body fills the frame',
+          'an elf mage with long pointed ears and a very long braid over one shoulder, wearing a long layered robe with wide sleeves embroidered with stars and crescent moons and a pendant on a chain, holding a tall wooden staff topped with a large crystal wrapped in roots, full body fills the frame',
+          'an elf boy with long pointed ears and short tousled hair, wearing a short cloak made of overlapping leaves, a tunic with a rope belt and small pouches and soft boots with folded cuffs, playing a wooden flute, full body fills the frame',
+          'an elf girl with long pointed ears and hair in two long braids tied with ribbons, wearing a crown of leaves and berries, a knee-length dress with a scalloped leaf hem and a small satchel across the shoulder, holding up a round lantern shaped like an acorn, full body fills the frame',
+          'an elf ranger with long pointed ears and hair in a high ponytail, wearing a feathered shoulder mantle, arm bracers engraved with swirling vines, a wide belt with a leaf buckle, leggings and tall laced boots, holding a tall longbow upright with a quiver at the hip, full body fills the frame',
+          'an elf queen with long pointed ears and very long hair flowing almost to the ground, wearing a tall delicate crown with a central gem, a gown with a long train and trailing sleeves and a necklace of leaves, holding a slender sceptre topped with a star, full body fills the frame',
+          'an elf herbalist with long pointed ears and hair in a loose bun pinned with a twig, wearing a long dress with an apron, a shawl fastened by a leaf brooch and a belt hung with small bottles, carrying a woven basket full of herbs and mushrooms, full body fills the frame',
+          'an elf minstrel with long pointed ears and curly hair held by a thin headband, wearing a short cape over one shoulder, a tunic with slashed sleeves, a belt with a small pouch and soft ankle boots, strumming a round-bodied lute, full body fills the frame',
+          'an elf guardian with long pointed ears and long hair in a single warrior braid, wearing light armour of overlapping leaf-shaped plates, an open helmet with a leaf crest that leaves the ears showing and a long cloak, holding a tall leaf-shaped shield and a spear, full body fills the frame',
+          'an elf scholar with long pointed ears and hair in a topknot held by a long pin, wearing a long coat with a high collar and leaf-shaped buttons and a scroll case on the belt, holding an open book in one hand and a feather quill in the other, full body fills the frame'
+        ],
+        sceny: [
+          'standing among giant ancient trees with twisting roots and hanging lanterns',
+          'on a wooden rope bridge between treehouses high in the forest',
+          'beside a sparkling waterfall with ferns and round stones',
+          'in a forest glade ringed with toadstools, with fireflies and a crescent moon above',
+          'in front of an elven tree palace with spiral stairs and arched windows',
+          'on a hilltop overlooking a valley with a winding river and distant towers'
+        ]
+      }
+    }
   },
   // RYCERZE — kategorii o tej nazwie NIE MA w serwisie; klucz istnieje wyłącznie po to,
   // by generator miał z czego wziąć warianty dla pakietu. Kotwicą jest `plate armour`
