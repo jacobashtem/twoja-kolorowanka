@@ -7,7 +7,7 @@ image: /zwierzeta/lisy/19/lisy-19.svg
 pdf: /zwierzeta/lisy/19/lisy-19.pdf
 alt: "Kolorowanka lisy"
 tags:
-- trudnosc-6
+- trudnosc-4
 - zwierzeta
 - lisy
 ---

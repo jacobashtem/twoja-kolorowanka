@@ -7,7 +7,7 @@ image: /zwierzeta/lisy/14/lisy-14.svg
 pdf: /zwierzeta/lisy/14/lisy-14.pdf
 alt: "Edukacyjna kolorowanka lisy do wydruku"
 tags:
-- trudnosc-6
+- trudnosc-4
 - zwierzeta
 - lisy
 ---

@@ -186,20 +186,29 @@ export const KATEGORIE = {
   'myszki':           { warianty: [], sceny: SCENY.dom, grubosc: DLA_MALUCHA, format: 'pion' },
 
   // ══ ZWIERZĘTA LEŚNE ════════════════════════════════════════════════════════
+  // PRZEPISANE 2026-11-11 (Delfina, przegląd przed serią). W pierwszej wersji połowa
+  // wariantów była POZĄ (śpi w kłębek, skacze, siedzi, przeciąga się, wygląda zza czegoś),
+  // a pula `las` ma własne czasowniki — wychodziło „lis zwinięty w kłębek idzie przez
+  // trawę". Poza należy do sceny, wariant ma zmieniać OBRYS: wielkość uszu, masa, długość
+  // nóg, futro, liczba ogonów, rekwizyt. „Tufted cheeks and long whiskers" wyleciało, bo to
+  // cecha poniżej poziomu sylwetki i whimsy by ją zgubił.
+  // Kuzyni lisa: pies, wilk, kot, wiewiórka (puszysty ogon!), a przy wielkich uszach królik
+  // i mysz (lekcja chihuahuy u piesków). Kotwica to SPICZASTY PYSK + PUSZYSTY OGON —
+  // każdy wariant zmieniający proporcje ciała wymienia jedno i drugie.
   'zwierzeta/lisy': {
     warianty: [
-      'a fox with a huge bushy tail curled round its paws',
+      'a fox with a huge bushy tail as big as its whole body',
       'a fox cub with oversized ears and round cheeks',
       'a fox with a pointed narrow snout and alert ears',
-      'a fox curled into a sleeping ball, nose under tail',
+      'a fennec fox with enormous pointed ears, a small pointed muzzle and a bushy tail',
       'a fox wearing a scarf around its neck',
-      'a fox mid-pounce with front paws forward',
+      'a chubby round fox with short legs, a pointed muzzle and a fat fluffy tail',
       'a fox with a flower tucked behind one ear',
-      'a fox sitting upright with its tail sweeping the ground',
-      'a fox with tufted cheeks and long whiskers',
+      'a tall slim fox with long thin legs, a narrow pointed muzzle and a long bushy tail',
+      'a fluffy fox in a thick winter coat with a wide ruff of fur around its neck and a bushy tail',
       'a fox with a tiny cub tucked beside it',
-      'a fox stretching low with its back dipped',
-      'a fox peeking with only its head and ears showing'
+      'a magical fox with nine bushy tails fanned out behind it',
+      'a fox wearing a crown of autumn leaves'
     ],
     biale: 'white tail tip, white chest, white paws',
     sceny: SCENY.las, grubosc: DLA_DZIECKA, format: 'pion'

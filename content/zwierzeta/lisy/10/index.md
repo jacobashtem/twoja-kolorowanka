@@ -7,7 +7,7 @@ image: /zwierzeta/lisy/10/lisy-10.svg
 pdf: /zwierzeta/lisy/10/lisy-10.pdf
 alt: "Kolorowanka z lisy do pobrania"
 tags:
-- trudnosc-2
+- trudnosc-4
 - zwierzeta
 - lisy
 ---

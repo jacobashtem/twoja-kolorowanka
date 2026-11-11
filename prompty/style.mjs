@@ -180,7 +180,15 @@ export const STYLE = {
     id: '5b299bd0-9110-4208-9fdd-b8bae1f27cca',
     nazwa: 'Elegant Contemporary',
     modelId: 'recraftv3',
-    uwaga: 'ODRZUCONY: lite plamy czerni 13–15% (465 KB)'
+    // BEZ CZARNYCH WYPEŁNIEŃ (Delfina, 2026-11-11, „na przyszłość"): ten styl zamalowuje
+    // elementy czarnym tuszem (lisy: 14% kadru, koty 13–15%), a kolorowanka ma mieć je
+    // PUSTE. `dopisek` dokleja się do każdego promptu tej serii, także przy --goly.
+    // Sformułowany TWIERDZĄCO, bo zakazy nie działają (księga promptów, rozdz. 2: test
+    // na koniach, negatyw 3,7% → 4,0%) — model ma dostać coś do narysowania.
+    // NIESPRAWDZONY na serii — przy pierwszej kategorii po tej dacie porównać czerń
+    // z walidatora; jeśli plamy zostaną, styl jest do wycofania, nie do dalszego łatania.
+    dopisek: 'drawn as clean outlines only, every shape left empty and white inside',
+    uwaga: 'lite plamy czerni 13–15% (465 KB) — od 2026-11-11 z dopiskiem „puste i białe", sprawdzić'
   },
   rusticElegance: {
     id: 'f2c36aba-4782-400d-aea3-140d2c80dd80',

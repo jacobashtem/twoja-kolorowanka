@@ -7,7 +7,7 @@ image: /zwierzeta/lisy/16/lisy-16.svg
 pdf: /zwierzeta/lisy/16/lisy-16.pdf
 alt: "Kolorowanka lisy – format A4 PDF"
 tags:
-- trudnosc-7
+- trudnosc-4
 - zwierzeta
 - lisy
 ---

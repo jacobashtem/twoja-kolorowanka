@@ -109,6 +109,8 @@ for (const { styl, ile, od, s } of plan) {
     'scripts/lineart-generate.mjs', kategoria,
     `--count=${ile}`, `--krok=${KROK}`, `--od=${od}`,
     ...styloweFlagi, `--nazwa=${styl}`,
+    // Poprawka promptu przypisana do stylu (np. elegant: „zostaw puste i białe").
+    ...(s.dopisek ? [`--dopisek=${s.dopisek}`] : []),
     ...przekazane, ...(DRY ? ['--dry-run'] : [])
   ]
   console.log(`\n${'─'.repeat(70)}\n▶ ${s.nazwa} — ${ile} szt.\n${'─'.repeat(70)}`)

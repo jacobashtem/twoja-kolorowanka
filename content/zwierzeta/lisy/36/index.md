@@ -7,7 +7,7 @@ image: /zwierzeta/lisy/36/lisy-36.svg
 pdf: /zwierzeta/lisy/36/lisy-36.pdf
 alt: "Pokoloruj lisy – darmowy szablon PDF"
 tags:
-- trudnosc-2
+- trudnosc-7
 - zwierzeta
 - lisy
 ---
