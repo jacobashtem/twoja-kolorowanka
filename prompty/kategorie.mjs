@@ -753,7 +753,44 @@ export const KATEGORIE = {
       'a car towing a small caravan',
       'a racing car with a low nose and wide wheels'
     ],
-    sceny: SCENY.droga, grubosc: DLA_DZIECKA, format: 'poziom'
+    sceny: SCENY.droga, grubosc: DLA_DZIECKA, format: 'poziom',
+    // ── Drugi zestaw wariantów: --zestaw=rozne (dogrywka, Delfina 2026-11-11) ──
+    // Dwunastka wyżej to NADWOZIA osobówek i po 37 wybranych sztukach była wyczerpana —
+    // kolejna seria na niej dałaby te same auta w innych sceneriach. Ten zestaw stoi obok,
+    // nie zamiast, i różnicuje FUNKCJĄ pojazdu: strona obiecuje w H2 „samochody wyścigowe"
+    // i „pojazdy specjalne", a pierwsza dwunastka miała z tego jedną wyścigówkę.
+    // Każdy wariant ma rekwizyt widoczny w obrysie (belka świetlna, hak, rożek na dachu),
+    // żaden nie ma napisu w opisie — model i tak może dorysować „POLICE"/„TAXI", odsiać
+    // w selekcji. Kuzyni: tir i ciężarówka mają własną kategorię (`pojazdy/tiry`), więc
+    // laweta i monster truck są opisane jako małe i krótkie, bez naczepy i bez słowa „lorry".
+    // Sceny własne, bo pula `droga` została już przejechana w całości; każda pasuje do
+    // każdego wariantu (lodziarnia na mecie wyścigu jest śmieszna, ale nie absurdalna).
+    zestawy: {
+      rozne: {
+        warianty: [
+          'a police car with a light bar on the roof and a star badge on the door',
+          'an ambulance car with a tall boxy back and a beacon lamp on the roof',
+          'a taxi cab with a small roof light and a checkered stripe along its side',
+          'a rally car with a roof scoop, extra round lamps on the bonnet and big mud flaps',
+          'a formula racing car with open wheels, a front wing and a tall rear wing',
+          'a monster truck with a small car body lifted high above four giant wheels',
+          'a small tow truck with a hook crane on its short back',
+          'an old-fashioned veteran car with a folding canvas roof, spoked wheels and brass lamps',
+          'a very long limousine with a long row of side windows',
+          'an ice cream van with a giant ice cream cone on its roof and a serving window',
+          'a hot rod with a big exposed engine at the front and fat rear tyres',
+          'a beach buggy with a roll bar, no doors and chunky tyres'
+        ],
+        sceny: [
+          'parked in front of a garage with an open door and a stack of tyres',
+          'driving along a seaside road past a lighthouse and palm trees',
+          'stopped at a traffic light beside a zebra crossing',
+          'driving down a city avenue past tall buildings and a street lamp',
+          'rolling down a country lane past a windmill and a wooden fence',
+          'crossing a finish line under a checkered banner with waving flags'
+        ]
+      }
+    }
   },
 
   'pojazdy/tiry':        { warianty: [], sceny: SCENY.droga, grubosc: DLA_DZIECKA, format: 'poziom' },

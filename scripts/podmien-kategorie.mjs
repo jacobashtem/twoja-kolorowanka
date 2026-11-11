@@ -13,7 +13,7 @@
 // Kolejność: pliki układamy rosnąco po trudności, więc liść 1 dostaje najprostszy rysunek.
 // Strona i tak sortuje galerię po tagu `trudnosc-N`, ale dzięki temu numer w URL-u mniej
 // więcej odpowiada złożoności, co ułatwia późniejsze ręczne grzebanie.
-import { readFileSync, readdirSync, existsSync, copyFileSync, mkdirSync, writeFileSync } from 'node:fs'
+import { readFileSync, readdirSync, existsSync, copyFileSync, mkdirSync, writeFileSync, utimesSync } from 'node:fs'
 import { join, dirname, basename, extname } from 'node:path'
 import { svgScore, difficulty } from './lib/trudnosc.mjs'
 import { KATEGORIE } from '../prompty/kategorie.mjs'
@@ -182,6 +182,12 @@ for (const p of plan) {
   // z `recursive` jest bezpieczny w obu przypadkach.
   mkdirSync(dirname(p.docelowySvg), { recursive: true })
   copyFileSync(p.zrodlo.svg, p.docelowySvg)
+  // Kopia na Windowsie DZIEDZICZY datę modyfikacji źródła. `generate-thumbnails.mjs`
+  // porównuje mtime SVG z mtime miniatury, więc przy drugiej podmianie tej samej kategorii
+  // (dogrywka przenumerowuje liście) starszy plik źródłowy lądował pod miniaturą nowszą
+  // od siebie i liść zostawał z miniaturą INNEGO rysunku. Bieżąca data wymusza przerobienie.
+  const teraz = new Date()
+  utimesSync(p.docelowySvg, teraz, teraz)
   if (p.docelowyPdf && existsSync(p.zrodlo.pdf)) copyFileSync(p.zrodlo.pdf, p.docelowyPdf)
   ustawTagiZestawu(join(KAT_CONTENT, p.nr, 'index.md'), p.zrodlo.tagi)
   ile++

@@ -7,7 +7,7 @@ image: /pojazdy/samochody/2/samochody-2.svg
 pdf: /pojazdy/samochody/2/samochody-2.pdf
 alt: "Kolorowanki samochody"
 tags:
-- trudnosc-5
+- trudnosc-2
 - pojazdy
 - samochody
 ---

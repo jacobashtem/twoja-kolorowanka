@@ -7,7 +7,7 @@ image: /pojazdy/samochody/38/samochody-38.svg
 pdf: /pojazdy/samochody/38/samochody-38.pdf
 alt: "Kolorowanki samochody"
 tags:
-- trudnosc-3
+- trudnosc-5
 - pojazdy
 - samochody
 ---
