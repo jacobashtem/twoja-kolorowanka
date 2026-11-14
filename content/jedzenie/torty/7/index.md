@@ -7,7 +7,7 @@ image: /jedzenie/torty/7/torty-7.svg
 pdf: /jedzenie/torty/7/torty-7.pdf
 alt: "torty do druku i pokolorowania"
 tags:
-- trudnosc-8
+- trudnosc-2
 - jedzenie
 - torty
 ---

@@ -550,6 +550,33 @@ export const SCENY = {
     'with confetti and streamers falling around it'
   ],
 
+  // ── Cukiernia: pula DEDYKOWANA tortom ─────────────────────────────────────
+  // `swieto` (wyżej) ma sześć scen, dzieli je z urodzinami i andrzejkami, a każda z nich
+  // to ta sama okazja: przyjęcie. Tu dwanaście scen = dwanaście OKOLICZNOŚCI, w jakich
+  // tort naprawdę się pojawia: urodziny, wesele, herbatka, piknik, przyjęcie w ogrodzie,
+  // witryna cukierni, kuchnia w trakcie pieczenia, pudełko z kokardą, święta.
+  //
+  // Wszystkie zaczynają się od „on"/„beside"/„under" i pasują także do KAWAŁKA tortu na
+  // talerzyku (wariant 3). Nie ma w nich ludzi — goście przy stole zrobiliby z tego
+  // `okolicznosciowe/urodziny`. Nie ma obrusa ani koca w kratę (co drugie pole wyszłoby
+  // czarne), koronkowej serwetki (gęsty sztrych) ani sypiącego się konfetti (kropki) —
+  // konfetti to „a few big stars". Nie ma też tabliczek, szyldów i bilecików: napis
+  // w kadrze = śmieciowe litery.
+  cukiernia: [
+    'on a party table with round balloons on strings and a stack of wrapped presents',
+    'on a cake stand in a bakery window under a striped awning',
+    'on a kitchen counter beside a mixing bowl, a whisk and a piping bag',
+    'on a picnic blanket in the grass with a wicker basket and two cups',
+    'under a string of triangular bunting flags with paper party hats on the table',
+    'on a table under a wedding arch of flowers with two tall glasses',
+    'on a tea table beside a teapot, two cups and a plate of biscuits',
+    'beside an open cake box with a big ribbon bow',
+    'on a round tray with a cake server, small plates and forks',
+    'on a garden table under a tree hung with round paper lanterns',
+    'on a table with party poppers, curly streamers and a few big confetti stars',
+    'on a table beside a small decorated Christmas tree and a few wrapped presents'
+  ],
+
   kuchnia: [
     'on a round plate beside a folded napkin',
     'on a wooden board with a small knife beside it',

@@ -7,7 +7,7 @@ image: /jedzenie/torty/3/torty-3.svg
 pdf: /jedzenie/torty/3/torty-3.pdf
 alt: "torty kolorowanka dla dzieci"
 tags:
-- trudnosc-6
+- trudnosc-2
 - jedzenie
 - torty
 ---
