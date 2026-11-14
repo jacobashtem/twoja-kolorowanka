@@ -386,6 +386,40 @@ export const SCENY = {
     'rolling over a dirt track past a site fence'
   ],
 
+  // ── Wykop: pula DEDYKOWANA koparkom ───────────────────────────────────────
+  // `budowa` ma sześć scen — przy serii 48 każda wypadłaby osiem razy (lekcja z kotów
+  // w koszyku). Do tego trzy z nich szkodzą akurat koparce:
+  //   • „under a tall crane with hanging hook and cables" — DŹWIG to najbliższy kuzyn
+  //     koparki (też ramię, też coś na końcu), a liny wychodzą równoległym sztrychem;
+  //   • „traffic cones and warning signs" — znak z napisem = śmieciowe litery;
+  //   • „digging…", „working…" — czasownik bije się z wariantami, które mają własną
+  //     robotę (młot kruszy skałę, chwytak trzyma kłodę).
+  //
+  // Sceny są PRZYIMKOWE i każda daje koparce MATERIAŁ albo CEL roboty: rów z rurami,
+  // hałdę piasku, staw, drzewka do posadzenia. Dzięki temu „co ona tu robi" czyta się
+  // samo, bez czasownika. Dwie są dla zabawy, nie z placu budowy: kość dinozaura
+  // w wykopie i zamek z piasku — to one mają dać dziecku historyjkę, a nie tylko maszynę.
+  //
+  // Druga maszyna w kadrze jest JEDNA na dwanaście (wywrotka, scena 3) i stoi tam
+  // świadomie wbrew zasadzie 4 z góry pliku: ładowanie wywrotki to najbardziej
+  // rozpoznawalna robota koparki. Jeśli wywrotka zacznie wypierać koparkę — wyrzucić.
+  // Nie ma tu rusztowania ani gruzu (gęsty sztrych), nocy ani wnętrza tunelu (czerń).
+  // W scenie 11 jest „pail", nie „bucket" — „bucket" to w tej kategorii łyżka koparki.
+  wykop: [
+    'at the edge of a long trench with a row of big pipes lying beside it',
+    'beside a tall heap of sand with a wheelbarrow and a shovel stuck in the top',
+    'next to a small dump truck with a heaped load of earth',
+    'in a quarry among big round boulders with stepped rock walls behind',
+    'beside a half-built brick wall with a ladder and a stack of bricks',
+    'on road works with striped barriers and a row of traffic cones',
+    'beside a deep pit with a huge dinosaur bone sticking out of the earth',
+    'at a freshly dug garden pond with reeds and two ducks watching',
+    'beside a row of young trees with wrapped root balls waiting to be planted',
+    'in front of a wooden site hut with a hard hat on a hook and a lunch box on the step',
+    'on a sandy beach beside a big sandcastle with a toy spade and a pail',
+    'on top of a round hill of earth with a little flag and clouds behind'
+  ],
+
   przestworza: [
     'flying above a layer of round fluffy clouds',
     'parked on a runway beside a striped windsock',

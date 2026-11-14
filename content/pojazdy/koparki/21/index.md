@@ -7,7 +7,7 @@ image: /pojazdy/koparki/21/koparki-21.svg
 pdf: /pojazdy/koparki/21/koparki-21.pdf
 alt: "koparki kolorowanka dla dzieci"
 tags:
-- trudnosc-3
+- trudnosc-5
 - pojazdy
 - koparki
 ---

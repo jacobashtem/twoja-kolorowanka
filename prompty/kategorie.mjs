@@ -770,23 +770,45 @@ export const KATEGORIE = {
   'pojazdy/ciagniki': { warianty: [], sceny: SCENY.pole, grubosc: DLA_MALUCHA, format: 'poziom' },
 
   // ══ POJAZDY BUDOWLANE ══════════════════════════════════════════════════════
-  // PRZEPISANE ze starego wzorca — poprzednio połowa wariantów to były ujęcia kamery.
+  // KOPARKI — przepisane drugi raz (2026-11-14, przed pierwszą serią).
+  //
+  // KOTWICA: RAMIĘ Z NARZĘDZIEM NA KOŃCU. Tego nie ma żaden kuzyn: ładowarka ma łyżkę
+  // z przodu na dwóch krótkich wysięgnikach, spychacz lemiesz, dźwig hak na linach.
+  // Każdy wariant wymienia więc ramię (`arm`) — poprzednia dwunastka miała cztery pozycje
+  // bez niego i każda była zaproszeniem dla kuzyna:
+  //   • „wheeled excavator with four chunky tyres"      → ładowarka kołowa albo traktor
+  //   • „wide caterpillar tracks and a boxy body"       → spychacz albo czołg
+  //   • „lifting its bucket high overhead"              → to jest ruch ŁADOWARKI
+  //   • „beacon lamp on the cab roof"                   → nic nie zmienia w obrysie
+  // Wypadły też „arm folded down flat" (nudna sylwetka, a czasownik sceny „digging" jej
+  // przeczył) i „gripping claw INSTEAD OF a bucket" (zaprzeczenie w prompcie pozytywnym
+  // karmi model słowem, którego ma nie być).
+  //
+  // Dwanaście pozycji to trzy rodziny, żeby seria 48 nie była jedną koparką w 48 miejscach:
+  //   TYP MASZYNY (1–3, 6, 7, 11) · OSPRZĘT (4, 5) · CHARAKTER I POZA (8, 9, 10, 12).
+  //
+  // ŚWIADOME RYZYKO: koparko-ładowarka (6) ma podwozie traktora, a `pojazdy/traktory` to
+  // sąsiad. Zostaje, bo dla dziecka i rodzica to jest „koparka" — odsiać w selekcji, jeśli
+  // ramię z tyłu zniknie. Gigant kopalniany (11) może wyjść gęsty w stylach dosłownych.
+  //
+  // Akcja siedzi w WARIANCIE, a sceny (`wykop`) są przyimkowe — młot nie „kopie rowu",
+  // a chwytak nie „nabiera piasku", więc czasownik w scenie gryzłby się z osprzętem.
   'pojazdy/koparki': {
     warianty: [
-      'an excavator with a long jointed arm and a toothed bucket',
-      'a small compact excavator with a short arm and rubber tracks',
-      'a wheeled excavator with four chunky tyres',
-      'an excavator with a gripping claw instead of a bucket',
-      'an excavator with a breaker hammer on its arm',
-      'an excavator with a smiling driver in a glass cab',
-      'an excavator with its arm folded down flat',
-      'an excavator with a very long reach arm',
-      'a toy-like excavator with an oversized bucket',
-      'an excavator with a beacon lamp on the cab roof',
-      'an excavator with wide caterpillar tracks and a boxy body',
-      'an excavator lifting its bucket high overhead'
+      'a big excavator on caterpillar tracks with a long bent arm, scooping up a bucketful of earth',
+      'a tiny mini excavator with a short digging arm and an open canopy roof over the driver seat',
+      'a wheeled excavator on four big tyres with a long digging arm and a toothed bucket',
+      'an excavator holding a tree log in a grapple claw at the end of its arm',
+      'an excavator with a pointed hammer chisel at the end of its arm, cracking a big rock',
+      'a backhoe loader with a wide shovel at the front and a digging arm with a bucket at the back',
+      'an excavator with a very long thin arm reaching far out, three times as long as its body',
+      'a chunky toy-like excavator with a short fat arm, a huge oversized bucket and tiny tracks',
+      'an excavator with a smiling driver waving from the open cab door, its arm and bucket resting on the ground',
+      'an excavator with its arm stretched straight up, earth tipping out of the bucket',
+      'a giant mining excavator with a ladder up to a high cab and an enormous bucket on a thick arm',
+      'a friendly cartoon excavator with big round eyes on its cab and its digging arm bent up like a waving hand'
     ],
-    sceny: SCENY.budowa, grubosc: DLA_MALUCHA, format: 'poziom'
+    sceny: SCENY.wykop, grubosc: DLA_MALUCHA, format: 'poziom'
   },
 
   'pojazdy/czolgi': { warianty: [], sceny: SCENY.budowa, grubosc: DLA_MALUCHA, format: 'poziom' },
