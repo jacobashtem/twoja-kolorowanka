@@ -7,7 +7,7 @@ image: /pojazdy/koparki/6/koparki-6.svg
 pdf: /pojazdy/koparki/6/koparki-6.pdf
 alt: "Kolorowanki do druku koparki"
 tags:
-- trudnosc-2
+- trudnosc-3
 - pojazdy
 - koparki
 ---

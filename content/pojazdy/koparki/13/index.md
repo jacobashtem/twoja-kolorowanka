@@ -7,7 +7,7 @@ image: /pojazdy/koparki/13/koparki-13.svg
 pdf: /pojazdy/koparki/13/koparki-13.pdf
 alt: "Łatwa kolorowanka koparki dla przedszkolaka"
 tags:
-- trudnosc-3
+- trudnosc-4
 - pojazdy
 - koparki
 ---
