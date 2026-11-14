@@ -222,7 +222,42 @@ export const KATEGORIE = {
   'zwierzeta/sowy':        { warianty: [], sceny: SCENY.niebo, grubosc: DEKORACYJNE, format: 'pion' },
 
   // ══ ZWIERZĘTA EGZOTYCZNE ═══════════════════════════════════════════════════
-  'zwierzeta/lwy':     { warianty: [], sceny: SCENY.egzotyka, grubosc: DLA_DZIECKA, format: 'pion' },
+  // LWY (Delfina, 2026-11-14). Strona obiecuje „edukacyjne i bajkowe" oraz ma sekcję
+  // „Lew w kulturze i bajkach" — stąd obok lwów przyrodniczych jest król w koronie (5)
+  // i lew bajkowy z lokami (12).
+  //
+  // Oś sylwetki u lwa ISTNIEJE, inaczej niż u pandy: GRZYWA. Wielka okrągła, krótka
+  // i nastroszona u młodego, promienie wokół samej głowy, loki — oraz jej brak u lwicy
+  // i lwiątka. Do tego pozy: siedzi, ryczy, idzie, ziewa, przyczajony do zabawy.
+  // Jedna poza leżąca (7) jest „na brzuchu z głową w górze" — to profil z głową wysoko,
+  // czyli ten rodzaj, który przechodził; lew na boku albo na plecach odpada jak zawsze.
+  //
+  // KOTWICA: `mane` u samców, `tufted tail` u lwicy i lwiątek (bez grzywy lwica to dla
+  // modelu duży kot, a `zwierzeta/koty` to 84 liście w serwisie). Kuzyn nr 2 to tygrys
+  // (`zwierzeta/tygrysy`, ta sama pula w rejestrze) — nigdzie nie ma słowa „stripes".
+  //
+  // CUDZA POSTAĆ: lwiątko uniesione nad skalną półką i lew na wysuniętym urwisku to kadry
+  // z bardzo znanego filmu. Żaden wariant ani scena nie stawia lwa na „ledge"/„cliff",
+  // nikt nikogo nie podnosi, a skała w puli `sawanna` jest płaska i niska.
+  //
+  // Grzywa to partia z natury ciemna (jak u konia) — pod whimsy wychodziła konturem.
+  'zwierzeta/lwy': {
+    warianty: [
+      'a proud male lion with a huge round mane, sitting upright with its tufted tail curled around its paws',
+      'a male lion with a thick shaggy mane roaring with its mouth wide open and its head thrown back',
+      'a lioness with a sleek body, round ears and a long tufted tail, walking with one front paw lifted',
+      'a lion cub with oversized paws, round ears and a short tufted tail, sitting with its head tilted',
+      'a lion king with a big wavy mane wearing a crown, sitting proudly with its chest out',
+      'a lioness with a long tufted tail nuzzling a small cub that sits between her front paws',
+      'a male lion with a full mane resting on its belly with its front paws crossed and its head held high',
+      'a young lion with a short spiky mane crouching to play, front paws stretched forward and tail up in the air',
+      'a lion head with a mane spreading out all around it like the rays of a sun, with a calm friendly face',
+      'a sitting male lion with a big mane yawning widely with its eyes closed',
+      'two lion cubs with tufted tails playing, one pouncing on the tail of the other',
+      'a friendly cartoon lion with a mane of big round curls, standing on its back legs and waving one paw'
+    ],
+    sceny: SCENY.sawanna, grubosc: DLA_DZIECKA, format: 'pion'
+  },
   'zwierzeta/tygrysy': { warianty: [], sceny: SCENY.egzotyka, grubosc: DLA_DZIECKA, format: 'pion' },
   // PANDY (Delfina, 2026-11-14).
   //
