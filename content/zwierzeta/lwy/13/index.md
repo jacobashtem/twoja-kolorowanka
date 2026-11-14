@@ -7,7 +7,7 @@ image: /zwierzeta/lwy/13/lwy-13.svg
 pdf: /zwierzeta/lwy/13/lwy-13.pdf
 alt: "Łatwa kolorowanka lwy dla przedszkolaka"
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - lwy
 ---

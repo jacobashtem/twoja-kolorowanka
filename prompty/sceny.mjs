@@ -130,6 +130,34 @@ export const SCENY = {
     'among big mossy boulders with ferns and one thick bamboo stalk'
   ],
 
+  // ── Sawanna: pula DEDYKOWANA lwom ─────────────────────────────────────────
+  // `egzotyka` (niżej) ma sześć scen z czasownikami („walking", „drinking", „lounging
+  // on a thick tree branch") — a warianty lwów mają własne pozy, więc każdy czasownik
+  // z którymś by się gryzł. Dwie z jej scen są zresztą cudze: gałąź drzewa to lampart,
+  // a kępa bambusa to panda.
+  //
+  // Tu dwanaście scen przyimkowych i wszystkie z jednego świata: akacja z płaską koroną,
+  // baobab, wodopój, kopiec termitów, wysoka trawa. Skała jest PŁASKA I NISKA — nigdy
+  // półka ani urwisko (patrz komentarz o cudzej postaci przy kategorii).
+  // Inne zwierzęta są w jednej scenie i daleko na horyzoncie, bez twarzy; w pozostałych
+  // lew jest sam, bo dwa warianty mają już drugiego lwa. Słońce jest „low over the
+  // hills", bez słów „sunset" i „dusk" — te ciągną ciemne niebo.
+  // Trawa to „tall grass" tylko w dwóch scenach: łan źdźbeł wychodzi sztrychem.
+  sawanna: [
+    'on a low flat rock with tufts of tall grass around',
+    'under an acacia tree with a wide flat crown',
+    'beside a waterhole ringed with round stones',
+    'with a big round sun low over rolling hills',
+    'among big round boulders beside a tall termite mound',
+    'on a grassy rise with a thick baobab tree behind',
+    'beside a fallen log with two small birds perched on it',
+    'on an open plain with two giraffes far away on the horizon',
+    'in tall grass with a few big flowers',
+    'beside a river with reeds and round stepping stones',
+    'in front of a cave mouth in a low rocky hillside',
+    'on an open plain with round clouds and a rainbow above'
+  ],
+
   egzotyka: [
     'resting on a warm flat rock under the sun',
     'walking through tall savanna grass with acacia trees behind',
