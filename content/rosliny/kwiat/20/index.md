@@ -7,7 +7,7 @@ image: /rosliny/kwiat/20/kwiat-20.svg
 pdf: /rosliny/kwiat/20/kwiat-20.pdf
 alt: "Kolorowanki kwiat"
 tags:
-- trudnosc-9
+- trudnosc-3
 - rosliny
 - kwiat
 ---

@@ -7,7 +7,7 @@ image: /rosliny/kwiat/23/kwiat-23.svg
 pdf: /rosliny/kwiat/23/kwiat-23.pdf
 alt: "Kolorowanka do druku kwiat"
 tags:
-- trudnosc-10
+- trudnosc-4
 - rosliny
 - kwiat
 ---

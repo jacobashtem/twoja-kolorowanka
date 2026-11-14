@@ -958,7 +958,43 @@ export const KATEGORIE = {
   'kosmos':           { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_DZIECKA, format: 'poziom' },
 
   // ══ ROŚLINY ════════════════════════════════════════════════════════════════
-  'rosliny/kwiat':  { warianty: [], sceny: SCENY.ogrodek, grubosc: DEKORACYJNE, format: 'pion' },
+  // KWIAT (Delfina, 2026-11-14: „różnorodne, w różnych okolicznościach").
+  //
+  // SĄSIAD NR 1 to `rosliny/bukiet` — osobna kategoria tuż obok. Dlatego każdy wariant
+  // zaczyna się od `a single` i opisuje JEDNĄ roślinę na łodydze; nigdzie nie ma słów
+  // „bouquet", „bunch", „vase" ani „tied with ribbon" (ta ostatnia fraza siedzi w puli
+  // `ogrodek` i sama robi z kwiatu bukiet — jeden z powodów, dla których kwiat dostał
+  // własną pulę `kwiatowe`). Dalsi sąsiedzi: `zwierzeta/motyle` i wróżki, więc w kadrze
+  // nie ma motyla, pszczoły ani niczego ze skrzydłami.
+  //
+  // Oś sylwetki to GATUNEK, ale tylko taki, który zmienia obrys (rozdz. 2): kielich
+  // tulipana, tarcza słonecznika, trąbka żonkila, dzwonki konwalii na łuku, kolumna
+  // malwy, kula dmuchawca. Piwonia, goździk i dalia wypadły — w konturze to „róża".
+  // Tytuł strony obiecuje róże, tulipany i słoneczniki, więc te trzy idą pierwsze.
+  // Wariant 12 to kwiatek z buzią: pod frazą „kwiatek kolorowanka" szuka się też
+  // obrazka dla malucha, a nie atlasu botanicznego.
+  //
+  // `the flower fills the frame` w każdym wariancie — bez tego whimsy rysuje krajobraz
+  // z kwiatkiem wielkości znaczka (ta sama lekcja co „full body" przy postaciach).
+  // Środek słonecznika opisany jako „big round centre", bez „seeds" — nasiona to setki
+  // kropek albo lita czerń.
+  'rosliny/kwiat': {
+    warianty: [
+      'a single rose with layered spiral petals, a stem with a few thorns and toothed leaves, the flower fills the frame',
+      'a single tulip with a cup of smooth pointed petals and two long curving leaves, the flower fills the frame',
+      'a single tall sunflower with a big round centre, a ring of pointed petals and broad heart-shaped leaves, the flower fills the frame',
+      'a single daisy with long narrow petals around a round centre and a slim leafy stem, the flower fills the frame',
+      'a single lily of the valley with a row of small bell flowers hanging from an arched stem between two wide leaves, the flower fills the frame',
+      'a single poppy with four wide wavy petals, a round seed pod on a second stem and deeply cut leaves, the flower fills the frame',
+      'a single daffodil with a frilled trumpet in the middle of six pointed petals and long strap leaves, the flower fills the frame',
+      'a single dandelion with a round puffball seed head, a few seeds drifting away and jagged leaves at the base, the flower fills the frame',
+      'a single lily with six long curled-back petals, long stamens and narrow leaves up the stem, the flower fills the frame',
+      'a single pansy with five rounded overlapping petals and scalloped leaves, the flower fills the frame',
+      'a single tall hollyhock stalk with a column of open round flowers, buds at the top and big lobed leaves, the flower fills the frame',
+      'a single happy cartoon flower with a smiling face in its round centre, big rounded petals and two leaves like waving hands, the flower fills the frame'
+    ],
+    sceny: SCENY.kwiatowe, grubosc: DEKORACYJNE, format: 'pion'
+  },
   'rosliny/bukiet': { warianty: [], sceny: SCENY.ogrodek, grubosc: DEKORACYJNE, format: 'pion' },
   'rosliny/dynie':  { warianty: [], sceny: SCENY.ogrodek, grubosc: DLA_MALUCHA, format: 'pion' },
   // `runo`, nie `las` — leśne sceny zwierzęce każą grzybowi chodzić i węszyć.

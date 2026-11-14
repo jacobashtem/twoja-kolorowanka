@@ -7,7 +7,7 @@ image: /rosliny/kwiat/27/kwiat-27.svg
 pdf: /rosliny/kwiat/27/kwiat-27.pdf
 alt: "kwiat – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-8
+- trudnosc-4
 - rosliny
 - kwiat
 ---

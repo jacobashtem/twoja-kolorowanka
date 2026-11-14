@@ -7,7 +7,7 @@ image: /rosliny/kwiat/9/kwiat-9.svg
 pdf: /rosliny/kwiat/9/kwiat-9.pdf
 alt: "kwiat – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-10
+- trudnosc-3
 - rosliny
 - kwiat
 ---
