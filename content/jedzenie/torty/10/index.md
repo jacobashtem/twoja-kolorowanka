@@ -7,7 +7,7 @@ image: /jedzenie/torty/10/torty-10.svg
 pdf: /jedzenie/torty/10/torty-10.pdf
 alt: "Kolorowanka z torty do pobrania"
 tags:
-- trudnosc-2
+- trudnosc-4
 - jedzenie
 - torty
 ---

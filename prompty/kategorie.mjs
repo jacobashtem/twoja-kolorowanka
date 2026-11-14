@@ -1001,7 +1001,42 @@ export const KATEGORIE = {
   'rosliny/grzyby': { warianty: [], sceny: SCENY.runo,    grubosc: DLA_DZIECKA, format: 'pion' },
 
   // ══ JEDZENIE ═══════════════════════════════════════════════════════════════
-  'jedzenie/torty':  { warianty: [], sceny: SCENY.swieto,  grubosc: DEKORACYJNE, format: 'pion' },
+  // TORTY (Delfina, 2026-11-14: „w różnych okolicznościach, o różnych stylach, niektóre
+  // minimalistyczne, a inne maksymalistyczne").
+  //
+  // Oś wariantu to GĘSTOŚĆ DEKORACJI, od gołego tortu z jedną świeczką po pięć pięter
+  // obsypanych wszystkim. To nie łamie zasady „trudność jest mierzona, nie deklarowana":
+  // prompt opisuje, CO jest na torcie, a `tag-difficulty.mjs` i tak zmierzy wynik —
+  // tyle że tym razem korpus dostanie pełny rozrzut od T1 do T9 zamiast samego środka.
+  //   MINIMALISTYCZNE (1–4): gładkie boki, JEDNA ozdoba. Słowa „plain", „smooth", „single"
+  //                          trzymają model z dala od dorysowywania lukru i posypki.
+  //   POŚREDNIE (5–8):       jeden wyraźny pomysł — polewa, rozetki, buzia misia, owoce.
+  //   MAKSYMALISTYCZNE (9–12): piętra, każde inaczej zdobione, i góra słodyczy.
+  // Obrys też się zmienia: kawałek na talerzyku, serce, dwa/trzy/pięć pięter, zamek.
+  //
+  // SĄSIAD to `okolicznosciowe/urodziny` (ta sama pula `swieto` w rejestrze). Tort ma być
+  // BOHATEREM kadru, bez dzieci i gości przy stole — stąd `the cake fills the frame`
+  // i własna pula `cukiernia`, w której urodziny są tylko jedną z okazji.
+  // Jednorożca na torcie nie ma (`fantasy/jednorozce`), tortu-cyfry też nie: cyfra to
+  // zaproszenie do napisów, a „Happy Birthday" model i tak czasem dorysuje — odsiać.
+  // „Sprinkles" pominięte: posypka to setki kresek mniejszych od kredki.
+  'jedzenie/torty': {
+    warianty: [
+      'a simple round one-tier cake with smooth plain sides and a single tall candle on top, the cake fills the frame',
+      'a plain tall cake with smooth sides and one big strawberry on top, the cake fills the frame',
+      'a single triangular slice of layer cake on a small plate, showing three layers of sponge and cream, with one cherry on top, the slice fills the frame',
+      'a small smooth heart-shaped cake with a single ribbon bow on top, the cake fills the frame',
+      'a two-tier birthday cake with thick icing dripping down the sides and five candles on top, the cake fills the frame',
+      'a round cake topped with a ring of piped cream swirls, a berry on each swirl and a scalloped border round the base, the cake fills the frame',
+      'a round cake decorated as a smiling bear face with two round ears and a bow tie, the cake fills the frame',
+      'a layer cake with the sponge and cream layers showing at the sides, piled on top with strawberries, blueberries and orange slices, the cake fills the frame',
+      'a tall three-tier wedding cake covered with piped roses, strings of pearls and ribbon bands, with a heart on the very top, the cake fills the frame',
+      'a towering five-tier cake with every tier decorated differently in stars, stripes, big dots, scallops and swirls, with a big star on the very top, the cake fills the frame',
+      'a fairy-tale castle cake with four turret towers made of ice cream cones, an arched door, little flags and sweets all round the base, the cake fills the frame',
+      'an overloaded candy cake piled high with lollipops, doughnuts, macarons, wafer rolls and candy canes, with icing dripping down the sides, the cake fills the frame'
+    ],
+    sceny: SCENY.cukiernia, grubosc: DEKORACYJNE, format: 'pion'
+  },
   'jedzenie/lody':   { warianty: [], sceny: SCENY.kuchnia, grubosc: DLA_MALUCHA, format: 'pion' },
   'jedzenie/jablka': { warianty: [], sceny: SCENY.kuchnia, grubosc: DLA_MALUCHA, format: 'pion' },
 
