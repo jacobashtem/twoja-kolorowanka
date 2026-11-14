@@ -606,6 +606,32 @@ export const SCENY = {
     'on a table beside a small decorated Christmas tree and a few wrapped presents'
   ],
 
+  // ── Lodziarnia: pula DEDYKOWANA lodom ─────────────────────────────────────
+  // `kuchnia` (niżej) to talerzyk, deska, serwetka i kubek herbaty — świat jabłka
+  // i ciasta, nie lodów. Lody to LATO: plaża, basen, wesołe miasteczko, budka z markizą.
+  // Dwanaście scen, bo seria 48 na sześciu dałaby każdą osiem razy.
+  //
+  // Wszystkie przyimkowe i bez ludzi: rożek „wisi" w kadrze tak, jak w każdej
+  // kolorowance z lodem, a ręka trzymająca go to pięć palców do zepsucia.
+  // Jest wózek i budka, NIE MA furgonetki — lodziarka na kołach to wariant w
+  // `pojazdy/samochody` i przejęłaby kadr. Nie ma też tortu ani stołu z przyjęcia
+  // (`cukiernia`), żeby dwie sąsiednie kategorie nie dzieliły obrazka.
+  // Scena 10 daje „smaki" jedynym sposobem, jaki zna kontur: owocami obok.
+  lodziarnia: [
+    'in front of an ice cream stand with a striped awning and a row of round tubs',
+    'on a sandy beach with a parasol, a beach ball and waves behind',
+    'beside an ice cream cart with two big wheels and an umbrella',
+    'under a big smiling sun with round clouds',
+    'on a cafe table under a parasol with two chairs',
+    'beside a swimming pool with a rubber ring and a pair of sunglasses',
+    'at a funfair with a ferris wheel and bunting flags behind',
+    'in a park beside a bench and a fountain',
+    'among palm trees with a deck chair and a pair of flip-flops',
+    'surrounded by big strawberries, cherries and wafer rolls',
+    'beside a freezer display case with rows of round tubs and an ice cream scoop',
+    'with a rainbow behind and a few big stars and hearts around'
+  ],
+
   kuchnia: [
     'on a round plate beside a folded napkin',
     'on a wooden board with a small knife beside it',

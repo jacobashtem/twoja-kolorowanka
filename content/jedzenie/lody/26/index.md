@@ -7,7 +7,7 @@ image: /jedzenie/lody/26/lody-26.svg
 pdf: /jedzenie/lody/26/lody-26.pdf
 alt: "Darmowa kolorowanka lody do druku PDF"
 tags:
-- trudnosc-8
+- trudnosc-4
 - jedzenie
 - lody
 ---
