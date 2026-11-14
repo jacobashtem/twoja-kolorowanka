@@ -7,7 +7,7 @@ image: /zwierzeta/pandy/15/pandy-15.svg
 pdf: /zwierzeta/pandy/15/pandy-15.pdf
 alt: "pandy kolorowanka dla dzieci"
 tags:
-- trudnosc-3
+- trudnosc-4
 - zwierzeta
 - pandy
 ---

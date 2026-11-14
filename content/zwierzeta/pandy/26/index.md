@@ -7,7 +7,7 @@ image: /zwierzeta/pandy/26/pandy-26.svg
 pdf: /zwierzeta/pandy/26/pandy-26.pdf
 alt: "Darmowa kolorowanka pandy do druku PDF"
 tags:
-- trudnosc-8
+- trudnosc-4
 - zwierzeta
 - pandy
 ---

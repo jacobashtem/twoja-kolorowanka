@@ -224,7 +224,46 @@ export const KATEGORIE = {
   // ══ ZWIERZĘTA EGZOTYCZNE ═══════════════════════════════════════════════════
   'zwierzeta/lwy':     { warianty: [], sceny: SCENY.egzotyka, grubosc: DLA_DZIECKA, format: 'pion' },
   'zwierzeta/tygrysy': { warianty: [], sceny: SCENY.egzotyka, grubosc: DLA_DZIECKA, format: 'pion' },
-  'zwierzeta/pandy':   { warianty: [], sceny: SCENY.egzotyka, grubosc: DLA_MALUCHA, format: 'pion' },
+  // PANDY (Delfina, 2026-11-14).
+  //
+  // Panda to jedno ciało i jedna sylwetka — rasą ani budową się jej nie zróżnicuje.
+  // Oś wariantu to POZA I CZYNNOŚĆ, czyli to, z czego panda jest znana: siedzi i je
+  // bambus, obejmuje pień, trzyma się za stopy, wygląda zza kłody. Wszystkie pozy są
+  // SIEDZĄCE, STOJĄCE albo WSPINAJĄCE — leżących nie ma świadomie (króliczki: flop
+  // i sploot wyszły do góry nogami; whimsy ich nie zna), choć panda na plecach sama się
+  // prosi. Dwa warianty mają drugą pandę (4 i 9) — to kosztuje, ale mama z maluchem
+  // to obrazek, którego w tej kategorii nie może zabraknąć.
+  //
+  // KOTWICA: `eye patches` w każdym wariancie. To jedyna cecha, której nie ma żaden
+  // kuzyn — a kuzyni czekają w rejestrze tuż obok: `zwierzeta/mis`, `niedzwiedzie`.
+  // Panda bez łat wokół oczu to po prostu miś.
+  //
+  // RYZYKO CZERNI — największe w dotychczasowych kategoriach. Łaty, uszy i łapy pandy
+  // są czarne Z DEFINICJI, a nie z umaszczenia jak u kota. Pod whimsy i V4 precise
+  // ciemne partie wychodziły dotąd konturem (koty, kot halloweenowy), ale „Line art"
+  // i minimalist zaleją je na pewno. Nie walczę z tym w prompcie (zasada: walka z czernią
+  // = walka z jakością); jeśli trzon wyjdzie czarny, dogrywka dostanie twierdzenie
+  // w stylu pola `biale`: „white ears, white eye patches drawn as outlines".
+  //
+  // Tytuł strony celuje w „kolorowanki pandy" (zmierzone 0), a ruch niesie „kolorowanka
+  // panda" (745) — patrz Faza 0 w skillu. To sprawa tytułu, nie promptów.
+  'zwierzeta/pandy': {
+    warianty: [
+      'a sitting panda with big round eye patches, holding a bamboo stalk in both paws and chewing it',
+      'a baby panda with big round eye patches, an oversized head and short legs spread out in front',
+      'a panda with big round eye patches hugging a thick tree trunk with all four legs, halfway up',
+      'a mother panda with big round eye patches sitting with a tiny cub on her lap',
+      'a panda with big round eye patches standing upright on its back legs and waving one paw',
+      'a panda with big round eye patches wearing a wide cone-shaped straw hat and carrying a basket of bamboo shoots',
+      'a panda with big round eye patches peeking over a fallen log with both front paws resting on it',
+      'a sleepy panda with big round eye patches sitting with its back against a rock, yawning with its eyes closed',
+      'two panda cubs with big round eye patches playing, one climbing onto the back of the other',
+      'a panda with big round eye patches walking on all fours with a leafy bamboo twig in its mouth',
+      'a panda with big round eye patches sitting and holding one huge leaf over its head like an umbrella',
+      'a plump panda with big round eye patches sitting and holding both of its back feet in its front paws'
+    ],
+    sceny: SCENY.bambusowe, grubosc: DLA_MALUCHA, format: 'pion'
+  },
 
   // ══ PTAKI ══════════════════════════════════════════════════════════════════
   'zwierzeta/ptaki':     { warianty: [], sceny: SCENY.niebo, grubosc: DLA_DZIECKA, format: 'pion' },
