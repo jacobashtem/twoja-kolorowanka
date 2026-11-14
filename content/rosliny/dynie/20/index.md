@@ -7,7 +7,7 @@ image: /rosliny/dynie/20/dynie-20.svg
 pdf: /rosliny/dynie/20/dynie-20.pdf
 alt: "Kolorowanki dynie"
 tags:
-- trudnosc-5
+- trudnosc-4
 - rosliny
 - dynie
 ---

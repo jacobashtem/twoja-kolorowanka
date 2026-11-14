@@ -1033,7 +1033,38 @@ export const KATEGORIE = {
     sceny: SCENY.kwiatowe, grubosc: DEKORACYJNE, format: 'pion'
   },
   'rosliny/bukiet': { warianty: [], sceny: SCENY.ogrodek, grubosc: DEKORACYJNE, format: 'pion' },
-  'rosliny/dynie':  { warianty: [], sceny: SCENY.ogrodek, grubosc: DLA_MALUCHA, format: 'pion' },
+  // DYNIE (Delfina, 2026-11-14). Strona obiecuje trzy rzeczy naraz: „jesienne motywy,
+  // halloweenowe buźki i urocze wzory" — i dwunastka jest tak podzielona:
+  //   KSZTAŁT (1–4):    okrągła, płaska, piżmowa z szyjką, patison. Cztery różne obrysy,
+  //                     bo „dynia" to nie tylko pomarańczowa kula.
+  //   JESIEŃ I NAUKA (5–7): sterta trzech, dynia na pędzie z liśćmi i kwiatem, przekrój
+  //                     z pestkami (sekcja H2 o walorze edukacyjnym).
+  //   BUŹKI (8–9):      dwie wycięte, obie WESOŁE.
+  //   UROCZE (10–12):   we wzorki, z myszką w dziurce, z buzią i szalikiem.
+  //
+  // SĄSIAD to `okolicznosciowe/halloween`, gdzie dynia-lampion jest wariantem nr 1,
+  // a kotwicą tamtej kategorii jest „wycięta buźka i świeczka". Tu wycięte są tylko dwie
+  // na dwanaście, bez świeczki i bez straszenia; pula `dyniowe` ma jedną scenę z księżycem
+  // na dwanaście. Reszta to pole, kuchnia, targ i jesienny ogród — dynia jako WARZYWO.
+  // Nie ma karocy z dyni: karoca stoi w scenach księżniczek i ciągnie tamten świat.
+  // Pestki są „big seeds" — drobne wyszłyby kropkami mniejszymi od kredki.
+  'rosliny/dynie': {
+    warianty: [
+      'a big round pumpkin with deep ribs and a thick curly stem with one leaf, the pumpkin fills the frame',
+      'a wide flat pumpkin with deep ribs like a cushion and a short stubby stem, the pumpkin fills the frame',
+      'a long pear-shaped squash with a narrow neck, a round bottom and a short stem, the squash fills the frame',
+      'a small patty pan squash shaped like a flying saucer with a scalloped edge, the squash fills the frame',
+      'a pile of three pumpkins of different sizes and shapes leaning on each other, the pumpkins fill the frame',
+      'a pumpkin growing on a vine with big lobed leaves, curling tendrils and one open flower, the pumpkin fills the frame',
+      'a pumpkin cut in half showing thick flesh and a hollow full of big seeds, the pumpkin fills the frame',
+      'a carved pumpkin with a wide friendly smile, round eyes and a curly stem, the pumpkin fills the frame',
+      'a carved pumpkin with a funny surprised face wearing a floppy pointed hat, the pumpkin fills the frame',
+      'a round pumpkin decorated all over with big hearts, stars and swirls, the pumpkin fills the frame',
+      'a pumpkin with a round hole in its side and a little mouse peeking out, the pumpkin fills the frame',
+      'a happy cartoon pumpkin with a smiling face, rosy cheeks, two little arms and a knitted scarf, the pumpkin fills the frame'
+    ],
+    sceny: SCENY.dyniowe, grubosc: DLA_MALUCHA, format: 'pion'
+  },
   // `runo`, nie `las` — leśne sceny zwierzęce każą grzybowi chodzić i węszyć.
   'rosliny/grzyby': { warianty: [], sceny: SCENY.runo,    grubosc: DLA_DZIECKA, format: 'pion' },
 

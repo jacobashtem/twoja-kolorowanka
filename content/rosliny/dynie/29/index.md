@@ -7,7 +7,7 @@ image: /rosliny/dynie/29/dynie-29.svg
 pdf: /rosliny/dynie/29/dynie-29.pdf
 alt: "Malowanka dynie do druku A4"
 tags:
-- trudnosc-7
+- trudnosc-5
 - rosliny
 - dynie
 ---

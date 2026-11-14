@@ -792,6 +792,33 @@ export const SCENY = {
     'in a window box on a balcony with rooftops and a chimney behind'
   ],
 
+  // ── Dyniowe: pula DEDYKOWANA kategorii `rosliny/dynie` ─────────────────────
+  // `ogrodek` (niżej) to doniczka, konewka i pergola — wiosenny ogród kwiatowy, a dynia
+  // to JESIEŃ. `halloween` ma już werandę z rzędem wyciętych dyń, wóz pełen dyń
+  // i nawiedzony dom, więc tych trzech tu nie ma: dwie kategorie nie mogą dzielić kadru.
+  //
+  // Dwanaście scen w czterech światach: POLE (1–3), JESIENNY OGRÓD (4, 8, 11),
+  // KUCHNIA I TARG (5, 6, 9, 12), PRÓG DOMU I WIECZÓR (7, 10). Księżyc jest w JEDNEJ —
+  // tyle Halloween, ile obiecuje strona, i ani sceny więcej. Bez słów „night" i „dark".
+  //
+  // Wszystkie przyimkowe: dynia leży. Nie ma noża przy kuchennym stole (kolorowanka dla
+  // malucha) ani tabliczki z ceną na targu (napis = śmieciowe litery). Kosz i koc bez
+  // kratki — co drugie pole wyszłoby czarne. Jeż w scenie 8 to jedyna druga buzia w puli.
+  dyniowe: [
+    'in a pumpkin field with curling vines and a wooden fence behind',
+    'in a wheelbarrow with a garden fork leaning beside it',
+    'on a bale of hay with ears of corn and a sunflower',
+    'among falling maple leaves and a few acorns',
+    'on a kitchen table beside a pie on a plate and a wooden spoon',
+    'on a market stall crate with apples and pears around',
+    'on a doorstep beside a pair of rubber boots and a lantern',
+    'under a tree beside a hedgehog and a few mushrooms',
+    'in a big woven basket with apples and a few leaves',
+    'under a crescent moon with a few small stars and one bat',
+    'beside a rake, a pile of leaves and a straw hat hung on a fence post',
+    'on a windowsill with a mug, a candle and a few big raindrops on the window'
+  ],
+
   // ── Rośliny ────────────────────────────────────────────────────────────────
   ogrodek: [
     'growing from a clay pot with a small trowel beside it',
