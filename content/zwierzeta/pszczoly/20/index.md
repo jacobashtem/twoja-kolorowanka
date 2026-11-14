@@ -7,7 +7,7 @@ image: /zwierzeta/pszczoly/20/pszczoly-20.svg
 pdf: /zwierzeta/pszczoly/20/pszczoly-20.pdf
 alt: "Kolorowanki pszczoly"
 tags:
-- trudnosc-1
+- trudnosc-4
 - zwierzeta
 - pszczoly
 ---

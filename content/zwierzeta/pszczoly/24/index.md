@@ -7,7 +7,7 @@ image: /zwierzeta/pszczoly/24/pszczoly-24.svg
 pdf: /zwierzeta/pszczoly/24/pszczoly-24.pdf
 alt: "Kolorowanki do druku pszczoly"
 tags:
-- trudnosc-6
+- trudnosc-4
 - zwierzeta
 - pszczoly
 ---

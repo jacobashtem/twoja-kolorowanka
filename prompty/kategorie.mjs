@@ -298,7 +298,44 @@ export const KATEGORIE = {
     sceny: SCENY.laka, grubosc: DEKORACYJNE, format: 'pion'
   },
 
-  'zwierzeta/pszczoly':   { warianty: [], sceny: SCENY.ogrod, grubosc: DLA_MALUCHA, format: 'pion' },
+  // PSZCZOŁY (Delfina, 2026-11-14).
+  //
+  // Pszczoła to jedno małe ciało — sylwetką gatunku się jej nie zróżnicuje (inaczej niż
+  // psa czy dinozaura). Oś wariantu to więc ROLA I REKWIZYT widoczny w obrysie: korona
+  // królowej, wiaderko, kwiat na ramieniu, łyżka, kulki pyłku, para, trójka w locie.
+  // Dwa warianty różnią się samą budową (pękaty trzmiel, maluch z wielką głową), a jeden
+  // (11) jest przyrodniczy — rozłożone skrzydła i sześć nóg — bo strona obiecuje „proste
+  // i szczegółowe wzory" oraz naukę przyrody, a jedenaście bajkowych pszczółek tego nie da.
+  //
+  // SĄSIEDZI: `zwierzeta/motyle` (ta sama łąka), `zwierzeta/biedronki` (ta sama pula
+  // `ogrod` w rejestrze) i OSA, której w serwisie nie ma, ale jest w modelu. Żaden wariant
+  // nie ma słów „stinger", „wasp" ani „thin waist"; ciało jest zawsze „round" albo „plump",
+  // bo osa jest smukła. Świat pszczoły (ul, plaster, miód) siedzi w puli `pasieka`.
+  //
+  // NIE MA MISIA. Miś z garnkiem miodu to cudza, bardzo znana postać — ani w wariantach,
+  // ani w scenach nie pojawia się niedźwiedź, a miód stoi w beczce i w plastrze, nie
+  // w garnku z napisem.
+  //
+  // RYZYKO CZERNI: paski pszczoły to dla modelu partia z natury ciemna, jak grzywa konia.
+  // Pod stylami panelowymi wychodziły dotąd konturem (koty: pręgi nie zaczernione), ale
+  // w „Line art" i minimalist mogą być lite — widać to od razu w galerii.
+  'zwierzeta/pszczoly': {
+    warianty: [
+      'a plump round honey bee with a striped body, two rounded wings and curly antennae',
+      'a bumblebee with a very big fuzzy round body and tiny wings',
+      'a queen bee with a long striped body wearing a small crown',
+      'a bee with a round striped body carrying a little bucket full of honey',
+      'a little baby bee with an oversized head, a tiny round body and very small wings',
+      'a bee with a round striped body carrying a big flower over its shoulder',
+      'two bees with round striped bodies flying side by side',
+      'a bee with a round striped body and fat round balls of pollen on its back legs',
+      'a sitting bee with a round striped body holding a big spoon dripping with honey',
+      'a smiling bee with a round striped body wearing a little bow tie and waving',
+      'a honey bee with its four wings spread flat, a body in three clear segments and all six legs showing',
+      'three little bees flying in a row and leaving a looping dotted trail'
+    ],
+    sceny: SCENY.pasieka, grubosc: DLA_MALUCHA, format: 'pion'
+  },
   'zwierzeta/biedronki':  { warianty: [], sceny: SCENY.ogrod, grubosc: DLA_MALUCHA, format: 'pion' },
 
   // ══ PREHISTORIA ════════════════════════════════════════════════════════════

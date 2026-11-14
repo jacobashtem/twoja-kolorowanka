@@ -7,7 +7,7 @@ image: /zwierzeta/pszczoly/5/pszczoly-5.svg
 pdf: /zwierzeta/pszczoly/5/pszczoly-5.pdf
 alt: "Kolorowanka do druku pszczoly"
 tags:
-- trudnosc-5
+- trudnosc-3
 - zwierzeta
 - pszczoly
 ---

@@ -7,7 +7,7 @@ image: /zwierzeta/pszczoly/14/pszczoly-14.svg
 pdf: /zwierzeta/pszczoly/14/pszczoly-14.pdf
 alt: "Edukacyjna kolorowanka pszczoly do wydruku"
 tags:
-- trudnosc-5
+- trudnosc-4
 - zwierzeta
 - pszczoly
 ---
