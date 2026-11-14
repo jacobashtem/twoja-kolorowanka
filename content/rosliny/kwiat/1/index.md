@@ -7,7 +7,7 @@ image: /rosliny/kwiat/1/kwiat-1.svg
 pdf: /rosliny/kwiat/1/kwiat-1.pdf
 alt: "Kolorowanka kwiat"
 tags:
-- trudnosc-10
+- trudnosc-1
 - rosliny
 - kwiat
 ---

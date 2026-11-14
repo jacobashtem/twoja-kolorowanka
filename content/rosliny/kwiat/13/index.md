@@ -7,7 +7,7 @@ image: /rosliny/kwiat/13/kwiat-13.svg
 pdf: /rosliny/kwiat/13/kwiat-13.pdf
 alt: "Łatwa kolorowanka kwiat dla przedszkolaka"
 tags:
-- trudnosc-6
+- trudnosc-3
 - rosliny
 - kwiat
 ---

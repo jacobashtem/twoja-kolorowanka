@@ -682,6 +682,34 @@ export const SCENY = {
     'beside a cottage with a smoking chimney'
   ],
 
+  // ── Kwiatowe: pula DEDYKOWANA kategorii `rosliny/kwiat` ────────────────────
+  // `ogrodek` (niżej) ma sześć scen i dzieli je z bukietem i dyniami; „tied with ribbon
+  // and resting on a bench" robi z kwiatu BUKIET, czyli sąsiednią kategorię, a „climbing
+  // a wooden trellis" pasuje tylko do pnącza. Tu dwanaście scen = dwanaście różnych
+  // OKOLICZNOŚCI: grządka, parapet, łąka, deszcz, słońce z tęczą, prezent, staw, szklarnia,
+  // balkon. Pogoda i okazja różnicują kadr mocniej niż kolejny kąt ogrodu.
+  //
+  // Wszystkie przyimkowe — kwiat nigdzie nie idzie. Każda zakłada, że roślina ROŚNIE
+  // (w ziemi albo w doniczce), więc pasuje do każdego wariantu, także do wysokiej malwy.
+  // Towarzysze są mali i bez skrzydeł: biedronka, żaba, ślimak. Motyla i pszczoły nie ma
+  // świadomie — `zwierzeta/motyle` ma własną pulę `laka` pełną kwiatów i kadry by się zlały.
+  // Przy prezencie jest balon, nie bilecik: bilecik to zaproszenie do śmieciowych liter.
+  // Deszcz to „big raindrops", nie „pouring rain" — ulewa wychodzi równoległym sztrychem.
+  kwiatowe: [
+    'growing in a flower bed edged with round stones, with a garden trowel stuck in the soil',
+    'in a clay pot on a windowsill with tied-back curtains',
+    'in a meadow of short grass with a ladybird on a leaf and round clouds above',
+    'beside a watering can tipping out a few big drops',
+    'in the rain with big raindrops and a puddle with round ripples',
+    'under a big smiling sun with a rainbow behind',
+    'in an old rubber boot used as a planter beside a garden gate',
+    'beside a picket fence with a birdhouse on a post',
+    'in a pot with a big ribbon bow next to a wrapped present and a heart-shaped balloon',
+    'beside a pond with a frog on a lily pad and two reeds',
+    'in a greenhouse among seedling trays with a pair of garden gloves',
+    'in a window box on a balcony with rooftops and a chimney behind'
+  ],
+
   // ── Rośliny ────────────────────────────────────────────────────────────────
   ogrodek: [
     'growing from a clay pot with a small trowel beside it',
