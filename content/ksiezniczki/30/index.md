@@ -7,7 +7,7 @@ image: /ksiezniczki/30/ksiezniczki-30.svg
 pdf: /ksiezniczki/30/ksiezniczki-30.pdf
 alt: "kolorowanka do druku ksiezniczki PDF"
 tags:
-- trudnosc-8
+- trudnosc-5
 - ksiezniczki
 - ksiezniczki
 ---

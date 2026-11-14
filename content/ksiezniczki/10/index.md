@@ -7,7 +7,7 @@ image: /ksiezniczki/10/ksiezniczki-10.svg
 pdf: /ksiezniczki/10/ksiezniczki-10.pdf
 alt: "Kolorowanka z ksiezniczki do pobrania"
 tags:
-- trudnosc-9
+- trudnosc-4
 - ksiezniczki
 - ksiezniczki
 ---

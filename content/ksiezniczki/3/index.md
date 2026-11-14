@@ -7,7 +7,7 @@ image: /ksiezniczki/3/ksiezniczki-3.svg
 pdf: /ksiezniczki/3/ksiezniczki-3.pdf
 alt: "ksiezniczki kolorowanka dla dzieci"
 tags:
-- trudnosc-10
+- trudnosc-3
 - ksiezniczki
 - ksiezniczki
 ---
