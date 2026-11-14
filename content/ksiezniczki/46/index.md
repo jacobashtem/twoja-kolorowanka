@@ -7,7 +7,7 @@ image: /ksiezniczki/46/ksiezniczki-46.svg
 pdf: /ksiezniczki/46/ksiezniczki-46.pdf
 alt: "Kolorowanka z ksiezniczki do pobrania"
 tags:
-- trudnosc-8
+- trudnosc-7
 - ksiezniczki
 - ksiezniczki
 ---

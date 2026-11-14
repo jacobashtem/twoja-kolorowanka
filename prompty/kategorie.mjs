@@ -530,24 +530,47 @@ export const KATEGORIE = {
   //   `fantasy/elfy`     — „pointed ears" należą do nich
   // Kotwicą jest `princess` + suknia + korona. Oś sylwetki to KSZTAŁT SUKNI (dzwon,
   // tren, klosz, wąska prosta, falbany) plus fryzura o zamkniętym obrysie.
-  // Wariant 5 to chłopiec, tak samo jak u wróżek i syrenek.
+  // Wariant 4 to chłopiec, tak samo jak u wróżek i syrenek.
+  //
+  // ── PRZEPISANE 2026-11-14 pod migrację kategorii (Delfina: „dokładne, ciekawe") ──
+  // Pierwsza dwunastka (pakiet newslettera, w historii gita) to było dwanaście razy
+  // „księżniczka STOI w sukni" — różniły je kołnierz, rąbek i guziki, czyli detale
+  // poniżej poziomu sylwetki, które whimsy gubi (jaszczurki: 12 wariantów → 5
+  // rozróżnialnych). Do tego „lace collar" (koronka = gęsty sztrych) i „velvet cloak"
+  // (aksamit = token ciemnej tkaniny).
+  //
+  // Wzorzec wzięty z `fantasy/elfy` → zestaw `szczegolowe`: w selekcji elfów poszło z niego
+  // 11 sztuk na 12, więc długi, warstwowy opis się broni. Każdy wariant to ROLA rozpisana
+  // na cztery warstwy: fryzura o zamkniętym obrysie + korona, krój sukni, rekwizyt,
+  // CZYNNOŚĆ. To czynność robi tu różnicę — dyga, wiruje, czyta, trzyma żabę — bo daje
+  // inną pozę, a nie tylko inną sukienkę.
+  //
+  // Trzy księżniczki są z innych stron świata i pór roku (zimowa w futrze, w kimonie,
+  // w sari): krój stroju zmienia obrys mocniej niż jakikolwiek kołnierz.
+  // Baśnie są tu tylko jako TROP z domeny publicznej (żaba w koronie, bardzo długi
+  // warkocz) i nigdy w zestawie cech, który składałby się na cudzą filmową postać:
+  // żadnego pantofelka, lodowej magii ani róży pod kloszem.
+  //
+  // Druga istota w kadrze kosztuje (syrenki: 50% przy średniej 67%), więc są tylko dwie
+  // i obie bez ludzkiej twarzy: miś (3) i żaba (7). Bez masy ciała, bez „wings", „tiny",
+  // „wand" (wróżka) i „pointed ears" (elf).
   'ksiezniczki': {
     warianty: [
-      'a princess in a wide bell-shaped ball gown with a small pointed crown and hair in a high bun, full body fills the frame',
-      'a princess in a long gown with a trailing train and one thick braid over her shoulder, wearing a narrow tiara, full body fills the frame',
-      'a princess in a short flared dress with puffed sleeves and hair in two coiled buns, full body fills the frame',
-      'a princess in a straight narrow gown with a high collar, a beaded crown and a long ponytail, full body fills the frame',
-      'a prince in a belted tunic with a short cape and a slim circlet on cropped hair, full body fills the frame',
-      'a princess in a layered ruffled skirt holding a round hand fan, hair in a bob under a flower crown, full body fills the frame',
-      'a princess in a gown with a wide lace collar and hair in a crown braid wound around her head, full body fills the frame',
-      'a princess in a gown with a long buttoned bodice and a small crown, holding a round hand mirror, full body fills the frame',
-      'a princess in a gown with huge puffed sleeves and hair in a side bun tied with a ribbon, full body fills the frame',
-      'a princess in a hooded velvet cloak over a long gown, wearing a crown over the hood, full body fills the frame',
-      'a princess in a gown with a scalloped hem and hair in a low chignon, holding a small posy of flowers, full body fills the frame',
-      'a princess in a riding dress with a short cape and tall boots, hair in a tight bun under a small crown, full body fills the frame'
+      'a princess with hair in a high bun under a small pointed crown, wearing a wide bell-shaped ball gown with puffed sleeves, long gloves and a big bow at the back, holding the skirt out with both hands in a curtsey, full body fills the frame',
+      'a princess with one long thick braid over her shoulder and a narrow tiara with a heart-shaped gem, wearing a gown with a long trailing train and a row of bows down the front, twirling with one arm raised, full body fills the frame',
+      'a little girl princess with hair in two coiled buns and a crown slightly too big for her head, wearing a short flared dress with puffed sleeves and a wide sash, hugging a teddy bear that wears a small crown, full body fills the frame',
+      'a young prince with short cropped hair under a slim crown, wearing a short cape clasped with a round brooch, a belted tunic with a row of buttons and tall boots, bowing with one hand on his chest, full body fills the frame',
+      'a princess with a short bob under a crown of flowers, wearing a dress with a layered ruffled skirt and a ribbon belt, sitting on a big tasselled cushion with an open storybook on her lap, full body fills the frame',
+      'a brave princess with hair in a tight bun under a small crown, wearing a riding dress with a short cape and tall boots, holding up a wooden sword and a round shield with a heart on it, full body fills the frame',
+      'a princess with a crown braid wound around her head and a small crown on top, wearing a gown with a wide round collar and a scalloped hem, kneeling and holding a frog with a small crown on her open palms, full body fills the frame',
+      'a winter princess with a long ponytail under a tall pointed crown, wearing a long cape with fur trim over a gown with a high collar, both hands tucked into a round fur muff, full body fills the frame',
+      'a princess with hair pinned up in a round knot with two long hairpins and a flower, wearing a long kimono with wide hanging sleeves and a broad sash tied in a big bow at the back, holding an open folding fan, full body fills the frame',
+      'a princess with two long braids and a crown of roses, wearing a gown with a skirt of overlapping petals and short puffed sleeves, carrying a basket full of roses, full body fills the frame',
+      'a princess with one enormously long braid tied with bows trailing on the ground and a small tiara, wearing a simple gown with a ribbon-laced bodice and bell sleeves, holding a hairbrush, full body fills the frame',
+      'a princess with a long plait and a jewelled headpiece with a drop on the forehead, wearing a sari draped over one shoulder with a patterned border and a row of bangles on each arm, holding a lotus flower, full body fills the frame'
     ],
     biale: 'white hair, white gown, white crown',
-    sceny: SCENY.magia, grubosc: DEKORACYJNE, format: 'pion'
+    sceny: SCENY.palacowe, grubosc: DEKORACYJNE, format: 'pion'
   },
   // ELFY — najtrudniejszy z trójki, bo sąsiedzi są dwaj i obaj groźni:
   //   `fantasy/wrozki`   — drobna magiczna postać; stąd ZAKAZ słów „wings" i „tiny",

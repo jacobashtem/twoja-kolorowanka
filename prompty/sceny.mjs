@@ -215,6 +215,38 @@ export const SCENY = {
     'on a rocky path winding up to a hilltop castle'
   ],
 
+  // ── Pałacowe: pula DEDYKOWANA księżniczkom ────────────────────────────────
+  // `magia` odpada z trzech powodów. Po pierwsze przejechały ją właśnie elfy (47 liści na
+  // produkcji od 2026-11-14) — dwie sąsiednie kategorie miałyby te same pomysły na kadr.
+  // Po drugie jej rekwizyty ciągną do sąsiadów: krąg muchomorów ze świetlikami to wróżka,
+  // a „sky of stars and a crescent moon" to czarne niebo. Po trzecie sześć scen na serię
+  // 48 daje każdą osiem razy.
+  //
+  // Świat jest DWORSKI i żadna inna kategoria go nie ma: tron, balkon, sala balowa,
+  // kareta, toaletka, łoże z baldachimem. To on, a nie sama suknia, odróżnia księżniczkę
+  // od „dziewczynki w sukience" — ta sama rola, którą skala rekwizytu gra u wróżek.
+  //
+  // Sceny są PRZYIMKOWE i BEZ ZAIMKÓW: warianty niosą własne czynności (dyga, klęczy,
+  // siedzi z książką), a jeden z nich to książę. Kareta stoi BEZ KONI — koń przejąłby kadr
+  // i zrobił z tego `zwierzeta/koniki` (ta sama decyzja co w `rycerskie`). Jedyne zwierzęta
+  // to dwa łabędzie w tle, bez twarzy do zepsucia.
+  // Nie ma nocy ani posadzki w szachownicę (co drugie pole wyszłoby czarne), nie ma też
+  // biblioteki — rzędy grzbietów książek to gęsty równoległy sztrych.
+  palacowe: [
+    'in a throne room beside a tall throne with a heart-shaped back and a long carpet',
+    'on a palace balcony with a stone balustrade and flags flying on distant towers',
+    'in a ballroom under a big chandelier with tall arched windows and ribbon garlands',
+    'in a rose garden beside a round fountain with three tiers',
+    'at the foot of a grand curving staircase with a long carpet runner',
+    'beside a round carriage with big spoked wheels and a crown on its roof',
+    'in front of a castle with pointed towers, a drawbridge and pennant flags',
+    'beside a dressing table with an oval mirror, a jewellery box and a string of pearls',
+    'at a garden tea table with a tiered cake stand, a teapot and two cups',
+    'beside a canopy bed with draped curtains and a pile of round pillows',
+    'under a garden arch of climbing roses with a stone bench',
+    'beside a pond with two swans and a little arched bridge'
+  ],
+
   // ── Tęcza: pula DEDYKOWANA jednorożcom ────────────────────────────────────
   // Trzecia pula pisana pod jedno stworzenie, po `zagroda` i `podworko`. Powody dwa.
   //

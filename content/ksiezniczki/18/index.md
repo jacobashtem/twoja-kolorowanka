@@ -7,7 +7,7 @@ image: /ksiezniczki/18/ksiezniczki-18.svg
 pdf: /ksiezniczki/18/ksiezniczki-18.pdf
 alt: "Pokoloruj ksiezniczki – darmowy szablon PDF"
 tags:
-- trudnosc-5
+- trudnosc-4
 - ksiezniczki
 - ksiezniczki
 ---

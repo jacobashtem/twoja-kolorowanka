@@ -7,7 +7,7 @@ image: /ksiezniczki/38/ksiezniczki-38.svg
 pdf: /ksiezniczki/38/ksiezniczki-38.pdf
 alt: "Kolorowanki ksiezniczki"
 tags:
-- trudnosc-5
+- trudnosc-6
 - ksiezniczki
 - ksiezniczki
 ---

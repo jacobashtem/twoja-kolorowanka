@@ -7,7 +7,7 @@ image: /ksiezniczki/1/ksiezniczki-1.svg
 pdf: /ksiezniczki/1/ksiezniczki-1.pdf
 alt: "Kolorowanka ksiezniczki"
 tags:
-- trudnosc-9
+- trudnosc-2
 - ksiezniczki
 - ksiezniczki
 ---

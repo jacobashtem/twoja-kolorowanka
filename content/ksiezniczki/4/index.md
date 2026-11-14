@@ -7,7 +7,7 @@ image: /ksiezniczki/4/ksiezniczki-4.svg
 pdf: /ksiezniczki/4/ksiezniczki-4.pdf
 alt: "ksiezniczki kolorowanki dla dzieci"
 tags:
-- trudnosc-4
+- trudnosc-3
 - ksiezniczki
 - ksiezniczki
 ---

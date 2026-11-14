@@ -7,7 +7,7 @@ image: /ksiezniczki/20/ksiezniczki-20.svg
 pdf: /ksiezniczki/20/ksiezniczki-20.pdf
 alt: "Kolorowanki ksiezniczki"
 tags:
-- trudnosc-3
+- trudnosc-5
 - ksiezniczki
 - ksiezniczki
 ---
