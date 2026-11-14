@@ -7,7 +7,7 @@ image: /rosliny/dynie/5/dynie-5.svg
 pdf: /rosliny/dynie/5/dynie-5.pdf
 alt: "Kolorowanka do druku dynie"
 tags:
-- trudnosc-2
+- trudnosc-3
 - rosliny
 - dynie
 ---

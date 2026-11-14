@@ -7,7 +7,7 @@ image: /rosliny/dynie/37/dynie-37.svg
 pdf: /rosliny/dynie/37/dynie-37.pdf
 alt: "Kolorowanka dynie"
 tags:
-- trudnosc-9
+- trudnosc-6
 - rosliny
 - dynie
 ---
