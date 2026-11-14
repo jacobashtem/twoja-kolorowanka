@@ -7,7 +7,7 @@ image: /zwierzeta/pandy/12/pandy-12.svg
 pdf: /zwierzeta/pandy/12/pandy-12.pdf
 alt: "kolorowanka do druku pandy PDF"
 tags:
-- trudnosc-2
+- trudnosc-3
 - zwierzeta
 - pandy
 ---

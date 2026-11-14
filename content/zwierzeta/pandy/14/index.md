@@ -7,7 +7,7 @@ image: /zwierzeta/pandy/14/pandy-14.svg
 pdf: /zwierzeta/pandy/14/pandy-14.pdf
 alt: "Edukacyjna kolorowanka pandy do wydruku"
 tags:
-- trudnosc-5
+- trudnosc-4
 - zwierzeta
 - pandy
 ---

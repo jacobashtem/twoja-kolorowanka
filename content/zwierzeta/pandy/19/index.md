@@ -7,7 +7,7 @@ image: /zwierzeta/pandy/19/pandy-19.svg
 pdf: /zwierzeta/pandy/19/pandy-19.pdf
 alt: "Kolorowanka pandy"
 tags:
-- trudnosc-9
+- trudnosc-4
 - zwierzeta
 - pandy
 ---

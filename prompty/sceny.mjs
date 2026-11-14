@@ -103,6 +103,33 @@ export const SCENY = {
     'beside a tree stump with a ball and a chewed stick lying in the grass'
   ],
 
+  // ── Bambusowe: pula DEDYKOWANA pandom ─────────────────────────────────────
+  // `egzotyka` (niżej) to sawanna, akacje i wodopój — świat lwa i żyrafy. Panda na
+  // sawannie to błąd rzeczowy, a strona obiecuje wprost „pandy w bambusowym lesie".
+  //
+  // Bambus jest w czterech scenach z dwunastu, nie we wszystkich: warianty już go
+  // niosą (łodyga w łapach, gałązka w pysku, kosz pędów), a gęsty gaj to rzędy
+  // równoległych łodyg, czyli sztrych. Stąd „a few thick stalks", nigdy „forest".
+  // Reszta to góry we mgle, strumień, śnieg, pagoda, lampiony, mostek z lotosami —
+  // krajobraz, w którym panda żyje, i jedyny w serwisie o takim charakterze.
+  //
+  // Wszystkie przyimkowe, bo każdy wariant ma własną pozę. Żadnych innych zwierząt:
+  // dwa warianty mają już drugą pandę. Śnieg to „a few big snowflakes" (lekcja z zimy).
+  bambusowe: [
+    'among a few thick bamboo stalks with long pointed leaves',
+    'beside a stream with round stepping stones',
+    'on a grassy hill with pointed misty mountains behind',
+    'beside a small waterfall and a pool ringed with round pebbles',
+    'under a tree hung with round paper lanterns',
+    'in front of a pagoda with curved roofs',
+    'beside a little arched wooden bridge over a pond with lotus flowers',
+    'on a wooden climbing platform with a ladder and a few thick bamboo stalks behind',
+    'in the snow with a few big snowflakes and snow on the pine branches',
+    'beside a pile of bamboo shoots and a round woven basket',
+    'in a meadow of round flowers with a smiling sun in the corner',
+    'among big mossy boulders with ferns and one thick bamboo stalk'
+  ],
+
   egzotyka: [
     'resting on a warm flat rock under the sun',
     'walking through tall savanna grass with acacia trees behind',

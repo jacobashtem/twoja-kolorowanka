@@ -7,7 +7,7 @@ image: /zwierzeta/pandy/7/pandy-7.svg
 pdf: /zwierzeta/pandy/7/pandy-7.pdf
 alt: "pandy do druku i pokolorowania"
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - pandy
 ---

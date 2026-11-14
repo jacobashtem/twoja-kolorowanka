@@ -7,7 +7,7 @@ image: /zwierzeta/pandy/34/pandy-34.svg
 pdf: /zwierzeta/pandy/34/pandy-34.pdf
 alt: "Kolorowanka pandy – format A4 PDF"
 tags:
-- trudnosc-10
+- trudnosc-5
 - zwierzeta
 - pandy
 ---
