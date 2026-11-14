@@ -7,7 +7,7 @@ image: /zwierzeta/pszczoly/26/pszczoly-26.svg
 pdf: /zwierzeta/pszczoly/26/pszczoly-26.pdf
 alt: "Darmowa kolorowanka pszczoly do druku PDF"
 tags:
-- trudnosc-2
+- trudnosc-4
 - zwierzeta
 - pszczoly
 ---

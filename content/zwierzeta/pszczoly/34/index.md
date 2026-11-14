@@ -7,7 +7,7 @@ image: /zwierzeta/pszczoly/34/pszczoly-34.svg
 pdf: /zwierzeta/pszczoly/34/pszczoly-34.pdf
 alt: "Kolorowanka pszczoly – format A4 PDF"
 tags:
-- trudnosc-8
+- trudnosc-6
 - zwierzeta
 - pszczoly
 ---

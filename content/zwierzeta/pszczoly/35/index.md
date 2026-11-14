@@ -7,7 +7,7 @@ image: /zwierzeta/pszczoly/35/pszczoly-35.svg
 pdf: /zwierzeta/pszczoly/35/pszczoly-35.pdf
 alt: "Prosta kolorowanka pszczoly do kolorowania"
 tags:
-- trudnosc-4
+- trudnosc-7
 - zwierzeta
 - pszczoly
 ---

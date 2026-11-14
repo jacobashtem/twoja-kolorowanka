@@ -139,6 +139,35 @@ export const SCENY = {
     'circling a small beehive under a branch'
   ],
 
+  // ── Pasieka: pula DEDYKOWANA pszczołom ────────────────────────────────────
+  // `ogrod` ma sześć scen z czasownikami („hovering", „crawling", „landing") — wśród
+  // wariantów pszczół jest para, trójka w locie i pszczoła siedząca z łyżką, więc każdy
+  // z tych czasowników z którymś się gryzie. Do tego `ogrod` dzielą biedronki, a `laka`
+  // należy do motyli: pszczoła na tej samej stokrotce co motyl to ten sam obrazek.
+  //
+  // Dlatego dwie trzecie scen stoi na rzeczach, których nie ma żaden inny owad: ul
+  // słomiany, ule skrzynkowe, plaster miodu, dziupla z plastrem, beczka miodu, domek-ul.
+  // To one mówią „pszczoła", zanim ktokolwiek spojrzy na paski. Kwiaty są cztery i każdy
+  // inny niż w `laka` (słonecznik w `laka` jest, ale tu jest JEDEN i wielki).
+  //
+  // Wszystkie przyimkowe. Plaster to „big cells" — drobna siatka sześciokątów wyszłaby
+  // gęstym sztrychem. Nie ma pszczelarza (twarz za siatką = gotowy odrzut) ani
+  // niedźwiedzia (patrz komentarz przy kategorii).
+  pasieka: [
+    'beside a round straw beehive on a wooden stand',
+    'in front of a honeycomb of big six-sided cells with honey dripping from a few',
+    'beside one giant open sunflower',
+    'beside a row of wooden box hives with sloping roofs on a hill',
+    'next to a hollow tree with honeycomb showing inside the opening',
+    'on a branch of apple blossom with a few open buds',
+    'beside a wooden barrel brimming with honey and a ladle',
+    'in a field of tulips with round clouds above',
+    'on the rim of a flowerpot with a watering can beside it',
+    'in a garden with a picket fence and one tall hollyhock',
+    'beside a beehive shaped like a little house with a round door, a window and a chimney',
+    'among tall clover flowers with a smiling sun in the corner'
+  ],
+
   // ── Łąka: pula DEDYKOWANA motylom ─────────────────────────────────────────
   // Piąta pula pisana pod jedną kategorię, z tego samego powodu co `zagroda` i `podworko`:
   // motyle to 91 liści, a `ogrod` ma sześć scen. Przy serii na 48 sztuk każda scena wypadłaby
