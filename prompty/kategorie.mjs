@@ -1074,7 +1074,37 @@ export const KATEGORIE = {
     ],
     sceny: SCENY.cukiernia, grubosc: DEKORACYJNE, format: 'pion'
   },
-  'jedzenie/lody':   { warianty: [], sceny: SCENY.kuchnia, grubosc: DLA_MALUCHA, format: 'pion' },
+  // LODY (Delfina, 2026-11-14). Strona obiecuje „różne smaki i kształty lodów" — smaku
+  // w konturze nie ma (to kolor), więc cała różnorodność idzie w KSZTAŁT: rożek z jedną
+  // gałką, wieża z trzech, świderek, lód na patyku, baton, pucharek, banana split,
+  // kanapka lodowa, kubeczek. Każdy to inny obrys, czyli test z rozdziału 2 przechodzi
+  // sam. Trzy ostatnie warianty są o CHARAKTERZE: topiący się, z buzią, przeładowany.
+  //
+  // Rozrzut gęstości jak przy tortach: 1, 4 i 9 są proste (maluch), 6, 7 i 12 bogate.
+  //
+  // Nie ma słowa „chocolate" — to token ciemnego wypełnienia; polewa jest „coating"
+  // i „drizzle". Nie ma „sprinkles" (setki kresek mniejszych od kredki), wafel ma
+  // „criss-cross pattern", bo krata rożka to duże romby do zamalowania.
+  // SĄSIAD: `jedzenie/torty` (stąd lody nigdy nie leżą na torcie ani obok niego)
+  // i lodziarka-furgonetka z `pojazdy/samochody` — w puli `lodziarnia` jest wózek
+  // i budka, nigdy auto.
+  'jedzenie/lody': {
+    warianty: [
+      'an ice cream cone with one big round scoop in a waffle cone with a criss-cross pattern, the ice cream fills the frame',
+      'a tall ice cream cone with three round scoops stacked one on another and a cherry on top, the ice cream fills the frame',
+      'a soft-serve ice cream with a tall twisted swirl ending in a curled tip, in a flat-bottomed wafer cup, the ice cream fills the frame',
+      'an ice lolly on a wooden stick with a rounded top and a bite taken out of one corner, the ice lolly fills the frame',
+      'an ice cream bar on a wooden stick with a thick coating, a zigzag drizzle across it and one corner bitten off, the ice cream fills the frame',
+      'an ice cream sundae in a tall footed glass with three scoops, a swirl of whipped cream, a wafer roll and a cherry, the sundae fills the frame',
+      'a banana split in a long boat-shaped dish with three scoops between two banana halves, cream swirls and a cherry on each, the dish fills the frame',
+      'an ice cream sandwich with a thick slab of ice cream between two round biscuits with small holes, the ice cream fills the frame',
+      'a paper cup with two round scoops of ice cream, a small spoon and a triangular wafer stuck in the top, the cup fills the frame',
+      'a melting ice cream cone with big drips running down the cone and a small puddle underneath, the ice cream fills the frame',
+      'a happy cartoon ice cream cone with a smiling face on its scoop and two little arms waving, the ice cream fills the frame',
+      'a giant overloaded ice cream cone with six leaning scoops piled high, topped with wafers, a lollipop, a biscuit and a cherry, the ice cream fills the frame'
+    ],
+    sceny: SCENY.lodziarnia, grubosc: DLA_MALUCHA, format: 'pion'
+  },
   'jedzenie/jablka': { warianty: [], sceny: SCENY.kuchnia, grubosc: DLA_MALUCHA, format: 'pion' },
 
   // ══ OKAZJE I PRZEDMIOTY ════════════════════════════════════════════════════

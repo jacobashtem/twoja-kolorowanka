@@ -7,7 +7,7 @@ image: /jedzenie/lody/27/lody-27.svg
 pdf: /jedzenie/lody/27/lody-27.pdf
 alt: "lody – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-2
+- trudnosc-4
 - jedzenie
 - lody
 ---
