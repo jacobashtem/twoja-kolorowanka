@@ -660,6 +660,33 @@ export const SCENY = {
     'with confetti and streamers falling around it'
   ],
 
+  // ── Serduszkowe: pula DEDYKOWANA kategorii `serce` ─────────────────────────
+  // `swieto` (wyżej) to sześć scen z jednego przyjęcia, dzielonych z urodzinami.
+  // Tu dwanaście, w tym CZTERY NA BIAŁYM TLE (Delfina, 2026-11-27: „nie każde serce
+  // musi mieć tło") — samo serce na pustej kartce to klasyczna kolorowanka dla malucha
+  // i gotowy szablon laurki. Cztery białe są sformułowane różnie, żeby ten sam wariant
+  // nie dostał dwa razy identycznego promptu: dwie zupełnie puste i dwie z kilkoma
+  // drobiazgami wokół. Białe tło jest TWIERDZENIEM („on a plain white background"),
+  // nie zakazem tła — zakazy nie działają.
+  //
+  // Pozostałe osiem to okazje, przy których serce się pojawia: walentynki, laurka,
+  // prezent, przyjęcie. Wszystkie przyimkowe i bez ludzi. Koperta jest BEZ napisu,
+  // a konfetti to „a few big stars" (drobne kropki wychodzą sztrychem).
+  serduszkowe: [
+    'alone on a plain white background',
+    'surrounded by round balloons on strings',
+    'among big roses and leaves',
+    'on a plain white background with a few small hearts floating around it',
+    'on a table beside a wrapped gift box with a big bow',
+    'above fluffy round clouds with a rainbow behind',
+    'centred on an empty white page, filling the frame',
+    'beside an open envelope with a few small hearts flying out of it',
+    'under a string of triangular bunting flags',
+    'on a plain white background with a few big stars around it',
+    'in a meadow of tulips with two butterflies',
+    'beside a vase of tulips and a box of chocolates'
+  ],
+
   // ── Cukiernia: pula DEDYKOWANA tortom ─────────────────────────────────────
   // `swieto` (wyżej) ma sześć scen, dzieli je z urodzinami i andrzejkami, a każda z nich
   // to ta sama okazja: przyjęcie. Tu dwanaście scen = dwanaście OKOLICZNOŚCI, w jakich

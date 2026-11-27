@@ -7,7 +7,7 @@ image: /serce/24/serce-24.svg
 pdf: /serce/24/serce-24.pdf
 alt: "Kolorowanki do druku serce"
 tags:
-- trudnosc-8
+- trudnosc-4
 - serce
 - serce
 ---

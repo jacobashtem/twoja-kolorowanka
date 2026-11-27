@@ -1505,7 +1505,44 @@ export const KATEGORIE = {
     }
   },
   'zabawki/prezenty':          { warianty: [], sceny: SCENY.swieto, grubosc: DLA_MALUCHA, format: 'pion' },
-  'serce':                     { warianty: [], sceny: SCENY.swieto,   grubosc: DEKORACYJNE, format: 'pion' },
+  // SERCE (Delfina, 2026-11-27).
+  //
+  // Serce to symbol, nie przedmiot — sam obrys jest zawsze ten sam, więc oś wariantu to
+  // to, co do serca DOCHODZI i zmienia sylwetkę: kokarda, skrzydła, strzała, korona,
+  // sznurek balonu, wianek, dziurka od klucza. Układ jak przy tortach, od prostego do
+  // bogatego: gładkie serce dla malucha (1), serca z jednym dodatkiem (2–9, 11) i dwa
+  // serca wypełnione wzorem (10, 12) — strona obiecuje „od prostych serduszek dla
+  // najmłodszych po bardziej ozdobne wzory i mandale" oraz kwiaty i kokardki.
+  //
+  // „Heart" to pojęcie wysycone (jak „mermaid"), więc kotwicy nie trzeba. Jedyny kuzyn
+  // to serce anatomiczne — nie ma tu słów „beating", „real" ani „human".
+  //
+  // BEZ NAPISÓW: żadnych wstążek z tekstem, listów ani bilecików — litery w kadrze
+  // wychodzą śmieciowe. BEZ DŁONI trzymających serce (pięć palców do zepsucia).
+  // Jedyna buzia w kategorii to serduszko-postać (5).
+  //
+  // Wzór w 10 to „big simple patterns" w kilku polach, nie drobna kratka — co drugie
+  // pole kratki wychodzi czarne.
+  //
+  // Ławka rezerwowych: serce w sercu (trzy obrysy jeden w drugim), bombonierka w kształcie
+  // serca, lizak-serce, miś tulący serce (kuzyn: `zwierzeta/mis`, miś przejąłby kadr).
+  'serce': {
+    warianty: [
+      'a big plain heart with a smooth thick outline',
+      'a big heart with a wide ribbon bow tied on top',
+      'a big heart with a pair of feathered angel wings and a small halo above it',
+      'a big heart pierced by an arrow with a feathered tail',
+      'a smiling heart character with big eyes, little arms and legs, waving one hand',
+      'three heart-shaped balloons on curly strings tied together at the bottom',
+      'a heart-shaped wreath made of big roses and leaves',
+      'two hearts side by side overlapping, one bigger and one smaller',
+      'a big heart wearing a crown with round jewels',
+      'a big heart divided into sections, each filled with a different big simple pattern of dots, waves and petals',
+      'a heart-shaped padlock with a keyhole and a small key hanging beside it',
+      'a big heart filled with a mandala of layered petals and teardrops spreading from its centre'
+    ],
+    sceny: SCENY.serduszkowe, grubosc: DEKORACYJNE, format: 'pion'
+  },
   // Dom to budynek — stoi w krajobrazie, nie rośnie w doniczce.
   'dom':                       { warianty: [], sceny: SCENY.krajobraz,grubosc: DLA_DZIECKA, format: 'poziom' },
   'telefon':                   { warianty: [], sceny: SCENY.przedmiot,grubosc: DLA_DZIECKA, format: 'pion' },

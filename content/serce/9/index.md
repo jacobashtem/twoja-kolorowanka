@@ -7,7 +7,7 @@ image: /serce/9/serce-9.svg
 pdf: /serce/9/serce-9.pdf
 alt: "serce – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-10
+- trudnosc-1
 - serce
 - serce
 ---
