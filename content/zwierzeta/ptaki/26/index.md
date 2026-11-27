@@ -7,7 +7,7 @@ image: /zwierzeta/ptaki/26/ptaki-26.svg
 pdf: /zwierzeta/ptaki/26/ptaki-26.pdf
 alt: "Darmowa kolorowanka ptaki do druku PDF"
 tags:
-- trudnosc-7
+- trudnosc-4
 - zwierzeta
 - ptaki
 ---

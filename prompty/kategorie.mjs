@@ -301,7 +301,51 @@ export const KATEGORIE = {
   },
 
   // ══ PTAKI ══════════════════════════════════════════════════════════════════
-  'zwierzeta/ptaki':     { warianty: [], sceny: SCENY.niebo, grubosc: DLA_DZIECKA, format: 'pion' },
+  // PTAKI (Delfina, 2026-11-27).
+  //
+  // Kategoria zbiorcza, więc oś wariantu to GATUNEK — i tu gatunek naprawdę zmienia
+  // obrys, inaczej niż rasy kota: bocian to nogi i dziób, jaskółka to widlasty ogon,
+  // łabędź to szyja w „S", tukan to dziób wielkości ciała. Dwanaście sylwetek, żadnej
+  // pary do pomylenia. Każdy wariant wymienia cechę, po której poznaje się ptaka
+  // w samym konturze (dziób / nogi / ogon / szyja), a nie upierzenie.
+  //
+  // ŚWIADOMIE NIE MA sowy, papugi, flaminga, pingwina ani pawia — każde ma własną
+  // kategorię w serwisie (`zwierzeta/sowy`, `papugi`, `flamingi`, `pingwiny`, `pawie`).
+  // Opis strony je wymienia („wróble, sowy, flamingi i papugi"), ale tu weszły ptaki,
+  // które nie mają gdzie indziej domu: wróbel, bocian, orzeł, koliber, dzięcioł,
+  // jaskółka, gołąb, łabędź, tukan, kaczka. Strona obiecuje też bociana, orła
+  // z herbu, gołębia pokoju (gałązka w dziobie) i „własne, bajkowe gatunki" (12).
+  //
+  // KUZYNI: bocian → flaming i czapla (kotwica: PROSTY dziób, flaming ma zagięty);
+  // orzeł → papuga, też ma haczykowaty dziób (kotwica: szpony i szerokie skrzydła);
+  // tukan → papuga (kotwica: dziób długi jak całe ciało); bajkowy ptak → paw i feniks
+  // (stąd trzy pióra w ogonie, nie wachlarz, i ani słowa o ogniu).
+  //
+  // Wariant 11 to trzy pisklęta, czyli trzy twarze — kosztuje, ale gniazdo z otwartymi
+  // dziobami to obrazek, którego w tej kategorii nie może zabraknąć.
+  //
+  // Czerń: tukan, jaskółka i końce skrzydeł bociana są ciemne z natury. Nie walczę
+  // z tym w prompcie (jak przy pandach); jeśli trzon wyjdzie zalany, dogrywka dostanie
+  // pole `biale`.
+  //
+  // Ławka rezerwowych: pelikan (worek pod dziobem), dudek (czub-wachlarz), mewa, czapla.
+  'zwierzeta/ptaki': {
+    warianty: [
+      'a small round sparrow with a short pointed beak and a little tail tilted up, standing on thin legs',
+      'a stork with very long thin legs, a long neck and a long straight beak, standing on one leg',
+      'an eagle with a hooked beak and big talons, standing with its broad wings spread wide',
+      'a tiny hummingbird with a long needle-thin beak, hovering with its wings raised beside one big trumpet flower',
+      'a woodpecker with a pointed crest and a long chisel beak, clinging upright to the side of a tree trunk',
+      'a swallow in flight with long pointed wings and a deeply forked tail',
+      'a plump dove with a small round head and a fan-shaped tail, carrying a leafy olive twig in its beak',
+      'a swan with a long S-curved neck and its wings raised high over its back, floating on rippling water',
+      'a toucan with a huge curved beak as long as its body, perched on a short branch',
+      'a duck with a flat rounded bill and wide webbed feet, waddling with its tail tilted up',
+      'three baby birds with wide open beaks sitting together in a round nest of woven twigs',
+      'a fairytale songbird with a tiny crown, a curled crest and three long curling tail feathers'
+    ],
+    sceny: SCENY.ptasie, grubosc: DLA_DZIECKA, format: 'pion'
+  },
   'zwierzeta/papugi':    { warianty: [], sceny: SCENY.niebo, grubosc: DEKORACYJNE, format: 'pion' },
   'zwierzeta/pawie':     { warianty: [], sceny: SCENY.niebo, grubosc: DEKORACYJNE, format: 'pion' },
   // Flaming brodzi, nie pływa wśród koralowców — stąd `brzeg`, nie `woda`.

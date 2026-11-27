@@ -7,7 +7,7 @@ image: /zwierzeta/ptaki/11/ptaki-11.svg
 pdf: /zwierzeta/ptaki/11/ptaki-11.pdf
 alt: "Malowanka ptaki do druku A4"
 tags:
-- trudnosc-2
+- trudnosc-3
 - zwierzeta
 - ptaki
 ---

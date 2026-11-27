@@ -167,6 +167,32 @@ export const SCENY = {
     'playing beside a clump of bamboo stalks'
   ],
 
+  // ── Ptasie: pula DEDYKOWANA kategorii zbiorczej `zwierzeta/ptaki` ─────────
+  // `niebo` (niżej) ma w każdej scenie czasownik („perched", „gliding", „standing at
+  // the edge of a nest"), a w `ptaki` każdy wariant niesie własną pozę: łabędź pływa,
+  // jaskółka leci, dzięcioł wisi na pniu, koliber zawisa przy kwiecie. Z `niebo`
+  // wychodziłby „łabędź pływający po wodzie przycupnięty na gałęzi".
+  //
+  // Stąd dwanaście scen przyimkowych, które znoszą ptaka na ziemi, na wodzie
+  // i w powietrzu naraz: ogród, łąka, staw, sad. Żadnych innych zwierząt (wariant
+  // z pisklętami ma już trzy twarze) i żadnej sceny zimowej — karmnik w śniegu sam się
+  // prosi, ale z tukanem i kolibrem dałby bzdurę.
+  // `niebo` zostaje bez zmian dla sów, papug i pawi.
+  ptasie: [
+    'beside a pond with reeds and water lilies',
+    'in a meadow of big round flowers with a smiling sun in the corner',
+    'with round clouds and a rainbow behind',
+    'in front of a wooden birdhouse on a tall pole',
+    'beside a branch heavy with round berries',
+    'among tall sunflowers',
+    'in a garden beside a stone birdbath',
+    'in front of rolling hills with a few round clouds',
+    'beside a wooden fence with climbing roses',
+    'under a blossoming tree branch with big five-petal flowers',
+    'in front of a cottage with a tall chimney',
+    'among apple tree branches with round apples and leaves'
+  ],
+
   niebo: [
     'perched on a branch heavy with round berries',
     'sitting on a wooden fence post beside a sunflower',

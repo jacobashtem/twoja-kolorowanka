@@ -7,7 +7,7 @@ image: /zwierzeta/ptaki/19/ptaki-19.svg
 pdf: /zwierzeta/ptaki/19/ptaki-19.pdf
 alt: "Kolorowanka ptaki"
 tags:
-- trudnosc-1
+- trudnosc-4
 - zwierzeta
 - ptaki
 ---
