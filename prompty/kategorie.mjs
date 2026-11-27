@@ -215,7 +215,46 @@ export const KATEGORIE = {
   },
 
   'zwierzeta/wilki':       { warianty: [], sceny: SCENY.las, grubosc: DLA_DZIECKA, format: 'pion' },
-  'zwierzeta/mis':         { warianty: [], sceny: SCENY.las, grubosc: DLA_MALUCHA, format: 'pion' },
+  // MIŚ (Delfina, 2026-11-27).
+  //
+  // „Miś" to PLUSZAK i miś bajkowy, nie zwierzę z lasu — strona mówi o „cieple ulubionego
+  // pluszaka", a dzikie niedźwiedzie mają własną kategorię tuż obok (`niedzwiedzie`),
+  // tak samo pandy. Stąd dziewięć wariantów to „teddy bear" (pojęcie wysycone, kotwicy
+  // nie trzeba), a trzy to bajkowe niedźwiadki, które strona obiecuje wprost: miś
+  // z miodem (6), polarny w szaliku (7) i miś z plecakiem z mikroopowieści o Brunie (11).
+  // Pandy NIE MA — ma swoje 45 liści w `zwierzeta/pandy`.
+  //
+  // Sylwetka pluszaka jest jedna, więc oś wariantu to REKWIZYT I STRÓJ zmieniający
+  // obrys: kokarda, serce w objęciach, balony, szlafmyca z poduszką, czapka z pomponem,
+  // ogrodniczki, czapeczka urodzinowa z prezentem, plecak, spódniczka baletnicy.
+  // Wszystkie pozy siedzące albo stojące (whimsy nie zna leżących).
+  //
+  // CUDZE POSTACIE — strona obiecuje „znane misie z bajek", a tego nie robimy. Omijane
+  // świadomie: krótka koszulka + garnek miodu (miś z miodem jest tu GOŁY i ma słoik
+  // z drewnianą łyżką), kapelusz + płaszczyk + walizka, jedno oklapnięte ucho, znaczek
+  // na brzuszku. Obietnicę z FAQ warto kiedyś przeredagować na „misie bajkowe".
+  //
+  // Wariant 8 to dwie buzie (mama i maluch) — kosztuje, ale to obrazek obowiązkowy.
+  //
+  // Ławka rezerwowych: miś z latawcem, miś z książką (ryzyko liter na stronach), dwa
+  // misie trzymające się za łapki, miś w koronie.
+  'zwierzeta/mis': {
+    warianty: [
+      'a classic teddy bear with round ears and a big ribbon bow around its neck, sitting with its legs spread out',
+      'a baby teddy bear with an oversized head wearing a bib, sitting and holding a rattle',
+      'a teddy bear hugging a big heart with both arms',
+      'a teddy bear standing and holding three round balloons on strings',
+      'a sleepy teddy bear wearing a long nightcap with a pompom, holding a small pillow',
+      'a round bear cub sitting and hugging a big honey jar with a wooden honey dipper in one paw',
+      'a polar bear cub wearing a knitted scarf and a bobble hat, standing on its back legs',
+      'a big mother bear sitting and hugging a small bear cub on her lap',
+      'a teddy bear wearing dungarees and holding one big flower',
+      'a teddy bear wearing a cone party hat and holding a wrapped present with a bow',
+      'a bear cub walking upright with a backpack on its back and a walking stick in one paw',
+      'a teddy bear in a ballerina tutu standing on its toes with both arms raised'
+    ],
+    sceny: SCENY.misiowe, grubosc: DLA_MALUCHA, format: 'pion'
+  },
   'zwierzeta/niedzwiedzie':{ warianty: [], sceny: SCENY.las, grubosc: DLA_DZIECKA, format: 'pion' },
   'zwierzeta/zajace':      { warianty: [], sceny: SCENY.las, grubosc: DLA_DZIECKA, format: 'pion' },
   // Sowa przysiada, nie brodzi w trawie — pula ptasia pasuje lepiej niż leśna.

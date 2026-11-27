@@ -7,7 +7,7 @@ image: /zwierzeta/mis/3/mis-3.svg
 pdf: /zwierzeta/mis/3/mis-3.pdf
 alt: "mis kolorowanka dla dzieci"
 tags:
-- trudnosc-1
+- trudnosc-2
 - zwierzeta
 - mis
 ---

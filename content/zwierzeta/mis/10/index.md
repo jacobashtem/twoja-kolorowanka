@@ -7,7 +7,7 @@ image: /zwierzeta/mis/10/mis-10.svg
 pdf: /zwierzeta/mis/10/mis-10.pdf
 alt: "Kolorowanka z mis do pobrania"
 tags:
-- trudnosc-9
+- trudnosc-3
 - zwierzeta
 - mis
 ---

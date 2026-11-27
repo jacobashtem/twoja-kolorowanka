@@ -7,7 +7,7 @@ image: /zwierzeta/mis/2/mis-2.svg
 pdf: /zwierzeta/mis/2/mis-2.pdf
 alt: "Kolorowanki mis"
 tags:
-- trudnosc-1
+- trudnosc-2
 - zwierzeta
 - mis
 ---

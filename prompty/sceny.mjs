@@ -103,6 +103,34 @@ export const SCENY = {
     'beside a tree stump with a ball and a chewed stick lying in the grass'
   ],
 
+  // ── Misiowe: pula DEDYKOWANA kategorii `zwierzeta/mis` ─────────────────────
+  // `las` (wyżej) ma czasowniki („walking", „sniffing", „curled up"), a warianty misia
+  // niosą własne pozy i rekwizyty — wychodziłby „miś z balonami wąchający grzyby".
+  // `las` zostaje dla dzikich niedźwiedzi; tu świat jest POŁOWĄ dziecięcego pokoju
+  // (łóżko, zabawki, konik na biegunach), a połową tym, co obiecuje strona: „leśne,
+  // górskie czy zimowe tło" plus piknik i łąka.
+  //
+  // Dwie sceny są NA BIAŁYM TLE — FAQ strony mówi o „pojedynczych postaciach misiów",
+  // a sam miś na kartce to kolorowanka dla najmłodszych (kategoria jest DLA_MALUCHA).
+  //
+  // Wszystkie przyimkowe i bez innych zwierząt poza dwoma motylami. Koc piknikowy jest
+  // „plain", bo w kratę co drugie pole wychodzi czarne; klocki też „plain", żeby model
+  // nie dorysował na nich liter. Śnieg to „a few big snowflakes" (lekcja z zimy).
+  misiowe: [
+    'on a bed with two big pillows and a round lamp beside it',
+    'in a forest clearing with pine trees and a few mushrooms',
+    'alone on a plain white background',
+    'in a playroom beside a toy train and a stack of plain building blocks',
+    'on a grassy hill with pointed mountains behind',
+    'in the snow with a few big snowflakes and a small snowman',
+    'on a plain picnic blanket with a wicker basket and a few apples',
+    'in a meadow of round flowers with two butterflies and a smiling sun',
+    'on a plain white background with a few small stars and hearts around it',
+    'beside a rocking horse and a toy drum',
+    'under a tree beside a wooden beehive and a few big flowers',
+    'under a string of triangular bunting flags with round balloons'
+  ],
+
   // ── Bambusowe: pula DEDYKOWANA pandom ─────────────────────────────────────
   // `egzotyka` (niżej) to sawanna, akacje i wodopój — świat lwa i żyrafy. Panda na
   // sawannie to błąd rzeczowy, a strona obiecuje wprost „pandy w bambusowym lesie".
