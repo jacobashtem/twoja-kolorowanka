@@ -7,7 +7,7 @@ image: /zwierzeta/mis/7/mis-7.svg
 pdf: /zwierzeta/mis/7/mis-7.pdf
 alt: "mis do druku i pokolorowania"
 tags:
-- trudnosc-1
+- trudnosc-2
 - zwierzeta
 - mis
 ---

@@ -7,7 +7,7 @@ image: /zwierzeta/mis/22/mis-22.svg
 pdf: /zwierzeta/mis/22/mis-22.pdf
 alt: "mis kolorowanki dla dzieci"
 tags:
-- trudnosc-1
+- trudnosc-4
 - zwierzeta
 - mis
 ---

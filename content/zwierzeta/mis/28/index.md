@@ -7,7 +7,7 @@ image: /zwierzeta/mis/28/mis-28.svg
 pdf: /zwierzeta/mis/28/mis-28.pdf
 alt: "Kolorowanka z mis do pobrania"
 tags:
-- trudnosc-8
+- trudnosc-4
 - zwierzeta
 - mis
 ---

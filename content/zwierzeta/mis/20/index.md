@@ -7,7 +7,7 @@ image: /zwierzeta/mis/20/mis-20.svg
 pdf: /zwierzeta/mis/20/mis-20.pdf
 alt: "Kolorowanki mis"
 tags:
-- trudnosc-5
+- trudnosc-4
 - zwierzeta
 - mis
 ---

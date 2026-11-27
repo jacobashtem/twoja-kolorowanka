@@ -7,7 +7,7 @@ image: /zwierzeta/mis/13/mis-13.svg
 pdf: /zwierzeta/mis/13/mis-13.pdf
 alt: "Łatwa kolorowanka mis dla przedszkolaka"
 tags:
-- trudnosc-1
+- trudnosc-3
 - zwierzeta
 - mis
 ---
