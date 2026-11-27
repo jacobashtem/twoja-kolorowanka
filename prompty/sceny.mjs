@@ -768,6 +768,34 @@ export const SCENY = {
     'with a rainbow behind and a few big stars and hearts around'
   ],
 
+  // ── Sadowe: pula DEDYKOWANA kategorii `jedzenie/jablka` ────────────────────
+  // `kuchnia` (niżej) kładzie wszystko na talerzyku, desce albo w koszyku z kraciastą
+  // ściereczką — a w jabłkach są warianty, które na talerzu nie staną: drzewko, gałąź,
+  // kosz pełen jabłek (kosz w koszu). Do tego krata = co drugie pole czarne.
+  //
+  // Dlatego sceny są „obok" i „pod", nigdy „na stole": pasują i do jednego jabłka,
+  // i do drzewka. Świat to SAD I JESIEŃ, które strona wymienia wprost (sad, jesienne
+  // gazetki, soki). Jeż z jabłkiem to klasyk polskiej kolorowanki — jedyna druga buzia
+  // w puli obok biedronki.
+  //
+  // TRZY sceny NA BIAŁYM TLE (ustalenie Delfiny z serc, 2026-11-27: nie każda sztuka
+  // musi mieć tło) — samo jabłko na kartce to kolorowanka dla najmłodszych i wycinanka
+  // na gazetkę. Sformułowane różnie, żeby wariant nie dostał dwa razy tego samego promptu.
+  sadowe: [
+    'beside a wooden ladder and a pair of rubber boots',
+    'alone on a plain white background',
+    'in an orchard with rows of round trees on a hill behind',
+    'beside a hedgehog and a few fallen leaves',
+    'in the grass beside a wooden fence with a sunflower',
+    'on a plain white background with a few small leaves around it',
+    'under a big smiling sun with round clouds',
+    'beside a wheelbarrow and a watering can',
+    'with a ladybird on a leaf and two butterflies nearby',
+    'centred on an empty white page, filling the frame',
+    'beside a glass jug and a cup of juice',
+    'beside a straw hat and a pair of garden gloves'
+  ],
+
   kuchnia: [
     'on a round plate beside a folded napkin',
     'on a wooden board with a small knife beside it',
