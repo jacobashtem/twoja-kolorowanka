@@ -1293,7 +1293,43 @@ export const KATEGORIE = {
     ],
     sceny: SCENY.lodziarnia, grubosc: DLA_MALUCHA, format: 'pion'
   },
-  'jedzenie/jablka': { warianty: [], sceny: SCENY.kuchnia, grubosc: DLA_MALUCHA, format: 'pion' },
+  // JABŁKA (Delfina, 2026-11-27).
+  //
+  // Strona obiecuje „różne odmiany" — odmiana to KOLOR, a koloru w konturze nie ma
+  // (jak smaki przy lodach). Różnorodność idzie więc w to, co zmienia obrys: całe
+  // jabłko, przekrojone, ogryzek, z robaczkiem, z buzią, na patyku, kosz, gałąź, drzewko,
+  // z kwiatami jabłoni, trzy w rzędzie, na stosie książek. Kosz, liście i kwiaty strona
+  // wymienia wprost; drzewko i kwiat to „cykl życia roślin", książki to „zajęcia w szkole".
+  //
+  // CUDZY ZNAK: jabłko z JEDNYM kęsem z boku i listkiem to logo znanej firmy. Dlatego
+  // nie ma „apple with a bite taken out" — jest OGRYZEK (zjedzone z obu stron, widać
+  // pestki), którego nikt z niczym nie pomyli.
+  //
+  // „Apple" to pojęcie wysycone, kotwicy nie trzeba. Kuzyni: gruszka, pomidor, dynia —
+  // nie ma słów „ribbed", „pear-shaped" ani „vine". Jabłko w polewie jest „glaze",
+  // nie „caramel"/„chocolate" (tokeny ciemnego wypełnienia, lekcja z lodów).
+  // Pojedyncze jabłka mają „the apple fills the frame" — whimsy robi mały obiekt
+  // w wielkiej scenie, a kategoria jest DLA_MALUCHA.
+  //
+  // Ławka rezerwowych: dzbanek soku ze szklanką, skrzynka jabłek, szarlotka (sąsiad:
+  // `jedzenie/torty`, a krata na wierzchu to co drugie pole czarne), jabłko w koronie.
+  'jedzenie/jablka': {
+    warianty: [
+      'a big round apple with a short stem and one leaf, the apple fills the frame',
+      'an apple cut in half showing a star-shaped core with five seeds, beside a whole apple with a leaf',
+      'an apple core eaten down on both sides with the stem on top and seeds showing in the middle, the apple core fills the frame',
+      'a smiling cartoon apple with big eyes, little arms and legs, waving one hand, the apple fills the frame',
+      'a big apple with a friendly little worm poking its head out of a round hole, the apple fills the frame',
+      'a candy apple on a wooden stick with thick glaze dripping down its sides, the apple fills the frame',
+      'a woven basket piled high with round apples and a few leaves',
+      'a branch with three round apples hanging among big leaves',
+      'a small apple tree with a thick trunk and a round crown full of big apples',
+      'a big apple with a sprig of five-petal apple blossom flowers and two leaves on its stem',
+      'three apples standing in a row, a big one, a medium one and a small one, each with a stem and a leaf',
+      'an apple with a leaf sitting on top of a stack of three thick books with a pencil beside them'
+    ],
+    sceny: SCENY.sadowe, grubosc: DLA_MALUCHA, format: 'pion'
+  },
 
   // ══ OKAZJE I PRZEDMIOTY ════════════════════════════════════════════════════
   'okolicznosciowe/urodziny':  { warianty: [], sceny: SCENY.swieto, grubosc: DEKORACYJNE, format: 'pion' },

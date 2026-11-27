@@ -7,7 +7,7 @@ image: /jedzenie/jablka/11/jablka-11.svg
 pdf: /jedzenie/jablka/11/jablka-11.pdf
 alt: "Malowanka jablka do druku A4"
 tags:
-- trudnosc-1
+- trudnosc-3
 - jedzenie
 - jablka
 ---
