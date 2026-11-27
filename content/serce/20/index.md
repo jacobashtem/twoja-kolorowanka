@@ -7,7 +7,7 @@ image: /serce/20/serce-20.svg
 pdf: /serce/20/serce-20.pdf
 alt: "Kolorowanki serce"
 tags:
-- trudnosc-6
+- trudnosc-3
 - serce
 - serce
 ---

@@ -7,7 +7,7 @@ image: /serce/14/serce-14.svg
 pdf: /serce/14/serce-14.pdf
 alt: "Edukacyjna kolorowanka serce do wydruku"
 tags:
-- trudnosc-7
+- trudnosc-2
 - serce
 - serce
 ---

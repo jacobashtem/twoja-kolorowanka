@@ -7,7 +7,7 @@ image: /serce/11/serce-11.svg
 pdf: /serce/11/serce-11.pdf
 alt: "Malowanka serce do druku A4"
 tags:
-- trudnosc-10
+- trudnosc-2
 - serce
 - serce
 ---

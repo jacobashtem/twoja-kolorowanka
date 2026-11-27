@@ -7,7 +7,7 @@ image: /serce/37/serce-37.svg
 pdf: /serce/37/serce-37.pdf
 alt: "Kolorowanka serce"
 tags:
-- trudnosc-3
+- trudnosc-5
 - serce
 - serce
 ---

@@ -7,7 +7,7 @@ image: /serce/27/serce-27.svg
 pdf: /serce/27/serce-27.pdf
 alt: "serce – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-6
+- trudnosc-4
 - serce
 - serce
 ---

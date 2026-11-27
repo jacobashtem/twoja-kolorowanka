@@ -7,7 +7,7 @@ image: /serce/30/serce-30.svg
 pdf: /serce/30/serce-30.pdf
 alt: "kolorowanka do druku serce PDF"
 tags:
-- trudnosc-2
+- trudnosc-4
 - serce
 - serce
 ---

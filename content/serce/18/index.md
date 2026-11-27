@@ -7,7 +7,7 @@ image: /serce/18/serce-18.svg
 pdf: /serce/18/serce-18.pdf
 alt: "Pokoloruj serce – darmowy szablon PDF"
 tags:
-- trudnosc-7
+- trudnosc-3
 - serce
 - serce
 ---
