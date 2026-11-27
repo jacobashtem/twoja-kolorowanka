@@ -7,7 +7,7 @@ image: /zwierzeta/ptaki/14/ptaki-14.svg
 pdf: /zwierzeta/ptaki/14/ptaki-14.pdf
 alt: "Edukacyjna kolorowanka ptaki do wydruku"
 tags:
-- trudnosc-2
+- trudnosc-4
 - zwierzeta
 - ptaki
 ---
