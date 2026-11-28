@@ -7,7 +7,7 @@ image: /zwierzeta/pawie/7/pawie-7.svg
 pdf: /zwierzeta/pawie/7/pawie-7.pdf
 alt: "pawie do druku i pokolorowania"
 tags:
-- trudnosc-10
+- trudnosc-3
 - zwierzeta
 - pawie
 ---

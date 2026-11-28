@@ -7,7 +7,7 @@ image: /zwierzeta/pawie/20/pawie-20.svg
 pdf: /zwierzeta/pawie/20/pawie-20.pdf
 alt: "Kolorowanki pawie"
 tags:
-- trudnosc-6
+- trudnosc-5
 - zwierzeta
 - pawie
 ---

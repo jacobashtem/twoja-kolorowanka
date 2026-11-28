@@ -221,6 +221,36 @@ export const SCENY = {
     'among apple tree branches with round apples and leaves'
   ],
 
+  // ── Pawie: pula DEDYKOWANA pawiom (Delfina, 2026-11-28) ───────────────────
+  // `niebo` ma sześć scen i każda niesie czasownik („perched", „gliding"), a warianty
+  // pawia mają własne pozy (wachlarz od frontu, tren po ziemi, paw na gałęzi, w locie).
+  // `ptasie` jest przyimkowa, ale przejechała ją kategoria `ptaki` — te same ogrody
+  // i sady drugi raz dałyby bliźniacze strony.
+  //
+  // Świat jest PAŁACOWO-OGRODOWY, bo taki jest na stronie dziś (49 liści ze stocka):
+  // łuk z różami, altana, fontanna, irysy, witraż, serce z róż, wianuszek kwiatków.
+  // Paw to ptak ozdobny, nie podwórkowy — płot i kurnik ściągnęłyby INDYKA i KURĘ.
+  //
+  // Trzy sceny (8–10) są na białym tle, różnie sformułowane. To więcej niż przy ptakach,
+  // świadomie: większość pawi na stronie stoi dziś na pustej kartce, bo sam wachlarz
+  // wypełnia kadr i jest dość do kolorowania.
+  // Witraż (12) sprawdził się przy świętych jako materiał do kolorowania; „big simple
+  // panes", żeby szprosy nie wyszły gęstą kratką. Żadnej nocy i żadnych innych zwierząt.
+  pawie: [
+    'in a palace garden beside a round stone fountain',
+    'under a garden arch covered in climbing roses',
+    'beside a lotus pond with big round leaves and open flowers',
+    'beside a stone balustrade with a big urn of flowers',
+    'among tall irises and big leaves',
+    'in front of a garden pavilion with a domed roof and slender columns',
+    'surrounded by a ring of small five-petal flowers',
+    'alone on a plain white background',
+    'centred on an empty white page, filling the frame',
+    'on a plain white background with a few small flowers and leaves around it',
+    'inside a big heart-shaped frame of roses',
+    'in front of a tall arched stained glass window with big simple panes'
+  ],
+
   niebo: [
     'perched on a branch heavy with round berries',
     'sitting on a wooden fence post beside a sunflower',

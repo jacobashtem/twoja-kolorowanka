@@ -386,7 +386,70 @@ export const KATEGORIE = {
     sceny: SCENY.ptasie, grubosc: DLA_DZIECKA, format: 'pion'
   },
   'zwierzeta/papugi':    { warianty: [], sceny: SCENY.niebo, grubosc: DEKORACYJNE, format: 'pion' },
-  'zwierzeta/pawie':     { warianty: [], sceny: SCENY.niebo, grubosc: DEKORACYJNE, format: 'pion' },
+  // PAWIE (Delfina, 2026-11-28: „możesz się sugerować grafikami, które są już na stronie").
+  //
+  // Jeden gatunek, więc oś wariantu to STAN OGONA i POZA — u pawia one zmieniają obrys
+  // bardziej niż cokolwiek innego. Dwunastka jest spisana z 49 liści ze stocka:
+  //   WACHLARZ OD FRONTU (1, 10, 12) — najczęstszy motyw na stronie;
+  //   PROFIL (2, 8, 11) — tren po ziemi, ogon w łuku, szyja w „S" ze spojrzeniem w tył;
+  //   INNE POZY (3, 9) — na gałęzi z trenem w dół, w locie;
+  //   DLA MALUCHA (4, 5) — pisklę i pękaty paw z pięcioma piórami;
+  //   DWA PAWIE W SERCE (6) i SAMO PIÓRO (7) — oba są dziś na stronie.
+  //
+  // KUZYNI: INDYK (wachlarz od frontu + pękate ciało to dokładnie indyk — słowa
+  // „wattle", „plump", „farmyard" nie padają), BAŻANT (długi ogon w profilu), FENIKS
+  // (ptak w locie z długim ogonem — ani słowa o ogniu) i KURA. Kotwice pawia, których
+  // nie ma żaden z nich: CZUBEK z piórek zakończonych kulkami na głowie i OCZKA na
+  // piórach ogona. Każdy wariant z ptakiem wymienia przynajmniej jedną z nich.
+  //
+  // ŚWIADOME RYZYKO: (5) pękaty paw jest najbliżej indyka — odsiać w selekcji. (6) to dwie
+  // twarze. (7) pióro to rzecz, nie ptak: promienie mogą wyjść gęstym sztrychem (tak
+  // wygląda liść 48 ze stocka), stąd „smooth curved strands". Oczka na piórach model
+  // może zalać czernią — nie walczę z tym w prompcie, odsiew robi selekcja.
+  // Pawica z pisklętami wypadła: bez trenu to w obrysie kura.
+  'zwierzeta/pawie': {
+    warianty: [
+      'a peacock facing forward with its tail spread into a huge half-circle fan, every feather ending in a round eye spot, and a little crest of ball-tipped feathers on its head',
+      'a peacock in profile with a long slender neck, a little crest on its head and a very long train of eye-spot feathers trailing on the ground behind it',
+      'a peacock perched on a tree branch with its long train of eye-spot feathers hanging straight down',
+      'a fluffy baby peacock chick with big eyes, a tiny crest of ball-tipped feathers and a small fan of short tail feathers',
+      'a cute round cartoon peacock with a little crest and a small fan of five big feathers, each with one large eye spot',
+      'two peacocks facing each other with their long necks curved so that together they form a heart shape, their trains sweeping down on both sides',
+      'one big peacock feather with a large eye-shaped spot at its tip and smooth curved strands along its stem',
+      'a peacock walking in profile with a little crest and its tail raised into a tall arch of eye-spot feathers behind its back',
+      'a peacock in flight with its wings spread wide, a little crest on its head and its long train of eye-spot feathers streaming behind',
+      'a peacock facing forward with its spread tail shaped like one big heart, every feather ending in a small heart, and a little crest on its head',
+      'a peacock standing with its neck in an S curve, looking back over its shoulder, its long train of eye-spot feathers sweeping round in a big curl',
+      'a royal peacock wearing a tiny crown, its tail spread into a fan of big teardrop feathers with a flower at the tip of each one'
+    ],
+    sceny: SCENY.pawie, grubosc: DEKORACYJNE, format: 'pion',
+    zestawy: {
+      // DLA DOROSŁYCH — ta sama formuła co przy samolotach (styl `doroslyV4`): wariant =
+      // sylwetka + RODZAJ WZORU wewnątrz obiektu, scena = ozdobna rama. Paw to jeden
+      // z głównych motywów kolorowanek dla dorosłych i na stronie jest ich dziś około
+      // dwunastu (zentangle, mandala z wachlarza, pawie w sercu, pióro, witraż).
+      // `tagi` jadą przez _manifest.json do frontmattera liścia.
+      dorosli: {
+        tagi: ['dla-doroslych'],
+        warianty: [
+          'a peacock facing forward with its tail spread into a huge round fan like a mandala, every feather filled with intricate rosettes, dots and eye spots',
+          'a peacock in profile with its body and long trailing train covered in zentangle patterns of scales, waves and spirals',
+          'a peacock perched on a branch, its long hanging train filled with paisley shapes and curling floral ornaments',
+          'two peacocks facing each other with their necks forming a heart, their feathers filled with lace patterns and tiny flowers',
+          'one big peacock feather with a large eye-shaped spot, filled with layered teardrops, dots and fine ornamental bands',
+          'a peacock with its neck in an S curve and its train sweeping round in a big curl, covered in art nouveau leaves and curling vines'
+        ],
+        sceny: [
+          'framed by an oval border of roses and curling leaves',
+          'inside a tall arched stained glass window with ornamental panes',
+          'surrounded by a wreath of stylized flowers, each petal filled with a different pattern',
+          'in front of a large sun made of layered petals and rays',
+          'on a background of decorative swirls, dots and tiny flowers',
+          'under a garden arch of climbing roses with lace patterns in the leaves'
+        ]
+      }
+    }
+  },
   // Flaming brodzi, nie pływa wśród koralowców — stąd `brzeg`, nie `woda`.
   'zwierzeta/flamingi':  { warianty: [], sceny: SCENY.brzeg, grubosc: DEKORACYJNE, format: 'pion' },
   'zwierzeta/pingwiny':  { warianty: [], sceny: SCENY.brzeg, grubosc: DLA_MALUCHA, format: 'pion' },

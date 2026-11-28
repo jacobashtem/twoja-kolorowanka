@@ -7,7 +7,7 @@ image: /zwierzeta/pawie/4/pawie-4.svg
 pdf: /zwierzeta/pawie/4/pawie-4.pdf
 alt: "pawie kolorowanki dla dzieci"
 tags:
-- trudnosc-10
+- trudnosc-3
 - zwierzeta
 - pawie
 ---

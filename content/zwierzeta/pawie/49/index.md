@@ -7,7 +7,8 @@ image: /zwierzeta/pawie/49/pawie-49.svg
 pdf: /zwierzeta/pawie/49/pawie-49.pdf
 alt: "Łatwa kolorowanka pawie dla przedszkolaka"
 tags:
-- trudnosc-8
+- trudnosc-9
+- dla-doroslych
 - zwierzeta
 - pawie
 ---
