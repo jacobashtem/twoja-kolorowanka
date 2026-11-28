@@ -7,7 +7,7 @@ image: /pojazdy/rakiety/26/rakiety-26.svg
 pdf: /pojazdy/rakiety/26/rakiety-26.pdf
 alt: "Darmowa kolorowanka rakiety do druku PDF"
 tags:
-- trudnosc-4
+- trudnosc-3
 - pojazdy
 - rakiety
 ---

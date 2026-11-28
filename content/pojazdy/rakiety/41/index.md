@@ -7,7 +7,7 @@ image: /pojazdy/rakiety/41/rakiety-41.svg
 pdf: /pojazdy/rakiety/41/rakiety-41.pdf
 alt: "Kolorowanka do druku rakiety"
 tags:
-- trudnosc-4
+- trudnosc-5
 - pojazdy
 - rakiety
 ---

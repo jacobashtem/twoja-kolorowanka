@@ -1148,7 +1148,43 @@ export const KATEGORIE = {
       }
     }
   },
-  'pojazdy/rakiety':  { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_MALUCHA, format: 'pion' },
+  // RAKIETY (Delfina, 2026-11-28: „spójrz, jakie rakiety są obecnie na stronie").
+  // Dwunastka jest spisana z 50 liści ze stocka. Na stronie są dziś cztery rodziny i każda
+  // ma tu swoich przedstawicieli:
+  //   KSZTAŁT RAKIETY (1–5, 9, 12) — klasyczna z bulajami, pękata, z boosterami, wahadłowiec,
+  //     retro na płetwach, wielostopniowa, lądownik na nogach;
+  //   Z ZAŁOGĄ (6, 7, 10) — astronauta w oknie, dziecko okrakiem na rakiecie, kot w hełmie;
+  //   CHARAKTER (8, 11) — rakieta z buzią, rakieta-samoróbka z łat i nitów.
+  //
+  // Kuzyni: SAMOLOT („wings", „jet", „plane"), UFO („saucer", „dome") i POCISK („missile").
+  // Kotwica rakiety to SZPICZASTY NOS + STATECZNIKI U DOŁU + słowo „rocket" w każdym
+  // wariancie. Rakieta stoi pionowo, samolot leży — stąd format `pion`.
+  //
+  // ŚWIADOME RYZYKO: wahadłowiec (4) ma skrzydła i jest najbliżej samolotu. Zostaje, bo
+  // na stronie to dziś osiem liści (38–45) i dla dziecka to „rakieta" — jest opisany razem
+  // ze zbiornikiem i boosterami, których samolot nie ma. Odsiać w selekcji, jeśli wyjdzie
+  // sam samolot. Warianty z załogą (6, 7, 10) to dodatkowa twarz do zepsucia.
+  //
+  // Warianty opisują wyłącznie BUDOWĘ, bez płomieni i bez „stoi/leci" — to niosą sceny
+  // (`rakietowe`), więc ta sama rakieta może raz startować, a raz stać na Księżycu.
+  // Świadomie nie ma tu marek ani nazw własnych (Saturn, Falcon, Starship).
+  'pojazdy/rakiety': {
+    warianty: [
+      'a classic rocket with a pointed nose cone, three round portholes in a row and curved fins at the bottom',
+      'a short chubby rocket with one big round window and three stubby fins',
+      'a tall slim rocket with a pointed nose and two smaller booster rockets strapped to its sides',
+      'a space shuttle with short triangle wings riding upright on a big rounded fuel tank with two booster rockets',
+      'a retro rocket with a bulging round body, a long needle tip on its nose and three long swept fins',
+      'a rocket with a smiling astronaut waving from its big round window',
+      'a little astronaut in a round helmet sitting astride a rocket and holding on with both hands',
+      'a friendly cartoon rocket with big round eyes and a smiling face on its nose cone',
+      'a tall rocket built of three stacked sections, each one narrower than the one below, with a tiny capsule on top',
+      'a rocket with a happy cat in a space helmet peeking out of its round window',
+      'a home-made rocket patched together from panels with big round rivets, a bent antenna on its nose and mismatched fins',
+      'a stubby rocket with a rounded nose, four landing legs with round feet and a wide engine bell underneath'
+    ],
+    sceny: SCENY.rakietowe, grubosc: DLA_MALUCHA, format: 'pion'
+  },
   'kosmos':           { warianty: [], sceny: SCENY.kosmos,      grubosc: DLA_DZIECKA, format: 'poziom' },
 
   // ══ ROŚLINY ════════════════════════════════════════════════════════════════

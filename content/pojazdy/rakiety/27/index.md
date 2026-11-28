@@ -7,7 +7,7 @@ image: /pojazdy/rakiety/27/rakiety-27.svg
 pdf: /pojazdy/rakiety/27/rakiety-27.pdf
 alt: "rakiety – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-6
+- trudnosc-3
 - pojazdy
 - rakiety
 ---

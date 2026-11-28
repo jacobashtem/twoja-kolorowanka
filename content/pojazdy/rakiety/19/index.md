@@ -7,7 +7,7 @@ image: /pojazdy/rakiety/19/rakiety-19.svg
 pdf: /pojazdy/rakiety/19/rakiety-19.pdf
 alt: "Kolorowanka rakiety"
 tags:
-- trudnosc-4
+- trudnosc-2
 - pojazdy
 - rakiety
 ---
