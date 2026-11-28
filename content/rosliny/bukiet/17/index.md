@@ -7,7 +7,7 @@ image: /rosliny/bukiet/17/bukiet-17.svg
 pdf: /rosliny/bukiet/17/bukiet-17.pdf
 alt: "Prosta kolorowanka bukiet do kolorowania"
 tags:
-- trudnosc-3
+- trudnosc-5
 - rosliny
 - bukiet
 ---

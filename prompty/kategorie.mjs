@@ -1288,7 +1288,44 @@ export const KATEGORIE = {
     ],
     sceny: SCENY.kwiatowe, grubosc: DEKORACYJNE, format: 'pion'
   },
-  'rosliny/bukiet': { warianty: [], sceny: SCENY.ogrodek, grubosc: DEKORACYJNE, format: 'pion' },
+  // BUKIET (Delfina, 2026-11-28: „spójrz, jakie kolorowanki już tam są i wzoruj się na tym").
+  //
+  // SĄSIAD NR 1 to `rosliny/kwiat` (jedna roślina na łodydze). Kotwica bukietu to WIĄZANIE
+  // albo NACZYNIE: każdy wariant mówi, czym kwiaty są zebrane — kokarda, papierowy rożek,
+  // wazon, słoik, pudło, kosz, konewka — i zaczyna się od „bouquet"/„bunch". Dalsi
+  // sąsiedzi: wianek („wreath" nie pada) i roślina doniczkowa („pot", „growing" nie padają).
+  //
+  // Oś sylwetki to OPAKOWANIE × GATUNEK, spisana z 51 liści ze stocka:
+  //   WIĄZANE, ŁODYGI NA WIERZCHU (1, 3) — róże, słoneczniki;
+  //   W PAPIERZE Z KOKARDĄ (2, 8) — tulipany w rożku, róże wokół serca;
+  //   W NACZYNIU (4, 5, 6, 7, 11) — wazon, pudło na kapelusze, kosz, słoik, konewka;
+  //   DLA MALUCHA (9, 10) — kwiatki z buziami, pięć dużych okrągłych kwiatów;
+  //   LEŻĄCY NA BOKU (12) — jedyna pozioma sylwetka w serii.
+  // Gatunki tylko takie, które różnią się w konturze (lekcja z `kwiat`): róża, tulipan,
+  // słonecznik, stokrotka, mak, lawenda, żonkil. Tytuł strony obiecuje róże, tulipany,
+  // stokrotki i słoneczniki — wszystkie cztery są.
+  //
+  // `the bouquet fills the frame` w każdym wariancie — ta sama lekcja co przy kwiecie:
+  // bez tego whimsy rysuje stół albo parapet z bukietem wielkości znaczka.
+  // Środek słonecznika to „big round centre", bez „seeds" (setki kropek albo lita czerń).
+  // Nie ma ręki trzymającej bukiet ani panny młodej — dłonie i twarze to osobne ryzyko.
+  'rosliny/bukiet': {
+    warianty: [
+      'a bouquet of roses with layered spiral petals, tied with a big ribbon bow, the bare stems showing below the bow, the bouquet fills the frame',
+      'a bouquet of tulips wrapped in a paper cone with a big bow at the front, the bouquet fills the frame',
+      'a bunch of sunflowers with big round centres and broad leaves, tied with string, the stems showing below, the bouquet fills the frame',
+      'a mixed bouquet of roses, tulips and daisies standing in a round glass vase, the bouquet fills the frame',
+      'a round hat box filled to the top with big open flowers, a ribbon bow on its side, the bouquet fills the frame',
+      'a wicker basket with a tall arched handle filled with a bouquet of daisies and tulips, the bouquet fills the frame',
+      'a loose wildflower bouquet of poppies, daisies and lavender sprigs standing in a jar with a ribbon tied round its neck, the bouquet fills the frame',
+      'a bouquet of roses arranged around one big heart in the middle, wrapped in paper with a long curling ribbon, the bouquet fills the frame',
+      'a cheerful bouquet of daisies with smiling faces in their round centres, tied with a bow, the bouquet fills the frame',
+      'a simple bouquet of five big round flowers with wide leaves, held together by a short wrap and a bow, the bouquet fills the frame',
+      'a bouquet of daffodils and tulips standing in a watering can with a curved spout, the bouquet fills the frame',
+      'a long-stemmed bouquet of roses and leaves lying on its side, tied with a wide ribbon bow with trailing ends, the bouquet fills the frame'
+    ],
+    sceny: SCENY.bukietowe, grubosc: DEKORACYJNE, format: 'pion'
+  },
   // DYNIE (Delfina, 2026-11-14). Strona obiecuje trzy rzeczy naraz: „jesienne motywy,
   // halloweenowe buźki i urocze wzory" — i dwunastka jest tak podzielona:
   //   KSZTAŁT (1–4):    okrągła, płaska, piżmowa z szyjką, patison. Cztery różne obrysy,

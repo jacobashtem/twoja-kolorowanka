@@ -1047,6 +1047,34 @@ export const SCENY = {
   ],
 
   // ── Rośliny ────────────────────────────────────────────────────────────────
+  // ── Bukietowe: pula DEDYKOWANA bukietom (Delfina, 2026-11-28) ─────────────
+  // Delfina: „nie musi każda mieć tło, może być białe tło". Na stronie dziś (51 liści ze
+  // stocka) prawie każdy bukiet stoi na pustej kartce, więc tu POŁOWA puli (1–6) to białe
+  // tło — więcej niż gdziekolwiek dotąd. Każda z sześciu jest sformułowana inaczej, żeby
+  // ten sam wariant nie dostał dwa razy identycznego promptu; trzy dokładają drobiazg,
+  // który na stronie już jest (serduszka, motyl, biedronka).
+  //
+  // Druga połowa to PREZENT, bo strona obiecuje „bukiet jako prezent" i laurkę dla mamy:
+  // stół z pudełkiem, koperta z kartką, parapet, stolik z filiżanką, ławka, girlanda.
+  // `ogrodek` odpadła — „growing from a clay pot" i „climbing a trellis" opisują roślinę,
+  // która rośnie, a bukiet jest ŚCIĘTY; to sceny sąsiada (`rosliny/kwiat`).
+  // Sceny są przyimkowe i znoszą bukiet stojący w wazonie i leżący na boku.
+  // Obrus jest „scalloped", nie „lace" — koronka wychodzi gęstym sztrychem.
+  bukietowe: [
+    'alone on a plain white background',
+    'centred on an empty white page',
+    'on a plain white background with a few small hearts floating around it',
+    'on a plain white background with two butterflies fluttering above it',
+    'on a plain white background with a few loose petals and leaves scattered below it',
+    'on a plain white background with a ladybird on one leaf and a small bee nearby',
+    'on a table beside a wrapped gift box with a big bow',
+    'beside an open envelope and a greeting card with a heart on it',
+    'on a windowsill with tied-back curtains',
+    'on a round table with a scalloped tablecloth beside a teacup',
+    'on a garden bench beside a straw hat',
+    'under a string of triangular bunting flags'
+  ],
+
   ogrodek: [
     'growing from a clay pot with a small trowel beside it',
     'in a flower bed edged with round stones',

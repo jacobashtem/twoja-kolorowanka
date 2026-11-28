@@ -7,7 +7,7 @@ image: /rosliny/bukiet/39/bukiet-39.svg
 pdf: /rosliny/bukiet/39/bukiet-39.pdf
 alt: "bukiet kolorowanka dla dzieci"
 tags:
-- trudnosc-5
+- trudnosc-6
 - rosliny
 - bukiet
 ---
