@@ -7,7 +7,7 @@ image: /rosliny/bukiet/41/bukiet-41.svg
 pdf: /rosliny/bukiet/41/bukiet-41.pdf
 alt: "Kolorowanka do druku bukiet"
 tags:
-- trudnosc-4
+- trudnosc-8
 - rosliny
 - bukiet
 ---

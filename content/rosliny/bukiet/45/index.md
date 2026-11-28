@@ -7,7 +7,7 @@ image: /rosliny/bukiet/45/bukiet-45.svg
 pdf: /rosliny/bukiet/45/bukiet-45.pdf
 alt: "bukiet – pobierz i wydrukuj kolorowankę"
 tags:
-- trudnosc-1
+- trudnosc-9
 - rosliny
 - bukiet
 ---

@@ -7,7 +7,7 @@ image: /rosliny/bukiet/38/bukiet-38.svg
 pdf: /rosliny/bukiet/38/bukiet-38.pdf
 alt: "Kolorowanki bukiet"
 tags:
-- trudnosc-4
+- trudnosc-6
 - rosliny
 - bukiet
 ---

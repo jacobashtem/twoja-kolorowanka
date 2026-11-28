@@ -7,7 +7,7 @@ image: /rosliny/bukiet/43/bukiet-43.svg
 pdf: /rosliny/bukiet/43/bukiet-43.pdf
 alt: "bukiet do druku i pokolorowania"
 tags:
-- trudnosc-10
+- trudnosc-9
 - rosliny
 - bukiet
 ---
