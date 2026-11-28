@@ -7,7 +7,7 @@ image: /pojazdy/rakiety/43/rakiety-43.svg
 pdf: /pojazdy/rakiety/43/rakiety-43.pdf
 alt: "rakiety do druku i pokolorowania"
 tags:
-- trudnosc-4
+- trudnosc-6
 - pojazdy
 - rakiety
 ---

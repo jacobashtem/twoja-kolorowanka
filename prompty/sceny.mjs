@@ -608,6 +608,39 @@ export const SCENY = {
     'docking beside a round space station'
   ],
 
+  // ── Rakietowe: pula DEDYKOWANA rakietom (Delfina, 2026-11-28) ─────────────
+  // `kosmos` ma sześć scen — przy serii 48 każda wypadłaby osiem razy. Zostaje bez zmian
+  // dla kategorii `kosmos`. Ta pula jest spisana z tego, co stoi dziś na stronie
+  // (50 liści ze stocka): start w kłębach dymu, lot wśród gwiazd i planet, lądowanie
+  // na Księżycu z flagą, rakieta nad kulą ziemską, satelita, kometa.
+  //
+  // NAJWIĘKSZE RYZYKO TEJ KATEGORII TO CZARNE NIEBO. Kosmos jest czarny i style dosłowne
+  // chętnie go zaleją (ta sama porażka co nocne niebo w `magia` i `palacowe`). Dlatego
+  // nigdzie nie pada „night", „dark", „sky", „space" ani „galaxy" — kosmos budują
+  // wyłącznie RZECZY: gwiazdy, planety, kometa, kratery. Jedyna scena z niebem (12) jest
+  // dzienna, ze słońcem i chmurami.
+  //
+  // Dwie sceny (8, 9) są na białym tle, różnie sformułowane — sama rakieta na pustej
+  // kartce to kolorowanka dla malucha i wycinanka. Scena 7 to też prawie puste tło.
+  // Kuzyn do pilnowania: UFO. Ufoludek w scenie 11 stoi na własnych nogach, bez spodka —
+  // „saucer" i „UFO" nie padają nigdzie. Jeśli mimo to spodek zacznie wypierać rakietę,
+  // scenę wyrzucić. W scenie 10 satelita ma „panels", nie „solar panels" — kratka ogniw
+  // wychodzi gęstym sztrychem (tak wygląda liść 32 ze stocka).
+  rakietowe: [
+    'blasting off from a launch pad above big puffy clouds of smoke',
+    'flying past a ringed planet and two small round moons',
+    'standing on a moon surface with round craters and a little flag',
+    'among big five-pointed stars and small round planets',
+    'flying past a comet with a long curly tail',
+    'high above the round Earth with fluffy clouds around it',
+    'with a long trail of flames and round puffs of smoke curling behind it',
+    'alone on a plain white background',
+    'centred on an empty white page with a few small stars around it',
+    'passing a small satellite with two flat panels and a dish antenna',
+    'landing on a little planet with round rocks and a friendly alien waving',
+    'on a launch pad beside a simple launch tower, with a smiling sun and round clouds above'
+  ],
+
   // ── Halloween: DOPEŁNIENIE kadru, nie czynność ─────────────────────────────
   // Kategoria miesza RZECZY (dynia-lampion) ze STWORAMI (duch, nietoperz) i POSTACIĄ
   // (wiedźma, wampirek), więc scena nie może mieć czasownika — „walking through" każe
