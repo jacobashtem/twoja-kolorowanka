@@ -7,7 +7,7 @@ image: /zwierzeta/pawie/29/pawie-29.svg
 pdf: /zwierzeta/pawie/29/pawie-29.pdf
 alt: "Malowanka pawie do druku A4"
 tags:
-- trudnosc-3
+- trudnosc-6
 - zwierzeta
 - pawie
 ---

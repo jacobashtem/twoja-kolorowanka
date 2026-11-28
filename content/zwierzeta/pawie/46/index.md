@@ -7,7 +7,7 @@ image: /zwierzeta/pawie/46/pawie-46.svg
 pdf: /zwierzeta/pawie/46/pawie-46.pdf
 alt: "Kolorowanka z pawie do pobrania"
 tags:
-- trudnosc-3
+- trudnosc-9
 - zwierzeta
 - pawie
 ---

@@ -7,7 +7,7 @@ image: /zwierzeta/pawie/8/pawie-8.svg
 pdf: /zwierzeta/pawie/8/pawie-8.pdf
 alt: "Darmowa kolorowanka pawie do druku PDF"
 tags:
-- trudnosc-7
+- trudnosc-3
 - zwierzeta
 - pawie
 ---
